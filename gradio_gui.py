@@ -59,7 +59,7 @@ def query_llm(user_input):
     except Exception as e:
         return f"Exception: {str(e)}"
 
-def query_llm_with_rag(user_input, rag_mode, stream_mode):
+def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
     mode = config.get_mode() if hasattr(config, 'get_mode') else 'unknown'
     gen_model = None
     emb_model = None
@@ -83,7 +83,7 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode):
     try:
         if stream_mode == "Streaming":
             # Streaming mode: use requests with stream=True
-            response = requests.post(url, json={"input": user_input, "stream": True}, stream=True)
+            response = requests.post(url, json={"input": user_input, "stream": True, "max_tokens": int(max_tokens)}, stream=True)
             if response.status_code == 200:
                 streamed_text = ""
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
@@ -104,7 +104,7 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode):
             else:
                 yield output_header_markdown + f"Error: {response.status_code} - {response.text}"
         else:
-            response = requests.post(url, json={"input": user_input})
+            response = requests.post(url, json={"input": user_input, "max_tokens": int(max_tokens)})
             if response.status_code == 200:
                 data = response.json()
                 if "sources" in data:
@@ -337,6 +337,15 @@ def build_gradio_app():
                     label="Response Mode",
                     interactive=True
                 )
+            # Add max_tokens input
+            max_tokens_input = gr.Number(
+                value=1500,
+                label="Max Tokens",
+                minimum=100,
+                maximum=4096,
+                step=1,
+                interactive=True
+            )
 
             gr.Markdown("# LLM Output Viewer\nEnter your question below:")
 
@@ -369,7 +378,8 @@ def build_gradio_app():
                 output = gr.Markdown(label="LLM Output")
 
             submit_btn.click(fn=show_processing, inputs=[], outputs=output, queue=False)
-            submit_btn.click(fn=query_llm_with_rag, inputs=[user_input, rag_radio, stream_radio], outputs=output, queue=True)
+            # Pass max_tokens_input to query_llm_with_rag
+            submit_btn.click(fn=query_llm_with_rag, inputs=[user_input, rag_radio, stream_radio, max_tokens_input], outputs=output, queue=True)
             start_flask_btn.click(fn=start_flask_and_wait, outputs=flask_status)
             stop_flask_btn.click(fn=stop_flask_server, outputs=flask_status)
 

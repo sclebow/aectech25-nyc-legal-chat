@@ -282,7 +282,7 @@ agent_prompt_dict = {
     """
 }
 
-def run_llm_query(system_prompt: str, user_input: str, stream: bool = False):
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500):
     import server.config as config
     if not stream:
         response = config.client.chat.completions.create(
@@ -292,7 +292,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False):
                 {"role": "user", "content": user_input}
             ],
             temperature=0.0,
-            max_tokens=1500,
+            max_tokens=max_tokens,
         )
         return response.choices[0].message.content.strip()
     else:
@@ -303,7 +303,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False):
                 {"role": "user", "content": user_input}
             ],
             temperature=0.0,
-            max_tokens=1500,
+            max_tokens=max_tokens,
             stream=True,
         )
         def generator():
@@ -313,7 +313,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False):
                     yield delta.content
         return generator()
 
-def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = False, collection=None, ranker=None):
+def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = False, collection=None, ranker=None, max_tokens: int = 1500):
     """
     Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
     If RSMeans data is found, include a summary table and a short LLM-generated explanation referencing the data.
@@ -323,7 +323,7 @@ def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = 
     if use_rag and collection is not None and ranker is not None:
         # Use RAG pipeline for cost benchmark
         agent_prompt = agent_prompt_dict["get cost benchmarks"]
-        answer, sources = rag_utils.rag_call_alt(query, collection, ranker, agent_prompt=agent_prompt)
+        answer, sources = rag_utils.rag_call_alt(query, collection, ranker, agent_prompt=agent_prompt, max_context_length=max_tokens)
         return answer, sources
     result = get_cost_data(rsmeans_df, query)
     if not result.empty:
@@ -338,21 +338,21 @@ def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = 
         )
         user_input = f"User question: {query}\n\nRSMeans data (markdown table):\n{summary_md}"
         if not stream:
-            explanation = run_llm_query(system_prompt, user_input)
+            explanation = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
             return f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n{explanation}"
         else:
             def generator():
                 yield f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n"
-                for chunk in run_llm_query(system_prompt, user_input, stream=True):
+                for chunk in run_llm_query(system_prompt, user_input, stream=True, max_tokens=max_tokens):
                     yield chunk
             return generator()
     else:
         prompt = (
             agent_prompt_dict["get cost benchmarks"] + "\nAlways explicitly list out any assumptions you are making (such as location, year, unit, or scope)."
         )
-        return run_llm_query(system_prompt=prompt, user_input=query, stream=stream)
+        return run_llm_query(system_prompt=prompt, user_input=query, stream=stream, max_tokens=max_tokens)
 
-def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False):
+def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500):
     """
     Classify the user message into one of the five core categories and route it to the appropriate response function.
     If stream=True, returns a generator for streaming output.
@@ -362,7 +362,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
 
     match classification:
         case x if "cost benchmark" in x:
-            answer = get_cost_benchmark_answer(message, stream=stream, use_rag=use_rag, collection=collection, ranker=ranker)
+            answer = get_cost_benchmark_answer(message, stream=stream, use_rag=use_rag, collection=collection, ranker=ranker, max_tokens=max_tokens)
             if use_rag:
                 return answer  # already (answer, sources)
             else:
@@ -382,7 +382,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
                 return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
     
     if use_rag:
-        (answer, source) = rag_utils.rag_call_alt(message, collection, ranker, agent_prompt=prompt)
+        (answer, source) = rag_utils.rag_call_alt(message, collection, ranker, agent_prompt=prompt, max_context_length=max_tokens)
         return (answer, source)
     else:
-        return run_llm_query(system_prompt=prompt, user_input=message, stream=stream)
+        return run_llm_query(system_prompt=prompt, user_input=message, stream=stream, max_tokens=max_tokens)
