@@ -82,15 +82,14 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
     url = RAG_URLS.get(rag_mode, FLASK_URL)
     try:
         if stream_mode == "Streaming":
-            # Streaming mode: use requests with stream=True
             response = requests.post(url, json={"input": user_input, "stream": True, "max_tokens": int(max_tokens)}, stream=True)
             if response.status_code == 200:
                 streamed_text = ""
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
                     if chunk:
-                        print(chunk, end="", flush=True)  # Print to console for testing
                         streamed_text += chunk
-                        yield streamed_text  # Update Gradio output live
+                        # Always yield markdown-formatted output
+                        yield output_header_markdown + streamed_text
                 # Log the call
                 logger.info({
                     "timestamp": timestamp,
