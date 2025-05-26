@@ -10,6 +10,7 @@ import server.config as config
 import datetime
 from logger_setup import setup_logger
 import time
+import threading
 
 # === Constants and Config ===
 FLASK_URL = "http://127.0.0.1:5000/llm_call"  # Update if Flask runs elsewhere
@@ -21,12 +22,12 @@ RAG_URLS = {
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
 MODE_URL = "http://127.0.0.1:5000/set_mode"
 sample_questions = [
-    "",
     "What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.",
     "How do steel frame structures compare to concrete frame structures, considering cost and durability?",
     "What are the ROI advantages of using precast concrete in construction projects?",
     "Can you provide a cost estimate for a 10,000 sq ft commercial building?",
     "What are the key factors affecting the cost of a residential building?",
+    "",
 ]
 cloudflare_models = [
     "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
@@ -153,9 +154,18 @@ def run_flask_server():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
+        stream_subprocess_output(flask_process)
         return "Flask server started."
     else:
         return "Flask server is already running."
+
+def stream_subprocess_output(process):
+    def stream(pipe):
+        for line in iter(pipe.readline, b''):
+            print("Flask Server:", line.decode(errors="replace").rstrip())
+        pipe.close()
+    threading.Thread(target=stream, args=(process.stdout,), daemon=True).start()
+    threading.Thread(target=stream, args=(process.stderr,), daemon=True).start()
 
 def stop_flask_server():
     global flask_process
@@ -335,7 +345,7 @@ def build_gradio_app():
                     choices=sample_questions,
                     label="Or select a sample question",
                     interactive=True,
-                    value=None,
+                    value=sample_questions[0],
                     allow_custom_value=False,
                     info="Pick a sample or type your own below."
                 )
