@@ -124,53 +124,8 @@ def calculate_position_score(doc_index, total_docs):
     """Give higher weight to documents appearing earlier in search results"""
     return 1 - (doc_index / total_docs)
 
-def enhanced_rerank_results(results, question, max_length=4000):
-    """Enhanced reranking using multiple signals"""
-    scored_results = []
-    total_docs = len(results['documents'][0])
-    
-    # Get question embedding
-    question_embedding = results['embeddings'][0]
-    
-    for idx, (doc, doc_embedding) in enumerate(zip(results['documents'][0], results['embeddings'])):
-        # Calculate different scoring signals
-        semantic_score = calculate_semantic_similarity(question_embedding, doc_embedding)
-        keyword_score = calculate_keyword_score(question, doc)
-        position_score = calculate_position_score(idx, total_docs)
-        
-        # Calculate document density (information per length)
-        doc_length = len(doc)
-        unique_words = len(set(doc.lower().split()))
-        density_score = unique_words / (doc_length + 1)  # Add 1 to avoid division by zero
-        
-        # Combine scores with weights
-        final_score = (
-            semantic_score * 0.4 +    # Semantic similarity
-            keyword_score * 0.3 +     # Keyword matching
-            position_score * 0.2 +    # Position in results
-            density_score * 0.1       # Information density
-        )
-        
-        scored_results.append((doc, final_score))
-    
-    # Sort by score and select best results that fit context
-    scored_results.sort(key=lambda x: x[1], reverse=True)
-    
-    selected_docs = []
-    total_length = 0
-    context_window = max_length
-    
-    for doc, score in scored_results:
-        if total_length + len(doc) <= context_window:
-            selected_docs.append(doc)
-            total_length += len(doc)
-    
-    return selected_docs
-
 def rag_call(question, n_results=10, max_context_length=4000):
-    """Updated RAG call using enhanced reranking"""
-    print("Initiating RAG with enhanced reranking...")
-    
+
     client, embedding_fn = get_chroma_client()
     collections = client.list_collections()
     if not collections:
@@ -188,10 +143,8 @@ def rag_call(question, n_results=10, max_context_length=4000):
         n_results=n_results * 2,
         include=['embeddings', 'documents']
     )
-    
-    # Apply enhanced reranking
-    selected_docs = enhanced_rerank_results(results, question, max_context_length)
-    rag_result = "\n".join(selected_docs)
+
+    rag_result = "\n".join(results)
     
     prompt = f"""Answer the question based on the provided information.
                 Focus on the most relevant details and maintain coherence.
