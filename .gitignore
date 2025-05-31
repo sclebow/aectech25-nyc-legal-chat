@@ -8,10 +8,5 @@ myenv/
 source_data/
 LLM-Knowledge-Pool-RAG/
 Rawlinsons Construction Cost Consultants and Quantity Surveyors, (editor) - Rawlinsons Australian construction handbook 2021 (2021).pdf
-chroma*
-chroma/chroma.sqlite3
-chroma/becde6d1-ab5c-4d4f-b681-1ed35caf8fce/data_level0.bin
-chroma/becde6d1-ab5c-4d4f-b681-1ed35caf8fce/header.bin
-chroma/becde6d1-ab5c-4d4f-b681-1ed35caf8fce/length.bin
-chroma/becde6d1-ab5c-4d4f-b681-1ed35caf8fce/link_lists.bin
-chroma/chroma.sqlite3
+chroma/
+

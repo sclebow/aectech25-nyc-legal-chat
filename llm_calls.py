@@ -333,7 +333,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
 
     match classification:
         case x if "cost benchmark" in x:
-            return get_cost_benchmark_answer(message)
+            return agent_prompt_dict["get cost benchmarks"]
         case x if "roi analysis" in x:
             prompt = agent_prompt_dict["analyze roi sensitivity"]
         case x if "design-cost comparison" in x:
