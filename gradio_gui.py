@@ -22,6 +22,7 @@ RAG_URLS = {
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
 MODE_URL = "http://127.0.0.1:5000/set_mode"
 sample_questions = [
+    "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
     "What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.",
     "How do steel frame structures compare to concrete frame structures, considering cost and durability?",
     "What are the ROI advantages of using precast concrete in construction projects?",
