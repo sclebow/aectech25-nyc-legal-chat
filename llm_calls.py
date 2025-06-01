@@ -1,10 +1,10 @@
 import server.config as config  
-from cost_data.rsmeans_utils import load_rsmeans_data, get_cost_data
+from cost_data.rsmeans_utils import get_cost_data
+from project_utils.rag_utils import rag_call_alt
 
 # Routing Functions Below
 
-# Load RSMeans data once at module level
-rsmeans_df = load_rsmeans_data()
+# Remove global rsmeans_df and all references to load_rsmeans_data
 
 # Routing & Filtering Functions
 def classify_input(message: str) -> str:
@@ -105,8 +105,6 @@ def analyze_cost_tradeoffs(query: str) -> str:
     Analyze cost trade-offs based on the user's query.
     E.g., comparing two design options or the impact of a design change on cost/ROI.
     """
-    from utils import rag_utils
-
     system_prompt = (
         "You are an expert architectural cost consultant.\n"
         "# Task:\n"
@@ -123,7 +121,7 @@ def analyze_cost_tradeoffs(query: str) -> str:
         "Query: Should we use steel or timber for the main structure?\n"
         "Output: Steel framing typically costs 10-20% more than timber for similar spans, but offers greater durability and fire resistance. Timber is less expensive upfront and can be installed faster, reducing labor costs. However, steel may have lower maintenance costs over the building's life. In most urban markets, timber is more cost-effective for low-rise buildings, while steel is preferred for high-rise or long-span structures. Actual costs depend on local material prices and labor rates." # TODO fact-check this example
     )
-    # (Optionally, I think we might be able to retrieve relevant data here via rag_utils if needed to inform the comparison.)
+    # (Optionally, I think we might be able to retrieve relevant data here via rag_call_alt if needed to inform the comparison.)
     response = config.client.chat.completions.create(
         model=config.completion_model,
         messages=[
@@ -321,15 +319,13 @@ def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = 
     If not, fallback to LLM only.
     If use_rag is True, use the RAG pipeline to answer and return (answer, sources).
     """
-    from utils import rag_utils
-
     if use_rag and collection is not None and ranker is not None:
         # Use RAG pipeline for cost benchmark
         agent_prompt = agent_prompt_dict["get cost benchmarks"]
-        answer, sources = rag_utils.rag_call_alt(query, collection, ranker, agent_prompt=agent_prompt, max_context_length=max_tokens)
+        answer, sources = rag_call_alt(query, collection, ranker, agent_prompt=agent_prompt, max_context_length=max_tokens)
         return answer, sources
-    result = get_cost_data(rsmeans_df, query)
-    if not result.empty:
+    result = get_cost_data(query)
+    if hasattr(result, 'empty') and not result.empty:
         summary_md = result[['Masterformat Section Code', 'Section Name', 'Name', 'Unit', 'Total Incl O&P']].to_markdown(index=False)
         system_prompt = (
             "You are a cost benchmark assistant. "
@@ -360,8 +356,6 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     Classify the user message into one of the five core categories and route it to the appropriate response function.
     If stream=True, returns a generator for streaming output.
     """
-    from utils import rag_utils
-    
     classification = classify_question_type(message).lower()
     print(classification)
 
@@ -385,9 +379,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
                 return ("I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data.", None)
             else:
                 return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
-    
     if use_rag:
-        (answer, source) = rag_utils.rag_call_alt(message, collection, ranker, agent_prompt=prompt, max_context_length=max_tokens)
+        (answer, source) = rag_call_alt(message, collection, ranker, agent_prompt=prompt, max_context_length=max_tokens)
         return (answer, source)
     else:
         return run_llm_query(system_prompt=prompt, user_input=message, stream=stream, max_tokens=max_tokens)
