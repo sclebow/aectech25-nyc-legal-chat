@@ -83,10 +83,11 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
             response = requests.post(url, json={"input": user_input, "stream": True, "max_tokens": int(max_tokens)}, stream=True)
             if response.status_code == 200:
                 streamed_text = ""
+                placeholder = st.empty()
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
                     if chunk:
                         streamed_text += chunk
-                        st.markdown(output_header_markdown + streamed_text)
+                        placeholder.markdown(output_header_markdown + streamed_text)
                         time.sleep(0.05)
                 logger.info({
                     "timestamp": timestamp,
@@ -243,7 +244,7 @@ st.info(f"Flask Server Status: {flask_status}")
 
 if "running" in flask_status.lower():
     st.markdown("## LLM Mode Selection")
-    mode = st.radio("Select LLM Mode", MODE_OPTIONS, index=2, key="mode_radio")
+    mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
     mode_status = set_mode_on_server(mode)
     st.text(mode_status)
 
@@ -257,8 +258,8 @@ if "running" in flask_status.lower():
         st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
 
     st.markdown("## LLM Call Type")
-    rag_mode = st.radio("Choose LLM Call Type", RAG_OPTIONS, index=0, key="rag_radio")
-    stream_mode = st.radio("Response Mode", ["Standard", "Streaming"], index=0, key="stream_radio")
+    rag_mode = st.segmented_control("Choose LLM Call Type", RAG_OPTIONS, default=RAG_OPTIONS[1], key="rag_radio", selection_mode="single")
+    stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
     max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
 
     st.markdown("# LLM Output Viewer\nEnter your question below:")
@@ -268,8 +269,5 @@ if "running" in flask_status.lower():
     if st.button("Submit"):
         st.markdown("_Processing..._")
         output = query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens)
-        st.markdown("------")
-        st.markdown("## LLM Output:")
-        st.markdown(output)
 else:
     st.warning("The Flask server must be running to get a response.")
