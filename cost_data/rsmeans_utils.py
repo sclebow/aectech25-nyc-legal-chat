@@ -174,19 +174,28 @@ def find_by_description(description, confidence_threshold=0.6):
         system_prompt = (
             "You are an expert at mapping construction task descriptions to specific RSMeans line items. "
             "Given a list of line items (with both Name and Section Name), select all that are most relevant for a user's description. "
-            "Return your answer as a |-separated list of the exact 'Name' values (not Section Name), no other text. "
+            "Return your answer as a ||-separated list of the exact 'Name' values (not Section Name) with a confidence percentage (0-100) for each, in the format: Name1::confidence1||Name2::confidence2||... "
+            "Return only the names and confidence percentages, no other text. "
         )
         user_input = (
             f"Line items list:\n{chr(10).join(combined_list)}\n"
             f"Description: {description}"
         )
-        # print(f"LLM Query for further filtering by Name/Section Name: {user_input}")
         selected_names_str = run_llm_query(system_prompt, user_input)
-        # print(f"LLM selected names: {selected_names_str}")
-        selected_names = [n.strip() for n in selected_names_str.split("|") if n.strip()]
+        print(f"Selected names from LLM: {selected_names_str}")
+        # Parse names and confidences
+        name_conf_pairs = [n.strip() for n in selected_names_str.split("||") if n.strip()]
+        selected_names = []
+        for pair in name_conf_pairs:
+            match = re.match(r"(.+?):\s*(\d{1,3})", pair)
+            if match:
+                name = match.group(1).strip()
+                confidence = int(match.group(2)) / 100.0
+                if confidence >= confidence_threshold:
+                    selected_names.append(name)
         filtered_df = output_df[output_df['Name'].isin(selected_names)]
         if not filtered_df.empty:
-            print(f"Further filtered to {len(filtered_df)} line items by LLM pass on Name/Section Name.")
+            print(f"Further filtered to {len(filtered_df)} line items by LLM pass on Name/Section Name with confidence threshold {confidence_threshold}.")
             output_df = filtered_df
         else:
             print("No further matches found in LLM Name/Section filter, returning previous output.")
