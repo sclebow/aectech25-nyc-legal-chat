@@ -44,7 +44,7 @@ def find_by_section_code(df, section_code):
     fuzzy_contains = df[code_series.str.contains(code_norm)]
     return fuzzy_contains
 
-def find_by_description(df, description, section_chunk_size=1000, confidence_threshold=0.5):
+def find_by_description(df, description, section_chunk_size=500, confidence_threshold=0.5):
     """
     Use LLM to select the most appropriate Masterformat codes from the available list for a given description.
     Returns the matching row(s) from the DataFrame.
@@ -76,7 +76,6 @@ def find_by_description(df, description, section_chunk_size=1000, confidence_thr
             "then select the most relevant Masterformat section codes from the provided list. "
             "Given a list of Masterformat sections, you will select all relevant codes for a user's description. "
             "Return your answer as a comma-separated list of section codes with a confidence percentage (0-100) for each, in the format: code1:confidence1, code2:confidence2, ... "
-            "Only include codes you are at least 10% confident in."
         )
         user_input = (
             f"Masterformat sections list:\n{chr(10).join(chunk)}\n"
@@ -123,7 +122,7 @@ def find_by_description(df, description, section_chunk_size=1000, confidence_thr
         print(f"Found {len(fuzzy)} fuzzy matches: {', '.join(fuzzy['Section Name'].unique())}")
         return fuzzy
     # Also try fuzzy match on Masterformat Section Code (in case user enters a partial code as description)
-    code_fuzzy = df[df['Masterformat Section Code'].str.replace(' ', '').str.lower().str.contains(desc_norm.replace(' ', ''))]
+    code_fuzzy = df[df['Masterformat Section Code'].fillna('').str.replace(' ', '').str.lower().str.contains(desc_norm.replace(' ', ''))]
     print(f"Found {len(code_fuzzy)} fuzzy matches for section codes: {', '.join(code_fuzzy['Masterformat Section Code'].unique())}")
     return code_fuzzy
 

@@ -49,12 +49,12 @@ def ask_cost_question(question):
 
 with gr.Blocks() as demo:
     gr.Markdown("# RSMeans Utility Tester")
-    with gr.Tab("Ask Cost Question"):
-        question_input = gr.Textbox(label="Cost Question (natural language)", value="What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.")
-        question_btn = gr.Button("Ask")
-        gr.Markdown("### Result: ")
-        question_output = gr.Markdown("_Enter a cost question and click 'Ask' to see results here._", label="Result")
-        question_btn.click(ask_cost_question, inputs=question_input, outputs=question_output)
+    # with gr.Tab("Ask Cost Question"):
+    #     question_input = gr.Textbox(label="Cost Question (natural language)", value="What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.")
+    #     question_btn = gr.Button("Ask")
+    #     gr.Markdown("### Result: ")
+    #     question_output = gr.Markdown("_Enter a cost question and click 'Ask' to see results here._", label="Result")
+    #     question_btn.click(ask_cost_question, inputs=question_input, outputs=question_output)
     with gr.Tab("Search by Section Code"):
         code_input = gr.Textbox(label="Masterformat Section Code", value="03 05 13.25")
         code_btn = gr.Button("Search")
@@ -62,7 +62,7 @@ with gr.Blocks() as demo:
         code_output = gr.Markdown("_Enter a section code and click 'Search' to see results here._", label="Result")
         code_btn.click(search_by_code, inputs=code_input, outputs=code_output)
     with gr.Tab("Search by Description"):
-        desc_input = gr.Textbox(label="Description", value="Aggregate")
+        desc_input = gr.Textbox(label="Description", value="Concrete Column Footings")
         desc_btn = gr.Button("Search")
         gr.Markdown("### Result: ")
         desc_output = gr.Markdown("_Enter a description and click 'Search' to see results here._", label="Result")
