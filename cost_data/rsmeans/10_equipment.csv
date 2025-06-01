@@ -1,0 +1,1245 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+11 21 73.19,Finishing Equipment,10,FINISHING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 73.19,Finishing Equipment,3500,"Folders, blankets & sheets, minimum",1 Elec,0.17,47.059,Ea .,"36,800","3,125",nan,"39,925","45,100"
+11 21 73.19,Finishing Equipment,3700,King size with automatic stacker,nan,0.1,80.0,nan,"66,500","5,300",nan,"71,800","81,000"
+11 21 73.19,Finishing Equipment,3800,"For conveyor delivery, add",nan,0.45,17.778,nan,"16,900","1,175",nan,"18,075","20,400"
+11 21 73.19,Finishing Equipment,4900,"Spreader feeders, 240V, 2 station",L-6,0.7,17.143,nan,"62,000","1,175",nan,"63,175","70,000"
+11 21 73.19,Finishing Equipment,4920,4 station,"""",0.35,34.286,nan,"75,000","2,350",nan,"77,350","86,000"
+11 21 73.23,Commercial Ironing Equipment,10,COMMERCIAL IRONING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 73.23,Commercial Ironing Equipment,4500,"Ironers, institutional, 110"", single roll",1 Elec,0.2,440.0,Ea .,"35,600","2,650",nan,"38,250","43,100"
+11 21 73.23,Commercial Ironing Equipment,4800,"Pressers, low capacity air operated",L-6,1.75,6.857,nan,"10,600",470,nan,"11,070","12,400"
+11 21 73.23,Commercial Ironing Equipment,4820,Hand operated,nan,1.75,6.857,nan,"9,900",470,nan,"10,370","11,600"
+11 21 73.23,Commercial Ironing Equipment,4840,"Ironer 48"", 240V",nan,3.5,3.429,nan,"122,500",235,nan,"122,735","135,500"
+11 21 73.23,Commercial Ironing Equipment,6600,Hand operated presser,nan,0.7,17.143,nan,"6,600","1,175",nan,"7,775","9,000"
+11 21 73.23,Commercial Ironing Equipment,6620,Mushroom press 115V,nan,0.7,17.143,nan,"8,450","1,175",nan,"9,625","11,100"
+11 21 73.26,Commercial Washers and Extractors,10,"COMMERCIAL WASHERS AND EXTRACTORS, not including rough in",nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 73.26,Commercial Washers and Extractors,6000,"Combination washer / extractor, 20 lb. capacity",L-6,1.5,8,Ea .,"5,050",550,nan,"5,600","6,37"
+11 21 73.26,Commercial Washers and Extractors,6100,30 lb. capacity,nan,0.8,15,nan,"11,200","1,025",nan,"12,225","13,80"
+11 21 73.26,Commercial Washers and Extractors,6200,50 lb. capacity,nan,0.68,17.647,nan,"14,100","1,200",nan,"15,300","17,40"
+11 21 73.26,Commercial Washers and Extractors,6300,75 lb. capacity,nan,0.3,40,nan,"19,700","2,750",nan,"22,450","25,70"
+11 21 73.26,Commercial Washers and Extractors,6350,125 lb. capacity,nan,0.16,75    1,nan,"30,800","5,150",nan,"35,950","41,60"
+11 21 73.26,Commercial Washers and Extractors,6380,"Washer extractor / dryer, 110 lb., 240V",nan,nan,12,nan,"20,600",825,nan,"21,425","23,90"
+11 21 73.26,Commercial Washers and Extractors,6400,"Washer extractor, 135 lb, 240V",nan,nan,nan,nan,"36,200",825,nan,"37,025","41,10"
+11 21 73.26,Commercial Washers and Extractors,6450,Pass through,nan,1.0,nan,nan,"59,500",825,nan,"60,325","66,50"
+11 21 73.26,Commercial Washers and Extractors,6500,200 lb. washer extractor,nan,1.0,12,nan,"77,500",825,nan,"78,325","86,00"
+11 21 73.26,Commercial Washers and Extractors,6550,Pass through,nan,1.0,12,nan,"82,000",825,nan,"82,825","91,00"
+11 21 73.26,Commercial Washers and Extractors,6600,"Extractor, low capacity",nan,1.75,6.857,nan,"7,925",470,nan,"8,395","9,42"
+11 21 73.33,Coin-Operated Laundry Equipment,10,COIN-OPERATED LAUNDRY EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 73.33,Coin-Operated Laundry Equipment,990,"Dryer, gas fired",nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 73.33,Coin-Operated Laundry Equipment,1000,"Commercial, 30 lb. capacity, coin operated, single",1 Plum,3.0,2.667,Ea .,"1,175",186.0,nan,"1,361","1,55"
+11 21 73.33,Coin-Operated Laundry Equipment,1100,Double stacked,"""",2.0,4.0,nan,"3,000",279.0,nan,"3,279","3,72"
+11 21 73.33,Coin-Operated Laundry Equipment,4860,Coin dry cleaner 20 lb.,1-6,1.75,6.857,nan,"30,800",470.0,nan,"31,270","34,60"
+11 21 73.33,Coin-Operated Laundry Equipment,5290,Clothes washer,nan,nan,nan,nan,,nan,188.0,nan,nan
+11 21 73.33,Coin-Operated Laundry Equipment,5300,"Commercial, coin operated, average",1 Plum,3.0,2.667,Eo .,"1,400",186.0,nan,"1,586","1,80"
+11 21 83.13,Darkroom Equipment,10,DARKROOM EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 83.13,Darkroom Equipment,20,"Developing sink, 5"" deep, 24"" x 48""",0-1,2.0,8.0,Ea .,430,505.0,nan,935,"1,22"
+11 21 83.13,Darkroom Equipment,50,"48"" x 52""",nan,1.7,9.412,nan,"1,725",590.0,nan,"2,315","2,77"
+11 21 83.13,Darkroom Equipment,200,"10"" deep, 24"" x 48""",nan,1.7,9.412,nan,"1,900",590.0,nan,"2,490","2,97"
+11 21 83.13,Darkroom Equipment,250,"24"" x 108""",nan,1.5,10.667,nan,"5,175",670.0,nan,"5,845","6,70"
+11 21 83.13,Darkroom Equipment,500,"Dryers, dehumidified filtered air, 36"" x 25"" x 68"" high",nan,6.0,4.667,nan,585,255.0,nan,840,"1,02"
+11 21 83.13,Darkroom Equipment,3000,"Viewing lights, 20"" x 24""",nan,6.0,4.667,nan,320,255.0,nan,575,73
+11 21 83.13,Darkroom Equipment,3100,"20"" x 24"" with color correction",nan,6.0,4.667,nan,990,255.0,nan,"1,245","1,47"
+11 21 83.13,Cooking Equipment,10,COOKING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 83.13,Cooking Equipment,20,"Cooking range, 30"" free standing, 1 oven, minimum",2 Clab,10.0,1.6,Ea.,630,73.0,nan,703,800
+11 21 83.13,Cooking Equipment,50,Maximum,4,4.0,nan,nan,900,182.0,nan,"1,082","1,250"
+11 21 83.13,Cooking Equipment,150,"2 oven, minimum",10,1.6,nan,nan,"1,225",73.0,nan,"1,298","1,425"
+11 21 83.13,Cooking Equipment,200,Maximum,10,1.6,nan,nan,"3,700",73.0,nan,"3,773","4,175"
+11 21 83.13,Cooking Equipment,350,"Builtin, 30"" wide, 1 oven, minimum",1 Elec,6.0,1.333,nan,"1,200",88.5,nan,"1,288.50","1,450"
+11 21 83.13,Cooking Equipment,400,Maximum,2 Carp,2.0,8.0,nan,"1,900",450.0,nan,"2,350","2,775"
+11 21 83.13,Cooking Equipment,500,"2 oven, conventional, minimum",4,4.0,nan,nan,"2,400",225.0,nan,"2,625","2,975"
+11 21 83.13,Cooking Equipment,550,"1 conventional, 1 microwave, maximum",204,8.0,nan,nan,"2,775",450.0,nan,"3,225","3,750"
+11 21 83.13,Cooking Equipment,700,"Free standing, 1 oven, 21"" wide range, minimum",2 Clab,10.0,1.6,nan,650,73.0,nan,723,825
+11 21 83.13,Cooking Equipment,750,"21"" wide, maximum",nan,4.0,nan,nan,550,182.0,nan,732,875
+11 21 83.13,Cooking Equipment,900,"Countertop cooktops, 4 burner, standard, minimum",1 Elec,63.0,1.333,nan,294,88.5,nan,382.50,455
+11 21 83.13,Cooking Equipment,950,Maximum,3,2.667,nan,nan,540,177.0,nan,717,855
+11 21 83.13,Cooking Equipment,1050,"As above, but with grill and griddle attachment, minimum",6,1.333,nan,nan,"1,575",88.5,nan,"1,663.50","1,850"
+11 21 83.13,Cooking Equipment,1100,Maximum,3,2.667,nan,nan,"4,150",177.0,nan,"4,327","4,825"
+11 21 83.13,Cooking Equipment,1200,"Induction cooktop, 30"" wide",342,2.667,nan,nan,"1,600",177.0,nan,"1,777","2,000"
+11 21 83.13,Cooking Equipment,1250,"Microwave oven, minimum",nan,24.0,nan,nan,119,132.0,nan,251,330
+11 21 83.13,Cooking Equipment,1300,Maximum,nan,nan,nan,nan,320,265.0,nan,585,745
+11 21 83.13,Refrigeration Equipment,10,REFRIGERATION EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 83.13,Refrigeration Equipment,2000,"Deep freeze, 15 to 23 C.F., minimum",2 Clab,10,1.6,Eq.,650,73.0,nan,723,825
+11 21 83.13,Refrigeration Equipment,2050,Maximum,583722,3.220,nan,nan,720,146.0,nan,866,"1,000"
+11 21 83.13,Refrigeration Equipment,2200,"30 C.F., minimum",nan,nan,nan,nan,950,91.0,nan,"1,041","1,175"
+11 21 83.13,Refrigeration Equipment,2250,Maximum,nan,5.333,nan,nan,950,243.0,nan,"1,193","1,400"
+11 21 83.13,Refrigeration Equipment,5200,"Icemaker, automatic, 20 lbs./day",1 Plum,7,1.143,nan,880,80.0,nan,960,"1,075"
+11 21 83.13,Refrigeration Equipment,5350,51 lbs./day,nan,nan,nan,nan,"1,100",279.0,nan,"1,379","1,625"
+11 21 83.13,Refrigeration Equipment,5500,"Refrigerator, no frost, 10 C.F. to 12 C.F., minimum",2 Clab,10,1.6,nan,560,73.0,nan,633,730
+11 21 83.13,Refrigeration Equipment,5600,Maximum,6,2.667,nan,nan,500,122.0,nan,622,730
+11 21 83.13,Refrigeration Equipment,5750,"14 C.F. to 16 C.F., minimum",9,1.778,nan,nan,680,81.0,nan,761,865
+11 21 83.13,Refrigeration Equipment,5800,Maximum,5,3.200,nan,nan,645,146.0,nan,791,925
+11 21 83.13,Refrigeration Equipment,5950,"18 C.F. to 20 C.F., minimum",8,2,nan,nan,670,91.0,nan,761,870
+11 21 83.13,Refrigeration Equipment,6000,Maximum,4,4,nan,nan,670,182.0,nan,852,"1,000"
+11 21 83.13,Refrigeration Equipment,6150,"21 C.F. to 29 C.F., minimum",7,2.286,nan,nan,"1,600",104.0,nan,"1,704","1,900"
+11 21 83.13,Refrigeration Equipment,6200,Maximum,3,$5.333,nan,nan,"2,000",243.0,nan,"2,243","2,550"
+11 21 83.13,Refrigeration Equipment,6790,"Energy star qualified, 18 C.F., minimum",2 Carp,4,4.0,nan,"1,800",225.0,nan,"2,025","2,300"
+11 21 83.13,Refrigeration Equipment,6795,Maximum,G,244,8.0,nan,670,450.0,nan,"1,120","1,400"
+11 21 83.13,Refrigeration Equipment,6797,"21.7 C.F., minimum",G,nan,44.0,nan,"1,550",225.0,nan,"1,775","2,025"
+11 21 83.13,Refrigeration Equipment,6799,Maximum,G,nan,nan,nan,"3,200",225.0,nan,"3,425","3,850"
+11 21 83.13,Kitchen Cleaning Equipment,10,KITCHEN CLEANING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 83.13,Kitchen Cleaning Equipment,2750,"Dishwasher, builtin, 2 cycles, minimum",L-1,4.0,4.0,Ea.,380,272.0,nan,652,820
+11 21 83.13,Kitchen Cleaning Equipment,2800,Maximum,2,8.0,nan,nan,835,545.0,nan,"1,380","1,725"
+11 21 83.13,Kitchen Cleaning Equipment,2950,"4 or more cycles, minimum",44242,4.0,nan,nan,630,272.0,nan,902,"1,100"
+11 21 83.13,Kitchen Cleaning Equipment,2960,Average,nan,4.0,nan,nan,835,272.0,nan,"1,107","1,32"
+11 21 83.13,Kitchen Cleaning Equipment,3000,Maximum,nan,88.0,nan,nan,950,545.0,nan,"1,495","1,850"
+11 21 83.13,Kitchen Cleaning Equipment,3100,"Energy star qualified, minimum",nan,4.0,nan,nan,530,272.0,nan,802,985
+11 21 83.13,Kitchen Cleaning Equipment,3110,Maximum,G,nan,nan,nan,"1,200",545.0,nan,"1,745","2,125"
+11 21 83.13,Waste Disposal Equipment,10,WASTE DISPOSAL EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 83.13,Waste Disposal Equipment,1750,"Compactor, residential size, 4 to 1 compaction, minimum",1 Carp,5.0,1.6,Ea.,"1,100",90.0,nan,"1,190","1,325"
+11 21 83.13,Waste Disposal Equipment,1800,Maximum,"""",3.0,2.667,nan,"1,250",150.0,nan,"1,400","1,600"
+11 21 83.13,Waste Disposal Equipment,3300,"Garbage disposal, sink type, minimum",L-1,10.0,1.6,nan,99,109.0,nan,208,271
+11 05 10.1,Industrial Equipment Installation,10,INDUSTRIAL EQUIPMENT INSTALLATION,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 10.1,Industrial Equipment Installation,20,"Industrial equipment, minimum",E 2,12.0,4.667,Ton,,2286,207,493,660
+11 05 10.1,Industrial Equipment Installation,200,Maximum,"""",2.0,28.0,17,,"1,725","1,250","2,975","4,000"
+11 11 13.10,Compressed Air Equipment,10,COMPRESSED AIR EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 11 13.10,Compressed Air Equipment,30,"Compressors, electric, 1-1/2 HP, standard controls",L4,1.5,16.0,Ea.,"1,100",860,nan,"1,960","2,525"
+11 11 13.10,Compressed Air Equipment,550,Dual controls,nan,1.5,16.0,nan,"1,050",860,nan,"1,910","2,450"
+11 11 13.10,Compressed Air Equipment,600,"5 HP, 115/230 volt, standard controls",nan,1.0,24.0,nan,"1,875","1,300",nan,"3,175","4,000"
+11 11 13.10,Compressed Air Equipment,650,Dual controls,nan,nan,24.0,nan,"1,450","1,300",nan,"2,750","3,525"
+11 11 19.10,Lubrication Equipment,10,LUBRICATION EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 11 19.10,Lubrication Equipment,3000,"Lube equipment, 3 reel type, with pumps, not including piping",L4,522.0,4∞,Set,"12,100","2,575",nan,"14,675","17,300"
+11 11 19.10,Lubrication Equipment,3100,"Hose reel, including hose, oil/lube, 1000 psi",2 Sswk,2.0,8,Ea.,290,495,nan,785,"1,075"
+11 11 19.10,Lubrication Equipment,3200,"Grease, 5000 psi",nan,nan,8,nan,530,495,nan,"1,025","1,350"
+11 11 19.10,Lubrication Equipment,3300,"Air, 50', 160 psi",nan,22.0,8,nan,130,495,nan,625,90
+11 11 19.10,Lubrication Equipment,3350,"25', 160 psi",nan,nan,8,nan,78,495,nan,573,845
+11 11 33.10,Spray Painting Equipment,10,SPRAY PAINTING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 11 33.10,Spray Painting Equipment,4000,"Spray painting booth, 26' long, complete",L4,0.4,60.0,Ea.,"21,100","3,225",nan,"24,325","28,100"
+11 12 13.10,Parking Control Units,10,PARKING CONTROL UNITS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 12 13.10,Parking Control Units,5100,Card reader,1 Elec,2.0,4.0,Ea.,725,265,nan,990,"1,200"
+11 12 13.10,Parking Control Units,5120,Proximity with customer display,2 Elec,1.0,16.0,nan,"2,975","1,050",nan,"4,025","4,850"
+11 12 13.10,Parking Control Units,6000,"Parking control software, basic functionality",1 Elec,0.5,16.0,nan,"18,700","1,050",nan,"19,750","22,200"
+11 12 13.10,Parking Control Units,6020,Multi-function,"""",0.2,40.0,nan,"73,500","2,650",nan,"76,150","84,500"
+11 12 16.10,Ticket Dispensers,10,TICKET DISPENSERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 12 16.10,Ticket Dispensers,5900,"Ticket spitter with time/date stamp, standard",2 Elec,22.0,88.0,5a.,"9,650",530.0,nan,"10,180","11,400"
+11 12 16.10,Ticket Dispensers,5920,Mag stripe encoding,"""",nan,nan,=,"15,400",530.0,nan,"15,930","17,700"
+11 12 26.13,Parking Fee Coin Collection Equipment,10.0,PARKING FEE COIN COLLECTION EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 12 26.13,Parking Fee Coin Collection Equipment,5200.0,"Cashier booth, average",B 22,128.0,308.0,Eo.,"8,450","1,600",220.0,"10,310","12,000"
+11 12 26.13,Parking Fee Coin Collection Equipment,nan,"Collector station, pay on foot",Elec,0.2,nan,E,nan,nan,nan,nan,"108,000"
+11 12 26.13,Parking Fee Coin Collection Equipment,5300.0,nan,2,nan,80.0,nan,,"91,000","5,300",nan,"96,300"
+11 12 26.13,Parking Fee Coin Collection Equipment,5320.0,Credit card only,19,0.5,32.0,nan,"16,800","2,125",nan,"18,925","21,600"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,2350,"Cooler, reach-in, beverage, 6' long",0-1,6.0,2.667,Ea.,"2,900",168,nan,"3,068","3,450"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4300,"Freezers, reach in, 44 C.F.",nan,4.0,4.0,nan,"4,475",251,i,"4,726","5,300"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4500,68 C.F.,nan,3.0,5.333,nan,"5,500",335,nan,"5,835","6,550"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4600,"Freezer, pre-fab, 8' x 8' w / refrigeration",2 Carp,45.0,35.556,nan,"9,325","2,000",nan,"11,325","13,300"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4620,8' x 12',nan,0.35,45.714,nan,"11,300","2,575",nan,"13,875","16,200"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4640,8' x 16',nan,0.25,64.0,nan,"12,600","3,600",nan,"16,200","19,200"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4660,8' x 20',nan,0.17,94.118,nan,"15,400","5,300",nan,"20,700","24,800"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4680,"Reach in, 1 compartment",Q-1,4.0,4.0,nan,"4,000",251,nan,"4,251","4,775"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4685,Energy star rated,G R-18,7.8,3.333,nan,"3,675",194,nan,"3,869","4,325"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4700,2 compartment,Q-1,3.0,5.333,nan,"5,300",335,nan,"5,635","6,350"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4705,Energy star rated,G R-18,6.2,4.194,nan,"3,900",244,nan,"4,144","4,625"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4710,3 compartment,Q-1,3.0,5.333,nan,"6,450",335,nan,"6,785","7,575"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,4715,Energy star rated,G R-18,5.6,4.643,nan,"5,375",270,nan,"5,645","6,325"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8320,"Refrigerator, reach-in, 1 compartment",nan,7.8,3.333,nan,"4,250",194,nan,"4,444","4,950"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8325,Energy star rated,G,7.8,3.333,nan,"3,675",194,nan,"3,869","4,325"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8330,2 compartment,nan,6.2,4.194,nan,"3,525",244,nan,"3,769","4,225"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8335,Energy star rated,G,6.2,4.194,nan,"3,900",244,nan,"4,144","4,625"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8340,3 compartment,nan,5.6,4.643,nan,"5,000",270,nan,"5,270","5,900"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8345,Energy star rated,G,5.6,4.643,nan,"5,375",270,nan,"5,645","6,325"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8350,"Pre-fab, with refrigeration, 8' x 8'",2 Carp,0.45,35.556,nan,"6,475","2,000",nan,"8,475","10,100"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8360,8' x 12',nan,0.35,45.714,nan,"9,9251","2,575",nan,"12,500","14,700"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8370,8' x 16',nan,0.25,64.0,nan,"10,500","3,600",nan,"14,100","17,000"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8380,8' x 20',nan,0.17,94.118,nan,"13,500","5,300",nan,"18,800","22,700"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8390,"Pass thru / rol-in, 1 compartment",R-18,7.8,3.333,nan,"4,350",194,nan,"4,544","5,075"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8400,2 compartment,nan,6.24,4.167,nan,"5,575",242,nan,"5,817","6,475"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8410,3 compartment,nan,5.6,4.643,nan,"23,900",270,nan,"24,170","26,700"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8420,"Walk-in, alum, door & floor only, no refrig, 6' x 6' x 7'-6""",2 Carp,1.4,11.429,nan,"6,100",645,nan,"6,745","7,675"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8430,"10' x 6' x 7'-6""",nan,0.55,29.091,nan,"5,650","1,650",nan,"7,300","8,650"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8440,"12' x 14' x 7'-6""",nan,0.25,64.0,nan,"11,900","3,600",nan,"15,500","18,500"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8450,"12' x 20' x 7'-6""",nan,0.17,94.118,nan,"15,100","5,300",nan,"20,400","24,600"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8460,"Refrigerated cabinets, mobile",nan,nan,nan,nan,"7,700",nan,nan,"7,700","8,475"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8470,"Refrigerator/freezer, reach-in, 1 compartment",R-18,5.6,4.643,nan,"2,925",270,nan,"3,195","3,600"
+41 13.20,0010 REFRIGERATED FOOD STORAGE EQUIPMENT,8480,2 compartment,"""",4.8,5.417,nan,"5,275",315,nan,"5,590","6,275"
+11 41 13.30,Wine Cellar,10,"WINE CELLAR, refrigerated, Redwood interior, carpeted, walk-in type",nan,nan,nan,nan,,nan,nan,nan,nan
+11 41 13.30,Wine Cellar,20,"6'-8"" high, including racks",nan,nan,nan,nan,,nan,nan,nan,nan
+11 41 13.30,Wine Cellar,200,"80"" W x 48"" D for 900 bottles",2 Carp,1.5,10.667,Ea.,"4,575",600.0,nan,"5,175","5,925"
+11 41 13.30,Wine Cellar,250,"80"" W x 72"" D for 1300 bottles",nan,1.33,12.03,nan,"6,375",675.0,nan,"7,050","8,000"
+11 41 13.30,Wine Cellar,300,"80"" W x 94"" D for 1900 bottles",nan,1.17,13.675,nan,"7,450",770.0,nan,"8,220","9,350"
+11 41 13.30,Wine Cellar,400,"80"" W x 124"" D for 2500 bottles",nan,nan,116.0,nan,"8,625",900.0,nan,"9,525","10,800"
+11 41 13.30,Wine Cellar,600,"Portable cabinets, red oak, reach in temp. & humidity controlled",nan,nan,nan,nan,,nan,nan,nan,nan
+11 41 13.30,Wine Cellar,650,"26-5/8"" W x 26-1/2"" D x 68"" H for 235 bottles",nan,nan,nan,Ea.,"4,800",nan,nan,"4,800","5,275"
+11 41 13.30,Wine Cellar,660,"32"" W x 21-1/2"" D x 73-1/2"" H for 144 bottles",nan,nan,nan,nan,"3,350",nan,nan,"3,350","3,675"
+11 41 13.30,Wine Cellar,670,"32"" W x 29-1/2"" D x 73-1/2"" H for 288 bottles",nan,nan,nan,nan,"5,275",nan,nan,"5,275","5,800"
+11 41 13.30,Wine Cellar,680,"39-1/2"" W x 29-1/2"" D x 86-1/2"" H for 440 bottles",nan,nan,nan,nan,"4,900",nan,nan,"4,900","5,400"
+11 41 13.30,Wine Cellar,690,"52-1/2"" W x 29-1/2"" D x 73-1/2"" H for 468 bottles",nan,nan,nan,nan,"5,775",nan,nan,"5,775","6,375"
+11 41 13.30,Wine Cellar,700,"52-1/2"" W x 29-1/2"" D x 86-1/2"" H for 572 bottles",nan,nan,nan,nan,"6,200",nan,nan,"6,200","6,800"
+11 41 13.30,Wine Cellar,730,"Portable, red oak, can be built-in with glass door",nan,nan,nan,nan,,nan,nan,nan,nan
+11 41 13.30,Wine Cellar,750,"23-7/8"" W x 24"" D x 34-1/2"" H for 50 bottles",nan,nan,nan,nan,"1,175",nan,nan,"1,175","1,300"
+11 14 19.13,Portable Posts and Railings,1500,"Portable security or safety barrier, black with 7' yellow strap",nan,nan,nan,Ea.,85.5,nan,nan,85.5,94.0
+11 14 19.13,Portable Posts and Railings,1510,12' yellow strap,nan,nan,nan,nan,166.0,nan,nan,166.0,183.0
+11 14 19.13,Portable Posts and Railings,1550,"Sign holder, standard design",nan,nan,nan,nan,72.0,nan,nan,72.0,79.5
+11 21 13.10,Checkout Counter,10,CHECKOUT COUNTER,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 13.10,Checkout Counter,20,"Supermarket conveyor, single belt",2 Clab,10.0,1.6,Ea.,"3,900",2732.0,nan,"3,973","4,400"
+11 21 13.10,Checkout Counter,100,"Double belt, power take-away",nan,9.0,1.778,nan,"5,375",81.0,nan,"5,456","6,050"
+11 21 13.10,Checkout Counter,400,"Double belt, power take-away, incl. side scanning",nan,7.0,2.286,nan,"5,925",104.0,nan,"6,029","6,675"
+11 21 13.10,Checkout Counter,800,Warehouse or bulk type,nan,6.0,2.667,1,"6,900",122.0,nan,"7,022","7,750"
+11 21 13.10,Checkout Counter,1000,"Scanning system, 2 lanes, w/registers, scan gun & memory",nan,nan,nan,System,"19,600",nan,nan,"19,600","21,600"
+11 21 13.10,Checkout Counter,1100,"10 lanes, single processor, fullscan, with scales",nan,nan,nan,"""","186,000",nan,nan,"186,000","204,500"
+11 21 13.10,Checkout Counter,2000,"Register, restaurant, minimum",nan,nan,nan,Ea.,820,nan,nan,820,905
+11 21 13.10,Checkout Counter,2100,Maximum,nan,nan,nan,nan,207,nan,nan,207,228
+11 21 13.10,Checkout Counter,2150,"Store, minimum",nan,nan,nan,nan,820,nan,nan,820,905
+11 21 13.10,Checkout Counter,2200,Maximum,nan,nan,nan,nan,"3,150",nan,nan,"3,150","3,450"
+11 21 33.10,Clothes Check Equipment,10,CLOTHES CHECK EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 33.10,Clothes Check Equipment,30,"Clothes check rack, free standing, st. st., 2-tier, 90 bag capacity",nan,nan,nan,Eq.,"1,600",nan,nan,"1,600","1,750"
+11 21 33.10,Clothes Check Equipment,50,"Wall mounted, 45 bag capacity",1-2,8.0,2.0,nan,935,99.5,nan,"1,034.50","1,175"
+11 21 33.10,Clothes Check Equipment,100,"Garment checking bag, green mesh fabric, 21"" H x 17"" W with 4.5"" hook",nan,nan,nan,nan,29,nan,nan,29,31.50
+11 21 53.10,Barber Equipment,10,BARBER EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 53.10,Barber Equipment,20,"Chair, hydraulic, movable, minimum",1 Carp,24.0,0.333,Ea.,645,18.75,nan,663.75,735
+11 21 53.10,Barber Equipment,50,Maximum,nan,16.0,0.5,nan,"4,000",28,nan,"4,028","4,425"
+11 21 53.10,Barber Equipment,200,"Wall hung styling station with mirrors, minimum",L-2,8.0,2.0,nan,660,99.50,nan,759.50,875
+11 21 53.10,Barber Equipment,300,Maximum,P,4.0,nan,nan,"2,650",199,nan,"2,849","3,225"
+11 21 53.10,Barber Equipment,500,"Sink, hair washing basin, rough plumbing not incl.",Plum,8.0,nan,nan,249,70,nan,319,380
+11 21 53.10,Barber Equipment,1000,"Sterilizer, liquid solution for tools",nan,nan,nan,nan,165,nan,nan,165,181
+11 21 53.10,Barber Equipment,1100,"Total equipment, rule of thumb, per chair, minimum",1-8,1.0,20.0,nan,"1,300","1,175",nan,"2,475","3,175"
+11 21 53.10,Barber Equipment,1150,Maximum,"""",1.0,20.0,nan,"5,900","1,175",nan,"7,075","8,250"
+11 21 73.13,Dry Cleaning Equipment,10,DRY CLEANING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 73.13,Dry Cleaning Equipment,2000,"Dry cleaners, electric, 20 lb. capacity, not incl. rough-in",L-1,0.2,80.0,Ea. 1,"35,800","5,450",nan,"41,250","47,500"
+11 21 73.13,Dry Cleaning Equipment,2050,25 lb. capacity,nan,0.17,94.118,nan,"54,000","6,400",nan,"60,400","68,500"
+11 21 73.13,Dry Cleaning Equipment,2100,30 lb. capacity,nan,0.15,107.0,nan,"56,500","7,250",nan,"63,750","73,500"
+11 21 73.13,Dry Cleaning Equipment,2150,60 lb. capacity,nan,0.09,178.0,nan,"80,500","12,100",nan,"92,600","107,000"
+11 21 73.16,Drying and Conditioning Equipment,10,DRYING AND CONDITIONING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 73.16,Drying and Conditioning Equipment,100,"Dryers, not including rough-in",nan,nan,nan,nan,,nan,nan,nan,nan
+11 21 73.16,Drying and Conditioning Equipment,1500,"Industrial, 30 lb. capacity",1 Plum,2.0,4.0,Ea.,"1,650",279,nan,"1,929","2,250"
+11 21 73.16,Drying and Conditioning Equipment,1600,50 lb. capacity,nan,1.7,4.706,nan,"4,675",330,nan,"5,005","# 5,650"
+11 21 73.16,Drying and Conditioning Equipment,4700,"Lint collector, ductwork not included, 8,000 to 10,000 CFM",Q-10,0.3,80.0,nan,"11,500","5,050",nan,"16,550","20,300"
+11 05 05.10,Selective Demolition,10,SELECTIVE DEMOLITION,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Selective Demolition,130,"Central vacuum, motor unit, residential or commercial",1 Clab,223,4,Ea.,nan,182,nan,182,272
+11 05 05.10,Selective Demolition,210,Vault door and frame,2 Skwk,2,8,nan,nan,470,nan,470,710
+11 05 05.10,Selective Demolition,215,"Day gate, for vault",群,nan,5.333,nan,nan,315,nan,315,470
+11 05 05.10,Selective Demolition,380,"Bank equipment, teller window, bullet resistant",1 Clab,1.20,6.667,nan,nan,305,nan,305,455
+11 05 05.10,Selective Demolition,381,Counter,2 Clab,1.50,10.667,Station,nan,485,nan,485,725
+11 05 05.10,Selective Demolition,382,"Drive-up window, including drawer and glass",nan,1.50,10.667,"""",nan,485,nan,485,725
+11 05 05.10,Selective Demolition,383,"Thru-wall boxes and chests, selective demolition",nan,2.50,6.400,Ea.,nan,292,nan,292,435
+11 05 05.10,Selective Demolition,384,Bullet resistant partitions,nan,20,.800,LF,nan,36.50,nan,36.50,54.50
+11 05 05.10,Selective Demolition,385,"Pneumatic tube system, 2 lane drive-up",1-3,.45-382235.556634253-Ea0.32,"2,200",nan,,"2,200",nan,"3,275",nan
+11 05 05.10,Selective Demolition,386,Safety deposit box,1 Clab,50,.160,Opng.,nan,7.30,nan,7.30,10.85
+11 05 05.10,Selective Demolition,387,"Surveillance system, video, complete",2 Elec,nan,8,Ea.,nan,530,nan,530,785
+11 05 05.10,Selective Demolition,410,"Church equipment, misc movable fixtures",2 Clab,116,nan,nan,nan,730,nan,730,"1,075"
+11 05 05.10,Selective Demolition,412,"Steeple, to 28' high",F 3,3,13.333,nan,770,660,nan,"1,430","1,875"
+11 05 05.10,Selective Demolition,414,40' to 60' high,"""",nan,50,nan,"2,875","2,475",nan,"5,350","7,025"
+11 05 05.10,Selective Demolition,510,"Library equipment, bookshelves, wood, to 90"" high",1 Clab,20,.400,L.F.,18.25,nan,nan,18.25,27
+11 05 05.10,Selective Demolition,515,"Carrels, hardwood, 36"" x 24""","""",9,.889,Ea.,40.50,nan,nan,40.50,60.50
+11 05 05.10,Selective Demolition,630,"Stage equipment, light control panel",1 Elec,nan,8,"""",530,nan,nan,530,785
+11 05 05.10,Selective Demolition,632,Border lights,nan,nan,.200,LF,13.25,nan,nan,13.25,19.70
+11 05 05.10,Selective Demolition,634,Spotlights,nan,nan,1,Ea.,66,nan,nan,66,98.50
+11 05 05.10,Selective Demolition,636,Telescoping platforms and risers,2 Clab,175,.091,SF Stg.,4.17,nan,nan,4.17,6.20
+11 05 05.10,Selective Demolition,1020,"Barber equipment, hydraulic chair",1 Clab,40,.200,Ea.,9.10,nan,nan,9.10,13.60
+11 05 05.10,Selective Demolition,1030,"Checkout counter, supermarket or warehouse conveyor",2 Clab,18,.889,nan,40.50,nan,nan,40.50,60.50
+11 05 05.10,Selective Demolition,1040,"Food cases, refrigerated or frozen",Q -5,nan,2.667,nan,169,nan,nan,169,252
+11 05 05.10,Selective Demolition,1190,"Laundry equipment, commercial",L6,nan,47,nan,274,nan,nan,274,410
+11 05 05.10,Selective Demolition,1360,"Movie equipment, lamphouse, to 4000 watt, incl. rectifier",1 Elec,nan,2,nan,132,nan,nan,132,197
+11 05 05.10,Selective Demolition,1365,"Sound system, incl. amplifier","""",1.25,6.400,nan,425,nan,nan,425,630
+11 05 05.10,Selective Demolition,1410,"Air compressor, to 5 HP",2 Clab,2.50,6.400,nan,292,nan,nan,292,435
+11 05 05.10,Selective Demolition,1412,"Lubrication equipment, automotive, 3 reel type, incl. pump, excl. piping",L4,nan,24,Set,"1,300",nan,nan,"1,300","1,950"
+11 05 05.10,Selective Demolition,1414,"Booth, spray paint, complete, to 26' long","""",nan,30,"""","1,600",nan,nan,"1,600","2,425"
+11 05 05.10,Selective Demolition,1560,"Parking equipment, cashier booth",B-22,nan,15,Eo.,800,130,nan,930,"1,350"
+11 05 05.10,Selective Demolition,1600,"Loading dock equipment, dock bumpers, rubber",1 Clab,50,.160,nan,7.30,nan,nan,7.30,10.85
+11 05 05.10,Selective Demolition,1610,Door seal for door perimeter,"""",nan,.160,LF.,7.30,nan,nan,7.30,10.85
+11 05 05.10,Selective Demolition,1611,"Loading dock equipment, dock seal for perimeter, selective demolition",2 Clab,13,1.231,11,56,nan,nan,56,83.50
+11 05 05.10,Selective Demolition,1620,"Platform lifte, fixed, 6' x 8', 5000 lb. capacity",E-16,1.50,10.667,Eo.,670,98,nan,768,"1,125"
+11 05 05.10,Selective Demolition,1630,Dock leveller,"""",nan,8,nan,505,73.50,nan,578.50,855
+11 05 05.10,Selective Demolition,1640,"Lights, single or double arm",1 Elec,8,1,nan,66,nan,nan,66,98.50
+11 05 05.10,Selective Demolition,1650,"Shelter, fabric, truck or train",1 Clab,1.50,5.333,nan,243,nan,nan,243,360
+11 05 05.10,Selective Demolition,1790,"Waste handling equipment, commercial compactor",L-4,2,12,nan,645,nan,nan,645,970
+11 05 05.10,Selective Demolition,1792,"Commercial or municipal incinerator, gas","""",2,12,nan,645,nan,nan,645,970
+11 05 05.10,Selective Demolition,1795,"Crematory, excluding building",0-3,.25,128,nan,"8,500",nan,nan,"8,500","12,700"
+11 05 05.10,Selective Demolition,1910,"Detection equipment, cell bar front",E4,4,8,nan,500,37,nan,537,810
+11 05 05.10,Selective Demolition,1912,Cell door and frame,nan,8,4,nan,249,38.45,nan,267.45,405
+11 05 05.10,Selective Demolition,1914,"Prefab cell, 4' to 5' wide, 7' to 8' high, 7' deep",nan,08,4,nan,249,18.45,nan,267.45,405
+11 05 05.10,Selective Demolition,1916,"Cot, bolted, single",nan,40,.800,nan,50,3.69,nan,53.69,81
+11 05 05.10,Selective Demolition,1918,Visitor cubicle,nan,88,84,nan,500,37,nan,537,810
+11 05 05.10,Selective Demolition,2850,"Hydraulic gates, canal, flap, knife, slide or sluice, to 18"" diameter",L-5A,8,nan,nan,251,105,nan,356,500
+11 05 05.10,Selective Demolition,2852,"19"" to 36"" diameter",nan,6,5.333,nan,335,140,nan,475,665
+11 05 05.10,Selective Demolition,2854,"37"" to 48"" diameter",nan,2,16,nan,"1,000",420,nan,"1,420","2,000"
+11 05 05.10,Selective Demolition,2856,"49"" to 60"" diameter",nan,1,32,nan,"2,000",845,nan,"2,845","4,000"
+11 05 05.10,Selective Demolition,2858,"Over 60"" diameter",nan,.30,107,nan,"6,700","2,800",nan,"9,500","13,300"
+11 05 05.10,Residential Miscellaneous Residential Appliances,11,30 15 - Miscellaneous Residential Appliances,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Residential Miscellaneous Residential Appliances,11,30 15.43 Air Quality,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Residential Miscellaneous Residential Appliances,3950,3000 watt,1 Elec,3.0,2.667,Ea.,199.0,177.0,nan,376.0,480.0
+11 05 05.10,Residential Miscellaneous Residential Appliances,4850,"Humidifier, portable, 8 gallons/day",nan,nan,nan,nan,150.0,nan,nan,150.0,165.0
+11 05 05.10,Residential Miscellaneous Residential Appliances,5000,15 gallons/day,nan,nan,nan,nan,228.0,nan,nan,228.0,251.0
+11 05 05.10,Retractable Stairs,11,30 33 - Retractable Stairs,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Retractable Stairs,11,30 33.10 Disappearing Stairway,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Retractable Stairs,10,DISAPPEARING STAIRWAY No trim included,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Retractable Stairs,100,"Custom grade, pine, 8' 6"" ceiling, minimum",1 Corp,4.0,2.0,Ea.,110,113,nan,223,289
+11 05 05.10,Retractable Stairs,150,Average,nan,3.5,2.286,nan,191,129,nan,320,400
+11 05 05.10,Retractable Stairs,200,Maximum,nan,3.0,2.667,nan,271,150,nan,421,520
+11 05 05.10,Retractable Stairs,500,"Heavy duty, pivoted, from 7'-7"" to 12""-10"" floor to floor",nan,3.0,2.667,nan,490,150,nan,640,765
+11 05 05.10,Retractable Stairs,600,"16'-0"" ceiling",nan,2.0,4.0,nan,"2,575",225,nan,"2,800","3,175"
+11 05 05.10,Retractable Stairs,800,"Economy folding, pine, 8'6"" ceiling",nan,4.0,2.0,nan,96.50,113,nan,209.50,274
+11 05 05.10,Retractable Stairs,900,"9'-6"" ceiling",nan,4.0,2.0,nan,102,113,nan,215,280
+11 05 05.10,Retractable Stairs,1100,"Automatic electric, aluminum, floor to floor height, 8' to 9'",2 Carp,1.0,16.0,nan,"3,925",900,nan,"4,825","5,675"
+11 05 05.10,Retractable Stairs,1400,11' to 12',nan,0.9,17.778,nan,"4,075","1,000",nan,"5,075","5,975"
+11 05 05.10,Retractable Stairs,1700,14' to 15',nan,0.7,22.857,W,"8,425","1,275",nan,"9,700","11,200"
+11 05 05.10,Unit Kitchens,11,32 Unit Kitchens,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Unit Kitchens,11,32 13 Metal Unit Kitchens,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Unit Kitchens,11,32 13.10 Commercial Unit Kitchens,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Unit Kitchens,10,COMMERCIAL UNIT KITCHENS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Unit Kitchens,1500,"Combination range, refrigerator and sink, 30"" wide, minimum",1-1,2.0,8.0,Ea.,"1,275",545,nan,"1,820","2,200"
+11 05 05.10,Unit Kitchens,1550,Maximum,1,16.0,nan,nan,"1,275","1,100",nan,"2,375","3,025"
+11 05 05.10,Unit Kitchens,1570,"60"" wide, average",1.40,11.429,nan,nan,"1,650",775,nan,"2,425","2,950"
+11 05 05.10,Unit Kitchens,1590,"72"" wide, average",1.20,13.333,nan,nan,"1,725",905,nan,"2,630","3,250"
+11 05 05.10,Unit Kitchens,1600,"Office model, 48"" wide",28,nan,nan,nan,"2,775",545,nan,"3,320","3,850"
+11 05 05.10,Unit Kitchens,1620,Refrigerator and sink only,2.40,6.667,nan,nan,"2,825",455,nan,"3,280","3,800"
+11 05 05.10,Unit Kitchens,1640,"Combination range, refrigerator, sink, microwave",nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Unit Kitchens,1660,Oven and ice maker,-1,80.0,20.0,Ea.,"5,725","1,350",nan,"7,075","8,325"
+11 05 05.10,Foodservice Storage Equipment,11,41 Foodservice Storage Equipment,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Foodservice Storage Equipment,11,41 13 - Refrigerated Food Storage Cases,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Foodservice Storage Equipment,11,41 13.10 Refrigerated Food Cases,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Foodservice Storage Equipment,10,REFRIGERATED FOOD CASES,nan,nan,nan,nan,,nan,nan,nan,nan
+11 05 05.10,Foodservice Storage Equipment,30,"Dairy, multi-deck, 12' long",Q 5,3.0,5.333,Ea.,"12,900",340.0,nan,"13,240","14,600"
+11 05 05.10,Foodservice Storage Equipment,100,"For rear sliding doors, add",nan,nan,nan,nan,"2,000",nan,nan,"2,000","2,200"
+11 05 05.10,Foodservice Storage Equipment,200,"Delicatessen case, service deli, 12' long, single deck",Q-5,3.9,4.103,nan,"13,000",260.0,nan,"13,260","14,700"
+11 05 05.10,Foodservice Storage Equipment,300,"Multi-deck, 18 S.F. shelf display",nan,3.0,5.333,nan,"8,425",340.0,nan,"8,765","9,775"
+11 05 05.10,Foodservice Storage Equipment,400,"Freezer, self-contained, chest-type, 30 C.F.",nan,3.9,4.103,nan,"5,075",260.0,nan,"5,335","5,950"
+11 05 05.10,Foodservice Storage Equipment,500,"Glass door, upright, 78 C.F.",nan,3.3,4.848,nan,"9,400",305.0,nan,"9,705","10,800"
+11 05 05.10,Foodservice Storage Equipment,600,"Frozen food, chest type, 12' long",nan,3.3,4.848,nan,"6,925",305.0,nan,"7,230","8,075"
+11 05 05.10,Foodservice Storage Equipment,700,"Glass door, reach-in, 5 door",nan,3.0,5.333,nan,"10,700",340.0,nan,"11,040","12,300"
+11 05 05.10,Foodservice Storage Equipment,800,"Island case, 12' long, single deck",nan,3.3,4.848,nan,"8,875",305.0,nan,"9,180","10,200"
+11 05 05.10,Foodservice Storage Equipment,900,Multi-deck,nan,3.0,5.333,nan,"10,700",340.0,nan,"11,040","12,300"
+11 05 05.10,Foodservice Storage Equipment,1000,"Meat case, 12' long, single deck",nan,3.3,4.848,nan,"7,525",305.0,nan,"7,830","8,725"
+11 05 05.10,Foodservice Storage Equipment,1050,Multi deck,nan,3.1,5.161,nan,"10,300",325.0,nan,"10,625","11,800"
+11 05 05.10,Foodservice Storage Equipment,1100,"Produce, 12' long, single deck",nan,3.3,4.848,nan,"6,675",305.0,nan,"6,980","7,775"
+11 05 05.10,Foodservice Storage Equipment,1200,Multi-deck,nan,3.1,5.161,nan,"8,625",325.0,nan,"8,950","9,950"
+11 30 13.1,Equipment Disposal Equipment,11 30 13.18,Waste Disposal Equipment,nan,nan,nan,nan,,nan,nan,nan,nan
+11 30 13.1,Equipment Disposal Equipment,3350,Maximum,L-1,10.0,1.6,Ea.,239.0,109.0,nan,348.0,425.0
+11 30 13.19,Kitchen Ventilation Equipment,10,KITCHEN VENTILATION EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 30 13.19,Kitchen Ventilation Equipment,4150,"Hood for range, 2 speed, vented, 30"" wide, minimum",1-3,53553.0,3.2,Ea.,116.0,197.0,nan,313,420
+11 30 13.19,Kitchen Ventilation Equipment,4200,Maximum,nan,5.333,nan,nan,835.0,330.0,nan,"1,165","1,400"
+11 30 13.19,Kitchen Ventilation Equipment,4300,"42"" wide, minimum",nan,3.2,nan,nan,157.0,197.0,nan,354,465
+11 30 13.19,Kitchen Ventilation Equipment,4330,Custom,nan,3.2,nan,nan,129.0,197.0,nan,326,435
+11 30 13.19,Kitchen Ventilation Equipment,4350,Maximum,nan,5.333,nan,nan,157.0,330.0,nan,487,665
+11 30 13.19,Kitchen Ventilation Equipment,4500,"For ventless hood, 2 speed, add",nan,nan,nan,nan,54.0,nan,nan,54,59.50
+11 30 13.19,Kitchen Ventilation Equipment,4650,"For vented 1 speed, deduct from maximum",nan,nan,nan,nan,63.5,nan,nan,63.50,69.50
+11 30 13.24,Washers,10,WASHERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 30 13.24,Washers,5000,"Residential, 4 cycle, average",1 Plum,33.0,2.667,Ea.,"1,025",186.0,nan,"1,211","1,400"
+11 30 13.24,Washers,6650,"Washing machine, automatic, minimum",nan,2.667,nan,nan,700,186.0,nan,886,"1,050"
+11 30 13.24,Washers,6700,Maximum,1,8.0,nan,nan,950,560.0,nan,"1,510","1,875"
+11 30 13.24,Washers,6750,"Energy star qualified, front loading, minimum",5555,3133.0,2.667,nan,"1,050",186.0,nan,"1,236","1,425"
+11 30 13.24,Washers,5760,Maximum,G,8.0,nan,nan,"1,300",560.0,nan,"1,860","2,250"
+11 30 13.24,Washers,5764,"Top loading, minimum",G,2.667,nan,nan,550,186.0,nan,736,885
+11 30 13.24,Washers,5766,Maximum,G,2.667,nan,nan,850,186.0,nan,"1,036","1,225"
+11 30 13.25,Dryers,10,DRYERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 30 13.25,Dryers,500,"Gas fired residential, 16 lb. capacity, average",1 Plum,3.0,2.667,Ea.,970.0,186.0,nan,"1,156","1,350"
+11 30 13.25,Dryers,5770,"Electric, front loading, energy-star qualified, minimum",G 1-2,3.0,5.333,nan,700.0,266.0,nan,966,"1,175"
+11 30 13.25,Dryers,6780,Maximum,G,2.0,8.0,nan,900.0,400.0,nan,"1,300","1,575"
+11 30 13.25,Dryers,7450,Vent kits for dryers,1 Carp,10.0,0.8,nan,50.0,45.0,nan,95,122
+11 30 15.13,Sump Pumps,10,SUMP PUMPS,nan,nan,nan,nan,nan,nan,nan,nan,329.0
+11 30 15.13,Sump Pumps,6400,"Cellar drainer, pedestal, 1/3 HP, molded PVC base",1 Plum,3.0,2.667,Eo.,138.0,186.0,nan,324.0,430.0
+11 30 15.13,Sump Pumps,5450,Solid brass,2,4.0,"""",nan,250.0,279.0,nan,529.0,690.0
+11 30 15.13,Sump Pumps,6460,"Sump pump, see also Section 22 14 29.16",nan,nan,nan,nan,,nan,nan,nan,nan
+11 30 15.23,Water Heaters,10,WATER HEATERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 30 15.23,Water Heaters,5900,"Electric, glass lined, 30 gallon, minimum",L-1,5.0,3.2,Ea.,720,218,nan,938,"1,125"
+11 30 15.23,Water Heaters,-5950,Maximum,nan,3.0,5.333,nan,"1,000",365,nan,"1,365","1,650"
+11 30 15.23,Water Heaters,7100,"80 gallon, minimum",nan,2.0,8.0,nan,"2,000",545,nan,"2,545","3,000"
+11 30 15.23,Water Heaters,7150,Maximum,nan,nan,16.0,nan,"2,775","1,100",nan,"3,875","4,675"
+11 30 15.23,Water Heaters,7180,"Gas, glass lined, 30 gallon, minimum",2 Plum,5.0,3.2,nan,"1,825",223,nan,"2,048","2,325"
+11 30 15.23,Water Heaters,1220,Maximum,nan,3.0,5.333,nan,"2,525",370,nan,"2,895","3,325"
+11 30 15.23,Water Heaters,1260,"50 gallon, minimum",nan,2.5,6.4,nan,710,445,nan,"1,155","1,450"
+11 30 15.23,Water Heaters,1300,Maximum,nan,1.5,10.667,nan,985,745,nan,"1,730","2,175"
+11 30 15.23,Water Heaters,1310,"Water heater, see also Section 22 33 30.13",nan,nan,nan,nan,,nan,nan,nan,nan
+11 30 15.43,Air Quality,10,AIR QUALITY,nan,nan,nan,nan,,nan,nan,nan,nan
+11 30 15.43,Air Quality,2450,"Dehumidifier, portable, automatic, 15 pint",#1 Elec,47.0,2.0,Ea.,238.0,132.0,nan,370.0,460.0
+11 30 15.43,Air Quality,2550,40 pint,nan,3.75,2.133,nan,273.0,141.0,nan,414.0,510.0
+11 30 15.43,Air Quality,3550,"Heater, electric, built-in, 1250 watt, ceiling type, minimum",nan,4.0,2.0,nan,112.0,132.0,nan,244.0,320.0
+11 30 15.43,Air Quality,3600,Maximum,nan,3.0,2.667,nan,214.0,177.0,nan,391.0,495.0
+11 30 15.43,Air Quality,3700,"Wall type, minimum",nan,4.0,2.0,nan,118.0,132.0,nan,250.0,325.0
+11 30 15.43,Air Quality,3750,Maximum,nan,3.0,2.667,nan,112.0,177.0,nan,289.0,385.0
+11 30 15.43,Air Quality,3900,"1500 watt wall type, with blower",nan,4.0,2.0,nan,188.0,132.0,nan,320.0,405.0
+11 12 26.23,Fee Equipment,10,FEE EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 12 26.23,Fee Equipment,5600,Fee computer,i1 Elec,1.5,5.333,Ea.,"10,600",355.0,nan,"10,955","12,100"
+11 12 33.13,Lift Arm Parking Gates,10,LIFT ARM PARKING GATES,nan,nan,nan,nan,,nan,nan,nan,nan
+11 12 33.13,Lift Arm Parking Gates,5000,Barrier gate with programmable controller,2 Elec,3.0,5.333,Ea.,"2,975",355,nan,"3,330","3,800"
+11 12 33.13,Lift Arm Parking Gates,5020,Industrial,nan,3.0,5.333,nan,925,355,nan,"1,280","1,550"
+11 12 33.13,Lift Arm Parking Gates,5050,"Non-programmable, with reader and 12' arm",nan,3.0,5.333,nan,"1,400",355,nan,"1,755","2,075"
+11 12 33.13,Lift Arm Parking Gates,5500,Exit verifier,nan,1.0,16.0,nan,"2,450","1,050",nan,"3,500","4,275"
+11 12 33.13,Lift Arm Parking Gates,5700,"Full sign, 4"" letters",1 Elec,24.0,nan,nan,"1,000",265,nan,"1,265","1,500"
+11 12 33.13,Lift Arm Parking Gates,5800,Inductive loop,2 Elec,4.0,4.0,nan,135,265,nan,400,545
+11 12 33.13,Lift Arm Parking Gates,5950,"Vehicle detector, microprocessor based",1 Elec,340.0,2.667,nan,380,177,nan,557,680
+11 12 33.13,Lift Arm Parking Gates,7100,"Traffic spike unit, flush mount, spring loaded, 72"" L",B-89,nan,4.0,nan,"1,625",215,157.0,"1,997","2,300"
+11 12 33.13,Lift Arm Parking Gates,7200,"Surface mount, 72"" L",2 Skwk,10.0,1.6,nan,"2,000",94,nan,"2,094","2,350"
+11 13 13.10,Dock Bumpers,10,DOCK BUMPERS Bolts not included,nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 13.10,Dock Bumpers,20,"2"" x 6"" to 4"" x 8"", average",1 Carp,222122526.667,M.B.F.,34,,"1,500",nan,"1,534","2,275"
+11 13 13.10,Dock Bumpers,50,"Bumpers, lam. rubber blocks 4-1/2"" thick, 10"" high, 14"" long",nan,26.0,.308,Ea.,45.50,17.3,nan,62.80,76.0
+11 13 13.10,Dock Bumpers,200,"24"" long",nan,nan,.364,1,70.50,20.5,nan,91,108.0
+11 13 13.10,Dock Bumpers,300,"36"" long",nan,17.0,.471,nan,106,26.5,nan,132.50,156.0
+11 13 13.10,Dock Bumpers,500,"12"" high, 14"" long",nan,nan,.320,nan,55,18.0,nan,73,87.5
+11 13 13.10,Dock Bumpers,550,"24"" long",nan,nan,.400,nan,86.50,22.5,nan,109,129.0
+11 13 13.10,Dock Bumpers,600,"36"" long",nan,nan,.533,nan,130,30.0,nan,160,188.0
+11 13 13.10,Dock Bumpers,800,"Laminated rubber blocks 6"" thick, 10"" high, 14"" long",nan,nan,.364,nan,59.50,20.5,nan,80,96.0
+11 13 13.10,Dock Bumpers,850,"24"" long",nan,18.0,.444,nan,92,25.0,nan,117,138.0
+11 13 13.10,Dock Bumpers,900,"36"" long",nan,nan,.615,nan,136,34.5,nan,170.50,202.0
+11 13 13.10,Dock Bumpers,910,"20"" high, 11"" long",nan,nan,.615,nan,92,34.5,nan,126.50,153.0
+11 13 13.10,Dock Bumpers,920,"Extruded rubber bumpers, T section, 22"" x 22"" x 3"" thick",nan,41.0,.195,nan,73,11.0,nan,84,97.0
+11 13 13.10,Dock Bumpers,940,"Molded rubber bumpers, 24"" x 12"" x 3"" thick",nan,nan,.400,nan,62.50,22.5,nan,85,102.0
+11 13 13.10,Dock Bumpers,1000,Welded installation of above bumpers,E-14,8.0,nan,nan,4.52,64.0,18.40,86.92,124.0
+11 13 13.10,Dock Bumpers,1100,"For drilled anchors, add per anchor",1 Carp,36.0,.222,nan,34,12.5,nan,46.50,56.0
+11 13 13.10,Dock Bumpers,1300,"Steel bumpers, see Section 10 26 13.10",nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 16.10,Dock Seals and Shelters,10,DOCK SEALS AND SHELTERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 16.10,Dock Seals and Shelters,3600,"Door seal for door perimeter, 12"" x 12"", vinyl covered",1 Carp,26.0,0.308,LF.,"1,050",17.3,nan,"1,067.30","1,175"
+11 13 16.10,Dock Seals and Shelters,3700,"Loading dock, seal for perimeter, 9' x 8', with 12"" vinyl",2 Carp,6.0,2.667,Ea.,"1,825",150.0,nan,"1,975","2,250"
+11 13 16.10,Dock Seals and Shelters,3900,"Folding gates, see Section 10 22 16.10",nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 16.10,Dock Seals and Shelters,6200,"Shelters, fabric, for truck or train, scissor arms, minimum",1 Carp,1.0,8.0,Ea.,"2,725",450.0,nan,"3,175","3,675"
+11 13 16.10,Dock Seals and Shelters,6300,Maximum,nan,0.5,16.0,"""","2,525",900.0,nan,"3,425","4,125"
+11 13 19.10,Dock Equipment,10,DOCK EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 19.10,Dock Equipment,2200,"Dock boards, heavy duty, 60"" x 60"", aluminum, 5,000 lb. cap.",nan,nan,nan,Ea.,"1,075",nan,nan,"1,075","1,175"
+11 13 19.10,Dock Equipment,2700,"9,000 lb. capacity",nan,nan,nan,nan,"1,525",nan,nan,"1,525","1,675"
+11 13 19.10,Dock Equipment,3200,"15,000 lb. capacity",nan,nan,nan,nan,"1,575",nan,nan,"1,575","1,750"
+11 13 19.10,Loading Dock Equipment,4200,"Platform lifte, 6 ' x 6 ', portable , 3,000 lb.capacity",nan,nan,nan,Ea.,"8,150",nan,nan,"8,150","8,950"
+11 13 19.10,Loading Dock Equipment,4250,"4,000 lb. capacity",nan,nan,nan,nan,"5,650",nan,nan,"5,650","6,22"
+11 13 19.10,Loading Dock Equipment,4400,"Fixed , 6 ' x 8 ', 5,000 lb. capacity",E-16,0.7,22.857,nan,"9,925","1,450",211.0,"11,586","13,400"
+11 13 19.10,Loading Dock Equipment,4500,"Levelers , hinged for trucks , 10 ton capacity ,6 ' x 8 '",nan,1.08,14.815,nan,"4,550",935,136.0,"5,621","6,57"
+11 13 19.10,Loading Dock Equipment,4650,7'x8 ',nan,1.08,14.815,nan,"5,825",935,136.0,"6,896","8,000"
+11 13 19.10,Loading Dock Equipment,4670,"Air bag power operated , 10 ton cap , 6 ' x 8 '",nan,1.08,14.815,nan,"6,175",935,136.0,"7,246","8,37"
+11 13 19.10,Loading Dock Equipment,4680,7 'x 8 ',nan,1.08,14.815,nan,"6,350",935,136.0,"7,421","8,550"
+11 13 19.10,Loading Dock Equipment,4700,"Hydraulic ,10 ton capacity , 6 ' x 8 '",nan,1.08,14.815,nan,"5,000",935,136.0,"6,071",".7,07"
+11 13 19.10,Loading Dock Equipment,4800,7'x8 ',nan,1.08,14.815,nan,"5,625",935,136.0,"6,696","7,75"
+11 13 19.10,Loading Dock Equipment,5800,"Loading dock safety restraints ,manual style",nan,1.08,14.815,nan,"3,500",935,136.0,"4,571","5,45"
+11 13 19.10,Loading Dock Equipment,5900,Automatic style,nan,1.08,14.8151,nan,"5,925",935,136.0,"6,996","8,07"
+11 13 19.10,Loading Dock Equipment,6000,"Dock leveler ,15 ton capacity",nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 19.10,Loading Dock Equipment,6100,"-beam construction , mechanical , 6 'x 8 '",E-16,0.5,32.0,Ea.,"5,950","2,025",295.0,"8,270","9,97"
+11 13 19.10,Loading Dock Equipment,6150,Hydraulic,nan,0.5,32.0,nan,"6,650","2,025",295.0,"8,970","10,80"
+11 13 19.10,Loading Dock Equipment,6200,"Formed beam deck construction , mechanical , 6 'x 8 '",nan,0.5,32.0,nan,"2,200","2,025",295.0,"4,520","5,85"
+11 13 19.10,Loading Dock Equipment,6250,Hydraulic,nan,0.5,32.0,nan,"4,200","2,025",295.0,"6,520","8,05"
+11 13 19.10,Loading Dock Equipment,6300,"Edge of dock leveler ,mechanical , 15 ton capacity",nan,2.0,8.0,nan,"2,200",505,73.5,"2,778.50","3,27"
+11 13 19.10,Loading Dock Equipment,6301,"Edge of dock leveler, mechanical , 10 ton capacity",nan,2.0,8.0,nan,"2,200",505,73.5,"2,778.50","3,27"
+11 13 19.10,Loading Dock Equipment,7000,22.5 ton capacity,nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 19.10,Loading Dock Equipment,7100,"Vertical storing dock leveler ,hydraulic ,6 ' x 6 '",E 16,0.4,40.0,Ea.,"8,625","2,525",370.0,"11,520","13,80"
+11 13 19.10,Loading Dock Lights,5000,"Lights for loading docks , single arm , 24 "" long",1 Elec,3.8,2.105,Eo.,172,139,nan,311,39
+11 13 19.10,Loading Dock Lights,5700,"Double arm ,60 "" long",nan,3.8,2.105,"""",110,139,nan,249,33
+11 13 19.10,Turnstiles,20,"One way ,4 arm ,46 "" diameter , economy , manual",2 Corp,5.0,3.2,Ea.,"2,200",180,nan,"2,380","2,700"
+11 13 19.10,Turnstiles,100,Electric,nan,1.2,13.333,nan,"2,650",750,nan,"3,400","4,050"
+11 13 19.10,Turnstiles,300,"High security, galv , 5 '-5"" diameter ,7 ' high , manual",nan,1.0,16.0,i,"8,350",900,nan,"9,250","10,500"
+11 13 19.10,Turnstiles,350,Electric,nan,0.6,26.667,nan,"10,900","1,500",nan,"12,400","14,200"
+11 13 19.10,Turnstiles,420,"Three arm , 24 "" opening ,light duty , manual",nan,2.0,8.0,[,"3,700",450,nan,"4,150","4,750"
+11 13 19.10,Turnstiles,450,Heavy duty,[  ],1.5,10.667,nan,"3,700",600,nan,"4,300","4,975"
+11 13 19.10,Turnstiles,460,"Manual , with registering & controls ,light duty",nan,28.0,1.0,nan,"5,775",450,nan,"6,225","7,025"
+11 13 19.10,Turnstiles,470,Heavy duty,nan,1.5,10.667,nan,"5,975",600,nan,"6,575","7,450"
+11 13 19.10,Turnstiles,480,"Electric,heavy duty",nan,1.1,14.545,nan,"5,900",820,nan,"6,720","7,725"
+11 13 19.10,Turnstiles,500,"For coin or token operating ,add",nan,nan,nan,nan,945,nan,nan,945,"$ 1,050"
+11 13 19.10,Turnstiles,1200,"One way gate with horizontal bars , 5' 5 "" diameter",nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 19.10,Turnstiles,1300,"7 ' high , recreation or transit type",12 Carp,0.8,20.0,Ea.,"7,400","1,125",nan,"8,525","9,825"
+11 13 19.10,Turnstiles,1500,"For electronic counter ,add",nan,nan,nan,"""",520,nan,nan,520,575
+11 13 19.10,Portable Posts and Railings,20,"Portable for pedestrian trafficcontrol , standard",nan,nan,nan,Ea.,38.5,nan,nan,38.5,42.5
+11 13 19.10,Portable Posts and Railings,300,Deluxe posts,nan,nan,nan,"""",23.0,nan,nan,23.0,25.5
+11 13 19.10,Portable Posts and Railings,600,"Ropes for above posts , plastic covered , 1-1 / 2"" diameter",nan,nan,nan,L.F.,19.35,nan,nan,19.35,21.5
+11 13 19.10,Portable Posts and Railings,700,Chain core,nan,nan,nan,"""",13.95,nan,nan,13.95,15.3
+11 13 19.10,Selective Demolition for Equipment,3100,"Sewage pumping system, prefabricated, to 1000 GPM",C-17D,.28242882342069,Eo .,nan,"25,000","6,100",nan,"31,100","44,200"
+11 13 19.10,Selective Demolition for Equipment,3110,"Sewage treatment, holding tank for recirc chemical water closet",1 Plum,nan,1,nan,70,nan,nan,70,104
+11 13 19.10,Selective Demolition for Equipment,3900,"Wastewater treatment system, to 1500 gal.",B-21,nan,14,nan,735,86.50,nan,821.50,"1,200"
+11 13 19.10,Selective Demolition for Equipment,4050,"Food storage equipment, walk in refrigerator / freezer",2 Clab,64,.250,S.F.,11.40,nan,nan,11.40,17
+11 13 19.10,Selective Demolition for Equipment,4052,"Shelving, stainless steel, 4 tier or dunnage rack",1 Clab,12,.667,Eo .,30.50,nan,nan,30.50,45.50
+11 13 19.10,Selective Demolition for Equipment,4100,"Food preparation equipment, small countertop",nan,18,.444,nan,20.50,nan,nan,20.50,30
+11 13 19.10,Selective Demolition for Equipment,4150,"Food delivery carts, heated cabinets",nan,18,.444,nan,20.50,nan,nan,20.50,30
+11 13 19.10,Selective Demolition for Equipment,4200,"Cooking equipment, commercial range",Q -1,12,1.333,nan,84,nan,nan,84,125
+11 13 19.10,Selective Demolition for Equipment,4250,"Hood and ventilation equipment, kitchen exhaust hood, excl. fireprot",1 Clab,nan,2.667,nan,122,nan,nan,1221,181
+11 13 19.10,Selective Demolition for Equipment,4255,Fire protection system,Q -1,nan,5.333,nan,335,nan,nan,335,500
+11 13 19.10,Selective Demolition for Equipment,4300,"Food dispensing equipment, countertop items",1 Clab,15,.533,nan,24.50,nan,nan,24.50,36
+11 13 19.10,Selective Demolition for Equipment,4310,Serving counter,"""",nan,.123,LF .,5.60,nan,nan,5.60,8.35
+11 13 19.10,Selective Demolition for Equipment,4350,"Ice machine, ice cube maker, flakers and storage bins, to 2000 lb./day",Q -1,1.60,10,Ea .,630,nan,nan,630,935
+11 13 19.10,Selective Demolition for Equipment,4400,"Cleaning and disposal, commercial dishwasher, to 50 racks /hour",L 6,nan,12,nan,825,nan,nan,825,"1,225"
+11 13 19.10,Selective Demolition for Equipment,4405,To 275 racks /hour,L 4,1,24,nan,"1,300",nan,nan,"1,300","1,950"
+11 13 19.10,Selective Demolition for Equipment,4410,Dishwasher hood,2 Clab,585UGOSS3.2002622602186,146,nan,146,nan,nan,146,217
+11 13 19.10,Selective Demolition for Equipment,4420,"Garbage disposal, commercial, to 5 HP",L -1,nan,2,nan,136,nan,nan,136,203
+11 13 19.10,Selective Demolition for Equipment,4540,"Water heater, residential, to 80 gal./day","""",nan,3.200,nan,218,nan,nan,218,325
+11 13 19.10,Selective Demolition for Equipment,4542,"Water softener, automatic",2 Plum,10,1.600,nan,112,nan,nan,112,167
+11 13 19.10,Selective Demolition for Equipment,4544,"Disappearing stairway, to 15' floor height",2 Clab,nan,2.667,nan,122,nan,nan,122,181
+11 13 19.10,Selective Demolition for Equipment,4710,"Darkroom equipment, light",L 7,10,2.800,nan,153,nan,nan,153,228
+11 13 19.10,Selective Demolition for Equipment,4712,Heavy,nan,1.50,18.667,nan,"1,025",nan,nan,"1,025","1,525"
+11 13 19.10,Selective Demolition for Equipment,4720,Doors,2 Clab,3.50,4.571,Opng .,208,nan,nan,208,310
+11 13 19.10,Selective Demolition for Equipment,4830,"Bowling alley, complete, incl.pinsetter, scorer, counters, misc supplies",4 Clab,.40,80,Lane,"3,650",nan,nan,"3,650","5,425"
+11 13 19.10,Selective Demolition for Equipment,4840,"Health club equipment, circuit training apparatus",2 Clab,nan,nan,Set,365,nan,nan,365,545
+11 13 19.10,Selective Demolition for Equipment,4842,Squat racks,"=""",10,1.600,Ea .,73,nan,nan,73,109
+11 13 19.10,Selective Demolition for Equipment,4860,"School equipment, basketball backstop",L 2,nan,8,nan,400,nan,nan,400,595
+11 13 19.10,Selective Demolition for Equipment,4862,"Table and benches, folding, in wall, 14' long",L 4,nan,6,nan,320,nan,nan,320,485
+11 13 19.10,Selective Demolition for Equipment,4864,"Bleachers, telescoping, to 30 tier",F 5,nan,.267,Seat,15.15,nan,nan,15.15,22.50
+11 13 19.10,Selective Demolition for Equipment,4865,to 15 tier,nan,nan,.200,"""",11.35,nan,nan,11.35,16.90
+11 13 19.10,Selective Demolition for Equipment,4866,"Boxing ring, elevated",L 4,nan,120,Eo .,"6,450",nan,nan,"6,450","9,700"
+11 13 19.10,Selective Demolition for Equipment,4867,"Boxing ring, floor level","""",nan,12,nan,645,nan,nan,645,970
+11 13 19.10,Selective Demolition for Equipment,4868,Exercise equipment,1 Clab,nan,1.333,nan,61,nan,nan,61,90.50
+11 13 19.10,Selective Demolition for Equipment,4870,Gym divider,L 4,1000,.024,S.F.,1.29,nan,nan,1.29,1.94
+11 13 19.10,Selective Demolition for Equipment,4875,Scoreboard,R -3,nan,10,Eo .,660,86.50,nan,746.50,"1,075"
+11 13 19.10,Selective Demolition for Equipment,4880,"Shooting range, inc. bullet traps, targets, excl. structure",L 9,nan,36,Point,"1,850",nan,nan,"1,850","2,800"
+11 13 19.10,Selective Demolition for Equipment,5200,Vocational shop equipment,2 Clab,nan,2,Ea .,91,nan,nan,91,136
+11 13 19.10,Selective Demolition for Equipment,6200,"Fume hood, incl.countertop, excl. HVAC","""",nan,2.667,L.F,122,nan,nan,122,181
+11 13 19.10,Selective Demolition for Equipment,7100,"Medical sterilizing, distille, water, steam heated, 50 gal. capacity",1 Plum,2.80,2.857,Ea .,199,nan,nan,199,297
+11 13 19.10,Selective Demolition for Equipment,7200,"Medical equipment, surgery table, minor",1 Clab,1,8,nan,365,nan,nan,365,545
+11 13 19.10,Selective Demolition for Equipment,7210,"Surgical lights, doctor's office, single or double arm",2 Elec,3442,5.333,nan,355,nan,nan,355,525
+11 13 19.10,Selective Demolition for Equipment,7300,"Physical therapy, table",2 Clab,nan,4,nan,182,nan,nan,182,272
+11 13 19.10,Selective Demolition for Equipment,7310,"Whirlpool bath, fixed, incl.mixing valves",1 Plum,nan,2,nan,140,nan,nan,140,208
+11 13 19.10,Selective Demolition for Equipment,7400,"Dental equipment, chair, electric or hydraulic",1 Clab,.75,10.667,nan,485,nan,nan,485,725
+11 13 19.10,Selective Demolition for Equipment,7410,Central suction system,1 Plum,nan,4,nan,279,nan,nan,279,415
+11 13 19.10,Selective Demolition for Equipment,7420,Drillconsole with accessories,1 Clab,3.20,2.500,nan,114,nan,nan,114,170
+11 13 19.10,Selective Demolition for Equipment,7430,X-ray unit,H,4,2,nan,91,nan,nan,91,136
+11 13 19.10,Selective Demolition for Equipment,7440,X-ray developer,1 Plum,10,.800,nan,56,nan,nan,56,83.50
+11 13 19.10,0010 SAFES,11,22 13 - Vault Equipment,nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 19.10,0010 SAFES,11,22 13.16 Safes,nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 19.10,0010 SAFES,10,SAFES,nan,nan,nan,nan,,nan,nan,nan,nan
+11 13 19.10,0010 SAFES,200,"Office, 1 hr.rating, 30"" x 18"" x 18""",nan,nan,nan,Ea.,"2,200",nan,nan,"2,200","2,425"
+11 13 19.10,0010 SAFES,250,"40"" x 18"" x 18""",nan,nan,nan,nan,"4,850",nan,nan,"4,850","5,350"
+11 13 19.10,0010 SAFES,300,"60"" x 36"" x 18"", double door",nan,nan,nan,nan,"10,100",nan,nan,"10,100","11,100"
+11 13 19.10,0010 SAFES,600,"Data, 1 hr. rating, 27"" x 19"" x 16""",nan,nan,nan,nan,"6,650",nan,nan,"6,650","7,325"
+11 13 19.10,0010 SAFES,700,"63"" x 34"" x 16""",nan,nan,nan,nan,"17,300",nan,nan,"17,300","19,000"
+11 13 19.10,0010 SAFES,750,"Diskette, 1 hr., 14"" x 12"" x 11"", inside",nan,nan,nan,nan,"5,175",nan,nan,"5,175","5,700"
+11 13 19.10,0010 SAFES,800,"Money, ""B"" label, 9"" x 14"" x 14""",nan,nan,nan,nan,630,nan,nan,630,695
+11 13 19.10,0010 SAFES,900,"Tool resistive, 24"" x 24"" x 20""",nan,nan,nan,nan,"4,225",nan,nan,"4,225","4,650"
+11 13 19.10,0010 SAFES,1050,"Tool and torch resistive, 24"" x 24"" x 20""",nan,nan,nan,nan,"8,925",nan,nan,"8,925","9,800"
+11 13 19.10,0010 SAFES,1150,"Jewelers, 23"" x 20"" x 18""",nan,nan,nan,nan,"10,300",nan,nan,"10,300","11,300"
+11 13 19.10,0010 SAFES,1200,"63"" x 25"" x 18""",nan,nan,nan,nan,"14,500",nan,nan,"14,500","15,900"
+11 13 19.10,0010 SAFES,1300,"For handling into building, add, minimum",A 2,8.5,2.824,nan,nan,133,40.0,173,243
+11 13 19.10,0010 SAFES,1400,Maximum,nan,0.78,30.769,nan,nan,"1,450",435.0,"1,885","2,650"
+11 22 16.13,Teller Equipment Systems,10,TELLER EQUIPMENT SYSTEMS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 22 16.13,Teller Equipment Systems,20,"Alarm system, police",2 Elec,1.6,10.0,Ea.,"6,600",660,nan,"7,260","8,250"
+11 22 16.13,Teller Equipment Systems,100,With vault alarm,"""",0.4,40.0,nan,"26,200","2,650",nan,"28,850","32,800"
+11 22 16.13,Teller Equipment Systems,400,"Bullet resistant teller window, 44"" x 60""",1 Glaz,0.6,13.333,nan,"6,050",720,nan,"6,770","7,725"
+11 22 16.13,Teller Equipment Systems,500,"48"" x 60""",nan,0.6,13.333,nan,"7,875",720,nan,"8,595","9,725"
+11 22 16.13,Teller Equipment Systems,30001,"Counters for banks, frontal only",2 Carp,1.0,16.0,Station,"2,750",900,nan,"3,650","4,375"
+11 22 16.13,Teller Equipment Systems,3100,Complete with steel undercounter,"""",0.5,32.0,nan,"4,825","1,800",nan,"6,625","7,975"
+11 22 16.13,Teller Equipment Systems,4600,"Door and frame, bullet-resistant, with vision panel, minimum",12 Sswk,1.1,14.545,Eq.,"4,050",900,nan,"4,950","5,825"
+11 22 16.13,Teller Equipment Systems,4700,Maximum,nan,1.1,14.545,nan,"9,050",900,nan,"9,950","11,300"
+11 22 16.13,Teller Equipment Systems,4800,"Drive-up window, drawer & mike, not incl.glass, minimum",nan,1.0,16.125,nan,"4,425",990,nan,"5,415","6,400"
+11 22 16.13,Teller Equipment Systems,4900,Maximum,nan,0.5,32.0,nan,"6,500","1,975",nan,"8,475","10,200"
+11 22 16.13,Teller Equipment Systems,5000,"Night depository, with chest, minimum",nan,1.0,16.0,nan,960,990,nan,"1,950","2,575"
+11 22 16.13,Teller Equipment Systems,5100,Maximum,nan,0.5,32.0,nan,"2,250","1,975",nan,"4,225","5,525"
+11 22 16.13,Teller Equipment Systems,5200,"Package receiver, painted",nan,3.2,5.0,nan,"2,825",310,nan,"3,135","3,600"
+11 22 16.13,Teller Equipment Systems,5300,Stainless steel,nan,3.2,5.0,nan,"1,500",310,nan,"1,810","2,125"
+11 22 16.13,Teller Equipment Systems,5400,"Partitions, bullet resistant, 1-3/16"" glass, 8' high",2 Carp,10.0,1.6,L.F.,267,90,nan,357,430
+11 22 16.13,Teller Equipment Systems,5450,Acrylic,"""",10.0,1.6,"""P",505,90,nan,595,690
+11 22 16.13,Teller Equipment Systems,5500,"Pneumatic tube systems, 2 lane drive up, complete",1-3,0.25,64.0,Total,"34,800","3,950",nan,"38,750","44,200"
+11 22 16.13,Teller Equipment Systems,5550,With T.V. viewer,"""",0.2,80.0,"""","67,500","4,925",nan,"72,425","81,500"
+11 22 16.13,Teller Equipment Systems,5570,"Safety deposit boxes, minimum",1 Sswk,44.0,0.182,Opng,335,11.25,nan,346.25,385
+11 22 16.13,Teller Equipment Systems,5580,"Maximum, 10"" x 15"" opening",nan,19.0,0.421,nan,650,26,nan,676,755
+11 22 16.13,Teller Equipment Systems,5590,"Tellerlocker, average",4,15.0,0.533,nan,765,33,nan,798,895
+11 22 16.13,Teller Equipment Systems,5600,"Pass thru, bullet-res. window, painted steel, 24"" x 36""",12 Sswk,1.6,10.0,Ea.,"4,900",620,nan,"5,520","6,350"
+11 22 16.13,Teller Equipment Systems,5700,"48"" x 48""",nan,1.2,13.333,nan,"7,100",825,nan,"7,925","9,075"
+11 22 16.13,Teller Equipment Systems,5800,"72"" x 40""",nan,0.8,20.0,nan,"5,850","1,225",nan,"7,075","8,325"
+11 22 16.13,Teller Equipment Systems,5900,"For stainless steel frames, add",nan,nan,nan,nan,,20%,nan,nan,nan
+11 22 16.13,Teller Equipment Systems,6100,"Surveillance system, video camera, complete",2 Elec,1.0,16.0,Eo.,"2,000","1,050",nan,"3,050","3,775"
+11 22 16.13,Teller Equipment Systems,6110,"For each additional camera, add",nan,nan,nan,"""",187,nan,nan,187,206
+11 22 16.13,Teller Equipment Systems,6120,"CCTV system, see Section 28 23 13.10",nan,nan,nan,nan,,nan,nan,nan,nan
+11 22 16.13,Teller Equipment Systems,6200,"24 hour teller, single unit,",nan,nan,nan,nan,,nan,nan,nan,nan
+11 22 16.13,Teller Equipment Systems,6300,"automated deposit, cash and memo",L-3,0.25,64.0,Ea.,"6,650","3,950",nan,"10,600","13,200"
+11 22 16.13,Teller Equipment Systems,7000,"Vault front, see Section 08 34 59.10",nan,nan,nan,nan,,nan,nan,nan,nan
+11 22 16.13,Food Storage Shelving,8600,"Stainless steel shelving, louvered 4-tier, 20"" x 3'",1 Clab,6.0,1.333,Ea.,"1,225",61.0,nan,"1,286","1,450"
+11 22 16.13,Food Storage Shelving,8605,"20"" x 4'",nan,6.0,1.333,nan,298,61.0,nan,359,415
+11 22 16.13,Food Storage Shelving,8610,"20"" x 6'",nan,6.0,1.333,nan,345,61.0,nan,406,470
+11 22 16.13,Food Storage Shelving,8615,"24"" x 3'",nan,6.0,1.333,nan,"1,900",61.0,nan,"1,9611","2,200"
+11 22 16.13,Food Storage Shelving,8620,"24"" x 4'",nan,6.0,1.333,nan,"2,375",61.0,nan,"2,436","2,700"
+11 22 16.13,Food Storage Shelving,8625,"24"" x 6'",nan,6.0,1.333,nan,"3,225",nan,nan,"3,286","3,650"
+11 22 16.13,Food Storage Shelving,8630,"Flat 4 tier, 20"" x 3'",nan,6.0,1.333,nan,"1,225",61.0,nan,"1,286","1,450"
+11 22 16.13,Food Storage Shelving,8635,"20"" x 4'",nan,6.0,1.333,nan,"1,325",61.0,nan,"1,386","1,550"
+11 22 16.13,Food Storage Shelving,8640,"20"" x 5'",nan,6.0,1.333,nan,"1,575",61.0,nan,"1,636","1,825"
+11 22 16.13,Food Storage Shelving,8645,"24"" x 3'",nan,6.0,1.333,nan,835,61.0,nan,896,"1,000"
+11 22 16.13,Food Storage Shelving,8650,"24"" x 4'",nan,6.0,1.333,nan,"2,150",61.0,nan,"2,211","2,450"
+11 22 16.13,Food Storage Shelving,8655,"24"" x 6'",nan,6.0,1.333,nan,"2,650",61.0,nan,"2,711","3,000"
+11 22 16.13,Food Storage Shelving,8700,"Galvanized shelving, louvered 4 tier, 20"" x 3'",nan,6.0,1.333,nan,735,61.0,nan,796,900
+11 22 16.13,Food Storage Shelving,8705,"20"" x 4'",nan,6.0,1.333,nan,815,61.0,nan,876,985
+11 22 16.13,Food Storage Shelving,8710,"20"" x 6'",nan,6.0,1.333,nan,860,61.0,nan,921,"1,025"
+11 22 16.13,Food Storage Shelving,8715,"24"" x 3'",nan,6.0,1.333,nan,835,61.0,nan,896,"1,000"
+11 22 16.13,Food Storage Shelving,8720,"24"" x 4'",nan,6.0,1.333,nan,880,61.0,nan,941,"1,050"
+11 22 16.13,Food Storage Shelving,8725,"24"" x 6'",nan,6.0,1.333,nan,345,61.0,nan,406,470
+11 22 16.13,Food Storage Shelving,8730,"Flat 4-tie, 20"" x 3'",nan,6.0,1.333,nan,585,nan,nan,646,730
+11 22 16.13,Food Storage Shelving,8735,"20"" x 4'",nan,6.0,1.333,nan,635,nan,nan,696,790
+11 22 16.13,Food Storage Shelving,8740,"20"" x 6'",nan,6.0,1.333,nan,915,61.0,nan,976,"1,100"
+11 22 16.13,Food Storage Shelving,8745,"24"" x 3'",nan,6.0,1.333,nan,740,61.0,nan,801,905
+11 22 16.13,Food Storage Shelving,8750,"24"" x 4'",nan,6.0,1.333,nan,515,61.0,nan,576,655
+11 22 16.13,Food Storage Shelving,8755,"24"" x 6'",nan,6.0,1.333,nan,169,61.0,nan,230,277
+11 22 16.13,Food Storage Shelving,8760,"Stainless steel dunnage rack, 24"" x 3'",nan,8.0,nan,nan,"1,225",45.5,nan,"1,270.50","1,425"
+11 22 16.13,Food Storage Shelving,8765,"24"" x 4'",nan,8.0,1.0,nan,340,45.5,nan,385.50,445
+11 22 16.13,Food Storage Shelving,8770,"Galvanized dunnage rack, 24"" x 3'",nan,88.0,1.0,nan,130,45.5,nan,175.50,211
+11 22 16.13,Food Storage Shelving,8775,"24"" x 4'",nan,811.0,nan,nan,179,45.5,nan,224.50,265
+11 22 16.13,Food Preparation Equipment,1700,"Choppers, 5 pounds",R-18,7.0,3.714,Ea.,"3,200",216,nan,"3,416","3,825"
+11 22 16.13,Food Preparation Equipment,1720,16 pounds,nan,5.0,5.2,nan,"2,075",300,nan,"2,375","2,750"
+11 22 16.13,Food Preparation Equipment,1740,35 to 40 pounds,nan,4.0,6.5,nan,"3,250",380,nan,"3,630","4,125"
+11 22 16.13,Food Preparation Equipment,1840,"Coffee brewer, 5 burners",1 Plum,3.0,2.667,nan,855,186,nan,"1,041","1,225"
+11 22 16.13,Food Preparation Equipment,1850,"Coffee urn, twin 6 gallon urns",nan,2.0,nan,nan,"4,225",279,nan,"4,504","5,075"
+11 22 16.13,Food Preparation Equipment,1860,"Single, 3 gallon",nan,3.0,2.667,nan,"2,800",186,nan,"2,986","3,350"
+11 22 16.13,Food Preparation Equipment,3000,"Fast food equipment, total package, minimum",16 Skwk,0.08,600.0,nan,"206,500","35,300",nan,"241,800","280,500"
+11 22 16.13,Food Preparation Equipment,3100,Maximum,"""",0.07,686.0,nan,"265,500","40,400",nan,"305,900","352,500"
+11 22 16.13,Food Preparation Equipment,3800,"Food mixers, bench type, 20 quarts",1-7,7.0,4.0,nan,"2,600",219,nan,"2,819","3,175"
+11 22 16.13,Food Preparation Equipment,3850,40 quarts,nan,5.4,5.185,nan,"5,425",283,nan,"5,708","6,400"
+11 22 16.13,Food Preparation Equipment,3900,60 quarts,nan,5.0,5.6,nan,"10,900",305,nan,"11,205","12,500"
+11 22 16.13,Food Preparation Equipment,4040,80 quarts,nan,3.9,7.179,nan,"17,300",390,nan,"17,690","19,700"
+11 22 16.13,Food Preparation Equipment,4100,"Floor type, 20 quarts",nan,15.0,1.867,nan,"3,475",102,nan,"3,577","3,975"
+11 22 16.13,Food Preparation Equipment,4120,60 quarts,nan,142.0,1.0,nan,"9,850",109,nan,"9,959","11,000"
+11 22 16.13,Food Preparation Equipment,4140,80 quarts,nan,12.0,2.333,nan,"13,500",128,nan,"13,628","15,100"
+11 22 16.13,Food Preparation Equipment,4160,140 quarts,nan,8.6,3.256,nan,"24,300",178,nan,"24,478","27,100"
+11 22 16.13,"Projection Screens, Wall or Ceiling Hung",1200,"Heavy duty, electric operated, 200 S.F.",2 Carp,1.5,10.667,Ea.,"5,150",600.0,nan,"5,750","6,575"
+11 22 16.13,"Projection Screens, Wall or Ceiling Hung",1300,400 S.F.,nan,1.0,16.0,nan,"10,400",900.0,nan,"11,300","12,800"
+11 22 16.13,"Projection Screens, Wall or Ceiling Hung",1500,"Rigid acrylic in wall, for rear projection, 1/4"" thick",2 Glaz,30.0,0.533,S.F.,88,29.0,nan,117,140
+11 22 16.13,"Projection Screens, Wall or Ceiling Hung",1600,"1/2"" thick (maximum size 10' x 20')","""",25.0,0.64,"""",78,34.5,nan,112.50,137
+11 22 16.13,Projectors,10,MOVIE EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 22 16.13,Projectors,20,"Changeover, minimum",nan,nan,nan,Ea.,525,nan,nan,525,580
+11 22 16.13,Projectors,100,Maximum,nan,nan,nan,nan,"1,175",nan,nan,"1,175","1,300"
+11 22 16.13,Projectors,400,"Film transport, incl. platters and autowind, minimum",nan,nan,nan,nan,"6,525",nan,nan,"6,525","7,175"
+11 22 16.13,Projectors,500,Maximum,nan,nan,nan,nan,"18,600",nan,nan,"18,600","20,400"
+11 22 16.13,Projectors,800,"Lamphouses, incl.rectifiers, xenon, 1,000 watt",1 Elec,2.0,4.0,nan,"8,650",265.0,nan,"8,915","9,900"
+11 22 16.13,Projectors,900,"1,600 watt",nan,2.0,4.0,nan,"9,225",265.0,nan,"9,490","10,500"
+11 22 16.13,Projectors,1000,"2,000 watt",nan,1.5,5.333,nan,"9,025",355.0,nan,"9,380","10,500"
+11 22 16.13,Projectors,1100,"4,000 watt",nan,1.5,5.333,nan,"11,900",355.0,nan,"12,255","13,600"
+11 22 16.13,Projectors,1400,"Lenses, anamorphic, minimum",nan,nan,nan,nan,"1,425",nan,nan,"1,425","1,575"
+11 22 16.13,Projectors,1500,Maximum,nan,nan,nan,nan,"3,200",nan,nan,"3,200","3,525"
+11 22 16.13,Projectors,1800,"Flat 35 mm, minimum",nan,nan,nan,nan,"1,225",nan,nan,"1,225","1,350"
+11 22 16.13,Projectors,1900,Maximum,nan,nan,nan,nan,"1,950",nan,nan,"1,950","2,150"
+11 22 16.13,Projectors,2200,"Pedestals, for projectors",nan,nan,nan,nan,"1,750",nan,nan,"1,750","1,925"
+11 22 16.13,Projectors,2300,Console type,nan,nan,nan,nan,"12,600",nan,nan,"12,600","13,800"
+11 22 16.13,Projectors,2600,"Projector mechanisms, incl. soundhead, 35 mm, minimum",nan,nan,nan,nan,"12,900",nan,nan,"12,900","14,200"
+11 22 16.13,Projectors,2700,Maximum,nan,nan,nan,nan,"17,800",nan,nan,"17,800","19,600"
+11 22 16.13,Projection Screens,3000,"Projection screens, rigid, in wall, acrylic, 1/4"" thick",2 Glaz,195.0,0.082,S.F.,49.50,4.43,nan,53.93,61
+11 22 16.13,Projection Screens,3100,"1/2"" thick",nan,130.0,0.123,"""",57,6.65,nan,63.65,72.50
+11 22 16.13,Projection Screens,3300,"Electric operated, heavy duty, 400 S.F.",2 Carp,1.0,16.0,Eo.,"6,875",900.0,nan,"7,775","8,900"
+11 22 16.13,Projection Screens,3320,"Theater projection screens, matte white, including frames",nan,200.0,0.08,S.F.,7.90,4.5,nan,12.40,15.40
+11 22 16.13,Projection Screens,3400,Also see Section 11 52 13.10,nan,nan,nan,nan,,nan,nan,nan,nan
+11 22 16.13,Sound Systems,3700,"Sound systems, incl.amplifier, mono, minimum",1 Elec,0.9,8.889,Eq.,"3,925",590,nan,"4,515","5,175"
+11 22 16.13,Sound Systems,3800,"Dolby / Super Sound, maximum",nan,0.4,20.0,nan,"21,100","1,325",nan,"22,425","25,200"
+11 22 16.13,Sound Systems,4100,"Dual system, 2 channel, front surround, minimum",nan,0.7,11.429,nan,"5,400",755,nan,"6,155","7,075"
+11 22 16.13,Sound Systems,4200,"Dolby / Super Sound, 4 channel, maximum",nan,0.4,20.0,nan,"20,200","1,325",nan,"21,525","24,300"
+11 22 16.13,Sound Systems,4500,"Sound heads, 35 mm",nan,nan,nan,nan,"6,275",nan,nan,"6,275","6,900"
+11 22 16.13,Sound Systems,4900,"Splicer, tape system, minimum",nan,nan,nan,nan,875,nan,nan,875,965
+11 22 16.13,Sound Systems,5000,"Tape type, maximum",nan,nan,nan,nan,"1,575",nan,nan,"1,575","1,725"
+11 22 16.13,Sound Systems,5300,"Speakers, recessed behind screen, minimum",1 Elec,2.0,4.0,nan,"1,975",265,nan,"2,240","2,550"
+11 22 16.13,Sound Systems,5400,Maximum,"""",18.0,nan,nan,"3,625",530,nan,"4,155","4,750"
+11 22 16.13,Seating,5700,"Seating, painted steel, upholstered, minimum",2 Carp,35,1.457,nan,176,25.5,nan,201.5,233
+11 22 16.13,Seating,5800,Maximum,nan,28,0.571,nan,570,32.0,nan,602.0,675
+11 22 16.13,Miscellaneous,6100,"Rewind tables, minimum",nan,nan,nan,nan,"3,125",nan,nan,"3,125","3,450"
+11 22 16.13,Miscellaneous,6200,Maximum,nan,nan,nan,nan,"5,575",nan,nan,"5,575","6,125"
+11 22 16.13,Automation,7000,"For automation, varying sophistication, minimum",1 Elec,1.0,8.0,System,"2,800",530,nan,"3,330","3,850"
+11 22 16.13,Automation,7100,Maximum,12 Elec,0.3,53.333,nan,"6,500","3,525",nan,"10,025","12,400"
+11 22 16.13,Movie Equipment - Digital,10,MOVIE EQUIPMENT- DIGITAL,nan,nan,nan,nan,,nan,nan,nan,nan
+11 22 16.13,Movie Equipment - Digital,1000,"Digital 2K projection system, 98"" DMD",1 Elec,2222.0,44.0,Ea.,"54,500",265.0,nan,"54,765","60,500"
+11 22 16.13,Movie Equipment - Digital,1100,OEM lens,nan,nan,nan,nan,"6,400",265.0,nan,"6,665","7,450"
+11 22 16.13,Movie Equipment - Digital,2000,Pedestal with power distribution,nan,nan,44.0,nan,"2,375",265.0,nan,"2,640","3,025"
+11 22 16.13,Movie Equipment - Digital,3000,Software,nan,2.0,nan,nan,"2,025",265.0,nan,"2,290","2,625"
+11 72 13.13,Exam Treatment Equipment,10,EXAMINATION EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 72 13.13,Exam Treatment Equipment,300,"Blood pressure unit, mercurial, wall",nan,nan,nan,Ea.,136,nan,nan,136,149
+11 72 13.13,Exam Treatment Equipment,400,"Diagnostic set, wall",nan,nan,nan,nan,"2,700",nan,nan,"2,700","2,975"
+11 72 13.13,Exam Treatment Equipment,4400,"Scale, physician's, with height rod",nan,nan,nan,nan,520,nan,nan,520,570
+11 72 13.13,Exam Treatment Equipment,4420,"Medical equipment, Xray lightbox, 14"" x 17""",nan,nan,nan,nan,485,nan,nan,485,535
+11 72 53.13,Medical Treatment Equipment,10,MEDICAL TREATMENT EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 72 53.13,Medical Treatment Equipment,6300,"Exam light, portable, 14"" flexible arm",nan,nan,nan,Eo.,166,nan,nan,166,183
+11 72 53.13,Medical Treatment Equipment,6500,"Surgery table, minor minimum",1 Sswk,1521.0,11.429,Eq.,"13,200",705,nan,"13,905","15,600"
+11 72 53.13,Medical Treatment Equipment,6520,Maximum,"""",0.5,16.0,nan,"24,000",990,nan,"24,990","27,900"
+11 72 53.13,Medical Treatment Equipment,6700,"Surgical lights, doctor's office, single arm",2 Elec,nan,8.0,nan,"3,650",530,nan,"4,180","4,800"
+11 72 53.13,Medical Treatment Equipment,6750,Dual arm,"""",nan,16.0,nan,"5,800","1,050",nan,"6,850","7,950"
+11 73 10.10,Treatment Equipment,10,TREATMENT EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.10,Treatment Equipment,750,"Exam room furnishings, average per room",nan,nan,nan,Ea.,"4,900",nan,nan,"4,900","5,400"
+11 73 10.10,Treatment Equipment,1800,"Heat therapy unit, humidified, 26"" x 78"" x 28""",nan,nan,nan,19,"3,125",nan,nan,"3,125","3,425"
+11 73 10.10,Treatment Equipment,2100,"Hubbard tank with accessories, stainless steel,",nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.10,Treatment Equipment,2110,125 GPM at 45 psi water pressure,nan,nan,nan,Ea.,"29,600",nan,nan,"29,600","32,600"
+11 73 10.10,Treatment Equipment,2150,"For electric overhead hoist, add",nan,nan,nan,nan,"2,875",nan,nan,"2,875","3,175"
+11 73 10.10,Treatment Equipment,2900,"K-Module for heat therapy, 20 oz. capacity, 75°F to 110°F",nan,nan,nan,nan,530,nan,nan,530,585
+11 73 10.10,Treatment Equipment,3600,"Paraffin bath, 126°F, auto controlled",nan,nan,nan,nan,259,nan,nan,259,285
+11 73 10.10,Treatment Equipment,3900,"Parallel bars for walking training, 12' 0""",nan,nan,nan,nan,"1,850",nan,nan,"1,850","2,025"
+11 73 10.10,Treatment Equipment,4600,"Station, dietary, medium, with ice",nan,nan,nan,nan,655,nan,nan,655,720
+11 73 10.10,Treatment Equipment,4700,Medicine,nan,nan,nan,nan,"7,800",nan,nan,"7,800","8,575"
+11 73 10.10,Treatment Equipment,7000,"Tables, physical therapy, walk off, electric",2 Carp,-3.0,5.333,nan,"2,075",300.0,nan,"2,375","2,725"
+11 73 10.10,Treatment Equipment,7150,"Standard, vinyl top with base cabinets, minimum",nan,3.0,5.333,nan,"1,275",300.0,nan,"1,575","1,875"
+11 73 10.10,Treatment Equipment,7200,Maximum,nan,2.0,8.0,nan,"4,975",450.0,nan,"5,425","6,150"
+11 73 10.10,Treatment Equipment,7250,"Table, hospital, adjustable height",nan,nan,nan,nan,"2,800",nan,nan,"2,800","3,075"
+11 73 10.10,Treatment Equipment,8400,"Whirlpool bath, mobile, sst, 18"" x 24"" x 60""",nan,nan,nan,nan,"5,500",nan,nan,"5,500","6,050"
+11 73 10.10,Treatment Equipment,8450,"Fixed, incl. mixing valves",1 Plum,2.0,4.0,nan,"7,650",279.0,nan,"7,929","8,850"
+11 73 10.20,Bariatric Equipment,10,BARIATRIC EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,Bariatric Equipment,5000,"Patient lift, electric operated, arm style",nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,Bariatric Equipment,5110,400 lb. capacity,nan,nan,nan,nan,"1,400",nan,nan,"1,400","1,525"
+11 73 10.20,Bariatric Equipment,5120,450 lb. capacity,nan,nan,nan,nan,"2,875",nan,nan,"2,875","3,175"
+11 73 10.20,Bariatric Equipment,5130,600 lb. capacity,nan,nan,nan,nan,"3,175",nan,nan,"3,175","3,475"
+11 73 10.20,Bariatric Equipment,5140,700 lb. capacity,nan,nan,nan,nan,"5,450",nan,nan,"5,450","6,000"
+11 73 10.20,Bariatric Equipment,5150,"1,000 lb. capacity",nan,nan,nan,nan,"7,425",nan,nan,"7,425","8,150"
+11 73 10.20,Bariatric Equipment,5200,"Overhead, 4-post, 1,000 lb. capacity",nan,nan,nan,nan,"11,500",nan,nan,"11,500","12,700"
+11 73 10.20,Bariatric Equipment,5300,"Overhead, track type, 450 lb. capacity, not including track",nan,nan,nan,nan,"3,675",nan,nan,"3,675","4,050"
+11 73 10.20,Bariatric Equipment,5500,"For fabric sling, add",nan,nan,nan,nan,505,nan,nan,505,555
+11 73 10.20,Bariatric Equipment,5550,"For digital scale, add",nan,nan,nan,nan,910,nan,nan,910,"1,000"
+11 73 10.20,11 61 23 - Folding and Portable Stages,11 61 23.10,Portable Stages,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 61 23 - Folding and Portable Stages,7000,"Band risers, steel frame, plywood deck, minimum",4 Carp,275.0,0.116,SF Stg.,33.5,6.55,nan,40.05,47.0
+11 73 10.20,11 61 23 - Folding and Portable Stages,7100,Maximum,nan,138.0,0.232,nan,76.5,13.05,nan,89.55,103.0
+11 73 10.20,11 61 23 - Folding and Portable Stages,7500,"Chairs for above, self-storing, minimum",2 Carp,43.0,0.372,Ea.,123.0,21.0,nan,144.0,167.0
+11 73 10.20,11 61 23 - Folding and Portable Stages,7600,Maximum,nan,40.0,0.4,nan,218.0,22.5,nan,240.5,274.0
+11 73 10.20,11 61 33 - Rigging Systems and Controls,11 61 33.10,Controls,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 61 33 - Rigging Systems and Controls,0010,CONTROLS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 61 33 - Rigging Systems and Controls,0050,"Control boards with dimmers and breakers, minimum",1 Elec,1.0,8.0,Ea.,"15,600",530,nan,"16,130","18,000"
+11 73 10.20,11 61 33 - Rigging Systems and Controls,0100,Average,nan,0.5,16.0,nan,"1,600","1,050",nan,"2,650","3,325"
+11 73 10.20,11 61 33 - Rigging Systems and Controls,0150,Maximum,nan,0.2,40.0,nan,"125,000","2,650",nan,"127,650","141,500"
+11 73 10.20,11 61 33 - Rigging Systems and Controls,8000,"Rule of thumb: total stage equipment, minimum",4 Carp,100.0,0.32,SF Stg.,108,18,nan,126,145
+11 73 10.20,11 61 33 - Rigging Systems and Controls,8100,Maximum,nan,25.0,1.28,nan,605,72,nan,677,770
+11 73 10.20,11 61 43 - Stage Curtains,11 61 43.10,Curtains,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 61 43 - Stage Curtains,0010,CURTAINS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 61 43 - Stage Curtains,0500,"Curtain track, straight, light duty",2 Carp,20.0,0.8,LF,31.5,45.0,nan,76.5,102.0
+11 73 10.20,11 61 43 - Stage Curtains,0600,Heavy duty,nan,18.0,0.889,nan,245.0,50.0,nan,295.0,345.0
+11 73 10.20,11 61 43 - Stage Curtains,0700,Curved sections,nan,12.0,1.333,nan,24.5,75.0,nan,99.5,139.0
+11 73 10.20,11 61 43 - Stage Curtains,1000,"Curtains, velour, medium weight",nan,600.0,0.027,S.F.,8.75,1.5,nan,10.25,11.9
+11 73 10.20,11 61 43 - Stage Curtains,1150,"Silica based yarn, inherently fireretardant",nan,50.0,0.32,nan,16.8,18.0,nan,34.8,45.5
+11 73 10.20,11 62 16 - Carillons,11 62 16.10,Bell Tower Equipment,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 62 16 - Carillons,0010,BELL TOWER EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 62 16 - Carillons,0300,"Carillon, 4 octave (48 bells), with keyboard",nan,nan,nan,System,"1,220,500",nan,nan,"1,220,500","1,342,500"
+11 73 10.20,11 62 16 - Carillons,0320,2 octave (24 bells),nan,nan,nan,nan,"574,500",nan,nan,"574,500","631,500"
+11 73 10.20,11 62 16 - Carillons,0340,"3 to 4 bell peal, minimum",nan,nan,nan,nan,"143,500",nan,nan,"143,500","158,000"
+11 73 10.20,11 62 16 - Carillons,0360,Maximum,nan,nan,nan,nan,"861,500",nan,nan,"861,500","947,500"
+11 73 10.20,11 62 16 - Carillons,0380,"Cast bronze bell, average",nan,nan,nan,Ea.,"129,000",nan,nan,"129,000","142,000"
+11 73 10.20,11 62 16 - Carillons,0400,"Electronic, digital, minimum",nan,nan,nan,nan,"21,500",nan,nan,"21,500","23,700"
+11 73 10.20,11 62 16 - Carillons,0410,"With keyboard, maximum",nan,nan,nan,nan,"107,500",nan,nan,"107,500","118,500"
+11 73 10.20,11 66 13 - Exercise Equipment,11 66 13.10,Physical Training Equipment,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 66 13 - Exercise Equipment,0010,PHYSICAL TRAINING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 73 10.20,11 66 13 - Exercise Equipment,0020,"Abdominal rack, 2 board capacity",nan,nan,nan,Ea.,470,nan,nan,470,520
+11 73 10.20,11 66 13 - Exercise Equipment,0050,"Abdominal board, upholstered",nan,nan,nan,nan,705,nan,nan,705,775
+11 73 10.20,11 66 13 - Exercise Equipment,0200,"Bicycle trainer, minimum",nan,nan,nan,nan,900,nan,nan,900,990
+11 73 10.20,11 66 13 - Exercise Equipment,0300,"Deluxe, electric",nan,nan,nan,nan,"1,800",nan,nan,"1,800","1,975"
+11 73 10.20,11 66 13 - Exercise Equipment,0400,"Barbell set, chrome plated steel, 25 lb.",nan,nan,nan,nan,174,nan,nan,174,191
+11 73 10.20,11 66 13 - Exercise Equipment,0420,100 lb.,nan,nan,nan,nan,169,nan,nan,169,186
+11 73 10.20,11 66 13 - Exercise Equipment,0450,200 lb.,nan,nan,nan,nan,360,nan,nan,360,395
+11 73 10.20,11 66 13 - Exercise Equipment,0500,"Weight plates, cast iron, per lb.",nan,nan,nan,th.,1.85,nan,nan,1.85,2.04
+11 73 10.20,11 66 13 - Exercise Equipment,0520,"Storage rack, 10 station",nan,nan,nan,Ea.,850,nan,nan,850,935
+11 73 10.20,11 66 13 - Exercise Equipment,0600,"Circuit training apparatus, 12 machines minimum",2 Clab,1.25,12.8,Set,"25,500",585.0,nan,"26,085","28,900"
+11 73 10.20,11 66 13 - Exercise Equipment,0700,Average,nan,1.0,16.0,nan,"14,500",730.0,nan,"15,230","17,000"
+11 53 03.13,Test Equipment,10,TEST EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 53 03.13,Test Equipment,1700,"Thermometer, electric, portable",nan,nan,nan,Ea.,293,nan,nan,293,320
+11 53 03.13,Test Equipment,1800,"Titration unit, four 2000 ml reservoirs",nan,nan,nan,"""","6,625",nan,nan,"6,625","7,275"
+11 53 13.13,Recirculating Laboratory Fume Hoods,10,RECIRCULATING LABORATORY FUME HOODS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 53 13.13,Recirculating Laboratory Fume Hoods,600,"Fume hood, with countertop & base, not including HVAC",nan,nan,nan,nan,,nan,nan,nan,nan
+11 53 13.13,Recirculating Laboratory Fume Hoods,610,"Simple, minimum",2 Carp,5.4,2.963,LF.,740,167.0,nan,907,"1,050"
+11 53 13.13,Recirculating Laboratory Fume Hoods,620,"Complex, including fixtures",nan,2.4,6.667,nan,"9,000",375.0,nan,"9,375","10,500"
+11 53 13.13,Recirculating Laboratory Fume Hoods,630,"Special, maximum",nan,1.7,9.412,nan,"1,975",530.0,nan,"2,505","2,975"
+11 53 13.13,Recirculating Laboratory Fume Hoods,670,"Service fixtures, average",nan,nan,nan,Ea.,875,nan,nan,875,960
+11 53 13.13,Recirculating Laboratory Fume Hoods,680,"For sink assembly with hot and cold water, add",1 Plum,1.4,5.714,nan,575,400.0,nan,975,"1,225"
+11 53 13.13,Recirculating Laboratory Fume Hoods,750,"Glove box, fiberglass, bacteriological",nan,nan,nan,nan,"23,100",nan,nan,"23,100","25,400"
+11 53 13.13,Recirculating Laboratory Fume Hoods,760,Controlled atmosphere,nan,nan,nan,nan,"1,475",nan,nan,"1,475","1,625"
+11 53 13.13,Recirculating Laboratory Fume Hoods,770,Radioisotope,nan,nan,nan,nan,"16,300",nan,nan,"16,300","18,000"
+11 53 13.13,Recirculating Laboratory Fume Hoods,780,Carcinogenic,nan,nan,nan,nan,"16,300",nan,nan,"16,300","18,000"
+11 53 16.13,Incubators,10,INCUBATORS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 53 16.13,Incubators,1000,"Incubators, minimum",nan,nan,nan,Ea.,"2,750",nan,nan,"2,750","3,025"
+11 53 16.13,Incubators,1010,Maximum,nan,nan,nan,"""","2,200",nan,nan,"2,200","2,425"
+11 53 19.13,Sterilizers,10,STERILIZERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 53 19.13,Sterilizers,700,"Glassware washer, undercounter, minimum",L-1,1.8,8.889,Ea.,"7,325",605,nan,"7,930","8,975"
+11 53 19.13,Sterilizers,710,Maximum,"""",1.0,16.0,nan,"16,100","1,100",nan,"17,200","19,300"
+11 53 19.13,Sterilizers,1850,Utensil washer sanitizer,1 Plum,2.0,4.0,nan,"7,675",279,nan,"7,954","8,875"
+11 53 23.13,Refrigerators,10,REFRIGERATORS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 53 23.13,Refrigerators,1200,"Blood bank, 28.6 C.F. emergency signal",nan,nan,nan,Ea.,"16,300",nan,nan,"16,300","18,000"
+11 53 23.13,Refrigerators,1210,"Reach-in, 16.9 C.F.",nan,nan,nan,"""","8,450",nan,nan,"8,450","9,300"
+11 53 26.10,Freezers,10,FREEZERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 53 26.10,Freezers,12,"Ulta low temp to -80 C, 27.5 C.F.",nan,nan,nan,Eo.,"27,400",nan,nan,"27,400","30,100"
+11 53 33.13,Emergency Equipment,10,EMERGENCY EQUIPMENT,nan,nan,nan,nan,,225,nan,nan,nan
+11 53 33.13,Emergency Equipment,1400,"Safety equipment, eye wash, hand held",nan,nan,nan,Ea.,440,nan,nan,440.0,485.0
+11 53 33.13,Emergency Equipment,1450,Deluge shower,nan,nan,nan,"""",275,nan,nan,275.0,300.0
+11 53 43.13,Fittings,10,FITTINGS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 53 43.13,Fittings,1600,"Sink, one piece plastic, flask wash, hose, free standing",1 Plum,1.6,5.0,Ea.,286,350.0,nan,636,835
+11 53 43.13,Fittings,1610,"Epoxy resin sink, 25"" x 16"" x 10""",館,2.0,4.0,"""","1,550",279.0,nan,"1,829","2,150"
+11 53 43.13,Fittings,1950,"Utility table, acid resistant top with drawers",2 Carp,30.0,0.533,L.F.,199,30.0,nan,229,264
+11 53 43.13,Fittings,8000,Alternate pricing method: as percent of lab furniture,nan,nan,nan,nan,nan,nan,nan,nan,236
+11 53 43.13,Fittings,8050,"Installation, not incl. plumbing & duct work",nan,nan,nan,% Furn.,nan,nan,nan,nan,22 %
+11 46 83.10,Commercial Ice Equipment,5800,"Ice cube maker, 50 lbs./day",0-1,6.0,2.667,Ea .,"1,775",168,nan,"1,943","2,225"
+11 46 83.10,Commercial Ice Equipment,5810,"65 lbs./day, energy star rated",nan,6.0,2.667,nan,"3,075",168,nan,"3,243","3,625"
+11 46 83.10,Commercial Ice Equipment,5900,250 lbs./day,nan,1.2,13.333,nan,"2,150",840,nan,"2,990","3,600"
+11 46 83.10,Commercial Ice Equipment,5950,"300 lbs./day, remote condensing",nan,1.2,13.333,nan,"2,475",840,nan,"3,315","3,975"
+11 46 83.10,Commercial Ice Equipment,6050,500 lbs./day,nan,4.0,4.0,nan,"2,575",251,nan,"2,826","3,200"
+11 46 83.10,Commercial Ice Equipment,6060,With bin,nan,1.2,13.333,nan,"3,875",840,nan,"4,715","5,500"
+11 46 83.10,Commercial Ice Equipment,6070,"Modular, with bin and condenser",nan,1.2,13.333,nan,"3,750",840,nan,"4,590","5,375"
+11 46 83.10,Commercial Ice Equipment,6090,"1000 lbs./day, with bin",nan,1.0,16.0,nan,"5,475","1,000",nan,"6,475","7,525"
+11 46 83.10,Commercial Ice Equipment,6100,"Ice flakers, 300 lbs./day",nan,1.6,10.0,nan,"3,700",630,nan,"4,330","4,975"
+11 46 83.10,Commercial Ice Equipment,6120,600 lbs./day,nan,0.95,16.842,nan,"5,525","1,050",nan,"6,575","7,650"
+11 46 83.10,Commercial Ice Equipment,6130,1000 lbs./day,nan,0.75,21.333,nan,"5,450","1,350",nan,"6,800","8,000"
+11 46 83.10,Commercial Ice Equipment,6140,2000 lbs./day,nan,1.65,24.615,nan,"22,100","1,550",nan,"23,650","26,600"
+11 46 83.10,Commercial Ice Equipment,6160,"Ice storage bin, 500 pound capacity",Q-5,1.0,16.0,Ea .,"1,000","1,025",nan,"2,025","2,600"
+11 46 83.10,Commercial Ice Equipment,6180,1000 pound,nan,0.56,28.571,"""","3,075","1,800",nan,"4,875","6,100"
+11 48 13.10,Dishwashers,10,DISHWASHERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 48 13.10,Dishwashers,2700,"Dishwasher, commercial, rack type",nan,nan,nan,nan,,nan,nan,nan,nan
+11 48 13.10,Dishwashers,2720,10 to 12 racks / hour,Q 1,3.2,5.0,Ea .,"27,000",315,nan,"27,315","30,200"
+11 48 13.10,Dishwashers,2730,"Energy star rated, 35 to 40 racks / hour",5G,1.3,12.308,nan,"6,425",775,nan,"7,200","8,225"
+11 48 13.10,Dishwashers,2740,50 to 60 racks / hour,G,1.3,12.308,nan,"10,700",775,nan,"11,475","13,000"
+11 48 13.10,Dishwashers,2800,"Automatic, 190 to 230 racks / hour",L-6,0.35,34.286,nan,"25,600","2,350",nan,"27,950","31,600"
+11 48 13.10,Dishwashers,2820,235 to 275 racks / hour,nan,0.25,48.0,!,"33,900","3,300",nan,"37,200","42,200"
+11 48 13.10,Dishwashers,2840,"8,750 to 12,500 dishes / hour",nan,0.1,120.0,nan,"56,000","8,225",nan,"64,225","74,000"
+11 48 13.10,Dishwashers,2950,"Dishwasher hood, canopy type",L3A,10.0,1.2,LF,565,73.50,nan,638.50,730
+11 48 13.10,Dishwashers,2960,Pant leg type,"""",2.5,4.8,Eo .,"7,950",295,nan,"8,245","9,200"
+11 48 13.10,Dishwashers,5200,"Garbage disposal 1.5 HP, 100 GPH",L-1,4.8,3.333,nan,"2,200",227,nan,"2,427","2,750"
+11 48 13.10,Dishwashers,5210,"3 HP, 120 GPH",nan,4.6,3.478,nan,"4,550",237,nan,"4,787","5,350"
+11 48 13.10,Dishwashers,5220,"5 HP, 250 GPH",nan,4.5,3.556,I,"4,550",242,nan,"4,792","5,375"
+11 48 13.10,Dishwashers,6750,"Pot sink, 3 compartment",Plum,7.25,1.103,L.F.,860,77,nan,937,"1,050"
+11 48 13.10,Dishwashers,6760,"Pot washer, low temp wash / rinse",nan,1.6,5.0,Ea .,"5,475",350,nan,"5,825","6,550"
+11 48 13.10,Dishwashers,6770,"High pressure wash, high temperature rinse",nan,1.2,6.667,nan,"16,900",465,nan,"17,365","19,300"
+11 48 13.10,Dishwashers,9170,"Trash compactor, small, up to 125 lb. compacted weight",L-4,4.0,6.0,nan,"1,050",320,nan,"1,370","1,625"
+11 48 13.10,Dishwashers,9175,"Large, up to 175 lb. compacted weight","""",3.0,8.0,nan,"28,700",430,nan,"29,130","32,200"
+11 52 13.10,"Projection Screens, Wall or Ceiling Hung",10,"PROJECTION SCREENS, WALL OR CEILING HUNG, matte white",nan,nan,nan,nan,nan,nan,nan,nan,30
+11 52 13.10,"Projection Screens, Wall or Ceiling Hung",100,"Manually operated, economy",2 Carp,500.0,0.032,S.F,6.70,1.8,nan,8.50,10.05
+11 52 13.10,"Projection Screens, Wall or Ceiling Hung",300,Intermediate,nan,450.0,0.036,nan,8,2.0,nan,10,11.80
+11 52 13.10,"Projection Screens, Wall or Ceiling Hung",400,Deluxe,nan,400.0,0.04,4,10.15,2.25,nan,12.40,14.50
+11 52 13.10,"Projection Screens, Wall or Ceiling Hung",600,"Electric operated, matte white, 25 S.F., economy",nan,5.0,3.2,Ea .,"3,525",180.0,nan,"3,705","4,150"
+11 52 13.10,"Projection Screens, Wall or Ceiling Hung",700,Deluxe,nan,4.0,nan,nan,"1,125",225.0,nan,"1,350","1,550"
+11 52 13.10,"Projection Screens, Wall or Ceiling Hung",900,"50 S.F., economy",nan,3.0,5.333,nan,"2,400",300.0,nan,"2,700","3,100"
+11 52 13.10,"Projection Screens, Wall or Ceiling Hung",1000,Deluxe,nan,2.0,8.0,nan,"3,650",450.0,nan,"4,100","4,700"
+11 52 13.10,0010 SCOREBOARDS,7000,"Baseball, minimum",R-3,1.3,15.385,Ea.,"4,800","1,025",133,"5,958","6,925"
+11 52 13.10,0010 SCOREBOARDS,7200,Maximum,nan,0.05,400.0,nan,"11,400","26,300","3,475","41,175","55,500"
+11 52 13.10,0010 SCOREBOARDS,7300,"Football, minimum",nan,0.86,23.256,nan,"5,200","1,525",202,"6,927","8,200"
+11 52 13.10,0010 SCOREBOARDS,7400,Maximum,nan,0.2,100.0,nan,"14,900","6,575",865,"22,340","27,200"
+11 52 13.10,0010 SCOREBOARDS,7500,"Basketball (one side), minimum",nan,2.07,9.662,nan,"2,400",635,84,"3,119","3,675"
+11 52 13.10,0010 SCOREBOARDS,7600,Maximum,nan,0.3,66.667,nan,"6,225","4,400",580,"11,205","14,000"
+11 52 13.10,0010 SCOREBOARDS,7700,"Hockey-basketball (four sides), minimum",nan,0.25,80.0,nan,"10,300","5,275",695,"16,270","20,000"
+11 52 13.10,0010 SCOREBOARDS,7800,Maximum,nan,0.15,133.0,nan,"17,600","8,775","1,150","27,525","33,700"
+11 52 13.10,Gymnasium Dividers,4500,"Gym divider curtain, mesh top, vinyl bottom, manual",L4,500,0.048,S.F.,9.9,2.58,nan,12.48,14.75
+11 52 13.10,Gymnasium Dividers,4700,Electric roll up,L-7,400,0.07,"""",14.5,3.83,nan,18.33,21.5
+11 52 13.10,Bowling Alley Equipment,20,"Counters and misc. supplies, minimum",4 Carp,0.2,160.0,Lone,"42,600","9,000",nan,"51,600","60,000"
+11 52 13.10,Bowling Alley Equipment,150,Average,nan,0.19,168.0,nan,"52,000","9,475",nan,"61,475","71,500"
+11 52 13.10,Bowling Alley Equipment,300,Maximum,nan,0.18,178.0,nan,"60,000","10,000",nan,"70,000","81,000"
+11 52 13.10,Bowling Alley Equipment,400,"Combo table ball rack, add",nan,nan,nan,nan,"1,450",nan,nan,"1,450","1,575"
+11 52 13.10,Bowling Alley Equipment,600,"For automatic scorer, add, minimum",nan,nan,nan,nan,"6,325",nan,nan,"6,325","6,950"
+11 52 13.10,Bowling Alley Equipment,700,Maximum,nan,nan,nan,nan,"10,600",nan,nan,"10,600","11,700"
+11 52 13.10,Shooting Range Equipment,200,Commercial,L-9,0.64,56.25,Point,"40,900","2,900",nan,"43,800","49,400"
+11 52 13.10,Shooting Range Equipment,300,Law enforcement,nan,0.28,129.0,nan,"48,700","6,625",nan,"55,325","63,500"
+11 52 13.10,Shooting Range Equipment,400,National Guard armories,nan,0.71,50.704,nan,"25,600","2,625",nan,"28,225","32,100"
+11 52 13.10,Shooting Range Equipment,500,Reserve training centers,nan,0.71,50.704,nan,"22,000","2,625",nan,"24,625","28,100"
+11 52 13.10,Shooting Range Equipment,600,Schools and colleges,nan,0.32,113.0,nan,"8,775","5,800",nan,"14,575","18,400"
+11 52 13.10,Shooting Range Equipment,700,Major academies,nan,19.0,189.0,nan,"56,500","9,775",nan,"66,275","77,000"
+11 52 13.10,Shooting Range Equipment,800,"For acoustical treatment, add",nan,nan,nan,nan,,10 %,nan,nan,10 %
+11 52 13.10,Shooting Range Equipment,900,"For lighting, add",nan,nan,nan,Point,,28 %,25 %,nan,nan
+11 52 13.10,Shooting Range Equipment,1000,"For plumbing, add",nan,nan,nan,nan,,5 %,5 %,nan,nan
+11 52 13.10,Shooting Range Equipment,1100,"For ventilating system, add, minimum",nan,nan,nan,nan,,40 %,40 %,nan,nan
+11 52 13.10,Shooting Range Equipment,1200,"Add, average",nan,nan,nan,nan,,25 %,25 %,nan,nan
+11 52 13.10,Shooting Range Equipment,1300,"Add, maximum",nan,nan,nan,nan,,35 %,35 %,nan,nan
+11 52 13.10,Commercial Cooking Equipment,9160,"Pop-up, 2 slot",nan,nan,nan,Ea.,108,nan,nan,108.0,119.0
+11 52 13.10,Commercial Cooking Equipment,9200,"For deluxe models of above equipment, add",nan,nan,nan,nan,,75%,nan,nan,nan
+11 52 13.10,Commercial Cooking Equipment,9400,Rule of thumb: Equipment cost based,nan,nan,nan,nan,,nan,nan,nan,nan
+11 52 13.10,Commercial Cooking Equipment,9410,on kitchen work area,nan,nan,nan,nan,,nan,nan,nan,nan
+11 52 13.10,Commercial Cooking Equipment,9420,"Office buildings, minimum",1-7,77.0,0.364,S.F.,119,19.9,nan,138.9,161.0
+11 52 13.10,Commercial Cooking Equipment,9450,Maximum,nan,58.0,0.483,nan,193,26.5,nan,219.5,252.0
+11 52 13.10,Commercial Cooking Equipment,9550,"Public eating facilitie, minimum",nan,77.0,0.364,nan,158,19.9,nan,177.9,204.0
+11 52 13.10,Commercial Cooking Equipment,9600,Maximum,nan,46.0,1.609,nan,253,33.5,nan,286.5,330.0
+11 52 13.10,Commercial Cooking Equipment,9750,"Hospitals, minimum",nan,58.0,0.483,nan,154,26.5,nan,180.5,209.0
+11 52 13.10,Commercial Cooking Equipment,9800,Maximum,nan,39.0,0.718,nan,283,39.0,nan,322.0,370.0
+11 52 13.10,Food Dispensing Equipment,10,COMMERCIAL FOOD DISPENSING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 52 13.10,Food Dispensing Equipment,1050,Butter pat dispenser,1 Clab,13.0,0.615,Eo.,795,281233.0,nan,823,910
+11 52 13.10,Food Dispensing Equipment,1100,"Bread dispenser, counter top",nan,13.0,0.615,nan,206,28.0,nan,234,269
+11 52 13.10,Food Dispensing Equipment,1900,"Cup and glass dispenser, drop in",nan,4.0,nan,nan,620,91.0,nan,711,820
+11 52 13.10,Food Dispensing Equipment,1920,"Disposable cup, drop in",nan,16.0,0.5,nan,780,nan,nan,803,895
+11 52 13.10,Food Dispensing Equipment,2650,"Dish dispenser, drop in, 12 """,nan,nan,0.727,nan,430,nan,nan,463,525
+11 52 13.10,Food Dispensing Equipment,2660,Mobile,nan,10.0,0.8,nan,"3,625",36.5,nan,"3,661.50","4,025"
+11 52 13.10,Food Dispensing Equipment,3300,"Food warmer, counter, 1.2 KW",nan,nan,nan,nan,645,nan,nan,645,705
+11 52 13.10,Food Dispensing Equipment,3550,1.6 KW,nan,nan,nan,nan,675,nan,nan,675,740
+11 52 13.10,Food Dispensing Equipment,3600,"Well, hot food, built-in, rectangular, 12"" x 20""",R-30,10.0,2.6,nan,335,140.0,nan,475,580
+11 52 13.10,Food Dispensing Equipment,3610,"Circular, 7 qt.",nan,10.0,2.6,nan,405,140.0,nan,545,655
+11 52 13.10,Food Dispensing Equipment,3620,"Refrigerated, 2 compartments",nan,10.0,2.6,nan,"2,950",140.0,nan,"3,090","3,450"
+11 52 13.10,Food Dispensing Equipment,3630,3 compartments,nan,9.0,2.889,nan,"5,375",155.0,nan,"5,530","6,150"
+11 52 13.10,Food Dispensing Equipment,3640,4 compartments,nan,8.0,3.25,nan,"5,100",174.0,nan,"5,274","5,850"
+11 52 13.10,Food Dispensing Equipment,4720,Frost cold plate,nan,9.0,2.889,nan,"23,500",155.0,nan,"23,655","26,100"
+11 52 13.10,Food Dispensing Equipment,5700,Hot chocolate dispenser,1 Plum,4.0,2.0,nan,"1,200",140.0,nan,"1,340","1,525"
+11 52 13.10,Food Dispensing Equipment,5750,Ice dispenser 567 pound,Q 1,6.0,2.667,nan,"6,125",168.0,nan,"6,293","6,975"
+11 52 13.10,Food Dispensing Equipment,6250,Jet spray dispenser,R-18,4.5,5.778,nan,"1,225",335.0,nan,"1,560","1,850"
+11 52 13.10,Food Dispensing Equipment,6300,"Juice dispenser, concentrate",nan,4.5,5.778,nan,"2,025",335.0,nan,"2,360","2,725"
+11 52 13.10,Food Dispensing Equipment,6690,"Milk dispenser, bulk, 2 flavor",R-30,8.0,3.25,nan,"2,450",174.0,nan,"2,624","2,950"
+11 52 13.10,Food Dispensing Equipment,6695,3 flavor,"""",8.0,3.25,nan,"3,025",174.0,nan,"3,199","3,575"
+11 52 13.10,Food Dispensing Equipment,8800,"Serving counter, straight",1 Carp,40.0,0.2,L.F.,"2,025",11.25,nan,"2,036.25","2,275"
+11 52 13.10,Food Dispensing Equipment,8820,Curved section,nan,30.0,0.267,"""","2,600",15.0,nan,"2,615","2,900"
+11 52 13.10,Food Dispensing Equipment,8825,"Solid surface, see Section 12 36 61.16",nan,nan,nan,nan,,nan,nan,nan,nan
+11 52 13.10,Food Dispensing Equipment,8860,"Sneeze guard with lights, 60"" L",1 Clab,16.0,0.5,Eg.,340,23.0,nan,363,410
+11 52 13.10,Food Dispensing Equipment,8900,"Sneeze guard, stainless steel and glass, single sided",nan,nan,nan,nan,,nan,nan,nan,nan
+11 52 13.10,Food Dispensing Equipment,8910,"Portable, 48"" W",nan,nan,nan,Ea.,405,nan,nan,405,445
+11 52 13.10,Food Dispensing Equipment,8920,"Portable, 72"" W",nan,nan,nan,nan,465,nan,nan,465,510
+11 52 13.10,Food Dispensing Equipment,89301,"Adjustable, 36"" W",11 Carp,24.0,0.333,nan,360,18.75,nan,378.75,425
+11 52 13.10,Food Dispensing Equipment,8940,"Adjustable, 48"" W","""",20.0,0.4,nan,325,22.5,nan,347.50,395
+11 52 13.10,Food Dispensing Equipment,9100,"Soft serve ice cream machine, medium",1 R-18,11.0,2.364,nan,"9,675",137.0,nan,"9,812","10,800"
+11 52 13.10,Food Dispensing Equipment,9110,Large,"""",9.0,2.889,nan,"25,400",168.0,nan,"25,568","28,200"
+11 42 10.10,"Equipment, Mixers and Misc. Equipment",6700,"Peelers, small",R-18,8.0,3.25,Ea.,2.79,189,nan,191.79,284
+11 42 10.10,"Equipment, Mixers and Misc. Equipment",6720,Large,"""",6.0,4.333,nan,"3,850",252,nan,"4,102","4,600"
+11 42 10.10,"Equipment, Mixers and Misc. Equipment",6800,"Pulper/extractor, close coupled, 5 HP",1 Plum,1.9,4.211,nan,"2,500",294,nan,"2,794","3,200"
+11 42 10.10,"Equipment, Mixers and Misc. Equipment",8580,Slicer with table,R-18,9.0,2.889,nan,"4,100",168,nan,"4,268","4,750"
+11 43 13.10,"Mobile Carts, Racks and Trays",10,"MOBILE CARTS, RACKS AND TRAYS",nan,nan,nan,nan,,nan,nan,nan,nan
+11 43 13.10,"Mobile Carts, Racks and Trays",1650,"Cabinet, heated, 1 compartment, reach in",R-18,5.6,4.643,Ea.,"3,150",270.0,nan,"3,420","3,875"
+11 43 13.10,"Mobile Carts, Racks and Trays",1655,Pass-thru rollin,nan,5.6,4.643,nan,"3,125",270.0,nan,"3,395","3,850"
+11 43 13.10,"Mobile Carts, Racks and Trays",1660,"2 compartment, reach-in",y,4.8,5.417,nan,"11,700",315.0,nan,"12,015","13,400"
+11 43 13.10,"Mobile Carts, Racks and Trays",1670,1 Mobile,nan,nan,nan,nan,"2,575",nan,nan,"2,575","2,850"
+11 43 13.10,"Mobile Carts, Racks and Trays",2000,"Hospital food cart, hot and cold service, 20 tray capacity",nan,nan,nan,nan,"15,800",nan,nan,"15,800","17,300"
+11 43 13.10,"Mobile Carts, Racks and Trays",6850,Mobile rack w/ pon slide,nan,nan,nan,nan,855,nan,nan,855,940
+11 43 13.10,"Mobile Carts, Racks and Trays",9180,"Tray and silver dispenser, mobile",1 Clab,16.0,0.5,nan,"4,850",223.0,nan,"4,873","5,375"
+11 44 13.10,Cooking Equipment,10,COOKING EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 44 13.10,Cooking Equipment,20,"Bake oven, gas, one section",Q-1,8.0,2.0,Ea.,"3,825",126.0,nan,"3,951","4,400"
+11 44 13.10,Cooking Equipment,300,Two sections,nan,7.0,2.286,nan,"6,850",144.0,nan,"6,994","7,750"
+11 44 13.10,Cooking Equipment,600,Three sections,nan,6.0,2.667,nan,"8,225",168.0,nan,"8,393","9,300"
+11 44 13.10,Cooking Equipment,900,"Electric convection, single deck",L-7,4.0,7.0,nan,"9,300",385.0,nan,"9,685","10,800"
+11 44 13.10,Cooking Equipment,1300,"Broiler, without oven, standard",1 0-1,8.0,2.0,nan,"2,825",126.0,nan,"2,951","3,300"
+11 44 13.10,Cooking Equipment,1550,Infrared,IL 7,4.0,7.0,nan,"6,400",385.0,nan,"6,785","7,625"
+11 44 13.10,Cooking Equipment,4750,"Fryer, with twin baskets, modular model",Q1,7.0,2.286,nan,"1,300",144.0,nan,"1,444","1,650"
+11 44 13.10,Cooking Equipment,5000,"Floor model, on 6"" legs","""",5.0,3.2,nan,"3,750",201.0,nan,"3,951","4,425"
+11 44 13.10,Cooking Equipment,5100,"Extra single basket, large",nan,nan,nan,nan,62,nan,nan,62,68
+11 44 13.10,Cooking Equipment,5170,"Energy star rated, 50 lb. capacity",R-18,4.0,6.5,nan,"6,075",380.0,nan,"6,455","7,225"
+11 44 13.10,Cooking Equipment,5175,85 lb. capacity,"G """,4.0,6.5,nan,"1,825",380.0,nan,"2,205","2,575"
+11 44 13.10,Cooking Equipment,5300,"Griddle, SS, 24"" plate, w/4"" legs, elec, 208 V, 3 phase, 3' long",-1,7.0,2.286,nan,"4,875",144.0,nan,"5,019","5,575"
+11 44 13.10,Cooking Equipment,5550,4' long,""" 1",6.0,2.667,nan,"2,875",168.0,nan,"3,043","3,425"
+11 44 13.10,Cooking Equipment,6200,Iced tea brewer,11 Plum,3.44,2.326,Ea.,705,162.0,nan,867,"1,025"
+11 44 13.10,Cooking Equipment,6350,"Kettle, w/ steam jacket, tilting, w/ positive lock, SS, 20 gallons",L77,nan,4.0,nan,"12,900",219.0,nan,"13,119","14,500"
+11 44 13.10,Cooking Equipment,6600,60 gallons,"""",6.0,4.667,nan,"15,900",255.0,nan,"16,155","17,900"
+11 44 13.10,Cooking Equipment,6900,"Range, restaurant type, 6 burners and 1 standard oven, 36"" wide",Q-1,7.0,2.286,nan,"1,250",144.0,nan,"1,394","1,600"
+11 44 13.10,Cooking Equipment,6950,Convection,nan,7.0,2.286,nan,"5,450",144.0,nan,"5,594","6,225"
+11 44 13.10,Cooking Equipment,7150,"2 standard ovens, 24"" griddle, 60"" wide",nan,6.0,2.667,nan,"4,600",168.0,nan,"4,768","5,300"
+11 44 13.10,Cooking Equipment,7200,"1 standard, 1 convection oven",nan,655.0,2.667,nan,"13,300",168.0,nan,"13,468","14,900"
+11 44 13.10,Cooking Equipment,7450,"Heavy duty, single 34"" standard oven, open top",nan,nan,3.2,nan,"7,175",201.0,nan,"7,376","8,200"
+11 44 13.10,Cooking Equipment,7500,Convection oven,nan,5.0,3.2,nan,"6,725",201.0,nan,"6,926","7,700"
+11 44 13.10,Cooking Equipment,7700,Griddle top,nan,6.0,2.667,nan,"2,675",168.0,nan,"2,843","3,200"
+11 44 13.10,Cooking Equipment,7750,Convection oven,nan,6.0,2.667,nan,"7,300",168.0,nan,"7,468","8,275"
+11 44 13.10,Cooking Equipment,7760,"Induction cooker, electric",1-7,7.0,4.0,nan,"2,350",219.0,nan,"2,569","2,925"
+11 44 13.10,Cooking Equipment,8850,"Steamer, electric 27 KW",nan,7.0,4.0,nan,"31,700",219.0,nan,"31,919","35,200"
+11 44 13.10,Cooking Equipment,9100,"Electric, 10 KW or gas 100,000 BTU",nan,5.0,5.6,nan,"22,500",305.0,nan,"22,805","25,300"
+11 44 13.10,Cooking Equipment,9150,"Toaster, conveyor type, 16-22 slices/minute",nan,nan,nan,nan,795,nan,nan,795,875
+11 44 13.10,11 66 13 M Exercise Equipment,800,Maximum,2 Clab,0.75,21.333,Set,"14,500",975,nan,"15,475","17,400"
+11 44 13.10,11 66 13 M Exercise Equipment,820,"Dumbbell set, cast iron, with rack and 5 pair",nan,nan,nan,nan,"1,350",nan,nan,"1,350","1,500"
+11 44 13.10,11 66 13 M Exercise Equipment,900,Squat racks,2 Clab,5.0,3.2,Ea.,800,146,nan,946,"1,100"
+11 44 13.10,11 66 13 M Exercise Equipment,1200,"Multi station gym machine, 5 station",nan,nan,nan,nan,"8,000",nan,nan,"8,000","8,800"
+11 44 13.10,11 66 13 M Exercise Equipment,1250,9 station,nan,nan,nan,nan,"10,000",nan,nan,"10,000","$11,000"
+11 44 13.10,11 66 13 M Exercise Equipment,1280,"Rowing machine, hydraulic",nan,nan,nan,nan,"2,625",nan,nan,"2,625","2,875"
+11 44 13.10,11 66 13 M Exercise Equipment,1300,"Treadmill, manual",nan,nan,nan,Ea.,"3,000",nan,nan,"3,000","3,300"
+11 44 13.10,11 66 13 M Exercise Equipment,1320,Motorized,nan,nan,nan,nan,"4,125",nan,nan,"4,125","4,550"
+11 44 13.10,11 66 13 M Exercise Equipment,1340,Electronic,nan,nan,nan,nan,"3,975",nan,nan,"3,975","4,375"
+11 44 13.10,11 66 13 M Exercise Equipment,1360,Cardio-testing,nan,nan,nan,nan,"8,000",nan,nan,"8,000","8,800"
+11 44 13.10,11 66 13 M Exercise Equipment,1400,"Treatment / massage tables, minimum",nan,nan,nan,nan,525,nan,nan,525,580
+11 44 13.10,11 66 13 M Exercise Equipment,1420,"Deluxe, with accessories",nan,nan,nan,nan,810,nan,nan,810,890
+11 44 13.10,11 66 13 M Exercise Equipment,4150,"Exercise equipment, bicycle trainer",nan,nan,nan,nan,"1,200",nan,nan,"1,200","1,325"
+11 44 13.10,11 66 13 M Exercise Equipment,4180,"Chinning bar, adjustable, wall mounted",1 Carp,5.0,1.6,nan,241,90,nan,331,400
+11 44 13.10,11 66 13 M Exercise Equipment,4200,"Exercise ladder, 16' x 1'-7"", suspended",1-2,3.0,5.333,nan,"1,400",266,nan,"1,666","1,950"
+11 44 13.10,11 66 13 M Exercise Equipment,4210,"High bar, floor plate attached",1 Carp,4.0,2.0,nan,350,113,nan,463,555
+11 44 13.10,11 66 13 M Exercise Equipment,4240,"Parallel bars, adjustable",nan,nan,421.0,I,"1,625",113,nan,"1,738","1,975"
+11 44 13.10,11 66 13 M Exercise Equipment,4270,"Uneven parallel bars, adjustable",nan,nan,4.0,2,"4,050",113,nan,"4,163","4,625"
+11 44 13.10,11 66 13 M Exercise Equipment,4280,"Wall mounted, adjustable",1-2,1.5,10.667,Set,975,530,nan,"1,505","1,875"
+11 44 13.10,11 66 13 M Exercise Equipment,4300,"Rope, ceiling mounted, 18' long",1 Carp,3.66,2.186,Ea.,208,123,nan,331,410
+11 44 13.10,11 66 13 M Exercise Equipment,4330,"Side horse, vaulting",nan,5.0,1.6,nan,"1,700",90,nan,"1,790","2,000"
+11 44 13.10,11 66 13 M Exercise Equipment,4360,"Treadmill, motorized, deluxe, training type",nan,5.0,1.6,nan,"4,150",90,nan,"4,240","4,700"
+11 44 13.10,11 66 13 M Exercise Equipment,4390,"Weight lifting multi-station, minimum",2 Clab,1.0,16.0,nan,310,730,nan,"1,040","1,425"
+11 44 13.10,11 66 13 M Exercise Equipment,4450,Maximum,nan,0.5,32.0,nan,"15,200","1,450",nan,"16,650","18,900"
+11 66 23.13,Basketball Equipment,1000,"Backstops, wall mtd., 6' extended, fixed, minimum",1-2,1.0,16.0,Ea.,"2,000",795,nan,"2,795","3,400"
+11 66 23.13,Basketball Equipment,1100,Maximum,nan,nan,16.0,nan,"2,100",795,nan,"2,895","3,500"
+11 66 23.13,Basketball Equipment,1200,"Swing up, minimum",nan,nan,16.0,nan,"1,575",795,nan,"2,370","2,950"
+11 66 23.13,Basketball Equipment,1250,Maximum,nan,nan,116.0,nan,"3,675",795,nan,"4,470","5,250"
+11 66 23.13,Basketball Equipment,1300,"Portable, manual, heavy duty, spring operated",nan,1.9,8.421,nan,"$14,200",420,nan,"14,620","16,200"
+11 66 23.13,Basketball Equipment,1400,"Ceiling suspended, stationary, minimum",nan,0.78,20.513,nan,"3,925","1,025",nan,"4,950","5,825"
+11 66 23.13,Basketball Equipment,1450,"Fold up, with accessories, maximum",nan,0.4,40.0,1,"6,225","2,000",nan,"8,225","9,825"
+11 66 23.13,Basketball Equipment,1600,"For electrically operated, add",1 Elec,1.0,8.0,nan,"2,600",530,nan,"3,130","3,625"
+11 66 23.13,Basketball Equipment,5800,"Wall pads, 1-1/2"" thick, standard (not fire rated)",2 Carp,640.0,0.025,S.F.,132,1141,nan,133.41,147
+11 66 23.19,Boxing Ring,4100,"Elevated, 22' x 22'",1-4,0.1,240.0,Ea.,"6,375","12,900",nan,"19,275","26,400"
+11 66 23.19,Boxing Ring,4110,"For cellular plastic foam padding, add",nan,0.1,240.0,nan,"1,275","12,900",nan,"14,175","20,800"
+11 66 23.19,Boxing Ring,4120,"Floor level, including posts and ropes only, 20'x20'",nan,0.8,30.0,nan,"5,000","1,600",nan,"6,600","7,925"
+11 66 23.19,Boxing Ring,4130,"Canvas, 30' x 30'",nan,5.0,4.8,nan,"1,525",258,nan,"1,783","2,075"
+11 66 23.47,Gym Mats,5500,"2"" thick, naugahyde covered",nan,nan,nan,S.F.,4.39,nan,nan,4.39,4.83
+11 66 23.47,Gym Mats,5600,Vinyl / nylon covered,nan,nan,nan,nan,9.05,nan,nan,9.05,9.95
+11 66 23.47,Gym Mats,6000,"Wrestling mats, 1"" thick, heavy duty",nan,nan,nan,nan,4.94,nan,nan,4.94,5.45
+11 66 23.47,"8100 Plumbing, final connections, simple system",11 53 43,Service Fittings and Accessories,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,"8100 Plumbing, final connections, simple system",11 53 43.13,Fittings,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,"8100 Plumbing, final connections, simple system",8100,"Plumbing, final connections, simple system",nan,nan,nan,1% Furn.,nan,nan,nan,10%,10%
+11 66 23.47,"8100 Plumbing, final connections, simple system",8110,Moderately complex system,nan,nan,nan,nan,nan,nan,nan,15%,15%
+11 66 23.47,"8100 Plumbing, final connections, simple system",8120,Complex system,nan,nan,nan,nan,nan,nan,nan,20%,20%
+11 66 23.47,"8100 Plumbing, final connections, simple system",8150,"Electrical, simple system",nan,nan,nan,nan,nan,nan,nan,10%,10%
+11 66 23.47,"8100 Plumbing, final connections, simple system",8160,Moderately complex system,nan,nan,nan,nan,nan,nan,nan,20%,20%
+11 66 23.47,"8100 Plumbing, final connections, simple system",8170,Complex system,nan,nan,nan,nan,nan,nan,nan,35%,35%
+11 66 23.47,11 53 53 - Biological Safety Cabinets,11 53 53.10,Pharmacy Cabinets,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,11 53 53 - Biological Safety Cabinets,0010,"PHARMACY CABINETS, vertical flow",nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,11 53 53 - Biological Safety Cabinets,0100,"Class I, type B2, 6 'L",12 Carp,1.5,10.667,Ea.,"8,625",600.0,nan,"9,225","10,400"
+11 66 23.47,11 57 Vocational Shop Equipment,11 57 10,Shop Equipment,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,11 57 Vocational Shop Equipment,11 57 10.10,Vocational School Shop Equipment,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,11 57 Vocational Shop Equipment,0010,VOCATIONAL SCHOOL SHOP EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,11 57 Vocational Shop Equipment,0020,"Benches, work, wood, average",2 Carp,5.0,3.2,Ea.,410,180.0,nan,590,720
+11 66 23.47,11 57 Vocational Shop Equipment,0100,"Metal, average",nan,5.0,3.2,nan,380,180.0,nan,550,690
+11 66 23.47,11 57 Vocational Shop Equipment,0400,"Combination belt & disc sander, 6""",nan,4.0,4.0,nan,"1,850",225.0,nan,"2,075","2,350"
+11 66 23.47,11 57 Vocational Shop Equipment,0700,"Drill press, floor mounted, 12"", 1/2 HP",nan,nan,nan,nan,"1,325",225.0,nan,"1,550","1,775"
+11 66 23.47,11 57 Vocational Shop Equipment,0800,"Dust collector, not incl. ductwork, 6"" diameter",1 Shee,1.1,7.273,nan,"8,275",490.0,nan,"8,765","9,850"
+11 66 23.47,11 57 Vocational Shop Equipment,0810,"Dust collector bag, 20"" diameter",nan,5.0,1.6,nan,870,108.0,nan,978,"1,125"
+11 66 23.47,11 57 Vocational Shop Equipment,1000,"Grinders, double wheel, 1/2 HP",2 Carp,5.0,3.2,nan,159,180.0,nan,339,445
+11 66 23.47,11 57 Vocational Shop Equipment,1300,"Jointer, 4"", 3/4 HP",nan,nan,nan,nan,"1,975",225.0,nan,"2,200","2,475"
+11 66 23.47,11 57 Vocational Shop Equipment,1600,"Kiln, 16 C.F., to 2000°",nan,nan,nan,nan,"6,100",225.0,nan,"6,325","7,025"
+11 66 23.47,11 57 Vocational Shop Equipment,1900,"Lathe, woodworking, 10"", 1/2 HP",nan,4.0,nan,nan,550,225.0,nan,775,940
+11 66 23.47,11 57 Vocational Shop Equipment,2200,"Planer, 13"" x 6""",nan,nan,nan,nan,"1,400",225.0,nan,"1,625","1,875"
+11 66 23.47,11 57 Vocational Shop Equipment,2500,"Potter's wheel, motorized",nan,4.0,nan,nan,"1,825",2222222.0,nan,"2,050","2,350"
+11 66 23.47,11 57 Vocational Shop Equipment,2800,"Saws, band, 14"", 3/4 HP",nan,nan,nan,nan,900,nan,nan,"1,125","1,325"
+11 66 23.47,11 57 Vocational Shop Equipment,3100,"Metal cutting band saw, 14""",nan,nan,nan,nan,"3,025",nan,nan,"3,250","3,650"
+11 66 23.47,11 57 Vocational Shop Equipment,3400,"Radial arm saw, 10"", 2 HP",nan,nan,nan,nan,"3,950",nan,nan,"4,175","4,675"
+11 66 23.47,11 57 Vocational Shop Equipment,3700,"Scroll saw, 24""",nan,nan,nan,nan,895,nan,nan,"1,120","1,325"
+11 66 23.47,11 57 Vocational Shop Equipment,4000,"Table saw, 10"", 3 HP",nan,nan,nan,nan,"1,500",nan,nan,"1,725","1,975"
+11 66 23.47,11 57 Vocational Shop Equipment,4300,"Welder AC arc, 30 amp capacity",nan,nan,nan,nan,"5,475",nan,nan,"5,700","6,350"
+11 66 23.47,11 61 23 Folding and Portable Stages,11 61 23.10,Portable Stages,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,11 61 23 Folding and Portable Stages,0010,PORTABLE STAGES,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,11 61 23 Folding and Portable Stages,1500,"Flooring, portable oak parquet, 3' x 3' sections",nan,nan,nan,S.F.,14.8,nan,nan,14.8,16.3
+11 66 23.47,11 61 23 Folding and Portable Stages,1600,Cart to carry 225 S.F. of flooring,nan,nan,nan,Ea.,445.0,nan,nan,445.0,490.0
+11 66 23.47,11 61 23 Folding and Portable Stages,5000,"Stages, portable with steps, folding legs, stock, 8"" high",nan,nan,nan,SF Stg.,47.5,nan,nan,47.5,52.5
+11 66 23.47,11 61 23 Folding and Portable Stages,5100,"16"" high",nan,nan,nan,nan,59.0,nan,nan,59.0,65.0
+11 66 23.47,11 61 23 Folding and Portable Stages,5200,"32"" high",nan,nan,nan,nan,60.5,nan,nan,60.5,66.5
+11 66 23.47,11 61 23 Folding and Portable Stages,5300,"40"" high",nan,nan,nan,nan,65.5,nan,nan,65.5,72.0
+11 66 23.47,11 61 23 Folding and Portable Stages,6000,"Telescoping platforms, extruded alum., straight, minimum",4 Carp,157.0,0.204,nan,39.0,11.5,nan,50.5,59.5
+11 66 23.47,11 61 23 Folding and Portable Stages,6100,Maximum,nan,77.0,0.416,nan,55.5,23.5,nan,796.0,96.5
+11 66 23.47,11 61 23 Folding and Portable Stages,6500,"Pie shaped, minimum",nan,150.0,0.213,nan,84.0,12.0,nan,96.0,110.0
+11 66 23.47,11 61 23 Folding and Portable Stages,6600,Maximum,nan,70.0,0.457,nan,94.0,25.5,nan,119.5,142.0
+11 66 23.47,11 61 23 Folding and Portable Stages,6800,"For 3/4"" plywood covered deck, deduct",nan,nan,nan,nan,5.55,nan,nan,5.55,6.1
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,10,FREE-STANDING PLAYGROUND EQUIPMENT See also individual items,nan,nan,nan,nan,,nan,nan,nan,nan
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,200,"Bike rack, 10' long, permanent",G B-1,12.0,2.0,Eo.,550,92.5,nan,642.50,745
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,392,Upper body warm-up station,nan,2.6,9.231,nan,"4,200",425.0,nan,"4,625","5,250"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,394,Bench stepper station,nan,2.6,9.231,nan,"3,050",425.0,nan,"3,475","4,000"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,396,Standing push up station,nan,2.6,9.231,nan,"1,200",425.0,nan,"1,625","1,925"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,398,Upper body stretch station,nan,2.6,9.231,nan,"2,500",425.0,nan,"2,925","3,350"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,400,"Horizontal monkey ladder, 14' long, 6' high",nan,4.0,6.0,nan,"1,625",278.0,nan,"1,903","2,225"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,590,"Parallel bars, 10' long",nan,4.0,6.0,nan,795,278.0,nan,"1,073","1,300"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,600,"Posts, tether ballset, 2-3/8"" OD",nan,2200643.0,22.0,nan,450,92.5,nan,542.50,635
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,800,"Poles, multiple purpose, 10'-6"" long",nan,nan,2.0,Pr.,80,92.5,nan,172.50,226
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,1000,"Ground socket for movable posts, 2-3/8"" post",nan,10.0,2.4,nan,128,111.0,nan,239,305
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,1100,"3-1/2"" post",nan,10.0,2.4,nan,345,111.0,nan,456,545
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,1300,"See-saw, spring, steel, 2 units",nan,6.0,4.0,Ea.,635,185.0,nan,820,975
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,1400,4 units,nan,46.0,nan,nan,"1,125",278.0,nan,"1,403","1,650"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,1500,6 units,nan,nan,8.0,nan,"2,675",370.0,nan,"3,045","3,475"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,1700,"Shelter, fiberglass golf tee, 3 person",nan,4.6,5.217,nan,"4,775",241.0,nan,"5,016","5,600"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,1900,"Slides, stainless steel bed, 12' long, 6' high",nan,322.0,8.0,nan,"6,775",370.0,nan,"7,145","8,025"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,2000,"20' long, 10' high",nan,2.0,12.0,nan,"8,875",555.0,nan,"9,430","10,600"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,2200,"Swings, plain seats, 8' high, 4 seats",nan,2.0,12.0,nan,"4,225",555.0,nan,"4,780","5,475"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,2300,8 seats,nan,1.3,18.462,nan,"7,300",855.0,nan,"8,155","9,300"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,2500,"12' high, 4 seats",nan,2.0,12.0,nan,"1,275",555.0,nan,"1,830","2,225"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,2600,8 seats,nan,1.3,18.462,nan,"2,975",855.0,nan,"3,830","4,550"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,2800,"Whirlers, 8' diameter",nan,3.0,8.0,nan,"2,975",370.0,nan,"3,345","3,825"
+11 66 23.47,00StructuresANDING PLAYGROUND EQUIPMENT,2900,10' diameter,nan,3.0,8.0,nan,"7,275",370.0,nan,"7,645","8,550"
+11 68 13.20,Modular Playground,10,MODULAR PLAYGROUND Basic components,nan,nan,nan,nan,,nan,nan,nan,nan
+11 68 13.20,Modular Playground,100,"Deck, square, steel, 48"" x 48""",B-1,1,244,Ea.,"1,200","1,100",nan,"2,300","2,975"
+11 68 13.20,Modular Playground,110,Recycled polyurethane,nan,24,nan,nan,"1,200","1,100",nan,"2,300","2,975"
+11 68 13.20,Modular Playground,120,"Triangular, steel, 48"" side",nan,182832234,24,nan,237,"1,100",nan,"1,337","1,900"
+11 68 13.20,Modular Playground,130,"Post, steel, 5"" square",nan,18,1.333,LF.,51.50,61.50,nan,113,149
+11 68 13.20,Modular Playground,140,"Aluminum, 2-3/8"" square",nan,-20,1.200,nan,57,55.50,nan,112.50,145
+11 68 13.20,Modular Playground,150,"5"" square",nan,18,1.333,I,48,61.50,nan,109.50,145
+11 68 13.20,Modular Playground,160,"Roof, square poly, 54"" side",nan,18,1.333,Ea.,640,61.50,nan,701.50,795
+11 68 13.20,Modular Playground,170,"Wheelchair transfer module, for 3' high deck",nan,nan,8,"""","1,975",370,nan,"2,345","2,725"
+11 68 13.20,Modular Playground,180,"Guardrail, pipe, 36"" high",nan,60,.400,L.F.,7.55,18.50,nan,26.05,36
+11 68 13.20,Modular Playground,190,"Steps, deck to-deck, three 8"" steps",nan,nan,3,Ea.,780,139,nan,919,"1,075"
+11 68 13.20,Modular Playground,200,"Activity panel, crawl through panel",nan,nan,12,nan,500,555,nan,"1,055","1,375"
+11 68 13.20,Modular Playground,210,Alphabet /spelling panel,nan,212,nan,nan,99,555,nan,654,935
+11 68 13.20,Modular Playground,360,With guardrails,nan,3,6,nan,"2,600",370,nan,"2,970","3,400"
+11 68 13.20,Modular Playground,370,"Crawl tunnel, straight, 56"" long",nan,a,nan,nan,"1,700",278,nan,"1,978","2,275"
+11 68 13.20,Modular Playground,380,"90°, 4' long",nan,48866555364a,nan,nan,"1,800",278,nan,"2,078","2,400"
+11 68 13.20,Modular Playground,1200,"Slide, tunnel, for 56"" high deck",nan,nan,331,nan,"4,100",139,nan,"4,239","4,700"
+11 68 13.20,Modular Playground,1210,"Straight, poly",nan,nan,nan,nan,870,139,nan,"1,009","1,150"
+11 68 13.20,Modular Playground,1220,"Stainless steel, 54"" high deck",nan,nan,4,nan,935,185,nan,"1,120","1,300"
+11 68 13.20,Modular Playground,1230,"Curved, poly, 40"" high deck",nan,nan,4,nan,"1,900",185,nan,"2,085","2,375"
+11 68 13.20,Modular Playground,1240,"Spiral slide, 56""-72"" high",nan,4.800,nan,nan,"7,275",222,nan,"7,497","8,325"
+11 68 13.20,Modular Playground,1300,"Ladder, vertical, for 24""-72"" high deck",nan,4.800,nan,nan,650,222,nan,872,"1,050"
+11 68 13.20,Modular Playground,1310,"Horizontal, 8' long",nan,4.800,nan,nan,940,222,nan,"1,162","1,350"
+11 68 13.20,Modular Playground,1320,"Corkscrew climber, 6' high",nan,nan,8,nan,980,370,nan,"1,350","1,625"
+11 68 13.20,Modular Playground,1330,"Fire pole for 72"" high deck",nan,nan,4,nan,99,185,nan,284,385
+11 68 13.20,Modular Playground,1340,"Bridge, ring climber, 8' long",nan,99,nan,nan,"5,050",278,nan,"5,328","5,975"
+11 68 13.20,Modular Playground,1350,Suspension,nan,6,L.F,72,,278,nan,350.0,495
+11 68 16.10,Handball/Squash Court,10,"HANDBALL / SQUASH COURT, outdoor",nan,nan,nan,nan,,nan,nan,nan,nan
+11 68 16.10,Handball/Squash Court,900,"Handball or squash court, outdoor, wood",2 Carp,0.5,32.0,Ea.,"5,375","1,800",nan,"7,175","8,600"
+11 68 16.10,Handball/Squash Court,1000,Masonry handball / squash court,D-1,0.3,53.333,11,"27,300","2,675",nan,"29,975","34,100"
+11 68 16.30,Platform/Paddle Tennis Court,10,"PLATFORM / PADDLE TENNIS COURT Complete with lighting, etc.",nan,nan,nan,nan,,nan,nan,nan,nan
+11 68 16.30,Platform/Paddle Tennis Court,100,Aluminum slat deck with aluminum frame,B-1,0.08,300.0,Court,"74,500","13,900",nan,"88,400","102,500"
+11 68 16.30,Platform/Paddle Tennis Court,500,Aluminum slat deck with wood frame,(-1,0.12,267.0,nan,"91,500","14,300",nan,"105,800","122,500"
+11 68 16.30,Platform/Paddle Tennis Court,800,"Aluminum deck heater, add",B-1,1.18,20.339,nan,"3,225",940,nan,"4,165","4,950"
+11 68 16.30,Platform/Paddle Tennis Court,900,"Douglas fir planking with wood frame 2"" x 6"" x 30'",C-1,0.12,267.0,nan,"86,000","14,300",nan,"100,300","116,500"
+11 68 16.30,Platform/Paddle Tennis Court,1000,Plywood deck with steel frame,nan,0.12,267.0,nan,"86,000","14,300",nan,"100,300","116,500"
+11 68 16.30,Platform/Paddle Tennis Court,1100,Steel slat deck with wood frame,nan,0.12,267.0,nan,"51,000","14,300",nan,"65,300","77,500"
+11 68 33.13,Football Field Equipment,10,FOOTBALL FIELD EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 68 33.13,Football Field Equipment,20,"Goal posts, steel, football, double post",B-1,1.5,16.0,Pr.,"5,000",740.0,nan,"5,740","6,600"
+11 68 33.13,Football Field Equipment,100,"Deluxe, single post",nan,1.5,16.0,nan,"6,000",740.0,nan,"6,740","7,700"
+11 68 33.13,Football Field Equipment,300,"Football, convertible to soccer",nan,1.5,16.0,nan,"4,475",740.0,nan,"5,215","6,025"
+11 68 33.13,Football Field Equipment,500,"Soccer, regulation",nan,2.0,12.0,nan,"3,100",555.0,nan,"3,655","4,225"
+11 71 10.10,Sterilizers and Distillers,10,STERILIZERS AND DISTILLERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 71 10.10,Sterilizers and Distillers,700,"Distille, water, steam heated, 50 gal. capacity",1 Plum,1.4,5.714,Eq.,"39,400",400.0,nan,"39,800","44,000"
+11 71 10.10,Sterilizers and Distillers,3010,"Portable, top loading, 105-135 degree C, 3 to 30 psi, 50 L chamber",nan,nan,nan,nan,"10,200",nan,nan,"10,200","11,300"
+11 71 10.10,Sterilizers and Distillers,3020,"Stainless steel basket, 10.7"" diam. x 11.8"" H",nan,nan,nan,nan,226,nan,nan,226,248
+11 71 10.10,Sterilizers and Distillers,3025,"Stainless steel pail, 10.7"" diam. x 10.7"" H",nan,nan,nan,nan,335,nan,nan,335,370
+11 71 10.10,Sterilizers and Distillers,3050,85 L chamber,nan,nan,nan,nan,"19,000",nan,nan,"19,000","20,900"
+11 71 10.10,Sterilizers and Distillers,3060,"Stainless steel basket, 15.3"" diam. x 11.5"" H",nan,nan,nan,nan,490,nan,nan,490,535
+11 71 10.10,Sterilizers and Distillers,3065,"Stainless steel pail, 15.3"" diam. x 11"" H",nan,nan,nan,nan,715,nan,nan,715,785
+11 71 10.10,Sterilizers and Distillers,5600,"Sterilizers, floor loading, 26"" x 62"" x 42"", single door, steam",nan,nan,nan,nan,"143,500",nan,nan,"143,500","157,500"
+11 71 10.10,Sterilizers and Distillers,5650,"Double door, steam",nan,nan,nan,nan,"224,000",nan,nan,"224,000","246,500"
+11 71 10.10,Sterilizers and Distillers,5800,"General purpose, 20"" x 20"" x 38"", single door",nan,nan,nan,nan,"29,300",nan,nan,"29,300","32,200"
+11 71 10.10,Sterilizers and Distillers,6000,"Portable, counter top, steam, minimum",nan,nan,nan,nan,"4,125",nan,nan,"4,125","4,525"
+11 71 10.10,Sterilizers and Distillers,6020,Maximum,nan,nan,nan,nan,"2,200",nan,nan,"2,200","2,425"
+11 71 10.10,Sterilizers and Distillers,6050,"Portable, counter top, gas, 17"" x 15"" x 32-1/2""",nan,nan,nan,nan,"3,650",nan,nan,"3,650","4,000"
+11 71 10.10,Sterilizers and Distillers,6150,"Manual washer / sterilizer, 16"" x 16"" x 26""",1 Plum,2.0,4.0,nan,"4,375",279.0,nan,"4,654","5,225"
+11 71 10.10,Sterilizers and Distillers,6200,"Steam generators, electric 10 kW to 180 kW, freestanding",nan,nan,nan,nan,,nan,nan,nan,nan
+11 71 10.10,Sterilizers and Distillers,6250,Minimum,1 Elec,3.0,2.667,Ea.,"4,075",177.0,nan,"4,252","4,725"
+11 71 10.10,Sterilizers and Distillers,6300,Maximum,群,0.7,11.429,nan,"3,400",755.0,nan,"4,155","4,875"
+11 71 10.10,Sterilizers and Distillers,8200,Bed pan washer sanitizer,1 Plum,2.0,4.0,nan,"8,725",279.0,nan,"9,004","10,000"
+11 74 10.10,Diagnostic and Treatment Equipment,10,DIAGNOSTIC AND TREATMENT EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 74 10.10,Diagnostic and Treatment Equipment,20,"Central suction system, minimum",1 Plum,1.2,6.667,Eq.,"1,650",465,nan,"2,115","2,525"
+11 74 10.10,Diagnostic and Treatment Equipment,100,Maximum,"""",0.9,8.889,nan,"4,725",620,nan,"5,345","6,100"
+11 74 10.10,Diagnostic and Treatment Equipment,300,"Air compressor, minimum",1 Skwk,0.8,10.0,nan,"3,725",590,nan,"4,315","4,975"
+11 74 10.10,Diagnostic and Treatment Equipment,400,Maximum,nan,0.5,16.0,nan,"10,200",940,nan,"11,140","12,600"
+11 74 10.10,Diagnostic and Treatment Equipment,600,"Chair, electric or hydraulic, minimum",nan,0.5,16.0,nan,"3,475",940,nan,"4,415","5,250"
+11 74 10.10,Diagnostic and Treatment Equipment,700,Maximum,nan,0.25,32.0,nan,"4,500","1,875",nan,"6,375","7,775"
+11 74 10.10,Diagnostic and Treatment Equipment,800,"Doctor's / assistant's stool, minimum",nan,nan,nan,nan,360,nan,nan,360,395
+11 74 10.10,Diagnostic and Treatment Equipment,850,Maximum,nan,nan,nan,nan,"1,000",nan,nan,"1,000","1,100"
+11 74 10.10,Diagnostic and Treatment Equipment,1000,"Drill console with accessories, minimum",1 Skwk,1.6,55.0,nan,"4,050",295,nan,"4,345","4,900"
+11 74 10.10,Diagnostic and Treatment Equipment,1100,Maximum,nan,1.6,nan,nan,"4,875",295,nan,"5,170","5,800"
+11 74 10.10,Diagnostic and Treatment Equipment,2000,"Light, ceiling mounted, minimum",nan,8.0,1.0,nan,940,59,nan,999,"1,125"
+11 74 10.10,Diagnostic and Treatment Equipment,2100,Maximum,nan,8.0,1.0,nan,"2,650",59,nan,"2,709","3,000"
+11 74 10.10,Diagnostic and Treatment Equipment,2200,"Unit light, minimum",2 Skwk,5.33,3.002,nan,980,177,nan,"1,157","1,350"
+11 74 10.10,Diagnostic and Treatment Equipment,2210,Maximum,nan,5.33,3.002,nan,"2,025",177,nan,"2,202","2,500"
+11 74 10.10,Diagnostic and Treatment Equipment,2220,"Track light, minimum",nan,3.2,5.0,nan,"2,250",295,nan,"2,545","2,925"
+11 74 10.10,Diagnostic and Treatment Equipment,2230,Maximum,nan,3.2,5.0,nan,"4,100",295,nan,"4,395","4,950"
+11 74 10.10,Diagnostic and Treatment Equipment,2300,"Sterilizers, steam portable, minimum",nan,nan,nan,nan,"3,500",nan,nan,"3,500","3,850"
+11 74 10.10,Diagnostic and Treatment Equipment,2350,Maximum,nan,nan,nan,nan,"6,925",nan,nan,"6,925","7,625"
+11 74 10.10,Diagnostic and Treatment Equipment,2600,"Steam, institutional",nan,nan,nan,nan,"3,525",nan,nan,"3,525","3,875"
+11 74 10.10,Diagnostic and Treatment Equipment,2650,"Dry heat, electric, portable, 3 trays",nan,nan,nan,nan,"1,800",nan,nan,"1,800","1,975"
+11 74 10.10,Diagnostic and Treatment Equipment,2700,"Ultra-sonic cleaner, portable, minimum",nan,nan,nan,nan,500,nan,nan,500,550
+11 74 10.10,Diagnostic and Treatment Equipment,2750,Maximum (institutional),nan,nan,nan,nan,"1,775",nan,nan,"1,775","1,950"
+11 74 10.10,Diagnostic and Treatment Equipment,3000,"X-ray unit, wall, minimum",1 Skwk,4.0,nan,nan,"3,800",118,nan,"3,918","4,350"
+11 74 10.10,Diagnostic and Treatment Equipment,3010,Maximum,nan,4.0,2.0,nan,"7,050",118,nan,"7,168","7,925"
+11 74 10.10,Diagnostic and Treatment Equipment,3100,Panoramic unit,nan,0.6,13.333,nan,"22,400",785,nan,"23,185","25,800"
+11 74 10.10,Diagnostic and Treatment Equipment,3105,"Deluxe, minimum",2 Skwk,1.6,10.0,nan,"15,300",590,nan,"15,890","17,800"
+11 74 10.10,Diagnostic and Treatment Equipment,3110,Maximum,"""",1.6,10.0,nan,"47,300",590,nan,"47,890","53,000"
+11 74 10.10,Diagnostic and Treatment Equipment,3500,"Developers, X ray, average",1 Plum,5.33,1.501,nan,"7,025",105,nan,"7,130","7,875"
+11 74 10.10,Diagnostic and Treatment Equipment,3600,Maximum,"""",5.33,1.501,nan,"14,300",105,nan,"14,405","16,000"
+11 76 10.10,Surgical Equipment,10,SURGICAL EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 76 10.10,Surgical Equipment,5000,"Scrub, surgical, stainless steel, single station, minimum",1 Plum,3.0,2.667,Ea.,"1,475",186,nan,"1,661","1,900"
+11 76 10.10,Surgical Equipment,5100,Maximum,nan,nan,nan,"""","12,400",nan,nan,"12,400","13,700"
+11 76 10.10,Surgical Equipment,6550,"Major surgery table, minimum",1 Sswk,0.5,16.0,Ea.,"20,600",990,nan,"21,590","24,100"
+11 76 10.10,Surgical Equipment,6570,Maximum,nan,0.5,16.0,nan,"18,800",990,nan,"19,790","22,200"
+11 76 10.10,Surgical Equipment,6600,"Hydraulic, hand-held control, general surgery",nan,0.6,13.333,nan,"38,800",825,nan,"39,625","44,000"
+11 76 10.10,Surgical Equipment,6650,"Stationary, universal",nan,0.5,16666.0,nan,"48,900",990,nan,"49,890","55,500"
+11 76 10.10,Surgical Equipment,6800,"Surgical lights, major operating room, dual head, minimum",2 Elec,nan,16.0,nan,"4,675","1,050",nan,"5,725","6,725"
+11 76 10.10,Surgical Equipment,6850,Maximum,nan,1.0,16.0,nan,"6,675","1,050",nan,"7,725","8,925"
+11 76 10.10,Surgical Equipment,6900,"Ceiling mount articulation, single arm",nan,nan,16.0,nan,"4,450","1,050",nan,"5,500","6,475"
+11 76 10.10,11 82 19 Solidkaged IncineratoWaste 82 19.10 Packaged Handlingd Incinerators,4620,Maximum,Q-3,0.05,640,Ea .,"651,500","42,500",nan,"694,000","780,000"
+11 76 10.10,11 82 19 Solidkaged IncineratoWaste 82 19.10 Packaged Handlingd Incinerators,4700,"For heat recovery system, add, minimum",nan,0.25,128,nan,"98,000","8,500",nan,"106,500","120,500"
+11 76 10.10,11 82 19 Solidkaged IncineratoWaste 82 19.10 Packaged Handlingd Incinerators,4710,"Add, maximum",nan,0.11,291,nan,"271,000","19,300",nan,"290,300","327,500"
+11 76 10.10,11 82 19 Solidkaged IncineratoWaste 82 19.10 Packaged Handlingd Incinerators,4720,"For automatic ash conveyer, add",nan,0.5,64,nan,"38,100","4,250",nan,"42,350","48,300"
+11 76 10.10,11 82 26 - Facility Waste Compactors,11 82 26.10,Compactors,nan,nan,nan,nan,,nan,nan,nan,nan
+11 76 10.10,11 82 26 - Facility Waste Compactors,0010,COMPACTORS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 76 10.10,11 82 26 - Facility Waste Compactors,0020,"Compactors, 115 volt, 250 lbs./hr, chute fed",L-4,1.0,24.0,Ea .,"12,300","1,300",nan,"13,600","15,500"
+11 76 10.10,11 82 26 - Facility Waste Compactors,0100,Hand fed,nan,2.4,10.0,nan,"16,500",535,nan,"17,035","18,900"
+11 76 10.10,11 82 26 - Facility Waste Compactors,0300,"Multi bag, 230 volt, 600 lbs./hr., chute fed",nan,nan,24.0,nan,"16,500","1,300",nan,"17,800","20,200"
+11 76 10.10,11 82 26 - Facility Waste Compactors,0400,Hand fed,nan,nan,24.0,nan,"16,500","1,300",nan,"17,800","20,200"
+11 76 10.10,11 82 26 - Facility Waste Compactors,0500,"Containerized, hand fed, 2 to 6 C.Y. containers, 250 lbs./hr.",nan,nan,nan,nan,"16,300","1,300",nan,"17,600","20,000"
+11 76 10.10,11 82 26 - Facility Waste Compactors,0550,"For chute fed, add per floor",nan,nan,nan,nan,"1,475","1,300",nan,"2,775","3,550"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1000,"Heavy duty industrial compactor, 0.5 C.Y. capacity",nan,nan,24.0,nan,"10,900","1,300",nan,"12,200","14,000"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1050,1.0 C.Y. capacity,1,nan,24.0,nan,"16,700","1,300",nan,"18,000","20,300"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1100,3.0 C.Y. capacity,555,nan,48.0,nan,"28,500","2,575",nan,"31,075","35,300"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1150,5.0 C.Y. capacity,.50,nan,48.0,nan,"36,000","2,575",nan,"38,575","43,500"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1200,"Combination shredder / compactor (5,000 lbs./hr)",.50,nan,48.0,nan,"70,000","2,575",nan,"72,575","81,000"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1400,"For handling hazardous waste materials, 55 gallon drum packer, std.",nan,nan,nan,nan,"21,400",nan,nan,"21,400","23,600"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1410,55 gallon drum packer w/HEPA filter,nan,nan,nan,nan,"25,800",nan,nan,"25,800","28,400"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1420,55 gallon drum packer w/ charcoal & HEPA filter,nan,nan,nan,nan,"34,400",nan,nan,"34,400","37,800"
+11 76 10.10,11 82 26 - Facility Waste Compactors,1430,"All of the above made explosion proof, add",nan,nan,nan,nan,,"2,000",nan,"12,000","2,200"
+11 76 10.10,11 82 26 - Facility Waste Compactors,5500,"Shredder, municipal use, 35 tons / hour",nan,nan,nan,nan,"344,000",nan,nan,"344,000","378,500"
+11 76 10.10,11 82 26 - Facility Waste Compactors,5600,60 tons / hour,nan,nan,nan,nan,"733,000",nan,nan,"733,000","806,500"
+11 76 10.10,11 82 26 - Facility Waste Compactors,5750,"Shredder & baler, 50 tons/ day",nan,nan,nan,nan,"687,000",nan,nan,"687,000","756,000"
+11 76 10.10,11 82 26 - Facility Waste Compactors,5800,"Shredder, industrial, minimum",nan,nan,nan,nan,"28,800",nan,nan,"28,800","31,700"
+11 76 10.10,11 82 26 - Facility Waste Compactors,5850,Maximum,nan,nan,nan,nan,"145,000",nan,nan,"145,000","159,500"
+11 76 10.10,11 82 26 - Facility Waste Compactors,5900,"Baler, industrial, minimum",nan,nan,nan,nan,,"10,900",nan,"10,900","12,000"
+11 76 10.10,11 82 26 - Facility Waste Compactors,5950,Maximum,nan,nan,nan,nan,"633,500",nan,nan,"633,500","697,000"
+11 76 10.10,11 82 26 - Facility Waste Compactors,6000,"Transfer station compactor, with power unit",nan,nan,nan,nan,,nan,nan,nan,nan
+11 76 10.10,11 82 26 - Facility Waste Compactors,6050,"and pedestal, not including pit, 50 tons / hour",nan,nan,nan,Ea .,"217,500",nan,nan,"217,500","239,000"
+11 82 39.10,Off-Site Disposal,10,OFF-SITE DISPOSAL,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.10,Off-Site Disposal,100,"Medical waste disposal, Red Bag system, pick up & treat, 200 lbs./week",nan,nan,nan,Week,213.0,nan,nan,213.0,234.0
+11 82 39.10,Off-Site Disposal,110,Per month,nan,nan,nan,Month,770.0,nan,nan,770.0,845.0
+11 82 39.10,Off-Site Disposal,150,"Red bags, 7-10 gal., 1.2 mil, pkg of 500",nan,nan,nan,Ea .,67.5,nan,nan,67.5,74.0
+11 82 39.10,Off-Site Disposal,200,"15 gal., package of 250",nan,nan,nan,nan,66.0,nan,nan,66.0,72.5
+11 82 39.10,Off-Site Disposal,250,"33 gal., package of 250",nan,nan,nan,nan,74.5,nan,nan,74.5,82.0
+11 82 39.10,Off-Site Disposal,300,"45 gal., package of 100",nan,nan,nan,nan,61.0,nan,nan,61.0,67.5
+11 82 39.20,Disposal Carts,10,DISPOSAL CARTS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.20,Disposal Carts,2010,"Medical waste disposal cart, HDPE, w / lid, 28 gal. capacity",nan,nan,nan,Ea .,286,nan,nan,286,315
+11 82 39.20,Disposal Carts,2020,96 gal. capacity,nan,nan,nan,nan,335,nan,nan,335,370
+11 82 39.20,Disposal Carts,2030,"150 gal. capacity, low profile",nan,nan,nan,nan,485,nan,nan,485,530
+11 82 39.20,Disposal Carts,2040,200 gal. capacity,nan,nan,nan,nan,"1,000",nan,nan,"1,000","1,100"
+11 82 39.30,Medical Waste Sanitizers,10,MEDICAL WASTE SANITIZERS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Medical Waste Sanitizers,2010,"Small, hand loaded, 1.5 C.Y., 225 lb. capacity",nan,nan,nan,Ea .,"82,000",nan,nan,"82,000","90,000"
+11 82 39.30,Medical Waste Sanitizers,2020,"Medium, cart loaded, 6.25 C.Y., 938 lb. capacity",nan,nan,nan,nan,"109,500",nan,nan,"109,500","120,500"
+11 82 39.30,Medical Waste Sanitizers,2030,"Large, cart loaded, 15 C.Y., 2250 lb. capacity",nan,nan,nan,nan,"131,500",nan,nan,"131,500","145,000"
+11 82 39.30,Sanctuary Furnishings,5600,"Fiberglass, stock",1 Carp,34,0.235,L.F.,187,13.25,nan,200.25,226
+11 82 39.30,Sanctuary Furnishings,5700,"Stainless steel, 4"" deep, channel section",nan,29,0.276,nan,760,15.55,nan,775.55,860
+11 82 39.30,Sanctuary Furnishings,5800,"4"" deep box section",nan,29,0.276,nan,"1,125",15.55,nan,"1,140.55","1,250"
+11 82 39.30,Barns,10,BARNS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Barns,15,"Swine barn, farrowing pens and equipment",B 1,1000.0,0.024,S.F,13.65,1.11,nan,14.76,16.70
+11 82 39.30,Barns,20,Gestation pens and equipment,nan,800.0,0.03,nan,12,1.39,nan,13.39,15.25
+11 82 39.30,Barns,30,Nursery pens and equipment,nan,1150.0,0.021,nan,10.50,0.97,nan,11.47,13
+11 82 39.30,Barns,40,Finishing pens and equipment,nan,1400.0,0.017,nan,81,0.79,nan,8.79,10
+11 82 39.30,Barns,120,"Poultry barn, cages and equipment",nan,700.0,0.034,nan,17.60,1.59,nan,19.19,21.50
+11 82 39.30,Barns,220,"Animal barn stall, feed and water equipment",nan,1000.0,0.024,nan,15.65,1.11,nan,16.76,18.85
+11 82 39.30,Barns,230,Manure floor scraper system,nan,1500.0,0.016,nan,2.93,0.74,nan,3.67,4.32
+11 82 39.30,Barns,240,Below slab manure gutter and shuttle stroker,nan,400.0,0.06,nan,10,2.78,nan,12.78,15.15
+11 82 39.30,Barns,250,Exhaust system,nan,1400.0,0.017,nan,1.21,0.79,nan,2,2.51
+11 82 39.30,Barns,260,"Milking barn, milking equipment",nan,220.0,0.109,nan,88,5.05,nan,93.05,104
+11 82 39.30,Barns,270,Milk storage equipment,nan,450.0,0.053,nan,26.50,2.47,nan,28.97,32.50
+11 82 39.30,Barns,280,"Sheep barn, equipment, sheep shear street gates",nan,1000.0,0.024,nan,"1,025",1.11,nan,"1,026.11","1,125"
+11 82 39.30,Barns,290,Gate in frame,nan,1000.0,0.024,nan,104,1.11,nan,105.11,116
+11 82 39.30,Barns,295,Maternity fence with drinking trough,nan,1000.0,0.024,nan,60.50,1.11,nan,61.61,68
+11 82 39.30,Barns,300,"Tobacco barn, fruit & tobacco auto. dryer machine / heat pump dryer",Q 20,2.9,6.897,Eq.,"6,575",425.0,nan,"7,000","7,875"
+11 82 39.30,Barns,310,Tobacco curing generator,nan,4.9,4.082,nan,"4,625",253.0,nan,"4,878","5,450"
+11 82 39.30,Barns,320,Automatic system controller,nan,6.9,2.899,nan,"1,675",179.0,nan,"1,854","2,125"
+11 82 39.30,Barns,330,Humidity & temp. transmitters for humidity measurement,།,6.9,2.899,nan,930,179.0,nan,"1,109","1,300"
+11 82 39.30,Barns,340,Handling system for leaf tobacco,r,5.9,3.39,nan,580,210.0,nan,790,955
+11 82 39.30,Pass Through Drawer,10,PASS THROUGH DRAWER,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Pass Through Drawer,100,"Pass thru drawer for personal items, 18"" x 15"" x 24""",1 Skwk,2.0,4.0,Ea.,"2,750",236.0,nan,"2,986","3,375"
+11 82 39.30,Pass Through Drawer,110,Including speakers,"""",1.5,5.333,=,"3,100",315.0,nan,"3,415","3,875"
+11 82 39.30,Visitor Cubicle Windows,10,VISITOR CUBICLE WINDOWS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Visitor Cubicle Windows,4000,"Visitor cubicle, vision panel, no intercom",E-4,2.0,16.0,Ea.,"3,975","1,000",74.0,"5,049","5,975"
+11 82 39.30,Cell Equipment,10,CELL EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Cell Equipment,3000,"Toilet apparatus including wash basin, average",L-8,1.5,13.333,Eq.,"3,550",785.0,nan,"4,335","5,100"
+11 82 39.30,Equipment for Radiology,11 77 10.10,X-RAY EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Equipment for Radiology,8700,"X-ray, mobile, minimum",nan,nan,nan,Eg.,"15,100",nan,nan,"15,100","16,600"
+11 82 39.30,Equipment for Radiology,8750,Maximum,nan,nan,nan,nan,"42,000",nan,nan,"42,000","46,200"
+11 82 39.30,Equipment for Radiology,8900,"Stationary, minimum",nan,nan,nan,nan,"32,700",nan,nan,"32,700","36,000"
+11 82 39.30,Equipment for Radiology,8950,Maximum,nan,nan,nan,nan,"246,500",nan,nan,"246,500","271,500"
+11 82 39.30,Equipment for Radiology,9150,"Developing processors, minimum",nan,nan,nan,nan,"1,400",nan,nan,"1,400","1,550"
+11 82 39.30,Equipment for Radiology,9200,Maximum,nan,nan,nan,nan,"13,700",nan,nan,"13,700","15,000"
+11 82 39.30,Mortuary Equipment,11 78 13.10,Mortuary and Autopsy Equipment,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Mortuary Equipment,0010,MORTUARY AND AUTOPSY EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Mortuary Equipment,0015,"Autopsy table, standard",1 Plum,1.0,8.0,Eq.*,"8,775",55480.0,nan,"9,335","10,500"
+11 82 39.30,Mortuary Equipment,0020,Deluxe,"""",0.6,13.333,nan,"3,175",930.0,nan,"4,105","4,900"
+11 82 39.30,Mortuary Equipment,3200,"Mortuary refrigerator, end operated, 2 capacity",nan,nan,nan,nan,"4,750",nan,nan,"4,750","5,225"
+11 82 39.30,Mortuary Equipment,3300,6 capacity,nan,nan,nan,nan,"13,900",nan,nan,"13,900","15,300"
+11 82 39.30,Crematorium Equipment,11 78 16.10,Crematory,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Crematorium Equipment,0010,CREMATORY,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Crematorium Equipment,1500,"Crematory, not including building, 1 place",0-3,0.2,160.0,Eq.,"80,000","10,600",nan,"90,600","104,000"
+11 82 39.30,Crematorium Equipment,1750,2 place,nan,0.1,nan,"""","114,000","21,300",nan,"135,300","157,000"
+11 82 39.30,Vacuum Cleaning Systems,11 81 19.10,Vacuum Cleaning,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Vacuum Cleaning Systems,0010,VACUUM CLEANING,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Vacuum Cleaning Systems,0020,"Central, 3 inlet, residential",1 Skwk,0.9,8.889,Total,"1,150",525,nan,"1,675","2,050"
+11 82 39.30,Vacuum Cleaning Systems,0200,Commercial,nan,0.7,11.429,nan,"1,375",675,nan,"2,050","2,500"
+11 82 39.30,Vacuum Cleaning Systems,0400,"5 inlet system, residential",nan,0.5,16.0,nan,"1,825",940,nan,"2,765","3,425"
+11 82 39.30,Vacuum Cleaning Systems,0600,"7 inlet system, commercial",nan,0.4,20.0,nan,"1,200","1,175",nan,"2,375","3,075"
+11 82 39.30,Vacuum Cleaning Systems,0800,"9 inlet system, residential",nan,0.3,26.667,nan,"4,200","1,575",nan,"5,775","6,975"
+11 82 39.30,Packaged Incinerators,11 82 19.10,Packaged Gas Fired Incinerators,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Packaged Incinerators,0010,PACKAGED GAS FIRED INCINERATORS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Packaged Incinerators,4400,"Incinerator, gas, not incl. chimney, elec. or pipe, 50 lbs./hr., minimum",Q 3,0.8,40.0,Ea.,"46,300","2,650",nan,"48,950","55,000"
+11 82 39.30,Packaged Incinerators,4420,Maximum,1,0.7,45.714,nan,"42,400","3,025",nan,"45,425","51,000"
+11 82 39.30,Packaged Incinerators,4440,"200 lbs./hr., minimum (batch type)",nan,0.6,53.333,nan,"70,000","3,550",nan,"73,550","82,500"
+11 82 39.30,Packaged Incinerators,4460,Maximum (with feeder),nan,0.5,64.0,nan,"80,500","4,250",nan,"84,750","95,000"
+11 82 39.30,Packaged Incinerators,4480,"400 lbs./hr., minimum (batch type)",nan,0.3,107.0,nan,"94,000","7,075",nan,"101,075","114,000"
+11 82 39.30,Packaged Incinerators,4500,Maximum (with feeder),nan,0.25,128.0,nan,"86,500","8,500",nan,"95,000","107,500"
+11 82 39.30,Packaged Incinerators,4520,"800 lbs./hr., with feeder, minimum",nan,0.2,160.0,nan,"115,500","10,600",nan,"126,100","143,000"
+11 82 39.30,Packaged Incinerators,4540,Maximum,nan,0.17,188.0,nan,"207,500","12,500",nan,"220,000","247,000"
+11 82 39.30,Packaged Incinerators,4560,"1,200 lbs./hr., with feeder, minimum",nan,0.15,213.0,nan,"145,000","14,200",nan,"159,200","180,500"
+11 82 39.30,Packaged Incinerators,4580,Maximum,nan,0.11,291.0,nan,"203,500","19,300",nan,"222,800","253,000"
+11 82 39.30,Packaged Incinerators,4600,"2,000 lbs./hr., with feeder, minimum",nan,0.1,320.0,nan,"386,000","21,300",nan,"407,300","456,000"
+11 82 39.30,Medical Waste Handling Sanitizers,3010,"Cart, aluminum, 75 lb. capacity",nan,nan,nan,Ea.,"2,175",nan,nan,"2,175","2,400"
+11 82 39.30,Medical Waste Handling Sanitizers,3020,95 lb. capacity,nan,nan,nan,nan,"2,375",nan,nan,"2,375","2,600"
+11 82 39.30,Medical Waste Handling Sanitizers,4010,"Stainless steel, 173 lb. capacity",nan,nan,nan,nan,"3,100",nan,nan,"3,100","3,425"
+11 82 39.30,Medical Waste Handling Sanitizers,4020,232 lb. capacity,nan,nan,nan,nan,"3,475",nan,nan,"3,475","3,825"
+11 82 39.30,Medical Waste Handling Sanitizers,4030,"Cart lif, hydraulic scissor type",nan,nan,nan,nan,"6,150",nan,nan,"6,150","6,775"
+11 82 39.30,Medical Waste Handling Sanitizers,4040,Portable aluminum ramp,nan,nan,nan,nan,"1,750",nan,nan,"1,750","1,900"
+11 82 39.30,Medical Waste Handling Sanitizers,4050,Fold-down steel tracks,nan,nan,nan,nan,"1,425",nan,nan,"1,425","1,550"
+11 82 39.30,Medical Waste Handling Sanitizers,4060,"Pullout drawer, small",nan,nan,nan,nan,"6,625",nan,nan,"6,625","7,300"
+11 82 39.30,Medical Waste Handling Sanitizers,4070,Medium,nan,nan,nan,nan,"9,575",nan,nan,"9,575","10,500"
+11 82 39.30,Medical Waste Handling Sanitizers,4080,Large,nan,nan,nan,nan,"13,500",nan,nan,"13,500","14,900"
+11 82 39.30,Medical Waste Handling Sanitizers,5000,"Medical waste treatment, sanitize, on-site",nan,nan,nan,nan,,nan,nan,nan,nan
+11 82 39.30,Medical Waste Handling Sanitizers,5010,"Less than 15,000 lbs./month",nan,nan,nan,Lb.,.20,nan,nan,.270,22
+11 82 39.30,Medical Waste Handling Sanitizers,5020,"Over 15,000 lbs./month",nan,nan,nan,nan,.16,nan,nan,.16,.18
+11 91 13.10,Baptistry,10,BAPTISTRY,nan,nan,nan,nan,,nan,nan,nan,nan
+11 91 13.10,Baptistry,150,"Fiberglass, 3'-6"" deep, x 13'-7"" long,",nan,nan,nan,nan,,nan,nan,nan,nan
+11 91 13.10,Baptistry,160,"steps at both ends, incl.plumbing, minimum",L8,1.0,20.0,Ea.,"7,275","1,175",nan,"8,450","9,750"
+11 91 13.10,Baptistry,200,Maximum,程,0.7,28.571,nan,"11,900","1,675",nan,"13,575","15,500"
+11 91 13.10,Baptistry,250,"Add for filte, heater and lights",nan,nan,nan,nan,"1,625",nan,nan,"1,625","1,800"
+11 91 23.10,Sanctuary Furnishings,10,SANCTUARY FURNISHINGS,nan,nan,nan,nan,,nan,nan,nan,nan
+11 91 23.10,Sanctuary Furnishings,20,"Altar, wood, custom design, plain",1 Carp,222222225.71432224,Ea.,"2,675",,320,nan,"2,995","3,425"
+11 91 23.10,Sanctuary Furnishings,50,Deluxe,"""",0.2,40,nan,"12,800","2,250",nan,"15,050","17,500"
+11 91 23.10,Sanctuary Furnishings,70,"Granite or marble, average",2 Marb,0.5,32,nan,"12,400","1,750",nan,"14,150","16,400"
+11 91 23.10,Sanctuary Furnishings,90,Deluxe,"""",nan,80,nan,"33,800","4,400",nan,"38,200","43,800"
+11 91 23.10,Sanctuary Furnishings,100,"Arks, prefabricated, plain",12 Carp,0.8,20,nan,"9,500","1,125",nan,"10,625","12,200"
+11 91 23.10,Sanctuary Furnishings,130,"Deluxe, maximum","""",0.2,80,nan,"135,500","4,500",nan,"140,000","155,500"
+11 91 23.10,Sanctuary Furnishings,500,"Reconciliation room, wood, prefabricated, single, plain",1 Carp,0.6,13.333,nan,"3,100",750,nan,"3,850","4,525"
+11 91 23.10,Sanctuary Furnishings,550,Deluxe,nan,0.4,209,nan,"7,675","1,125",nan,"8,800","10,100"
+11 91 23.10,Sanctuary Furnishings,650,"Double, plain",nan,0.4,20,nan,"5,625","1,125",nan,"6,750","7,875"
+11 91 23.10,Sanctuary Furnishings,700,Deluxe,nan,0.2,40,nan,"17,500","2,250",nan,"19,750","22,600"
+11 91 23.10,Sanctuary Furnishings,1000,"Lecterns, wood, plain",nan,1.6,nan,nan,284,90,nan,374,445
+11 91 23.10,Sanctuary Furnishings,1100,Deluxe,nan,4.0,nan,nan,"6,300",225,nan,"6,525","7,250"
+11 91 23.10,Sanctuary Furnishings,2000,"Pulpits, hardwood, prefabricated, plain",2,4.0,nan,nan,"1,475",225,nan,"1,700","1,950"
+11 91 23.10,Sanctuary Furnishings,2100,Deluxe,nan,1.6,5,nan,"13,000",282,nan,"13,282","14,700"
+11 91 23.10,Sanctuary Furnishings,2500,"Railing, hardwood, average",25,0.32,L.F.,217,,18,nan,235,266
+11 91 23.10,Sanctuary Furnishings,3000,"Seating, individual, oak, contour, laminated",21,0.381,Person,228,,21.50,nan,249.50,283
+11 91 23.10,Sanctuary Furnishings,3100,Cushion seat,21,0.381,nan,208,,21.50,nan,229.50,261
+11 91 23.10,Sanctuary Furnishings,3200,Fully upholstered,21,0.381,nan,192,,21.50,nan,213.50,243
+11 91 23.10,Sanctuary Furnishings,3300,"Combination, selfrising",21,0.381,nan,365,,21.50,nan,386.50,430
+11 91 23.10,Sanctuary Furnishings,3500,"For cherry, add",nan,nan,nan,nan,,30 %,nan,nan,nan
+11 91 23.10,Sanctuary Furnishings,5000,"Wall cross, aluminum, extruded, 2"" x 2"" section",Carp,34.0,.235,L.F.,240,13.25,nan,253.25,284
+11 91 23.10,Sanctuary Furnishings,5150,"4"" x 4"" section",29,0.276,nan,345,,15.55,nan,360.55,405
+11 91 23.10,Sanctuary Furnishings,5300,"Bronze, extruded, 1"" x 2"" section",31,0.258,nan,475,,14.55,nan,489.55,540
+11 91 23.10,Sanctuary Furnishings,5350,"2-1/2"" x 2-1/2"" section",34,0.235,nan,715,,13.25,nan,728.25,810
+11 91 23.10,Sanctuary Furnishings,5450,"Solid bar stock, 1/2"" x 3"" section",29,0.276,nan,940,,15.55,nan,955.55,"1,050"

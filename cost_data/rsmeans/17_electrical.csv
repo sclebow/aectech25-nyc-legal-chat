@@ -1,0 +1,1716 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+nan,100,26,01 02 - Labor Adjustment,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,26,01 02.20 Labor Adjustment Factors,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,10,"LABOR ADJUSTMENT FACTORS (For Div. 26, 27 and 28) R260519-90",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,100,Subtract from labor for Economy of Scale for Wire,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,110,4-5 wires,nan,nan,nan,nan,,nan,25%,nan,nan
+nan,100,120,6-10 wires,nan,nan,nan,nan,,nan,30%,nan,nan
+nan,100,130,11-15 wires,nan,nan,nan,nan,,nan,35%,nan,nan
+nan,100,140,over 15 wires,nan,nan,nan,nan,,nan,40%,nan,nan
+nan,100,150,"Labor adjustment factors (For Div. 26, 27, 28 and 48)",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,200,"Labor factors: The below are reasonable suggestions, but",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,210,"each project must be evaluated for its own peculiarities, and",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,220,the adjustments be increased or decreased depending on the,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,230,severity of the special conditions.,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,1000,Add to labor for elevated installation (above floor level),nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,1010,10' to 14.5' high,nan,nan,nan,nan,,nan,10%,nan,nan
+nan,100,1020,15' to 19.5' high,nan,nan,nan,nan,,nan,20%,nan,nan
+nan,100,1030,20' to 24.5' high,nan,nan,nan,nan,,nan,25%,nan,nan
+nan,100,1040,25' to 29.5' high,nan,nan,nan,nan,,nan,35%,nan,nan
+nan,100,1050,30' to 34.5' high,nan,nan,nan,nan,,nan,40%,nan,nan
+nan,100,1060,35' to 39.5' high,nan,nan,nan,nan,,nan,50%,nan,nan
+nan,100,1070,40' and higher,nan,nan,nan,nan,,nan,55%,nan,nan
+nan,100,2000,Add to labor for crawl space,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,2010,3' high,nan,nan,nan,nan,,nan,40%,nan,nan
+nan,100,2020,4' high,nan,nan,nan,nan,,nan,30%,nan,nan
+nan,100,3000,Add to labor for multi story building,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,3100,For new construction (No elevator available),nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,3110,Add for floors 3 thru 10,nan,nan,nan,nan,,nan,5%,nan,nan
+nan,100,3120,Add for floors 11 thru 15,nan,nan,nan,nan,,nan,10%,nan,nan
+nan,100,3130,Add for floors 16 thru 20,nan,nan,nan,nan,,nan,15%,nan,nan
+nan,100,3140,Add for floors 21 thru 30,nan,nan,nan,nan,,nan,20%,nan,nan
+nan,100,3150,Add for floors 31 and up,nan,nan,nan,nan,,nan,30%,nan,nan
+nan,100,3200,For existing structure (Elevator available),nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,3210,Add for work on floor 3 and above,nan,nan,nan,nan,,nan,2%,nan,nan
+nan,100,4000,Add to labor for working in existing occupied buildings,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,4010,Hospital,nan,nan,nan,nan,,nan,35%,nan,nan
+nan,100,4020,Office building,nan,nan,nan,nan,,nan,25%,nan,nan
+nan,100,4030,School,nan,nan,nan,nan,,nan,20%,nan,nan
+nan,100,4040,Factory or warehouse,nan,nan,nan,nan,,nan,15%,nan,nan
+nan,100,4050,Multi dwelling,nan,nan,nan,nan,,nan,15%,nan,nan
+nan,100,5000,"Add to labor, miscellaneous",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,5010,Cramped shaft,nan,nan,nan,nan,,nan,35%,nan,nan
+nan,100,5020,Congested area,nan,nan,nan,nan,,nan,15%,nan,nan
+nan,100,5030,Excessive heat or cold,nan,nan,nan,nan,,nan,30%,nan,nan
+nan,100,6000,"Labor factors: the above are reasonable suggestions, but",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,6100,each project should be evaluated for its own peculiarities,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,6200,Other factors to be considered are:,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,6210,Movement of material and equipment through finished areas,nan,nan,nan,nan,,nan,10%,nan,nan
+nan,100,6220,Equipment room min security direct access w / authorization,nan,nan,nan,nan,,nan,15%,nan,nan
+nan,100,6230,Attic space,nan,nan,nan,nan,,nan,25%,nan,nan
+nan,100,6240,No service road,nan,nan,nan,nan,,nan,25%,nan,nan
+nan,100,6250,"Poor unloading /storage area, no hydraulic lifts or jacks",nan,nan,nan,nan,,nan,20%,nan,nan
+nan,100,6260,Congested site area /heavy traffic,nan,nan,nan,nan,,nan,20%,nan,nan
+nan,100,7000,Correctional facilities (no compounding division 1 adjustment factors),nan,nan,nan,nan,,nan,nan,nan,nan
+nan,100,7010,Minimum security w / facilities escort,nan,nan,nan,nan,,nan,30%,nan,nan
+nan,100,7020,Medium security w / facilities and correctional officer escort,nan,nan,nan,nan,,nan,40%,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,7030,Max security w/facilities & correctional officer escort (no inmate contact),nan,nan,nan,nan,,nan,nan,nan,50%
+nan,26 01 02 - Labor and Adjustment Maintenance,10,ELECTRICAL DEMOLITION,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,20,"Electrical demolition, conduit to 10' high, inc. fittings & hangers",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,100,"Rigid galvanized steel, 1/2"" to 1"" diameter",1 Elec,242.0,0.033,LF,nan,2.19,nan,2.19,3.25
+nan,26 01 02 - Labor and Adjustment Maintenance,120,"1-1/4"" to 2""",nan,200.0,0.04,nan,nan,2.65,nan,2.65,3.94
+nan,26 01 02 - Labor and Adjustment Maintenance,140,"2-1/2"" to 3-1/2""",12 Elec,302.0,0.053,nan,nan,3.51,nan,3.51,5.2
+nan,26 01 02 - Labor and Adjustment Maintenance,160,"4"" to 6""",nan,160.0,0.1,nan,nan,6.6,nan,6.60,9.85
+nan,26 01 02 - Labor and Adjustment Maintenance,200,"Electric metallic tubing (EMT), 1/2"" to 1""",1 Elec,394.0,0.02,nan,nan,1.34,nan,1.34,2.0
+nan,26 01 02 - Labor and Adjustment Maintenance,220,"1-1/4"" to 1-1/2""",nan,326.0,0.025,nan,nan,1.62,nan,1.62,2.41
+nan,26 01 02 - Labor and Adjustment Maintenance,240,"2"" to 3""",nan,236.0,0.034,nan,nan,2.24,nan,2.24,3.34
+nan,26 01 02 - Labor and Adjustment Maintenance,260,"3-1/2"" to 4""",2 Elec,310.0,0.052,+,nan,3.42,nan,3.42,5.1
+nan,26 01 02 - Labor and Adjustment Maintenance,270,Armored cable (BX) avg. 50' runs,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,280,"#14, 2 wire",1 Elec,690.0,0.012,LF,nan,0.77,nan,.77,1.14
+nan,26 01 02 - Labor and Adjustment Maintenance,290,"#14, 3 wire",nan,571.0,0.014,nan,nan,0.93,nan,.93,1.38
+nan,26 01 02 - Labor and Adjustment Maintenance,300,"#12, 2 wire",nan,605.0,0.013,nan,nan,0.88,nan,.88,1.3
+nan,26 01 02 - Labor and Adjustment Maintenance,310,"#12, 3 wire",nan,514.016,nan,nan,nan,1.03,nan,1.03,1.53
+nan,26 01 02 - Labor and Adjustment Maintenance,320,"#10, 2 wire",nan,514.0,0.016,nan,nan,1.03,nan,1.03,1.53
+nan,26 01 02 - Labor and Adjustment Maintenance,330,"#10, 3 wire",nan,425.0,0.019,nan,nan,1.25,nan,1.25,1.85
+nan,26 01 02 - Labor and Adjustment Maintenance,340,"#8, 3 wire",nan,342.0,0.023,nan,nan,1.55,nan,1.55,2.3
+nan,26 01 02 - Labor and Adjustment Maintenance,350,Non metallic sheathed cable (Romex),nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,360,"#14, 2 wire",1 Elec,720.0,0.011,LF,,nan,0.74,188.0,1.09
+nan,26 01 02 - Labor and Adjustment Maintenance,370,"#14, 3 wire",nan,657.0,0.012,nan,nan,0.81,nan,.81,1.2
+nan,26 01 02 - Labor and Adjustment Maintenance,380,"#12, 2 wire",nan,629.0,0.013,nan,nan,0.84,nan,.84,1.25
+nan,26 01 02 - Labor and Adjustment Maintenance,390,"#10, 3 wire",nan,1450.0,0.018,nan,nan,1.18,nan,1.18,1.75
+nan,26 01 02 - Labor and Adjustment Maintenance,400,"Wiremold raceway, including fittings & hangers",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,420,No. 3000,1 Elec,250.0,0.032,LF,nan,2.12,nan,2.12,3.15
+nan,26 01 02 - Labor and Adjustment Maintenance,440,No. 4000,nan,217.0,0.037,nan,nan,2.44,nan,2.44,3.63
+nan,26 01 02 - Labor and Adjustment Maintenance,460,No. 6000,nan,166.0,0.048,nan,nan,3.19,nan,3.19,4.74
+nan,26 01 02 - Labor and Adjustment Maintenance,462,Plugmold with receptacle,nan,114.0,0.07,nan,nan,4.65,nan,4.65,6.9
+nan,26 01 02 - Labor and Adjustment Maintenance,465,Telephone/power pole,nan,12.0,0.667,Ea.,nan,44.0,nan,44,65.5
+nan,26 01 02 - Labor and Adjustment Maintenance,470,"Non metallic, straight section",nan,480.0,0.017,LF,nan,1.1,nan,1.10,1.64
+nan,26 01 02 - Labor and Adjustment Maintenance,500,"Channels, steel, including fittings & hangers",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,520,"3/4"" x 1-1/2""",1 Elec,308.0,0.026,LF,nan,1.72,nan,1.72,2.56
+nan,26 01 02 - Labor and Adjustment Maintenance,540,"1-1/2"" x 1-1/2""",1 Elec,269.0,0.03,LF,nan,1.97,nan,1.97,2.93
+nan,26 01 02 - Labor and Adjustment Maintenance,560,"1-1/2"" x 1-7/8""",nan,229.0,0.035,1,nan,2.31,nan,2.31,3.44
+nan,26 01 02 - Labor and Adjustment Maintenance,600,"Copper bus duct, indoor, 3 phase",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,610,Including hangers & supports,nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,620,225 amp,2 Elec,135.0,119.0,L.F.,nan,7.85,nan,7.85,11.65
+nan,26 01 02 - Labor and Adjustment Maintenance,640,400 amp,nan,106.0,0.151,nan,nan,10.0,nan,10,14.85
+nan,26 01 02 - Labor and Adjustment Maintenance,660,600 amp,nan,86.0,0.186,nan,nan,12.3,nan,12.30,18.3
+nan,26 01 02 - Labor and Adjustment Maintenance,680,"1,000 amp",nan,60.0,0.267,nan,nan,17.65,nan,17.65,26.0
+nan,26 01 02 - Labor and Adjustment Maintenance,700,"1,600 amp",nan,40.0,0.4,nan,nan,26.5,nan,26.50,39.5
+nan,26 01 02 - Labor and Adjustment Maintenance,720,"3,000 amp",nan,10.0,1.6,nan,nan,106.0,nan,106,157.0
+nan,26 01 02 - Labor and Adjustment Maintenance,1300,"Transformer, dry type, 1 phase, incl. removal of",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,1320,"supports, wire & conduit terminations",nan,nan,nan,nan,,nan,nan,nan,nan
+nan,26 01 02 - Labor and Adjustment Maintenance,1340,1 kVA,Elec,7.7,1.039,Ea.,nan,69.0,nan,69,102.0
+nan,26 01 02 - Labor and Adjustment Maintenance,1420,75 kVA,2 Elec,2.5,6.4,nan,nan,425.0,nan,425,630.0
+26 05 33.18,Pull Boxes,6500,"24"" L x 48"" W x 8"" D",1 Elec,2,4,Ea.,525,265,nan,790,970
+26 05 33.23,Wireway,10,WIREWAY to 10' high,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.23,Wireway,100,"NEMA 1, screw cover w/fittings and supports, 2-1/2"" x 2-1/2""",1 Elec,44443536.0,0.178,LF,15.85,11.75,nan,27.6,35.0
+26 05 33.23,Wireway,200,"4"" x 4""",RE,40.0,0.2,nan,19.75,13.25,nan,33.0,41.0
+26 05 33.23,Wireway,400,"6"" x 6""",2 Elec,60.0,0.267,nan,24.0,17.65,nan,41.65,52.0
+26 05 33.23,Wireway,600,"8"" x 8""",nan,40.0,1.4,nan,23.0,26.5,nan,49.5,64.5
+26 05 33.23,Wireway,4475,"NEMA 3R, screw cover w/fittings and supports, 4"" x 4""",1 Elec,36.0,0.222,nan,17.6,14.7,nan,32.3,41.5
+26 05 33.23,Wireway,4480,"6"" x 6""",12 Elec,55.0,1.291,nan,19.55,19.25,nan,38.8,50.0
+26 05 33.23,Wireway,4485,"8"" x 8""",nan,nan,36.444,nan,42.0,29.5,nan,71.5,90.0
+26 05 33.23,Wireway,4490,"12"" x 12""",V,18.0,0.889,nan,92.5,59.0,nan,151.5,190.0
+26 05 36.10,Cable Tray Ladder Type,10,"CABLE TRAY LADDER TYPE w/ ftngs. & supports, 4"" dp., to 15' elev.",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 36.10,Cable Tray Ladder Type,160,Galvanized steel tray,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 36.10,Cable Tray Ladder Type,170,"4"" rung spacing, 6"" wide",2 Elec,98.0,0.163,LF,16.95,10.8,nan,27.75,34.5
+26 05 36.10,Cable Tray Ladder Type,200,"12"" wide",nan,86.0,0.186,nan,20.5,12.3,nan,32.8,41.0
+26 05 36.10,Cable Tray Ladder Type,400,"18"" wide",nan,82.195,nan,[,23.5,12.9,!,36.4,45.0
+26 05 36.10,Cable Tray Ladder Type,600,"24"" wide",nan,78.205,1.0,nan,27.5,13.6,nan,41.1,50.0
+26 05 36.10,Cable Tray Ladder Type,3200,"Aluminum tray, 4"" deep, 6"" rung spacing, 6"" wide",nan,134.119,nan,nan,18.9,7.9,nan,26.8,33.0
+26 05 36.10,Cable Tray Ladder Type,3220,"12"" wide",nan,124.129,nan,nan,21.0,8.55,nan,29.55,36.0
+26 05 36.10,Cable Tray Ladder Type,3230,"18"" wide",nan,114.0,0.14,nan,23.5,9.3,nan,32.8,40.0
+26 05 36.10,Cable Tray Ladder Type,3240,"24"" wide",nan,106.0,0.151,nan,27.5,10.0,nan,37.5,45.0
+26 05 39.30,Conduit In Concrete Slab,10,"CONDUIT IN CONCRETE SLAB Including terminations,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 39.30,Conduit In Concrete Slab,20,fittings and supports,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 39.30,Conduit In Concrete Slab,3230,"PVC, schedule 40, 1/2"" diameter",1 Elec,270.0,0.03,LF,0.62,1.96,nan,2.58,3.61
+26 05 39.30,Conduit In Concrete Slab,3250,"3/4"" diameter",nan,230.0,0.035,nan,0.67,2.3,nan,2.97,4.15
+26 05 39.30,Conduit In Concrete Slab,3270,"1"" diameter",nan,1200.0,0.04,nan,0.87,2.65,nan,3.52,4.89
+26 05 39.30,Conduit In Concrete Slab,3300,"1-1/4"" diameter",nan,170.0,0.047,nan,1.31,3.12,nan,4.43,6.05
+26 05 39.30,Conduit In Concrete Slab,3330,"1-1/2"" diameter",nan,140.0,0.057,nan,1.52,3.78,nan,5.3,7.25
+26 05 39.30,Conduit In Concrete Slab,3350,"2"" diameter",nan,120.0,0.067,nan,1.86,4.411,nan,6.27,8.6
+26 05 39.30,Conduit In Concrete Slab,4350,"Rigid galvanized steel, 1/2"" diameter",nan,200.0,0.04,nan,2.85,2.65,nan,5.5,7.1
+26 05 39.30,Conduit In Concrete Slab,4400,"3/4"" diameter",nan,170.0,0.047,nan,2.94,3.12,nan,6.06,7.85
+26 05 39.30,Conduit In Concrete Slab,4450,"1"" diameter",nan,130.0,0.062,nan,4.45,4.07,nan,8.52,10.95
+26 05 39.30,Conduit In Concrete Slab,4500,"1-1/4"" diameter",nan,110.0,0.073,nan,6.45,4.81,nan,11.26,14.2
+26 05 39.30,Conduit In Concrete Slab,4600,"1-1/2"" diameter",nan,100.0,0.08,nan,7.2,5.3,nan,12.5,15.8
+26 05 39.30,Conduit In Concrete Slab,4800,"2"" diameter",nan,90.0,1.0891,nan,8.85,5.9,nan,14.75,18.5
+26 05 39.40,Conduit In Trench,10,CONDUIT IN TRENCH Includes terminations and fittings,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 39.40,Conduit In Trench,20,"Does not include excavation or backfill, see Section 31 23 16 --",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 39.40,Conduit In Trench,200,"Rigid galvanized steel, 2"" diameter",1 Elec,150.0,0.053,LF,8.5,3.53,nan,12.03,14.6
+26 05 39.40,Conduit In Trench,400,"2-1/2"" diameter",nan,100.0,0.08,nan,16.55,5.3,nan,21.85,26.0
+26 05 39.40,Conduit In Trench,600,"3"" diameter",2 Elec,160.0,0.1,nan,19.0,6.6,nan,25.6,31.0
+26 05 39.40,Conduit In Trench,800,"3-1/2"" diameter",nan,140.0,0.114,nan,25.5,7.55,nan,33.05,39.5
+26 05 39.40,Conduit In Trench,1000,"4"" diameter",nan,100.0,0.16,nan,26.5,10.6,nan,37.1,45.5
+26 05 39.40,Conduit In Trench,1200,"5"" diameter",nan,80.0,0.2,nan,54.0,13.25,nan,67.25,79.0
+26 05 39.40,Conduit In Trench,1400,"6"" diameter",nan,60.0,0.267,nan,73.0,17.65,nan,90.65,107.0
+26 05 13.16,"Medium-Voltage, Single Cable",10,"MEDIUM-VOLTAGE, SINGLE CABLE Splicing & terminations not included",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 13.16,"Medium-Voltage, Single Cable",40,"Copper, XLP shielding, 5 kV, #6",2 Elec,4.4,3.636,C.LF.,181,241.0,nan,422,560
+26 05 13.16,"Medium-Voltage, Single Cable",50,#4,nan,4.4,3.636,nan,234,241.0,nan,475,620
+26 05 13.16,"Medium-Voltage, Single Cable",100,#2,nan,4.0,4.0,nan,250,265.0,nan,515,670
+26 05 13.16,"Medium-Voltage, Single Cable",200,#1,nan,4.0,411.0,nan,355,265.0,nan,620,785
+26 05 13.16,"Medium-Voltage, Single Cable",400,1/0,nan,3.8,4.211,nan,400,279.0,nan,679,855
+26 05 13.16,"Medium-Voltage, Single Cable",600,2/0,nan,3.6,4.444,nan,430,294.0,nan,724,905
+26 05 13.16,"Medium-Voltage, Single Cable",800,4/0,nan,3.2,5.0,nan,655,330.0,nan,985,"1,200"
+26 05 13.16,"Medium-Voltage, Single Cable",1000,250 kcmil,3 Elec,4.5,5.333,nan,780,355.0,nan,"1,135","1,375"
+26 05 13.16,"Medium-Voltage, Single Cable",1200,350 kcmil,nan,3.9,6.154,nan,"1,025",405.0,nan,"1,430","1,725"
+26 05 13.16,"Medium-Voltage, Single Cable",1400,500 kcmil,nan,3.6,6.667,nan,"1,075",440.0,nan,"1,515","1,850"
+26 05 13.16,"Medium-Voltage, Single Cable",1600,"15 kV, ungrounded neutral, #1",2 Elec,4.0,4.0,nan,385,265.0,nan,650,820
+26 05 13.16,"Medium-Voltage, Single Cable",1800,1/0,nan,3.8,4.211,nan,460,279.0,nan,739,925
+26 05 13.16,"Medium-Voltage, Single Cable",2000,2/0,2 Elec,3.6,4.444,C.L.F.,525,294.0,nan,819,"1,025"
+26 05 13.16,"Medium-Voltage, Single Cable",2200,4/0,nan,3.2,51.0,nan,700,330.0,nan,"1,030","1,250"
+26 05 13.16,"Medium-Voltage, Single Cable",2400,250 kcmil,3 Elec,4.5,5.333,nan,775,355.0,nan,"1,130","1,375"
+26 05 13.16,"Medium-Voltage, Single Cable",2600,350 kcmil,nan,3.9,6.154,nan,980,405.0,nan,"1,385","1,675"
+26 05 13.16,"Medium-Voltage, Single Cable",2800,500 kcmil,nan,3.6,6.667,nan,"1,100",440.0,nan,"1,540","1,850"
+26 05 19.20,Armored Cable,10,ARMORED CABLE,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Armored Cable,50,"600 volt, copper (BX), #14, 2 conductor, solid",1 Elec,2.4,3.333,C.LF,39.50,221.0,nan,260.50,375
+26 05 19.20,Armored Cable,100,"3 conductor, solid",nan,2.2,3.636,nan,74,241.0,nan,315,440
+26 05 19.20,Armored Cable,150,"#12, 2 conductor, solid",nan,2.3,3.478,nan,45,230.0,nan,275,390
+26 05 19.20,Armored Cable,200,"3 conductor, solid",nan,2.0,4.0,nan,76,265.0,nan,341,480
+26 05 19.20,Armored Cable,250,"#10, 2 conductor, solid",nan,2.0,4.0,nan,77.50,265.0,nan,342.50,480
+26 05 19.20,Armored Cable,300,"3 conductor, solid",nan,1.6,5.0,nan,124,330.0,nan,454,625
+26 05 19.20,Armored Cable,340,"#8, 2 conductor, stranded",nan,1.5,5.333,nan,173,355.0,nan,528,715
+26 05 19.20,Armored Cable,350,"3 conductor, stranded",nan,1.3,6.154,nan,173,405.0,nan,578,795
+26 05 19.20,Armored Cable,400,"3 conductor with PVC jacket, in cable tray, #6",nan,3.1,2.581,nan,345,171.0,nan,516,630
+26 05 19.20,Armored Cable,450,#4,2 Elec,5.4,2.963,nan,640,196.0,nan,836,990
+26 05 19.20,Armored Cable,500,#2,nan,4.6,3.478,nan,740,230.0,nan,970,"1,150"
+26 05 19.20,Armored Cable,550,#1,nan,4.0,4.0,nan,975,265.0,nan,"1,240","1,475"
+26 05 19.20,Armored Cable,600,1/0,nan,3.6,4.444,nan,"1,100",294.0,nan,"1,394","1,625"
+26 05 19.20,Armored Cable,650,2/0,nan,3.4,4.706,nan,"1,025",310.0,nan,"1,335","1,625"
+26 05 19.20,Armored Cable,700,3/0,nan,3.2,5.0,nan,"1,775",330.0,nan,"2,105","2,450"
+26 05 19.20,Armored Cable,750,4/0,nan,3.0,5.333,nan,"2,125",355.0,nan,"2,480","2,850"
+26 05 19.20,Armored Cable,800,250 kcmil,3 Elec,3.6,6.667,nan,"2,625",440.0,nan,"3,065","3,550"
+26 05 19.20,Armored Cable,850,350 kcmil,nan,3.3,7.273,nan,"3,300",480.0,nan,"3,780","4,375"
+26 05 19.20,Armored Cable,900,500 kcmil,nan,3.0,8.0,nan,"4,575",530.0,nan,"5,105","5,800"
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",1050,"5 kV, copper, 3 conductor with PVC jacket,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",1060,"non shielded, in cable tray, #4",2 Elec,380.042,nan,LF,6.3,2.79,nan,9.09,11.05
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",1100,#2,nan,360.0,0.044,nan,14.25,2.94,nan,17.19,20.0
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",1200,#1,nan,300.0,0.053,nan,15.35,3.53,nan,18.88,22.0
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",1400,1/0,nan,290.0,0.055,nan,21.0,3.65,nan,24.65,28.5
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",1600,2/0,nan,260.0,0.062,nan,22.0,4.07,nan,26.07,30.0
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",2000,4/0,nan,240.0,0.067,nan,30.0,4.41,nan,34.41,39.5
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",2100,250 kcmil,3 Elec,330.0,0.073,nan,33.5,4.81,nan,38.31,43.5
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",2150,350 kcmil,nan,315.0,0.076,nan,45.0,5.05,nan,50.05,57.0
+26 05 19.20,"5 kV, copper, 3 conductor with PVC jacket",2200,500 kcmil,nan,270.0,0.089,nan,55.0,5.9,nan,60.9,69.5
+26 05 19.20,"15 kV, copper, 3 conductor with PVC jacket galv., steel armored",2400,"15 kV, copper, 3 conductor with PVC jacket galv., steel armored",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,"15 kV, copper, 3 conductor with PVC jacket galv., steel armored",2500,"grounded neutral, in cable tray, #2",2 Elec,300.0,53.0,L.F.,23.0,3.53,nan,26.53,31.0
+26 05 19.20,Residential Wiring,8360,Economy model (AC motor),1 Elec,10.0,0.8,Ea .,141,53.0,nan,194,234
+26 05 19.20,Residential Wiring,8362,With light kit,nan,10.0,0.8,nan,182,53.0,nan,235,279
+26 05 19.20,Residential Wiring,8370,Custom model (AC motor),nan,10.0,0.8,nan,345,53.0,nan,398,460
+26 05 19.20,Residential Wiring,8372,With light kit,nan,10.0,800.0,nan,385,53.0,nan,438,505
+26 05 19.20,Residential Wiring,8380,Luxury model (DC motor),nan,8.0,1.0,nan,277,66.0,nan,343,405
+26 05 19.20,Residential Wiring,8382,With light kit,nan,8.0,nan,nan,320,66.0,nan,386,450
+26 05 19.20,Residential Wiring,8390,"Remote speed switch for above, add",nan,12.0,0.667,nan,43.50,44.0,nan,87.50,114
+26 05 19.20,Residential Wiring,8500,"Whole house exhaust fan, ceiling mount, 36"", variable speed",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,8510,"Remote switch, incl. shutters, 20 amp -1 pole circ.bkr.",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,8520,"30' of #12/2, type NM cable",1 Elec,4.0,2.0,Ea .,"1,550",132.0,nan,"1,682","1,900"
+26 05 19.20,Residential Wiring,8530,Type MC cable,1 Elec,3.5,2.286,Eg .,"1,575",151.0,nan,"1,726","1,950"
+26 05 19.20,Residential Wiring,8540,EMT & wire,I,3.0,2.667,=,"1,600",177.0,nan,"1,777","2,000"
+26 05 19.20,Residential Wiring,8600,"Whirlpool tub hook up, incl. timer switch, outlet box",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,8610,"3' of flex, 20 amp -1 pole GFI cir. bkr.",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,8620,"30' of #12/2, type NM cable",1 Elec,5.0,1.6,Ea .,247,106.0,nan,353,430
+26 05 19.20,Residential Wiring,8630,Type MC cable,nan,4.2,1.905,nan,257,126.0,nan,383,470
+26 05 19.20,Residential Wiring,8640,EMT & wire,nan,3.4,2.353,-,276,156.0,nan,432,535
+26 05 19.20,Residential Wiring,8650,"Hot water heater hook-up, incl. 1-2 pole circ. bkr., box",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,8660,"3' of flex, 20' of #10/2, type NM cable",1 Elec,5.0,1.6,Ea .,31,106.0,nan,137,191
+26 05 19.20,Residential Wiring,8670,Type MC cable,nan,4.2,1.905,nan,44,126.0,nan,170,236
+26 05 19.20,Residential Wiring,8680,EMT & wire,nan,3.4,2.353,nan,58,156.0,nan,214,296
+26 05 19.20,Residential Wiring,9000,Heating / air conditioning,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,9050,"Furnace / boiler hook-up, incl.firestat, local on-off switch",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,9060,"Emergency switch, and 40' of type NM cable",1 Elec,4.0,2.0,Eo .,67.50,132.0,nan,199.50,271
+26 05 19.20,Residential Wiring,9070,Type MC cable,nan,3.5,2.286,nan,84.50,151.0,nan,235.50,320
+26 05 19.20,Residential Wiring,9080,EMT & wire,nan,1.5,5.333,nan,117,355.0,nan,472,655
+26 05 19.20,Residential Wiring,9100,"Air conditioner hook up, incl.local 60 amp disc. switch",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,9110,"3' sealtite, 40 amp, 2 pole circuit breaker",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,9130,"40' of #8/2, type NM cable",1 Elec,3.5,2.286,Ea .,158,151.0,nan,309,400
+26 05 19.20,Residential Wiring,9140,Type MC cable,nan,3.0,2.667,nan,186,177.0,nan,៩63,465
+26 05 19.20,Residential Wiring,9150,EMT & wire,nan,1.3,6.154,nan,221,405.0,nan,626,850
+26 05 19.20,Residential Wiring,9200,"Heat pump hook up, 1-40 & 1-100 amp 2 pole circ. bkr.",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,9210,"Local disconnect switch, 3' sealtite",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,9220,40' of #8/2 & 30' of #3/2,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,9230,Type NM cable,1 Elec,1.3,6.154,Ea .,500,405.0,nan,905,"1,150"
+26 05 19.20,Residential Wiring,9240,Type MC cable,nan,1.08,7.407,],510,490.0,nan,"1,000","1,300"
+26 05 19.20,Residential Wiring,9250,EMT & wire,nan,0.94,8.511,nan,655,565.0,nan,"1,220","1,550"
+26 05 19.20,Residential Wiring,9500,"Thermostat hook-up, using low voltage wire",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.20,Residential Wiring,9520,"Heating only, 25' of #18-3",1 Elec,24.0,0.333,Ea .,9.75,22.0,nan,31.75,43.50
+26 05 19.20,Residential Wiring,9530,"Heating / cooling, 25' of #18-4",PP,20.0,0.4,"""",10.55,26.5,nan,37.05,51
+26 12 19.10,"Transformer, Oil-Filled",10,"TRANSFORMER, OIL-FILLED primary delta or Y,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 12 19.10,"Transformer, Oil-Filled",50,"Pad mounted 5 kV or 15 kV, with taps, 277/480 V secondary, 3 phase",nan,nan,nan,nan,,nan,nan,nan,nan
+26 12 19.10,"Transformer, Oil-Filled",100,150 kVA,R-3,0.65,30.769,Ea.,"11,000","2,025",267,"13,292","15,400"
+26 12 19.10,"Transformer, Oil-Filled",200,300 kVA,nan,0.45,44.444,nan,"13,000","2,925",385,"16,310","19,100"
+26 12 19.10,"Transformer, Oil-Filled",300,500 kVA,nan,0.4,50.0,nan,"16,000","3,300",435,"19,735","23,000"
+26 12 19.10,"Transformer, Oil-Filled",400,750 kVA,nan,0.38,52.632,nan,"38,700","3,475",455,"42,630","48,200"
+26 12 19.10,"Transformer, Oil-Filled",500,"1,000 kVA",nan,0.26,76.923,nan,"45,900","5,075",665,"51,640","59,000"
+26 12 19.10,"Transformer, Oil-Filled",600,"1,500 kVA",nan,0.23,86.957,nan,"33,000","5,725",755,"39,480","45,600"
+26 12 19.10,"Transformer, Oil-Filled",700,"2,000 kVA",nan,0.2,100.0,nan,"69,000","6,575",865,"76,440","86,500"
+26 12 19.10,"Transformer, Oil-Filled",800,"3,750 kVA",nan,0.16,125.0,nan,"133,000","8,225","1,075","142,300","159,500"
+26 12 19.10,"Transformer, Oil-Filled",990,5000 kVA,R-21,0.25,131.0,nan,"128,000","8,675",335,"137,010","154,000"
+26 22 13.10,"Transformer, Dry-Type",10,"TRANSFORMER, DRY-TYPE",nan,nan,nan,nan,,nan,nan,nan,nan
+26 22 13.10,"Transformer, Dry-Type",50,"Single phase, 240/480 volt primary, 120/240 volt secondary",nan,nan,nan,nan,,nan,nan,nan,nan
+26 22 13.10,"Transformer, Dry-Type",100,1 kVA,1 Elec,2.0,44.0,Ea.,430,265,nan,695,865
+26 22 13.10,"Transformer, Dry-Type",300,2 kVA,nan,1.6,5.0,nan,600,330,nan,930,"1,150"
+26 22 13.10,"Transformer, Dry-Type",500,3 kVA,nan,1.4,5.714,nan,685,380,nan,"1,065","1,325"
+26 22 13.10,"Transformer, Dry-Type",700,5 kVA,nan,1.2,6.667,nan,825,440,nan,"1,265","1,575"
+26 22 13.10,"Transformer, Dry-Type",900,7.5 kVA,2 Elec,2.2,7.273,nan,"1,225",480,nan,"1,705","2,075"
+26 22 13.10,"Transformer, Dry-Type",1100,10 kVA,nan,1.6,10.0,nan,"1,550",660,nan,"2,210","2,700"
+26 22 13.10,"Transformer, Dry-Type",1300,15 kVA,nan,1.2,13.333,nan,"2,275",885,nan,"3,160","3,825"
+26 22 13.10,"Transformer, Dry-Type",1500,25 kVA,nan,1.0,16.0,nan,"3,250","1,050",nan,"4,300","5,150"
+26 22 13.10,"Transformer, Dry-Type",1700,37.5 kVA,nan,0.8,20.0,nan,"3,725","1,325",nan,"5,050","6,050"
+26 22 13.10,"Transformer, Dry-Type",1900,50 kVA,nan,0.7,22.857,nan,"4,500","1,525",nan,"6,025","7,200"
+26 22 13.10,"Transformer, Dry-Type",2100,75 kVA,nan,0.65,24.615,nan,"8,500","1,625",nan,"10,125","11,800"
+26 22 13.10,"Transformer, Dry-Type",2190,"480 V primary, 120/240 V secondary, nonvent, 15 kVA",nan,1.2,13.333,nan,"2,725",885,nan,"3,610","4,300"
+26 22 13.10,"Transformer, Dry-Type",2200,25 kVA,2 Elec,0.9,17.778,Ea.,"2,875","1,175",nan,"4,050","4,900"
+26 22 13.10,"Transformer, Dry-Type",2210,37 kVA,nan,0.75,21.333,nan,"11,200","1,400",nan,"12,600","14,500"
+26 22 13.10,"Transformer, Dry-Type",2220,50 kVA,nan,0.65,24.615,nan,"14,400","1,625",nan,"16,025","18,200"
+26 22 13.10,"Transformer, Dry-Type",2300,"3 phase, 480 volt primary, 120/208 volt secondary",nan,nan,nan,nan,,nan,nan,nan,nan
+26 22 13.10,"Transformer, Dry-Type",2310,"Ventilated, 3 kVA",1 Elec,nan,8.0,Ea.,"1,225",530,nan,"1,755","2,125"
+26 22 13.10,"Transformer, Dry-Type",2700,6 kVA,nan,0.8,10.0,nan,"2,275",660,nan,"2,935","3,475"
+26 22 13.10,"Transformer, Dry-Type",2900,9 kVA,nan,0.7,11.429,nan,"2,625",755,nan,"3,380","4,000"
+26 22 13.10,"Transformer, Dry-Type",3100,15 kVA,2 Elec,1.1,14.545,nan,"2,325",965,nan,"3,290","3,975"
+26 22 13.10,"Transformer, Dry-Type",3300,30 kVA,nan,0.9,17.778,nan,"6,175","1,175",nan,"7,350","8,525"
+26 22 13.10,"Transformer, Dry-Type",3500,45 kVA,nan,0.8,20.0,nan,"8,050","1,325",nan,"9,375","10,800"
+26 22 13.10,"Transformer, Dry-Type",3700,75 kVA,nan,0.7,22.857,nan,"4,950","1,525",nan,"6,475","7,700"
+26 22 13.10,"Transformer, Dry-Type",3900,112.5 kVA,R-3,0.9,22.222,nan,"5,650","1,475",193.0,"7,318","8,600"
+26 22 13.10,"Transformer, Dry-Type",4100,150 kVA,nan,0.85,23.529,nan,"8,700","1,550",204.0,"10,454","12,100"
+26 22 13.10,"Transformer, Dry-Type",4300,225 kVA,nan,0.65,30.769,nan,"10,300","2,025",267.0,"12,592","14,700"
+26 22 13.10,"Transformer, Dry-Type",4500,300 kVA,nan,0.55,36.364,nan,"41,400","2,400",315.0,"44,115","49,500"
+26 22 13.10,"Transformer, Dry-Type",4700,500 kVA,nan,0.45,44.444,nan,"18,900","2,925",385.0,"22,210","25,600"
+26 22 13.10,"Transformer, Dry-Type",4800,750 kVA,nan,0.35,57.143,nan,"29,400","3,750",495.0,"33,645","38,500"
+26 22 13.10,0100 General duty,26 28 16.20,Safety Switches,nan,nan,nan,nan,,nan,nan,nan,nan
+26 22 13.10,0100 General duty,0100,"General duty 240 volt, 3 pole NEMA 1, fusible, 30 amp",1 Elec,3.2,2.5,Ea.,65,166.0,nan,231,320
+26 22 13.10,0100 General duty,0200,60 amp,nan,2.3,3.478,nan,110,230.0,nan,340,460
+26 22 13.10,0100 General duty,0300,100 amp,nan,1.9,4.211,nan,188,279.0,nan,467,620
+26 22 13.10,0100 General duty,0400,200 amp,nan,1.3,6.154,nan,410,405.0,nan,815,"1,050"
+26 22 13.10,0100 General duty,0500,400 amp,2 Elec,1.8,8.889,nan,995,590.0,nan,"1,585","1,975"
+26 22 13.10,0100 General duty,0600,600 amp,"""",1.2,13.333,nan,"1,850",885.0,nan,"2,735","3,325"
+26 22 13.10,"2900 Heavy duty, 240 volt, 3 pole NEMA 1 fusible",2910,30 amp,1 Elec,3.2,2.5,Eg.,107,166,nan,273,365
+26 22 13.10,"2900 Heavy duty, 240 volt, 3 pole NEMA 1 fusible",3000,60 amp,nan,2.3,3.478,nan,178,230,nan,408,535
+26 22 13.10,"2900 Heavy duty, 240 volt, 3 pole NEMA 1 fusible",3300,100 amp,nan,1.9,4.211,nan,274,279,nan,553,715
+26 22 13.10,"2900 Heavy duty, 240 volt, 3 pole NEMA 1 fusible",3500,200 amp,nan,1.3,6.154,nan,470,405,nan,875,"1,125"
+26 22 13.10,"2900 Heavy duty, 240 volt, 3 pole NEMA 1 fusible",3700,400 amp,2 Elec,1.8,8.889,nan,"1,125",590,nan,"1,715","2,100"
+26 22 13.10,"2900 Heavy duty, 240 volt, 3 pole NEMA 1 fusible",3900,600 amp,"""",1.2,13.333,nan,"2,225",885,nan,"3,110","3,725"
+26 29 13.20,Control Stations,10,CONTROL STATIONS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 29 13.20,Control Stations,50,"NEMA 1, heavy duty, stop/start",1 Elec,8.0,1.0,Ea.,330.0,66.0,nan,396.0,465.0
+26 29 13.20,Control Stations,100,"Stop/start, pilotlight",nan,6.2,1.29,nan,340.0,85.5,nan,425.5,500.0
+26 29 13.20,Control Stations,200,Hand/off/automatic,nan,6.2,1.29,nan,355.0,85.5,nan,440.5,515.0
+26 29 13.20,Control Stations,400,Stop/start/reverse,nan,5.3,1.509,nan,440.0,100.0,nan,540.0,635.0
+26 32 13.13,Diesel-Engine-Driven Generator Sets,10,DIESEL-ENGINE-DRIVEN GENERATOR SETS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2000,"Diesel engine, including battery, charger,",R-3,0.55,36.364,Ea.,"14,400","2,400",315.0,"17,115","19,700"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2010,"muffler & day tank, 30 kW",nan,nan,nan,nan,,nan,nan,nan,nan
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2100,50 kW,T,0.42,47.619,nan,"17,100","3,125",415.0,"20,640","23,900"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2200,75 kW,nan,0.35,57.143,nan,"26,800","3,750",495.0,"31,045","35,600"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2300,100 kW,nan,0.31,64.516,nan,"30,900","4,250",560.0,"35,710","40,900"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2400,125 kW,nan,0.29,68.966,nan,"27,500","4,5501",600.0,"32,650","37,700"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2500,150 kW,nan,0.26,76.923,nan,"24,300","5,075",665.0,"30,040","35,000"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2501,"Generator set, dsl eng in alum encl, incl btry, chgr, muf & day tank, 150 kW",26,76.923,nan,nan,"40,700","5,075",665.0,"46,440","53,000"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2600,175 kW,nan,0.25,80.0,nan,"33,700","5,275",695.0,"39,670","45,700"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2700,200 kW,nan,0.24,83.333,nan,"57,000","5,475",725.0,"63,200","71,500"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2800,250 kW,nan,0.23,86.957,nan,"45,900","5,725",755.0,"52,380","60,000"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,2900,300 kW,nan,0.22,90.909,nan,"51,500","5,975",790.0,"58,265","66,500"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,3000,350 kW,nan,0.2,100.0,nan,"63,000","6,575",865.0,"70,440","80,500"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,3100,400 kW,nan,0.19,105.0,nan,"76,000","6,925",915.0,"83,840","95,000"
+26 32 13.13,Diesel-Engine-Driven Generator Sets,3200,500 kW,nan,0.18,111.0,nan,"86,000","7,325",965.0,"94,290","106,500"
+26 32 13.13,26 27 23 Indoor Service Poles,4000,"1 circuit, 6 outlets, 3' long",1 Elec,8.0,1.0,Ea.,43.5,66,nan,109.5,146
+26 32 13.13,26 27 23 Indoor Service Poles,4100,"2 circuit, 8 outlets, 6' long",nan,5.3,1.509,P,76.0,100,nan,176.0,233
+26 27 26.10,Low Voltage Switching,3600,"Relays, 120 V or 277 V standard",1 Elec,120424426.6672,Ea.,45.5,,44.0,nan,89.5,116.0
+26 27 26.10,Low Voltage Switching,3800,"Flush switch, standard",nan,0.2,nan,16.65,,13.25,nan,29.9,38.0
+26 27 26.10,Low Voltage Switching,4000,Interchangeable,nan,0.2,nan,21.5,,13.25,nan,34.75,43.5
+26 27 26.10,Low Voltage Switching,4100,"Surface switch, standard",nan,40.0,1.200,nan,9.65,13.25,nan,22.9,30.5
+26 27 26.10,Low Voltage Switching,4200,Transformer 115 V to 25 V,nan,12.0,.667,nan,145.0,144333.0,nan,189.0,225.0
+26 27 26.10,Low Voltage Switching,4400,"Master control, 12 circuit, manual",nan,4.0,2,nan,148.0,nan,nan,280.0,360.0
+26 27 26.10,Low Voltage Switching,4500,"25 circuit, motorized",nan,nan,2,nan,188.0,nan,nan,320.0,405.0
+26 27 26.10,Low Voltage Switching,4600,"Rectifier, silicon",nan,12.0,.667,nan,59.0,44.0,nan,103.0,130.0
+26 27 26.10,Low Voltage Switching,4800,"Switchplates, 1 gang, 1,2 or 3 switch, plastic",nan,0.1,nan,5.75,,6.6,nan,12.35,16.2
+26 27 26.10,Low Voltage Switching,5000,Stainless steel,nan,0.1,nan,12.8,,6.6,nan,19.4,24.0
+26 27 26.10,Low Voltage Switching,5400,"2 gang, 3 switch, stainless steel",nan,53.0,.151,nan,26.5,11.0,nan,36.5,44.5
+26 27 26.10,Low Voltage Switching,5500,"4 switch, plastic",nan,53.0,151,nan,11.85,10.0,nan,21.85,28.0
+26 27 26.10,Low Voltage Switching,5800,"3 gang, 9 switch, stainless steel",nan,32.0,.250,nan,80.0,16.55,nan,96.55,113.0
+26 27 26.20,Wiring Devices Elements,10,WIRING DEVICES ELEMENTS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 27 26.20,Wiring Devices Elements,200,"Toggle switch, quiet type, single pole, 15 amp",1 Elec,40413ZE,0.2,Ea.,2.15,13.25,nan,.15.40,2327.0
+26 27 26.20,Wiring Devices Elements,600,"3 way, 15 amp",nan,.348,nan,1.56,,nan,nan,24.56,35.50
+26 27 26.20,Wiring Devices Elements,900,"4 way, 15 amp",nan,15,0.533,nan,12.95,35.5,nan,48.45,67.0
+26 27 26.20,Wiring Devices Elements,1650,"Dimmer switch, 120 volt, incandescent, 600 watt, 1 pole",nan,16,0.5,nan,25.5,33.0,nan,58.50,77.0
+26 27 26.20,Wiring Devices Elements,2460,"Receptacle, duplex, 120 volt, grounded, 15 amp",nan,40,1.2,nan,1.48,13.25,nan,14.73,21.5
+26 27 26.20,Wiring Devices Elements,2470,20 amp,nan,27,0.296,nan,13.1,19.6,nan,32.70,43.5
+26 27 26.20,Wiring Devices Elements,2490,"Dryer, 30 amp",nan,15,0.533,nan,4.77,35.5,nan,40.27,58.0
+26 27 26.20,Wiring Devices Elements,2500,"Range, 50 amp",nan,=,0.727,nan,11.6,448.0,nan,59.60,84.5
+26 27 26.20,Wiring Devices Elements,2600,"Wall plates, stainless steel, 1 gang",nan,2802,0.1,nan,1.49,6.6,nan,8.09,11.5
+26 27 26.20,Wiring Devices Elements,2800,2 gang,nan,53,0.151,nan,14.8,10.0,nan,24.80,135.0
+26 27 26.20,Wiring Devices Elements,3200,"Lampholder, keyless",nan,26,0.308,nan,23.0,20.5,nan,43.50,56.0
+26 27 26.20,Wiring Devices Elements,3400,Pullchain with receptacle,nan,nan,0.364,nan,24.5,24.0,nan,48.50,62.5
+26 27 73.10,Doorbell System,10,"DOORBELL SYSTEM, incl. transformer, button & signal",nan,nan,nan,nan,,nan,nan,nan,1332
+26 27 73.10,Doorbell System,100,"6"" bell",1 Elec,4.0,2.0,Eg.,165.0,nan,nan,297,380.0
+26 27 73.10,Doorbell System,200,Buzzer,nan,4.0,2.0,"""",132.0,nan,nan,264,345.0
+26 28 16.10,Circuit Breakers,10,CIRCUIT BREAKERS (in enclosure),nan,nan,nan,nan,,nan,nan,nan,nan
+26 28 16.10,Circuit Breakers,100,"Enclosed (NEMA 1), 600 volt, 3 pole, 30 amp",1 Elec,3.2,2.5,Ea.,645,166,nan,811,955
+26 28 16.10,Circuit Breakers,200,60 amp,nan,2.8,2.857,nan,645,189,nan,834,990
+26 28 16.10,Circuit Breakers,400,100 amp,nan,2.3,3.478,nan,760,230,nan,990,"1,175"
+26 28 16.10,Circuit Breakers,500,200 amp,nan,1.5,5.333,nan,"1,150",355,nan,"1,505","1,800"
+26 28 16.10,Circuit Breakers,600,225 amp,nan,1.5,5.333,nan,"1,150",355,nan,"1,505","1,800"
+26 28 16.10,Circuit Breakers,700,400 amp,2 Elec,1.6,10.0,nan,"4,525",660,nan,"5,185","5,975"
+26 28 16.10,Circuit Breakers,800,600 amp,nan,1.2,13.333,nan,"7,150",885,nan,"8,035","9,150"
+26 28 16.10,Circuit Breakers,1000,800 amp,nan,0.94,17.021,nan,"9,225","1,125",nan,"10,350","11,800"
+26 28 16.10,2022 Bare Costs,3250,"3-way switch/15 amp recpt., #14/3, type NM cable",1 Elec,10.0,0.8,Eq .,29.5,53.0,nan,82.5,111.0
+26 28 16.10,2022 Bare Costs,3270,Type MC cable,nan,8.89,0.9,nan,48.5,59.5,nan,108.0,142.0
+26 28 16.10,2022 Bare Costs,3280,EMT & wire,nan,4.1,1.951,nan,60.0,129.0,nan,189.0,258.0
+26 28 16.10,2022 Bare Costs,3300,"2-3 way switches, 2 #14/3, type NM cables",nan,8.89,0.9,nan,36.5,59.5,nan,96.0,129.0
+26 28 16.10,2022 Bare Costs,3320,Type MC cable,nan,8.0,1.0,nan,64.0,66.0,nan,130.0,169.0
+26 28 16.10,2022 Bare Costs,3330,EMT & wire,nan,4.0,2.0,nan,69.0,132.0,nan,201.0,273.0
+26 28 16.10,2022 Bare Costs,3350,"S.P. switch / 20 amp recpt, #12/2, type NM cable",nan,10.0,0.8,nan,35.0,53.0,nan,88.0,117.0
+26 28 16.10,2022 Bare Costs,3370,Type MC cable,nan,8.89,0.9,nan,41.0,59.5,nan,100.5,134.0
+26 28 16.10,2022 Bare Costs,3380,EMT & wire,nan,4.1,1.951,nan,67.5,129.0,nan,196.5,267.0
+26 28 16.10,2022 Bare Costs,3400,Decorator style,nan,nan,nan,nan,,nan,nan,nan,nan
+26 28 16.10,2022 Bare Costs,3410,"S.P. switch / 15 amp recpt, type NM cable",1 Elec,11.43,0.7,Ea .,27.0,46.5,nan,73.5,98.5
+26 28 16.10,2022 Bare Costs,3420,Type MC cable,nan,10.0,0.8,nan,40.5,53.0,nan,93.5,123.0
+26 28 16.10,2022 Bare Costs,34301,EMT & wire,nan,4.4,1.818,nan,59.0,120.0,nan,179.0,244.0
+26 28 16.10,2022 Bare Costs,3450,"S.P. switch / pilotlight, type NM cable",nan,11.43,0.7,nan,28.5,46.5,nan,75.0,100.0
+26 28 16.10,2022 Bare Costs,3470,Type MC cable,nan,10.0,0.8,nan,42.0,53.0,nan,95.0,125.0
+26 28 16.10,2022 Bare Costs,3480,EMT & wire,nan,4.4,1.818,nan,60.5,120.0,nan,180.5,246.0
+26 28 16.10,2022 Bare Costs,3500,"2-S.P. switches, 2 #14/2, type NM cables",nan,10.0,0.8,nan,29.0,53.0,nan,82.0,111.0
+26 28 16.10,2022 Bare Costs,3520,Type MC cable,nan,8.89,0.9,nan,46.0,59.5,nan,105.5,140.0
+26 28 16.10,2022 Bare Costs,3530,EMT & wire,nan,4.1,1.951,nan,65.0,129.0,nan,194.0,264.0
+26 28 16.10,2022 Bare Costs,3550,"3-way / 15 amp recpt., #14/3, type NM cable",nan,10.0,0.8,nan,35.5,53.0,nan,88.5,118.0
+26 28 16.10,2022 Bare Costs,3570,Type MC cable,nan,8.89,0.9,nan,54.5,59.5,nan,114.0,148.0
+26 28 16.10,2022 Bare Costs,3580,EMT & wire,nan,4.1,1.951,nan,65.5,129.0,nan,194.5,264.0
+26 28 16.10,2022 Bare Costs,3650,"2-3 way switches, 2 #14/3, type NM cables",nan,8.89,0.9,nan,42.0,59.5,nan,101.5,135.0
+26 28 16.10,2022 Bare Costs,3670,Type MC cable,nan,8.0,1.0,nan,69.5,66.0,nan,135.5,175.0
+26 28 16.10,2022 Bare Costs,3680,EMT & wire,nan,4.0,2.0,nan,74.5,132.0,nan,206.5,279.0
+26 28 16.10,2022 Bare Costs,3700,"S.P. switch / 20 amp recpt., #12/2, type NM cable",nan,10.0,0.8,nan,40.5,53.0,nan,93.5,123.0
+26 28 16.10,2022 Bare Costs,3720,Type MC cable,nan,8.89,0.9,nan,46.5,59.5,nan,106.0,140.0
+26 28 16.10,2022 Bare Costs,3730,EMT & wire,nan,4.1,1.951,nan,73.0,129.0,nan,202.0,273.0
+26 28 16.10,2022 Bare Costs,4000,Receptacle devices,nan,nan,nan,nan,,nan,nan,nan,nan
+26 28 16.10,2022 Bare Costs,4010,"Duplex outlet, 15 amp recpt., ivory, 1-gang box, plate",nan,nan,nan,nan,,nan,nan,nan,nan
+26 28 16.10,2022 Bare Costs,4015,Type NM cable,1 Elec,14.55,0.55,Ea .,8.45,36.5,nan,44.95,63.5
+26 28 16.10,2022 Bare Costs,4020,Type MC cable,nan,12.31,0.65,nan,22.5,43.0,nan,65.5,88.5
+26 28 16.10,2022 Bare Costs,4030,EMT & wire,nan,5.33,1.501,nan,38.0,99.5,nan,137.5,190.0
+26 28 16.10,2022 Bare Costs,4050,"With #12/2, type NM cable",nan,12.31,0.65,nan,9.75,43.0,nan,52.75,74.5
+26 28 16.10,2022 Bare Costs,40701,Type MC cable,nan,10.67,0.75,nan,23.5,49.5,nan,73.0,99.5
+26 28 16.10,2022 Bare Costs,4080,EMT & wire,nan,4.71,1.699,nan,42.5,112.0,nan,154.5,214.0
+26 28 16.10,2022 Bare Costs,4100,"20 amp recpt., #12/2, type NM cable",nan,12.31,0.65,nan,21.5,43.0,nan,64.5,87.5
+26 28 16.10,2022 Bare Costs,4120,Type MC cable,nan,10.67,0.75,nan,35.0,49.5,nan,84.5,113.0
+26 28 16.10,2022 Bare Costs,4130,EMT & wire,nan,4.71,1.699,nan,54.0,112.0,nan,166.0,227.0
+26 28 16.10,2022 Bare Costs,4140,For GFI see Section 26 05 90.10 line 4300 below,nan,nan,nan,nan,,nan,nan,nan,nan
+26 28 16.10,2022 Bare Costs,4150,"Decorator style, 15 amp recpt., type NM cable",1 Elec,14.55,0.55,Ea .,14.0,336.5,nan,50.5,69.5
+26 28 16.10,2022 Bare Costs,4170,Type MC cable,nan,12.31,0.65,nan,28.0,nan,nan,71.0,94.5
+26 28 16.10,2022 Bare Costs,41801,EMT & wire,nan,5.33,1.501,nan,43.5,99.5,nan,143.0,196.0
+26 28 16.10,2022 Bare Costs,4200,"With #12/2, type NM cable",nan,12.31,0.65,nan,15.25,nan,nan,58.25,81.0
+26 28 16.10,2022 Bare Costs,4220,Type MC cable,nan,10.67,0.75,nan,29.0,49.5,nan,78.5,106.0
+26 28 16.10,2022 Bare Costs,4230,EMT & wire,nan,4.71,1.699,nan,48.0,124.0,nan,160.0,220.0
+26 28 16.10,2022 Bare Costs,4250,"20 amp recpt, #12/2, type NM cable",nan,12.31,0.65,nan,27.0,43.0,nan,70.0,93.5
+26 28 16.10,2022 Bare Costs,4270,Type MC cable,nan,10.67,0.75,nan,40.5,49.5,nan,90.0,119.0
+26 28 16.10,2022 Bare Costs,4280,EMT & wire,nan,4.71,1.699,nan,59.5,112.0,nan,171.5,233.0
+26 28 16.10,2022 Bare Costs,4300,"GFI, 15 amp recpt., type NM cable",nan,12.31,0.65,nan,25.5,43.0,nan,68.5,92.0
+26 28 16.10,2022 Bare Costs,4320,Type MC cable,nan,10.67,0.75,nan,39.5,49.5,nan,89.0,118.0
+26 28 16.10,2022 Bare Costs,4330,EMT & wire,nan,4.71,1.699,nan,55.0,112.0,nan,167.0,228.0
+26 28 16.10,2022 Bare Costs,4350,"GFI with #12/2, type NM cable",nan,10.67,0.75,nan,27.0,49.5,nan,76.5,104.0
+26 24 13.10,Incoming Switchboards,10,INCOMING SWITCHBOARDS main service section,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.10,Incoming Switchboards,100,"Aluminum bus bars, not including CT's or PT's",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.10,Incoming Switchboards,200,"No main disconnect, includes CT compartment",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.10,Incoming Switchboards,300,"120/208 volt, 4 wire, 600 amp",2 Elec,nan,16.0,Eo .,"4,825","1,050",nan,"5,875","6,900"
+26 24 13.10,Incoming Switchboards,400,800 amp,nan,0.88,18.182,nan,"4,825","1,200",nan,"6,025","7,125"
+26 24 13.10,Incoming Switchboards,500,"1,000 amp",nan,0.8,20.0,nan,"5,800","1,325",nan,"7,125","8,375"
+26 24 13.10,Incoming Switchboards,600,"1,200 amp",nan,0.72,22.222,nan,"5,800","1,475",nan,"7,275","8,575"
+26 24 13.10,Incoming Switchboards,700,"1,600 amp",nan,0.66,24.242,nan,"5,800","1,600",nan,"7,400","8,775"
+26 24 13.10,Incoming Switchboards,800,"2,000 amp",nan,62.0,25.806,nan,"6,350","1,700",nan,"8,050","9,550"
+26 24 13.10,Incoming Switchboards,1000,"3,000 amp",nan,0.56,28.571,nan,"8,400","1,900",nan,"10,300","12,000"
+26 24 13.10,Incoming Switchboards,2000,Fused switch & CT compartment,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.10,Incoming Switchboards,2100,"120/208 volt, 4 wire, 400 amp",2 Elec,1.12,14.286,Eg .,"2,850",945,nan,"3,795","4,525"
+26 24 13.10,Incoming Switchboards,2200,600 amp,nan,0.94,17.021,nan,"3,375","1,125",nan,"4,500","5,375"
+26 24 13.10,Incoming Switchboards,2300,800 amp,nan,0.84,19.048,nan,"13,100","1,250",nan,"14,350","16,300"
+26 24 13.10,Incoming Switchboards,2400,"1,200 amp",nan,0.68,23.529,nan,"17,000","1,550",nan,"18,550","21,000"
+26 24 13.10,Incoming Switchboards,2900,Pressure switch & CT compartment,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.10,Incoming Switchboards,3000,"120/208 volt, 4 wire, 800 amp",2 Elec,0.8,20.0,Ea .,"11,700","1,325",nan,"13,025","14,900"
+26 24 13.10,Incoming Switchboards,3100,"1,200 amp",nan,0.66,24.242,nan,"23,100","1,600",nan,"24,700","27,800"
+26 24 13.10,Incoming Switchboards,3200,"1,600 amp",nan,0.62,25.806,nan,"24,600","1,700",nan,"26,300","29,600"
+26 24 13.10,Incoming Switchboards,3300,"2,000 amp",2 Elec,0.56,28.571,Ea .,"25,700","1,900",nan,"27,600","31,100"
+26 24 13.10,Incoming Switchboards,4400,"Circuit breaker, molded case & CT compartment",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.10,Incoming Switchboards,4600,"3 pole, 4 wire, 600 amp",2 Elec,0.94,17.021,Ea .,"12,500","1,125",nan,"13,625","15,400"
+26 24 13.10,Incoming Switchboards,4800,800 amp,nan,0.84,19.048,nan,"19,000","1,250",nan,"20,250","22,800"
+26 24 13.10,Incoming Switchboards,5000,"1,200 amp",nan,0.68,23.529,nan,"16,500","1,550",nan,"18,050","20,500"
+26 24 13.10,Incoming Switchboards,5100,"Copper bus bars, not incl. CT's or PT's, add, minimum",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.30,Distribution Switchboards Section,10,DISTRIBUTION SWITCHBOARDS SECTION,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.30,Distribution Switchboards Section,100,"Aluminum bus bars, not including breakers",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.30,Distribution Switchboards Section,195,"120/208 or 277/480 volt, 4 wire, 400 amp",2 Elec,1.1,14.545,Ea .,"1,625",965,nan,"2,590","3,225"
+26 24 13.30,Distribution Switchboards Section,200,600 amp,nan,1.0,16.0,nan,"1,550","1,050",nan,"2,600","3,275"
+26 24 13.30,Distribution Switchboards Section,300,800 amp,nan,0.88,18.182,nan,"1,950","1,200",nan,"3,150","3,950"
+26 24 13.30,Distribution Switchboards Section,400,"1,000 amp",nan,0.8,20.0,nan,"2,475","1,325",nan,"3,800","4,700"
+26 24 13.30,Distribution Switchboards Section,500,"1,200 amp",nan,0.72,22.222,nan,"2,950","1,475",nan,"4,425","5,400"
+26 24 13.30,Distribution Switchboards Section,600,"1,600 amp",nan,0.66,24.242,nan,"4,600","1,600",nan,"6,200","7,425"
+26 24 13.30,Distribution Switchboards Section,700,"2,000 amp",nan,0.62,25.806,nan,"5,825","1,700",nan,"7,525","8,950"
+26 24 13.30,Distribution Switchboards Section,800,"2,500 amp",nan,0.6,26.667,nan,"6,150","1,775",nan,"7,925","9,400"
+26 24 13.30,Distribution Switchboards Section,900,"3,000 amp",nan,0.56,28.571,nan,"8,375","1,900",nan,"10,275","12,000"
+26 24 13.30,Distribution Switchboards Section,950,"4,000 amp",nan,0.52,30.769,nan,"7,825","2,025",nan,"9,850","11,700"
+26 24 13.40,Switchboards Feeder Section,10,SWITCHBOARDS FEEDER SECTION group mounted devices,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.40,Switchboards Feeder Section,30,Circuit breakers,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 13.40,Switchboards Feeder Section,160,"FA frame, 15 to 60 amp, 240 volt, 1 pole",1 Elec,87.0,nan,Ea .,133,66.0,nan,199,245
+26 24 13.40,Switchboards Feeder Section,280,"FA frame, 70 to 100 amp, 240 volt, 1 pole",nan,7.0,1.143,nan,227,75.5,nan,302.50,360
+26 24 13.40,Switchboards Feeder Section,420,"KA frame, 70 to 225 amp",nan,3.2,2.5,nan,"1,400",166.0,nan,"1,566","1,800"
+26 24 13.40,Switchboards Feeder Section,430,"LA frame, 125 to 400 amp",nan,2.3,3.478,nan,"4,300",230.0,nan,"4,530","5,075"
+26 24 13.40,Switchboards Feeder Section,460,"MA frame, 450 to 600 amp",nan,1.6,5.0,nan,"5,850",330.0,nan,"6,180","6,925"
+26 24 13.40,Switchboards Feeder Section,470,700 to 800 amp,nan,1.3,6.154,1,"5,925",405.0,nan,"6,330","7,125"
+26 24 13.40,Switchboards Feeder Section,480,"MAL frame, 1,000 amp",nan,1.0,8.0,nan,"7,875",530.0,nan,"8,405","9,450"
+26 24 13.40,Switchboards Feeder Section,490,"PA frame, 1,200 amp",nan,0.8,10.0,nan,"16,000",660.0,nan,"16,660","18,600"
+26 24 13.40,Switchboards Feeder Section,500,"Branch circuit, fusible switch, 600 volt, double 30/30 amp",4,2.0,nan,nan,870,132.0,nan,"1,002","1,150"
+26 24 13.40,Switchboards Feeder Section,550,60/60 amp,nan,3.2,2.5,nan,895,166.0,nan,"1,061","1,225"
+26 24 13.40,Switchboards Feeder Section,600,100/100 amp,1,2.7,2.963,nan,"1,150",196.0,nan,"1,346","1,550"
+26 24 13.40,Switchboard and Feeder Section Panelboards,650,"Single, 30 amp",1 Elec,5.3,1.509,Ea.,820,100,nan,920,"1,050"
+26 24 13.40,Switchboard and Feeder Section Panelboards,700,60 amp,nan,4.7,1.702,nan,865,113,nan,978,"1,125"
+26 24 13.40,Switchboard and Feeder Section Panelboards,750,100 amp,nan,4.0,2.0,nan,"1,525",132,nan,"1,657","1,875"
+26 24 13.40,Switchboard and Feeder Section Panelboards,800,200 amp,nan,2.7,2.963,nan,"1,250",196,nan,"1,446","1,675"
+26 24 13.40,Switchboard and Feeder Section Panelboards,850,400 amp,nan,2.3,3.478,nan,"2,275",230,nan,"2,505","2,850"
+26 24 13.40,Switchboard and Feeder Section Panelboards,900,600 amp,nan,1.8,4.444,nan,"2,800",294,nan,"3,094","3,500"
+26 24 13.40,Switchboard and Feeder Section Panelboards,950,800 amp,nan,1.3,6.154,nan,"4,725",405,nan,"5,130","5,800"
+26 24 13.40,Switchboard and Feeder Section Panelboards,1000,"1,200 amp",nan,0.8,10.0,nan,"5,375",660,nan,"6,035","6,875"
+26 24 16.20,Panelboard and Load Center Circuit Breakers,10,PANELBOARD AND LOAD CENTER CIRCUIT BREAKERS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.20,Panelboard and Load Center Circuit Breakers,50,"Bolt-on, 10,000 amp 1.C, 120 volt, 1 pole",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.20,Panelboard and Load Center Circuit Breakers,100,15-50 amp,1 Elec,10.0,.800,Ea.,,27,536.0,80.0,109
+26 24 16.20,Panelboard and Load Center Circuit Breakers,200,60 amp,nan,8.0,nan,nan,,23.50,nan,89.5,125
+26 24 16.20,Panelboard and Load Center Circuit Breakers,300,70 amp,nan,8.0,+,nan,,47.50,nan,113.5,151
+26 24 16.20,Panelboard and Load Center Circuit Breakers,350,"240 volt, 2 pole",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.20,Panelboard and Load Center Circuit Breakers,400,15-50 amp,1 Elec,8.0,1,Ea.,63.50,66.0,nan,129.50,169
+26 24 16.20,Panelboard and Load Center Circuit Breakers,500,60 amp,nan,7.5,1.067,nan,63,70.5,nan,133.50,174
+26 24 16.20,Panelboard and Load Center Circuit Breakers,600,80-100 amp,nan,5.0,1.600,nan,154,106.0,nan,260,325
+26 24 16.20,Panelboard and Load Center Circuit Breakers,700,"3 pole, 15-60 amp",nan,6.2,1.290,nan,193,85.5,nan,278.50,340
+26 24 16.20,Panelboard and Load Center Circuit Breakers,800,70 amp,nan,5.0,1.600,nan,246,106.0,nan,352,430
+26 24 16.20,Panelboard and Load Center Circuit Breakers,900,80-100 amp,nan,3.6,2.222,nan,287,147.0,nan,434,535
+26 24 16.20,Panelboard and Load Center Circuit Breakers,1000,"22,000 amp 1.C.,240 volt, 2 pole, 70-225 amp",nan,2.7,2.963,nan,117,196.0,nan,313,420
+26 24 16.20,Panelboard and Load Center Circuit Breakers,1100,"3 pole, 70-225 amp",nan,2.3,3.478,nan,385,230.0,nan,615,760
+26 24 16.20,Panelboard and Load Center Circuit Breakers,1200,"14,000 amp 1.C.,277 volts, 1 pole, 15-30 amp",nan,8.0,nan,nan,108,66.0,nan,174,217
+26 24 16.20,Panelboard and Load Center Circuit Breakers,1300,"22,000 amp 1.C.,480 volts, 2 pole, 70-225 amp",nan,2.7,2.963,nan,130,196.0,nan,326,435
+26 24 16.20,Panelboard and Load Center Circuit Breakers,1400,"3 pole, 70-225 amp",nan,2.3,3.478,nan,"1,275",230.0,nan,"1,505","1,750"
+26 24 16.30,Panelboards Commercial Applications,10,PANELBOARDS COMMERCIAL APPLICATIONS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.30,Panelboards Commercial Applications,50,"NQ, w/ 20 amp 1 pole bolt-on circuitbreakers",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.30,Panelboards Commercial Applications,100,"3 wire, 120/240 volts, 100 amp main lugs, 10 circuits",1 Elec,1.0,8.0,Ea.,"1,250",530,nan,"1,780","2,150"
+26 24 16.30,Panelboards Commercial Applications,200,14 circuits,1,11.88,19.091,nan,"1,400",600,nan,"2,000","2,425"
+26 24 16.30,Panelboards Commercial Applications,250,18 circuits,nan,1.75,10.667,nan,850,705,nan,"1,555","1,975"
+26 24 16.30,Panelboards Commercial Applications,300,20 circuits,nan,0.65,12.308,nan,"1,650",815,nan,"2,465","3,025"
+26 24 16.30,Panelboards Commercial Applications,350,"225 amp main lugs, 24 circuits",2 Elec,1.2,13.333,nan,"1,875",885,nan,"2,760","3,350"
+26 24 16.30,Panelboards Commercial Applications,400,30 circuits,nan,0.9,17.778,nan,"1,200","1,175",nan,"2,375","3,075"
+26 24 16.30,Panelboards Commercial Applications,450,36 circuits,nan,0.8,20.0,!,"2,500","1,325",nan,"3,825","4,725"
+26 24 16.30,Panelboards Commercial Applications,500,38 circuits,nan,0.72,22.222,nan,"2,675","1,475",nan,"4,150","5,125"
+26 24 16.30,Panelboards Commercial Applications,550,42 circuits,nan,0.66,24.242,nan,"1,450","1,600",nan,"3,050","3,975"
+26 24 16.30,Panelboards Commercial Applications,600,"4 wire, 120/208 volts, 100 amp main lugs, 12 circuits",1 Elec,1.0,8.0,nan,"1,350",530,nan,"1,880","2,250"
+26 24 16.30,Panelboards Commercial Applications,650,16 circuits,nan,0.75,10.667,nan,945,705,nan,"1,650","2,100"
+26 24 16.30,Panelboards Commercial Applications,700,20 circuits,nan,0.65,12.308,nan,"1,725",815,nan,"2,540","3,100"
+26 24 16.30,Panelboards Commercial Applications,750,24 circuits,nan,0.6,13.333,nan,"1,175",885,nan,"2,060","2,600"
+26 24 16.30,Panelboards Commercial Applications,800,30 circuits,nan,0.53,15.094,nan,"1,175","1,000",nan,"2,175","2,775"
+26 24 16.30,Panelboards Commercial Applications,850,"225 amp main lugs, 32 circuits",2 Elec,0.9,17.778,Ea.,"1,325","1,175",nan,"2,500","3,200"
+26 24 16.30,Panelboards Commercial Applications,900,34 circuits,nan,0.84,19.048,nan,"12,500","1,250",nan,"3,750","4,625"
+26 24 16.30,Panelboards Commercial Applications,950,36 circuits,nan,0.8,20.0,nan,"2,575","1,325",nan,"3,900","4,800"
+26 24 16.30,Panelboards Commercial Applications,1000,42 circuits,nan,0.68,23.529,nan,"1,600","1,550",nan,"3,150","4,075"
+26 24 16.30,Panelboards Commercial Applications,1010,"400 amp main lugs, 42 circs",nan,0.68,23.529,nan,"1,600","1,550",nan,"3,150","4,075"
+26 24 16.30,Panelboards Commercial Applications,1200,"NF, w/ 20 amp, 1 pole bolt on circuitbreakers",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.30,Panelboards Commercial Applications,1250,"4 wire, 277/480 volts, 100 amp main lugs, 12 circuits",1 Elec,88.0,9.091,Ea.,"1,825",600,nan,"2,425","2,900"
+26 09 13.10,Switchboard Instruments,10,"SWITCHBOARD INSTRUMENTS 3 phase, 4 wire",nan,nan,nan,nan,,nan,nan,nan,nan
+26 09 13.10,Switchboard Instruments,100,"AC indicating, ammeter & switch",1 Elec,8.0,1,Ea.,"4,675",66.0,nan,"4,741","5,225"
+26 09 13.10,Switchboard Instruments,200,Voltmeter & switch,nan,8.0,1,nan,"3,775",66.0,nan,"3,841","4,250"
+26 09 13.10,Switchboard Instruments,300,Wattmeter,nan,8.0,T,nan,"3,625",66.0,nan,"3,691","4,075"
+26 09 13.10,Switchboard Instruments,400,"AC recording, ammeter",1 Elec,44.0,2,Eo.,"6,450",132.0,nan,"6,582","7,300"
+26 09 13.10,Switchboard Instruments,500,Voltmeter,nan,4.0,2,nan,"6,450",132.0,nan,"6,582","7,300"
+26 09 13.10,Switchboard Instruments,600,"Ground fault protection, zero sequence",nan,2.7,2.963,nan,"5,700",196.0,nan,"5,896","6,550"
+26 09 13.10,Switchboard Instruments,700,Ground return path,nan,2.7,2.963,nan,"5,700",196.0,nan,"5,896","6,550"
+26 09 13.10,Switchboard Instruments,800,"3 current transformers, 5 to 800 amp",nan,2.0,4,nan,"2,650",265.0,nan,"2,915","3,325"
+26 09 13.10,Switchboard Instruments,900,"1,000 to 1,500 amp",nan,1.3,6.154,nan,"3,800",405.0,nan,"4,205","4,800"
+26 09 13.10,Switchboard Instruments,1200,"2,000 to 4,000 amp",nan,1.0,8,nan,"4,500",530.0,nan,"5,030","5,725"
+26 09 13.10,Switchboard Instruments,1300,"Fused potential transformer, maximum 600 volt",nan,8.0,1,nan,995,66.0,nan,"1,061","1,200"
+26 09 13.30,Smart Metering,10,"SMART METERING, In panel",nan,nan,nan,nan,,nan,nan,nan,nan
+26 09 13.30,Smart Metering,100,"Single phase, 120/208 volt, 100 amp",1 Elec,8.78,0.911,Ea.,410,60.5,nan,470.50,540
+26 09 13.30,Smart Metering,120,200 amp,G,8.78,0.911,nan,390,60.5,nan,450.50,520
+26 09 13.30,Smart Metering,200,"277 volt, 100 amp",G,8.78,0.911,nan,410,60.5,nan,470.50,540
+26 09 13.30,Smart Metering,220,200 amp,nan,8.78,0.911,nan,460,60.5,nan,520.50,600
+26 09 13.30,Smart Metering,1100,"Three phase, 120/208 volt, 100 amp",G,4.69,1.706,nan,880,113.0,nan,993,"1,125"
+26 09 13.30,Smart Metering,1120,200 amp,G,4.69,1.706,nan,850,113.0,nan,963,"1,100"
+26 09 13.30,Smart Metering,1130,400 amp,nan,4.69,1.706,nan,960,113.0,nan,"1,073","1,225"
+26 09 13.30,Smart Metering,1140,800 amp,nan,4.69,1.706,nan,"1,125",113.0,nan,"1,238","1,400"
+26 09 13.30,Smart Metering,1150,"1,600 amp",nan,4.69,1.706,nan,"1,125",113.0,nan,"1,238","1,400"
+26 09 13.30,Smart Metering,1200,"277/480 volt, 100 amp",nan,4.69,1.706,nan,965,113.0,nan,"1,078","1,250"
+26 09 13.30,Smart Metering,1220,200 amp,nan,4.69,1.706,nan,965,113.0,nan,"1,078","1,250"
+26 09 13.30,Smart Metering,1230,400 amp,nan,4.69,1.706,nan,965,113.0,nan,"1,078","1,250"
+26 09 13.30,Smart Metering,1240,800 amp,nan,4.69,1.706,nan,"1,225",113.0,nan,"1,338","1,525"
+26 09 13.30,Smart Metering,1250,"1,600 amp",nan,4.69,1.706,nan,"1,225",113.0,nan,"1,338","1,525"
+26 09 13.30,Smart Metering,2000,"Data recorder, 8 meters",nan,10.97,0.729,nan,"2,300",48.5,nan,"2,348.50","2,600"
+26 09 13.30,Smart Metering,2100,16 meters,nan,8.53,0.938,nan,"3,025",62.0,nan,"3,087","3,425"
+26 09 13.30,Smart Metering,3000,"Software package, per meter, basic",nan,nan,nan,nan,193,nan,nan,193,212
+26 09 13.30,Smart Metering,3100,Premium,nan,nan,nan,nan,510,nan,nan,510,560
+26 09 23.10,Energy Saving Lighting Devices,10,ENERGY SAVING LIGHTING DEVICES,nan,nan,nan,nan,,nan,nan,nan,nan
+26 09 23.10,Energy Saving Lighting Devices,100,"Occupancy sensors, passive infrared ceiling mounted",1 Elec,77527550.0,1.143,Eo.,77.5,75.5,nan,153.0,197.0
+26 09 23.10,Energy Saving Lighting Devices,110,Ultrasonic ceiling mounted,nan,nan,1.143,nan,73.5,75.5,nan,149.0,193.0
+26 09 23.10,Energy Saving Lighting Devices,120,Dual technology ceiling mounted,G,6.5,1.231,nan,125.0,81.5,nan,206.5,259.0
+26 09 23.10,Energy Saving Lighting Devices,1501,Automatic wall switches,G,24.0,0.333,nan,90.0,22.0,nan,112.0,132.0
+26 09 23.10,Energy Saving Lighting Devices,160,"Daylighting sensor, manual control, ceiling mounted",G,nan,1.143,nan,83.0,75.5,nan,158.5,203.0
+26 09 23.10,Energy Saving Lighting Devices,170,Remote and dimming control with remote controller,G,6.5,1.231,nan,192.0,81.5,nan,273.5,330.0
+26 09 23.10,Energy Saving Lighting Devices,200,Passive infrared ceiling mounted,nan,6.5,1.231,nan,37.5,81.5,nan,119.0,163.0
+26 09 23.10,Energy Saving Lighting Devices,400,Remote power pack,1 Elec,10.0,0.8,Ea.,37.5,53.0,nan,90.5,120.0
+26 09 23.10,Energy Saving Lighting Devices,450,"Photoelectric control, S.P.S.T. 120 V",nan,8.0,1.0,nan,19.85,66.0,nan,85.85,121.0
+26 09 23.10,Energy Saving Lighting Devices,500,S.P.S.T. 208 V/277 V,nan,8.0,1.0,nan,23.0,66.0,nan,89.0,124.0
+26 09 23.10,Energy Saving Lighting Devices,550,D.P.S.T. 120 V,nan,6.0,1.333,nan,182.0,88.5,nan,270.5,330.0
+26 09 23.10,Energy Saving Lighting Devices,600,D.P.S.T. 208 V/277 V,nan,6.0,1.333,nan,207.0,88.5,nan,295.5,360.0
+26 09 23.10,Energy Saving Lighting Devices,650,S.P.D.T. 208 V/277 V,nan,6.0,1.333,nan,201.0,88.5,nan,289.5,350.0
+26 09 23.10,Energy Saving Lighting Devices,660,"Daylight level sensor, wall mounted, on/off or dimming",nan,8.0,1.0,nan,135.0,66.0,nan,201.0,248.0
+26 24 16.30,Panelboards - Commercial Applications,1300,20 circuits,1 Elec,0.6,13.333,Ea .,"2,825",885,nan,"3,710","4,400"
+26 24 16.30,Panelboards - Commercial Applications,1350,"225 amp main lugs, 24 circuits",2 Elec,0.9,17.778,nan,"3,300","1,175",nan,"4,475","5,375"
+26 24 16.30,Panelboards - Commercial Applications,1400,30 circuits,nan,0.8,20.0,nan,"2,625","1,325",nan,"3,950","4,850"
+26 24 16.30,Panelboards - Commercial Applications,1448,32 circuits,nan,4.9,3.265,nan,"4,600",216,nan,"4,816","5,375"
+26 24 16.30,Panelboards - Commercial Applications,1450,36 circuits,nan,0.72,22.222,nan,"4,600","1,475",nan,"6,075","7,225"
+26 24 16.30,Panelboards - Commercial Applications,1600,"NQ panel, w/ 20 amp, 1 pole, circuitbreakers",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.30,Panelboards - Commercial Applications,1650,"3 wire, 120/240 volt with main circuitbreaker",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.30,Panelboards - Commercial Applications,1700,"100 amp main, 12 circuits",1 Elec,0.8,10.0,Ea .,"1,600",660,nan,"2,260","2,725"
+26 24 16.30,Panelboards - Commercial Applications,1750,20 circuits,"""",0.6,13.333,nan,"2,025",885,nan,"2,910","3,525"
+26 24 16.30,Panelboards - Commercial Applications,1800,"225 amp main, 30 circuits",2 Elec,0.68,23.529,nan,"2,850","1,550",nan,"4,400","5,450"
+26 24 16.30,Panelboards - Commercial Applications,1801,"225 amp main, 32 circuits",nan,5.0,3.2,nan,"2,850",212,nan,"3,062","3,450"
+26 24 16.30,Panelboards - Commercial Applications,1850,42 circuits,nan,0.52,30.769,nan,"3,575","2,025",nan,"5,600","6,950"
+26 24 16.30,Panelboards - Commercial Applications,1900,"400 amp main, 30 circuits",nan,0.54,29.63,nan,"6,750","1,950",nan,"8,700","10,300"
+26 24 16.30,Panelboards - Commercial Applications,1950,42 circuits,nan,0.5,32.0,nan,"7,375","2,125",nan,"9,500","11,300"
+26 24 16.30,Panelboards - Commercial Applications,2000,"4 wire, 120/208 volts with main circuitbreaker",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.30,Panelboards - Commercial Applications,2050,"100 amp main, 24 circuits",1 Elec,0.47,17.021,Ea .,"2,275","1,125",nan,"3,400","4,175"
+26 24 16.30,Panelboards - Commercial Applications,2100,30 circuits,"""",0.4,20.0,nan,"3,550","1,325",nan,"4,875","5,875"
+26 24 16.30,Panelboards - Commercial Applications,2200,"225 amp main, 32 circuits",2 Elec,0.72,22.222,nan,"3,825","1,475",nan,"5,300","6,375"
+26 24 16.30,Panelboards - Commercial Applications,2250,42 circuits,nan,0.56,28.571,nan,"4,475","1,900",nan,"6,375","7,725"
+26 24 16.30,Panelboards - Commercial Applications,2300,"400 amp main, 42 circuits",nan,0.48,33.333,nan,"6,050","2,200",nan,"8,250","9,950"
+26 24 16.30,Panelboards - Commercial Applications,2350,"600 amp main, 42 circuits",nan,0.4,40.0,nan,"9,700","2,650",nan,"12,350","14,600"
+26 24 16.30,Panelboards - Commercial Applications,2400,"NF, with 20 amp, 1 pole circuit breaker",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.30,Panelboards - Commercial Applications,2450,"4 wire, 277/480 volts with main circuitbreaker",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 16.30,Panelboards - Commercial Applications,2500,"100 amp main, 24 circuits",1 Elec,0.42,19.048,Ea .,"3,800","1,250",nan,"5,050","6,050"
+26 24 16.30,Panelboards - Commercial Applications,2550,30 circuits,"""",0.38,21.053,nan,"7,825","1,400",nan,"9,225","10,700"
+26 24 16.30,Panelboards - Commercial Applications,2600,"225 amp main, 30 circuits",2 Elec,0.72,22.222,nan,"9,850","1,475",nan,"11,325","13,000"
+26 24 16.30,Panelboards - Commercial Applications,2650,42 circuits,"""",0.56,28.571,nan,"11,900","1,900",nan,"13,800","15,800"
+26 24 19.40,Motor Starters and Controls,10,MOTOR STARTERS AND CONTROLS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 19.40,Motor Starters and Controls,50,"Magnetic, FVNR, with enclosure and heaters, 480 volt",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 19.40,Motor Starters and Controls,80,"2 HP, size 00",1 Elec,3.5,2.286,Ea .,120,151,nan,271,355
+26 24 19.40,Motor Starters and Controls,100,"5 HP, size 0",nan,2.3,3.478,nan,355,230,nan,585,730
+26 24 19.40,Motor Starters and Controls,200,"10 HP, size 1",nan,1.6,5.0,nan,169,330,nan,499,675
+26 24 19.40,Motor Starters and Controls,300,"25 HP, size 2",2 Elec,2.2,7.273,nan,335,480,nan,815,"1,075"
+26 24 19.40,Motor Starters and Controls,400,"50 HP, size 3",nan,1.8,8.889,nan,555,590,nan,"1,145","1,475"
+26 24 19.40,Motor Starters and Controls,500,"100 HP, size 4",nan,1.2,13.333,nan,"1,250",885,nan,"2,135","2,675"
+26 24 19.40,Motor Starters and Controls,600,"200 HP, size 5",nan,0.9,17.778,nan,"2,975","1,175",nan,"4,150","5,000"
+26 24 19.40,Motor Starters and Controls,700,"Combination, with motor circuit protectors, 5 HP, size 0",1 Elec,1.8,4.444,nan,"1,450",294,nan,"1,744","2,000"
+26 24 19.40,Motor Starters and Controls,800,"10 HP, size 1","""",1.3,6.154,nan,"1,500",405,nan,"1,905","2,250"
+26 24 19.40,Motor Starters and Controls,900,"25 HP, size 2",2 Elec,2.0,8.0,nan,"2,075",530,nan,"2,605","3,075"
+26 24 19.40,Motor Starters and Controls,1000,"50 HP, size 3",nan,1.32,12.121,nan,"3,025",800,nan,"3,825","4,525"
+26 24 19.40,Motor Starters and Controls,1200,"100 HP, size 4",nan,0.8,20.0,nan,"6,650","1,325",nan,"7,975","9,300"
+26 24 19.40,Motor Starters and Controls,1400,"Combination, with fused switch, 5 HP, size 0",1 Elec,1.8,4.444,nan,"1,225",294,nan,"1,519","1,775"
+26 24 19.40,Motor Starters and Controls,1600,"10 HP, size 1","""",1.3,6.154,nan,"1,325",405,nan,"1,730","2,050"
+26 24 19.40,Motor Starters and Controls,1800,"25 HP, size 2",2 Elec,2.0,8.0,nan,"2,025",530,nan,"2,555","3,000"
+26 24 19.40,Motor Starters and Controls,2000,"50 HP, size 3",nan,1.32,12.121,nan,"3,625",800,nan,"4,425","5,175"
+26 24 19.40,Motor Starters and Controls,2200,"100 HP, size 4",nan,0.8,20.0,nan,"7,200","1,325",nan,"8,525","9,900"
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,20,"Gas or gasoline operated, includes battery,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,50,charger & muffler,nan,nan,nan,nan,,nan,nan,nan,nan
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,200,7.5 kW,R 3,0.83,24.096,Ea .,"7,100","1,575",209,"8,884","10,400"
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,300,11.5 kW,nan,0.71,28.169,nan,"10,100","1,850",244,"12,194","14,100"
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,400,20 kW,nan,0.63,31.746,1,"10,600","2,100",275,"12,975","15,100"
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,500,35 kW,nan,0.55,36.364,nan,"15,600","2,400",315,"18,315","21,100"
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,600,80 kW,R -13,0.4,105.0,nan,"23,600","6,700","1,400","31,700","37,500"
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,700,100 kW,nan,0.33,127.0,nan,"27,600","8,125","1,700","37,425","44,400"
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,800,125 kW,nan,0.28,150.0,nan,"29,000","9,575","2,000","40,575","48,300"
+26 24 19.40,Generator16 Gas-Engine-Driven Generator Assemblies GAS-ENGINE-DRIVEN GENERATOR SETS,900,185 kW,nan,0.25,168.0,nan,"68,500","10,700","2,250","81,450","94,000"
+26 33 43.55,Electric Vehicle Charging,10,ELECTRIC VEHICLE CHARGING,nan,nan,nan,nan,,nan,nan,nan,nan
+26 33 43.55,Electric Vehicle Charging,20,"Level 2, wall mounted",nan,nan,nan,nan,,nan,nan,nan,nan
+26 33 43.55,Electric Vehicle Charging,2200,Heavy duty,555555 R -1A,15.36,1.042,Eg .,800,62.0,nan,862,970
+26 33 43.55,Electric Vehicle Charging,2210,with RFID,G,12.29,1.302,nan,"4,525",77.5,nan,"4,602.50","5,100"
+26 33 43.55,Electric Vehicle Charging,2300,"Free standing, single connector",G,10.24,1.563,nan,"3,400",93.0,nan,"3,493","3,875"
+26 33 43.55,Electric Vehicle Charging,2310,with RFID,G,8.78,1.822,nan,"4,675",109.0,nan,"4,784","5,300"
+26 33 43.55,Electric Vehicle Charging,2320,Double connector,G,7.68,2.083,nan,"4,375",124.0,nan,"4,499","4,975"
+26 33 43.55,Electric Vehicle Charging,2330,with RFID,G,6.83,2.343,nan,"8,750",140.0,nan,"8,890","9,825"
+26 35 13.10,Capacitors Indoor,10,CAPACITORS INDOOR,nan,nan,nan,nan,,nan,nan,nan,nan
+26 35 13.10,Capacitors Indoor,20,"240 volts, single & 3 phase, 0.5 kVAR",1 Elec,2.7,2.963,Ea .,615,196.0,nan,811,965
+26 35 13.10,Capacitors Indoor,100,1.0 kVAR,nan,2.7,2.963,nan,740,196.0,nan,936,"1,100"
+26 35 13.10,Capacitors Indoor,150,2.5 kVAR,nan,2.0,4.0,nan,835,265.0,nan,"1,100","1,300"
+26 35 13.10,Capacitors Indoor,200,5.0 kVAR,nan,1.8,4.444,nan,800,294.0,nan,"1,094","1,325"
+26 35 13.10,Capacitors Indoor,250,7.5 kVAR,nan,1.6,5.0,1,"1,525",330.0,nan,"1,855","2,200"
+26 35 13.10,Capacitors Indoor,300,10 kVAR,nan,1.5,5.333,nan,"1,775",355.0,nan,"2,130","2,475"
+26 35 13.10,Capacitors Indoor,350,15 kVAR,nan,1.3,6.154,nan,"1,350",405.0,nan,"1,755","2,075"
+26 35 13.10,Capacitors Indoor,400,20 kVAR,nan,1.1,7.273,nan,"2,750",480.0,nan,"3,230","3,775"
+26 35 13.10,Capacitors Indoor,450,25 kVAR,nan,1.0,8.0,nan,"3,175",530.0,nan,"3,705","4,275"
+26 35 13.10,Capacitors Indoor,1000,"480 volts, single & 3 phase, 1 kVAR",nan,2.7,2.963,nan,560,196.0,nan,756,905
+26 35 13.10,Capacitors Indoor,1050,2 kVAR,nan,2.7,2.963,nan,645,196.0,nan,841,995
+26 35 13.10,Capacitors Indoor,1100,5 kVAR,nan,2.0,4.0,nan,810,265.0,nan,"1,075","1,275"
+26 35 13.10,Capacitors Indoor,1150,7.5 kVAR,nan,2.0,4.0,nan,875,265.0,nan,"1,140","1,350"
+26 35 13.10,Capacitors Indoor,1200,10 kVAR,nan,24.0,nan,I,"1,225",265.0,nan,"1,490","1,750"
+26 35 13.10,Capacitors Indoor,1250,15 kVAR,nan,2.0,4.0,nan,"1,450",265.0,nan,"1,715","2,000"
+26 35 13.10,Capacitors Indoor,1300,20 kVAR,nan,1.6,5.0,nan,"1,600",330.0,nan,"1,930","2,250"
+26 35 13.10,Capacitors Indoor,1350,30 kVAR,nan,1.5,5.333,nan,"1,425",355.0,nan,"1,780","2,075"
+26 35 13.10,Capacitors Indoor,1400,40 kVAR,nan,1.2,6.667,nan,"2,400",440.0,nan,"2,840","3,275"
+26 35 13.10,Capacitors Indoor,1450,50 kVAR,nan,1.1,7.273,nan,"2,800",480.0,nan,"3,280","3,800"
+26 05 90.10,Residential Wiring,4370,Type MC cable,1 Elec,9.20,0.87,Ea .,40.50,57.5,nan,98,130
+26 05 90.10,Residential Wiring,4380,EMT & wire,nan,4.21,1.9,nan,59.50,126.0,nan,185.50,253
+26 05 90.10,Residential Wiring,4400,"20 amp recp., #12/2, type NM cable",nan,10.67,0.75,nan,38.50,49.5,nan,88,116
+26 05 90.10,Residential Wiring,4420,Type MC cable,nan,9.20,0.87,nan,52,57.5,nan,109.50,143
+26 05 90.10,Residential Wiring,4430,EMT & wire,nan,4.21,1.9,nan,71,126.0,nan,197,265
+26 05 90.10,Residential Wiring,4500,"Weather proof cover for above receptacles, add",nan,32,0.25,+,4.02,16.55,nan,20.57,29
+26 05 90.10,Residential Wiring,4550,"Air conditioner outlet, 20 amp -240 volt recpt.",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,4560,"30' of #12/2, 2 pole circuitbreaker",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,4570,Type NM cable,1 Elec,11,0.8,Eg .,68.50,53.0,nan,121.50,154
+26 05 90.10,Residential Wiring,4580,Type MC cable,nan,9,0.889,nan,84,59.0,nan,143,180
+26 05 90.10,Residential Wiring,4590,EMT & wire,nan,4,2.0,nan,103,132.0,nan,235,310
+26 05 90.10,Residential Wiring,4600,"Decorator style, type NM cable",1,110,0.8,nan,75,53.0,nan,128,161
+26 05 90.10,Residential Wiring,4620,Type MC cable,nan,9,0.889,nan,90.50,59.0,nan,149.50,187
+26 05 90.10,Residential Wiring,4630,EMT & wire,1,421,nan,nan,110,132.0,nan,242,320
+26 05 90.10,Residential Wiring,4650,"Dryer outlet, 30 amp -240 volt recpt., 20' of #10/3",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,4660,2 pole circuitbreaker,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,4670,Type NM cable,11 Elec,6.41,1.248,Ea .,59,82.5,nan,141.50,188
+26 05 90.10,Residential Wiring,4680,Type MC cable,nan,5.71,1.401,nan,64.50,93.0,nan,157.50,209
+26 05 90.10,Residential Wiring,4690,EMT & wire,-,3.48,2.299,nan,96,152.0,nan,248,330
+26 05 90.10,Residential Wiring,4700,"Range outlet, 50 amp -240 volt recpt., 30' of #8/3",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,4710,Type NM cable,1 Elec,4.21,1.9,Ea .,93.50,126.0,nan,219.50,290
+26 05 90.10,Residential Wiring,4720,Type MC cable,nan,421,nan,nan,112,132.0,nan,244,320
+26 05 90.10,Residential Wiring,4730,EMT & wire,nan,2.96,2.703,nan,128,179.0,nan,307,405
+26 05 90.10,Residential Wiring,4750,"Central vacuum outlet, type NM cable",nan,6.40,1.25,nan,67,83.0,nan,150,197
+26 05 90.10,Residential Wiring,4770,Type MC cable,nan,5.71,1.401,nan,801,93.0,nan,173,226
+26 05 90.10,Residential Wiring,4780,EMT & wire,nan,3.48,2.299,nan,109,152.0,nan,261,345
+26 05 90.10,Residential Wiring,4800,"30 amp -110 volt locking recpt., #10/2 cir. bkr.",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,4810,Type NM cable,1 Elec,6.20,1.29,Ea .,80.50,85.5,nan,166,216
+26 05 90.10,Residential Wiring,4820,Type MC cable,nan,5.40,1.481,nan,90.50,98.0,nan,188.50,246
+26 05 90.10,Residential Wiring,4830,EMT & wire,nan,3.20,2.5,nan,137,166.0,nan,303,395
+26 05 90.10,Residential Wiring,4900,Low voltage outlets,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,4910,"Telephone recpt, 20' of 4/C phone wire",1 Elec,26,0.308,Ea .,8.25,20.5,nan,28.75,39.50
+26 05 90.10,Residential Wiring,4920,"TV recpt., 20' of RG59U coax wire, F type connector","""",16,0.5,"=""",15.80,33.0,nan,48.80,66.50
+26 05 90.10,Residential Wiring,4950,"Door bell chime, transformer, 2 buttons, 60' of bellwire",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,4970,Economy model,1 Elec,11.50,0.696,Ea .,56,46.0,nan,102,130
+26 05 90.10,Residential Wiring,4980,Custom model,nan,11.50,0.696,nan,102,46.0,nan,148,181
+26 05 90.10,Residential Wiring,4990,"Luxury model, 3 buttons",nan,9.50,0.842,nan,192,56.0,nan,248,295
+26 05 90.10,Residential Wiring,6000,Lighting outlets,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,6050,"Wire only (for fixture), type NM cable",1 Elec,32022,0.25,Ea .,7.10,16.55,nan,23.65,32.50
+26 05 90.10,Residential Wiring,6070,Type MC cable,nan,24,0.333,nan,11.85,252245.0,nan,33.85,46
+26 05 90.10,Residential Wiring,6080,EMT & wire,nan,10,0.8,nan,26.50,53.0,nan,79.50,108
+26 05 90.10,Residential Wiring,6100,"Box 4"") and wire (for fixture), type NM cable",nan,25,0.32,nan,16.40,21.0,nan,37.40,49.50
+26 05 90.10,Residential Wiring,6120,Type MC cable,nan,nan,0.4,nan,21,26.5,nan,47.50,%63
+26 05 90.10,Residential Wiring,6130,EMT & wire,nan,=,0.727,nan,nan,48.0,nan,84,111
+26 05 90.10,Residential Wiring,6200,Fixtures (use with line 6050 or 6100 above),nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,6210,"Canopy style, economy grade",1 Elec,40,0.2,Ea .,22,13.25,nan,35.25,44
+26 05 90.10,Residential Wiring,6220,Custom grade,nan,40,0.2,nan,57,13.25,nan,70.25,82
+26 05 90.10,Residential Wiring,6250,"Dining room chandelier, economy grade",nan,19,421.0,nan,87,28.0,nan,115,137
+26 05 90.10,Residential Wiring,6260,Custom grade,nan,19,0.421,nan,345,28.0,nan,373,420
+26 05 90.10,Residential Wiring,6270,Luxury grade,nan,15,0.533,nan,"3,050",35.5,nan,"3,085.50","3,400"
+26 05 90.10,Residential Wiring,6310,"Kitchen fixture (fluorescent), economy grade",nan,30,0.267,nan,81.50,17.65,nan,99.15,116
+26 05 90.10,Residential Wiring,6320,Custom grade,nan,25,0.32,nan,220,21.0,nan,241,274
+26 05 90.10,Residential Wiring,6350,"Outdoor, wall mounted, economy grade",nan,30,0.267,nan,33,17.65,nan,50.65,62.50
+26 05 90.10,Residential Wiring,6360,Custom grade,1 Elec,nan,nan,Ea .,125.0,17.65,nan,142.65,163.0
+26 05 90.10,Residential Wiring,6370,Luxury grade,nan,25.0,0.32,nan,248.0,21.0,nan,269.0,305.0
+26 05 90.10,Residential Wiring,6410,"Outdoor PAR floodlights, 1 lamp, 150 watt",nan,20.0,0.4,nan,21.0,26.5,nan,47.5,62.5
+26 05 90.10,Residential Wiring,6420,"2 lamp, 150 watt each",nan,20.0,0.4,nan,28.5,26.5,nan,55.0,71.0
+26 05 90.10,Residential Wiring,6425,"Motion sensing, 2 lamp, 150 watt each",nan,20.0,0.4,nan,106.0,26.5,nan,132.5,156.0
+26 05 90.10,Residential Wiring,6430,"For infrared security sensor, add",nan,nan,0.25,nan,114.0,1.0,16.55,130.55,150.0
+26 05 90.10,Residential Wiring,6450,"Outdoor, quartz-halogen, 300 watt flood",nan,20.0,0.4,nan,43.0,26.5,nan,69.5,87.0
+26 05 90.10,Residential Wiring,6600,"Recessed downlight, round, pre wired, 50 or 75 watt trim",nan,30.0,0.267,nan,48.0,17.65,nan,65.65,78.5
+26 05 90.10,Residential Wiring,6610,With shower light trim,nan,30.0,0.267,nan,74.5,17.65,nan,92.15,108.0
+26 05 90.10,Residential Wiring,6620,With wall washer trim,nan,28.0,0.286,nan,75.0,18.9,nan,93.9,111.0
+26 05 90.10,Residential Wiring,6630,With eye-ball trim,nan,28.0,0.286,nan,29.5,18.9,nan,48.4,60.5
+26 05 90.10,Residential Wiring,6700,Porcelain lamp holder,nan,40.0,0.2,nan,2.78,13.25,nan,16.03,23.0
+26 05 90.10,Residential Wiring,6710,With pull switch,nan,40.0,0.2,nan,12.15,13.25,nan,25.4,33.0
+26 05 90.10,Residential Wiring,6750,"Fluorescent strip, 2-20 watt tube, wrap around diffuser, 24""",nan,24.0,0.333,nan,46.5,22.0,nan,68.5,84.5
+26 05 90.10,Residential Wiring,6760,"1-34 watt tube, 48""",nan,24.0,0.333,nan,117.0,22.0,nan,139.0,16859.0
+26 05 90.10,Residential Wiring,6770,"2-34 watt tubes, 48""",nan,20.0,0.4,nan,134.0,26.5,nan,160.5,187.0
+26 05 90.10,Residential Wiring,6800,"Bathroom heat lamp, 1-250 watt",nan,28.0,0.286,nan,,33.5,18.9,nan,52.4
+26 05 90.10,Residential Wiring,6810,2-250 watt lamps,nan,28.0,0.286,nan,nan,18.9,nan,78.9,94.0
+26 05 90.10,Residential Wiring,6820,"For timer switch, see Section 26 05 90.10 line 2400",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,6900,"Outdoor post lamp, incl. post, fixture, 35' of #14/2",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,6910,Type NM cable,1 Elec,3.5,2.286,Ea .,385.0,151.0,nan,536.0,650.0
+26 05 90.10,Residential Wiring,6920,"Photo-eye, add",nan,27.0,0.296,nan,15.2,19.6,nan,34.8,45.5
+26 05 90.10,Residential Wiring,6950,"Clock dial time switch, 24 hr., w/enclosure, type NM cable",nan,11.43,0.7,nan,74.0,46.5,nan,120.5,150.0
+26 05 90.10,Residential Wiring,6970,Type MC cable,nan,11.0,0.727,nan,87.5,48.0,nan,135.5,168.0
+26 05 90.10,Residential Wiring,6980,EMT & wire,nan,4.85,1.649,nan,103.0,109.0,nan,212.0,275.0
+26 05 90.10,Alarm Systems,7050,"Smoke detectors, box, #14/3, type NM cable",1 Elec,14.55,0.55,Eo .,30.5,36.5,nan,67.0,87.5
+26 05 90.10,Alarm Systems,7070,Type MC cable,1 Elec,12.31,0.65,Ea .,42.0,43.0,nan,85.0,110.0
+26 05 90.10,Alarm Systems,7080,EMT & wire,nan,5.0,1.6,nan,53.5,106.0,nan,159.5,216.0
+26 05 90.10,Alarm Systems,7090,"For relay output to security system, add",nan,nan,nan,nan,9.75,nan,nan,9.75,10.75
+26 05 90.10,Residential Equipment,8050,"Disposal hook-up, incl. switch, outlet box, 3' of flex",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Equipment,8060,"20 amp -1 pole circ.bkr., and 25' of #12/2",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Equipment,8070,Type NM cable,1 Elec,10.8,nan,Ea .,25.5,353.0,nan,78.5,107.0
+26 05 90.10,Residential Equipment,8080,Type MC cable,nan,8.0,nan,nan,40.0,66.0,nan,106.0,143.0
+26 05 90.10,Residential Equipment,8090,EMT & wire,15,nan,1.6,nan,63.5,106.0,nan,169.5,227.0
+26 05 90.10,Residential Equipment,8100,"Trash compactor or dishwasher hook-up, incl. outlet box,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Equipment,8110,"3' of flex, 15 amp -1 pole circ.bkr., and 25' of #14/2",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Equipment,8120,Type NM cable,1 Elec,10.0,0.8,Eo .,21.5,53.0,nan,74.5,103.0
+26 05 90.10,Residential Equipment,8130,Type MC cable,nan,8.0,1.0,nan,37.5,66.0,nan,103.5,140.0
+26 05 90.10,Residential Equipment,8140,EMT & wire,nan,5.0,1.6,nan,57.0,106.0,nan,163.0,220.0
+26 05 90.10,Residential Equipment,8150,"Hot water sink dispenser hook-up, use line8100",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Equipment,8200,"Vent/exhaust fan hook up, type NM cable",1 Elec,320.0,0.25,Eo .,7.1,16.55,nan,23.65,32.5
+26 05 90.10,Residential Equipment,8220,Type MC cable,nan,24.0,0.333,nan,11.85,22.0,nan,33.85,46.0
+26 05 90.10,Residential Equipment,8230,EMT & wire,nan,10.0,0.8,nan,26.5,53.0,nan,79.5,108.0
+26 05 90.10,Residential Equipment,8250,"Bathroom vent fan, 50 CFM (use with above hook-up)",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Equipment,8260,Economy model,1 Elec,1552.0,0.533,Ea .,18.6,35.5,nan,54.1,73.0
+26 05 90.10,Residential Equipment,8270,Low noise model,nan,15.0,0.533,nan,50.0,35.5,nan,85.5,108.0
+26 05 90.10,Residential Equipment,8280,Custom model,nan,12.0,0.667,+,115.0,44.0,nan,159.0,193.0
+26 05 90.10,Residential Equipment,8300,"Bathroom or kitchen vent fan, 110 CFM",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Equipment,8310,Economy model,1 Elec,155.0,0.533,Ea .,67.5,35.5,nan,103.0,127.0
+26 05 90.10,Residential Equipment,83201,Low noise model,nan,nan,0.533,=,108.0,35.5,nan,143.5,172.0
+26 05 90.10,Residential Equipment,8350,"Paddle fan, variable speed (w/o lights)",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Low-Voltage Busways,7100,"2,000 amp",2 Elec,0.8,20.0,Ea.,"4,175","1,325",nan,"5,500","6,550"
+26 05 90.10,Low-Voltage Busways,7200,"Plug-in fusible switches w/ 3 fuses, 600 volt, 3 pole, 30 amp",1 Elec,4.0,2.0,nan,850,132,nan,982,"1,125"
+26 05 90.10,Low-Voltage Busways,7300,60 amp,nan,3.6,2.222,nan,955,147,nan,"1,102","1,275"
+26 05 90.10,Low-Voltage Busways,7400,100 amp,nan,2.7,2.963,nan,"1,725",196,nan,"1,921","2,175"
+26 05 90.10,Low-Voltage Busways,7500,200 amp,2 Elec,3.2,5.0,nan,"2,900",330,nan,"3,230","3,700"
+26 05 90.10,Low-Voltage Busways,7600,400 amp,nan,1.4,11.429,nan,"7,625",755,nan,"8,380","9,525"
+26 05 90.10,Low-Voltage Busways,7700,600 amp,nan,0.9,17.778,nan,"7,450","1,175",nan,"8,625","9,950"
+26 05 90.10,Low-Voltage Busways,7800,800 amp,nan,0.66,24.242,nan,"12,300","1,600",nan,"13,900","16,000"
+26 05 90.10,Low-Voltage Busways,7900,"1,200 amp",nan,0.5,32.0,nan,"23,100","2,125",nan,"25,225","28,700"
+26 05 90.10,Low-Voltage Busways,8000,"Plug-in circuitbreakers, molded case, 15 to 50 amp",1 Elec,4.4,1.818,nan,805,120,nan,925,"1,075"
+26 05 90.10,Low-Voltage Busways,8100,70 to 100 amp,nan,3.1,2.581,nan,890,171,nan,"1,061","1,225"
+26 05 90.10,Low-Voltage Busways,8200,150 to 225 amp,2 Elec,3.4,4.706,nan,"2,425",310,nan,"2,735","3,150"
+26 05 90.10,Low-Voltage Busways,8300,250 to 400 amp,nan,1.4,11.429,nan,"4,250",755,nan,"5,005","5,800"
+26 05 90.10,Low-Voltage Busways,8400,500 to 600 amp,nan,1.0,16.0,nan,"5,725","1,050",nan,"6,775","7,875"
+26 05 90.10,Low-Voltage Busways,8500,700 to 800 amp,nan,0.64,25.0,nan,"7,075","1,650",nan,"8,725","10,200"
+26 05 90.10,Low-Voltage Busways,8600,"900 to 1,000 amp",nan,0.56,28.571,nan,"10,100","1,900",nan,"12,000","13,900"
+26 05 90.10,Low-Voltage Busways,8700,"1,200 amp",nan,0.44,36.364,nan,"12,200","2,400",nan,"14,600","17,000"
+26 05 90.10,Electrical Cabinets and Enclosures,7000,"Cabinets, current transformer",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Electrical Cabinets and Enclosures,7050,"Single door, 24"" H x 24"" W x 10"" D",1 Elec,1.6,5.0,Ea.,143.0,330.0,nan,473,650
+26 05 90.10,Electrical Cabinets and Enclosures,7100,"30"" H x 24"" W x 10"" D",nan,1.3,6.154,nan,159.0,405.0,nan,564,780
+26 05 90.10,Electrical Cabinets and Enclosures,7150,"36"" H x 24"" W x 10"" D",nan,1.1,7.273,nan,500.0,480.0,nan,980,"1,275"
+26 05 90.10,Electrical Cabinets and Enclosures,7200,"30"" H x 30"" W x 10"" D",nan,1.0,8.0,nan,270.0,530.0,nan,800,"1,075"
+26 05 90.10,Electrical Cabinets and Enclosures,7250,"36"" H x 30"" W x 10"" D",nan,0.9,8.889,nan,345.0,590.0,nan,935,"1,250"
+26 05 90.10,Electrical Cabinets and Enclosures,7300,"36"" H x 36"" W x 10"" D",nan,0.8,10.0,nan,375.0,660.0,nan,"1,035","1,400"
+26 05 90.10,Electrical Cabinets and Enclosures,7500,"Double door, 48"" H x 36"" W x 10"" D",nan,0.6,13.333,nan,670.0,885.0,nan,"1,555","2,025"
+26 05 90.10,Electrical Cabinets and Enclosures,7550,"24"" H x 24"" W x 12"" D",nan,1.0,8.0,nan,200.0,530.0,nan,730,"1,000"
+26 05 90.10,Surface Raceway,90,"Metal, straight section",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Surface Raceway,100,No. 500,1 Elec,100.0,0.08,LF,1.22,5.3,nan,6.52,9.2
+26 05 90.10,Surface Raceway,110,No. 700,nan,100.0,0.08,nan,1.35,5.3,nan,6.65,9.35
+26 05 90.10,Surface Raceway,400,"No. 1500, small pancake",nan,90.0,0.089,nan,2.62,5.9,nan,8.52,11.65
+26 05 90.10,Surface Raceway,600,"No. 2000, base & cover, blank",nan,90.0,0.089,nan,2.68,5.9,nan,8.58,11.7
+26 05 90.10,Surface Raceway,800,"No. 3000, base & cover, blank",nan,75.0,0.107,nan,5.15,7.05,nan,12.2,116.15
+26 05 90.10,Surface Raceway,1000,"No. 4000, base & cover, blank",nan,65.0,0.123,nan,,8.2,8.15,nan,16.35
+26 05 90.10,Surface Raceway,1200,"No. 6000, base & cover, blank",nan,50.0,0.16,nan,,13.7,10.6,nan,24.3
+26 05 90.10,Surface Raceway,2400,"Fittings, elbows, No. 500",nan,40.0,0.2,Ea.,,2.24,13.25,nan,15.49
+26 05 90.10,Surface Raceway,2800,"Elbow cover, No. 2000",nan,40.0,0.2,nan,4.32,13.25,nan,17.57,24.5
+26 05 90.10,Surface Raceway,2880,"Tee, No. 500",nan,42.0,0.19,nan,4.28,12.6,nan,16.88,23.5
+26 05 90.10,Surface Raceway,2900,No. 2000,11 Elec,27.0,0.296,Ea.,14.4,19.6,nan,34.0,456.0
+26 05 90.10,Surface Raceway,3000,"Switch box, No. 500",nan,nan,0.5,nan,12.85,33.0,nan,45.85,63.0
+26 05 90.10,Surface Raceway,3400,"Telephone outlet, No. 1500",nan,16.0,0.5,nan,18.2,33.0,nan,51.2,69.0
+26 05 90.10,Surface Raceway,3600,"Junction box, No. 1500",nan,16.0,0.5,nan,11.5,33.0,nan,44.5,61.5
+26 05 90.10,Surface Raceway,3800,"Plugmold wired sections, No. 2000",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,2022 Bare Costs,10,COPPER BUS DUCT 10' long,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,2022 Bare Costs,501,"Indoor 3 pole 4 wire, plug-in, straight section, 225 amp",2 Elec,40.0,.400,LF,230,26.50,nan,256.50,293
+26 05 90.10,2022 Bare Costs,1000,400 amp,nan,32.0,.500,nan,188,33,nan,221,256
+26 05 90.10,2022 Bare Costs,1500,600 amp,nan,26.0,.615,nan,440,40.50,nan,480.50,545
+26 05 90.10,2022 Bare Costs,2400,800 amp,nan,20.0,800 i,nan,640,53,nan,693,785
+26 05 90.10,2022 Bare Costs,2450,"1,000 amp",nan,18.0,.889,nan,315,59,nan,374,435
+26 05 90.10,2022 Bare Costs,2500,"1,350 amp",nan,16.0,nan,nan,420,66,nan,486,560
+26 05 90.10,2022 Bare Costs,2510,"1,600 amp",nan,12.0,1.333,nan,"1,650",88.50,nan,"1,738.50","1,950"
+26 05 90.10,2022 Bare Costs,2520,"2,000 amp",nan,10.0,1.600,nan,"2,025",106,nan,"2,131","2,400"
+26 05 90.10,2022 Bare Costs,2550,"Feeder, 600 amp",nan,28.0,.571,nan,209,38,nan,247,286
+26 05 90.10,2022 Bare Costs,2600,800 amp,nan,22.0,.727,nan,780,48,nan,828,925
+26 05 90.10,2022 Bare Costs,2700,"1,000 amp",nan,20.0,.800,nan,920,53,nan,973,"1,100"
+26 05 90.10,2022 Bare Costs,2800,"1,350 amp",nan,18.0,.889 :,nan,390,59,nan,449,520
+26 05 90.10,2022 Bare Costs,2900,"1,600 amp",nan,14.0,11.143,nan,"1,500",75.50,nan,"1,575.50","1,750"
+26 05 90.10,2022 Bare Costs,3000,"2,000 amp",nan,12.0,1.333,nan,"1,825",88.50,nan,"1,913.50","2,150"
+26 05 90.10,2022 Bare Costs,3100,"Elbows, 225 amp",nan,4.0,4,Ea,"2,150",265,nan,"2,415","2,750"
+26 05 90.10,2022 Bare Costs,3200,400 amp,nan,3.6,4.444,nan,"2,625",294,nan,"2,919","3,325"
+26 05 90.10,2022 Bare Costs,3300,600 amp,nan,3.2,51,nan,"2,800",330,nan,"3,130","3,575"
+26 05 90.10,2022 Bare Costs,3400,800 amp,nan,2.8,5.714,nan,"3,700",380,nan,"4,080","4,625"
+26 05 90.10,2022 Bare Costs,3500,"1,000 amp",nan,2.6,6.154,nan,"3,950",405,nan,"4,355","4,950"
+26 05 90.10,2022 Bare Costs,3600,"1,350 amp",nan,2.4,6.667,nan,"5,300",440,nan,"5,740","6,500"
+26 05 90.10,2022 Bare Costs,3700,"1,600 amp",nan,2.2,7.273,nan,"5,875",480,nan,"6,355","7,200"
+26 05 90.10,2022 Bare Costs,3800,"2,000 amp",nan,1.8,8.889,nan,"6,975",590,nan,"7,565","8,550"
+26 05 90.10,2022 Bare Costs,4000,"End box, 225 amp",nan,34.0,1.471,nan,78,31,nan,109,132
+26 05 90.10,2022 Bare Costs,4100,400 amp,nan,32.0,.500,nan,194,33,nan,227,263
+26 05 90.10,2022 Bare Costs,4200,600 amp,nan,28.0,.571,nan,194,38,nan,232,270
+26 05 90.10,2022 Bare Costs,4300,800 amp,nan,26.0,.615,nan,194,40.50,nan,234.50,275
+26 05 90.10,2022 Bare Costs,4400,"1,000 amp",nan,24.0,.667,nan,115,44,nan,159,192
+26 05 90.10,2022 Bare Costs,4500,"1,350 amp",nan,22.0,.727,nan,181,48,nan,229,272
+26 05 90.10,2022 Bare Costs,4600,"1,600 amp",nan,20.0,.800,nan,181,53,nan,234,279
+26 05 90.10,2022 Bare Costs,4700,"2,000 amp",nan,18.0,.889,nan,222,59,nan,281,335
+26 05 90.10,2022 Bare Costs,4800,"Cable tap box end, 225 amp",nan,3.2,5,nan,"2,450",330,nan,"2,780","3,175"
+26 05 90.10,2022 Bare Costs,5000,400 amp,nan,2.6,6.154,nan,"2,950",405,nan,"3,355","3,850"
+26 05 90.10,2022 Bare Costs,5100,600 amp,nan,2.2,7.273,nan,"4,300",480,nan,"4,780","5,475"
+26 05 90.10,2022 Bare Costs,5200,800 amp,nan,2.0,8,nan,"4,525",530,nan,"5,055","5,750"
+26 05 90.10,2022 Bare Costs,5300,"1,000 amp",nan,1.6,10,nan,"4,575",660,nan,"5,235","6,025"
+26 05 90.10,2022 Bare Costs,5400,"1,350 amp",nan,1.4,11.429,nan,"2,375",755,nan,"3,130","3,725"
+26 05 90.10,2022 Bare Costs,5500,"1,600 amp",nan,1.2,13.333,nan,"2,650",885,nan,"3,535","4,200"
+26 05 90.10,2022 Bare Costs,5600,"2,000 amp",nan,nan,16,nan,"2,875","1,050",nan,"3,925","4,750"
+26 05 90.10,2022 Bare Costs,5700,"Switchboard stub, 225 amp",nan,5.4,2.963,nan,"1,225",196,nan,"1,421","1,625"
+26 05 90.10,2022 Bare Costs,5800,400 amp,nan,4.6,3.478,nan,"1,350",230,nan,"1,580","1,825"
+26 05 90.10,2022 Bare Costs,5900,600 amp,nan,4.0,4,nan,"1,425",265,nan,"1,690","1,975"
+26 05 90.10,2022 Bare Costs,6000,800 amp,nan,3.2,5,nan,"1,725",330,nan,"2,055","2,400"
+26 05 90.10,2022 Bare Costs,6100,"1,000 amp",nan,3.0,5.333,nan,"2,000",355,nan,"2,355","2,725"
+26 05 90.10,2022 Bare Costs,6200,"1,350 amp",nan,2.6,6.154,nan,"2,425",405,nan,"2,830","3,250"
+26 05 90.10,2022 Bare Costs,6300,"1,600 amp",nan,2.4,6.667,nan,"2,725",440,nan,"3,165","3,650"
+26 05 90.10,2022 Bare Costs,6400,"2,000 amp",nan,2.0,8,nan,"3,300",530,nan,"3,830","4,425"
+26 05 90.10,2022 Bare Costs,6490,"Tee fittings, 225 amp",nan,2.4,6.667,nan,"3,475",440,nan,"3,915","4,475"
+26 05 90.10,2022 Bare Costs,6500,400 amp,nan,2.0,8,nan,"3,475",530,nan,"4,005","4,600"
+26 05 90.10,2022 Bare Costs,6600,600 amp,nan,1.8,8.889,nan,"3,475",590,nan,"4,065","4,700"
+26 05 90.10,2022 Bare Costs,6700,800 amp,nan,1.6,10,nan,"2,400",660,nan,"3,060","3,625"
+26 05 90.10,2022 Bare Costs,6800,"1,350 amp",nan,1.2,13.333,nan,"3,075",885,nan,"3,960","4,700"
+26 05 90.10,2022 Bare Costs,7000,"1,600 amp",nan,1.0,16,nan,"3,525","1,050",nan,"4,575","5,450"
+26 05 90.10,26 05 90 - Residential Applications,2170,Type MC cable,1 Elec,12.31,0.65,Ea .,29.0,43.0,nan,72.0,96.0
+26 05 90.10,26 05 90 - Residential Applications,2180,EMT & wire,nan,5.0,1.6,nan,40.5,106.0,nan,146.5,202.0
+26 05 90.10,26 05 90 - Residential Applications,2200,"4-way, #14/3, type NM cable",nan,14.55,0.55,nan,17.15,36.5,nan,53.65,73.0
+26 05 90.10,26 05 90 - Residential Applications,2220,Type MC cable,nan,12.31,0.65,nan,36.0,43.0,nan,79.0,104.0
+26 05 90.10,26 05 90 - Residential Applications,2230,EMT & wire,nan,5.0,1.6,nan,47.5,106.0,nan,153.5,210.0
+26 05 90.10,26 05 90 - Residential Applications,2250,"S.P., 20 amp, #12/2, type NM cable",nan,13.33,0.6,nan,12.3,39.5,nan,51.8,72.5
+26 05 90.10,26 05 90 - Residential Applications,2270,Type MC cable,nan,11.43,0.7,nan,26.0,46.5,nan,72.5,97.5
+26 05 90.10,26 05 90 - Residential Applications,2280,EMT & wire,nan,4.85,1.649,nan,45.0,109.0,nan,154.0,212.0
+26 05 90.10,26 05 90 - Residential Applications,2290,"S.P. rotary dimmer, 600 W, no wiring",nan,17.0,0.471,nan,33.5,31.0,nan,64.5,83.5
+26 05 90.10,26 05 90 - Residential Applications,2300,"S.P. rotary dimmer, 600 W, type NM cable",nan,14.55,0.55,nan,38.0,36.5,nan,74.5,96.0
+26 05 90.10,26 05 90 - Residential Applications,2320,Type MC cable,nan,12.31,0.65,nan,52.0,43.0,nan,95.0,121.0
+26 05 90.10,26 05 90 - Residential Applications,2330,EMT & wire,nan,5.0,1.6,nan,70.0,106.0,nan,176.0,234.0
+26 05 90.10,26 05 90 - Residential Applications,2350,"3-way rotary dimmer, type NM cable",nan,13.33,0.6,nan,25.5,39.5,nan,65.0,87.0
+26 05 90.10,26 05 90 - Residential Applications,2370,Type MC cable,nan,11.43,0.7,nan,39.5,46.5,nan,86.0,113.0
+26 05 90.10,26 05 90 - Residential Applications,2380,EMT & wire,nan,4.85,1.649,nan,58.0,109.0,nan,167.0,226.0
+26 05 90.10,26 05 90 - Residential Applications,2400,"Interval timer wall switch, 20 amp, 1-30 min., #12/2",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,26 05 90 - Residential Applications,2410,Type NM cable,1 Elec,14.55,0.55,Ea .,69.0,36.5,nan,105.5,130.0
+26 05 90.10,26 05 90 - Residential Applications,2420,Type MC cable,nan,12.31,0.65,nan,75.0,43.0,nan,118.0,147.0
+26 05 90.10,26 05 90 - Residential Applications,2430,EMT & wire,nan,5.0,1.6,nan,102.0,106.0,nan,208.0,269.0
+26 05 90.10,26 05 90 - Residential Applications,2500,Decorator style,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,26 05 90 - Residential Applications,2510,"S.P., 15 amp, type NM cable",1 Elec,17.1,0.468,Ea .,13.4,31234.0,nan,44.4,61.0
+26 05 90.10,26 05 90 - Residential Applications,2520,Type MC cable,nan,14.3,0.559,nan,27.5,37.0,nan,64.5,85.0
+26 05 90.10,26 05 90 - Residential Applications,2530,EMT & wire,nan,5.71,1.401,nan,43.0,93.0,nan,136.0,185.0
+26 05 90.10,26 05 90 - Residential Applications,2550,"3-way, #14/3, type NM cable",nan,114.55,0.55,nan,15.5,36.5,nan,52.0,71.0
+26 05 90.10,26 05 90 - Residential Applications,2570,Type MC cable,nan,12.31,0.65,nan,34.5,43.0,nan,77.5,102.0
+26 05 90.10,26 05 90 - Residential Applications,2580,EMT & wire,nan,5.0,1.6,nan,46.0,126.0,nan,152.0,208.0
+26 05 90.10,26 05 90 - Residential Applications,2600,"4-way, #14/3, type NM cable",nan,14.55,0.55,nan,22.5,36.5,nan,59.0,79.0
+26 05 90.10,26 05 90 - Residential Applications,2620,Type MC cable,nan,12.31,0.65,nan,41.5,43.0,nan,84.5,110.0
+26 05 90.10,26 05 90 - Residential Applications,2630,EMT & wire,nan,5.0,1.6,nan,53.0,106.0,nan,159.0,216.0
+26 05 90.10,26 05 90 - Residential Applications,2650,"S.P., 20 amp, #12/2, type NM cable",nan,13.33,0.6,nan,17.8,39.5,nan,57.3,78.5
+26 05 90.10,26 05 90 - Residential Applications,2670,Type MC cable,nan,11.43,0.7,nan,31.5,46.5,nan,78.0,104.0
+26 05 90.10,26 05 90 - Residential Applications,2680,EMT & wire,nan,4.85,1.649,nan,50.5,109.0,nan,159.5,218.0
+26 05 90.10,26 05 90 - Residential Applications,2700,"S.P., slide dimmer, type NM cable",nan,17.1,0.468,nan,39.5,31.0,nan,70.5,89.0
+26 05 90.10,26 05 90 - Residential Applications,2720,Type MC cable,nan,14.3,0.559,nan,53.0,37.0,nan,90.0,114.0
+26 05 90.10,26 05 90 - Residential Applications,2730,EMT & wire,1,5.71,11.401,nan,71.5,93.0,nan,164.5,217.0
+26 05 90.10,26 05 90 - Residential Applications,2750,"S.P., touch dimmer, type NM cable",nan,17.1,0.468,nan,32.0,31.0,nan,63.0,81.5
+26 05 90.10,26 05 90 - Residential Applications,2770,Type MC cable,nan,14.3,0.559,nan,46.0,37.0,nan,83.0,106.0
+26 05 90.10,26 05 90 - Residential Applications,2780,EMT & wire,nan,5.71,1.401,nan,64.5,93.0,nan,157.5,209.0
+26 05 90.10,26 05 90 - Residential Applications,2800,"3 way touch dimmer, type NM cable",nan,13.33,0.6,nan,44.5,39.5,nan,84.0,108.0
+26 05 90.10,26 05 90 - Residential Applications,2820,Type MC cable,nan,11.43,0.7,nan,58.5,46.5,nan,105.0,134.0
+26 05 90.10,26 05 90 - Residential Applications,2830,EMT & wire,nan,14.85,1.649,nan,76.5,109.0,nan,185.5,247.0
+26 05 90.10,3000 Combination devices,3100,"S.P. switch / 15 amp recpt., ivory, 1 gang box, plate",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,3000 Combination devices,3110,Type NM cable,1 Elec,11.43,0.7,Ea .,21.0,46.5,nan,67.5,92.5
+26 05 90.10,3000 Combination devices,3120,Type MC cable,nan,10.0,0.8,nan,35.0,53.0,nan,88.0,117.0
+26 05 90.10,3000 Combination devices,3130,EMT & wire,nan,4.4,1.818,nan,53.5,120.0,nan,173.5,238.0
+26 05 90.10,3000 Combination devices,3150,"S.P. switch / pilotlight, type NM cable",nan,11.43,0.7,nan,22.5,46.5,nan,69.0,94.0
+26 05 90.10,3000 Combination devices,3170,Type MC cable,nan,10.0,800.0,nan,36.5,53.0,nan,89.5,119.0
+26 05 90.10,3000 Combination devices,3180,EMT & wire,nan,4.43,1.806,nan,55.0,120.0,nan,175.0,239.0
+26 05 90.10,3000 Combination devices,3190,"2-S.P. switches, 2-#14/2, no wiring",nan,14.0,0.571,nan,5.4,38.0,nan,43.4,62.0
+26 05 90.10,3000 Combination devices,3200,"2-S.P. switches, 2-#14/2, type NM cables",nan,10.0,0.8,nan,23.5,53.0,nan,76.5,104.0
+26 05 90.10,3000 Combination devices,3220,Type MC cable,nan,8.89,0.9,nan,40.5,59.5,nan,100.0,133.0
+26 05 90.10,3000 Combination devices,3230,EMT & wire,nan,4.1,1.951,nan,59.5,129.0,nan,188.5,258.0
+26 61 23.55,26 71 13 - Motors Applications,8310,Circular 18 W linear fluorescent LED 5000K MOD lamp,1 Elec,62.4,0.128,Ea .,405,8.5,nan,413.50,460
+26 61 23.55,26 71 13 - Motors Applications,8320,Circular 18 W linear fluorescent LED 4100K MOD lamp,nan,62.4,0.128,nan,430,8.5,nan,438.50,490
+26 61 23.55,26 71 13 - Motors Applications,10,"MOTORS 230/460 V, 60 HZ",nan,nan,nan,nan,,nan,nan,nan,nan
+26 61 23.55,26 71 13 - Motors Applications,50,"Dripproof, premium efficiency, 1.15 service factor",nan,nan,nan,nan,,nan,nan,nan,nan
+26 61 23.55,26 71 13 - Motors Applications,60,"1,800 RPM, 1/4 HP",1 Elec,5.33,1.501,Ea .,196,99.5,nan,295.50,365
+26 61 23.55,26 71 13 - Motors Applications,70,1/3 HP,nan,5.33,1.501,nan,159,99.5,nan,258.50,325
+26 61 23.55,26 71 13 - Motors Applications,80,1/2 HP,nan,5.33,1.501,nan,162,99.5,nan,261.50,325
+26 61 23.55,26 71 13 - Motors Applications,90,3/4 HP,nan,5.33,1.501,nan,249,99.5,nan,348.50,420
+26 61 23.55,26 71 13 - Motors Applications,100,1 HP,nan,4.5,1.778,nan,278,118.0,nan,396,480
+26 61 23.55,26 71 13 - Motors Applications,250,5 HP,nan,4.5,1.778,nan,615,118.0,nan,733,855
+26 61 23.55,26 71 13 - Motors Applications,350,10 HP,nan,4.0,2.0,nan,"1,025",132.0,nan,"1,157","1,325"
+26 61 23.55,26 71 13 - Motors Applications,450,20 HP,2 Elec,5.2,3.077,nan,"1,850",204.0,nan,"2,054","2,350"
+26 71 13.40,Motors Explosion Proof,10,"MOTORS EXPLOSION PROOF, 208-230 / 460 V, 60 HZ",nan,nan,nan,nan,,nan,nan,nan,nan
+26 71 13.40,Motors Explosion Proof,20,"1,800 RPM, 1/4 HP",1 Elec,555322551.60027,Ea.,630.0,,106,nan,736.0,850
+26 71 13.40,Motors Explosion Proof,30,1/3 HP,nan,nan,1.600,nan,500,106.0,nan,606,705
+26 71 13.40,Motors Explosion Proof,40,1/2 HP,nan,5.0,1.600,nan,940,106.0,nan,"1,046","1,175"
+26 71 13.40,Motors Explosion Proof,50,3/4 HP,nan,5.33,1.501,nan,885,99.5,nan,984.50,"1,125"
+26 71 13.40,Motors Explosion Proof,60,1 HP,nan,4.2,1.905,nan,560,126.0,nan,686,800
+26 71 13.40,Motors Explosion Proof,90,5 HP,nan,4.2,1.905,nan,890,126.0,nan,"1,016","1,150"
+26 71 13.40,Motors Explosion Proof,110,10 HP,nan,3.7,2.162,nan,"1,300",143.0,nan,"1,443","1,650"
+26 71 13.40,Motors Explosion Proof,130,20 HP,2 Elec,nan,3.200,nan,"2,125",212.0,nan,"2,337","2,650"
+26 71 13.40,Motors Explosion Proof,2000,"3,600 RPM, 1/4 HP",1 Elec,nan,1.600,nan,420,106.0,nan,526,620
+26 71 13.40,Motors Explosion Proof,2010,1/3 HP,nan,nan,1.600,nan,445,106.0,nan,551,645
+26 71 13.40,Motors Explosion Proof,2020,1/2 HP,nan,nan,1.600,nan,630,106.0,nan,736,845
+26 71 13.40,Motors Explosion Proof,2030,3/4 HP,nan,nan,1.600,nan,645,106.0,nan,751,865
+26 71 13.40,Motors Explosion Proof,2040,1 HP,nan,4.2,1.905,nan,605,126.0,nan,731,850
+26 71 13.40,Motors Explosion Proof,2070,5 HP,nan,4.2,1.905,nan,975,126.0,nan,"1,101","1,250"
+26 71 13.40,Motors Explosion Proof,2090,10 HP,nan,3.7,2.162,nan,"1,275",143.0,nan,"1,418","1,625"
+26 71 13.40,Motors Explosion Proof,2110,20 HP,2 Elec,5.0,3.200,nan,"2,150",212.0,nan,"2,362","2,675"
+26 56 13.10,Lighting Poles,4500,"Steel pole, galvanized, 8' high",1 Elec,3.8,2.105,Ea.,750,139,nan,889,"1,025"
+26 56 13.10,Lighting Poles,4600,20' high,R-3,2.6,7.692,nan,"1,125",505,66.5,"1,696.50","2,050"
+26 56 13.10,Lighting Poles,4800,30' high,nan,2.3,8.696,nan,"1,325",575,75.5,"1,975.50","2,375"
+26 56 13.10,Lighting Poles,5000,35' high,nan,2.2,9.091,nan,"1,425",600,79.0,"2,104","2,550"
+26 56 13.10,Lighting Poles,5200,40' high,nan,1.7,11.765,nan,"1,575",775,102.0,"2,452","2,975"
+26 56 13.10,Lighting Poles,5400,"Bracket arms, 1 orm",1 Elec,8.0,1.0,nan,335,66,nan,401,470
+26 56 13.10,Lighting Poles,5600,2 arms,nan,8.0,1.0,nan,620,66,nan,686,780
+26 56 13.10,Lighting Poles,5800,3 arms,nan,5.3,1.509,nan,700,100,nan,800,920
+26 56 13.10,Lighting Poles,6000,4 arms,nan,5.3,1.509,nan,855,100,nan,955,"1,100"
+26 56 13.10,Lighting Poles,6462,20' high,R-3,2.9,6.897,nan,"1,125",455,60.0,"1,640","1,975"
+26 56 13.10,Lighting Poles,6463,30' high,R-3,2.3,8.696,Eq.,"1,325",575,75.5,"1,975.50","2,375"
+26 56 13.10,Lighting Poles,6464,35' high,nan,2.4,8.333,nan,"1,425",550,72.5,"2,047.50","2,475"
+26 56 13.10,Lighting Poles,6470,"Light pole conc base, max 6' buried, 2' exposed, 18"" diam., average cost",(-6),6.0,8.0,nan,231,380,9.3,620.30,825
+26 56 19.55,Roadway LED Luminaire,10,ROADWAY LED LUMINAIRE,nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 19.55,Roadway LED Luminaire,100,"LED fixture, 72 LEDs, 120 V AC or 12 V DC, equal to 60 watt",5G555555515 Elec,2.7,2.963,Ea.,575,196.0,nan,771,925
+26 56 19.55,Roadway LED Luminaire,110,"108 LEDS, 120 V AC or 12 V DC, equal to 90 watt",G,2.7,2.963,nan,770,196.0,nan,966,"1,125"
+26 56 19.55,Roadway LED Luminaire,120,"144 LEDs, 120 V AC or 12 V DC, equal to 120 watt",G,2.7,2.963,nan,945,196.0,nan,"1,141","1,350"
+26 56 19.55,Roadway LED Luminaire,130,"252 LEDs, 120 V AC or 12 V DC, equal to 210 watt",2 Elec,4.4,3.6361,nan,"1,300",241.0,nan,"1,541","1,800"
+26 56 19.55,Roadway LED Luminaire,140,"Replaces high pressure sodium fixture, 75 watt",G 1 Elec,2.7,2.963,nan,410,196.0,nan,606,740
+26 56 19.55,Roadway LED Luminaire,150,125 watt,G,2.7,2.963,nan,470,196.0,nan,666,805
+26 56 19.55,Roadway LED Luminaire,160,150 watt,nan,2.7,2.963,nan,550,196.0,nan,746,895
+26 56 19.55,Roadway LED Luminaire,170,175 watt,G,2.7,2.963,nan,810,196.0,nan,"1,006","1,175"
+26 56 19.55,Roadway LED Luminaire,180,200 watt,G,2.7,2.963,nan,770,196.0,nan,966,"1,150"
+26 56 19.55,Roadway LED Luminaire,190,250 watt,2 Elec,4.4,3.636,nan,885,241.0,nan,"1,126","1,325"
+26 56 19.55,Roadway LED Luminaire,200,320 watt,nan,4.4,3.636,nan,965,241.0,nan,"1,206","1,400"
+26 56 19.60,Parking LED Lighting,10,PARKING LED LIGHTING,nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 19.60,Parking LED Lighting,100,"Round pole mounting, 88 lamp watts",G 1 Elec,2.0,4.0,Eo.,"1,300",265.0,nan,"1,565","1,825"
+26 56 21.20,Roadway Luminaire,10,ROADWAY LUMINAIRE,nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 21.20,Roadway Luminaire,2650,"Roadway area luminaire, low pressure sodium, 135 watt",1 Elec,22.0,4.0,Ea.,755.0,265.0,nan,"1,020","1,225"
+26 56 21.20,Roadway Luminaire,2700,180 watt,nan,nan,4.0,nan,915.0,265.0,nan,"1,180","1,400"
+26 56 21.20,Roadway Luminaire,2750,"Metal halide, 400 watt",2 Elec,4.4,3.636,nan,665.0,241.0,nan,906,"1,100"
+26 56 21.20,Roadway Luminaire,2760,"1,000 watt",nan,nan,4.0,nan,805.0,265.0,nan,"1,070","1,275"
+26 56 21.20,Roadway Luminaire,2780,"High pressure sodium, 400 watt",nan,4.4,3.636,nan,800.0,241.0,nan,"1,041","1,250"
+26 56 21.20,Roadway Luminaire,2790,"1,000 watt",nan,4.0,4.0,nan,910.0,265.0,nan,"1,175","1,400"
+26 56 23.10,Exterior Fixtures,10,EXTERIOR FIXTURES With lamps,nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 23.10,Exterior Fixtures,200,"Wall mounted, incandescent, 100 watt",1 Elec,8.0,1.0,Ea.,67.0,66.0,nan,133.0,172.0
+26 56 23.10,Exterior Fixtures,400,"Quartz, 500 watt",nan,5.3,1.509,nan,123.0,100.0,nan,223.0,284.0
+26 56 23.10,Exterior Fixtures,1100,"Wall pack, low pressure sodium, 35 watt",nan,4.0,2.0,nan,182.0,132.0,nan,314.0,400.0
+26 56 23.10,Exterior Fixtures,1150,55 watt,nan,42.0,nan,nan,214.0,132.0,nan,346.0,435.0
+26 56 23.55,Exterior LED Fixtures,10,EXTERIOR LED FIXTURES,nan,nan,nan,nan,nan,nan,nan,nan,3
+26 56 23.55,Exterior LED Fixtures,100,"Wall mounted, indoor / outdoor, 12 watt",G 1 Elec,119.0,0.8,Eo.,320.0,53.0,nan,373.0,430
+26 56 23.55,Exterior LED Fixtures,110,32 watt,G,10.0,0.8,nan,410.0,53.0,nan,463.0,530
+26 51 13.55,Interior LED Fixtures,3010,"One light bar 8' long, 74 watt",55555GGGG2GElec55,12.2,1.311,Eq.,300,87.0,nan,387,460
+26 51 13.55,Interior LED Fixtures,3020,"Two light bar 4' long, 74 watt",1 Elec,5.7,1.404,nan,385,93.0,nan,478,565
+26 51 13.55,Interior LED Fixtures,3030,"Two light bar 8' long, 148 watt",2 Elec,8.8,1.818,nan,370,120.0,nan,490,585
+26 51 13.55,Interior LED Fixtures,4000,"High bay, surface mounted, round, 150 watts",nan,5.41,2.959,nan,475,196.0,nan,671,810
+26 51 13.55,Interior LED Fixtures,4010,"2 bars, 164 watts",nan,5.41,2.959,nan,390,196.0,nan,586,715
+26 51 13.55,Interior LED Fixtures,4020,"3 bars, 246 watts",nan,5.01,3.197,nan,520,212.0,nan,732,890
+26 51 13.55,Interior LED Fixtures,4030,"4 bars, 328 watts",nan,4.6,3.478,nan,565,230.0,nan,795,960
+26 51 13.55,Interior LED Fixtures,4040,"5 bars, 410 watts",3 Elec,4.2,5.716,nan,770,380.0,nan,"1,150","1,400"
+26 51 13.55,Interior LED Fixtures,4050,"6 bars, 492 watts",nan,3.8,6.324,nan,"1,025",420.0,nan,"1,445","1,750"
+26 51 13.55,Interior LED Fixtures,4060,"7 bars, 574 watts",nan,3.39,7.075,nan,"1,025",470.0,nan,"1,495","1,825"
+26 51 13.55,Interior LED Fixtures,4070,"8 bars, 656 watts",nan,2.99,8.029,nan,"1,350",530.0,nan,"1,880","2,27598"
+26 51 13.55,Interior LED Fixtures,5000,"Track, lighthead, 6 watt",1 Elec,32.0,0.25,nan,56,16.55,nan,72.55,86
+26 51 13.55,Interior LED Fixtures,5010,9 watt,"""",32.0,0.25,nan,63.50,16.55,nan,80.05,94.50
+26 51 13.55,Interior LED Fixtures,6000,"Garage, surface mounted, 103 watts",2 Elec,6.5,2.462,nan,"1,000",163.0,nan,"1,163","1,350"
+26 51 13.55,Interior LED Fixtures,6100,"pendent mounted, 80 watts",nan,6.5,2.462,nan,740,163.0,nan,903,"1,050"
+26 51 13.55,Interior LED Fixtures,6200,95 watts,nan,6.5,2.462,nan,835,163.0,nan,998,"1,150"
+26 51 13.55,Interior LED Fixtures,6300,125 watts,nan,6.5,2.462,nan,850,163.0,nan,"1,013","1,175"
+26 52 13.10,Emergency Lighting and Battery Units,10,EMERGENCY LIGHTING AND BATTERY UNITS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 52 13.10,Emergency Lighting and Battery Units,300,"Emergency light units, battery operated",nan,nan,nan,nan,,nan,nan,nan,nan
+26 52 13.10,Emergency Lighting and Battery Units,350,"Twin sealed beam light, 25 W, 6 V each",nan,nan,nan,nan,,nan,nan,nan,nan
+26 52 13.10,Emergency Lighting and Battery Units,500,Lead battery operated,1 Elec,4.0,2.0,Ea.,143.0,132.0,nan,275.0,355.0
+26 52 13.10,Emergency Lighting and Battery Units,700,Nickel cadmium battery operated,nan,4.0,2.0,nan,350.0,132.0,nan,4821.0,580.0
+26 52 13.10,Emergency Lighting and Battery Units,900,Self-contained fluorescent lamp pack,nan,10.0,0.8,nan,235.0,53.0,nan,288.0,340.0
+26 52 13.16,Exit Signs,10,EXIT SIGNS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 52 13.16,Exit Signs,80,"Exit light ceiling or wall mount, incandescent, single face",1 Elec,8.0,1.0,Eq.,60.5,66.0,nan,126.5,165.0
+26 52 13.16,Exit Signs,100,Double face,nan,6.7,1.194,nan,60.5,79.0,nan,139.5,184.0
+26 52 13.16,Exit Signs,200,"LED standard, single face",55555G,8.0,1.0,nan,47.5,66.0,nan,113.5,151.0
+26 52 13.16,Exit Signs,220,Double face,nan,6.7,1.194,nan,51.0,79.0,nan,130.0,173.0
+26 52 13.16,Exit Signs,230,"LED vandal-resistant, single face",nan,7.27,1.1,nan,310.0,73.0,nan,383.0,450.0
+26 52 13.16,Exit Signs,240,"LED w / battery unit, single face",nan,4.4,1.818,nan,335.0,120.0,nan,455.0,545.0
+26 52 13.16,Exit Signs,260,Double face,nan,4.0,2.0,nan,405.0,132.0,nan,537.0,640.0
+26 52 13.16,Exit Signs,262,"LED w /battery unit, vandal resistant, single face",nan,4.4,1.818,nan,350.0,120.0,nan,470.0,565.0
+26 52 13.16,Exit Signs,270,Combination emergency light units and exit sign,nan,4.0,2.0,nan,149.0,132.0,nan,281.0,360.0
+26 51 13.50,Interior Lighting Fixtures,3500,"6"" diameter",11 Elec,20.0,0.4,Eo.,169.50,26.5,nan,96.0,116.0
+26 51 13.50,Interior Lighting Fixtures,3510,"Troffer parabolic lay in, 1 ' W x 4' 1 with one 32 W T8",5G55,5.7,1.404,nan,nan,93.0,nan,213.0,269.0
+26 51 13.50,Interior Lighting Fixtures,3520,1 ' W x 4 ' L with two 32 W T8,G,5.3,1.509,nan,87.50,100.0,nan,187.5,245.0
+26 51 13.50,Interior Lighting Fixtures,3525,2 ' W x 2 ' L with two U32 W T8,G,5.7,1.404,nan,nan,93.0,nan,218.0,275.0
+26 51 13.50,Interior Lighting Fixtures,3530,2' W x 4 ' L with three 32 W T8,G,5.0,1.6,nan,nan,106.0,nan,239.0,305.0
+26 51 13.50,Interior Lighting Fixtures,3531,"Intrfxtr, fluor, troffer prismatic lay-in, 2 ' W x 4'l w / three 32 W T8",nan,5.0,1.6,nan,nan,106.0,nan,258.0,325.0
+26 51 13.50,Interior Lighting Fixtures,4450,"Incandescent, high hat can, round alzak reflector, prewired",nan,nan,nan,nan,,nan,nan,nan,nan
+26 51 13.50,Interior Lighting Fixtures,4470,100 watt,11 Elec,8.0,1.0,Eg.,[69,669.0,nan,135.0,175.0
+26 51 13.50,Interior Lighting Fixtures,4480,150 watt,118,nan,11.0,nan,105,nan,nan,171.0,215.0
+26 51 13.50,Interior Lighting Fixtures,4500,300 watt,nan,6.7,1.194,nan,244,79.0,nan,323.0,385.0
+26 51 13.50,Interior Lighting Fixtures,4600,"Square glass lens with metal trim, prewired",nan,nan,nan,nan,,nan,nan,nan,nan
+26 51 13.50,Interior Lighting Fixtures,4630,100 watt,1 Elec,6.7,1.194,Eq.,55.50,79.0,nan,134.5,178.0
+26 51 13.50,Interior Lighting Fixtures,4680,150 watt,nan,6.7,1.194,nan,99,79.0,nan,178.0,226.0
+26 51 13.50,Interior Lighting Fixtures,4700,200 watt,nan,6.7,1.194,nan,99,79.0,nan,178.0,226.0
+26 51 13.50,Interior Lighting Fixtures,4800,300 watt,nan,5.7,1.404,nan,148,93.0,nan,241.0,300.0
+26 51 13.50,Interior Lighting Fixtures,4900,"Ceiling /wall, surface mounted, metal cylinder, 75 watt",nan,10.0,0.8,nan,47.50,53.0,nan,100.5,131.0
+26 51 13.50,Interior Lighting Fixtures,4920,150 watt,1,10.8,nan,nan,87 !,53.0,nan,140.0,174.0
+26 51 13.50,Interior Lighting Fixtures,5200,"Ceiling, surface mounted, opal glass drum",nan,nan,nan,nan,,nan,nan,nan,nan
+26 51 13.50,Interior Lighting Fixtures,5300,"8"", one 60 watt lamp",11 Elec,10.0,800.0,Ea.,66,53.0,nan,119.0,151.0
+26 51 13.50,Interior Lighting Fixtures,5400,"10"", two 60 watt lamps",nan,8.0,1.0,nan,73.50,66.0,nan,139.5,179.0
+26 51 13.50,Interior Lighting Fixtures,5500,"12"", four 60 watt lamps",nan,6.7,1.194,nan,102,79.0,nan,181.0,230.0
+26 51 13.50,Interior Lighting Fixtures,6010,"Vapor tight, incandescent, ceiling mounted, 200 watt",nan,6.2,1.29,nan,71,85.5,nan,156.5,205.0
+26 51 13.50,Interior Lighting Fixtures,6100,"Fluorescent, surface mounted, 2 lamps, 4' L, RS, 40 watt",nan,3.2,2.5,nan,121,166.0,nan,287.0,380.0
+26 51 13.50,Interior Lighting Fixtures,6850,"Vandalproof, surface mounted, fluorescent, two 32 watt T8",G,3.2,2.5,nan,271,166.0,nan,437.0,545.0
+26 51 13.50,Interior Lighting Fixtures,6860,"Incandescent, one 150 watt",-,8.0,nan,nan,101,66.0,nan,167.0,210.0
+26 51 13.50,Interior Lighting Fixtures,7500,"Ballast replacement, by weight of ballast, to 15' high",nan,nan,nan,nan,,nan,nan,nan,nan
+26 51 13.50,Interior Lighting Fixtures,7520,"Indoor fluorescent, less than 2 lb.",[1 Elec,10.0,0.8,Ea.,27.50,53.0,nan,80.5,109.0
+26 51 13.50,Interior Lighting Fixtures,7540,"Two 40W, watt reducer, 2 to 5 lb.",nan,9.4,0.851,nan,69.50,56.5,nan,126.0,160.0
+26 51 13.50,Interior Lighting Fixtures,7560,"Two F96 slimline, over 5 lb.",nan,8.0,1.0,1,110,66.0,nan,176.0,220.0
+26 51 13.50,Interior Lighting Fixtures,7580,"Vaportite ballast, less than 2 lb.",nan,9.4,0.851,nan,27.50,56.5,nan,84.0,114.0
+26 51 13.50,Interior Lighting Fixtures,7600,2 lb. to 5 lb.,nan,8.9,0.899,nan,69.50,59.5,nan,129.0,165.0
+26 51 13.50,Interior Lighting Fixtures,76201,Over 5 lb.,nan,17.6,1.053,nan,110,69.5,nan,179.5,225.0
+26 51 13.50,Interior Lighting Fixtures,7630,Electronic ballast for two tubes,nan,8.0,1.0,nan,38,66.0,nan,104.0,141.0
+26 51 13.50,Interior Lighting Fixtures,7640,Dimmable ballast one lamp,G,8.0,nan,nan,107,66.0,nan,173.0,216.0
+26 51 13.50,Interior Lighting Fixtures,7650,Dimmable ballast two-lamp,nan,7.6,1.053,nan,112,69.5,nan,181.5,227.0
+26 51 13.55,Interior LED Fixtures,10,INTERIOR LED FIXTURES Inc. lamps and mounting hardware,nan,nan,nan,nan,,nan,nan,nan,nan
+26 51 13.55,Interior LED Fixtures,100,"Downlight, recess mounted, 7.5"" diameter, 25 watt",5G5555555155Elec,8.0,1,Ea.,350.0,66.0,nan,416.0,485.0
+26 51 13.55,Interior LED Fixtures,120,"10"" diameter, 36 watt",G,8.0,1,nan,370.0,66.0,nan,436.0,505.0
+26 51 13.55,Interior LED Fixtures,160,"cylinder, 10 watts",G,8.0,*,nan,63.0,66.0,nan,129.0,168.0
+26 51 13.55,Interior LED Fixtures,180,20 watts,G,8.0,nan,nan,89.0,nan,nan,155.0,197.0
+26 51 13.55,Interior LED Fixtures,1000,"Troffer, recess mounted, 2' x 4', 3,200 lumens",G,5.3,1.509,nan,143.0,100.0,nan,243.0,305.0
+26 51 13.55,Interior LED Fixtures,1010,"4,800 lumens",G,5.0,1.600,nan,141.0,1122222.0,nan,247.0,310.0
+26 51 13.55,Interior LED Fixtures,1020,"6,400 lumens",G,4.7,1.702,nan,192.0,113.0,nan,305.0,380.0
+26 51 13.55,Interior LED Fixtures,1100,"Troffer retrofitlamp, 38 watt",G,21.0,.381,nan,61.0,25.0,nan,86.0,105.0
+26 51 13.55,Interior LED Fixtures,1110,60 watt,G,20.0,.400,nan,125.0,26.5,nan,151.5,177.0
+26 51 13.55,Interior LED Fixtures,1120,100 watt,G,18.0,.444,nan,144.0,29.5,nan,173.5,202.0
+26 51 13.55,Interior LED Fixtures,-1200,"Troffer, volumetric recess mounted, 2' x 2'",G,5.7,1.404,nan,420.0,93.0,nan,513.0,600.0
+26 51 13.55,Interior LED Fixtures,2000,"Strip, surface mounted, one light bar 4' long, 3,500 K",G,8.5,.941,nan,315.0,62.5,nan,377.5,440.0
+26 51 13.55,Interior LED Fixtures,2010,"5,000 I",G,8.0,1,nan,272.0,66.0,nan,338.0,400.0
+26 51 13.55,Interior LED Fixtures,2020,"Two light bar 4' long, 5,000 K",G,7.0,1.143,nan,425.0,75.5,nan,500.5,580.0
+26 51 13.55,Interior LED Fixtures,3000,"Linear, suspended mounted, one light bar 4' long, 37 watt",nan,6.7,1.194,nan,183.0,79.0,nan,262.0,320.0
+26 54 13.20,Explosion Proof,10,"EXPLOSION PROOF, incl. lamps, mounting hardware and connections",nan,nan,nan,nan,,nan,nan,nan,nan
+26 54 13.20,Explosion Proof,6510,"Incandescent, ceiling mounted, 200 watt",1 Elec,4.0,2.0,Ea.,"1,925",132.0,nan,"2,057","2,300"
+26 54 13.20,Explosion Proof,6600,"Fluorescent, RS, 4' long, ceiling mounted, two 40 watt","""",2.7,2.963,"""","5,575",196.0,nan,"5,771","6,450"
+26 55 33.10,Warning Beacons,10,WARNING BEACONS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 55 33.10,Warning Beacons,15,Surface mount with colored or clear lens,nan,nan,nan,nan,,nan,nan,nan,nan
+26 55 33.10,Warning Beacons,100,Rotating beacon,nan,nan,nan,nan,,nan,nan,nan,nan
+26 55 33.10,Warning Beacons,110,"120V, 40 watt halogen",1 Elec,3.5,2.286,Eq.,235.0,155.0,nan,386.0,485.0
+26 55 33.10,Warning Beacons,120,"24V, 20 watt halogen",nan,3.5,2.286,"""",275.0,151.0,nan,426.0,525.0
+26 55 33.10,Warning Beacons,200,Steady beacon,nan,nan,nan,nan,,nan,nan,nan,nan
+26 55 33.10,Warning Beacons,210,"120V, 40 watt halogen",Elec,3.5,2.286,Ea.,267.0,1555.0,nan,418.0,520.0
+26 55 33.10,Warning Beacons,220,"24V, 20 watt",nan,3.5,2.286,nan,275.0,151.0,nan,426.0,525.0
+26 55 33.10,Warning Beacons,230,"12V DC, incandescent",nan,3.5,2.286,nan,109.0,151.0,nan,260.0,345.0
+26 55 33.10,Warning Beacons,300,Flashing beacon,nan,nan,nan,nan,,nan,nan,nan,nan
+26 55 33.10,Warning Beacons,310,"120V, 40 watt halogen",1 Elec,3.5,2.286,Ea.,229.0,1552.0,nan,380.0,475.0
+26 55 33.10,Warning Beacons,320,"24V, 20 watt halogen","""",3.5,2.286,"""",254.0,151.0,nan,405.0,505.0
+26 55 33.10,Warning Beacons,410,12V DC with two 6V lantern batteries,11 Elec,7.0,1.143,Ea.,238.0,75.5,nan,313.5,375.0
+26 55 61.10,Lights,10,LIGHTS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 55 61.10,Lights,2000,"Lights, border, quartz, reflector, vented,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 55 61.10,Lights,2100,colored or white,1 Elec,20.0,0.32,LF,191,26.5,nan,217.50,250
+26 55 61.10,Lights,2500,"Spotlight, follow spot, with transformer, 2,100 watt",PP,nan,nan,Eq.,"4,450",132.0,nan,"4,582","5,075"
+26 55 61.10,Lights,2600,"For no transformer, deduct",nan,nan,nan,nan,"1,000",nan,nan,"1,000","1,100"
+26 55 61.10,Lights,3000,"Stationary spot, fresnel quartz, 6"" lens",1 Elec,4.0,222.0,nan,960,132.0,nan,"1,092","1,250"
+26 55 61.10,Lights,3100,"8"" lens",nan,4.0,2.0,nan,255,132.0,nan,387,480
+26 55 61.10,Lights,3500,"Ellipsoidal quartz, 1,000 watt, 6"" lens",nan,4.0,nan,nan,375,132.0,nan,507,610
+26 55 61.10,Lights,3600,"12"" lens",nan,4.0,2.0,nan,665,132.0,nan,797,930
+26 55 61.10,Lights,4000,"Strobe light, 1 to 15 flashes per second, quartz",nan,34.0,2.667,nan,910,177.0,nan,"1,087","1,250"
+26 55 61.10,Lights,4500,"Color wheel, portable, five hole, motorized",nan,4.0,2.0,nan,233,132.0,nan,365,455
+26 56 13.10,Lighting Poles,10,LIGHTING POLES,nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 13.10,Lighting Poles,2800,"Light poles, anchor base",nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 13.10,Lighting Poles,2820,not including concrete bases,nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 13.10,Lighting Poles,2840,"Aluminum pole, 8' high",1 Elec,4.0,2.0,Ea.,475,132.0,nan,607,720
+26 56 13.10,Lighting Poles,3000,20' high,R-3,2.9,6.897,1,875,455.0,60.0,"1,390","1,700"
+26 56 13.10,Lighting Poles,3200,30' high,nan,2.6,7.692,nan,"1,625",505.0,66.5,"2,196.50","2,600"
+26 56 13.10,Lighting Poles,3400,35' high,nan,2.3,8.696,nan,"2,125",575.0,75.5,"2,775.50","3,275"
+26 56 13.10,Lighting Poles,3600,40' high,nan,2.0,nan,nan,"2,500",660.0,86.5,"3,246.50","3,850"
+26 56 13.10,Lighting Poles,3800,"Bracket arms, 1 arm",1 Elec,8.0,1.0,nan,450,66.0,nan,516,595
+26 56 13.10,Lighting Poles,4000,2 arms,nan,8.0,nan,nan,890,66.0,nan,956,"1,075"
+26 56 13.10,Lighting Poles,4200,3 arms,nan,5.3,1.509,nan,425,100.0,nan,525,620
+26 56 13.10,Lighting Poles,4400,4 arms,nan,4.8,1.667,nan,570,110.0,nan,680,790
+26 56 23.55,Exterior LED Fixtures,120,66 watt,555555GGGG1GElec,10.0,0.8,Ea,335,53,nan,388,450
+26 56 23.55,Exterior LED Fixtures,200,"outdoor, 110 watt",1 Elec,10.0,0.8,Ea.,"1,100",53,nan,"1,153","1,300"
+26 56 23.55,Exterior LED Fixtures,210,220 watt,nan,10.0,0.8,nan,284,53,nan,337,390
+26 56 23.55,Exterior LED Fixtures,300,"modular, type IV, 120V, 50 lamp watts",nan,9.0,0.889,nan,"1,550",59,nan,"1,609","1,800"
+26 56 23.55,Exterior LED Fixtures,310,101 lamp watts,nan,9.0,0.889,nan,"1,225",59,nan,"1,284","1,450"
+26 56 23.55,Exterior LED Fixtures,320,126 lamp watts,nan,9.0,0.889,nan,"1,525",59,nan,"1,584","1,775"
+26 56 23.55,Exterior LED Fixtures,330,202 lamp watts,nan,9.0,0.889,nan,"1,750",59,nan,"1,809","2,025"
+26 56 23.55,Exterior LED Fixtures,340,"240V, 50 lamp watts",nan,8.0,1.0,nan,"1,325",66,nan,"1,391","1,550"
+26 56 23.55,Exterior LED Fixtures,350,101 lamp watts,nan,8.0,nan,nan,"1,275",66,nan,"1,341","1,500"
+26 56 23.55,Exterior LED Fixtures,360,126 lamp watts,nan,8.0,nan,nan,"1,125",66,nan,"1,191","1,325"
+26 56 23.55,Exterior LED Fixtures,370,202 lamp watts,nan,nan,nan,nan,"1,775",66,nan,"1,841","2,050"
+26 56 23.55,Exterior LED Fixtures,400,"wall pack, glass, 13 lamp watts",nan,nan,nan,nan,420,132,nan,552,655
+26 56 23.55,Exterior LED Fixtures,410,"poly w/ photocell, 26 lamp watts",nan,2.0,nan,nan,235,132,nan,367,455
+26 56 23.55,Exterior LED Fixtures,420,50 lamp watts,nan,4.0,2.0,nan,745,132,nan,877,"1,025"
+26 56 23.55,Exterior LED Fixtures,430,"replacement, 40 watts",nan,4.0,2.0,nan,73,132,nan,205,277
+26 56 23.55,Exterior LED Fixtures,440,60 watts,nan,4.0,2.0,nan,169,132,nan,301,385
+26 56 36.20,Floodlights,10,"FLOODLIGHTS with ballast and lamp,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 36.20,Floodlights,1400,"Pole mounted, pole not included",nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 36.20,Floodlights,1950,"Metal halide, 175 watt",1 Elec,2.7,2.963,Eo.,195,196.0,nan,391,505
+26 56 36.20,Floodlights,2000,400 watt,2 Elec,4.4,3.636,nan,360,241.0,nan,601,760
+26 56 36.20,Floodlights,2200,"1,000 watt","""",4.0,4.0,nan,"1,050",265.0,nan,"1,315","1,550"
+26 56 36.20,Floodlights,2340,"High pressure sodium, 70 watt",1 Elec,2.7,2.963,nan,265,196.0,nan,461,585
+26 56 36.20,Floodlights,2400,400 watt,12 Elec,4.4,3.636,nan,500,241.0,nan,741,910
+26 56 36.20,Floodlights,2600,"1,000 watt",nan,4.0,4.0,nan,"1,300",265.0,nan,"1,565","1,825"
+26 56 36.55,LED Floodlights,10,"LED FLOODLIGHTS with ballast and lamp,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 36.55,LED Floodlights,20,"Pole mounted, pole not included",nan,nan,nan,nan,,nan,nan,nan,nan
+26 56 36.55,LED Floodlights,100,11 watt,6G60 1 Elec,4.0,2222.0,Ea.,315,132.0,nan,447,540
+26 56 36.55,LED Floodlights,110,46 watt,G,4.0,2.0,nan,241,132.0,nan,373,460
+26 56 36.55,LED Floodlights,120,90 watt,G,4.0,nan,nan,"2,175",132.0,nan,"2,307","2,600"
+26 56 36.55,LED Floodlights,130,288 watt,G,4.0,2.0,•,740,132.0,nan,872,"1,000"
+26 61 23.10,Lamps,10,LAMPS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 61 23.10,Lamps,80,"Fluorescent, rapid start, cool white, 2' long, 20 watt",1 Elec,1222288.0,8.0,C,292,530.0,nan,822,"1,100"
+26 61 23.10,Lamps,100,"4' long, 40 watt",nan,0.9,8.889,nan,300,590.0,nan,890,"1,200"
+26 61 23.10,Lamps,200,"Slimline, 4' long, 40 watt",nan,0.9,8.889,nan,"1,025",590.0,nan,"1,615","2,000"
+26 61 23.10,Lamps,210,"4' long, 30 watt energy saver",G,4.0,0.9,8.889,"1,025",590.0,nan,"1,615","2,000"
+26 61 23.10,Lamps,400,"High output, 4' long, 60 watt",1 Elec,0.9,8.889,nan,610,590.0,nan,"1,200","1,550"
+26 61 23.10,Lamps,410,"8' long, 95 watt energy saver",55G555,0.8,100.0,nan,"1,025",660.0,nan,"1,685","2,125"
+26 61 23.10,Lamps,500,"8' long, 110 watt",nan,0.8,10.0,nan,"1,025",660.0,nan,"1,685","2,125"
+26 61 23.10,Lamps,512,"2' long, T5, 14 watt energy saver",G,1.0,8.0,nan,270,530.0,nan,800,"1,075"
+26 61 23.10,Lamps,514,"3' long, T5, 21 watt energy saver",G,0.9,8.889,nan,445,590.0,nan,"1,035","1,350"
+26 61 23.10,Lamps,516,"4' long, T5, 28 watt energy saver",G,0.9,8.889,nan,445,590.0,nan,"1,035","1,350"
+26 61 23.10,Lamps,517,"4' long, T5, 54 watt energy saver",G,0.9,8.889,nan,465,590.0,nan,"1,055","1,375"
+26 61 23.10,Lamps,560,Twin tube compact lamp,G,0.9,8.889,nan,340,590.0,nan,930,"1,250"
+26 51 13.50,Interior Lighting Fixtures,200,"Acrylic lens, 1' W x 4' L, two 40 watt",1 Elec,5.70,1.404,Ea.,55.0,93.0,nan,148.0,198
+26 51 13.50,Interior Lighting Fixtures,210,"1' W x 4' L, three 40 watt",nan,5.40,1.481,nan,62.0,98.0,nan,160.0,215
+26 51 13.50,Interior Lighting Fixtures,300,"2' W x 2' L, two U40 watt",nan,5.70,1.404,nan,145.0,93.0,nan,238.0,297
+26 51 13.50,Interior Lighting Fixtures,400,"2' W x 4' L, two 40 watt",nan,5.30,1.509,nan,57.5,100.0,nan,157.5,213
+26 51 13.50,Interior Lighting Fixtures,500,"2' W x 4' L, three 40 watt",nan,5,1.6,nan,63.5,106.0,nan,169.5,227
+26 51 13.50,Interior Lighting Fixtures,600,"2' W x 4' L, four 40 watt",nan,4.70,1.702,nan,66.5,113.0,nan,179.5,240
+26 51 13.50,Interior Lighting Fixtures,700,"4' W x 4' L, four 40 watt",2 Elec,6.40,2.5,nan,305.0,166.0,nan,471.0,580
+26 51 13.50,Interior Lighting Fixtures,800,"4' W x 4' L, six 40 watt",nan,6.20,2.581,nan,320.0,171.0,nan,491.0,605
+26 51 13.50,Interior Lighting Fixtures,900,"4' W x 4' L, eight 40 watt",nan,5.80,2.759,nan,360.0,183.0,nan,543.0,665
+26 51 13.50,Interior Lighting Fixtures,910,"Acrylic lens, 1' W x 4' L, two 32 watt T8",1 Elec,5.70,1.404,nan,111.0,93.0,nan,204.0,261
+26 51 13.50,Interior Lighting Fixtures,930,"2' W x 2' L, two U32 watt T8",1 Elec,5.70,1.404,Ea.,147.0,93.0,nan,240.0,300
+26 51 13.50,Interior Lighting Fixtures,940,"2' W x 4' L, two 32 watt T8",nan,5.30,1.509,nan,102.0,100.0,nan,202.0,261
+26 51 13.50,Interior Lighting Fixtures,950,"2' W x 4' L, three 32 watt T8",nan,5,1.6,nan,93.5,106.0,nan,199.5,260
+26 51 13.50,Interior Lighting Fixtures,960,"2' W x 4' L, four 32 watt T8",nan,4.70,1.702,nan,156.0,113.0,nan,269.0,340
+26 51 13.50,Interior Lighting Fixtures,1100,"1' W x 4' L, two 40 watt (Surface mounted, RS, acrylic lens w/door)",1 Elec,7,1.143,Ea.,71.5,75.5,nan,147.0,191
+26 51 13.50,Interior Lighting Fixtures,1110,"1' W x 4' L, three 40 watt",nan,6.70,1.194,nan,74.0,79.0,nan,153.0,199
+26 51 13.50,Interior Lighting Fixtures,1200,"2' W x 2' L, two U40 watt",nan,7,1.143,nan,77.0,75.5,nan,152.5,197
+26 51 13.50,Interior Lighting Fixtures,1300,"2' W x 4' L, two 40 watt",nan,6.20,1.29,nan,87.5,85.5,nan,173.0,223
+26 51 13.50,Interior Lighting Fixtures,1400,"2' W x 4' L, three 40 watt",nan,5.70,1.404,nan,87.0,93.0,nan,180.0,234
+26 51 13.50,Interior Lighting Fixtures,1500,"2' W x 4' L, four 40 watt",nan,5.30,1.509,nan,89.0,100.0,nan,189.0,247
+26 51 13.50,Interior Lighting Fixtures,1501,"2' W x 4' L, six 40 watt T8",nan,5.20,1.538,nan,89.0,102.0,nan,191.0,249
+26 51 13.50,Interior Lighting Fixtures,1600,"4' W x 4' L, four 40 watt",.2 Elec,7.20,2.222,nan,440.0,147.0,nan,587.0,705
+26 51 13.50,Interior Lighting Fixtures,1700,"4' W x 4' L, six 40 watt",nan,6.60,2.424,nan,480.0,160.0,nan,640.0,765
+26 51 13.50,Interior Lighting Fixtures,1800,"4' W x 4' L, eight 40 watt",nan,6.20.2.581,nan,nan,495.0,171.0,nan,666.0,800
+26 51 13.50,Interior Lighting Fixtures,1900,"2' W x 8' L, four 40 watt",nan,6.40,2.5,nan,176.0,166.0,nan,342.0,440
+26 51 13.50,Interior Lighting Fixtures,2000,"2' W x 8' L, eight 40 watt",nan,6.20,2.581,nan,189.0,171.0,nan,360.0,460
+26 51 13.50,Interior Lighting Fixtures,2200,"4' long, one 40 watt, RS (Strip fixture, surface mounted)",1 Elec,8.50,0.941,Ea.,108.0,62.5,nan,170.5,212
+26 51 13.50,Interior Lighting Fixtures,2300,"4' long, two 40 watt, RS",nan,8,1.0,nan,143.0,66.0,nan,209.0,256
+26 51 13.50,Interior Lighting Fixtures,2400,"4' long, one 40 watt, SL",nan,nan,nan,nan,55.0,66.0,nan,121.0,159
+26 51 13.50,Interior Lighting Fixtures,2500,"4' long, two 40 watt, SL",nan,7,1.143,nan,143.0,75.5,nan,218.5,269
+26 51 13.50,Interior Lighting Fixtures,2600,"8' long, one 75 watt, SL",2 Elec,13.40,1.194,nan,106.0,79.0,nan,185.0,234
+26 51 13.50,Interior Lighting Fixtures,2700,"8' long, two 75 watt, SL",nan,12.40,1.29,nan,118.0,85.5,nan,203.5,256
+26 51 13.50,Interior Lighting Fixtures,2800,"4' long, two 60 watt, HO",1 Elec,6.70,1.194,nan,114.0,27922.0,nan,193.0,242
+26 51 13.50,Interior Lighting Fixtures,2900,"8' long, two 110 watt, HO",2 Elec,10.60,1.509,nan,111.0,100.0,nan,211.0,271
+26 51 13.50,Interior Lighting Fixtures,2950,"High bay pendent mounted, 16"" W x 4' L, four 54 watt, T5HO",nan,8.90,1.798,nan,284.0,119.0,nan,403.0,485
+26 51 13.50,Interior Lighting Fixtures,2952,"2' W x 4' L, six 54 watt, T5HO",nan,8.50,1.882,nan,310.0,125.0,nan,435.0,525
+26 51 13.50,Interior Lighting Fixtures,2954,"2' W x 4' L, six 32 watt, T8",nan,8.50,1.882,nan,180.0,125.0,nan,305.0,385
+26 51 13.50,Interior Lighting Fixtures,3100,"4' long, two 40 watt, RS (Strip, pendent mounted, industrial, white)",1 Elec,5.70,1.404,Ea.,54.0,93.0,nan,147.0,198
+26 51 13.50,Interior Lighting Fixtures,3200,"4' long, two 60 watt, HO",1,5,1.6,nan,83.5,106.0,nan,189.5,249
+26 51 13.50,Interior Lighting Fixtures,3300,"8' long, two 75 watt, SL",2 Elec,8.80,1.818,nan,102.0,120.0,nan,222.0,291
+26 51 13.50,Interior Lighting Fixtures,3400,"8' long, two 110 watt, HO",nan,8,2.0,nan,131.0,132.0,nan,263.0,340
+26 51 13.50,Interior Lighting Fixtures,3470,"Troffer, airhandling, 2' W x 4' L with four 32 watt T8",1 Elec,nan,2.0,nan,121.0,132.0,nan,253.0,330
+26 51 13.50,Interior Lighting Fixtures,3480,2' W x 2' L with two U32 watt T8,nan,5.50,1.455,nan,104.0,96.5,nan,200.5,257
+26 51 13.50,Interior Lighting Fixtures,3490,"Air connector insulated, 5"" diameter",nan,20,0.4,nan,70.5,26.5,nan,97.0,117
+26 51 13.50,Accessories,2240,.43 W night light LED daylight bulb E12 candelabra base 120 volt 2 pack,1 Elec,160.0,0.05,Eo .,5.15,3.31,nan,8.46,10.55
+26 51 13.50,Accessories,2250,15 W omni directional LED warm white e26 medium base 120 volt box,nan,160.05,nan,nan,44.0,3.31,nan,47.31,53.0
+26 51 13.50,Accessories,2251,11 W omni directional LED warm white e26 medium base 120 volt box,nan,160.0,0.05,nan,31.0,3.31,nan,34.31,39.5
+26 51 13.50,Accessories,2252,10 W omni directional LED warm white e26 medium base 120 volt box,nan,160.0,0.05,nan,30.5,3.31,nan,33.81,38.5
+26 51 13.50,Accessories,2253,7 W omni A19 LED warm white e26 medium base 120 volt box,nan,160.0,0.05,nan,20.5,3.31,nan,23.81,27.5
+26 51 13.50,Accessories,2255,8 PAR 20 parabolic reflector 2700 LED lamp,nan,160.0,0.05,nan,20.5,3.31,nan,23.81,27.5
+26 51 13.50,Accessories,2256,8 PAR 20 parabolic reflector 3000 LED lamp,nan,160.0,0.05,nan,20.5,3.31,nan,23.81,27.5
+26 51 13.50,Accessories,2260,12 W PAR 38 120V LED 15 degree directional lamp,nan,160.0,0.05,nan,221.0,3.31,nan,224.31,248.0
+26 51 13.50,Accessories,2270,12 W PAR 38 120V LED 25 degree directional lamp,nan,160.0,0.05,nan,34.0,3.31,nan,37.31,42.5
+26 51 13.50,Accessories,2280,12 W PAR 38 120V LED 40 degree directional lamp,nan,160.0,0.05,nan,221.0,3.31,nan,224.31,248.0
+26 51 13.50,Accessories,2285,16 W PAR 38 120V 2700k LED parabolic reflector lamp,nan,160.0,0.05,nan,33.5,3.31,nan,36.81,41.5
+26 51 13.50,Accessories,2290,16 W PAR 38 120V 3000k LED parabolic reflector lamp,1 Elec,160.0,0.05,Eo .,25.0,3.31,nan,28.31,32.5
+26 51 13.50,Accessories,3000,15 W PAR 30 LED daylight E26 medium base 120V box,nan,160.0,0.05,nan,65.5,3.31,nan,68.81,77.0
+26 51 13.50,Accessories,3100,17 W LED 3000k PAR 38 100 W replacement,nan,160.0,0.05,nan,51.0,3.31,nan,54.31,61.0
+26 51 13.50,Accessories,3110,17 W LED PAR 38 100 W replacement,nan,160.0,0.05,nan,38.0,3.31,nan,41.31,47.0
+26 51 13.50,Accessories,3120,17 W LED PAR 38 100 W replacement parabolic reflector,☐  ☐,160.0,0.05,nan,40.0,3.31,nan,43.31,49.0
+26 51 13.50,Accessories,3130,24 W LED T8 PW straight fluorescent lamp,nan,8.89,0.9,nan,315.0,59.5,nan,374.5,435.0
+26 51 13.50,Accessories,3135,Linear fluorescent LED lamp 120V,nan,8.89,0.9,nan,145.0,59.5,nan,204.5,248.0
+26 51 13.50,Accessories,3200,30 W LED 2700K recessed 8055E PAR 38 high power,nan,160.0,0.05,nan,86.5,3.31,nan,89.81,100.0
+26 51 13.50,Accessories,3210,30 W LED 4200K 120 degree 8055E PAR 38 high power,nan,160.0,0.05,nan,93.5,3.31,nan,96.81,108.0
+26 51 13.50,Accessories,3220,30 W LED 5700K 8055E PAR 38 high power,nan,160.0,0.05,nan,84.0,3.31,nan,87.31,97.0
+26 51 13.50,Accessories,3230,50 W LED 2700K 8045M PAR 38 277V high power,nan,160.0,0.05,nan,370.0,3.31,nan,373.31,415.0
+26 51 13.50,Accessories,3240,50 W LED 4200K 8045M PAR 38 277V high power retro fit,nan,160.0,0.05,nan,93.5,3.31,nan,96.81,108.0
+26 51 13.50,Accessories,3250,50 W LED 5700K 8045M PAR 38 277V high power retro fit,nan,160.0,0.05,nan,370.0,3.31,nan,373.31,415.0
+26 51 13.50,Accessories,8000,10 W LED PAR 30 / fl10 pk,nan,160.0,0.05,nan,105.0,3.31,nan,108.31,120.0
+26 51 13.50,Accessories,8010,Gen 3 PAR 30 15 W short neck power LED 120 VAC E26 80 + cri300k dimm,nan,160.0,0.05,nan,14.1,3.31,nan,17.41,20.5
+26 51 13.50,Accessories,8020,12 PAR 30 2700K parabolic reflector LED lamp,nan,160.0,0.05,nan,45.5,3.31,nan,48.81,55.5
+26 51 13.50,Accessories,8030,12 PAR 30 3000K parabolic reflector LED lamp,nan,160.0,0.05,nan,35.0,3.31,nan,38.31,43.5
+26 51 13.50,Accessories,8040,3500K LED advantage T8 9 W 800LM 2ft linear 2 BD frosted,nan,69.0,0.116,nan,9.6,7.7,nan,17.3,22.0
+26 51 13.50,Accessories,8050,3500K LED litespan T8 9 W 900LM 2ft linear frosted,nan,69.0,0.116,nan,14.4,7.7,nan,22.1,27.5
+26 51 13.50,Accessories,8060,4000K LED advantage T8 9 W 800LM 2ft linear 2BD frosted,nan,69.0,0.116,nan,13.7,7.7,nan,21.4,26.5
+26 51 13.50,Accessories,8070,4000K LED litespan T8 9 W 900LM 2ft linear frosted,nan,69.0,0.116,nan,,15.05,7.7,nan,22.75
+26 51 13.50,Accessories,8080,5000K LED advantage T8 9 W 800LM 2ft linear 2BD frosted,nan,69.116,1.0,nan,,9.6,7.7,nan,17.3
+26 51 13.50,Accessories,8090,5000K LED lifespan T8 9 W 900LM 2ft linear frosted,nan,69.0,116.0,1,11.95,7.7,nan,19.65,24.5
+26 51 13.50,Accessories,8100,3500K LED advantage T8 18 W 1600LM 4ft linear 2 BD frosted,nan,69.116,nan,nan,11.3,7.7,nan,19.0,24.0
+26 51 13.50,Accessories,8105,18 W LED 4ft T8 4000K frost 1600L linear lamp,nan,69.0,0.116666,nan,20.0,7.7,nan,27.7,33.5
+26 51 13.50,Accessories,8108,18 W LED 48 inch T8 4100K 1890LM linear lamp,nan,69.0,0.116,nan,62.0,7.7,nan,69.7,80.0
+26 51 13.50,Accessories,8110,3500K LED advantage T8 18 W 1800LM 4ft linear 2 BD frosted,nan,69.0,0.116,nan,32.0,7.7,nan,39.7,47.0
+26 51 13.50,Accessories,8120,4000K LED advantage T8 18 W 1600LM 4ft linear 2 BD frosted,nan,69.0,0.116,nan,22.0,7.7,nan,29.7,35.5
+26 51 13.50,Accessories,8130,4000K LED litespan T8 18 W 1800LM 4ft linear frosted,nan,69.0,0.116,nan,30.0,7.7,nan,37.7,45.0
+26 51 13.50,Accessories,8140,5000K LED advantage T8 18 W 1600LM 4ft linear 2BD frosted,nan,69.0,0.116,nan,14.4,7.7,nan,22.1,27.5
+26 51 13.50,Accessories,8150,5000K LED litespan T8 18 W 1800LM 4ft linear 2BD frosted,nan,69.116,nan,nan,23.0,7.7,nan,30.7,37.0
+26 51 13.50,Accessories,8200,16.5 T8 3000 IF-6U U shape fluorescent LED lamp,nan,65.0,0.123,nan,23.5,8.15,nan,31.65,37.5
+26 51 13.50,Accessories,8210,16.5 T8 3500 IF-6U U shape fluorescent LED lamp,nan,65.0,0.123,nan,24.0,8.15,nan,32.15,38.5
+26 51 13.50,Accessories,8220,16.5 T8 4000 IF-6U U shape fluorescent LED lamp,1 Elec,65.0,0.123,Ea .,21.5,8.15,nan,29.65,35.5
+26 51 13.50,Accessories,8230,16.5 T8 5000 IF-6U U shape fluorescent LED lamp,nan,65.0,0.123,nan,23.5,8.15,nan,31.65,37.5
+26 51 13.50,Accessories,8240,18 W 6 inch T8 4100K U-shape frosted fluorescent LED lamp,nan,60.0,0.133,nan,13.05,8.85,nan,21.9,27.5
+26 51 13.50,Accessories,8250,18 W 6 inch T8 5000K U-shape frosted fluorescent LED lamp,nan,60.0,133.0,nan,13.05,8.85,nan,21.9,27.5
+26 51 13.50,Accessories,8260,Circular 12 W linear fluorescent LED 2700K MOD lamp,nan,62.4,0.128,nan,330.0,8.5,nan,338.5,375.0
+26 51 13.50,Accessories,8270,Circular 12 W linear fluorescent LED 3000K MOD lamp,nan,62.4,0.128,nan,330.0,8.5,nan,338.5,375.0
+26 51 13.50,Accessories,8280,Circular 12 W linear fluorescent LED 3500K MOD lamp,nan,62.4,0.128,nan,298.0,8.5,nan,306.5,340.0
+26 51 13.50,Accessories,8290,Circular 18 W linear fluorescent LED 3000K MOD lamp,nan,62.4,0.128,nan,405.0,8.5,nan,413.5,460.0
+26 51 13.50,Accessories,8300,Circular 18 W linear fluorescent LED 3500K MOD lamp,nan,62.4,0.128,nan,450.0,8.5,nan,458.5,510.0
+26 51 13.50,2022 Bare Costs,570,Double twin tube compact lamp,1 Elec,0.8,10,nan,745,660,nan,"1,405","1,800"
+26 51 13.50,2022 Bare Costs,600,"Mercury vapor, mogul base, deluxe white, 100 watt",nan,0.3,26.667,nan,"15,400","1,775",nan,"17,175","19,500"
+26 51 13.50,2022 Bare Costs,700,250 watt,nan,0.3,26.667,nan,"11,700","1,775",nan,"13,475","15,400"
+26 51 13.50,2022 Bare Costs,800,400 watt,nan,0.3,26.667,nan,"11,300","1,775",nan,"13,075","15,000"
+26 51 13.50,2022 Bare Costs,900,"1,000 watt",nan,0.2,40,nan,"8,475","2,650",nan,"11,125","13,300"
+26 51 13.50,2022 Bare Costs,1000,"Metal halide, mogul base, 175 watt",nan,0.3,26.667,nan,"1,300","1,775",nan,"3,075","4,075"
+26 51 13.50,2022 Bare Costs,1200,400 watt,nan,0.3,26.667,nan,"2,550","1,775",nan,"4,325","5,425"
+26 51 13.50,2022 Bare Costs,1300,"1,000 watt",nan,0.2,40,nan,"3,525","2,650",nan,"6,175","7,800"
+26 51 13.50,2022 Bare Costs,1350,"High pressure sodium, 70 watt",nan,0.3,26.667,nan,"1,825","1,775",nan,"3,600","4,625"
+26 51 13.50,2022 Bare Costs,1380,250 watt,nan,0.3,26.667,nan,"1,850","1,775",nan,"3,625","4,650"
+26 51 13.50,2022 Bare Costs,1400,400 watt,nan,0.3,26.667,nan,"1,650","1,775",nan,"3,425","4,450"
+26 51 13.50,2022 Bare Costs,1450,"1,000 watt",nan,0.2,40,nan,"4,525","2,650",nan,"7,175","8,925"
+26 51 13.50,2022 Bare Costs,3000,"Guards, fluorescent lamp, 4' long",100,0.08,Ea.,nan,17.85,5.30,nan,23.15,27.50
+26 51 13.50,2022 Bare Costs,3200,8' long,90,0.089,?,nan,35.50,5.90,nan,41.40,48.50
+26 61 23.55,LED Lamps,10,LED LAMPS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 61 23.55,LED Lamps,100,"LED lamp, interior, shape A60, equal to 60 W",G 1 Elec,160.0,0.05,Ea.,21.0,3.31,nan,24.31,28.0
+26 61 23.55,LED Lamps,110,"7 W LED decorative c, ca, f, g shape",nan,160.0,0.05,nan,6.7,3.31,nan,10.01,12.25
+26 61 23.55,LED Lamps,120,12V mini lamp LED,nan,160.0,0.05,nan,6.0,3.31,nan,9.31,11.5
+26 61 23.55,LED Lamps,200,"Globe frosted A60, equal to 60 W",nan,160.0,0.05,nan,6.5,3.31,nan,9.81,12.05
+26 61 23.55,LED Lamps,205,"LED lamp, interior, globe",nan,160.0,0.05,nan,11.5,3.31,nan,14.81,17.55
+26 61 23.55,LED Lamps,210,2.2 W LED LMP,nan,160.0,0.05,nan,72.0,3.31,nan,75.31,84.5
+26 61 23.55,LED Lamps,220,2.2 W LED replacement decorative lamp,nan,160.0,0.05,nan,9.75,3.31,nan,13.06,15.6
+26 61 23.55,LED Lamps,230,3.5 W LED replacement decorative lamp,nan,160.0,0.05,nan,8.55,3.31,nan,11.86,14.3
+26 61 23.55,LED Lamps,240,4.5 W 120V LED replacement decorative lamp,nan,160.0,0.05,nan,11.8,3.31,nan,15.11,17.85
+26 61 23.55,LED Lamps,250,"4.5 W 120V LED, 2700k replacement decorative lamp",nan,160.0,0.05,nan,14.45,3.31,nan,17.76,21.0
+26 61 23.55,LED Lamps,260,"4.9 W 120V LED, 2700k replacement decorative lamp candelabra base",1,160.0,0.05,nan,10.95,3.31,nan,14.229,16.95
+26 61 23.55,LED Lamps,270,"4.9 W 120V LED, 3000k replacement decorative lamp candelabra base",nan,160.0,0.05,nan,5.6,3.31,nan,8.91,11.05
+26 61 23.55,LED Lamps,280,5 W LED PAR 20 parabolic reflector lamp FL,nan,140.0,0.057,nan,65.5,3.78,nan,69.28,77.5
+26 61 23.55,LED Lamps,300,"Globe earth, equal to 100 W",G 1 Elec,140.0,0.057,Ea.,5.65,3.78,nan,9.43,11.8
+26 61 23.55,LED Lamps,305,7 W LED reflector lamp 3000k DIM,nan,140.057,nan,nan,5.25,3.78,nan,9:03,11.35
+26 61 23.55,LED Lamps,310,10 W omni LED warm white light bulb E26 medium base 120 volt card,nan,140.0,0.057,nan,22.0,3.78,nan,25.78,30.0
+26 61 23.55,LED Lamps,315,7 W LED reflector lamp WFL 2700K DIM,nan,140.0,0.057,nan,5.3,3.78,nan,9.08,11.4
+26 61 23.55,LED Lamps,320,9 W omni LED warm white light bulb E26 medium base 120 volt card,i,140.0,0.057,nan,11.55,3.78,nan,15.33,18.35
+26 61 23.55,LED Lamps,500,"8 W LED, A19 lamp, equal to 40 W",nan,140.0,0.057,nan,6.45,3.78,nan,10.23,12.65
+26 61 23.55,LED Lamps,505,"9 W LED, A19 lamp, 5000K dimmable, equal to 60 W",nan,140.0,0.057,nan,8.05,3.78,nan,11.83,14.45
+26 61 23.55,LED Lamps,510,"10.5 W LED, A19 lamp, dimmable, equal to 60 W",nan,140.057,nan,nan,9.15,3.78,nan,12.93,15.65
+26 61 23.55,LED Lamps,515,"10 W LED, A19 lamp, frosted, dimmable, equal to 60 W",nan,140.0,0.057,nan,3.82,3.78,nan,7.60,9.8
+26 61 23.55,LED Lamps,520,"10 W LED, A19 lamp, omni-directional, dimmable, equal to 60 W",nan,140.0,0.057,nan,8.45,3.78,nan,12.23,14.9
+26 61 23.55,LED Lamps,525,"12 W LED, A19 lamp, dimmable, equal to 75 W",nan,140.0,0.057,nan,7.8,3.78,nan,11.58,14.2
+26 61 23.55,LED Lamps,1100,"MR16, 3 W, replacement of halogen lamp 25 W",5555,130.0,0.062,nan,21.0,4.07,nan,25.07,29.0
+26 61 23.55,LED Lamps,1200,6 W replacement of halogen lamp 45 W,nan,130.0,0.062,nan,22.0,4.07,nan,26.07,30.5
+26 61 23.55,LED Lamps,2100,"10 W, PAR20, equal to 60 W",nan,130.0,0.062,nan,29.5,4.07,nan,33.57,38.0
+26 61 23.55,LED Lamps,2200,"15 W, PAR30, equal to 100 W",nan,130.0,0.062,nan,55.5,4.07,nan,59.57,67.0
+26 61 23.55,LED Lamps,2210,50 W LED lamp,nan,130.0,0.062,nan,735.0,4.07,nan,739.07,815.0
+26 61 23.55,LED Lamps,2220,11 Watt reflector dimmable warm white LED light bulb with medium base,nan,130.0,0.062,nan,45.5,4.07,nan,49.57,56.0
+26 61 23.55,LED Lamps,2221,12 W A-Line LED lamp DIM,nan,130.0,0.062,nan,85.0,4.07,nan,89.07,99.5
+26 61 23.55,LED Lamps,2225,13 Watt reflector LED warm white e26 with medium base 120 volt box,nan,130.0,0.062,nan,42.5,4.07,nan,46.57,53.0
+26 61 23.55,LED Lamps,2226,13 W br30 LED lamp,nan,130.0,0.062,nan,74.0,4.07,nan,78.07,87.5
+26 61 23.55,LED Lamps,2227,"15 W 120V br30 inc LED lamp, 2700k",nan,130.0,0.062,nan,69.0,4.07,nan,73.07,882.0
+26 61 23.55,LED Lamps,2228,"15 W 120V br30 inc LED lamp, 4000k",nan,130.0,0.062,nan,65.5,4.07,nan,69.57,78.0
+26 61 23.55,LED Lamps,2230,3 Watt dimmable warm white decorative LED lamp with medium base,nan,160.0,0.05,nan,13.35,3.31,nan,16.66,19.6
+26 05 19.35,Cable Terminations,1630,#12,1 Elec,50.0,0.16,Ea,1.11,10.6,nan,11.71,16.95
+26 05 19.35,Cable Terminations,1640,#10,nan,45.0,0.178,nan,1.11,11.75,nan,12.86,18.7
+26 05 19.35,Cable Terminations,1780,#8,nan,36.0,0.222,nan,1.67,14.7,nan,16.37,24.0
+26 05 19.35,Cable Terminations,1800,#6,nan,30.0,0.267,nan,2.05,17.65,nan,19.7,28.5
+26 05 19.35,Cable Terminations,2000,#4,nan,27.0,0.296,nan,2.73,19.6,nan,22.33,32.0
+26 05 19.35,Cable Terminations,2200,#2,nan,24.0,0.333,nan,3.15,22.0,nan,25.15,36.5
+26 05 19.35,Cable Terminations,2400,#1,nan,20.0,0.4,nan,4.45,26.5,nan,30.95,44.5
+26 05 19.35,Cable Terminations,2500,1/0,nan,17.5,0.457,nan,5.2,30.5,nan,35.7,51.0
+26 05 19.35,Cable Terminations,2600,2/0,nan,52198.0,0.533,nan,7.4,35.5,nan,42.9,60.5
+26 05 19.35,Cable Terminations,2800,3/0,nan,nan,0.667,nan,6.15,44.0,nan,50.15,72.5
+26 05 19.35,Cable Terminations,3000,4/0,nan,11.0,0.727,nan,7.3,48.0,nan,55.3,79.5
+26 05 19.35,Cable Terminations,3200,250 kcmil,nan,nan,0.889,nan,8.35,59.0,nan,67.35,96.5
+26 05 19.35,Cable Terminations,3400,300 kcmil,nan,8.0,1.0,nan,7.45,66.0,nan,73.45,107.0
+26 05 19.35,Cable Terminations,3500,350 kcmil,nan,7.0,1.143,nan,10.9,75.5,nan,86.4,124.0
+26 05 19.35,Cable Terminations,3600,400 kcmil,nan,6.5,1.231,nan,11.65,81.5,nan,93.15,134.0
+26 05 19.35,Cable Terminations,3800,500 kcmil,nan,6.0,1.333,nan,14.2,88.5,nan,102.7,147.0
+26 05 19.50,Mineral Insulated Cable,10,MINERAL INSULATED CABLE 600 volt,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.50,Mineral Insulated Cable,100,"1 conductor, #12",1 Elec,1.6,55.0,C.LE,475,330.0,nan,805,"1,000"
+26 05 19.50,Mineral Insulated Cable,200,#10,nan,1.6,5.0,nan,710,330.0,nan,"1,040","1,275"
+26 05 19.50,Mineral Insulated Cable,400,#8,nan,1.5,5.333,nan,800,355.0,nan,"1,155","1,400"
+26 05 19.50,Mineral Insulated Cable,500,#6,nan,1.4,5.714,nan,955,380.0,1.0,"1,335","1,600"
+26 05 19.50,Mineral Insulated Cable,600,#4,12 Elec,2.4,6.667,nan,"1,275",440.0,nan,"1,715","2,050"
+26 05 19.50,Mineral Insulated Cable,800,#2,nan,2.2,7.273,nan,"1,825",480.0,nan,"2,305","2,725"
+26 05 19.50,Mineral Insulated Cable,900,#1,nan,2.1,7.619,nan,"2,100",505.0,nan,"2,605","3,050"
+26 05 19.50,Mineral Insulated Cable,1000,1/0,nan,2.0,8.0,nan,"2,450",530.0,nan,"2,980","3,450"
+26 05 19.50,Mineral Insulated Cable,1100,2/0,nan,1.9,8.421,nan,"2,925",555.0,nan,"3,480","4,050"
+26 05 19.50,Mineral Insulated Cable,1200,3/0,nan,1.8,8.889,nan,"3,500",590.0,nan,"4,090","4,725"
+26 05 19.50,Mineral Insulated Cable,1400,4/0,2 Elec,1.6,10.0,C.LF,"4,050",660.0,nan,"4,710","5,425"
+26 05 19.50,Mineral Insulated Cable,1410,250 kcmil,3 Elec,2.4,10.0,nan,"4,550",660.0,nan,"5,210","6,000"
+26 05 19.50,Mineral Insulated Cable,1420,350 kcmil,nan,1.95,12.308,nan,"5,350",815.0,nan,"6,165","7,100"
+26 05 19.50,Mineral Insulated Cable,1430,500 kcmil,nan,1.95,12.308,nan,"6,700",815.0,nan,"7,515","8,575"
+26 05 19.55,Non-Metallic Sheathed Cable,10,NON-METALLIC SHEATHED CABLE 600 volt,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Non-Metallic Sheathed Cable,100,Copper with ground wire (Romex),nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Non-Metallic Sheathed Cable,150,"#14, 2 conductor",1 Elec,2.7,2.963,C.LF.,22.50,196.0,nan,218.5,315.0
+26 05 19.55,Non-Metallic Sheathed Cable,200,3 conductor,1,2.4,3.333,nan,31.50,221.0,nan,252.5,365.0
+26 05 19.55,Non-Metallic Sheathed Cable,220,4 conductor,nan,2.2,3.636,nan,53.50,241.0,nan,294.5,420.0
+26 05 19.55,Non-Metallic Sheathed Cable,250,"#12, 2 conductor",nan,2.5,3.2,nan,29,212.0,nan,241.0,345.0
+26 05 19.55,Non-Metallic Sheathed Cable,300,3 conductor,nan,2.2,3.636,nan,47,241.0,nan,288.0,410.0
+26 05 19.55,Non-Metallic Sheathed Cable,320,4 conductor,nan,2.0,4.0,1,78,265.0,nan,343.0,480.0
+26 05 19.55,Non-Metallic Sheathed Cable,350,"#10, 2 conductor",nan,2.2,3.636,nan,56.50,241.0,nan,297.5,420.0
+26 05 19.55,Non-Metallic Sheathed Cable,400,3 conductor,nan,1.8,4.444,nan,77.50,294.0,nan,371.5,520.0
+26 05 19.55,Non-Metallic Sheathed Cable,430,"#8, 2 conductor",nan,1.6,5.0,nan,101,330.0,nan,431.0,600.0
+26 05 19.55,Non-Metallic Sheathed Cable,450,3 conductor,nan,1.5,5.333,nan,144,355.0,nan,499.0,685.0
+26 05 19.55,Non-Metallic Sheathed Cable,500,"#6, 3 conductor",nan,1.4,5.714,nan,390,380.0,nan,770.0,990.0
+26 05 19.55,Non-Metallic Sheathed Cable,550,"SE type SER aluminum cable, 3 RHW and",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Non-Metallic Sheathed Cable,600,"1 bare neutral, 3 #8 & 1 #8",1 Elec,1.6,5.0,C.LE,728 +,330.0,nan,402.0,570.0
+26 05 19.55,Non-Metallic Sheathed Cable,650,3 #6 & 1 #6,nan,1.4,5.714,nan,75,380.0,nan,455.0,645.0
+26 05 19.55,Non-Metallic Sheathed Cable,700,3 #4 & 1 #6,2 Elec,2.4,6.667,nan,82.50,440.0,nan,522.5,745.0
+26 05 19.55,Non-Metallic Sheathed Cable,750,3 #2 & 1 #4,nan,2.2,7.273,nan,128,480.0,nan,608.0,855.0
+26 05 19.55,Non-Metallic Sheathed Cable,800,3 #1/0 & 1 #2,nan,2.0,8.0,nan,174,530.0,nan,704.0,975.0
+26 05 19.55,Selective Demolition for Electrical,1440,"3 phase to 600 V, primary",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,1460,3 kVA,1 Elec,3.87,2.067,Ea.,nan,137,nan,137,203
+26 05 19.55,Selective Demolition for Electrical,1520,75 kVA,2 Elec,2.69,5.948,nan,nan,395,nan,395,585
+26 05 19.55,Selective Demolition for Electrical,1550,300 kVA,R 3,1.80,11.111,nan,nan,730,96.5,826.50,"1,200"
+26 05 19.55,Selective Demolition for Electrical,1570,750 kVA,nan,1100,18.182,nan,nan,"1,200",158.0,"1,358","1,950"
+26 05 19.55,Selective Demolition for Electrical,1571,750 kVA,nan,700,0.029,kVA,nan,1.88,0.25,2.13,3.07
+26 05 19.55,Selective Demolition for Electrical,1800,"Wire, THW-THWN-THHN, removed from",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,1810,"in place conduit, to 10' high",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,1830,#14,1 Elec,65.123,nan,C.LF,nan,8.15,nan,8.15,12.10
+26 05 19.55,Selective Demolition for Electrical,1840,#12,11,55,1.145,nan,nan,9.65,nan,9.65,14.30
+26 05 19.55,Selective Demolition for Electrical,1850,#10,nan,45.50,0.176,nan,nan,11.65,nan,11.65,17.30
+26 05 19.55,Selective Demolition for Electrical,1860,#8,nan,40.40,0.198,nan,nan,13.10,nan,13.10,19.50
+26 05 19.55,Selective Demolition for Electrical,1870,#6,nan,32.60,0.245,nan,nan,16.25,nan,16.25,24
+26 05 19.55,Selective Demolition for Electrical,1880,#4,2 Elec,53,0.302,nan,20.0,nan,2023325.0,nan,29.50
+26 05 19.55,Selective Demolition for Electrical,1890,#3,nan,50,0.32,nan,nan,21,nan,21,31.50
+26 05 19.55,Selective Demolition for Electrical,1900,#2,nan,44.60,0.359,nan,nan,24,nan,24,35.50
+26 05 19.55,Selective Demolition for Electrical,1910,1/0,nan,33.20,0.482,nan,nan,32,321.0,nan,47.50
+26 05 19.55,Selective Demolition for Electrical,1920,2/0,nan,29.20,0.548,nan,nan,36.50,nan,36.50,54
+26 05 19.55,Selective Demolition for Electrical,1930,3/0,nan,ថ,0.64,nan,nan,42.50,nan,42.50,63
+26 05 19.55,Selective Demolition for Electrical,1940,4/0,nan,ន 22,0.727,nan,nan,48,nan,48,71.50
+26 05 19.55,Selective Demolition for Electrical,1950,250 kcmil,nan,៦៩,0.8,nan,nan,53,nan,nan,78.50
+26 05 19.55,Selective Demolition for Electrical,1960,300 kcmil,nan,nan,0.842,nan,nan,56,nan,56,83
+26 05 19.55,Selective Demolition for Electrical,1970,350 kcmil,nan,៨ 18,0.889,nan,nan,59,nan,59,87.50
+26 05 19.55,Selective Demolition for Electrical,1980,400 kcmil,nan,1 ៨17,0.941,nan,nan,62.50,nan,62.50,92.50
+26 05 19.55,Selective Demolition for Electrical,1990,500 kcmil,nan,ដ្តី0,0.988,nan,nan,65.50,nan,65.50,97
+26 05 19.55,Selective Demolition for Electrical,2000,"Interior fluorescent fixtures, incl.supports",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,2010,"& whips, to 10' high",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,2100,"Recessed drop-in 2' x 2', 2 lamp",2 Elec,35,0.457,Ea.,,30.5,nan,30.5,45
+26 05 19.55,Selective Demolition for Electrical,2110,"2' x 2', 4 lamp",nan,30,0.533,nan,,35.5,nan,35.5,52.50
+26 05 19.55,Selective Demolition for Electrical,2120,"2' x 4', 2 lamp",nan,33,0.485,nan,,32.0,nan,32.0,47.50
+26 05 19.55,Selective Demolition for Electrical,2140,"2' x 4', 4 lamp",nan,30,0.533,nan,,35.5,nan,35.5,52.50
+26 05 19.55,Selective Demolition for Electrical,2160,"4' x 4', 4 lamp",nan,20,0.8,nan,,53.0,nan,53.0,78.50
+26 05 19.55,Selective Demolition for Electrical,2180,"Surface mount, acrylic lens & hinged frame",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,2200,"1' x 4', 2 lamp",2 Elec,44*,364.0,Eq.,,222244.0,nan,222244.0,36888
+26 05 19.55,Selective Demolition for Electrical,2210,"6"" x 4', 2 lamp",nan,44,0.364,nan,nan,nan,nan,nan,36
+26 05 19.55,Selective Demolition for Electrical,2220,"2' x 2', 2 lamp",nan,44,0.364,nan,nan,nan,nan,nan,36
+26 05 19.55,Selective Demolition for Electrical,2260,"2' x 4', 4 lamp",nan,333,0.485,nan,,32.0,nan,32.0,47.50
+26 05 19.55,Selective Demolition for Electrical,2280,"4' x 4', 4 lamp",nan,nan,0.696,nan,,46.0,nan,46.0,68.50
+26 05 19.55,Selective Demolition for Electrical,2281,"4' x 4', 6 lamp",nan,23,0.696,nan,,46.0,nan,46.0,68.50
+26 05 19.55,Selective Demolition for Electrical,2300,"Strip fixtures, surface mount",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,2320,"4' long, 1 lamp",2 Elec,53,0.302,Ea.,,2202.0,nan,2222.0,29.50
+26 05 19.55,Selective Demolition for Electrical,2340,"4' long, 2 lamp",nan,50,0.32,nan,21.0,nan,nan,nan,31.50
+26 05 19.55,Selective Demolition for Electrical,2360,"8' long, 1 lamp",nan,42,0.381,nan,25.0,nan,nan,nan,37.50
+26 05 19.55,Selective Demolition for Electrical,2380,"8' long, 2 lamp",nan,40,0.4,nan,,26.5,nan,26.5,39.50
+26 05 19.55,Selective Demolition for Electrical,2400,"Pendant mount, industrial, incl.removal",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,2410,"of chain or rod hangers, to 10' high",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.55,Selective Demolition for Electrical,2420,"4' long, 2 lamp",2 Elec,35,0.457,Ea.,,30.5,nan,30.5,558
+26 05 19.55,Selective Demolition for Electrical,2421,"4' long, 4 lamp",nan,35,0.457,nan,,30.5,nan,30.5,45
+26 05 19.55,Selective Demolition for Electrical,2440,"8' long, 2 lamp",nan,27,0.593,nan,,39.0,nan,39.0,58.50
+26 05 43.20,Underfloor Duct,1000,"Junction box, single duct, 1 level, 7-1/4""",1 Elec,2.7,2.963,Ea.,565,196.0,nan,761,910
+26 05 43.20,Underfloor Duct,1200,"1 level, 2 duct, 3-1/8""",nan,3.2,2.5,nan,645,166.0,nan,811,955
+26 05 43.20,Underfloor Duct,1400,"Junction box, 1 level, 2 duct, 7-1/4""",nan,2.3,3.478,nan,"1,600",230.0,nan,"1,830","2,100"
+26 05 43.20,Underfloor Duct,1580,"Junction box, 1 level, one 3-1/8"" + one 7-1/4"" x same",nan,2.3,3.478,nan,"1,100",230.0,nan,"1,330","1,550"
+26 05 43.20,Underfloor Duct,1600,"Triple duct, 3-1/8""",nan,2.3,3.478,nan,"1,100",230.0,nan,"1,330","1,550"
+26 05 43.20,Underfloor Duct,1800,"Insert to conduit adapter, 3/4"" & 1""",nan,32.0,0.25,nan,39.50,16.55,nan,56.05,68
+26 05 43.20,Underfloor Duct,2000,"Support, single cell",nan,27.0,0.296,nan,59,19.6,nan,78.60,94
+26 05 43.20,Underfloor Duct,2200,Super duct,nan,16.0,0.5,nan,59.50,33.0,nan,92.50,115
+26 05 43.20,Underfloor Duct,2400,Double cell,nan,16.0,0.5,nan,60,33.0,nan,93,115
+26 05 43.20,Underfloor Duct,2600,Triple cell,nan,11.0,0.727,nan,67.50,48.0,nan,115.50,146
+26 05 43.20,Underfloor Duct,2800,"Vertical elbow, standard duct",nan,10.0,0.8,nan,107,53.0,nan,160,196
+26 05 43.20,Underfloor Duct,3000,Super duct,nan,8.0,1.0,nan,107,66.0,nan,173,216
+26 05 43.20,Underfloor Duct,3200,"Cabinet connector, standard duct",nan,32.0,0.25,nan,85.50,16.55,nan,102.05,119
+26 05 43.20,Underfloor Duct,3400,Super duct,nan,27.0,0.296,nan,83.50,19.6,nan,103.10,121
+26 05 43.20,Underfloor Duct,3600,"Conduit adapter, 1"" to 1-1/4""",nan,32.0,0.25,nan,79.50,16.55,nan,96.05,112
+26 05 43.20,Underfloor Duct,3800,"2"" to 1-1/4""",nan,27.0,0.296,nan,95.50,19.6,nan,115.10,134
+26 05 43.20,Underfloor Duct,4000,"Outlet, low tension (tele, computer, etc.)",nan,8.0,1.0,nan,113,66.0,nan,179,223
+26 05 43.20,Underfloor Duct,4200,"High tension, receptacle (120 volt)",nan,8.0,nan,nan,114,66.0,nan,180,225
+26 05 83.10,Motor Connections,10,MOTOR CONNECTIONS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 83.10,Motor Connections,20,"Flexible conduit and fittings, 115 volt, 1 phase, up to 1 HP motor",1 Elec,8.0,1.0,Ea.,5.2,66.0,nan,71.2,104.0
+26 05 83.10,Motor Connections,110,"230 volt, 3 phase, 3 HP motor",nan,6.78,1.18,nan,6.5,78.0,nan,84.5,123.0
+26 05 83.10,Motor Connections,112,5 HP motor,nan,5.47,1.463,nan,5.45,97.0,nan,102.45,150.0
+26 05 83.10,Motor Connections,114,7-1/2 HP motor,nan,4.61,1.735,nan,9.25,115.0,nan,124.25,181.0
+26 05 83.10,Motor Connections,120,10 HP motor,nan,4.2,1.905,nan,18.05,126.0,nan,144.05,207.0
+26 05 83.10,Motor Connections,200,25 HP motor,nan,2.7,2.963,nan,26.5,196.0,nan,222.5,320.0
+26 05 83.10,Motor Connections,400,50 HP motor,nan,2.2,3.636,nan,52.0,241.0,nan,293.0,415.0
+26 05 83.10,Motor Connections,600,100 HP motor,nan,1.5,5.333,nan,117.0,355.0,nan,472.0,655.0
+26 05 90.10,Residential Wiring,10,RESIDENTIAL WIRING,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,20,20' avg. runs and #14/2 wiring incl. unless otherwise noted,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,1000,"Service & panel, includes 24' SE-AL cable, service eye, meter,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,1010,"Socket, panel board, main bkr., ground rod, 15 or 20 amp",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,1020,"1-pole circuitbreakers, and misc. hardware",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,1100,"100 amp, with 10 branch breakers",1 Elec,1.19,6.723,Ea.,415,445.0,nan,860,"1,125"
+26 05 90.10,Residential Wiring,1110,With PVC conduit and wire,nan,0.92,8.696,nan,460,575.0,nan,"1,035","1,350"
+26 05 90.10,Residential Wiring,1120,With RGS conduit and wire,nan,0.73,10.959,nan,655,725.0,nan,"1,380","1,800"
+26 05 90.10,Residential Wiring,1150,"150 amp, with 14 branch breakers",nan,1.03,7.767,nan,585,515.0,nan,"1,100","1,400"
+26 05 90.10,Residential Wiring,1170,With PVC conduit and wire,nan,0.82,9.756,nan,660,645.0,nan,"1,305","1,675"
+26 05 90.10,Residential Wiring,1180,With RGS conduit and wire,nan,0.67,11.94,nan,"1,050",790.0,nan,"1,840","2,350"
+26 05 90.10,Residential Wiring,1200,"200 amp, with 18 branch breakers",2 Elec,1.8,8.889,€,"1,250",590.0,nan,"1,840","2,250"
+26 05 90.10,Residential Wiring,1220,With PVC conduit and wire,nan,1.46,10.959,nan,"1,350",725.0,nan,"2,075","2,550"
+26 05 90.10,Residential Wiring,1230,With RGS conduit and wire,nan,1.24,12.903,nan,"1,800",855.0,nan,"2,655","3,275"
+26 05 90.10,Residential Wiring,1800,Lightning surge suppressor,1 Elec,32.0,0.25,nan,97.50,16.55,nan,114.05,132
+26 05 90.10,Residential Wiring,2000,Switch devices,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,2100,"Single pole, 15 amp, ivory, with a 1-gang box, cover plate,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,Residential Wiring,2110,Type NM (Romex) cable,1 Elec,17.1,0.468,Eo.,7.85,31.0,nan,38.85,54.50
+26 05 90.10,Residential Wiring,2120,Type MC cable,nan,14.3,0.559,nan,21.50,37.0,nan,58.50,79
+26 05 90.10,Residential Wiring,2130,EMT & wire,nan,5.71,1.401,nan,nan,93.0,nan,130,179
+26 05 90.10,Residential Wiring,2150,"3 way, #14/3, type NM cable",nan,14.55,0.55,nan,9.95,36.5,nan,46.45,65
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,2600,#1,2 Elec,280.0,0.057,L.F.,24.5,3.78,nan,28.28,32.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,2800,1/0,nan,260.0,0.062,nan,28.0,4.07,nan,32.07,36.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,2900,2/0,nan,220.0,0.073,nan,37.5,4.81,nan,42.31,48.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3000,4/0,nan,190.0,0.084,nan,42.5,5.55,nan,48.05,55.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3100,250 kcmil,3 Elec,270.0,1.089,nan,47.0,5.9,nan,52.9,61.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3150,350 kcmil,nan,240.0,0.1,nan,55.5,6.6,nan,62.1,71.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3200,500 kcmil,nan,210.0,0.114,nan,74.5,7.55,nan,82.05,93.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3400,"15 kV, copper, 3 conductor with PVC jacket,",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3450,"ungrounded neutral, in cable tray, #2",2 Elec,260.0,0.062,LF,25.0,4.07,nan,29.07,33.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3500,#T,nan,230.0,0.07,nan,27.5,4.61,nan,32.11,37.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3600,1/0,nan,200.0,0.08,nan,31.5,5.3,nan,36.8,42.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3700,2/0,nan,190.0,0.084,nan,38.5,5.55,nan,44.05,51.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,3800,4/0,nan,160.0,0.1,nan,46.5,6.6,nan,53.1,61.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,4000,250 kcmil,3 Elec,210.0,0.114,nan,54.5,7.55,nan,62.05,71.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,4050,350 kcmil,nan,195.0,0.123,nan,71.5,8.15,nan,79.65,90.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,4100,500 kcmil,nan,180.0,0.133,nan,87.0,8.85,nan,95.85,109.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9010,"600 volt, copper (MC) steel clad, #14, 2 wire",R-1A,8.16,1.961,C.LF,64.5,117.0,nan,181.5,245.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9020,3 wire,nan,7.21,2.219,nan,83.5,132.0,nan,215.5,289.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9030,4 wire,nan,6.69,2.392,nan,213.0,142.0,nan,355.0,445.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9040,"#12, 2 wire",nan,7.21,2.219,nan,80.0,132.0,nan,212.0,285.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9050,3 wire,nan,6.69,2.392,nan,127.0,142.0,nan,269.0,350.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9070,"#10, 2 wire",nan,6.04,2.649,nan,178.0,158.0,nan,336.0,430.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9080,3 wire,nan,5.65,2.832,nan,190.0,169.0,nan,359.0,460.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9100,"#8, 2 wire, stranded",nan,3.94,4.061,nan,150.0,242.0,nan,392.0,525.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9110,"3 wire, stranded",nan,3.4,4.706,nan,193.0,280.0,nan,473.0,625.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9200,"600 volt, copper (MC) aluminum clad, #14, 2 wire",nan,8.16,1.961,nan,44.5,117.0,nan,161.5,223.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9210,3 wire,nan,7.21,2.219,nan,90.0,132.0,nan,222.0,296.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9220,4 wire,nan,6.69,2.392,nan,107.0,142.0,nan,249.0,330.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9230,"#12, 2 wire",nan,7.21,2.219,11,43.0,1.0,132.0,175.0,244.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9240,3 wire,nan,6.69,2.392,!,77.0,1.0,142.0,219.0,297.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9250,4 wire,nan,6.04,2.649,nan,177.0,158.0,nan,335.0,430.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9260,"#10, 2 wire",nan,6.04,2.649,nan,96.0,158.0,nan,254.0,340.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9270,3 wire,nan,5.65,2.832,nan,138.0,169.0,nan,307.0,405.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,9280,4 wire,nan,5.23,3.059,nan,320.0,182.0,nan,502.0,620.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,10,CABLE TERMINATIONS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,15,"Wire connectors, screw type, #22 to #14",1 Elec,260.0,0.031,Ea .,0.05,2.04,nan,2.09,3.09
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,20,#18 to #12,nan,240.0,0.033,nan,0.14,2.21,nan,2.35,3.43
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,35,#16 to #10,nan,230.0,0.035,nan,0.19,2.3,nan,2.49,3.63
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,40,#14 to #8,nan,210.0,0.038,nan,0.461,2.52,nan,2.98,4.26
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,45,#12 to #6,nan,180.0,0.044,nan,0.481,2.94,nan,3.42,4.9
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,50,"Terminal lugs, solderless, #16 to #10",nan,50.0,0.16,nan,0.35,10.6,nan,10.95,116.15
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,100,#8 to #4,nan,30.0,1.267,!,0.7,17.65,nan,18.35,27.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,150,#2 to #1,nan,22.0,0.364,nan,0.75,24.0,nan,24.75,37.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,200,1/0 to 2/0,nan,16.0,0.5,nan,1.27,33.0,nan,34.27,50.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,250,3/0,nan,12.0,0.667,nan,7.3,44.0,nan,51.3,73.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,300,4/0,nan,11.0,0.727,nan,34.0,48.0,nan,82.0,109.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,350,250 kcmil,nan,9.0,0.889,nan,2.791,59.0,nan,61.791,90.5
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,400,350 kcmil,nan,7.0,1.143,nan,3.24,75.5,nan,78.74,116.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,450,500 kcmil,nan,6.0,1.333,nan,8.0,88.5,1.0,96.5,140.0
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,1600,"Crimp 1 hole lugs, copper or aluminum, 600 volt",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,26 05 19 - Low-Voltage Electrical Power Conductors and Cables,1620,#14,1 Elec,60.0,0.133,Ea .,0.6,8.85,nan,9.45,13.75
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,10,CONTROL CABLE,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,20,"600 volt, copper, #14 THWN wire with PVC jacket, 2 wires",1 Elec,9.0,0.889,C.L.F.,48.0,59.0,nan,107.0,141.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,30,3 wires,nan,8.0,1.0,nan,61.0,66.0,nan,127.0,166.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,100,4 wires,nan,7.0,1.143,nan,131.0,75.5,nan,206.5,256.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,150,5 wires,nan,6.5,1.231,nan,186.0,81.5,nan,267.5,325.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,200,6 wires,nan,6.0,1.333,nan,92.0,88.5,nan,180.5,232.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,300,8 wires,nan,5.3,1.509,nan,217.0,100.0,nan,317.0,385.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,400,10 wires,nan,4.8,1.667,nan,185.0,110.0,nan,295.0,365.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,500,12 wires,nan,4.3,1.86,nan,197.0,123.0,nan,320.0,400.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,600,14 wires,nan,3.8,2.105,nan,250.0,139.0,nan,389.0,480.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,700,16 wires,nan,3.5,2.286,nan,315.0,151.0,nan,466.0,570.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,800,18 wires,nan,3.3,2.424,nan,350.0,160.0,nan,510.0,625.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,810,19 wires,nan,3.1,2.581,nan,252.0,171.0,nan,423.0,530.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,900,20 wires,nan,3.0,2.667,nan,269.0,177.0,nan,446.0,560.0
+26 05 90.10,26 05 23 - Control-Voltage Electrical Power Cables,1000,22 wires,nan,2.8,2.857,nan,395.0,189.0,nan,584.0,715.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,10,GROUNDING,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,30,"Rod, copper clad, 8' long, 1/2"" diameter",1 Elec,5.5,1.455,Eq.,18.0,96.5,nan,114.5,163.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,50,"3/4"" diameter",nan,5.3,1.509,nan,30.0,100.0,nan,130.0,182.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,80,"10' long, 1/2"" diameter",nan,4.8,1.667,nan,22.0,110.0,nan,132.0,188.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,100,"3/4"" diameter",nan,4.4,1.818,nan,60.5,120.0,nan,180.5,246.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,130,"15' long, 3/4"" diameter",nan,4.0,2.0,nan,65.0,132.0,nan,197.0,269.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,390,"Bare copper wire, stranded, #8",nan,nan,0.727,C.L.F.,34.0,48.0,nan,82.0,109.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,400,#6,nan,10.0,0.8,nan,55.0,53.0,nan,108.0,139.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,600,#2,2 Elec,10.0,1.6,nan,141.0,106.0,nan,247.0,310.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,800,3/0,nan,6.6,2.424,nan,267.0,160.0,nan,427.0,530.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,1000,4/0,nan,5.7,2.807,nan,385.0,186.0,nan,571.0,700.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,1200,250 kcmil,3 Elec,7.2,3.333,nan,495.0,221.0,nan,716.0,875.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,1800,"Water pipe ground clamps, heavy duty",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,2000,"Bronze, 1/2"" to 1"" diameter",1 Elec,88.0,1.0,Ea.,29.5,66.0,nan,95.5,131.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,2100,"1-1/4"" to 2"" diameter",nan,nan,1.0,nan,33.0,66.0,nan,99.0,135.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,2200,"2-1/2"" to 3"" diameter",nan,6.0,1.333,nan,64.5,88.5,nan,153.0,202.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,2800,"Brazed connections, #6 wire",nan,120.0,0.667,nan,18.6,44.0,nan,62.6,86.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,3000,#2 wire,nan,10.0,0.8,nan,25.0,53.0,nan,78.0,106.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,3100,3/0 wire,nan,8.0,1.0,nan,37.0,66.0,nan,103.0,140.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,3200,4/0 wire,nan,7.0,1.143,nan,42.5,75.5,nan,118.0,159.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,3400,250 kcmil wire,nan,5.0,1.6,nan,49.5,106.0,nan,155.5,212.0
+26 05 90.10,26 05 26 - Grounding and Bonding for Electrical Systems,3600,500 kcmil wire,nan,4.0,2.0,nan,61.0,132.0,nan,193.0,265.0
+26 05 33.13,Conduit,10,"CONDUIT To 10' high, includes 2 terminations, 2 elbows, R260533-22",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.13,Conduit,20,"11 beam clamps, and 11 couplings per 100 L.F.",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.13,Conduit,300,"Aluminum, 1/2"" diameter",1 Elec,100.0,0.08,LF,2.1,5.3,nan,7.4,10.15
+26 05 33.13,Conduit,500,"3/4"" diameter",nan,90.0,0.089,nan,2.95,5.9,nan,8.85,12.0
+26 05 33.13,Conduit,700,"1"" diameter",nan,80.0,0.1,nan,3.32,6.6,nan,9.92,13.5
+26 05 33.13,Conduit,1000,"1-1/4"" diameter",nan,70.0,0.114,nan,4.38,7.55,nan,11.93,16.05
+26 05 33.13,Conduit,1030,"1-1/2"" diameter",nan,65.0,0.123,nan,5.3,8.15,nan,13.45,17.95
+26 05 33.13,Conduit,1050,"2"" diameter",nan,60.0,0.133,nan,6.9,8.85,nan,15.75,20.5
+26 05 33.13,Conduit,1070,"2-1/2"" diameter",nan,50.0,0.16,nan,9.9,10.6,nan,20.5,26.5
+26 05 33.13,Conduit,1100,"3"" diameter",2 Elec,90.0,0.178,nan,13.7,11.75,nan,25.45,32.5
+26 05 43.10,Trench Duct,10,TRENCH DUCT Steel with cover,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 43.10,Trench Duct,20,"Standard adjustable, depths to 4""",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 43.10,Trench Duct,100,"Straight, single compartment, 9"" wide",2 Elec,40.0,0.4,LF,430,26.5,nan,456.50,510
+26 05 43.10,Trench Duct,200,"12"" wide",nan,32.0,0.5,nan,570,33.0,nan,603,675
+26 05 43.10,Trench Duct,400,"18"" wide",nan,26.0,0.615,nan,540,40.5,nan,580.50,655
+26 05 43.10,Trench Duct,600,"24"" wide",nan,22.0,1.727,nan,640,48.0,nan,688,775
+26 05 43.10,Trench Duct,800,"30"" wide",nan,20.0,1.8,nan,248,53.0,nan,301,350
+26 05 43.10,Trench Duct,1000,"36"" wide",nan,16.0,1.0,nan,275,66.0,nan,341,400
+26 05 43.10,Trench Duct,1200,"Horizontal elbow, 9"" wide",nan,5.4,2.963,Ea.,450,196.0,nan,646,785
+26 05 43.10,Trench Duct,1400,"12"" wide",nan,4.6,3.478,nan,470,230.0,nan,700,855
+26 05 43.10,Trench Duct,1600,"18"" wide",nan,4.0,4.0,nan,635,265.0,nan,900,"1,100"
+26 05 43.10,Trench Duct,1800,"24"" wide",nan,3.2,5.0,nan,895,330.0,nan,"1,225","1,475"
+26 05 43.10,Trench Duct,2000,"30"" wide",nan,2.6,6.154,nan,"1,325",405.0,nan,"1,730","2,050"
+26 05 43.10,Trench Duct,2200,"36"" wide",nan,2.4,6.667,nan,"1,575",440.0,nan,"2,015","2,375"
+26 05 43.10,Trench Duct,2400,"Vertical elbow, 9"" wide",nan,5.4,2.963,nan,200,196.0,nan,396,510
+26 05 43.10,Trench Duct,2600,"12"" wide",nan,4.6,3.478,nan,170,230.0,nan,400,525
+26 05 43.10,Trench Duct,2800,"18"" wide",nan,4.0,nan,nan,195,265.0,nan,460,610
+26 05 43.10,Trench Duct,3000,"24"" wide",nan,3.2,5.0,nan,242,330.0,nan,572,755
+26 05 43.10,Trench Duct,3200,"30"" wide",nan,2.6,6.154,nan,267,405.0,nan,672,900
+26 05 43.10,Trench Duct,3400,"36"" wide",nan,2.4,6.667,nan,294,440.0,nan,734,980
+26 05 43.10,Trench Duct,3600,"Cross, 9"" wide",nan,44.0,nan,nan,735,265.0,nan,"1,000","1,200"
+26 05 43.10,Trench Duct,3800,"12"" wide",nan,3.2,5.0,nan,775,330.0,nan,"1,105","1,350"
+26 05 43.10,Trench Duct,4000,"18"" wide",nan,2.6,6.154,nan,930,405.0,nan,"1,335","1,625"
+26 05 43.10,Trench Duct,4200,"24"" wide",nan,2.2,7.273,nan,"1,150",480.0,nan,"1,630","2,000"
+26 05 43.10,Trench Duct,4400,"30"" wide",nan,2.0,8.0,nan,"1,625",530.0,nan,"2,155","2,550"
+26 05 43.10,Trench Duct,4600,"36"" wide",nan,1.8,8.889,nan,"2,025",590.0,nan,"2,615","3,100"
+26 05 43.10,Trench Duct,4800,"End closure, 9"" wide",nan,14.4,1.111,nan,48.50,73.5,nan,122,163
+26 05 43.10,Trench Duct,5000,"12"" wide",nan,12.0,1.333,nan,55.50,88.5,nan,144,192
+26 05 43.10,Trench Duct,5200,"18"" wide",nan,10.0,1.6,nan,85,106.0,nan,191,251
+26 05 43.10,Trench Duct,5400,"24"" wide",2 Elec,82.0,nan,Ea.,112,132.0,nan,244,320
+26 05 43.10,Trench Duct,5600,"30"" wide",nan,6.6,2.424,nan,174,160.0,nan,334,430
+26 05 43.10,Trench Duct,5800,"36"" wide",nan,5.8,2.759,nan,167,183.0,nan,350,455
+26 05 43.10,Trench Duct,6000,"Tees, 9"" wide",nan,4.0,4.0,nan,470,265.0,nan,735,915
+26 05 43.10,Trench Duct,6200,"12"" wide",nan,3.6,4.444,nan,550,294.0,nan,844,"1,050"
+26 05 43.10,Trench Duct,6400,"18"" wide",nan,3.2,5.0,nan,700,330.0,nan,"1,030","1,250"
+26 05 43.10,Trench Duct,6600,"24"" wide",nan,3.0,5.333,nan,"1,000",355.0,nan,"1,355","1,625"
+26 05 43.10,Trench Duct,6800,"30"" wide",nan,2.6,6.154,nan,"1,325",405.0,nan,"1,730","2,050"
+26 05 43.10,Trench Duct,7000,"36"" wide",nan,2.0,8.0,nan,"1,725",530.0,nan,"2,255","2,675"
+26 05 43.10,Trench Duct,7200,"Riser and cabinet connector, 9"" wide",nan,5.4,2.963,nan,206,196.0,nan,402,520
+26 05 43.10,Trench Duct,7400,"12"" wide",nan,4.6,3.478,nan,241,230.0,nan,471,605
+26 05 43.10,Trench Duct,7600,"18"" wide",nan,4.0,4.0,nan,255,265.0,nan,520,675
+26 05 43.10,Trench Duct,7800,"24"" wide",nan,3.2,5.0,nan,360,330.0,nan,690,885
+26 05 43.10,Trench Duct,8000,"30"" wide",nan,2.6,6.154,nan,410,405.0,nan,815,"1,050"
+26 05 43.10,Trench Duct,8200,"36"" wide",nan,26.0,8.0,nan,480,530.0,nan,"1,010","1,300"
+26 05 43.10,Trench Duct,8400,"Insert assembly, cellto conduit adapter, 1-1/4""",1 Elec,16.0,0.5,nan,75,33.0,nan,108,132
+26 05 43.20,Underfloor Duct,10,UNDERFLOOR DUCT,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 43.20,Underfloor Duct,100,"Duct, 1-3/8"" x 3-1/8"" blank, standard",2 Elec,112484.0,0.1,LF,13.95,6.6,nan,20.55,25.0
+26 05 43.20,Underfloor Duct,200,"1-3/8"" x 7-1/4"" blank, super duct",nan,120.0,0.133,nan,32.5,8.85,nan,41.35,49.0
+26 05 43.20,Underfloor Duct,400,"7/8"" or 1-3/8"" insert type, 24"" OC, 1-3/8"" x 3-1/8"", std.",nan,140.0,0.114,nan,22.0,7.55,nan,29.55,35.5
+26 05 43.20,Underfloor Duct,600,"1-3/8"" x 7-1/4"", super duct",nan,100.0,0.16,nan,38.0,10.6,nan,48.6,58.0
+26 05 43.20,Underfloor Duct,800,"Junction box, single duct, 1 level, 3-1/8""",1 Elec,nan,nan,Eo.,485.0,132.0,nan,617.0,730.0
+26 05 19.55,Non-Metallic Sheathed Cable,850,3 #2/0 & 1 #1,2 Elec,1.8,8.889,C.LF.,206,590,nan,796,"1,100"
+26 05 19.55,Non-Metallic Sheathed Cable,900,3 #4/0 & 1 #2/0,nan,1.6,10.0,nan,305,660,nan,965,"1,325"
+26 05 19.90,Wire,10,"WIRE, normal installation conditions in wireway, conduit, cable tray",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 19.90,Wire,20,"600 volt, copper type THW, solid, #14","R260519-92, 1 Elec",13.0,0.615,C.L.F,13.95,40.5,nan,54.45,76
+26 05 19.90,Wire,30,#12,nan,11.0,0.727,nan,16.95,48.0,nan,64.95,90
+26 05 19.90,Wire,40,#10,nan,10.0,0.8,nan,34.50,53.0,nan,87.50,117
+26 05 19.90,Wire,50,"Stranded, #14",R260533-22,13.0,0.615,nan,16.55,40.5,nan,57.05,78.50
+26 05 19.90,Wire,100,#12,nan,11.0,0.727,nan,23,48.0,1.0,71,96.50
+26 05 19.90,Wire,1201,#10,nan,10.0,0.8,nan,34.50,53.0,nan,87.50,117
+26 05 19.90,Wire,140,#8,nan,nan,nan,nan,52.50,66.0,nan,118.50,157
+26 05 19.90,Wire,160,#6,nan,6.5,1.231,nan,75,81.5,nan,156.50,204
+26 05 19.90,Wire,180,#4,2 Elec,10.6,1.509,nan,141,100.0,nan,241,305
+26 05 19.90,Wire,200,#3,nan,10.0,1.6,nan,170,106.0,nan,276,345
+26 05 19.90,Wire,220,#2,nan,9.0,1.778,nan,214,118.0,nan,332,410
+26 05 19.90,Wire,240,#1,nan,82.0,nan,nan,248,132.0,nan,380,470
+26 05 19.90,Wire,260,1/0,nan,6.6,2.424,nan,298,160.0,nan,458,570
+26 05 19.90,Wire,280,2/0,nan,5.8,2.759,nan,410,183.0,nan,593,720
+26 05 19.90,Wire,300,3/0,nan,5.0,3.2,nan,495,212.0,nan,707,855
+26 05 19.90,Wire,350,4/0,nan,4.4,3.636,nan,590,241.0,nan,831,"1,000"
+26 05 19.90,Wire,400,250 kcmil,3 Elec,6.0,4.0,nan,715,265.0,nan,980,"1,175"
+26 05 19.90,Wire,420,300 kcmil,nan,5.7,4.211,nan,940,279.0,nan,"1,219","1,450"
+26 05 19.90,Wire,450,350 kcmil,nan,5.4,4.444,nan,"1,075",294.0,nan,"1,369","1,625"
+26 05 19.90,Wire,480,400 kcmil,nan,5.1,4.706,nan,"1,225",310.0,nan,"1,535","1,825"
+26 05 19.90,Wire,490,500 kcmil,nan,4.8,5.0,nan,"1,550",330.0,nan,"1,880","2,200"
+26 05 19.90,"600 volt, aluminum type THHN, stranded",540,#6,1 Elec,8.0,1.0,nan,15.0,66.0,nan,81.0,115
+26 05 19.90,"600 volt, aluminum type THHN, stranded",560,#4,12 Elec,13.0,1.231,nan,20.5,81.5,nan,102.0,144
+26 05 19.90,"600 volt, aluminum type THHN, stranded",580,#2,nan,10.6,1.509,nan,27.0,100.0,nan,127.0,179
+26 05 19.90,"600 volt, aluminum type THHN, stranded",600,#1,nan,9.0,1.778,nan,39.0,118.0,nan,157.0,218
+26 05 19.90,"600 volt, aluminum type THHN, stranded",620,1/0,nan,8.0,2.0,nan,43.5,132.0,nan,175.5,245
+26 05 19.90,"600 volt, aluminum type THHN, stranded",640,2/0,nan,7.2,2.222,nan,51.0,147.0,nan,198.0,275
+26 05 19.90,"600 volt, aluminum type THHN, stranded",680,3/0,nan,6.6,2.424,nan,62.5,160.0,nan,222.5,310
+26 05 19.90,"600 volt, aluminum type THHN, stranded",700,4/0,nan,6.2,2.581,nan,72.0,171.0,nan,243.0,335
+26 05 19.90,"600 volt, aluminum type THHN, stranded",720,250 kcmil,3 Elec,8.7,2.759,nan,85.5,183.0,nan,268.5,365
+26 05 19.90,"600 volt, aluminum type THHN, stranded",740,300 kcmil,nan,8.1,2.963,nan,112.0,196.0,nan,308.0,415
+26 05 19.90,"600 volt, aluminum type THHN, stranded",760,350 kcmil,nan,7.5,3.2,nan,120.0,212.0,nan,332.0,445
+26 05 19.90,"600 volt, aluminum type THHN, stranded",780,400 kcmil,nan,6.9,3.478,nan,135.0,230.0,nan,365.0,490
+26 05 19.90,"600 volt, aluminum type THHN, stranded",800,500 kcmil,nan,6.0,4.0,nan,142.0,265.0,nan,407.0,550
+26 05 19.90,"600 volt, aluminum type THHN, stranded",850,600 kcmil,nan,5.7,4.211,nan,194.0,279.0,nan,473.0,630
+26 05 19.90,"600 volt, aluminum type THHN, stranded",880,700 kcmil,1 1,5.1,4.706,nan,214.0,310.0,nan,524.0,700
+26 05 19.90,"600 volt, aluminum type THHN, stranded",900,750 kcmil,nan,4.8,5.0,nan,230.0,330.0,nan,560.0,745
+26 05 19.90,"600 volt, aluminum type THHN, stranded",910,"1,000 kcmil",nan,3.78,6.349,nan,340.0,420.0,nan,760.0,"1,000"
+26 05 19.90,"600 volt, copper type THWN THHN",920,#14,1 Elec,13.0,1.615,nan,8.4,40.5,nan,48.9,70
+26 05 19.90,"600 volt, copper type THWN THHN",940,#12,nan,11.0,0.727,nan,12.95,48.0,nan,60.95,86
+26 05 19.90,"600 volt, copper type THWN THHN",960,#10,nan,10.0,0.8,nan,20.5,53.0,nan,73.5,101
+26 05 19.90,"600 volt, copper type THWN THHN",1000,"Stranded, #14",nan,13.0,0.615,nan,9.3,40.5,nan,49.8,71
+26 05 19.90,"600 volt, copper type THWN THHN",1200,#12,nan,11.0,0.727,nan,35.0,48.0,nan,83.0,110
+26 05 19.90,"600 volt, copper type THWN THHN",1250,#10,nan,10.0,0.8,nan,31.0,53.0,nan,84.0,113
+26 05 19.90,"600 volt, copper type THWN THHN",1300,#8,nan,8.0,nan,nan,34.5,66.0,nan,100.5,137
+26 05 19.90,"600 volt, copper type THWN THHN",1350,#6,nan,6.5,1.231,nan,55.0,81.5,nan,136.5,182
+26 05 19.90,"600 volt, copper type THWN THHN",1400,#4,2 Elec,10.6,1.509,nan,89.5,100.0,nan,189.5,248
+26 05 33.16,Boxesforr ElectricElectrical,2040,"For 7"" floor",1 Elec,6.8,1.176,Eq.,227,78.0,nan,305.0,365
+26 05 33.16,Boxesforr ElectricElectrical,2100,"Pedestal, 15 amp, duplex receptacle & blank plate",nan,5.25,1.524,nan,184,101.0,nan,285.0,350
+26 05 33.16,Boxesforr ElectricElectrical,2120,Duplex receptacle and telephone plate,nan,5.25,1.524,nan,184,101.0,nan,285.0,350
+26 05 33.16,Boxesforr ElectricElectrical,2140,"Pedestal, 20 amp, duplex recept. & phone plate",nan,5.0,1.6,nan,185,106.0,nan,291.0,360
+26 05 33.16,Boxesforr ElectricElectrical,2200,Abandonment plate,nan,32.0,0.25,nan,52,16.55,nan,68.55,82
+26 05 33.18,Pull Boxes,10,PULL BOXES,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.18,Pull Boxes,100,"Steel, pull box, NEMA 1, type SC, 6"" W x 6"" H x 4"" D",1 Elec,8.0,1.0,Ea.,9.70,66,nan,75.70,109
+26 05 33.18,Pull Boxes,200,"8"" W x 8"" H x 4"" D",nan,8.0,1.0,nan,13.25,66,nan,79.25,113
+26 05 33.18,Pull Boxes,300,"10"" W x 12"" H x 6"" D",nan,5.3,1.509,nan,32,ទ100,nan,132,185
+26 05 33.18,Pull Boxes,400,"16"" W x 20"" H x 8"" D",142,nan,nan,nan,84,ន132,nan,216,290
+26 05 33.18,Pull Boxes,500,"20"" W x 24"" H x 8"" D",nan,3.2,2.5,nan,98,៖166,nan,264,355
+26 05 33.18,Pull Boxes,600,"24"" W x 36"" H x 8"" D",nan,2.7,2.963,nan,152,196,nan,348,460
+26 05 33.18,Pull Boxes,650,"Pull box, hinged, NEMA 1, 6"" W x 6"" H x 4"" D",nan,8.0,nan,nan,12.85,66,nan,78.85,113
+26 05 33.18,Pull Boxes,800,"12"" W x 16"" H x 6"" D",nan,4.7,1.702,nan,80,៨113,nan,193,256
+26 05 33.18,Pull Boxes,1000,"20"" W x 20"" H x 6"" D",nan,3.6,2.222,nan,271,147,nan,418,520
+26 05 33.18,Pull Boxes,1200,"20"" W x 20"" H x 8"" D",1 Elec,3.2,2.5,Ea.,170,៩166,nan,336,430
+26 05 33.18,Pull Boxes,1400,"24"" W x 36"" H x 8"" D",nan,2.7,2.963,!,249,196,nan,445,565
+26 05 33.18,Pull Boxes,1600,"24"" W x 42"" H x 8"" D",1,24.0,nan,nan,365,265,nan,630,800
+26 05 33.18,Pull Boxes,2100,"Pull box, NEMA 3R, type SC, raintight & weatherproof",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.18,Pull Boxes,2150,"6"" L x 6"" W x 6"" D",11 Elec,10.0,0.8,Eo.,19.65,53,nan,72.65,100
+26 05 33.18,Pull Boxes,2200,"8"" L x 6"" W x 6"" D",1,8.0,1.0,nan,33,66,nan,99,135
+26 05 33.18,Pull Boxes,2250,"10"" L x 6"" W x 6"" D",nan,7.0,1.143,nan,32.50,75.50,nan,108,148
+26 05 33.18,Pull Boxes,2300,"12"" L x 12"" W x 6"" D",nan,5.0,1.6,nan,47,106,nan,153,209
+26 05 33.18,Pull Boxes,2350,"16"" L x 16"" W x 6"" D",nan,4.5,1.778,nan,92,118,nan,210,276
+26 05 33.18,Pull Boxes,2400,"20"" L x 20"" W x 6"" D",nan,4.0,2.0,nan,89,132,nan,221,295
+26 05 33.18,Pull Boxes,2450,"24"" L x 18"" W x 8"" D",13,nan,2.667,nan,147,177,nan,324,425
+26 05 33.18,Pull Boxes,2500,"24"" L x 24"" W x 10"" D",nan,2.5,3.2,nan,181,212,nan,393,515
+26 05 33.18,Pull Boxes,2550,"30"" L x 24"" W x 12"" D",nan,24.0,nan,nan,860,265,nan,"1,125","1,350"
+26 05 33.18,Pull Boxes,2600,"36"" L x 36"" W x 12"" D",nan,1.5,5.333,nan,460,355,nan,815,"1,025"
+26 05 33.18,Pull Boxes,2800,"Cast iron, pull boxes for surface mounting",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.18,Pull Boxes,3000,"NEMA 4, watertight & dust tight",nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.18,Pull Boxes,3050,"6"" L x 6"" W x 6"" D",1 Elec,4.0,2.0,Eo.,282,132,nan,414,505
+26 05 33.18,Pull Boxes,3100,"8"" L x 6"" W x 6"" D",nan,3.2,2.5,nan,470,166,nan,636,760
+26 05 33.18,Pull Boxes,3150,"10"" L x 6"" W x 6"" D",nan,2.5,3.2,nan,485,212,nan,697,850
+26 05 33.18,Pull Boxes,3200,"12"" L x 12"" W x 6"" D",nan,2.3,3.478,nan,710,230,nan,940,"1,125"
+26 05 33.18,Pull Boxes,3250,"16"" L x 16"" W x 6"" D",nan,1.3,6.154,nan,805,405,nan,"1,210","1,500"
+26 05 33.18,Pull Boxes,3300,"20"" L x 20"" W x 6"" D",nan,0.8,10.0,nan,980,660,nan,"1,640","2,050"
+26 05 33.18,Pull Boxes,3350,"24"" L x 18"" W x 8"" D",nan,0.7,11.429,nan,"2,575",755,nan,"3,330","3,950"
+26 05 33.18,Pull Boxes,3400,"24"" L x 24"" W x 10"" D",nan,0.5,16.0,nan,"4,800","1,050",nan,"5,850","6,850"
+26 05 33.18,Pull Boxes,3450,"30"" L x 24"" W x 12"" D",nan,0.4,20.0,nan,"6,300","1,325",nan,"7,625","8,925"
+26 05 33.18,Pull Boxes,3500,"36"" L x 36"" W x 12"" D",nan,0.2,40.0,nan,"2,375","2,650",nan,"5,025","6,525"
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",60501,"6"" L x 8"" W x 4"" D",11 Elec,10.0,0.8,Eo.,78.5,53,nan,131.5,165
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",6100,"8"" L x 10"" W x 4"" D",18,nan,1.0,nan,96.5,66,nan,162.5,205
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",6150,"12"" L x 14"" W x 6"" D",nan,5.3,1.509,nan,162.0,100,nan,262.0,325
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",6200,"14"" L x 16"" W x 6"" D",nan,4.7,1.702,nan,187.0,113,nan,300.0,370
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",6250,"16"" L x 20"" W x 6"" D",nan,4.4,1.818,nan,251.0,120,nan,371.0,455
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",6300,"24"" L x 30"" W x 6"" D",nan,3.2,2.5,nan,370.0,166,nan,536.0,650
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",6350,"24"" L x 30"" W x 8"" D",nan,2.9,2.759,nan,375.0,183,nan,558.0,685
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",6400,"24"" L x 36"" W x 8"" D",nan,2.7,2.963,nan,420.0,196,nan,616.0,750
+26 05 33.18,"6000 J.I.C. wiring boxes, NEMA 12, dust tight & drip tight",6450,"24"" L x 42"" W x 8"" D",nan,2.3,3.478,nan,480.0,230,nan,710.0,865
+26 05 33.13,Conduit,1130,"3-1 / 2 "" diameter",2 Elec,80,0.2,LF,17.75,13.25,nan,31.0,39.5
+26 05 33.13,Conduit,1140,"4 "" diameter",nan,70,0.229,nan,21.0,15.15,nan,36.15,45.5
+26 05 33.13,Conduit,1750,"Rigid galvanized steel, 1/2  "" diameter",1 Elec,90,0.089,nan,3.24,5.9,nan,9.14,12.3
+26 05 33.13,Conduit,1770,"3/4  "" diameter",nan,80,0.1,nan,3.5,6.6,nan,10.1,13.7
+26 05 33.13,Conduit,1800,"1"" diameter",nan,65,0.123,nan,5.05,8.15,nan,13.2,17.65
+26 05 33.13,Conduit,1830,"1-1 / 4 "" diameter",nan,60,0.133,nan,7.25,8.85,nan,16.1,21.0
+26 05 33.13,Conduit,1850,"1-1 / 2 "" diameter",nan,55,0.145,nan,8.25,9.65,nan,17.9,23.5
+26 05 33.13,Conduit,1870,"2""  diameter",nan,45,0.178,nan,10.0,11.75,nan,21.75,28.5
+26 05 33.13,Conduit,1900,"2-1 / 2""  diameter",nan,35,0.229,nan,18.35,15.15,nan,33.5,42.5
+26 05 33.13,Conduit,1930,"3 "" diameter",2 Elec,50,0.32,nan,21.0,221.0,nan,42.0,54.5
+26 05 33.13,Conduit,1950,"3-1 / 2 "" diameter",nan,44,0.364,nan,26.5,24.0,nan,50.5,65.5
+26 05 33.13,Conduit,1970,"4 "" diameter",nan,40,0.4,nan,29.0,26.5,nan,55.5,71.0
+26 05 33.13,Conduit,2500,"Steel, intermediate conduit (IMC), 1/2  "" diameter",1 Elec,100,0.08,nan,2.34,5.3,nan,7.64,10.4
+26 05 33.13,Conduit,2530,"3/4  ""  diameter",nan,90,0.089,nan,2.86,5.9,nan,8.76,11.9
+26 05 33.13,Conduit,2550,"1"" diameter",nan,70,0.114,nan,3.93,7.55,nan,11.48,15.6
+26 05 33.13,Conduit,2570,"1-1 / 4""  diameter",nan,65,0.123,nan,5.45,8.15,nan,13.6,18.1
+26 05 33.13,Conduit,2600,"1-1/ 2 "" diameter",nan,60,0.133,nan,6.7,8.85,nan,15.55,20.5
+26 05 33.13,Conduit,2630,"2 "" diameter",nan,50,0.16,nan,7.95,10.6,nan,18.55,24.5
+26 05 33.13,Conduit,2650,"2-1 / 2 "" diameter",nan,40,0.2,nan,14.65,13.25,nan,27.9,36.0
+26 05 33.13,Conduit,2670,"3 "" diameter",2 Elec,60,0.267,nan,19.85,17.65,nan,37.5,48.0
+26 05 33.13,Conduit,2700,"3-1 / 2 "" diameter",nan,54,0.296,nan,24.0,19.6,nan,43.6,55.5
+26 05 33.13,Conduit,2730,"4 "" diameter",nan,50,0.32,nan,27.0,21.0,nan,48.0,61.0
+26 05 33.13,Conduit,5000,"Electric metallic tubing (EMT), 1/2  "" diameter",1 Elec,170,0.047,nan,0.82,3.12,nan,3.94,5.55
+26 05 33.13,Conduit,5020,"3/4  "" diameter",nan,130,0.062,nan,1.23,4.07,nan,5.3,7.4
+26 05 33.13,Conduit,5040,"1"" diameter",nan,115,0.07,nan,2.07,4.61,nan,6.68,9.1
+26 05 33.13,Conduit,5060,"1-1/ 4 "" diameter",nan,100,0.08,nan,3.39,5.3,nan,8.69,11.6
+26 05 33.13,Conduit,5080,"1-1/ 2 "" diameter",nan,90,0.089,nan,4.11,5.9,nan,10.01,13.25
+26 05 33.13,Conduit,5100,"2 "" diameter",nan,80,0.1,nan,4.82,6.6,nan,11.42,15.15
+26 05 33.13,Conduit,5120,"2-1 / 2 "" diameter",nan,60,0.133,nan,6.8,8.85,nan,15.65,20.5
+26 05 33.13,Conduit,5140,"3 "" diameter",2 Elec,100,160.0,nan,8.6,10.6,nan,19.2,25.0
+26 05 33.13,Conduit,5160,"3-1 / 2""  diameter",2 Elec,90,0.178,LF,11.1,11.75,nan,22.85,30.0
+26 05 33.13,Conduit,5180,"4 "" diameter",nan,80,0.2,"""",11.65,13.25,nan,24.9,32.5
+26 05 33.13,Add to labor for higher elevated installation,9900,Add to labor for higher elevated installation,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.13,Add to labor for higher elevated installation,9905,"10 ' to 14.5  ' high , add",nan,nan,nan,nan,,nan,10 %,nan,nan
+26 05 33.13,Add to labor for higher elevated installation,9910,"15 ' to 20  ' high ,add",nan,nan,nan,nan,,nan,20 %,nan,nan
+26 05 33.13,Add to labor for higher elevated installation,9920,"20  ' to 25  ' high ,add",nan,nan,nan,nan,,nan,25%,nan,nan
+26 05 33.13,Add to labor for higher elevated installation,9930,"25  ' to 30  ' high ,add",nan,nan,nan,nan,,nan,35 %,nan,nan
+26 05 33.13,Add to labor for higher elevated installation,9940,"30  ' to 35  ' high ,add",nan,nan,nan,nan,,nan,40 %,nan,nan
+26 05 33.13,Add to labor for higher elevated installation,9950,"35  ' to 40  ' high ,add",nan,nan,nan,nan,,nan,50 %,nan,nan
+26 05 33.13,Add to labor for higher elevated installation,9960,"Over   40 ' high , add",nan,nan,nan,nan,,nan,55 %,nan,nan
+26 05 33.16,Boxes for Electrical Systems,10,BOXES FOR ELECTRICAL SYSTEMS,nan,nan,nan,nan,,nan,nan,nan,nan
+26 05 33.16,Boxes for Electrical Systems,20,"Pressed steel, octagon, 4 """,1 Elec,20,0.4,Ea .,1.32,26.5,nan,27.82,41.0
+26 05 33.16,Boxes for Electrical Systems,60,"Covers, blank",nan,64,0.125,nan,0.68,8.3,nan,8.98,13.05
+26 05 33.16,Boxes for Electrical Systems,100,Extension rings,nan,40,0.2,nan,2.19,13.25,nan,15.44,222.0
+26 05 33.16,Boxes for Electrical Systems,150,"Square, 4 """,nan,20   :,0.4,nan,2.06,26.5,nan,28.56,42.0
+26 05 33.16,Boxes for Electrical Systems,200,Extension rings,nan,40,0.2,nan,2.65,13.25,nan,15.9,22.5
+26 05 33.16,Boxes for Electrical Systems,250,"Covers, blank",nan,64    1,0.125,nan,1.19,8.3,nan,9.49,13.6
+26 05 33.16,Boxes for Electrical Systems,300,Plaster rings,nan,64,0.125,nan,1.711,8.3,nan,10.01,14.2
+26 05 33.16,Boxes for Electrical Systems,650,Switchbox,nan,27,0.296,nan,4.77,19.6,nan,24.37,34.5
+26 05 33.16,Boxes for Electrical Systems,1100,"Concrete, floor, 1 gang",nan,5.30,1.509,nan,126.0,100.0,nan,226.0,288.0
+26 05 33.16,Boxes for Electrical Systems,2000,"Poke-thru fitting, fire rated, for 3-3 /4"" floor",nan,6.80,1.176,nan,170.0,78.0,nan,248.0,305.0

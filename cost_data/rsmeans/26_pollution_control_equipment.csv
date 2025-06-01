@@ -1,0 +1,46 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+nan,2022 Bare Costs,200,"500 CFM, 10"" inlet, 2 HP",Q-20,2.4,8.333,Ea.,"4,025",515,nan,"4,540","5,200"
+nan,2022 Bare Costs,220,"1,000 CFM, 10"" inlet, 3 HP",Q 20,2.2,9.091,Ea.,"4,775",565,nan,"5,340","6,100"
+nan,2022 Bare Costs,240,"1,500 CFM, 10"" inlet, 5 HP",nan,210.0,nan,nan,"4,400",620,nan,"5,020","5,750"
+nan,2022 Bare Costs,260,"3,000 CFM, 13"" inlet, 10 HP",nan,1.5,13.333,nan,"13,900",825,nan,"14,725","16,600"
+nan,2022 Bare Costs,280,"5,000 CFM, 16"" inlet, 2 @ 10 HP",nan,1.0,20,nan,"14,800","1,250",nan,"16,050","18,200"
+nan,2022 Bare Costs,1100,"2-1/8"" OD, 16 ga.",Q-9,440.0,.036,L.F.,3.60,2.21,nan,5.81,7.30
+nan,2022 Bare Costs,1110,"2-1/2"" OD, 16 ga.",nan,420.0,.038,nan,3.90,2.32,nan,6.22,7.80
+nan,2022 Bare Costs,1120,"3"" OD, 16 ga.",nan,400.0,.040,nan,3.98,2.43,nan,6.41,8.0 %
+nan,2022 Bare Costs,1130,"3-1/2"" OD, 16 ga.",nan,380.0,.042,nan,6.10,2.56,nan,8.66,10.55
+nan,2022 Bare Costs,1140,"4"" OD, 16 ga.",nan,360.0,.044,nan,7,2.70,nan,9.70,11.75
+nan,2022 Bare Costs,1150,"5"" OD, 14 ga.",nan,320.05,nan,nan,9.90,3.04,nan,12.94,15.50
+nan,2022 Bare Costs,1160,"6"" OD, 14 ga.",nan,280.0,.057,nan,12,3.47,nan,15.47,18.4 !
+nan,2022 Bare Costs,1170,"8"" OD, 14 ga.",nan,200.0,.080,nan,18.55,4.86,nan,23.41,28
+nan,2022 Bare Costs,1180,"10"" OD, 12 go.",nan,160.0,.100,nan,54,6.10,nan,60.10,68.50
+nan,2022 Bare Costs,1190,"12"" OD, 12 ga.",nan,120.0,.133,nan,51,8.10,nan,59.10,68
+nan,2022 Bare Costs,1200,"14"" OD, 12 ga.",nan,80.0,.200,nan,57.50,12.15,nan,69.65,81.50
+nan,2022 Bare Costs,1956,"Hose, flexible wire reinforced rubber, 3"" diam.",Q-9,400.0,.040,LF,6.05,2.43,nan,8.48,10.3 !
+nan,2022 Bare Costs,1960,"4"" diam.",nan,360.0,.044,nan,7.15,2.70,nan,9.85,11.95
+nan,2022 Bare Costs,1970,"5"" diam.",nan,320.0,.050,nan,8.85,3.04,nan,11.89,14.30
+nan,2022 Bare Costs,1980,"6"" diam.",nan,280.0,.057,nan,9.40,3.47,nan,12.87,15.60
+nan,2022 Bare Costs,2110,"90° elbow, slip fit, 2-1/8"" diam.",Q-9,70.0,.229,Ea.,13.50,13.90,nan,27.40,36
+nan,2022 Bare Costs,2120,"2-1/2"" diam.",nan,65.0,.246,nan,16.65,14.95,nan,31.60,41
+nan,2022 Bare Costs,2130,"3"" diam.",nan,60.0,.2671,nan,26,16.20,nan,42.201,53
+nan,2022 Bare Costs,2140,"3-1/2"" diam.",nan,55.0,.291,nan,31.50,17.70,nan,49.20,61
+nan,2022 Bare Costs,2150,"4"" diam.",nan,50.0,.320,nan,34.50,19.45,nan,53.95,67.50
+nan,2022 Bare Costs,2160,"5"" diam.",nan,45.0,.3561,nan,53.50,21.50,nan,75,91.50
+nan,2022 Bare Costs,2170,"6"" diam.",nan,40.0,.400,nan,70,24.50,nan,94.50,114
+nan,2022 Bare Costs,2180,"8"" diam.",nan,30.0,.533,+,160,32.50,nan,192.50,225
+nan,2022 Bare Costs,2410,"45° elbow, slip fit, 2-1/8"" diam.",Q-9,70.0,.229,Ea.,9.90,13.90,nan,23.80,32
+nan,2022 Bare Costs,2420,"2-1/2"" diam.",nan,65.0,.246,nan,16.15,14.95,nan,31.10,40.50
+nan,2022 Bare Costs,2430,"3"" diam.",nan,160.0,.2671,nan,19.90,16.20,nan,36.101,46.50
+nan,2022 Bare Costs,2440,"3-1/2"" diam.",nan,55.0,.291,nan,241,17.70,nan,41.70,53
+nan,2022 Bare Costs,2450,"4"" diam.",nan,50.0,.320,nan,31,19.45,nan,50.45,63.50
+nan,2022 Bare Costs,2460,"5"" diam.",nan,45.0,.356,nan,51,21.50,nan,72.50,88.50
+nan,2022 Bare Costs,2470,"6"" diam.",nan,40.0,.400,nan,64,24.50,nan,88.50,107
+nan,2022 Bare Costs,2480,"8"" diam.",nan,35.0,.457,nan,170,28,nan,198,229
+nan,2022 Bare Costs,2810,"90° TY, slip fitthru 6"" diam., 2-1/8"" diam.",Q-9,2333322.0,.381,Ea.,2124,2222334,nan,44,58.50
+nan,2022 Bare Costs,2820,"2-1/2"" diam.",nan,39.0,.410,nan,26.50,25,nan,51.50,66.50
+nan,2022 Bare Costs,2830,"3"" diam.",nan,36.0,.444,nan,32.50,27,nan,59.50,76
+nan,2022 Bare Costs,2840,"3-1/2"" diam.",nan,nan,.485 !,nan,47,29.50,nan,76.50,96
+nan,2022 Bare Costs,2850,"4"" diam.",nan,30.0,.533,nan,41.50,32.50,nan,74,94.50
+nan,2022 Bare Costs,2860,"5"" diam.",nan,27.0,.593,nan,69,36,nan,105,131
+nan,2022 Bare Costs,2870,"6"" diam.",nan,24.0,.667,nan,102,40.50,nan,142.50,173
+nan,2022 Bare Costs,2880,"8"" diam., butt end",nan,nan,nan,nan,174,nan,nan,174,191
+nan,2022 Bare Costs,2890,"10"" diam., butt end",nan,nan,nan,nan,370,nan,nan,370,410

@@ -1,0 +1,900 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+13 05 05.10,"Selective Demolition, Air Supported Structures",10,"SELECTIVE DEMOLITION, AIR SUPPORTED STRUCTURES",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.10,"Selective Demolition, Air Supported Structures",20,"Tank covers, scrim, dbl. layer, vinyl poly w/hdwe., blower & controls",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.10,"Selective Demolition, Air Supported Structures",50,Round and rectangular,B-2,9000.0,0.004,S.E.,nan,200.0,nan,.20,.30
+13 05 05.10,"Selective Demolition, Air Supported Structures",100,Warehouse structures,nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.10,"Selective Demolition, Air Supported Structures",120,"Poly/vinyl fabric, 28 oz., incl. tension cables & inflation system",4 Clab,9000.0,0.004,SF Flr.,nan,0.16,nan,62525,2424
+13 05 05.10,"Selective Demolition, Air Supported Structures",150,"Reinforced vinyl, 12 oz., 3,000 S.F.",nan,5000.0,0.006,nan,nan,0.29,nan,.29,.43
+13 05 05.10,"Selective Demolition, Air Supported Structures",200,"12,000 to 24,000 S.F.",8 Clab,20000.0,0.003,nan,,nan,0.15,nan,.15
+13 05 05.10,"Selective Demolition, Air Supported Structures",250,"Tedlar vinyl fabric, 28 oz. w/liner, to 3,000 S.F.",4 Clab,5000.0,0.006,nan,nan,0.29,nan,.29,.43
+13 05 05.10,"Selective Demolition, Air Supported Structures",300,"12,000 to 24,000 S.F.",8 Clab,20000.0,0.003,nan,nan,0.15,nan,.15,22
+13 05 05.10,"Selective Demolition, Air Supported Structures",350,"Greenhouse/shelter, woven polyethylene with liner",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.10,"Selective Demolition, Air Supported Structures",400,"3,000 S.F.",4 Clab,5000.0,0.006,SF Flr.,2568,nan,nan,2568,.43
+13 05 05.10,"Selective Demolition, Air Supported Structures",450,"12,000 to 24,000 S.F.",8 Clab,20000.0,0.003,nan,nan,0.15,nan,.15,22
+13 05 05.10,"Selective Demolition, Air Supported Structures",500,"Tennis/gymnasium, poly/vinyl fabric, 28 oz., incl. thermal liner",4 Clab,9000.0,0.004,nan,nan,0.16,nan,.16,.24
+13 05 05.10,"Selective Demolition, Air Supported Structures",600,"Stadium/convention center, teflon coated fiberglass, incl. liner",9 Clab,40000.0,2.0,nan,nan,0.08,nan,.08,.12
+13 05 05.10,"Selective Demolition, Air Supported Structures",700,"Doors, air lock, 15' long, 10' x 10'",12 Carp,1.5,10.667,Eo.,600,nan,nan,600,895
+13 05 05.10,"Selective Demolition, Air Supported Structures",720,15' x 15',nan,0.8,20.0,nan,"1,125",nan,nan,"1,125","1,675"
+13 05 05.10,"Selective Demolition, Air Supported Structures",750,"Revolving personnel door, 6' diam. x 6'-6"" high",nan,1.5,10.667,nan,600,nan,nan,600,895
+13 05 05.20,"Selective Demolition, Garden Houses",10,"SELECTIVE DEMOLITION, GARDEN HOUSES",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.20,"Selective Demolition, Garden Houses",20,"Prefab, wood, excl. foundation, average",2 Clab,400.0,0.04,SF Flr.,1.82,nan,nan,1.82,2.72
+13 05 05.25,"Selective Demolition, Geodesic Domes",10,"SELECTIVE DEMOLITION, GEODESIC DOMES",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.25,"Selective Demolition, Geodesic Domes",50,"Shell only, interlocking plywood panels, 30' diameter",F 5,3.2,10.0,Ea.,570,nan,nan,570,845
+13 05 05.25,"Selective Demolition, Geodesic Domes",60,34' diameter,nan,2.3,13.913,nan,790,nan,nan,790,"1,175"
+13 05 05.25,"Selective Demolition, Geodesic Domes",70,39' diameter,nan,2.0,16.0,nan,910,nan,nan,910,"1,350"
+13 05 05.25,"Selective Demolition, Geodesic Domes",80,45' diameter,F 3,2.2,18.182,nan,"1,050",900,nan,"1,950","2,550"
+13 05 05.25,"Selective Demolition, Geodesic Domes",90,55' diameter,nan,2.0,222.0,nan,"1,150",990,nan,"2,140","2,825"
+13 05 05.25,"Selective Demolition, Geodesic Domes",100,60' diameter,nan,2.0,nan,nan,"1,150",990,nan,"2,140","2,825"
+13 05 05.25,"Selective Demolition, Geodesic Domes",110,65' diameter,nan,1.6,nan,nan,"1,450","1,250",nan,"2,700","3,525"
+13 05 05.30,"Selective Demolition, Greenhouses",10,"SELECTIVE DEMOLITION, GREENHOUSES",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.30,"Selective Demolition, Greenhouses",20,"Resi-type, free standing, excl. foundations, 9' long x 8' wide",2 Clab,160.0,0.1,SF Flr.,4.56,nan,nan,4.56,666.80
+13 05 05.30,"Selective Demolition, Greenhouses",30,9' long x 11' wide,nan,170.0,0.094,nan,4.29,nan,nan,4.29,6.40
+13 05 05.30,"Selective Demolition, Greenhouses",40,9' long x 14' wide,nan,220.0,0.073,nan,3.32,nan,nan,3.32,4.94
+13 05 05.30,"Selective Demolition, Greenhouses",50,9' long x 17' wide,nan,320.0,0.05,nan,2.28,nan,nan,2.28,3.40
+13 05 05.30,"Selective Demolition, Greenhouses",60,"Lean-to type, 4' wide",nan,64.0,250.0,nan,,11.40,nan,nan,11.40
+13 05 05.30,"Selective Demolition, Greenhouses",70,7' wide,nan,120.0,0.133,↓,6.10,nan,nan,6.10,9.05
+13 05 05.30,"Selective Demolition, Greenhouses",80,"Geodesic hemisphere, 1/8"" plexiglass glazing, 8' diam.",nan,4.0,4.0,Ea.,182,nan,nan,182,272
+13 05 05.30,"Selective Demolition, Greenhouses",90,24' diam.,nan,0.8,20.0,nan,910,nan,nan,910,"1,350"
+13 05 05.30,"Selective Demolition, Greenhouses",100,48' diam.,nan,0.4,40.0,nan,"1,825",nan,nan,"1,825","2,725"
+13 05 05.35,"Selective Demolition, Hangars",10,"SELECTIVE DEMOLITION, HANGARS",nan,nan,nan,nan,nan,nan,nan,nan,34
+13 05 05.35,"Selective Demolition, Hangars",20,"T type hangars, prefab, steel, galv roof & walls, incl doors, excl fndin",E-2,2550.0,0.022,SF Flr.,1.34,.97,nan,2.31,3.12
+13 05 05.35,"Selective Demolition, Hangars",30,"Circular type, prefab, steel frame, plastic skin, incl foundation, 80' diam",nan,0.5,112.0,Total,"6,850","4,950",nan,"11,800","16,000"
+13 05 05.45,"Selective Demolition, Lightning Protection",10,"SELECTIVE DEMOLITION, LIGHTNING PROTECTION",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.45,"Selective Demolition, Lightning Protection",20,"Air terminal & base, copper, 3/8"" diam. x 10"", to 75' H",1 Clab,16.0,0.5,Ea.,23,nan,nan,2322.0,3343.0
+13 05 05.45,"Selective Demolition, Lightning Protection",30,"1/2"" diam. x 12"", over 75' H",nan,16.0,0.5,nan,23,nan,nan,23.0,34.0
+13 05 05.45,"Selective Demolition, Lightning Protection",50,"Aluminum, 1/2"" diam. x 12"", to 75' H",nan,16.0,0.5,nan,23,nan,nan,23.0,34.0
+13 05 05.45,"Selective Demolition, Lightning Protection",60,"5/8"" diam. x 12"", over 75' H",nan,16.0,0.5,nan,23,nan,nan,23.0,34.0
+13 05 05.45,"Selective Demolition, Lightning Protection",70,"Cable, copper, 220 lb. per thousand feet, to 75' H",nan,640.0,0.013,LF.,:57,nan,nan,0.57,85.0
+13 24 26.50,0010 STEAM BATHS AND COMPONENTS,20,"Heater, timer & head, single, to 140 C.F.",1 Plum,1.2,6.667,Ea.,"2,300",465,nan,"2,765","3,225"
+13 24 26.50,0010 STEAM BATHS AND COMPONENTS,500,To 300 C.F.,nan,1.1,7.273,nan,"2,600",510,nan,"3,110","3,600"
+13 24 26.50,0010 STEAM BATHS AND COMPONENTS,1000,"Commercial size, with blow-down assembly, to 800 C.F.",nan,0.9,8.889,nan,"6,550",620,nan,"7,170","8,125"
+13 24 26.50,0010 STEAM BATHS AND COMPONENTS,1500,"To 2,500 C.F.",nan,0.8,10.0,nan,"7,750",700,nan,"8,450","9,575"
+13 24 26.50,0010 STEAM BATHS AND COMPONENTS,2000,"Multiple, motels, apts., 2 baths, w/ blow-down assm., 500 C.F.",Q-1,1.3,12.308,nan,"7,225",775,nan,"8,000","9,100"
+13 24 26.50,0010 STEAM BATHS AND COMPONENTS,2500,4 baths,"""",0.7,22.857,nan,"10,900","1,425",nan,"12,325","14,200"
+13 24 26.50,0010 STEAM BATHS AND COMPONENTS,2700,"Conversion unit for residential tub, including door",nan,nan,nan,nan,"4,425",nan,nan,"4,425","4,875"
+13 28 33.50,0010 SPORT COURT,20,"Sport court floors, no. 2 & better maple, 25/32"" thick, see 09 64 66.10",nan,nan,nan,SF Flr.,,nan,nan,nan,nan
+13 28 33.50,0010 SPORT COURT,300,"Squash, regulation court in existing building, minimum",nan,nan,nan,Court,"45,200",nan,nan,"45,200","49,700"
+13 28 33.50,0010 SPORT COURT,400,Maximum,nan,nan,nan,nan,"50,500",nan,nan,"50,500","55,500"
+13 28 33.50,0010 SPORT COURT,450,Rule of thumb for components:,nan,nan,nan,nan,,nan,nan,nan,nan
+13 28 33.50,0010 SPORT COURT,470,Walls,3 Carp,15.0,160.0,Court,"13,800","9,000",nan,"22,800","28,600"
+13 28 33.50,0010 SPORT COURT,500,Floor,nan,0.25,96.0,nan,"10,900","5,400",nan,"16,300","20,100"
+13 28 33.50,0010 SPORT COURT,550,Lighting,2 Elec,60.0,26.667,nan,"2,575","1,775",nan,"4,350","5,475"
+13 28 33.50,0010 SPORT COURT,600,"Handball, racquetball court in existing building, minimum",(-1,0.2,160.0,nan,"49,700","8,575",nan,"58,275","67,500"
+13 28 33.50,0010 SPORT COURT,800,Maximum,"""",0.1,320.0,nan,"53,000","17,200",nan,"70,200","83,500"
+13 28 33.50,0010 SPORT COURT,900,Rule of thumb for components: walls,3 Carp,0.12,200.0,nan,"15,500","11,300",nan,"26,800","33,800"
+13 28 33.50,0010 SPORT COURT,1000,Floor,nan,0.25,96.0,nan,"10,900","5,400",nan,"16,300","20,100"
+13 28 33.50,0010 SPORT COURT,1100,Ceiling,nan,0.33,72.727,nan,"5,150","4,100",nan,"9,250","11,800"
+13 28 33.50,0010 SPORT COURT,1200,Lighting,2 Elec,0.6,26.667,nan,"2,750","1,775",nan,"4,525","5,650"
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",100,"Scrim, double layer, with hardware, blower, standby & controls",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",200,"Round, 75' diameter",B-2,4500,0.009,S.F.,13.30,.41MM,nan,13.71,15.25
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",300,100' diameter,nan,5000,0.008,nan,12.10,.37,nan,12.47,13.85
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",400,150' diameter,nan,5000.008,nan,nan,9.55,.37,nan,9.92,11.05
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",500,"Rectangular, 20' x 20'",nan,4500,0.009,nan,25.50,.41,nan,25.91,29
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",600,30' x 40',nan,4500..009,nan,nan,25.50,.41,nan,25.91,29
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",700,50' x 60',nan,4500,0.009,nan,25.50,.41,nan,25.91,12
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",800,"For single wall construction, deduct, minimum",nan,nan,nan,nan,.90,nan,nan,.90,.99
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",900,Maximum,nan,nan,nan,nan,2.58,nan,nan,2.58,2.84
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",1000,"For maximum resistance to atmosphere or cold, add",nan,nan,nan,nan,1.30,nan,nan,1.30,1.43
+13 31 13.09,"0010 AIR SUPPORTED TANK COVERS, vinyl polyester",1100,"For average shipping charges, add",nan,nan,nan,nan,"2,225",nan,nan,"2,225","2,450"
+13 31 13.13,0010 SINGLE-WALLED AIR-SUPPORTED STRUCTURES R133113-10,20,"Site preparation, inc. anchor placement and utilities",B 11B,1000.0,0.016,SF Flr.,1.32,0.82,0.45,2.59,3.16
+13 31 13.13,0010 SINGLE-WALLED AIR-SUPPORTED STRUCTURES R133113-10,30,"For concrete, see Section 03 30 53.40",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,0010 SINGLE-WALLED AIR-SUPPORTED STRUCTURES R133113-10,50,"Warehouse, polyester/vinyl fabric, 28 oz., over 10 yr. lif, welded",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,0010 SINGLE-WALLED AIR-SUPPORTED STRUCTURES R133113-10,601,"Seams, tension cables, primary & auxiliary inflation system",nan,nan,nan,nan,,nan,nan,nan,nan
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,10,DARKROOMS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,20,"Shell, complete except for door, 64 S.F., 8' high",2 Carp,128.0,0.125,SF Flr.,59,7.05,nan,66.05,75.50
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,100,12' high,nan,64.0,0.25,nan,77,14.1,nan,91.10,106
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,500,"120 S.F. floor, 8' high",nan,120.0,0.133,nan,43,7.5,nan,50.50,58
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,600,12' high,nan,60.0,0.267,nan,58,15.0,nan,73,86.50
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,800,"240 S.F. floor, 8' high",nan,120.0,0.133,nan,30,7.5,nan,37.50,44
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,900,12' high,nan,60.0,0.267,nan,43,15.0,nan,58,69.50
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,1200,"Mini cylindrical, revolving, unlined, 4' diameter",nan,3.5,4.571,Ea .,"2,550",257.0,nan,"2,807","3,175"
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,1400,"5'6"" diameter",nan,2.5,6.4,nan,"4,800",360.0,nan,"5,160","5,800"
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,1600,"Add for lead lining, inner cylinder, 1/32"" thick",nan,nan,nan,nan,"1,625",nan,nan,"1,625","1,775"
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,1700,"1/16"" thick",nan,nan,nan,nan,"4,325",nan,nan,"4,325","4,750"
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,1800,"Add for lead lining, inner and outer cylinder, 1/32"" thick",nan,nan,nan,nan,"2,975",nan,nan,"2,975","3,275"
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,1900,"1/16"" thick",nan,nan,nan,nan,"6,650",nan,nan,"6,650","7,325"
+13 21 53.50,Dark Environment Labor-Crew Output Hours Unit Material Rooms 22 Bare Costs Labor Equipment Total Total Ind O&P,2000,"For darkroom door, see Section 08 34 36.10",nan,nan,nan,nan,,nan,nan,nan,nan
+13 21 56.50,Music Rooms,10,MUSIC ROOMS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 21 56.50,Music Rooms,20,"Practice room, modular, perforated steel, under 500 S.F.",2 Carp,70.0,0.229,SF Surf,38.0,12.85,nan,50.85,61.0
+13 21 56.50,Music Rooms,100,Over 500 S.F.,"""",80.0,0.2,"""",32.0,11.25,nan,43.25,52.5
+13 24 16.50,Saunas and Heaters,10,SAUNAS AND HEATERS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 24 16.50,Saunas and Heaters,20,"Prefabricated, incl.heater & controls, 7' high, 6'x4', C / C",1-7,2.2,12.727,Eo .,"6,875",695,nan,"7,570","8,575"
+13 24 16.50,Saunas and Heaters,50,"6'x4', C/ P",nan,2.0,14.0,nan,"4,600",765,nan,"5,365","6,200"
+13 24 16.50,Saunas and Heaters,400,"6'x5', C/ C",nan,2.0,14.0,nan,"5,725",765,nan,"6,490","7,425"
+13 24 16.50,Saunas and Heaters,450,"6'x5', C/ P",nan,2.0,14.0,nan,"5,525",765,nan,"6,290","7,225"
+13 24 16.50,Saunas and Heaters,600,"6'x6', C/ C",nan,1.8,15.556,nan,"7,325",850,nan,"8,175","9,325"
+13 24 16.50,Saunas and Heaters,650,"6'x6', C/ P",nan,1.8,15.556,nan,"6,150",850,nan,"7,000","8,025"
+13 24 16.50,Saunas and Heaters,800,"6'x9', C/ C",nan,1.6,17.5,nan,"7,925",955,nan,"8,880","10,200"
+13 24 16.50,Saunas and Heaters,850,"6'x9', C/ P",nan,1.6,17.5,nan,"6,225",955,nan,"7,180","8,275"
+13 24 16.50,Saunas and Heaters,1000,"8'x12', C/ C",nan,1.1,25.455,nan,"14,900","1,400",nan,"16,300","18,500"
+13 24 16.50,Saunas and Heaters,1050,"8'x12', C/ P",nan,1.1,25.455,nan,"8,025","1,400",nan,"9,425","10,900"
+13 24 16.50,Saunas and Heaters,1200,"8'x8', C/ C",nan,1.4,20.0,nan,"10,400","1,100",nan,"11,500","13,100"
+13 24 16.50,Saunas and Heaters,1250,"8'x8', C/ P",nan,1.4,20.0,nan,"7,600","1,100",nan,"8,700","10,000"
+13 24 16.50,Saunas and Heaters,1400,"8'x10', C/ C",L-7,1.2,23.333,Eo .,"9,675","1,275",nan,"10,950","12,600"
+13 24 16.50,Saunas and Heaters,1450,"8'x10', C/ P",nan,1.2,23.333,nan,"8,825","1,275",nan,"10,100","11,600"
+13 24 16.50,Saunas and Heaters,1600,"10'x12', C/ C",nan,1.0,28.0,nan,"15,200","1,525",nan,"16,725","19,100"
+13 24 16.50,Saunas and Heaters,1650,"10'x12', C/ P",nan,1.0,28.0,nan,"15,300","1,525",nan,"16,825","19,100"
+13 24 16.50,Saunas and Heaters,1700,"Door only, cedar, 2'x6', w/ 1'x4' tempered insulated glass window",2 Carp,3.4,4.706,nan,635,265,nan,900,"1,100"
+13 24 16.50,Saunas and Heaters,1800,"Prehung, incl. jambs, pulls & hardware",nan,12.0,1.333,nan,"1,000",75,nan,"1,075","1,200"
+13 24 16.50,Saunas and Heaters,2500,"Heaters only (incl. above), wall mounted, to 200 C.F.",nan,nan,nan,nan,"1,100",nan,nan,"1,100","1,200"
+13 24 16.50,Saunas and Heaters,2750,To 300 C.F.,nan,nan,nan,nan,"1,225",nan,nan,"1,225","1,350"
+13 24 16.50,Saunas and Heaters,3000,"Floor standing, to 720 C.F., 10,000 watts, w/ controls",1 Elec,33.0,2.667,nan,"3,150",1==,nan,"3,327","3,700"
+13 24 16.50,Saunas and Heaters,3250,"To 1,000 C.F., 16,000 watts","""",nan,2.667,nan,"4,325",177,nan,"4,502","5,000"
+13 05 05.90,"Selective Demolition, Tension Structures",10,"SELECTIVE DEMOLITION, TENSION STRUCTURES",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.90,"Selective Demolition, Tension Structures",20,"Steel /alum. frame, fabric shell, 60' clear span, 6,000 S.F.",B 41,2000.0,0.022,SF Flr.,nan,1HER,0.16,1.2,1.71
+13 05 05.90,"Selective Demolition, Tension Structures",30,"12,000 S.F.",nan,2200.0,0.02,nan,nan,.94,0.14,1.08,1.56
+13 05 05.90,"Selective Demolition, Tension Structures",40,"80' clear span, 20,800 S.F.",nan,2440.0,0.018,nan,nan,.85,0.13,0.98,1.41
+13 05 05.90,"Selective Demolition, Tension Structures",50,"100' clear span, 10,000 S.F.",L-5,4350.0,0.013,nan,nan,.80,0.48,1.28,1.76
+13 05 05.90,"Selective Demolition, Tension Structures",60,"26,000 S.F.",nan,4600.0,0.012,nan,nan,.76,0.45,1.21,1.66
+13 05 05.90,"Selective Demolition, Tension Structures",70,"36,000 S.F.",nan,5000.0,0.011,nan,nan,.70,0.42,1.12,1.53
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",10,"SELECTIVE DEMO, X-RAY / RADIO FREQ PROTECTION",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",20,"Shielding lead, lined door frame, excl. hdwe, 1/16"" thick",1 Clab,4.8,1.667,Ea.,762,nan,nan,76,113
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",30,"Lead sheets, 1/16"" thick R024119-10",2 Clab,270.0,0.059,S.F.,2.70,nan,nan,2.70,4.02
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",40,"1/8"" thick",nan,240.0,0.067,nan,3.04,nan,nan,3.04,4.53
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",50,"Lead shielding, 1/4"" thick",nan,270.0,2.059,nan,2.70,nan,nan,2.70,4.02
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",60,"1/2"" thick",nan,240.0,0.067,nan,3.04,nan,nan,3.04,4.53
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",70,"Lead glass, 1/4"" thick, 2.0 mm LE, 12"" x 16""",2 Glaz,16.0,1.0,Ea.,54,nan,nan,54,80.50
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",80,"24"" x 36""",nan,8.0,nan,nan,108,nan,nan,108,161
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",90,"36"" x 60""",nan,nan,4.0,nan,216,nan,nan,216,320
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",100,"Lead glass window frame, with 1/16"" lead & voice passage, 36"" x 60""",nan,nan,4.0,nan,216,nan,nan,216,320
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",110,"Lead glass window frame, 24"" x 36""",nan,8.0,2.0,nan,108,nan,nan,108,161
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",120,"Lead gypsum board, 5/8"" thick with 1/16"" lead",2 Clab,320.0,0.05,S.F.,2.28,nan,nan,2.28,3.40
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",130,"1/8"" lead",nan,280.0,0.057,nan,2.61,nan,nan,2.61,3.88
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",140,"1/32"" lead",nan,400.0,0.04,nan,1.82,nan,nan,1.82,2.72
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",150,"Butt joints, 1/8"" lead or thicker, 2"" x 7' long batten strip",nan,480.0,0.033,Ea.,1.52,nan,nan,1.52,2.26
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",160,"X-ray protection, average radiography room, up to 300 S.F., 1/16"" lead, min",nan,0.5,32.0,Total,"1,450",nan,nan,"1,450","2,175"
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",170,Maximum,nan,0.3,53.333,nan,"2,425",nan,nan,"2,425","3,625"
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",180,"Deep therapy X-ray room, 250 kV cap, up to 300 S.F., 1/4"" lead, min",nan,0.2,80.0,nan,"3,650",nan,nan,"3,650","5,425"
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",190,Maximum,nan,0.12,133.0,nan,"6,075",nan,nan,"6,075","9,050"
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",880,"Radio frequency shielding, prefab or screen-type copper or steel, minimum",nan,360.0,0.044,SF Surf,2.03,nan,nan,2.03,3.02
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",890,Average,nan,310.0,0.052,1,2.35,nan,nan,2.35,3.50
+13 05 05.95,"Selective Demo, X-Ray /Radio Freq Protection",895,Maximum,nan,1290.0,0.055,nan,2.52,nan,nan,2.52,3.75
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",200,"Clean rooms, 12' x 12' soft wall, class 100",1 Carp,0.3,26.667,Ea.,nan,"1,500",nan,"1,500","2,225"
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",210,"Class 1,000",nan,0.3,26.667,nan,nan,"1,500",nan,"1,500","2,225"
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",220,"Class 10,000",nan,0.35,22.857,nan,nan,"1,275",nan,"1,275","1,925"
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",230,"Class 100,000",nan,0.35,22.857,nan,nan,"1,275",nan,"1,275","1,925"
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",300,"Darkrooms, shell complete, 8' high",2 Carp,220.0,0.073,SF Flr.,nan,4.09,nan,4.09,6.10
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",310,12' high,nan,110.0,0.145,H,nan,8.20,nan,8.20,12.20
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",350,"Darkrooms doors, mini cylindrical, revolving",nan,4.0,4.0,Ea.,nan,225,nan,225,335
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",400,"Music room, practice modular",nan,140.0,0.114,SF Surf,nan,6.45,nan,6.45,9.60
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",500,Refrigeration structures and finishes,nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",510,"Wall finish, 2 coat Portland cement plaster, 1/2"" thick",1 Clab,200.0,0.04,S.F. 1,nan,1.82,nan,1.82,2.72
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",522,"Fiberglass panels, 1/8"" thick",nan,400.0,0.02,nan,nan,.91,nan,.91,1.36
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",530,"Ceiling finish, polystyrene plastic, 1"" to 2"" thick",nan,500.0,0.016,nan,nan,.73,nan,.73,1.09
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",540,"4"" thick",nan,450.0,0.018,nan,nan,.811,nan,.811,1.21
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",550,"Refrigerator, prefab aluminum walk-in, 7'-6"" high, 6' x 6' OD",2 Carp,100.0,0.16,SF Flr.,nan,9,nan,9,13.40
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",560,10' x 10' OD,nan,160.0,0.1,nan,nan,5.65,nan,5.65,8.40
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",570,Over 150 S.F.,nan,200.0,0.08,nan,nan,4.50,nan,4.50,6.70
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",600,"Sauna, prefabricated, including heater & controls, 7' high, to 30 S.F.",nan,120.0,0.133,nan,nan,7.50,nan,7.50,11.15
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",610,To 40 S.F.,nan,140.0,0.114,nan,nan,6.45,nan,6.45,9.60
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",6201,To 60 S.F.,nan,175.0,0.091,nan,nan,5.15,nan,5.15,7.65
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",630,To 100 S.F.,nan,220.0,0.073,nan,nan,4.09,nan,4.09,6.10
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",640,To 130 S.F.,nan,250.0,0.064,nan,nan,3.60,nan,3.60,5.35
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",650,"Steam bath, heater, timer, head, single, to 140 C.F.",1 Plum,2.2,3.636,Eo.,nan,254,nan,254,380
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",660,To 300 C.F.,nan,2.2,3.636,nan,nan,254,nan,254,380
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",670,"Steam bath, comm. size, w/blow down assembly, to 800 C.F.",nan,1.8,4.444,nan,nan,310,nan,310,465
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",680,"To 2,500 C.F.",nan,1.6,5.0,nan,nan,350,nan,350,520
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",690,"Steam bath, comm. size, multiple, for motels, apts, 500 C.F., 2 baths",nan,2.0,4.0,nan,nan,279,nan,279,415
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",700,"1,000 C.F., 4 baths",nan,1.4,5.714,nan,nan,400,nan,400,595
+13 05 05.75,"Selective Demolition, Storage Tanks",10,"SELECTIVE DEMOLITION, STORAGE TANKS",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.75,"Selective Demolition, Storage Tanks",500,"Steel tank, single wall, above ground, not incl.fdn., pumps or piping",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.75,"Selective Demolition, Storage Tanks",510,"Single wall, 275 gallon",R024119-10 Q-1,3222.0,5.333,Ea.,335,nan,nan,335,500
+13 05 05.75,"Selective Demolition, Storage Tanks",520,"550 thru 2,000 gallon",B-34P,nan,12.0,nan,725,nan,355,"1,080","1,475"
+13 05 05.75,"Selective Demolition, Storage Tanks",530,"5,000 thru 10,000 gallon",B-34Q,nan,126.0,nan,735,nan,"1,325","2,060","2,550"
+13 05 05.75,"Selective Demolition, Storage Tanks",540,"15,000 thru 30,000 gallon",B-345,2.0,16.0,nan,"1,025",nan,"2,050","3,075","3,800"
+13 05 05.75,"Selective Demolition, Storage Tanks",600,"Steel tank, double wall, above ground not incl.fdn., pumps & piping",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.75,"Selective Demolition, Storage Tanks",620,"500 thru 2,000 gallon",B-34P,2.0,12.0,Ea.,725,nan,355,"1,080","1,475"
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",10,"SELECTIVE DEMOLITION, SWIMMING POOL EQUIP",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",20,"Diving stand, stainless steel, 3 meter",2 Clab,3.0,5.333,Ea.,243.0,nan,nan,243.0,360.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",30,1 meter,nan,5.0,3.2,nan,146.0,nan,nan,146.0,217.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",40,"Diving board, 16' long, aluminum",I,5.4,2.963,nan,135.0,nan,nan,135.0,201.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",50,Fiberglass,nan,5.4,2.963,nan,135.0,nan,nan,135.0,201.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",70,"Ladders, heavy duty, stainless steel, 2 tread",nan,14.0,1.143,nan,52.0,nan,nan,52.0,77.5
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",80,4 tread,nan,12.0,1.333,nan,61.0,nan,nan,61.0,90.5
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",90,"Lifeguard chair, stainless steel, fixed",nan,5.0,3.2,nan,146.0,nan,nan,146.0,217.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",100,"Slide, tubular, fiberglass, aluminum handrails & ladder, 5', straight",nan,nan,4.0,nan,182.0,nan,nan,182.0,272.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",110,"8', curved",nan,6.0,2.667,nan,122.0,nan,nan,122.0,181.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",120,"10', curved",nan,3.0,5.333,nan,243.0,nan,nan,243.0,360.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",130,"12' straight, with platform",nan,2.5,6.4,nan,292.0,nan,nan,292.0,435.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",140,"Removable access ramp, stainless steel",nan,nan,4.0,nan,182.0,nan,nan,182.0,272.0
+13 05 05.85,"Selective Demolition, Swimming Pool Equip",150,"Removable stairs, stainless steel, collapsible",nan,4.0,4.0,nan,182.0,nan,nan,182.0,272.0
+13 11 46.50,Swimming Pool Equipment,1500,4 tread,2 Carp,6.0,2.667,Ea.,"1,000",150,nan,"1,150","1,325"
+13 11 46.50,Swimming Pool Equipment,1800,"Lifeguard chair, stainless steel, fixed",nan,nan,2.7,5.926,nan,"3,925",335.0,"4,260","4,825"
+13 11 46.50,Swimming Pool Equipment,1900,Portable,nan,nan,nan,nan,"3,350",nan,nan,"3,350","3,675"
+13 11 46.50,Swimming Pool Equipment,2100,"Lights, underwater, 12 volt, with transformer, 300 watt",1 Elec,nan,8.0,nan,485,530,nan,"1,015","1,325"
+13 11 46.50,Swimming Pool Equipment,2200,"110 volt, 500 watt, standard",nan,nan,8.0,nan,300,530,nan,830,"1,125"
+13 11 46.50,Swimming Pool Equipment,2400,Low water cutoff type,nan,nan,8.0,nan,325,530,nan,855,"1,150"
+13 11 46.50,Swimming Pool Equipment,2800,"Heaters, see Section 23 52 28.10",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,Swimming Pool Equipment,3000,"Pool covers, reinforced vinyl",3 Clab,1800.0,0.013,S.F.,1.20,.61,nan,1.81,2.23
+13 11 46.50,Swimming Pool Equipment,3050,"Automatic, electric",nan,nan,nan,nan,nan,nan,nan,9.15,10.10
+13 11 46.50,Swimming Pool Equipment,3100,"Vinyl, for winter, 400 S.F. max pool surface",3 Clab,3200.0,0.008,nan,.24,.33,nan,.58,.77
+13 11 46.50,Swimming Pool Equipment,3200,"With water tubes, 400 S.F. max pool surface",nan,3000.0,0.008,nan,.37 %,.36,nan,.73,.95
+13 11 46.50,Swimming Pool Equipment,3250,"Sealed airbubble polyethylene solar blanket, 16 mils",nan,nan,nan,nan,.38,nan,nan,.38,.42
+13 11 46.50,Swimming Pool Equipment,3300,"Slides, tubular, fiberglass, aluminum handrails & ladder, 5' 0"", straight",2 Carp,1.6,10.0,Ea.,"4,150",565,nan,"4,715","5,425"
+13 11 46.50,Swimming Pool Equipment,3320,"8'-0"", curved",nan,3.0,5.333,nan,"8,300",300,nan,"8,600","9,575"
+13 11 46.50,Swimming Pool Equipment,3400,"10'-0"", curved",nan,nan,16.0,nan,"23,600",900,nan,"24,500","27,300"
+13 11 46.50,Swimming Pool Equipment,3420,"12'-0"", straight with platform",nan,1.2,13.333,nan,"19,100",750,nan,"19,850","22,100"
+13 11 46.50,Swimming Pool Equipment,4500,"Hydraulic lif, movable pool bottom, single ram",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,Swimming Pool Equipment,4520,"Under 1,000 S.F. area",L-9,72.0,0.5,S.F.,207,26,nan,233,267
+13 11 46.50,Swimming Pool Equipment,4600,"Four ram lif, over 1,000 S.F.","""",109.33,nan,nan,173,17.05,nan,190.05,216
+13 11 46.50,Swimming Pool Equipment,5000,"Removable access ramp, stainless steel",2 Clab,2.0,8.0,Ea.,"6,575",365,nan,"6,940","7,800"
+13 12 13.10,Outdoor Fountains,10,OUTDOOR FOUNTAINS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 12 13.10,Outdoor Fountains,100,"Outdoor fountain, 48"" high with bowl and figures",2 Clab,222222222.0,8.0,Ja.,415,365.0,nan,780,"1,000"
+13 12 13.10,Outdoor Fountains,200,"Commercial, concrete or cast stone, 40-60"" H, simple",nan,3.0,3.0,8,"1,050",365.0,nan,"1,415","1,700"
+13 12 13.10,Outdoor Fountains,220,Average,nan,nan,8.0,nan,"2,025",365.0,nan,"2,390","2,775"
+13 12 13.10,Outdoor Fountains,240,Ornate,nan,2.0,8.0,nan,"4,600",365.0,nan,"4,965","5,600"
+13 12 13.10,Outdoor Fountains,260,"Metal, 72"" high",nan,28.0,nan,nan,"1,625",365.0,nan,"1,990","2,350"
+13 12 13.10,Outdoor Fountains,280,"90"" high",nan,28.0,nan,nan,"2,350",365.0,nan,"2,715","3,150"
+13 12 13.10,Outdoor Fountains,300,"120"" high",nan,nan,8.0,nan,"5,625",365.0,nan,"5,990","6,750"
+13 12 13.10,Outdoor Fountains,320,"Resin or fiberglass, 40-60"" H, wall type",nan,nan,8.0,nan,735,365.0,nan,"1,100","1,350"
+13 12 13.10,Outdoor Fountains,340,Waterfall type,nan,nan,8.0,nan,"1,250",365.0,nan,"1,615","1,925"
+13 12 23.10,Indoor Fountains,10,INDOOR FOUNTAINS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 12 23.10,Indoor Fountains,100,"Commercial, floor type, resin or fiberglass, lighted, cascade type",2 Clab,222.0,8o,Ea.,460.0,365.0,nan,825,"1,050"
+13 12 23.10,Indoor Fountains,120,Tiered type,nan,nan,8,nan,730.0,365.0,nan,"1,095","1,350"
+13 12 23.10,Indoor Fountains,140,Waterfall type,nan,nan,8o,nan,515.0,365.0,nan,880,"1,100"
+13 31 13.13,"airlock, personnel doors and liner",70,"airlock, personnel doors and liner",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",100,"5,000 S.F.",4 Clab,5000.0,0.006,SF Flr.,29,2222,nan,29.29,32.50
+13 31 13.13,"airlock, personnel doors and liner",250,"12,000 S.F.",11,6000.0,0.005,nan,19.80,.24,nan,20.04,22.50
+13 31 13.13,"airlock, personnel doors and liner",400,"24,000 S.F.",8 Clab,12000.0,0.005,nan,14.65,.24,nan,14.89,16.45
+13 31 13.13,"airlock, personnel doors and liner",500,"50,000 S.F.","""",12500.0,0.005,nan,12.90,.23,nan,13.13,14.55
+13 31 13.13,"airlock, personnel doors and liner",700,"12 oz. reinforced vinyl fabric, 5 yr. lif, sewn seams",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",710,"accordion door, including liner",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",750,"3,000 S.F.",4 Clab,3000.0,0.011,SF Flr.,14.35,222,nan,14.84,16.50
+13 31 13.13,"airlock, personnel doors and liner",800,"12,000 S.F.","""",6000.0,0.005,nan,12.20,.24,nan,12.44,13.80
+13 31 13.13,"airlock, personnel doors and liner",850,"24,000 S.F.",8 Clab,12000.0,0.005,nan,10.35,.24,nan,10.59,11.75
+13 31 13.13,"airlock, personnel doors and liner",950,Deduct for single layer,nan,nan,nan,nan,1.17,nan,nan,1.17,1.29
+13 31 13.13,"airlock, personnel doors and liner",1000,Add for welded seams,nan,nan,nan,nan,1.62,nan,nan,1.62,1.78
+13 31 13.13,"airlock, personnel doors and liner",1050,"Add for double layer, welded seams included",nan,nan,nan,nan,3.25,nan,nan,3.25,3.58
+13 31 13.13,"airlock, personnel doors and liner",1250,"Tedlar / vinyl fabric, 28 oz., with liner, over 10 yr. lif",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",1260,incl. overhead and personnel doors,nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",1300,"3,000 S.F.",14 Clab,3000.0,0.011,SF Fl.,nan,.422,nan,27.49,30
+13 31 13.13,"airlock, personnel doors and liner",1450,"12,000 S.F.","""",6000.0,0.005,nan,18.30,.24,nan,18.54,20.50
+13 31 13.13,"airlock, personnel doors and liner",1550,"24,000 S.F.",18 Clab,12000.0,0.005,nan,14.65,.24,nan,14.89,16.45
+13 31 13.13,"airlock, personnel doors and liner",1700,Deduct for single layer,nan,nan,nan,SF Fl.,2.16,nan,nan,2.16,2.38
+13 31 13.13,"airlock, personnel doors and liner",2250,"Greenhouse / shelter, woven polyethylene with line, 2 yr. life",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",2260,"sewn seams, including doors",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",2300,"3,000 S.F.",4 Clab,3000.0,0.011,SF Fl.,17.40,.≈22,nan,17.89,19.85
+13 31 13.13,"airlock, personnel doors and liner",2350,"12,000 S.F.","""1",6000.0,0.005,nan,15.20,.24,nan,15.44,17.05
+13 31 13.13,"airlock, personnel doors and liner",2450,"24,000 S.F.",8 Clab,12000.0,0.005,nan,13.05,.24,nan,13.29,14.70
+13 31 13.13,"airlock, personnel doors and liner",2550,Deduct for single layer,nan,nan,nan,nan,1.07,nan,nan,1.07,1.18
+13 31 13.13,"airlock, personnel doors and liner",2600,"Tennis / gymnasium, polyester / vinyl fabric, 28 oz., over 10 yr.life",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",2610,"including thermal liner, heat and lights",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",2650,"7,200 S.F.",4 Clab,6000.0,0.005,SF Fl.,25,.24,nan,25.24,28
+13 31 13.13,"airlock, personnel doors and liner",2750,"13,000 S.F.","""",6500.0,0.005,nan,19.80,.22,nan,20.02,22.50
+13 31 13.13,"airlock, personnel doors and liner",2850,"Over 24,000 S.F.",8 Clab,12000.0,0.005,nan,18.10,.24,nan,18.34,20.50
+13 31 13.13,"airlock, personnel doors and liner",2860,"For low temperature conditions, add",nan,nan,nan,nan,1.29,nan,nan,1.29,1.42
+13 31 13.13,"airlock, personnel doors and liner",28701,"For average shipping charges, add",nan,nan,nan,Total,"6,050",nan,nan,"6,050","6,650"
+13 31 13.13,"airlock, personnel doors and liner",2900,"Thermal liner, translucent reinforced vinyl",nan,nan,nan,SF Fl.,1.29,nan,nan,1.29,1.42
+13 31 13.13,"airlock, personnel doors and liner",2950,"Metalized mylar fabric and mesh, double liner",nan,nan,nan,"""",2.57,nan,nan,2.57,2.83
+13 31 13.13,"airlock, personnel doors and liner",3050,"Stadium / convention center, teflon coated fiberglass, heavy weight",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",3060,"over 20 yr. life, incl. thermal liner and heating system",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 13.13,"airlock, personnel doors and liner",3100,Minimum,9 Clab,26000.0,0.003,SF Fl.,63,.13,nan,63.13,69.50
+13 31 13.13,"airlock, personnel doors and liner",3110,Maximum,"""",19000.0,0.004,nan,78,.17,nan,78.17,86.50
+13 31 13.13,"airlock, personnel doors and liner",3400,"Doors, air lock, 15' long, 10' x 10'",2 Carp,0.8,20.0,Ea.,"22,100","1,125",nan,"23,225","26,100"
+13 31 13.13,"airlock, personnel doors and liner",3600,15' x 15',"""",0.5,32.0,nan,"34,800","1,800",nan,"36,600","41,000"
+13 31 13.13,"airlock, personnel doors and liner",3700,"For each added 5' length, add",nan,nan,nan,nan,"6,200",nan,nan,"6,200","6,825"
+13 31 13.13,"airlock, personnel doors and liner",3900,"Revolving personnel door, 6' diameter, 6'-6"" high",2 Carp,0.8,20.0,nan,"17,400","1,125",nan,"18,525","20,800"
+13 31 23.50,Tension Structures,10,"TENSION STRUCTURES Rigid steel / alum. frame, vinyl coated poly",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 23.50,Tension Structures,100,"Fabric shell, 60' clear span, not incl. foundations or floors",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 23.50,Tension Structures,200,"6,000 S.F.",B-41,1000.0,0.044,SF Fl.,18.55,2.07,0.222218,20.94,242222.0
+13 31 23.50,Tension Structures,300,"12,000 S.F.",nan,1100.0,0.04,nan,22.0,1.89,0.29,24.18,27.5
+13 31 23.50,Tension Structures,400,"80' to 99' clear span, 20,800 S.F.",I,1220.0,0.036,nan,20.5,1.7,0.26,22.46,25.5
+13 31 23.50,Tension Structures,410,"100' to 119' clear span, 10,000 S.F.",L-5,2175.0,0.026,nan,18.4,1.61,0.96,20.97,24.0
+13 31 23.50,Tension Structures,430,"26,000 S.F.",nan,2300.0,0.024,nan,,17.05,1.52,0.91,19.48
+13 31 23.50,Tension Structures,450,"36,000 S.F.",nan,2500.0,0.022,nan,,17.35,1.4,0.84,19.59
+13 31 23.50,Tension Structures,460,"120' to 149' clear span, 24,000 S.F.",1-5,3000,0.019,SF Flr.,17.80,1.16,0.7,19.66,22
+13 31 23.50,Tension Structures,470,"150' to 199' clear span, 30,000 S.F.",nan,6000,0.009,nan,19.55,0.58,335.0,20.48,23
+13 31 23.50,Tension Structures,480,"200' clear span, 40,000 S.F.",E-6,8000,0.016,SF Fl.,23.50,0.98,0.37,24.85,28
+13 31 23.50,Tension Structures,500,"For rollup door, 12' x 14', add",1-2,1,16.0,Ea.,"7,050",795.0,nan,"7,845","8,950"
+13 31 23.50,Tension Structures,600,"6,000 S.F.",B 41,1200,0.037,SF Flr.,13.50,1.73,0.22336,15.49,17.70
+13 31 23.50,Tension Structures,650,"12,000 S.F.",nan,1200,0.037,nan,15.85,1.73,nan,17.84,20.50
+13 31 23.50,Tension Structures,1000,"Tension structure, PVC fabric, add",nan,2500,0.018,nan,4.15,0.83,0.13,5.11,5.95
+13 31 23.50,Tension Structures,1200,"Tension structure, HDPE fabric, add",nan,2500,0.018,nan,2.59,0.83,0.13,3.55,4.23
+13 31 23.50,Tension Structures,1300,"Tension structure, PTFE fabric, add",nan,2000,0.022,nan,7.80,1.04,0.16,9,10.25
+13 31 23.50,13 33 13 Geodesic Domes,10,"GEODESIC DOMES Shell only, interlocking plywood panels R133423-30",nan,nan,nan,nan,,nan,nan,nan,nan
+13 31 23.50,13 33 13 Geodesic Domes,400,30' diameter,F-5,1.6,20.0,Ea.,"33,500","1,125",nan,"34,625","38,500"
+13 31 23.50,13 33 13 Geodesic Domes,500,33' diameter,nan,1.14,28.07,nan,"24,200","1,600",nan,"25,800","29,000"
+13 31 23.50,13 33 13 Geodesic Domes,600,40' diameter,nan,1.0,32.0,nan,"27,900","1,825",nan,"29,725","33,400"
+13 31 23.50,13 33 13 Geodesic Domes,700,45' diameter,F-3,1.13,35.556,nan,"28,800","2,050","1,775","32,625","36,700"
+13 31 23.50,13 33 13 Geodesic Domes,750,56' diameter,nan,nan,40.0,nan,"58,000","2,300","1,975","62,275","69,500"
+13 31 23.50,13 33 13 Geodesic Domes,800,60' diameter,nan,nan,40.0,nan,"63,000","2,300","1,975","67,275","74,500"
+13 31 23.50,13 33 13 Geodesic Domes,850,67' diameter,nan,0.8,50.0,nan,"93,500","2,875","2,475","98,850","110,000"
+13 31 23.50,"Aluminum panel, with 6"" insulation",1200,100' diameter,nan,nan,nan,SF Flr.,25.0,nan,nan,25.0,27.5
+13 31 23.50,"Aluminum panel, with 6"" insulation",1300,500' diameter,nan,nan,nan,nan,25.5,nan,nan,25.5,28.5
+13 31 23.50,"Aluminum framed, plexiglass closure panels",1700,40' diameter,nan,nan,nan,SF Flr.,61.5,nan,nan,61.5,67.5
+13 31 23.50,"Aluminum framed, plexiglass closure panels",1800,200' diameter,nan,nan,nan,nan,60.5,nan,nan,60.5,66.5
+13 31 23.50,"Aluminum framed, aluminum closure panels",2100,"Aluminum framed, aluminum closure panels",nan,nan,nan,nan,nan,nan,nan,nan,22.0
+13 31 23.50,"Aluminum framed, aluminum closure panels",2200,40' diameter,nan,nan,nan,SF Flr.,202.0,nan,nan,20.0,22.0
+13 31 23.50,"Aluminum framed, aluminum closure panels",2300,100' diameter,nan,nan,nan,nan,31.0,nan,nan,31.0,34.0
+13 31 23.50,"Aluminum framed, aluminum closure panels",2400,200' diameter,nan,nan,nan,nan,20.5,nan,nan,20.5,22.5
+13 31 23.50,"Aluminum framed, fiberglass sandwich panel closure",2800,6' diameter,2 Carp,150,0.107,SF Flr.,28.5,nan,nan,34.5,40.0
+13 31 23.50,"Aluminum framed, fiberglass sandwich panel closure",2900,28' diameter,nan,350,0.046,nan,25.5,2.57,nan,28.07,32.5
+13 34 13.13,Greenhouses,10,"GREENHOUSES, Shell only, stock units, not incl. 2' stub walls,",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 13.13,Greenhouses,20,"foundation, floors, heat or compartments",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 13.13,Greenhouses,300,"Residential type, free standing, 8'6"" long x 7'6"" wide",2 Carp,59.0,0.271,SF Flr.,25.5,15.25,nan,40.75,51.0
+13 34 13.13,Greenhouses,400,"10'-6"" wide",nan,85.0,0.188,7,47.0,10.6,nan,57.6,67.5
+13 34 13.13,Greenhouses,600,"13'-6"" wide",nan,108.0,0.148,nan,49.5,8.35,nan,57.85,67.0
+13 34 13.13,Greenhouses,700,"17'-0"" wide",2 Carp,160.0,0.1,SF Flr.,46.0,5.65,nan,51.65,59.0
+13 34 13.13,Greenhouses,900,"Lean to type, 3'-10"" wide",nan,34.0,0.471,nan,46.0,26.5,nan,72.5,90.0
+13 34 13.13,Greenhouses,1000,"6'-10"" wide",nan,58.0,0.276,nan,28.0,15.55,nan,43.55,54.0
+13 34 13.13,Greenhouses,1500,"Commercial, custom, truss frame, incl. equip., plumbing, elec.,",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 13.13,Greenhouses,1550,"benches and controls, under 2,000 S.F.",nan,nan,nan,SF Flr.,15.4,nan,nan,15.4,16.9
+13 34 13.13,Greenhouses,1700,"Over 5,000 S.F.",nan,nan,nan,#,13.75,nan,nan,13.75,15.1
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",10,"SWIMMING POOLS Residential in-ground, vinyl lined",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",20,"Concrete sides, w/equip, sand bottom",B-52,300.0,0.187,SF Surf,30.50,9.75,1.187,42.22,502
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",100,Metal or polystyrene sides,B-14,410.0,0.117,nan,76,5.60,0.8,82.40,92.50530
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",200,Add for vermiculite bottom,nan,nan,nan,nan,1.94,nan,nan,1.94,2.13
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",500,"Gunite bottom and sides, white plaster finish",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",600,12' x 30' pool,B-52,145.0,0.386,SF Surf,56.50,20,4.07,80.57,297
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",720,16' x 32' pool,nan,155.0,0.361,nan,51,18.85,3.81,73.66,88
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",750,20' x 40' pool,nan,250.0,0.224,nan,45.50,11.70,2.36,59.56,70
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",810,"Concrete bottom and sides, tile finish",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",820,12' x 30' pool,B-52,80.0,0.7,SF Surf,57,36.50,7.4,100.90,125
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",830,16' x 32' pool,nan,95.0,0.589,nan,47.50,31,6.2,84.70,104
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",840,20' x 40' pool,nan,130.0,0.431,nan,37.50,22.50,4.54,64.54,80
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1100,"Motel, gunite with plaster finish, incl. medium",nan,nan,nan,nan,nan,nan,nan,nan,120
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1150,capacity filtration & chlorination,B-52,115.0,487.0,SF Surf,69.50,25.50,5.15,100.15,120
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1200,"Municipal, gunite with plaster finish, incl. high",B-52,100.0,560.0,SF Surf,90,29,5.9,124.90,149
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1250,capacity filtration & chlorination,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1350,Add for formed gutters,nan,nan,nan,LF,133,nan,nan,133,146
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1360,Add for stainless steel gutters,nan,nan,nan,"""",390,nan,nan,390,430
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1600,"For water heating system, see Section 23 52 28.10",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1700,"Filtration and deck equipment only, as% of total",nan,nan,nan,Total,nan,nan,nan,20%,20%
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1800,"Automatic vacuum, hand tools, etc., 20' x 40' pool",nan,nan,nan,SF Pool,nan,nan,nan,.56,.62
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",1900,"5,000 S.F. pool",nan,nan,nan,"""",nan,nan,nan,.11,.12
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",3000,"Painting pools, preparation +3 coats, 20' x 40' pool, epoxy",2 Pord,0.33,48.485,Total,"1,450","2,325",nan,"3,775","5,025"
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",3100,"Rubber base paint, 18 gallons","""",0.33,48.485,nan,"1,175","2,325",nan,"3,500","4,725"
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",3500,"42' x 82' pool, 75 gallons, epoxy paint",3 Pord,0.14,171.0,nan,"6,150","8,200",nan,"14,350","18,900"
+13 11 13.50,"0010 SWIMMING POOLS Residential in-ground, vinyl lined",3600,Rubber base paint,"""",0.14,171.0,nan,"4,875","8,200",nan,"13,075","17,500"
+13 11 23.50,Swimming Pools,10,"SWIMMING POOLS Residential above ground, steel construction",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 23.50,Swimming Pools,100,"Round, 15' diam.",B-80A,3.0,8.0,Ea.,910,365,126.0,"1,401","1,675"
+13 11 23.50,Swimming Pools,120,18' diam.,"""",2.5,9.6,"""",970,440,151.0,"1,561","1,900"
+13 11 23.50,Swimming Pools,140,21' diam.,B 80A,2.0,12.0,Eo.,"1,075",545,189.0,"1,809","2,225"
+13 11 23.50,Swimming Pools,160,24' diam.,nan,1.8,13.333,nan,"1,225",610,210.0,"2,045","2,475"
+13 11 23.50,Swimming Pools,180,27' diam.,nan,1.5,16.0,nan,"1,550",730,252.0,"2,532","3,050"
+13 11 23.50,Swimming Pools,200,30' diam.,nan,nan,24.0,nan,"1,800","1,100",375.0,"3,275","4,025"
+13 11 23.50,Swimming Pools,220,"Oval, 12' x 24'",nan,2.3,10.435,nan,"1,575",475,164.0,"2,214","2,625"
+13 11 23.50,Swimming Pools,240,15' x 30',nan,1.8,13.333,nan,"1,775",610,210.0,"2,595","3,075"
+13 11 23.50,Swimming Pools,260,18' x 33',nan,1.0,24.0,nan,"2,000","1,100",375.0,"3,475","4,250"
+13 11 46.50,Swimming Pool Equipment,10,SWIMMING POOL EQUIPMENT,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,Swimming Pool Equipment,20,"Diving stand, stainless steel, 3 meter",2 Carp,0.4,40.0,Ea.,"20,600","2,250",nan,"22,850","26,000"
+13 11 46.50,Swimming Pool Equipment,300,1 meter,nan,2.7,5.926,nan,"11,200",335,nan,"11,535","12,800"
+13 11 46.50,Swimming Pool Equipment,600,"Diving boards, 16' long, aluminum",nan,2.7,5.926,nan,"4,675",335,nan,"5,010","5,625"
+13 11 46.50,Swimming Pool Equipment,700,Fiberglass,nan,2.7,5.926,nan,"3,650",335,nan,"3,985","4,525"
+13 11 46.50,Swimming Pool Equipment,800,"14' long, aluminum",nan,2.7,5.926,nan,"4,275",335,nan,"4,610","5,200"
+13 11 46.50,Swimming Pool Equipment,850,Fiberglass,nan,2.7,5.926,nan,"3,425",335,nan,"3,760","4,275"
+13 11 46.50,Swimming Pool Equipment,1100,"Bulkhead, movable, PVC, 8'-2"" wide",2 Clab,8.0,2.0,nan,"2,875",91,nan,"2,966","3,275"
+13 11 46.50,Swimming Pool Equipment,1120,"7'-9"" wide",nan,888.0,2.0,1,"3,000",91,nan,"3,091","3,450"
+13 11 46.50,Swimming Pool Equipment,1140,"7'-3"" wide",nan,nan,2.0,nan,"2,375",91,nan,"2,466","2,750"
+13 11 46.50,Swimming Pool Equipment,1160,"6'-9"" wide",nan,nan,2.0,nan,"2,375",91,nan,"2,466","2,750"
+13 11 46.50,Swimming Pool Equipment,1200,"Ladders, heavy duty, stainless steel, 2 tread",2 Carp,7.0,2.286,nan,"1,425",129,nan,"1,554","1,775"
+13 11 46.50,13 17 3 Tubs Whirlpool Tubs,13,17 33 - Whirlpool Tubs,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 17 3 Tubs Whirlpool Tubs,13,17 33.10 Whirlpool Bath,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 17 3 Tubs Whirlpool Tubs,10,WHIRLPOOL BATH,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 17 3 Tubs Whirlpool Tubs,6000,"Whirlpool, bath with vented overflow, molded fiberglass",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 17 3 Tubs Whirlpool Tubs,6100,"66"" x 36"" x 24""",0-1,1.0,16.0,Eo.,"1,475","1,000",nan,"2,475","3,125"
+13 11 46.50,13 18 13 - Ice Rink Floor Systems,13,18 13 - Ice Rink Floor Systems,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 18 13 - Ice Rink Floor Systems,13,18 13.50 Ice Skating,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 18 13 - Ice Rink Floor Systems,10,"ICE SKATING Equipment incl. refrigeration, plumbing & cooling",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 18 13 - Ice Rink Floor Systems,20,"coils & concrete slab, 85' x 200' rink",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 18 13 - Ice Rink Floor Systems,300,"55° system, 5 mos, 100 ton",nan,nan,nan,nan,nan,nan,nan,"602,500","662,500"
+13 11 46.50,13 18 13 - Ice Rink Floor Systems,700,"90° system, 12 mos., 135 ton",21,nan,nan,nan,nan,nan,nan,"685,000","753,500"
+13 11 46.50,13 18 13 - Ice Rink Floor Systems,1200,"Subsoil heating system (recycled from compressor), 85' x 200'",Q-7,0.27,119.0,Ea.,"44,200","7,925",nan,"52,125","60,500"
+13 11 46.50,13 18 13 - Ice Rink Floor Systems,1300,"Subsoil insulation, 2 lb. polystyrene with vapor barrier, 85' x 200'",12 Carp,0.14,114.0,nan,"32,000","6,425",nan,"38,425","44,800"
+13 11 46.50,13 18 16 - Ice Rink Dasher Boards,13,18 16 - Ice Rink Dasher Boards,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 18 16 - Ice Rink Dasher Boards,13,18 16.50 Ice Rink Dasher Boards,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 18 16 - Ice Rink Dasher Boards,10,ICE RINK DASHER BOARDS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 18 16 - Ice Rink Dasher Boards,1000,"Dasher boards, 1/2"" H.D. polyethylene faced steel frame, 3' acrylic",F5,0.06,533.0,Ea.,"138,000","30,300",nan,"168,300","197,000"
+13 11 46.50,13 18 16 - Ice Rink Dasher Boards,1020,"screen at sides, 5' acrylic ends, 85' x 200'",nan,0.06,533.0,nan,"154,000","30,300",nan,"184,300","214,500"
+13 11 46.50,13 21 13 Clean Rooms,13,21 13 Clean Rooms,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 21 13 Clean Rooms,13,21 13.50 Clean Room Components,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 21 13 Clean Rooms,10,CLEAN ROOM COMPONENTS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 21 13 Clean Rooms,1100,"Clean room, soft wall, 12' x 12', Class 100",1 Carp,0.18,44.444,Ea.,"16,600","2,500",nan,"19,100","22,000"
+13 11 46.50,13 21 13 Clean Rooms,1110,"Class 1,000",nan,0.18,44.444,nan,"17,500","2,500",nan,"20,000","22,900"
+13 11 46.50,13 21 13 Clean Rooms,1120,"Class 10,000",21,38.095,nan,nan,"15,600","2,150",nan,"17,750","20,300"
+13 11 46.50,13 21 13 Clean Rooms,1130,"Class 100,000",.21,38.095,nan,nan,"12,800","2,150",nan,"14,950","17,200"
+13 11 46.50,13 21 13 Clean Rooms,2800,"Ceiling grid support, slotted channel struts 4'0"" OC, ea. way",nan,nan,nan,S.F.,nan,nan,nan,5.90,6.50
+13 11 46.50,13 21 13 Clean Rooms,3000,"Ceiling panel, vinyl coated foil on mineral substrate",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 21 13 Clean Rooms,3020,"Sealed, non-perforated",nan,nan,nan,S.F.,nan,nan,nan,3.72,4.13
+13 11 46.50,13 21 13 Clean Rooms,4000,"Ceiling panel seal, silicone sealant, 150 L.F./gal.",1 Carp,150.0,0.053,L.F.,.28,3,nan,3.28,4.78
+13 11 46.50,13 21 13 Clean Rooms,4100,Two sided adhesive tape,17,240.0,0.033,п,.13,1.88,nan,2.01,2.93
+13 11 46.50,13 21 13 Clean Rooms,4200,"Clips, one per panel",nan,nan,nan,Ea.,1.01,nan,nan,1.01,1.11
+13 11 46.50,13 21 13 Clean Rooms,6000,"HEPA filte, 2'x4', 99.97% eff., 3"" dp beveled frame (silicone seal)",nan,nan,nan,nan,380,nan,nan,380,420
+13 11 46.50,13 21 13 Clean Rooms,6040,"6"" deep skirted frame (channel seal)",nan,nan,nan,nan,520,nan,nan,520,570
+13 11 46.50,13 21 13 Clean Rooms,6100,"99.99% efficient, 3"" deep beveled frame (silicone seal)",nan,nan,nan,nan,485,nan,nan,485,530
+13 11 46.50,13 21 13 Clean Rooms,6140,"6"" deep skirted frame (channel seal)",nan,nan,nan,nan,560,nan,nan,560,615
+13 11 46.50,13 21 13 Clean Rooms,6200,"99.999% efficient, 3"" deep beveled frame silicone seal)",nan,nan,nan,nan,585,nan,nan,585,645
+13 11 46.50,13 21 13 Clean Rooms,6240,"6"" deep skirted frame (channel seal)",nan,nan,nan,nan,675,nan,nan,675,740
+13 11 46.50,13 21 13 Clean Rooms,7000,"Wall panel systems, including channel strut framing",nan,nan,nan,nan,,nan,nan,nan,nan
+13 11 46.50,13 21 13 Clean Rooms,7020,"Polyester coated aluminum, particle board",nan,nan,nan,S.F.,nan,nan,nan,18.20,18.20
+13 11 46.50,13 21 13 Clean Rooms,7100,"Porcelain coated aluminum, particle board",nan,nan,nan,nan,nan,nan,nan,32,32
+13 11 46.50,13 21 13 Clean Rooms,74001,"Wall panel support, slotted channel struts, to 12' high",nan,nan,nan,nan,nan,nan,nan,16.35,16.35
+13 11 46.50,13 05 05 - Selective Demolition for Special Construction,80,"375 lb. per thousand feet, over 75' H",1 Clab,460,0.17,LF,nan,0.79,nan,0.79,1.18
+13 11 46.50,13 05 05 - Selective Demolition for Special Construction,90,"Aluminum, 101 lb. per thousand feet, to 75' H",nan,560,0.014,nan,nan,0.65,nan,0.65,0.97
+13 11 46.50,13 05 05 - Selective Demolition for Special Construction,100,"199 lb. per thousand feet, over 75' H",nan,480,0.017,nan,nan,0.76,nan,0.76,1.13
+13 11 46.50,13 05 05 - Selective Demolition for Special Construction,110,"Arrester, 175 V AC, to ground",nan,16,0.5,Ea.,nan,23.0,nan,23.0,34.0
+13 11 46.50,13 05 05 - Selective Demolition for Special Construction,120,"650 V AC, to ground",nan,13,0.615,nan,nan,28.0,nan,28.0,42.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",10,"SELECTIVE DEMOLITION, PRE-ENGINEERED STEEL BUILDINGS",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",500,"Pre engd. steel bldgs., rigid frame, clear span & multi post, excl. salvage",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",550,"3,500 to 7,500 S.F.",1-10,1000.0,.024,SF Flr.,,1.512,1.98,3.49,4.48
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",600,"7,501 to 12,500 S.F.",nan,1500.0,.016,nan,,1.01,1.32,2.33,2.99
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",650,"12,501 S.F. or greater",nan,1650.0,.015,nan,,0.92,1.2,2.12,2.72
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",700,Pre engd. steel building components,nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",710,"Entrance canopy, including frame 4' x 4'",E 24,8.0,4,Ea.,,246.0,262.0,508.0,665.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",720,4'x8',"""",7.0,4.571,nan,,281.0,299.0,580.0,760.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",730,"HM doors, self framing, single leaf",2 Skwk,8.0,2,nan,,118.0,nan,118.0,177.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",740,Double leaf,nan,5.0,3.200,nan,,188.0,nan,188.0,283.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",760,"Gutter, eave type",nan,600.0,.027,LF,,1.57,nan,1.57,2.36
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",770,"Sash, single slide, double slide or fixed",nan,24.0,.667,Eo.,,39.5,nan,39.5,59.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",780,"Skylight, fiberglass, to 30 S.F.",nan,16.0,T,nan,,59.0,nan,59.0,88.5
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",785,"Roof vents, circular, 12"" to 24"" diameter",nan,12.0,1.333,nan,,78.5,nan,78.5,118.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",790,"Continuous, 10' long",nan,8.0,2,nan,,118.0,nan,118.0,177.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",900,"Shelters, aluminum frame",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",910,"Acrylic glazing, 3' x 9' x 8' high",2 Skwk,2.0,8,Ea.,,470.0,nan,470.0,710.0
+13 05 05.50,"Selective Demolition, Pre-Engineered Steel Buildings",920,9' x 12' x 8' high,"""",1.5,10.667,"""",,630.0,nan,630.0,945.0
+13 05 05.60,"Selective Demolition, Silos",10,"SELECTIVE DEMOLITION, SILOS",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.60,"Selective Demolition, Silos",20,"Conc stave, indstri, conical / sloping bott, excl fndt, 12' diam, 35' H",E 24,8282.0,178.0,Ea.,,"10,900","11,600","22,500","29,500"
+13 05 05.60,"Selective Demolition, Silos",30,"16' diam, 45' H",nan,0.12,267.0,17,,"16,400","17,400","33,800","44,200"
+13 05 05.60,"Selective Demolition, Silos",40,"25' diam, 75' H",E 24,0.08,400.0,Eo.,,"24,600","26,200","50,800","66,500"
+13 05 05.60,"Selective Demolition, Silos",50,"Steel, factory fabricated, 30,000 gal. cap, painted or epoxy lined-",1-5,nan,28.0,"""",,"1,750","1,050","2,800","3,825"
+13 05 05.65,"Selective Demolition, Sound Control",10,"SELECTIVE DEMOLITION, SOUND CONTROL",R024119-10,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.65,"Selective Demolition, Sound Control",120,"Acoustical enclosure, 4"" thick walls & ceiling panels, 8 lb./S.F.",3 Carp,144.0,0.167,SF Surf,,9.4,nan,9.4,13.95
+13 05 05.65,"Selective Demolition, Sound Control",130,10.5 lb./S.F.,nan,128.0,0.188,nan,,10.55,nan,10.55,15.7
+13 05 05.65,"Selective Demolition, Sound Control",140,"Reverb chamber, parallel walls, 4"" thick",nan,120.0,0.2,nan,,11.25,nan,11.25,16.75
+13 05 05.65,"Selective Demolition, Sound Control",150,"Skewed walls, parallel roof, 4"" thick",nan,110.0,218.0,nan,,12.3,nan,12.3,18.3
+13 05 05.65,"Selective Demolition, Sound Control",160,"Skewed walls/roof, 4"" layer/airspace",nan,96.0,0.25,nan,,14.1,nan,14.1,21.0
+13 05 05.65,"Selective Demolition, Sound Control",170,"Sound absorbing panels, painted metal, 2'-6"" x 8', under 1,000 S.F.",nan,430.0,0.056,nan,,3.14,nan,3.14,4.68
+13 05 05.65,"Selective Demolition, Sound Control",180,"Over 1,000 S.F.",nan,480.0,0.05,nan,,2.82,nan,2.82,4.19
+13 05 05.65,"Selective Demolition, Sound Control",190,"Flexible transparent curtain, clear",3 Shee,430.0,0.056,nan,,3.77,nan,3.77,5.7
+13 05 05.65,"Selective Demolition, Sound Control",192,"50% clear, 50% foam",nan,430.0,0.056,nan,,3.77,nan,3.77,5.7
+13 05 05.65,"Selective Demolition, Sound Control",194,"25% clear, 75% foam",nan,430.0,0.056,nan,,3.77,nan,3.77,5.7
+13 05 05.65,"Selective Demolition, Sound Control",196,100% foam,nan,430.0,0.056,nan,,3.77,nan,3.77,5.7
+13 05 05.65,"Selective Demolition, Sound Control",200,"Audio-masking sys., incl. speakers, amplfr, signal gnrtr.",nan,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.65,"Selective Demolition, Sound Control",205,"Ceiling mounted, 5,000 S.F.",2 Elec,4800.0,0.003,S.F.,,2112.0,nan,0.22,0.338
+13 05 05.65,"Selective Demolition, Sound Control",210,"10,000 S.F.",nan,5600.0,0.003,nan,,0.19,nan,0.19,0.28
+13 05 05.65,"Selective Demolition, Sound Control",2201,"Plenum mounted, 5,000 S.F.",nan,7600.0,0.002,nan,,0.14,nan,0.14,0.21
+13 05 05.65,"Selective Demolition, Sound Control",230,"10,000 S.F.",nan,8800.0,0.002,nan,,0.12,nan,0.12,0.18
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",10,"SELECTIVE DEMOLITION, SPECIAL PURPOSE ROOMS",R024119-10,nan,nan,nan,,nan,nan,nan,nan
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",100,"Audiometric rooms, under 500 S.F. surface",4 Carp,200.0,0.16,SF Surf.,,9.0,91.0,nan,13.4
+13 05 05.70,"Selective Demolition, Special Purpose Rooms",110,Over 500 S.F. surface,"""",240.0,0.133,nan,,7.5,nan,7.5,11.15
+13 34 19.50,Pre-Engineered Structure Steel Buildings,150,"20' to 29' wide, 10' eave height",E-2,425.0,0.132,SF Flr.,8.25,8.05,5.85,22.15,28.0
+13 34 19.50,Pre-Engineered Structure Steel Buildings,160,14' eave height,4,350.0,0.16,nan,10.05,9.8,7.1,26.95,34.0
+13 34 19.50,Pre-Engineered Structure Steel Buildings,170,16' eave height,nan,320.0,0.175,nan,9.4,10.7,7.75,27.85,35.5
+13 34 19.50,Pre-Engineered Structure Steel Buildings,180,20' eave height,nan,275.0,0.204,nan,10.35,12.45,9.0,31.8,40.5
+13 34 19.50,Pre-Engineered Structure Steel Buildings,190,24' eave height,nan,240.0,0.233,nan,12.7,14.3,10.35,37.35,47.5
+13 34 19.50,Pre-Engineered Structure Steel Buildings,200,"30' to 49' wide, 10' eave height",nan,535.0,0.105,nan,6.6,6.4,4.64,17.64,22.0
+13 34 19.50,Pre-Engineered Structure Steel Buildings,300,14' eave height,nan,450.0,0.124,nan,13.3,7.6,5.5,26.4,32.5
+13 34 19.50,Pre-Engineered Structure Steel Buildings,400,16' eave height,nan,415.0,0.135,nan,7.6,8.25,6.0,21.85,27.5
+13 34 19.50,Pre-Engineered Structure Steel Buildings,500,20' eave height,nan,360.0,0.156,nan,17.0,9.55,6.9,33.45,41.0
+13 34 19.50,Pre-Engineered Structure Steel Buildings,600,24' eave height,nan,320.0,0.175,nan,9.1,10.7,7.75,27.55,35.0
+13 34 19.50,Pre-Engineered Structure Steel Buildings,700,"50' to 100' wide, 10' eave height",nan,1770.0,1.073,nan,5.6,4.45,3.22,13.27,16.5
+13 34 19.50,Pre-Engineered Structure Steel Buildings,900,16' eave height,nan,600.0,0.093,nan,11.35,5.7,4.13,21.18,226.0
+13 34 19.50,Pre-Engineered Structure Steel Buildings,1000,20' eave height,nan,490.114,nan,nan,12.3,7.0,5.05,24.35,30.0
+13 34 19.50,Pre-Engineered Structure Steel Buildings,1100,24' eave height,nan,435.129,nan,nan,7.7,7.9,5.7,21.3,27.0
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",1300,"30' to 39' wide, 10' eave height",E-2,535.0,105.0,SF Fl.,7.5,6.4,4.64,18.54,23.0
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",1400,14' eave height,nan,450.0,0.124,nan,8.25,7.6,5.5,21.35,27.0
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",1500,16' eave height,nan,415.0,0.135,nan,8.7,8.25,6.0,22.95,28.5
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",1600,20' eave height,nan,360.156,nan,nan,9.6,9.55,6.9,26.05,32.5
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",1700,"40' wide, 10' eave height",E-2,600.093,nan,SF Fl.,6.65,5.7,4.13,16.48,20.5
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",1800,14' eave height,nan,510.0,110.0,nan,7.4,6.7,4.86,18.96,24.0
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",1900,16' eave height,nan,475.0,0.118,nan,7.7,7.2,5.2,20.1,25.5
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2000,20' eave height,nan,415.0,0.135,nan,8.5,8.25,6.0,22.75,28.5
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2100,"50' to 79' wide, 10' eave height",nan,770.0,0.073,nan,6.2,4.45,3.22,13.87,17.2
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2200,14' eave height,nan,675.0,0.083,nan,12.2,5.1,3.67,20.97,25.0
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2300,16' eave height,nan,635.0,0.088,nan,7.0,5.4,3.91,16.31,20.5
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2400,20' eave height,nan,490.0,0.114,nan,13.1,7.0,5.05,25.15,30.5
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2410,"80' to 100' wide, 10' eave height",nan,935.0,0.06,nan,5.5,3.67,2.65,11.82,14.6
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2420,14' eave height,nan,750.0,0.075,nan,6.1,4.57,3.31,13.98,17.35
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2430,16' eave height,nan,685.0,0.082,nan,6.35,5.0,3.62,14.97,18.65
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2440,20' eave height,nan,560.0,0.1,nan,6.8,6.1,4.43,17.33,21.5
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2460,"101' to 120' wide, 10' eave height",nan,950.0,0.059,nan,5.05,3.61,2.61,11.27,13.95
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2470,14' eave height,nan,770.0,0.073,nan,5.6,4.45,3.22,13.27,16.55
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2480,16' eave height,nan,675.0,0.083,nan,6.0,5.1,3.67,14.77,18.4
+13 34 19.50,"Clear span tapered beam frame, 26 ga. colored roofing / siding",2490,20' eave height,nan,560.0,0.1,nan,6.4,6.1,4.43,16.93,21.5
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",2600,"80' wide, 14' eave height",E-2,740,76.0,SF Flr.,5.6,4.63,3.35,13.58,16.95
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",2700,16' eave height,nan,695,0.081,nan,5.95,4.93,3.57,14.45,18.05
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",2800,20' eave height,nan,625,0.09,nan,6.5,5.5,3.97,15.97,19.85
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",2900,24' eave height,nan,570,0.098,nan,7.1,6.0,4.35,17.45,22.0
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",3000,"100' wide, 14' eave height",nan,835,0.067,nan,5.45,4.11,2.97,12.53,15.5
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",3100,16' eave height,nan,795,0.07,nan,5.05,4.31,3.12,12.48,15.6
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",3200,20' eave height,nan,730,0.077,nan,6.15,4.7,3.4,14.25,17.7
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",3300,24' eave height,nan,670,0.084,nan,6.85,5.1,3.7,15.65,19.35
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",3400,"120' wide, 14' eave height",nan,870,0.064,nan,8.75,3.94,2.85,15.54,18.8
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",3500,16' eave height,nan,830,0.067,nan,5.65,4.13,2.99,12.77,15.85
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",3600,20' eave height,nan,765,0.073,nan,6.7,4.48,3.24,14.42,17.75
+13 34 19.50,"Single post 2-span frame, 26 ga. colored roofing and siding",3700,24' eave height,4,705,0.079,nan,7.35,4.86,3.52,15.73,19.3
+13 34 19.50,"Double post 3 span frame, 26 ga. colored roofing and siding",3900,"150' wide, 14' eave height",-2.0,925.0,0.061,SF Flr.,4.45,3.71,2.68,10.84,13.5
+13 34 19.50,"Double post 3 span frame, 26 ga. colored roofing and siding",4000,16' eave height,nan,890.0,0.063,nan,4.64,3.85,2.79,11.28,14.05
+13 34 19.50,"Double post 3 span frame, 26 ga. colored roofing and siding",4100,20' eave height,nan,820.068,nan,nan,5.05,4.18,3.02,12.25,15.35
+13 34 19.50,"Double post 3 span frame, 26 ga. colored roofing and siding",4200,24' eave height,nan,765.0,0.073,nan,5.55,4.48,3.24,13.27,16.5
+13 34 19.50,REFRIGERATION,10,REFRIGERATION,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,REFRIGERATION,20,"Curbs, 12"" high, 4"" thick, concrete",.2 Carp,58.0,0.276,LF,3.31,15.55,nan,18.86,26.5
+13 34 19.50,REFRIGERATION,1000,"Doors, see Section 08 34 13.10",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,REFRIGERATION,2400,"Finishes, 2 coat Portland cement plaster, 1/2"" thick",1 Plas,48.0,0.167,S.F.,.80,8.55,nan,9.35,13.65
+13 34 19.50,REFRIGERATION,2500,"For galvanized reinforcing mesh, add",11 Lath,335.0,0.024,nan,.61,1.34,nan,1.95,2.62
+13 34 19.50,REFRIGERATION,2700,"3/16"" thick latex cement",1 Plas,88.0,0.091,nan,1.50,4.67,nan,6.17,8.6
+13 34 19.50,REFRIGERATION,2900,"For glass cloth reinforced ceilings, add",nan,450.0,0.018,nan,.64,.91,nan,1.55,2.06
+13 34 19.50,REFRIGERATION,3100,"Fiberglass panels, 1/8"" thick",1 Carp,149.45,0.054,S.F.,2.38,3.01,nan,5.39,7.1
+13 34 19.50,REFRIGERATION,3200,"Polystyrene, plastic finish ceiling, 1"" thick",nan,274.0,0.029,nan,2.84,1.64,nan,4.48,5.55
+13 34 19.50,REFRIGERATION,3400,"2"" thick",nan,274.0,0.029,nan,3.19,1.64,nan,4.83,5.95
+13 34 19.50,REFRIGERATION,3500,"4"" thick",nan,219.0,0.037,nan,4.05,2.06,nan,6.11,7.5
+13 34 19.50,REFRIGERATION,3800,"Floors, concrete, 4"" thick",1 Cefi,93.0,0.086,nan,2.07,4.57,nan,6.64,9.0
+13 34 19.50,REFRIGERATION,3900,"6"" thick","""",85.0,0.094,nan,3.24,5 1,nan,8.241,10.85
+13 34 19.50,REFRIGERATION,4000,"Insulation, 1"" to 6"" thick, cork",nan,nan,nan,B.F.,1.50,nan,nan,1.5,1.65
+13 34 19.50,REFRIGERATION,4100,Urethane,nan,nan,nan,nan,.70,nan,nan,0.701,0.77
+13 34 19.50,REFRIGERATION,4300,"Polystyrene, regular",nan,nan,nan,nan,.73,nan,nan,0.73,0.8
+13 34 19.50,REFRIGERATION,4400,Bead board,nan,nan,nan,nan,.28,nan,nan,0.28,0.31
+13 34 19.50,REFRIGERATION,4600,"Installation of above, add per layer",2 Carp,657.6,0.024,S.F,.44,1.37,nan,1.81,2.52
+13 34 19.50,REFRIGERATION,4700,Wall and ceiling juncture,nan,298.9,0.054,LF,1.41,3.01,nan,4.42,6.05
+13 34 19.50,REFRIGERATION,4900,"Partitions, galvanized sandwich panels, 4"" thick, stock",nan,219.2,0.073,S.F.,10.10,4.11,nan,14.21,17.2
+13 34 19.50,REFRIGERATION,5000,Aluminum or fiberglass,nan,219.2,0.073,nan,6.45,4.11,nan,10.56,13.2
+13 34 19.50,REFRIGERATION,5200,"Prefab walk in, 7'-6"" high, aluminum, incl. refrigeration, door & floor",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,REFRIGERATION,5210,"not incl. partitions, 6' x 6'",2 Carp,54.8,0.292,SF Flr.,105,16.45,nan,121.45,141.0
+13 34 19.50,REFRIGERATION,5500,10' x 10',nan,82.2,0.195,nan,85,10.95,nan,95.95,110.0
+13 34 19.50,REFRIGERATION,5700,12' x 14',nan,109.6,0.146,nan,76,8.20,nan,84.2,96.0
+13 34 19.50,REFRIGERATION,5800,12' x 20',nan,109.6,0.146,nan,115,8.20,nan,123.2,139.0
+13 34 19.50,REFRIGERATION,6100,"For 8'-6"" high, add",nan,nan,nan,nan,,5%,nan,nan,nan
+13 34 19.50,REFRIGERATION,6300,"Rule of thumb for complete units, w/o doors & refrigeration, cooler",2 Carp,146.0,0.11,nan,176,6.15,nan,182.15,202.0
+13 34 19.50,REFRIGERATION,6400,Freezer,nan,109.6,0.146,nan,113,8.20,nan,121.2,136.0
+13 34 19.50,REFRIGERATION,6600,"Shelving, plated or galvanized, steel wire type",nan,360.0,0.044,SF Hor.,8.35,2.501,nan,10.85,12.9
+13 34 19.50,REFRIGERATION,6700,Slat shelf type,nan,375.0,0.043,nan,17.65,2.40,nan,20.05,23.0
+13 34 19.50,REFRIGERATION,6900,"For stainless steel shelving, add",nan,nan,nan,nan,,300 %,nan,nan,nan
+13 34 19.50,REFRIGERATION,7000,"Vapor barrier, on wood walls",2 Carp,1644.0,0.01,S.F.,.19,.55,nan,0.74,1.03
+13 34 19.50,REFRIGERATION,7200,On masonry walls,"""",1315.0,0.012,nan,.33,.69,nan,1.02,1.38
+13 34 19.50,REFRIGERATION,7500,"For air curtain doors, see Section 23 34 33.10",nan,nan,nan,nan,,nan,nan,nan,nan
+13 21 48.10,Anechoic Chambers,10,"ANECHOIC CHAMBERS Standard units, 7' ceiling heights",nan,nan,nan,nan,,nan,nan,nan,nan
+13 21 48.10,Anechoic Chambers,100,Area for pricing is net inside dimensions,nan,nan,nan,nan,,nan,nan,nan,nan
+13 21 48.10,Anechoic Chambers,300,"200 cycles per second cutoff, 25 S.F. floor area",nan,nan,nan,SF Flr.,"1,900",nan,nan,"1,900","2,100"
+13 21 48.10,Anechoic Chambers,700,100 S.F.,nan,nan,nan,nan,"1,425",nan,nan,"1,425","1,575"
+13 21 48.10,Anechoic Chambers,900,"For 150 cycles per second cutoff, add to 100 S.F. room",nan,nan,nan,nan,nan,nan,nan,30 %,30 %
+13 21 48.10,Anechoic Chambers,1000,"For 100 cycles per second cutoff, add to 100 S.F. room",nan,nan,nan,nan,nan,nan,nan,45 %,45 %
+13 21 48.15,Audiometric Rooms,10,AUDIOMETRIC ROOMS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 21 48.15,Audiometric Rooms,20,Under 500 S.F. surface,4 Carp,98.0,0.327,SF Surf,61.5,18.4,nan,79.9,95.0
+13 21 48.15,Audiometric Rooms,100,Over 500 S.F. surface,"""",120.0,0.267,nan,58.0,15.0,nan,73.0,86.5
+13 34 19.50,13 34 19 - Metal Building Systems,13,34 19.50 Pre-Engineered Steel Buildings,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 34 19 - Metal Building Systems,7050,"3"" thick, R10",2 Carp,2300,0.007,S.F.,.63,0.39,nan,1.02,1.27
+13 34 19.50,13 34 19 - Metal Building Systems,7100,"4"" thick, R13",nan,2300,0.007,nan,.48,0.39,nan,.87,1.11
+13 34 19.50,13 34 19 - Metal Building Systems,7110,"6"" thick, R19",nan,2300.007,nan,nan,,.61,0.39,nan,1.25
+13 34 19.50,13 34 19 - Metal Building Systems,7120,"10"" thick, R30",nan,2300,0.007,nan,.93,0.39,nan,1.32,1.60
+13 34 19.50,13 34 19 - Metal Building Systems,7150,"Metalized polyester / scrim / kraft (PSK) facing, 1-1/2"" thk, R5",nan,2300,0.007,nan,.68,0.39,nan,1.07,1.33
+13 34 19.50,13 34 19 - Metal Building Systems,7200,"2"" thick, R6",nan,2300,0.007,nan,.81,0.39,nan,1.20,1.47
+13 34 19.50,13 34 19 - Metal Building Systems,7250,"3"" thick, R11",nan,2300,0.007,nan,1.04,0.39,nan,1.43,1.72
+13 34 19.50,13 34 19 - Metal Building Systems,7300,"4"" thick, R13",nan,2300,0.007,nan,1.03,0.39,nan,1.42,1.71
+13 34 19.50,13 34 19 - Metal Building Systems,7310,"6"" thick, R19",nan,2300,0.007,nan,1.15,0.39,nan,1.54,1.85
+13 34 19.50,13 34 19 - Metal Building Systems,7320,"10"" thick, R30",nan,2300..007,nan,nan,1.56,0.39,nan,1.95,2.30
+13 34 19.50,13 34 19 - Metal Building Systems,7350,"Vinyl / scrim / foil (VSF), 1-1/2"" thick, R5",nan,2300,0.007,nan,ཱ.59,0.39,nan,.98,1.23
+13 34 19.50,13 34 19 - Metal Building Systems,7400,"2"" thick, R6",nan,2300,0.007,nan,༈ .78,0.39,nan,1.17,1.44
+13 34 19.50,13 34 19 - Metal Building Systems,7450,"3"" thick, R10",nan,2300,0.007,nan,༽ .76,0.39,nan,1.15,1.42
+13 34 19.50,13 34 19 - Metal Building Systems,7500,"4"" thick, R13",nan,2300,0.007,nan,ད .97,0.39,nan,1.36,1.65
+13 34 19.50,13 34 19 - Metal Building Systems,7510,"Vinyl / scrim / vinyl (VSV), 4"" thick, R13",nan,2300,0.007,nan,ག .47,0.39,nan,.86,1.10
+13 34 19.50,13 34 19 - Metal Building Systems,7520,"6"" thick, R19",nan,2300,0.007,nan,ཅུ.61,0.39,nan,1,1.25
+13 34 19.50,13 34 19 - Metal Building Systems,7530,"9-1/2"" thick, R30",nan,2300,0.007,nan,1.04,0.39,nan,1.43,1.72
+13 34 19.50,13 34 19 - Metal Building Systems,7540,"Polyprop / scrim / polyester (PSP), 4"" thick, R13",nan,2300,0.007,nan,ཥ .70,0.39,nan,1.09,1.35
+13 34 19.50,13 34 19 - Metal Building Systems,7550,"6"" thick, R19",nan,2300,0.007,nan,༧ .82,0.39,nan,1.21,1.48
+13 34 19.50,13 34 19 - Metal Building Systems,7555,"10"" thick, R30",nan,2300,0.007,nan,1.52,0.39,nan,1.91,2.25
+13 34 19.50,13 34 19 - Metal Building Systems,7560,"Polyprop / scrim / kraft/ polyester (PSKP), 4"" thick, R13",nan,2300,0.007,nan,ང .91,0.39,nan,1.30,1.58
+13 34 19.50,13 34 19 - Metal Building Systems,7570,"6"" thick, R19",nan,2300,0.007,nan,མ .95,0.39,nan,1.34,1.63
+13 34 19.50,13 34 19 - Metal Building Systems,7580,"10"" thick, R19",nan,2300,0.007,nan,1.73,0.39,nan,2.12,2.48
+13 34 19.50,13 34 19 - Metal Building Systems,7585,"Vinyl / scrim / polyester (VSP), 4"" thick, R13",nan,2300,0.007,nan,ཙི.62,0.39,nan,1.01,1.26
+13 34 19.50,13 34 19 - Metal Building Systems,7590,"6"" thick, R19",12 Carp,2300,0.007,S.F.,ཚ .84,0.39,nan,1.23,1.50
+13 34 19.50,13 34 19 - Metal Building Systems,7600,"10"" thick, R30","""",2300,0.007,#,1.18,0.39,nan,1.57,1.88
+13 34 19.50,13 34 19 - Metal Building Systems,7635,"Insulation installation, over the purlin, second layer, up to 4"" thick, add",nan,nan,nan,nan,,nan,nan,nan,90%
+13 34 19.50,13 34 19 - Metal Building Systems,7640,"Insulation installation, between the purlins, up to 4"" thick, add",nan,nan,nan,nan,,nan,nan,nan,100%
+13 34 19.50,13 34 19 - Metal Building Systems,7650,"Sash, single slide, glazed, with screens, 2020 (2' x 2')",E-1,22,1.091,Opng,162,66.5,6.7,235.20,286
+13 34 19.50,13 34 19 - Metal Building Systems,7700,3030 (3' x 3'),nan,14,1.714,nan,365,105.0,10.55,480.55,570
+13 34 19.50,13 34 19 - Metal Building Systems,7750,4030 (4' x 3'),nan,13,1.846,nan,485,113.0,11.35,609.35,720
+13 34 19.50,13 34 19 - Metal Building Systems,7800,6040 (6' x 4'),nan,12,2.0,nan,970,122.0,12.3,"1,104.30","1,275"
+13 34 19.50,13 34 19 - Metal Building Systems,7850,"Double slide sash, 3030 (3' x 3')",nan,14,1.714,nan,234,105.0,10.55,349.55,430
+13 34 19.50,13 34 19 - Metal Building Systems,7900,6040 (6' x 4'),nan,12,2.0,nan,625,122.0,12.3,759.30,885
+13 34 19.50,13 34 19 - Metal Building Systems,7950,"Fixed glass, no screens, 3030 (3' x 3')",nan,14,1.714,nan,219,105.0,10.55,334.55,410
+13 34 19.50,13 34 19 - Metal Building Systems,8000,6040 (6' x 4'),nan,12,2.0,nan,585,122.0,12.3,719.30,845
+13 34 19.50,13 34 19 - Metal Building Systems,8050,"Prefinished storm sash, 3030 (3' x 3')",nan,70,0.343,4,123,21.0,2.11,146.11,169
+13 34 19.50,13 34 19 - Metal Building Systems,8100,"Siding and roofing, see Sections 07 41 13 & 07 42 13",nan,nan,nan,nan,,143,nan,nan,nan
+13 34 19.50,13 34 19 - Metal Building Systems,8200,"Skylight, fiberglass panels, to 30 S.F.",E-1,10,2.4,Ea.,143,1446.0,14.75,303.75,395
+13 34 19.50,13 34 19 - Metal Building Systems,8250,"Larger sizes, add for excess over 30 S.F.","""",300,0.08,S.F.,4.78,4.88,0.49,10.15,13.25
+13 34 19.50,13 34 19 - Metal Building Systems,8300,"Roof vents, turbine ventilator, wind driven",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 34 19 - Metal Building Systems,8350,"No damper, includes base, galvanized",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 34 19 - Metal Building Systems,8400,"12"" diameter",Q-9,10,1.6,Ea.,97.50,97.5,nan,195,254
+13 34 19.50,13 34 19 - Metal Building Systems,8450,"20"" diameter",nan,82,2244.0,nan,275,122.0,nan,397,485
+13 34 19.50,13 34 19 - Metal Building Systems,8500,"24"" diameter",nan,84,nan,nan,435,122.0,nan,557,660
+13 34 19.50,13 34 19 - Metal Building Systems,8600,"Continuous, 26 ga., 10' long, 9"" wide",2 Sswk,nan,nan,nan,50,247.0,nan,297,435
+13 34 19.50,13 34 19 - Metal Building Systems,8650,"12"" wide",nan,4,nan,nan,50,247.0,nan,297,435
+13 34 19.50,13 34 23 - Fabricated Structures,13,34 23.10 Comfort Stations,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 34 23 - Fabricated Structures,10,"COMFORT STATIONS Prefab., stock, w/ doors, windows & fixt.",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 34 23 - Fabricated Structures,100,Not incl. interior finish or electrical,nan,nan,nan,nan,nan,nan,nan,nan,15.0
+13 34 19.50,13 34 23 - Fabricated Structures,300,"Mobile, on steel frame, 2 unit",nan,nan,nan,S.F.,195.0,nan,nan,195.0,214.0
+13 34 19.50,Engineered Greenhouses,2000,"Institutional, custom, rigid frame, including compartments and multi controls, under 500 S.F.",nan,nan,nan,SF Fl.,29.50,nan,nan,29.50,32.50
+13 34 19.50,Engineered Greenhouses,2150,"Over 2,000 S.F.",nan,nan,nan,nan,15.45,nan,nan,15.45,17
+13 34 19.50,Engineered Greenhouses,3700,"For 1/4"" tempered glass, add",nan,nan,nan,SF Surf,2.34,nan,nan,2.34,2.57
+13 34 19.50,Engineered Greenhouses,3900,"Cooling, 1,200 CFM exhaust fan, add",nan,nan,nan,Ea.,350,nan,nan,350,385
+13 34 19.50,Engineered Greenhouses,4000,"7,850 CFM",nan,nan,nan,nan,920,nan,nan,920,"1,000"
+13 34 19.50,Engineered Greenhouses,4200,"For heaters, 10 MBH, add",nan,nan,nan,nan,265,nan,nan,265,291
+13 34 19.50,Engineered Greenhouses,4300,"60 MBH, add",nan,nan,nan,nan,790,nan,nan,790,870
+13 34 19.50,Engineered Greenhouses,4500,"For benches, 2' x 8', add",nan,nan,nan,nan,204,nan,nan,204,224
+13 34 19.50,Engineered Greenhouses,4600,"4' x 10', add",nan,nan,nan,nan,535,nan,nan,535,590
+13 34 19.50,Engineered Greenhouses,4800,"For ventilation & humidity control w/4 integrated outlets, add",nan,nan,nan,Total,310,nan,nan,310,340
+13 34 19.50,Engineered Greenhouses,4900,"For environmental controls and automation, 8 outputs, 9 stages, add",nan,nan,nan,"""","1,425",nan,nan,"1,425","1,575"
+13 34 19.50,Engineered Greenhouses,5100,"For humidification equipment, add",nan,nan,nan,Ea.,350,nan,nan,350,385
+13 34 19.50,Engineered Greenhouses,5200,"For vinyl shading, add",nan,nan,nan,S.F.,.33,nan,nan,.33,366
+13 34 19.50,"Geodesic hemisphere, 1/8"" plexiglass glazing",6050,8' diameter,2 Carp,2.0,8.0,Eq.,"5,700",450,nan,"6,150","6,950"
+13 34 19.50,"Geodesic hemisphere, 1/8"" plexiglass glazing",6150,24' diameter,nan,0.35,45.714,nan,"17,500","2,575",nan,"20,075","23,000"
+13 34 19.50,"Geodesic hemisphere, 1/8"" plexiglass glazing",6250,48' diameter,nan,0.2,80.0,nan,"36,300","4,500",nan,"40,800","46,600"
+13 34 13.19,Swimming Pool Enclosures,10,"SWIMMING POOL ENCLOSURES Translucent, free standing",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 13.19,Swimming Pool Enclosures,20,"not including foundations, heat or light",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 13.19,Swimming Pool Enclosures,200,Economy,2 Carp,200.0,0.08,SF Hor.,48.0,4.5,nan,52.5,59.5
+13 34 13.19,Swimming Pool Enclosures,600,Deluxe,nan,70.0,0.229,nan,131.0,12.85,nan,143.85,164.0
+13 34 13.19,Swimming Pool Enclosures,700,"For motorized roof, 40% opening, solid roof, add",nan,nan,nan,nan,26.0,nan,nan,26.0,28.5
+13 34 13.19,Swimming Pool Enclosures,800,"Skylight type roof, add",nan,nan,nan,nan,16.0,nan,nan,16.0,17.6
+13 34 16.13,Grandstands,10,"GRANDSTANDS Permanent, municipal, including foundation",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 16.13,Grandstands,300,"Steel, economy",nan,nan,nan,Seat,24.5,nan,nan,24.5,27.0
+13 34 16.13,Grandstands,400,"Steel, deluxe",nan,nan,nan,nan,27.5,nan,nan,27.5,30.0
+13 34 16.13,Grandstands,900,"Composite, steel, wood and plastic, stock design, economy",nan,nan,nan,nan,34.5,nan,nan,34.5,38.0
+13 34 16.13,Grandstands,1000,Deluxe,nan,nan,nan,Seat,82.5,nan,nan,82.5,90.5
+13 34 16.53,Bleachers,10,BLEACHERS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 16.53,Bleachers,20,"Bleachers, outdoor, portable, 5 tier, 42 seats",2 Sswk,120.0,133.0,Seat,93.0,8.25,nan,101.25,116.0
+13 34 16.53,Bleachers,100,"5 tiers, 54 seats",nan,80.0,0.2,nan,90.0,12.35,nan,102.35,118.0
+13 34 16.53,Bleachers,200,"10 tiers, 104 seats",nan,120.0,0.133,nan,103.0,8.25,nan,111.25,126.0
+13 34 16.53,Bleachers,300,"10 fiers, 144 seats",nan,80.0,0.2,→>,83.5,12.35,nan,95.85,111.0
+13 34 16.53,Bleachers,500,"Permanent bleachers, aluminum seat, steel frame, 24"" row",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 16.53,Bleachers,600,"8 tiers, 80 seats",12 Sswk,60.0,267.0,Seat,108.0,16.5,nan,124.5,145.0
+13 34 16.53,Bleachers,700,"8 fiers, 160 seats",nan,48.0,0.333,nan,90.0,20.5,nan,110.5,131.0
+13 34 16.53,Bleachers,925,"15 tiers, 154 to 165 seats",nan,60.0,0.267,nan,96.0,16.5,nan,112.5,132.0
+13 34 16.53,Bleachers,975,"15 tiers, 214 to 225 seats",nan,60.0,0.267,nan,86.0,16.5,nan,102.5,120.0
+13 34 16.53,Bleachers,1050,"15 tiers, 274 to 285 seats",nan,60.0,0.267,nan,89.0,16.5,nan,105.5,124.0
+13 34 16.53,Bleachers,1200,"Seat backs only, 30"" row, fiberglass",nan,160.0,0.1,nan,32.5,6.2,nan,38.7,45.5
+13 34 16.53,Bleachers,1300,Steel and wood,nan,160.1,nan,nan,35.0,6.201,nan,41.2,48.0
+13 34 16.53,Bleachers,1400,NOTE: average seating is 1.5' in width,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,Pre-Engineered Steel Buildings,10,PRE-ENGINEERED STEEL BUILDINGS R133419-10,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,Pre-Engineered Steel Buildings,100,"Clear span rigid frame, 26 ga. colored roofing and siding",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 48 - Manufactured Sound and Vibration Control Components,13 48 13.50,Audio Masking,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 48 - Manufactured Sound and Vibration Control Components,3110,and signal generator,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 48 - Manufactured Sound and Vibration Control Components,3200,"Ceiling mounted, 5,000 S.F.",2 Elec,2400.0,0.007,S.F.,1.22,0.44,nan,1.66,2.0
+13 34 19.50,13 48 - Manufactured Sound and Vibration Control Components,3300,"10,000 S.F.",nan,2800.0,0.006,nan,0.99,0.38,nan,1.37,1.65
+13 34 19.50,13 48 - Manufactured Sound and Vibration Control Components,3400,"Plenum mounted, 5,000 S.F.",nan,3800.0,0.004,nan,1.11,0.28,nan,1.39,1.63
+13 34 19.50,13 48 - Manufactured Sound and Vibration Control Components,3500,"10,000 S.F.",nan,4400.0,0.004,nan,0.74,0.24,nan,0.98,1.17
+13 34 19.50,13 49 - Radiation Protection,13 49 13,Integrated X-Ray Shielding Assemblies,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 - Radiation Protection,13 49 13.50,Lead Sheets,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 - Radiation Protection,0010,LEAD SHEETS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 - Radiation Protection,0300,"Lead sheets, 1/16"" thick",2 Lath,135.0,0.119,S.Fi,10.65,6.65,nan,17.30,21.50
+13 34 19.50,13 49 - Radiation Protection,0400,"1/8"" thick",nan,120.0,0.133,nan,24,7.45,nan,31.45,37
+13 34 19.50,13 49 - Radiation Protection,0500,"Lead shielding, 1/4"" thick",nan,135.0,0.119,19,45,6.65,nan,51.65,59
+13 34 19.50,13 49 - Radiation Protection,0550,"1/2"" thick",nan,120.133,nan,nan,83.50,7.45,nan,90.95,103
+13 34 19.50,13 49 - Radiation Protection,0950,Lead headed nails (average 1 lb. per sheet),nan,nan,nan,Lb.,9.95,nan,nan,9.95,10.95
+13 34 19.50,13 49 - Radiation Protection,1000,"Butt joints in 1/8"" lead or thicker, 2"" batten strip x 7' long",2 Loth,240.0,0.067,Ea.,39,3.73,nan,42.73,48.50
+13 34 19.50,13 49 - Radiation Protection,1200,"X-ray protection, average radiography or fluoroscopy",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 - Radiation Protection,1210,"room, up to 300 S.F. floor, 1/16"" lead, economy",2 Lath,0.25,64.0,Total,"14,900","3,575",nan,"18,475","21,600"
+13 34 19.50,13 49 - Radiation Protection,1500,"7'0"" walls, deluxe","""",0.15,107.0,"""","17,900","5,975",nan,"23,875","28,400"
+13 34 19.50,13 49 - Radiation Protection,1600,"Deep therapy X ray room, 250 kV capacity,",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 - Radiation Protection,1800,"up to 300 S.F. floor, 1/4"" lead, economy",2 Lath,0.08,200.0,Total,"41,700","11,200",nan,"52,900","62,500"
+13 34 19.50,13 49 - Radiation Protection,1900,"7'0"" walls, deluxe",nan,1.06,267.0,nan,"51,500","14,900",nan,"66,400","78,500"
+13 34 19.50,13 49 19 - Lead-Lined Materials,13 49 19.50,Shielding Lead,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 19 - Lead-Lined Materials,0010,SHIELDING LEAD,nan,nan,nan,nan,,59,nan,nan,59
+13 34 19.50,13 49 19 - Lead-Lined Materials,0100,"Laminated lead in wood doors, 1/16"" thick, no hardware",nan,nan,nan,S.F.,59,nan,nan,59,65
+13 34 19.50,13 49 19 - Lead-Lined Materials,0200,"Lead lined door frame, not incl. hardware,",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 19 - Lead-Lined Materials,0210,"1/16"" thick lead, butt prepared for hardware",1 Lath,2.4,3.333,Ea.,"1,025",187.0,nan,"1,212","1,400"
+13 34 19.50,13 49 19 - Lead-Lined Materials,0850,"Window frame with 1/16"" lead and voice passage, 36"" x 60""",2 Glaz,2.0,8.0,nan,"4,825",430.0,nan,"5,255","5,950"
+13 34 19.50,13 49 19 - Lead-Lined Materials,0870,"24"" x 36"" frame",nan,4.0,4.0,nan,"12,600",216.0,nan,"2,816","3,200"
+13 34 19.50,13 49 19 - Lead-Lined Materials,0900,"Lead gypsum board, 5/8"" thick with 1/16"" lead",nan,160.0,0.1,S.F.,10.55,5.4,nan,15.95,19.65
+13 34 19.50,13 49 19 - Lead-Lined Materials,0910,"1/8"" lead",nan,140.0,0.114,nan,20.50,6.15,nan,26.65,31.50
+13 34 19.50,13 49 19 - Lead-Lined Materials,0930,"1/32"" lead",2 Lath,200.0,0.08,nan,13.60,4.48,nan,18.08,21.50
+13 34 19.50,13 49 21 - Lead Glazing,13 49 21.50,Lead Glazing,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 21 - Lead Glazing,0010,LEAD GLAZING,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 21 - Lead Glazing,0600,"Lead glass, 1/4"" thick, 2.0 mm LE, 12"" x 16""",2 Glaz,1382.0,1.231,Ea.,515,66.5,nan,581.50,670
+13 34 19.50,13 49 21 - Lead Glazing,0700,"24"" x 36""",1,nan,28.0,nan,"1,875",108.0,nan,"1,983","2,225"
+13 34 19.50,13 49 21 - Lead Glazing,0800,"36"" x 60""",1 W,nan,8.0,nan,"4,525",430.0,nan,"4,955","5,625"
+13 34 19.50,13 49 21 - Lead Glazing,2000,"X-ray viewing panels, clear lead plastic",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,13 49 21 - Lead Glazing,2010,"7 mm thick, 0.3 mm LE, 2.3 lb./S.F.",H 3,139.0,115.0,S.F.,288,5.6,nan,293.60,325
+13 34 19.50,13 49 21 - Lead Glazing,2020,"12 mm thick, 0.5 mm LE, 3.9 lb./S.F.",nan,82.0,0.195,nan,385,9.5,nan,394.50,440
+13 34 19.50,13 49 21 - Lead Glazing,2030,"18 mm thick, 0.8 mm LE, 5.9 lb./S.F.",nan,54.0,0.296,nan,470,14.4,nan,484.40,535
+13 34 19.50,13 49 21 - Lead Glazing,2040,"22 mm thick, 1.0 mm LE, 7.2 lb./S.F.",nan,44.0,364.0,nan,775,17.7,nan,792.70,880
+13 34 19.50,13 49 21 - Lead Glazing,2050,"35 mm thick, 1.5 mm LE, 11.5 lb./S.F.",nan,28.0,0.571,nan,"1,025",28.0,nan,"1,053","1,175"
+13 34 19.50,13 49 21 - Lead Glazing,2060,"46 mm thick, 2.0 mm LE, 15.0 lb./S.F.",nan,21.0,0.762,nan,"1,350",37.0,nan,"1,387","1,525"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4000,"X ray barriers, modular, panels mounted within framework for",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4002,"attaching to floor, wall or ceiling, upper portion is clear lead",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4005,"plastic window panels 48"" H, lower portion is opaque leaded",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4008,"steel panels 36"" H, structural supports not incl.",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4010,"1 section barrier, 36""W x 84""H overall",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4020,0.5 mm LE panels,H-3,6.4,2.5,Ea.,"10,400",122.0,nan,"10,522","11,700"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4030,0.8 mm LE panels,nan,6.4,2.5,nan,"11,200",122.0,nan,"11,322","12,600"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4040,1.0 mm LE panels,nan,5.33,3.002,nan,"15,600",146.0,nan,"15,746","17,300"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4050,1.5 mm LE panels,nan,5.33,3.002,nan,"18,300",146.0,nan,"18,446","20,400"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4060,"2 section barrier, 72""W x 84""H overall",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4070,0.5 mm LE panels,H-3,4.0,4.0,Ea.,"15,800",195.0,nan,"15,995","17,700"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4080,0.8 mm LE panels,nan,4.0,4.0,nan,"16,300",195.0,nan,"16,495","18,200"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,4090,1.0 mm LE panels,nan,3.56,4.494,nan,"17,700",219.0,nan,"17,919","19,800"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,5000,1.5 mm LE panels,nan,3.2,5.0,nan,"31,700",243.0,nan,"31,943","35,200"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,5010,"3 section barrier, 108""W x 84""H overall",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,5020,0.5 mm LE panels,H-3,3.222,5.0,Ea.,"23,700",243.0,nan,"23,943","26,400"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,5030,0.8 mm LE panels,nan,3.2,5.0,nan,"24,400",243.0,nan,"24,643","27,200"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,5040,1.0 mm LE panels,nan,2.67,5.993,nan,"26,500",292.0,nan,"26,792","29,600"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,5050,1.5 mm LE panels,nan,2.46,6.504,nan,"48,000",315.0,nan,"48,315","53,500"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7000,"X ray barriers, mobile, mounted within framework w/casters on",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7005,"bottom, clear lead plastic window panels on upper portion,",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7010,"opaque on lower, 30""W x 75""H overall, inc. framework",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7020,"24""H upper w/0.5 mm LE, 48""H lower w/0.8 mm LE",1 Carp,16.0,0.5,Ea.,"5,325",28.0,nan,"5,353","5,925"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7030,"48""W x 75""H overall, incl.framework",nan,1.0,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7040,"36""H upper w/0.5 mm LE, 36""H lower w/0.8 mm LE",1 Carp,16.0,0.5,Ea.,"7,575",28.0,nan,"7,603","8,375"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7050,"36""H upper w/1.0 mm LE, 36""H lower w/1.5 mm LE",nan,16.0,0.5,"""","8,425",28.0,nan,"8,453","9,325"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7060,"72""W x 75""H overall, incl.framework",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7070,"36""H upper w/0.5 mm LE, 36""H lower w/0.8 mm LE",1 Carp,16.0,0.5,Ea.,"8,425",28.0,nan,"8,453","9,325"
+13 49 23.50,0010 MODULAR SHIELDING PARTITIONS,7080,"36""H upper w/1.0 mm LE, 36""H lower w/1.5 mm LE",nan,16.0,0.5,"""","10,600",28.0,nan,"10,628","11,600"
+13 49 33.50,"Shielding, Radio Frequency",10,"SHIELDING, RADIO FREQUENCY",nan,nan,nan,nan,,nan,nan,nan,nan
+13 49 33.50,"Shielding, Radio Frequency",20,"Prefabricated, galvanized steel",2 Carp,375.0,0.043,SF Surf',6.70,2.4,nan,9.10,11
+13 49 33.50,"Shielding, Radio Frequency",40,"5 oz., copper floor panel",nan,480.0,0.033,nan,5.45,1.88,nan,7.33,8.80
+13 49 33.50,"Shielding, Radio Frequency",50,"5 oz., copper wall/ceiling panel",nan,155.0,0.103,nan,5.45,5.8,nan,11.25,14.65
+13 49 33.50,"Shielding, Radio Frequency",100,"12 oz., copper floor panel",nan,470.0,0.034,nan,11.35,1.92,nan,13.27,15.35
+13 49 33.50,"Shielding, Radio Frequency",110,"12 oz., copper wall/ceiling panel",nan,140.114,nan,nan,11.35,6.45,nan,17.80,22
+13 49 33.50,"Shielding, Radio Frequency",150,"Door, copper/wood laminate, 4' x 7'",nan,1.5,10.667,Ea.,"10,200",600.0,nan,"10,800","12,100"
+13 53 09.50,Weather Station,10,WEATHER STATION,nan,nan,nan,nan,,nan,nan,nan,nan
+13 53 09.50,Weather Station,20,"Remote recording, solar powered, with rain gauge & display, 400' range",nan,nan,nan,Eg.,905,nan,nan,905,"1,000"
+13 53 09.50,Weather Station,100,1 mile range,nan,nan,nan,nan,"1,750",nan,nan,"1,750","1,900"
+13 42 63.16,Steel Detention Cell Modules,nan,"Cells, prefab., 5' to 6' wide, 7' to 8' high, 7' to 8' deep, bar front, cot, not incl. plumbing",E-4,1.5,21.333,Ea.,"9,750","1,325",98.5,"11,173.50","12,900"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,10,"CATHODIC PROTECTION FOR UNDERGROUND STORAGE TANKS - Anodes, magnesium type, 9 #",R-15,18.5,2.595,Eo.,44,168,17.65,229.65,320
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,1010,17 #,nan,13.0,3.692,nan,90.50,239,25.0,354.50,480
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,1020,32 #,nan,10.0,4.8,nan,133,310,32.5,475.50,640
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,1030,48 #,nan,7.2,6.667,nan,170,430,45.5,645.50,875
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,1100,"Graphite type w/epoxy cap, 3"" x 60"" (32 #)",R-22,8.4,14.438,nan,157,269,nan,426,575
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,1110,"4"" x 80"" (68 #)",nan,6.0,6.213,nan,272,375,nan,647,860
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,1120,"6"" x 72"" (80 #)",nan,5.2,7.169,nan,"1,650",435,nan,"2,085","2,475"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,1130,"6"" x 36"" (45 #)",nan,9.6,3.883,nan,835,235,nan,"1,070","1,275"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,2000,"Rectifiers, silicon type, air cooled, 28 V / 10A",R-19,3.5,5.714,nan,"2,625",380,nan,"3,005","3,450"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,2010,20 V / 20 A,nan,3.5,5.714,nan,"2,625",380,nan,"3,005","3,475"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,2100,"Oil immersed, 28 V / 10A",nan,3.0,6.667,nan,"2,675",440,nan,"3,115","3,575"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,2110,20 V / 20 A,nan,3.0,6.667,nan,"3,525",440,nan,"3,965","4,525"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,3000,"Anode backfill, coke breeze",R-22,3850.0,0.01,Lb.,.30,.59,nan,.89,1.20
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,4000,"Cable, HMWPE, No. 8",nan,2.4,15.533,M.L.F.,435,940,nan,"1,375","1,875"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,4010,No. 6,nan,2.4,15.533,nan,625,940,nan,"1,565","2,100"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,4020,No. 4,nan,2.4,15.533,nan,950,940,nan,"1,890","2,450"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,4030,No. 2,nan,2.4,15.533,nan,"1,700",940,nan,"2,640","3,275"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,4040,No. 1,nan,2.2,16.945,nan,"2,225","1,025",nan,"3,250","3,950"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,4050,No. 1/0,nan,2.2,16.945,nan,"2,925","1,025",nan,"3,950","4,725"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,4060,No. 2/0,nan,2.2,16.945,nan,"5,425","1,025",nan,"6,450","7,475"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,4070,No. 4/0,nan,2.0,18.64,nan,"9,400","1,125",nan,"10,525","12,100"
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,5000,"Test station, 7 terminal box, flush curb type w/lockable cover",R-19,12.0,1.667,Ea.,88,111,nan,199,261
+13 47 13.16,Cathodic Prot. for Underground Storage Tanks,5010,"Reference cell, 2"" diam. PVC conduit, cplg., plug, set flush",R-19,4.8,4.167,Ea.,175,276,nan,451,605
+13 48 13.50,Audio Masking,10,"AUDIO MASKING, acoustical enclosure, 4"" thick wall and ceiling",nan,nan,nan,nan,,nan,nan,nan,nan
+13 48 13.50,Audio Masking,20,"8 lb./S.F., up to 12' span",3 Carp,72.0,0.333,SF Surf,33.5,18.75,nan,52.25,65.0
+13 48 13.50,Audio Masking,3001,"Better quality panels, 10.5 # /S.F",nan,64.0,0.375,nan,38.0,21.0,nan,59.0,73.5
+13 48 13.50,Audio Masking,400,"Reverb chamber, 4"" thick, parallel walls",nan,60.0,0.4,nan,47.5,22.5,nan,70.0,86.0
+13 48 13.50,Audio Masking,600,"Skewed wall, parallel roof, 4"" thick panels",nan,55.0,0.436,nan,54.5,24.5,nan,79.0,96.5
+13 48 13.50,Audio Masking,700,"Skewed walls, skewed roof, 4"" layers, 4"" airspace",nan,48.0,0.5,nan,61.0,28.0,nan,89.0,109.0
+13 48 13.50,Audio Masking,900,"Sound-absorbing panels, pntd. mtl., 2'-6"" x 8', under 1,000 S.F.",nan,215.112,nan,nan,12.65,6.3,nan,18.95,23.5
+13 48 13.50,Audio Masking,1100,"Over 1,000 S.F.",nan,240.0,0.1,nan,12.2,5.65,nan,17.85,212222.0
+13 48 13.50,Audio Masking,1200,Fabric faced,nan,240.0,0.1,nan,9.85,5.65,nan,15.5,19.25
+13 48 13.50,Audio Masking,1500,"Flexible transparent curtain, clear",3 Shee,215.0,0.112,nan,7.65,7.55,nan,15.2,19.75
+13 48 13.50,Audio Masking,1600,50% foam,nan,215.112,nan,nan,10.65,7.55,nan,18.2,23.0
+13 48 13.50,Audio Masking,1700,7.3% foam,nan,215.0,0.112,nan,10.65,7.55,nan,18.2,23.0
+13 48 13.50,Audio Masking,1800,100% foam,nan,215.112,nan,nan,10.65,7.55,nan,18.2,23.0
+13 48 13.50,Audio Masking,3100,"Audio masking system, including speakers, amplification",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.60,Portable Booths,1300,4' x 6',nan,nan,nan,Eo.,"6,700",nan,nan,"6,700","7,375"
+13 34 23.70,Shelters,10,SHELTERS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.70,Shelters,201,"Aluminum frame, acrylic glazing, 3' x 9' x 8' high",2 Sswk,1.14,14.035,Eo.,"3,700",870,nan,"4,570","5,375"
+13 34 23.70,Shelters,100,9' x 12' x 8' high,nan,0.73,21.918,nan,"7,275","1,350",nan,"8,625","10,100"
+13 34 23.70,Shelters,1000,"Gable end shelter, 16' x 32', 8' eave ht, excl. footings, slab, anchors",nan,0.68,23.529,nan,"13,200","1,450",nan,"14,650","16,900"
+13 34 23.70,Shelters,1050,"Gable end shelter, 30' x 64', 8' eave ht, excl. footings, slab, anchors",nan,0.34,47.059,nan,"41,200","2,900",nan,"44,100","49,800"
+13 34 43.50,Hangars,10,"HANGARS Prefabricated steel T hangars, galv. steel roof &",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 43.50,Hangars,100,"walls, incl. electric bi-folding doors",E-2,1275.0,0.044,SF Flr.,14.20,2.69,1.95,18.84,22
+13 34 43.50,Hangars,130,8 unit,nan,1063.0,0.053,nan,12.35,3.23,2.33,17.91,21
+13 34 43.50,Hangars,900,"With bottom rolling doors, 4 unit",11386,nan,0.04,nan,13.20,2.47,1.79,17.46,20.50
+13 34 43.50,Hangars,1000,8 unit,nan,1966.0,0.058,nan,10.95,3.55,2.57,17.07,20
+13 34 43.50,Hangars,1200,Alternate pricing method:,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 43.50,Hangars,1300,"Galv. roof and walls, electric bi-folding doors, 4 plane",E 2,1.06,52.83,Plane,"17,700","3,225","2,350","23,275","27,000"
+13 34 43.50,Hangars,1500,8 plane,nan,0.91,61.538,nan,"13,200","3,775","2,725","19,700","23,300"
+13 34 43.50,Hangars,1600,"With bottom rolling doors, 4 plane",nan,1.25,44.8,nan,"19,200","2,750","1,975","23,925","27,500"
+13 34 43.50,Hangars,1800,8 plane,nan,0.97,57.732,nan,"13,800","3,525","2,550","19,875","23,400"
+13 34 43.50,Hangars,2000,"Circular type, prefab., steel frame, plastic skin, electric",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 43.50,Hangars,2010,"door, including foundations, 80' diameter",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 53.50,Silos,10,SILOS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 53.50,Silos,500,"Steel, factory fab., 30,000 gallon cap., painted, economy",L-5,1515.0,56.0,Ea.,"24,700","3,500","2,100","30,300","34,900"
+13 34 53.50,Silos,700,Deluxe,nan,0.5,112.0,nan,"39,400","6,975","4,175","50,550","58,500"
+13 34 53.50,Silos,800,"Epoxy lined, economy",nan,nan,56.0,nan,"40,500","3,500","2,100","46,100","52,000"
+13 34 53.50,Silos,1000,Deluxe,nan,0.5,112.0,nan,"51,500","6,975","4,175","62,650","72,000"
+13 34 56.15,Domes,10,DOMES,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 56.15,Domes,20,"Domes, rev. alum., elec. drive, for astronomy obsv. shell only, stock units",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 56.15,Domes,600,"F 10'-6"" diameter",2 Corp,0.25,64.0,Eg.,"46,900","3,600",nan,"50,500","57,000"
+13 34 56.15,Domes,900,"18'-6"" diameter",nan,0.17,94.118,nan,"68,500","5,300",nan,"73,800","83,000"
+13 34 56.15,Domes,1200,"24'-6"" diameter",nan,0.08,200.0,nan,"139,000","11,300",nan,"150,300","169,500"
+13 34 63.50,Straw Bale Construction,10,STRAW BALE CONSTRUCTION,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 63.50,Straw Bale Construction,2020,Straw bales in walls w/ modified post and beam frame,G 2 Corp,320.0,0.05,S.F.,7.1,2.82,nan,9.92,12.0
+13 36 13.50,Control Towers,10,CONTROL TOWERS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 36 13.50,Control Towers,20,"Modular 12' x 10', incl. instruments",nan,nan,nan,Ea.,"813,000",nan,nan,"813,000","894,000"
+13 36 13.50,Control Towers,500,With standard 40' tower,nan,nan,nan,#,"1,250,500",nan,nan,"1,250,500","1,375,500"
+13 36 13.50,Control Towers,1000,"Temporary portable control towers, 8' x 12'",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.10,Comfort Stations,350,7 unit,nan,40.0,nan,S.F.,310,nan,nan,310,340
+13 34 23.10,Comfort Stations,400,"Permanent, including concrete slab, 2 unit",B-12J,50.0,0.32,nan,250,17.45,17.15,284.60,320
+13 34 23.10,Comfort Stations,500,6 unit,nan,43.0,0.372,nan,214,20.50,19.95,254.45,287
+13 34 23.10,Comfort Stations,600,"Alternate pricing method, mobile, 2 fixture",nan,nan,nan,Fixture,"6,675",nan,nan,"6,675","7,350"
+13 34 23.10,Comfort Stations,650,7 fixture,nan,nan,nan,nan,"11,600",nan,nan,"11,600","12,700"
+13 34 23.10,Comfort Stations,700,"Permanent, 2 unit",B-12],0.7,22.857,nan,"20,700","1,250","1,225","23,175","25,900"
+13 34 23.10,Comfort Stations,750,6 unit,"""",0.5,32.0,nan,"17,800","1,750","1,725","21,275","24,100"
+13 34 23.15,Domes,10,DOMES,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.15,Domes,1500,"Domes, bulk storage, shell only, dual radius hemisphere, arch, steel",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.15,Domes,1600,"framing, corrugated steel covering, 150' diameter",E-2,550.0,0.102,SF Fl.,33.5,6.25,4.51,44.26,51.5
+13 34 23.15,Domes,1700,400' diameter,17,720.0,0.078,nan,27.5,4.76,3.44,35.7,41.0
+13 34 23.15,Domes,1800,"Wood framing, wood decking, to 400' diameter",F4,400.0,0.12,nan,28.0,6.85,5.65,40.5,47.5
+13 34 23.15,Domes,1900,"Radial framed wood (2"" x 6""), 1/2"" thick",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.15,Domes,2000,"plywood, asphalt shingles, 50' diameter",F-3,2000.0,0.02,SF Flr.,67.0,1.15,0.99,69.14,77.0
+13 34 23.15,Domes,2100,60' diameter,nan,1900.0,0.021,nan,63.0,1.22,1.04,65.26,72.0
+13 34 23.15,Domes,2200,72' diameter,nan,1800.0,0.022,nan,52.0,1.28,1.1,54.38,60.0
+13 34 23.15,Domes,2300,116' diameter,nan,1730.0,0.023,nan,33.0,1.33,1.15,35.48,39.5
+13 34 23.15,Domes,2400,150' diameter,nan,1500.0,0.027,nan,35.0,1.54,1.32,37.86,42.0
+13 34 23.16,Fabricated Control Booths,10,FABRICATED CONTROL BOOTHS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.16,Fabricated Control Booths,100,"Guard House, prefab conc. w/ bullet resistant doors & windows, roof & wiring",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.16,Fabricated Control Booths,110,"8' x 8', Level III",L-10,nan,244.0,Ea.,"59,500","1,525","1,975","63,000","70,000"
+13 34 23.16,Fabricated Control Booths,120,"8' x 8', Level IV","""",1.0,24.0,=,"76,500","1,525","1,975","80,000","89,000"
+13 34 23.25,Garage Costs,10,GARAGE COSTS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.25,Garage Costs,20,"Public parking, average",nan,nan,nan,Car,nan,nan,nan,"15,200","16,700"
+13 34 23.25,Garage Costs,300,"Residential, wood, 12' x 20', one car prefab shell, stock, economy",2 Corp,1.0,16.0,Total,"6,350",900,nan,"7,250","8,350"
+13 34 23.25,Garage Costs,350,Custom,nan,0.67,23.881,nan,"8,950","1,350",nan,"10,300","11,900"
+13 34 23.25,Garage Costs,400,"Two car, 24' x 20', economy",nan,67.0,23.881,nan,"14,700","1,350",nan,"16,050","18,100"
+13 34 23.25,Garage Costs,450,Custom,I,0.5,32.0,nan,"20,600","1,800",nan,"22,400","25,300"
+13 34 23.30,Garden House,10,"GARDEN HOUSE Prefab wood, no floors or foundations",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.30,Garden House,100,6' x 6',2 Carp,200.0,0.08,SF Fl.,50.5,4.5,nan,55.0,62.0
+13 34 23.30,Garden House,300,8' x 12',"""",48.0,0.333,nan,60.5,18.75,nan,79.25,94.5
+13 34 23.45,Kiosks,10,KIOSKS,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.45,Kiosks,20,"Round, advertising type, 5' diameter, 7' high, aluminum wall, illuminated",nan,nan,nan,Ea,"22,500",nan,nan,"22,500","24,800"
+13 34 23.45,Kiosks,100,"Aluminum wall, non illuminated",nan,nan,nan,nan,"21,800",nan,nan,"21,800","23,900"
+13 34 23.45,Kiosks,500,"Rectangular, 5' x 9', 7'-6"" high, aluminum wall, illuminated",nan,nan,nan,nan,"24,800",nan,nan,"24,800","27,300"
+13 34 23.45,Kiosks,600,"Aluminum wall, non-illuminated",nan,nan,nan,nan,"25,500",nan,nan,"25,500","28,000"
+13 34 23.60,Portable Booths,10,"PORTABLE BOOTHS Prefab. aluminum with doors, windows, ext. roof",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 23.60,Portable Booths,100,"lights wiring & insulation, 15 S.F. building, OD, painted",nan,nan,nan,S.F.,283,nan,nan,283,310
+13 34 23.60,Portable Booths,300,30 S.F. building,nan,nan,nan,nan,265,nan,nan,265,291
+13 34 23.60,Portable Booths,400,50 S.F. building,nan,nan,nan,nan,194,nan,nan,194,213
+13 34 23.60,Portable Booths,600,80 S.F. building,nan,nan,nan,nan,165,nan,nan,165,181
+13 34 23.60,Portable Booths,700,100 S.F. building,nan,nan,nan,nan,150,nan,nan,150,165
+13 34 23.60,Portable Booths,900,"Acoustical booth, 27 Db @ 1,000 Hz, 15 S.F. floor",nan,nan,nan,Ea.,"4,375",nan,nan,"4,375","4,800"
+13 34 23.60,Portable Booths,1000,"7' x 7'-6"", including light & ventilation",nan,nan,nan,"""","8,975",nan,nan,"8,975","9,875"
+13 34 23.60,Portable Booths,1200,"Ticket booth, galv. steel, not incl. foundations, 4' x 4'",nan,nan,nan,Eq.,"4,000",nan,nan,"4,000","4,400"
+13 34 19.50,Pre-Engineered Steel Structures,4300,"Triple post 4-span frame, 26 ga. colored roofing and siding",E-2,970,0.058,SF Flr.,4.34,3.54,2.56,10.44,13
+13 34 19.50,Pre-Engineered Steel Structures,4400,"160' wide, 14' eave height",nan,930,0.06,nan,4.55,3.69,2.67,10.91,13.60
+13 34 19.50,Pre-Engineered Steel Structures,4500,16' eave height,nan,870,0.064,nan,4.47,3.94,2.85,11.26,14.05
+13 34 19.50,Pre-Engineered Steel Structures,4600,20' eave height,nan,815,0.069,SF Flr.,5.05,4.21,3.04,12.30,15.30
+13 34 19.50,Pre-Engineered Steel Structures,4700,24' eave height,E-2,1030,0.054,nan,3.99,3.33,2.41,9.73,12.15
+13 34 19.50,Pre-Engineered Steel Structures,4800,"200' wide, 14' eave height",nan,995,0.056,nan,4.13,3.45,2.49,10.07,12.55
+13 34 19.50,Pre-Engineered Steel Structures,4900,16' eave height,nan,935,0.06,nan,4.56,3.67,2.65,10.88,13.50
+13 34 19.50,Pre-Engineered Steel Structures,5000,20' eave height,nan,885,0.063,nan,5.10,3.88,2.8,11.78,14.60
+13 34 19.50,Pre-Engineered Steel Structures,5100,24' eave height,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,Pre-Engineered Steel Structures,5200,Accessory items: add to the basic building cost above,nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,Pre-Engineered Steel Structures,5250,"Eave overhang, 2' wide, ga., with soffit",E2,360,0.156,LF,39,9.55,6.9,55.45,65
+13 34 19.50,Pre-Engineered Steel Structures,5300,"4' wide, without soffit",nan,300,0.187,nan,37.50,11.45,8.25,57.20,68
+13 34 19.50,Pre-Engineered Steel Structures,5350,With soffit,nan,250,0.224,nan,42,13.7,9.9,65.60,78
+13 34 19.50,Pre-Engineered Steel Structures,5400,"6' wide, without soffit",nan,250,1.224,nan,37.50,13.7,9.9,61.10,73
+13 34 19.50,Pre-Engineered Steel Structures,5450,With soffit,nan,200..280,nan,nan,49.50,17.15,12.4,79.05,94
+13 34 19.50,Pre-Engineered Steel Structures,5500,"Entrance canopy, incl. frame, 4' x 4'",nan,25,2.24,Ea.,535,137.0,99.0,771,905
+13 34 19.50,Pre-Engineered Steel Structures,5550,4'x8',nan,19,2.947,nan,645,181.0,131.0,957,"1,125"
+13 34 19.50,Pre-Engineered Steel Structures,5600,"End wall roof overhang, 4' wide, without soffit",nan,850,0.066,L.F.,18.30,4.03,2.92,25.25,29.50
+13 34 19.50,Pre-Engineered Steel Structures,5650,With soffit,nan,500,0.112,nan,nan,6.85,4.96,51.81,60
+13 34 19.50,Pre-Engineered Steel Structures,5700,"Doors, HM self-framing, incl. butts, lockset and trim",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,Pre-Engineered Steel Structures,5750,"Single leaf, 3070 (3' x 7'), economy",2 Sswk,5444,3.2,Opng.,735,198.0,nan,933,"1,100"
+13 34 19.50,Pre-Engineered Steel Structures,5800,Deluxe,nan,4,4.0,1,735,247.0,nan,982,"1,175"
+13 34 19.50,Pre-Engineered Steel Structures,5825,Glazed,nan,nan,nan,nan,"1,050",247.0,nan,"1,297","1,525"
+13 34 19.50,Pre-Engineered Steel Structures,5850,"3670 (3-6"" x 7')",nan,nan,nan,nan,"1,000",247.0,nan,"1,247","1,475"
+13 34 19.50,Pre-Engineered Steel Structures,5900,4070 (4'x7'),nan,32243,5.333,nan,"1,150",330.0,nan,"1,480","1,775"
+13 34 19.50,Pre-Engineered Steel Structures,5950,"Double leaf, 6070 (6' x 7')",nan,nan,8.0,nan,"1,425",495.0,nan,"1,920","2,325"
+13 34 19.50,Pre-Engineered Steel Structures,6000,Glazed,nan,nan,8.0,nan,"2,050",495.0,nan,"2,545","3,000"
+13 34 19.50,Pre-Engineered Steel Structures,6050,"Framing only, for openings, 3' x 7'",nan,nan,4.0,nan,228,247.0,nan,475,630
+13 34 19.50,Pre-Engineered Steel Structures,6100,10' x 10',nan,nan,5.333,nan,750,330.0,nan,"1,080","1,325"
+13 34 19.50,Pre-Engineered Steel Structures,6150,"For windows below, 2020 (2' x 2')",1,6,2.667,nan,242,165.0,nan,407,520
+13 34 19.50,Pre-Engineered Steel Structures,6200,4030 (4'x3'),nan,5,3.2,nan,295,198.0,nan,493,630
+13 34 19.50,Pre-Engineered Steel Structures,6250,"Flashings, 26 ga., corner or eave, painted",nan,240,0.067,LF,4.78,4.12,nan,8.87,11.60
+13 34 19.50,Pre-Engineered Steel Structures,6300,Galvanized,nan,240,0.067,nan,4.81,4.121,nan,8.93,11.65
+13 34 19.50,Pre-Engineered Steel Structures,6350,"Rake flashing, painted",nan,240,0.067,nan,5.15,4.12,nan,9.27,12
+13 34 19.50,Pre-Engineered Steel Structures,6400,Galvanized,nan,240,0.067,nan,5.10,4.12,nan,9.22,12
+13 34 19.50,Pre-Engineered Steel Structures,6450,"Ridge flashing, 18"" wide, painted",nan,240,0.067,nan,6.85,4.12,nan,10.97,13.85
+13 34 19.50,Pre-Engineered Steel Structures,6500,Galvanized,nan,240,0.067,nan,7.40,4.12,nan,11.52,14.50
+13 34 19.50,Pre-Engineered Steel Structures,6550,"Gutter, eave type, 26 ga., painted",nan,320,0.05,nan,8.60,3.09,nan,11.69,14.20
+13 34 19.50,Pre-Engineered Steel Structures,6650,"Valley type, between buildings, painted",nan,120.133,nan,nan,14.50,8.25,nan,22.75,28.50
+13 34 19.50,Pre-Engineered Steel Structures,6710,"Insulation, rated .6 lb. density, unfaced 4"" thick, R13",2 Carp,2300,0.007,S.F.,.48,0.39,nan,.87,1.11
+13 34 19.50,Pre-Engineered Steel Structures,6720,"6"" thick, R19",12 Carp,2300,0.007,S.F.,.41,0.39,nan,.80,1.03
+13 34 19.50,Pre-Engineered Steel Structures,6730,"10"" thick, R30",nan,2300,0.007,nan,1.31,0.39,nan,1.70,2.02
+13 34 19.50,Pre-Engineered Steel Structures,6750,"Insulation, rated .6 lb. density, poly/scrim/foil (PSF) faced",nan,nan,nan,nan,,nan,nan,nan,nan
+13 34 19.50,Pre-Engineered Steel Structures,6760,"4"" thick, R13",2 Carp,2300,0.007,S.F.,.67,0.39,nan,1.06,1.32
+13 34 19.50,Pre-Engineered Steel Structures,6770,"6"" thick, R19",nan,2300,0.007,nan,.82,0.39,nan,1.21,1.48
+13 34 19.50,Pre-Engineered Steel Structures,6780,"9-1/2"" thick, R30",nan,2300.007,nan,nan,1.02,0.39,nan,1.41,1.70
+13 34 19.50,Pre-Engineered Steel Structures,6800,"Insulation, rated .6 lb. density, vinyl faced 1-1/2"" thick, R5",nan,2300.007,nan,nan,.41,0.39,nan,.80,1.03
+13 34 19.50,Pre-Engineered Steel Structures,6850,"3"" thick, R10",nan,2300,0.007,nan,.47,0.39,nan,.86,1.10
+13 34 19.50,Pre-Engineered Steel Structures,6900,"4"" thick, R13",nan,2300,0.007,nan,.53,0.39,nan,.92,1.16
+13 34 19.50,Pre-Engineered Steel Structures,6920,"6"" thick, R19",nan,2300,0.007,nan,.57,0.39,nan,.96,1.21
+13 34 19.50,Pre-Engineered Steel Structures,6930,"10"" thick, R30",nan,2300,0.007,nan,1.80,0.39,nan,2.19,2.56
+13 34 19.50,Pre-Engineered Steel Structures,6950,"Foil/scrim/kraft (FSK) faced, 1-1/2"" thick, R5",nan,2300,0.007,nan,.44,0.39,nan,.83,1.06
+13 34 19.50,Pre-Engineered Steel Structures,7000,"2"" thick, R6",nan,2300,0.007,nan,.56,0.39,nan,.95,1.20
