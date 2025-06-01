@@ -3,6 +3,8 @@
 
 import pandas as pd
 import server.config as config
+import re
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # For reference, the following are the columns in the RSMeans DataFrame:
 # ['Masterformat Section Code', 'Section Name', 'ID', 'Name', 'Crew', 'Daily Output', 'Labor-Hours','Unit', 'Material', 'Labor', 'Equipment', 'Total', 'Total Incl O&P']
@@ -42,44 +44,16 @@ def find_by_section_code(df, section_code):
     fuzzy_contains = df[code_series.str.contains(code_norm)]
     return fuzzy_contains
 
-def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500):
-    import server.config as config
-    if not stream:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=max_tokens,
-        )
-        return response.choices[0].message.content.strip()
-    else:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=max_tokens,
-            stream=True,
-        )
-        def generator():
-            for chunk in response:
-                delta = getattr(chunk.choices[0], 'delta', None)
-                if delta and hasattr(delta, 'content') and delta.content:
-                    yield delta.content
-        return generator()
-
-
-def find_by_description(df, description, section_chunk_size=500):
+def find_by_description(df, description, section_chunk_size=1000, confidence_threshold=0.5):
     """
     Use LLM to select the most appropriate Masterformat codes from the available list for a given description.
     Returns the matching row(s) from the DataFrame.
     Also supports fuzzy matching: if LLM returns no match, try fuzzy search on section names.
+    Assigns confidence percentages to each code and filters by a confidence threshold.
+    Uses parallel processing for LLM chunk queries.
     """
+    from llm_calls import run_llm_query  # Import here to avoid circular dependency
+
     # Get unique list of codes and section names
     unique_sections = df[['Masterformat Section Code', 'Section Name']].drop_duplicates().reset_index(drop=True)
     section_list = unique_sections.apply(lambda row: f"{row['Masterformat Section Code']}: {row['Section Name']}", axis=1).tolist()
@@ -87,7 +61,6 @@ def find_by_description(df, description, section_chunk_size=500):
     if len(section_list) > section_chunk_size:
         chunked_sections = []
         for i in range(0, len(section_list), section_chunk_size):
-            # Overlap by half the chunk size
             start = max(0, i - section_chunk_size // 2)
             chunk = section_list[start:i + section_chunk_size]
             chunked_sections.append(chunk)
@@ -95,34 +68,63 @@ def find_by_description(df, description, section_chunk_size=500):
         chunked_sections = [section_list]
 
     print(f"Chunked sections into {len(chunked_sections)} parts for processing.")
-    
-    selected_codes = set()
-    for chunk in chunked_sections:
+
+    def llm_chunk_query(chunk):
         system_prompt = (
             "You are an expert at mapping construction task descriptions to Masterformat section codes. "
             "First, simplify the description to its core elements, "
             "then select the most relevant Masterformat section codes from the provided list. "
             "Given a list of Masterformat sections, you will select all relevant codes for a user's description. "
-            "Return only the section codes as a comma-separated list, nothing else."
+            "Return your answer as a comma-separated list of section codes with a confidence percentage (0-100) for each, in the format: code1:confidence1, code2:confidence2, ... "
+            "Only include codes you are at least 10% confident in."
         )
         user_input = (
             f"Masterformat sections list:\n{chr(10).join(chunk)}\n"
             f"Description: {description}"
         )
-        selected_codes_str = run_llm_query(system_prompt, user_input)
-        codes = [code.strip() for code in selected_codes_str.replace('\n', ',').split(',') if code.strip()]
-        selected_codes.update(codes)
-    # Filter DataFrame for all selected codes
-    match = df[df['Masterformat Section Code'].isin(selected_codes)]
+        print(f"Running LLM query for chunk with {len(chunk)} sections.")
+        return run_llm_query(system_prompt, user_input)
+
+    code_confidence = {}
+    with ThreadPoolExecutor() as executor:
+        future_to_chunk = {executor.submit(llm_chunk_query, chunk): chunk for chunk in chunked_sections}
+        for future in as_completed(future_to_chunk):
+            selected_codes_str = future.result()
+            # Parse LLM response: expect format like "03 30 00:90, 04 20 00:60"
+            for part in selected_codes_str.split(','):
+                match = re.match(r"([\w .-]+):\s*(\d{1,3})", part.strip())
+                if match:
+                    code = match.group(1).strip()
+                    confidence = int(match.group(2)) / 100.0
+                    if code in code_confidence:
+                        code_confidence[code] = max(code_confidence[code], confidence)
+                    else:
+                        code_confidence[code] = confidence
+    # Filter by confidence threshold
+    filtered_codes = [code for code, conf in code_confidence.items() if conf >= confidence_threshold]
+    match = df[df['Masterformat Section Code'].isin(filtered_codes)]
     if not match.empty:
+        # Print the matched section codes and their confidence levels
+        match['Confidence'] = match['Masterformat Section Code'].map(code_confidence)
+        match = match[match['Confidence'] >= confidence_threshold]
+        match = match.sort_values(by='Confidence', ascending=False)
+        match = match.reset_index(drop=True)
+        # Print the matched codes and their confidence levels
+        print("Matched section codes with confidence levels:")
+        for code, conf in code_confidence.items():
+            if conf >= confidence_threshold:
+                print(f"{code}: {conf:.2f}")
+        print(f"Found {len(match)} exact matches for section codes above threshold: {', '.join(filtered_codes)}")
         return match
     # Fuzzy match: try to find section names that contain the description (case-insensitive)
     desc_norm = description.strip().lower()
     fuzzy = df[df['Section Name'].str.lower().str.contains(desc_norm)]
     if not fuzzy.empty:
+        print(f"Found {len(fuzzy)} fuzzy matches: {', '.join(fuzzy['Section Name'].unique())}")
         return fuzzy
     # Also try fuzzy match on Masterformat Section Code (in case user enters a partial code as description)
     code_fuzzy = df[df['Masterformat Section Code'].str.replace(' ', '').str.lower().str.contains(desc_norm.replace(' ', ''))]
+    print(f"Found {len(code_fuzzy)} fuzzy matches for section codes: {', '.join(code_fuzzy['Masterformat Section Code'].unique())}")
     return code_fuzzy
 
 

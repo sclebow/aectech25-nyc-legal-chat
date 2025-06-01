@@ -2,7 +2,6 @@ import server.config as config
 from cost_data.rsmeans_utils import load_rsmeans_data, get_cost_data
 
 # Routing Functions Below
-from utils import rag_utils
 
 # Load RSMeans data once at module level
 rsmeans_df = load_rsmeans_data()
@@ -106,6 +105,8 @@ def analyze_cost_tradeoffs(query: str) -> str:
     Analyze cost trade-offs based on the user's query.
     E.g., comparing two design options or the impact of a design change on cost/ROI.
     """
+    from utils import rag_utils
+
     system_prompt = (
         "You are an expert architectural cost consultant.\n"
         "# Task:\n"
@@ -320,6 +321,8 @@ def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = 
     If not, fallback to LLM only.
     If use_rag is True, use the RAG pipeline to answer and return (answer, sources).
     """
+    from utils import rag_utils
+
     if use_rag and collection is not None and ranker is not None:
         # Use RAG pipeline for cost benchmark
         agent_prompt = agent_prompt_dict["get cost benchmarks"]
