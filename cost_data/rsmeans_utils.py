@@ -79,6 +79,7 @@ def find_by_description(description, confidence_threshold=0.9):
     system_prompt = (
         "You are an expert at mapping construction task descriptions to Masterformat chapters. "
         "Given a list of Masterformat chapters, select all relevant chapters for a user's description. "
+        "Consider exact matches first, then partial matches based on the description. "
         "Return your answer as a comma-separated list of chapter numbers (e.g. 03, 04, 10, etc)."
         "Return only the chapter numbers, no other text. "
     )
