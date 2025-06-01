@@ -5,6 +5,7 @@ import pandas as pd
 import server.config as config
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import os
 
 # For reference, the following are the columns in the RSMeans DataFrame:
 # ['Masterformat Section Code', 'Section Name', 'ID', 'Name', 'Crew', 'Daily Output', 'Labor-Hours','Unit', 'Material', 'Labor', 'Equipment', 'Total', 'Total Incl O&P']
@@ -13,16 +14,30 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 # We want the user to be able to find the cost data by searching for a masterformat section code or description of the work
 # We can use LLM calls to find the best match for a given description
 
-RSMEANS_CSV_PATH = "cost_data/rsmeans/combined.csv"
+RSMEANS_CSV_DIR = "cost_data/rsmeans/"
 
-def load_rsmeans_data(csv_path=None):
+# def load_rsmeans_data(csv_path=None):
+#     """
+#     Load RSMeans CSV data into a pandas DataFrame.
+#     If csv_path is None, use the default from config.
+#     """
+#     if csv_path is None:
+#         csv_path = RSMEANS_CSV_PATH
+#     return pd.read_csv(csv_path)
+
+
+def list_chapter_csvs():
     """
-    Load RSMeans CSV data into a pandas DataFrame.
-    If csv_path is None, use the default from config.
+    List all available RSMeans chapter CSVs and their chapter names.
+    Returns a list of (filename, chapter_name) tuples.
     """
-    if csv_path is None:
-        csv_path = RSMEANS_CSV_PATH
-    return pd.read_csv(csv_path)
+    csvs = []
+    for fname in os.listdir(RSMEANS_CSV_DIR):
+        if fname.endswith(".csv"):
+            # Chapter name is the part before the first underscore or the number prefix
+            chapter = fname.split("_")[0]
+            csvs.append((fname, chapter))
+    return csvs
 
 
 def find_by_section_code(df, section_code):
@@ -44,17 +59,44 @@ def find_by_section_code(df, section_code):
     fuzzy_contains = df[code_series.str.contains(code_norm)]
     return fuzzy_contains
 
-def find_by_description(df, description, section_chunk_size=500, confidence_threshold=0.5):
+
+def find_by_description(description, section_chunk_size=500, confidence_threshold=0.5):
     """
-    Use LLM to select the most appropriate Masterformat codes from the available list for a given description.
-    Returns the matching row(s) from the DataFrame.
-    Also supports fuzzy matching: if LLM returns no match, try fuzzy search on section names.
-    Assigns confidence percentages to each code and filters by a confidence threshold.
-    Uses parallel processing for LLM chunk queries.
+    Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
+    Only loads the relevant chapter CSVs for section selection.
     """
     from llm_calls import run_llm_query  # Import here to avoid circular dependency
+    import pandas as pd
 
-    # Get unique list of codes and section names
+    # 1. List all chapters
+    chapter_csvs = list_chapter_csvs()
+    chapter_list = [f"{chapter}: {fname}" for fname, chapter in chapter_csvs]
+
+    # 2. Ask LLM which chapter(s) are relevant
+    system_prompt = (
+        "You are an expert at mapping construction task descriptions to Masterformat chapters. "
+        "Given a list of Masterformat chapters, select all relevant chapters for a user's description. "
+        "Return your answer as a comma-separated list of chapter numbers (e.g. 03, 04, 10, etc)."
+    )
+    user_input = (
+        f"Masterformat chapters list:\n{chr(10).join(chapter_list)}\n"
+        f"Description: {description}"
+    )
+    selected_chapters_str = run_llm_query(system_prompt, user_input)
+    selected_chapters = [c.strip() for c in selected_chapters_str.split(",") if c.strip()]
+
+    # 3. Load only the relevant chapter CSVs
+    dfs = []
+    for fname, chapter in chapter_csvs:
+        if chapter in selected_chapters:
+            df = pd.read_csv(os.path.join(RSMEANS_CSV_DIR, fname))
+            dfs.append(df)
+    if not dfs:
+        # fallback: load all
+        dfs = [pd.read_csv(os.path.join(RSMEANS_CSV_DIR, fname)) for fname, _ in chapter_csvs]
+    df = pd.concat(dfs, ignore_index=True)
+
+    # 4. Build section list and proceed as before
     unique_sections = df[['Masterformat Section Code', 'Section Name']].drop_duplicates().reset_index(drop=True)
     section_list = unique_sections.apply(lambda row: f"{row['Masterformat Section Code']}: {row['Section Name']}", axis=1).tolist()
     # Chunk the section list if it's too long, the chunks should overlap to ensure no sections are missed
@@ -66,8 +108,6 @@ def find_by_description(df, description, section_chunk_size=500, confidence_thre
             chunked_sections.append(chunk)
     else:
         chunked_sections = [section_list]
-
-    print(f"Chunked sections into {len(chunked_sections)} parts for processing.")
 
     def llm_chunk_query(chunk):
         system_prompt = (
@@ -81,9 +121,9 @@ def find_by_description(df, description, section_chunk_size=500, confidence_thre
             f"Masterformat sections list:\n{chr(10).join(chunk)}\n"
             f"Description: {description}"
         )
-        print(f"Running LLM query for chunk with {len(chunk)} sections.")
         return run_llm_query(system_prompt, user_input)
 
+    import re
     code_confidence = {}
     with ThreadPoolExecutor() as executor:
         future_to_chunk = {executor.submit(llm_chunk_query, chunk): chunk for chunk in chunked_sections}
@@ -127,16 +167,20 @@ def find_by_description(df, description, section_chunk_size=500, confidence_thre
     return code_fuzzy
 
 
-def get_cost_data(df, section_code_or_desc):
+def get_cost_data(section_code_or_desc):
     """
     Retrieve cost data for a given section code or description.
     """
-    # Try exact code match first
+    # Try to interpret as a section code (search all chapters)
+    chapter_csvs = list_chapter_csvs()
+    import pandas as pd
+    dfs = [pd.read_csv(os.path.join(RSMEANS_CSV_DIR, fname)) for fname, _ in chapter_csvs]
+    df = pd.concat(dfs, ignore_index=True)
     match = find_by_section_code(df, section_code_or_desc)
     if not match.empty:
         return match
-    # Otherwise, try description match
-    return find_by_description(df, section_code_or_desc)
+    # Otherwise, try description match (which will select chapters)
+    return find_by_description(section_code_or_desc)
 
 
 def list_sections(df):
