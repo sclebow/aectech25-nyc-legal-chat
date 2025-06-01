@@ -1,0 +1,166 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+28 15 11.11,Standard Readers,10,STANDARD CARD READERS,,,,,,,,,
+28 15 11.11,Standard Readers,15,Card key access,,,,,,,,,
+28 15 11.11,Standard Readers,20,"Computerized system, processor, proximity reader and cards",,,,,,,,,
+28 15 11.11,Standard Readers,30,"Does not include door hardware, lockset or wiring",,,,,,,,,
+28 15 11.11,Standard Readers,40,Card key system for 1 door,,,,Ea.,"1,675",,,"1,675","1,850"
+28 15 11.11,Standard Readers,60,Card key system for 2 doors,,,,,"2,400",,,"2,400","2,650"
+28 15 11.11,Standard Readers,80,Card key system for 4 doors,,,,,"2,625",,,"2,625","2,875"
+28 15 11.11,Standard Readers,100,Processor for card key access system,,,,,"1,250",,,"1,250","1,375"
+28 15 11.11,Standard Readers,160,"Magnetic lock for electric access, 600 pound holding force",,,,,192,,,192,211
+28 15 11.11,Standard Readers,170,"Magnetic lock for electric access, 1200 pound holding force",,,,,192,,,192,211
+28 15 11.11,Standard Readers,200,Proximity card reader,,,,,199,,,199,219
+28 15 11.15,Biometric Identity Devices,10,BIOMETRIC IDENTITY DEVICES,,,,,,,,,
+28 15 11.15,Biometric Identity Devices,220,"Hand geometry scanner, mem of 512 users, excl. striker/power",1 Elec,8888838.0,2.667,Ea.,"3,075",177.0,,"3,252","3,625"
+28 15 11.15,Biometric Identity Devices,230,"Memory upgrade for, adds 9,700 user profiles",,,,1,550,266.0,,616,705
+28 15 11.15,Biometric Identity Devices,240,"Adds 32,500 user profiles",,,,1,735,266.0,,801,905
+28 15 11.15,Biometric Identity Devices,250,"Prison type, memory of 256 users, excl. striker/power",,,2.667,,"3,525",147.0,,"3,702","4,125"
+28 15 11.15,Biometric Identity Devices,260,"Memory upgrade for, adds 3,300 user profiles",,,,,515,266.0,,581,670
+28 15 11.15,Biometric Identity Devices,270,"Adds 9,700 user profiles",,,,,635,66.0,,701,800
+28 15 11.15,Biometric Identity Devices,280,"Adds 27,900 user profiles",,,8.0,,970,66.0,,"1,036","1,175"
+28 15 11.15,Biometric Identity Devices,290,"All weather, mem of 512 users, excl. striker/power",3,2.667,,,"5,575",177.0,,"5,752","6,375"
+28 15 11.15,Biometric Identity Devices,300,"Facial & fingerprint scanner, combination unit, excl. striker/power",3,2.667,,,"1,175",177.0,,"1,352","1,550"
+28 15 11.15,Biometric Identity Devices,310,"Access for, for initial setup, excl. striker/power",3,2.667,,,"1,750",177.0,,"1,927","2,175"
+28 15 11.15,28 18 11 Security Access Metal Detectors,10,SECURITY ACCESS METAL DETECTORS,,,,,,,,,
+28 15 11.15,28 18 11 Security Access Metal Detectors,240,"Metal detector, hand-held, wand type, unit only",,,,Ea.,129,265.0,,129,138
+28 15 11.15,28 18 11 Security Access Metal Detectors,250,"Metal detector, walk through portal type, single zone",1 Elec,2.0,4.0,,"1,100",265.0,,"1,365","1,600"
+28 15 11.15,28 18 11 Security Access Metal Detectors,260,Multi-zone,,2.0,4.0,,"2,350",265.0,,"2,615","2,975"
+28 15 11.15,28 18 13 Security Access X-Ray Equipment,10,SECURITY ACCESS X-RAY EQUIPMENT,,,,,,,,,
+28 15 11.15,28 18 13 Security Access X-Ray Equipment,290,"X-ray machine, desk top, for mail/small packages/letters",1 Elec,4.0,2.0,Eo.,"3,425",132,,"3,557","3,975"
+28 15 11.15,28 18 13 Security Access X-Ray Equipment,300,"Conveyor type, incl. monitor",,2.0,4.0,,"18,800",265,,"19,065","21,000"
+28 15 11.15,28 18 13 Security Access X-Ray Equipment,310,Includes additional features,,2.0,4.0,,"33,400",265,,"33,665","37,100"
+28 15 11.15,28 18 13 Security Access X-Ray Equipment,320,"X-ray machine, large unit, for airports, incl. monitor",2 Elec,1.0,16.0,,"46,900","1,050",,"47,950","53,000"
+28 15 11.15,28 18 13 Security Access X-Ray Equipment,330,Full console,,0.5,32.0,,"80,500","2,125",,"82,625","91,500"
+28 15 11.15,28 18 15 Security Access Explosive Detection Equipment,10,SECURITY ACCESS EXPLOSIVE DETECTION EQUIPMENT,,,,,,,,,
+28 15 11.15,28 18 15 Security Access Explosive Detection Equipment,270,"Explosives detector, walk through portal type",1 Elec,2.0,4.0,Ea.,"175,000",265.0,,"175,265","193,000"
+28 15 11.15,28 18 15 Security Access Explosive Detection Equipment,280,"Hand held, battery operated",,,,"""",,,,"25,500","28,100"
+28 42 15.50,Tank Leak Detection Systems,10,TANK LEAK DETECTION SYSTEMS Liquid and vapor,,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,100,For hydrocarbons and hazardous liquids / vapors,,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,120,"Controller, data acquisition, incl. printer, modem, RS232 port",,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,140,"24 channel, for use with all probes",,,,Ea.,"4,725",,,"4,725","5,200"
+28 42 15.50,Tank Leak Detection Systems,160,"9 channel, for external monitoring",,,,Ea.,"1,675",,,"1,675","1,850"
+28 42 15.50,Tank Leak Detection Systems,200,! Probes,,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,210,Well monitoring,,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,220,Liquid phase detection,,,,Eo.,765,,,765,840
+28 42 15.50,Tank Leak Detection Systems,230,"Hydrocarbon vapor, fixed position",,,,,770,,,770,850
+28 42 15.50,Tank Leak Detection Systems,240,"Hydrocarbon vapor, float mounted",,,,,705,,,705,77 %
+28 42 15.50,Tank Leak Detection Systems,250,Both liquid and vapor hydrocarbon,,,,,770,,,770,850
+28 42 15.50,Tank Leak Detection Systems,300,"Secondary containment, liquid phase",,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,310,Pipe trench / manway sump,,,,Ea.,795,,,795,870
+28 42 15.50,Tank Leak Detection Systems,320,Double wall pipe and manual sump,,,,,665,,,665,730
+28 42 15.50,Tank Leak Detection Systems,330,Double wall fiberglass annular space,,,,,475,,,475,525
+28 42 15.50,Tank Leak Detection Systems,340,Double wall steel tank annular space,,,,,287,,,287,315
+28 42 15.50,Tank Leak Detection Systems,500,Accessories,,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,510,"Modem, non-dedicated phone line",,,,Ea.,370,,,370,40
+28 42 15.50,Tank Leak Detection Systems,600,"Monitoring, internal",,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,610,"Automatic tank gauge, incl. overfill",,,,E==.,"1,425",,,"1,425","1,575"
+28 42 15.50,Tank Leak Detection Systems,620,Product line,,,,1,"1,500",,,"1,500","1,625"
+28 42 15.50,Tank Leak Detection Systems,700,"Monitoring, special",,,,,,,,,
+28 42 15.50,Tank Leak Detection Systems,710,] Cathodic protection,,,,Ea.,810,,,810,890
+28 42 15.50,Tank Leak Detection Systems,720,Annular space chemical monitor,,,,"""","1,100",,,"1,100","1,200"
+28 46 11.21,Carbon-Monoxide Detection Sensors,10,CARBON-MONOXIDE DETECTION SENSORS,,,,,,,,,
+28 46 11.21,Carbon-Monoxide Detection Sensors,8400,Smoke and carbon monoxide alarm battery operated photoelectric low profile,1 Elec,24.0,.333,Ea.,57.5,22222366.0,,79.5,96.5
+28 46 11.21,Carbon-Monoxide Detection Sensors,8410,low profile photoelectric battery powered,,24.0,.333,,45.0,,,67.0,82.5
+28 46 11.21,Carbon-Monoxide Detection Sensors,8420,photoelectric low profile sealed lithium,,24.0,.333,,79.0,,,101.0,120.0
+28 46 11.21,Carbon-Monoxide Detection Sensors,8430,Photoelectric low profile sealed lithium smoke and CO with voice combo,,24.0,.333,,55.0,22.0,,77.0,93.5
+28 46 11.21,Carbon-Monoxide Detection Sensors,8500,"Carbon monoxide sensor, wall mount 1 Mod 1 relay output smoke & heat",,24.0,.333,,460.0,,,482.0,545.0
+28 46 11.21,Carbon-Monoxide Detection Sensors,8700,"Carbon monoxide detector, battery operated, wall mounted",,16.0,1.500 !,,45.0,33.0,,78.0,98.5
+28 46 11.21,Carbon-Monoxide Detection Sensors,8710,"Hardwired, wall and ceiling mounted",,8.0,1,,77.5,,,143.5,184.0
+28 46 11.21,Carbon-Monoxide Detection Sensors,8720,Duct mounted,,8.0,1,,340.0,,,406.0,475.0
+28 46 11.27,Other Sensors,10,OTHER SENSORS,,,,,,,,,
+28 46 11.27,Other Sensors,5200,"Smoke detector, ceiling type",1 Elec,6.2,1.29,Ea.,143,85.5,,228.50,284
+28 46 11.27,Other Sensors,5240,"Smoke detector, addressable type",,6.0,1.333,,226,88.5,,314.50,380
+28 46 11.27,Other Sensors,5400,Duct type,,3.2,2.5,,310,166.0,,476,590
+28 46 11.27,Other Sensors,5420,Duct addressable type,,3.2,2.5,T,190,166.0,,356,455
+28 46 11.27,Other Sensors,8300,"Smoke alarm with integrated strobe light 120 V, 16DB 60 fpm flash rate",1 Elec,16.0,1.5,Ea.,133,33.0,,166,195
+28 46 11.27,Other Sensors,8310,"Photoelectric smoke detector with strobe 120 V, 90 DB ceiling mount",,12.0,0.667,1,237,44.0,,281,325
+28 46 11.27,Other Sensors,8320,"120 V, 90 DB wall mount",,12.0,0.667,,229,44.0,,273,320
+28 46 11.27,Other Sensors,8440,"Fire alarm beam detector, motorized reflective, infrared optical beam",2 Elec,1.6,10.0,,725,660.0,,"1,385","1,775"
+28 46 11.27,Other Sensors,8450,"Fire alarm beam detector, motorized reflective, IR/UV optical beam",F,1.6,10.0,,"1,025",660.0,,"1,685","2,100"
+28 46 11.50,Fire and Heat Detectors,10,FIRE & HEAT DETECTORS,,,,,,,,,
+28 46 11.50,Fire and Heat Detectors,5000,"Detector, rate of rise",1 Elec,8.0,1.0,Ea.,31.0,66.0,,97.0,133.0
+28 46 20.50,Alarm Panels and Devices,10,"ALARM PANELS AND DEVICES, not including wires & conduits",,,,,,,,,
+28 46 20.50,Alarm Panels and Devices,2200,Intercom remote station,1 Elec,8.0,1.0,Eg.,94.50,66,,160.50,203
+28 46 20.50,Alarm Panels and Devices,2400,Intercom outlet,,8.0,1.0,,66,66,,132,171
+28 46 20.50,Alarm Panels and Devices,2600,"Sound system, intercom handset",,8.0,1.0,,490,66,,556,635
+28 46 20.50,Alarm Panels and Devices,3600,4 zone,2 Elec,2.0,8.0,,460,530,,990,"1,300"
+28 46 20.50,Alarm Panels and Devices,3700,5 zone,,1.5,10.667,,780,705,,"1,485","1,900"
+28 46 20.50,Alarm Panels and Devices,3800,8 zone,,,,,575,"1,050",,"1,625","2,200"
+28 46 20.50,Alarm Panels and Devices,3900,10 zone,,1.25,12.8,,890,845,,"1,735","2,225"
+28 46 20.50,Alarm Panels and Devices,4000,12 zone,,0.67,23.988,,"2,700","1,600",,"4,300","5,325"
+28 46 20.50,Alarm Panels and Devices,4020,"Alarm device, tamper, flow",1 Elec,8.0,1.0,,217,66,,283,340
+28 46 20.50,Alarm Panels and Devices,4025,"Fire alarm, loop expander card",,16.0,0.5,,555,33,,588,660
+28 46 20.50,Alarm Panels and Devices,4050,Actuating device,,8.0,1.0,,345,66,,411,480
+28 46 20.50,Alarm Panels and Devices,4200,Battery and rack,,,2.0,,490,132,,622,735
+28 46 20.50,Alarm Panels and Devices,4400,Automatic charger,,,,,555,66,,621,710
+28 46 20.50,Alarm Panels and Devices,4600,Signal bell,,,,,50.50,66,,116.50,155
+28 46 20.50,Alarm Panels and Devices,4610,"Fire alarm signal bell 10"" red 20-24 V P",,888.0,,,168,66,,234,284
+28 46 20.50,Alarm Panels and Devices,4800,Trouble buzzer or manual station,,,1.0,,80,66,,146,187
+28 46 20.50,Alarm Panels and Devices,5425,Duct smoke and heat detector 2 wire,,,1.0,,148,66,,214,262
+28 46 20.50,Alarm Panels and Devices,5430,Fire alarm duct detector controller,,3.0,2.667,,186,177,,363,465
+28 46 20.50,Alarm Panels and Devices,5435,Fire alarm duct detector sensor kit,,8.0,1.0,,77,66,,143,183
+28 46 20.50,Alarm Panels and Devices,5440,Remote test station for smoke detector duct type,,5.3,1.509,,49.50,100,,149.50,204
+28 46 20.50,Alarm Panels and Devices,5460,Remote fire alarm indicator light,,5.3,1.509,,26,100,,126,178
+28 46 20.50,Alarm Panels and Devices,5600,Strobe and horn,,5.3,1.509,,120,100,,220,281
+28 46 20.50,Alarm Panels and Devices,5610,Strobe and horn (ADA type),,5.3,1.509,,143,100,,243,305
+28 46 20.50,Alarm Panels and Devices,5620,Visual alarm (ADA type),,6.7,1.194,,109,79,,188,237
+28 46 20.50,Alarm Panels and Devices,5800,electric bell,,6.7,1.194,,53,79,,132,176
+28 46 20.50,Alarm Panels and Devices,6000,"Door holder, electro magnetic",,4.0,2.0,,106,132,,238,315
+28 46 20.50,Alarm Panels and Devices,6200,Combination holder and closer,,3.2,2.5,,165,166,,331,430
+28 46 20.50,Alarm Panels and Devices,6600,Drillswitch,,8.0,1.0,,510,66,,576,660
+28 46 20.50,Alarm Panels and Devices,68001,Master box,,2.7,2.963,,"6,175",196,,"6,371","7,100"
+28 46 20.50,Alarm Panels and Devices,7000,Break glass station,,8.0,,,64,66,,130,169
+28 46 20.50,Alarm Panels and Devices,7800,"Remote annunciator, 8 zone lamp",,1.8,4.444,,325,294,,619,795
+28 46 20.50,Alarm Panels and Devices,8000,12 zone lamp,2 Elec,2.6,6.154,,485,405,,890,"1,125"
+28 46 20.50,Alarm Panels and Devices,8200,16 zone lamp,,2.2,7.273,,380,480,,860,"1,125"
+28 47 12.10,Mass Notification System,10,MASS NOTIFICATION SYSTEM,,,,,,,,,75
+28 47 12.10,Mass Notification System,100,"Wireless command center, 10,000 devices",2 Elec,1.33,12.03,Ea.,"3,000",795.0,,"3,795","4,475"
+28 47 12.10,Mass Notification System,200,"Option, email notification",,,,,"2,100",,,"2,100","2,325"
+28 47 12.10,Mass Notification System,210,Remote device supervision & monitor,,,,,"2,625",,,"2,625","2,900"
+28 47 12.10,Mass Notification System,300,"Antenna VHF or UHF, for medium range",1 Elec,4.0,2.0,,95,132.0,,227,300
+28 47 12.10,Mass Notification System,310,For high-power transmitter,,2.0,4.0,,"1,100",265.0,,"1,365","1,600"
+28 47 12.10,Mass Notification System,400,"Transmitter, 25 watt",,4.0,2.0,,"1,725",132.0,,"1,857","2,100"
+28 47 12.10,Mass Notification System,410,40 watt,,2.66,3.008,,"2,000",199.0,,"2,199","2,500"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,2000,"Surveillance, one station (camera & monitor)",2 Elec,2.6,6.154,Total,600,405,,"1,005","1,275"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,2200,"For additional camera stations, add",1 Elec,2.7,2.963,Ea.,187,196,,383,500
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,2400,"Industrial quality, one station (camera & monitor)",2 Elec,2.6,6.154,Total,"1,550",405,,"1,955","2,300"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,2600,"For additional camera stations, add",1 Elec,2.7,2.963,Ea.,700,196,,896,"1,050"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,2610,"For low light, add",,2.7,2.963,,500,196,,696,840
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,2620,"For very low light, add",,2.7,2.963,,"2,700",196,,"2,896","3,250"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,2800,"For weatherproof camera station, add",,1.3,6.154,,480,405,,885,"1,125"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,3000,"For pan and tilt, add",,1.3,6.154,,"1,475",405,,"1,880","2,200"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,3200,"For zoom lens - remote control, add",!,2.0,4.0,,"1,675",265,,"1,940","2,250"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,3400,Extended zoom lens,,2.0,4.0,,"4,700",265,,"4,965","5,575"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,3410,"For automatic iris for low light, add",,2.0,4.0,,955,265,,"1,220","1,450"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,3600,"Educational TV studio, basic 3 camera system, black & white,",,,,,,,,,
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,3800,electrical & electronic equip. only,4 Elec,0.8,40.0,Total,"7,725","2,650",,"10,375","12,400"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,4000,Full console,,0.28,114.0,,"23,700","7,575",,"31,275","37,300"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,4100,"As above, but color system",,0.28,114.0,,"47,100","7,575",,"54,675","63,000"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,4120,Full console,,0.12,267.0,,"177,500","17,700",,"195,200","221,000"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,4200,"For film chain, black & white, add",1 Elec,,8.0,Ea.,"11,600",530,,"12,130","13,600"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,4250,"Color, add",,0.25,32.0,"""","8,350","2,125",,"10,475","12,300"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,4400,"For video recorders, add",1 Elec,1.0,8.0,Eo.,"2,275",530,,"2,805","3,275"
+28 23 13.10,0010 CLOSED CIRCUIT TELEVISION SYSTEM,46001,Premium,4 Elec,0.4,80.0,"""","15,000","5,300",,"20,300","24,400"
+28 23 23.50,Video Surveillance Equipments,10,VIDEO SURVEILLANCE EQUIPMENTS,,,,,,,,,
+28 23 23.50,Video Surveillance Equipments,200,"Video cameras, wireless, hidden in exit signs, clocks, etc., incl. receiver",1 Elec,333.0,2.667,Ea.,149,177.0,,326,425
+28 23 23.50,Video Surveillance Equipments,210,"Accessories for video recorder, single camera",,,2.667,,178,177.0,,355,460
+28 23 23.50,Video Surveillance Equipments,220,For multiple cameras,,3.0,2.667,,"1,600",177.0,,"1,777","2,000"
+28 23 23.50,Video Surveillance Equipments,230,"Video cameras, wireless, for under vehicle searching, complete",,2.0,4.0,,"14,200",265.0,,"14,465","16,000"
+28 23 23.50,Video Surveillance Equipments,234,"Master monitor station, 3 doors x 5 color monitor with tilt feature",,2.0,4.0,,"1,025",265.0,,"1,290","1,525"
+28 31 16.50,Intrusion Detection,10,"INTRUSION DETECTION, not including wires & conduits",,,,,,,,,
+28 31 16.50,Intrusion Detection,100,"Burglar alarm, battery operated, mechanical trigger",1 Elec,4.0,222.0,Eg.,284,132.0,,416,505
+28 31 16.50,Intrusion Detection,200,Electrical trigger,,4.0,,,340,132.0,,472,565
+28 31 16.50,Intrusion Detection,400,"For outside key control, add",,8.0,,,87.50,66.0,,153.50,195
+28 31 16.50,Intrusion Detection,600,"For remote signaling circuitry, add",,8.0,1.0,,144,66.0,,210,258
+28 31 16.50,Intrusion Detection,800,"Card reader, flush type, standard",,2.7,2.963,,680,196.0,,876,"1,050"
+28 31 16.50,Intrusion Detection,1000,Multi code,,2.7,2.963,,"1,225",196.0,,"1,421","1,650"
+28 31 16.50,Intrusion Detection,1200,"Door switches, hinge switch",,5.3,1.509,,66.50,100.0,,166.50,222
+28 31 16.50,Intrusion Detection,1400,Magnetic switch,,5.3,1.509,,125,100.0,,225,286
+28 31 16.50,Intrusion Detection,1600,"Exit control locks, horn alarm",,4.0,22.0,,237,132.0,,369,460
+28 31 16.50,Intrusion Detection,1800,Flashing light alarm,,4.0,2.0,,239,132.0,,371,460
+28 31 16.50,Intrusion Detection,2000,"Indicating panels, 1 channel",,2.7,2.963,,218,196.0,,414,530
+28 31 16.50,Intrusion Detection,2200,10 channel,12 Elec,3.2,5.0,,"1,150",330.0,,"1,480","1,775"
+28 31 16.50,Intrusion Detection,2400,20 channel,,28.0,,,"2,450",530.0,,"2,980","3,475"
+28 31 16.50,Intrusion Detection,2600,40 channel,,1.14,14.035,,"4,550",930.0,,"5,480","6,375"
+28 31 16.50,Intrusion Detection,2800,"Ultrasonic motion detector, 12 V",1 Elec,2.3,3.478,,164,230.0,,394,520
+28 31 16.50,Intrusion Detection,3000,Infrared photoelectric detector,,4.0,2.0,,120,132.0,,252,330

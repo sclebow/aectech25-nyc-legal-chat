@@ -1,0 +1,1750 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,150,Heavy duty reinforcement add,,914.0,0.044,S.F.,0.6,2.15,0.12,2.87,4
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,160,2.5 # / S.Y .metal lath substrate add,1 Lath,75.0,0.107,S.Y.,5.05,5.95,,11,14.2
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,170,3.4 # / S.Y .metal lath substrate add,"""",75.0,0.107,"""",5.15,5.95,,11.101,14.4
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,180,Color or texture change,1,1265.0,0.032,S.F.,0.76,1.56,0.09,2.4=,3.2
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,190,With substrate leveling base coat,1 Plas,530.0,0.015,,0.87,.78,,1.65,2.1
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,210,With substrate sealing base coat,1 Pord,1224.0,0.007,,0.14,.31,,.45,6
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,370,V groove shape in panel face,,,,L.F.,0.74,,,74,8
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,380,U groove shape in panel face,,,,,0.89,,,.89,S
+07 24 13.10,Polymer-Based Exterior Insulation and Finish Systems,440,"For higher than one story, add",,,,,,,25 %,,
+07 25 10.10,Weather Barriers or Wraps,10,WEATHER BARRIERS,,,,,,,,,
+07 25 10.10,Weather Barriers or Wraps,400,"Asphalt felt paper, # 15",1 Carp,37.0,0.216,Sq.,4.43,12.15,,16.58,23
+07 25 10.10,Weather Barriers or Wraps,401,Per square foot,"""",3700.0,0.002,S.F.,,0.04,0.12,,0.16
+07 25 10.10,Weather Barriers or Wraps,450,"Housewrap, exterior, spun bonded polypropylene",,,,,,,,,
+07 25 10.10,Weather Barriers or Wraps,470,Small roll,11 Carp,3800.0,0.002,S.F.,0.14,0.12,,0.26,.
+07 25 10.10,Weather Barriers or Wraps,480,Large roll,"""",4000.002,,"""",0.06,0.11,,0.17,r7
+07 25 10.10,Weather Barriers or Wraps,2100,"Asphalt felt roof deck vapor barrier, class 1 metal decks",11 Rofc,37.0,216.0,Sq.,19.85,10.7,,30.55,39.5
+07 25 10.10,Weather Barriers or Wraps,2200,For all other decks,"""",37.0,1.216,,15.4,10.7,,26.1,34.5
+07 25 10.10,Weather Barriers or Wraps,2800,"Asphalt felt, 50% recycled content, 15 lb, 4 sq./roll",1 Carp,36.0,0.222,,5.7,12.5,,18.2,25
+07 25 10.10,Weather Barriers or Wraps,2810,"30 lb., 2 sq./roll",1,36.0,0.222,,12.75,12.5,,25.25,32.5
+07 25 10.10,Weather Barriers or Wraps,3000,"Building wrap, spun bonded polyethylene",2 Carp,8000.0,0.002,S.F.,,0.18,0.11,,0.29
+07 26 13.10,Vapor Retarders Above-Grade,10,VAPOR RETARDERS,,,,,,,,,
+07 26 13.10,Vapor Retarders Above-Grade,20,"Aluminum and kraft laminated, foil 1 side",UUGUUU5551 Carp,37.0,0.216,Sq.,12.0,12.15,,24.15,31.5
+07 26 13.10,Vapor Retarders Above-Grade,100,Foil 2 sides,,37.0,0.216,,17.55,12.15,,29.7,37.5
+07 26 13.10,Vapor Retarders Above-Grade,600,"Polyethylene vapor barrier, standard, 2 mil",G,37.0,22222222.0,,2.0,12.15,,14.15,20.5
+07 26 13.10,Vapor Retarders Above-Grade,700,4 mil,G,37.0,0.216,,4.4,12.15,,16.55,23.0
+07 26 13.10,Vapor Retarders Above-Grade,900,6 mil,,37.0,0.216,,6.0,12.15,,18.15,24.5
+07 26 13.10,Vapor Retarders Above-Grade,1200,10 mil,G,37.0,0.216,,8.15,12.15,,20.3,27.0
+07 26 13.10,Vapor Retarders Above-Grade,1300,"Clear reinforced, fire retardant, 8 mil",G,37.0,0.216,,25.5,12.15,,37.65,46.0
+07 26 13.10,Vapor Retarders Above-Grade,1350,"Cross laminated type, 3 mil",,37.0,0.216,,12.3,12.15,,24.45,31.5
+07 26 13.10,Vapor Retarders Above-Grade,1400,4 mil,,37.0,0.216,,13.65,12.15,,25.8,33.0
+07 26 13.10,Vapor Retarders Above-Grade,1800,"Reinf. waterproof, 2 mil polyethylene backing, 1 side",,37.0,0.216,,11.5,12.15,,23.65,31.0
+07 26 13.10,Vapor Retarders Above-Grade,1900,2 sides,,37.0,0.216,,14.5,12.15,,26.65,330.0
+07 26 13.10,Vapor Retarders Above-Grade,2400,Waterproofed kraft with sisal or fiberglass fibers,,37.0,0.216,,18.05,12.15,,30.2,38.0
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,10,ELASTOMERIC SHEET WATERPROOFING AND ACCESS.,,,,,,,,,
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,90,"EPDM, plain, 45 mils thick",2 Rofc,580.0,0.028,S.F.,0.79,1.37,,2.16,3.08
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,100,60 mils thick,*,570.0,0.028,,0.91,1.39,,2.3,3.26
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,300,"Nylon reinforced sheets, 45 mils thick",,580.0,0.028,,0.97,1.37,,2.34,3.29
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,400,60 mils thick,,570.0,0.028,,1.13,1.39,,2.52,3.5
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,3600,"Vulcanizing splicing tape for above, 2"" wide",,,,C.L.F.,63.0,,,631.0,69.5
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,700,"4"" wide",,,,"""",355.0,,,355.0,390.0
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,900,"Adhesive, bonding, 60 S.F./gal.",,,,Gal.,42.0,,,42.0,46.0
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,1000,"Splicing, 75 S.F./gal.",,,,Gal.,37.0,,,37.0,40.5
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,1200,"Neoprene sheets, plain, 45 mils thick",2 Rofc,580.0,0.028,S.F.,1.31,1.37,,2.68,3.66
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,1300,60 mils thick,,570.0,0.028,,2.03,1.39,,3.42,4.49
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,1500,"Nylon reinforced, 45 mils thick",,580.0,0.028,,2.63,1.37,,4.0,5.1
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,1600,60 mils thick,,570.0,0.028,,4.81,1.39,,6.2,7.55
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,1800,120 mils thick,,500.0,0.032,,8.1,1.59,,9.69,11.45
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,1900,"Adhesive, splicing, 150 S.F./gal. per coat",,,,Gal.,37.0,,,37.0,40.5
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,2100,"Fiberglass reinforced, fluid applied, 1/8"" thick",2 Rofc,500.0,0.032,S.F.,1.58,1.59,,3.17,4.31
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,2200,"Polyethylene and rubberized asphalt sheets, 60 mils thick",,550.0,0.029,,0.7,1.44,,2.14,3.11
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,2400,"Polyvinyl chloride sheets, plain, 10 mils thick",,580.0,0.028,,0.17,1.37,,1.54,2.41
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,2500,20 mils thick,,570.0,0.028,,0.23,1.39,,1.62,2.51
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,2700,30 mils thick,,560.0,0.029,,0.23,1.42,,1.65,2.55
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,3000,"Adhesives, trowel grade, 40-100 S.F./gal.",,,,Gal.,28.5,,,28.5,31.5
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,3100,"Brush grade, 100-250 S.F./gal.",,,,"""",25.5,,,25.5,28.5
+07 13 53.10,Elastomeric Sheet Waterproofing and Access.,3300,"Bitumen modified polyurethane, fluid applied, 55 mils thick",2 Rofc,665.0,0.024,S.F.,1.17,1.19,,2.36,3.22
+07 16 16.20,Cementitious Waterproofing,10,CEMENTITIOUS WATERPROOFING,,,,,,,,,
+07 16 16.20,Cementitious Waterproofing,20,"1/8"" application, sprayed on",G-2A,1000.0,0.024,S.F.,0.67,1.06,0.66,2.39,3.14
+07 16 16.20,Cementitious Waterproofing,50,4 coat cementitious metallic slurry,1 Cefi,1.2,6.667,C.S.F,81.5,355.0,,436.5,610.0
+07 17 13.10,Bentonite,10,BENTONITE,,,,,,,,,
+07 17 13.10,Bentonite,20,"Panels, 4'x4', 3/16"" thick",1 Rofc,625.0,0.013,S.F.,ཀྲ2.33,323.0,,2.96,3.59
+07 17 13.10,Bentonite,100,"Rolls, 3/8"" thick, with geotextile fabric both sides","""",550.0,0.015,,ཥུ1.97,0.72,,2.69,3.34
+07 17 13.10,Bentonite,300,"Granular bentonite, 50 lb. bags (.625 C.F.)",,,,Bog,ཤ25.50,,,25.5,28.0
+07 17 13.10,Bentonite,400,"3/8"" thick, troweled on",1 Rofc,475.0,0.017,S.F.,གྷུ1.28,84.0,,2.12,2.76
+07 17 13.10,Bentonite,500,"Drain board, expanded polystyrene, 1-1/2"" thick",1 Rohe,1600.0,0.005,,ཤྲཱི,0.19,,0.611,0.76
+07 17 13.10,Bentonite,510,"2"" thick",,1600.0,0.005,,གཽ .56,0.19,,0.75,0.92
+07 17 13.10,Bentonite,520,"3"" thick",,1600.0,0.005,,རྞ,0.19,,1.03,1.22
+07 17 13.10,Bentonite,530,"4"" thick",,1600.0,0.005,,ཋ 1.12,0.19,,1.31,1.53
+07 17 13.10,Bentonite,600,"With filter fabric, 1-1/2"" thick",,1600.0,0.005,,ཤ .52,0.19,,0.71,0.87
+07 17 13.10,Bentonite,625,"2"" thick",,1600.0,0.005,,ཿ .66,0.19,,0.85,1.02
+07 17 13.10,Bentonite,650,"3"" thick",,1600.0,0.005,,རྞ,0.19,,1.13,1.33
+07 17 13.10,Bentonite,675,"4"" thick",,1600.0,0.005,,ས1.22,0.19,,1.41,1.64
+07 31 16.20,Metal Shingles,12,"Galvanized, 26 ga.",1 Rots,2.2,3.636,Sq.,293.0,180.0,,473.0,610.0
+07 31 16.20,Metal Shingles,200,24 ga.,,2.2,3.636,,435.0,180.0,,615.0,770.0
+07 31 16.20,Metal Shingles,300,"For colored galvanized shingles, add",,,,,61.5,,,61.5,67.5
+07 31 26.10,Slate Roof Shingles,10,SLATE ROOF SHINGLES,,,,,,,,,
+07 31 26.10,Slate Roof Shingles,100,"Buckingham Virginia black, 3/16"" - 1/4"" thick",I Rots,1.75,4.571,Sq.,690,2.0,,917,"1,125"
+07 31 26.10,Slate Roof Shingles,200,"1/4"" thick",,1.75,4.571,,690,2.0,,917,"1,125"
+07 31 26.10,Slate Roof Shingles,900,"Pennsylvania black, Bangor, #1 clear",,1.75,4.571,,620,2.0,,847,"1,050"
+07 31 26.10,Slate Roof Shingles,1200,"Vermont, unfading, green, mottled green",,1.75,4.571,,630,2.0,,857,"1,075"
+07 31 26.10,Slate Roof Shingles,1300,Semi-weathering green & gray,,1.75,4.571,,505,2.0,,732,925
+07 31 26.10,Slate Roof Shingles,1400,Purple,,1.75,4.571,,620,2.0,,847,"1,050"
+07 31 26.10,Slate Roof Shingles,1500,Black or gray,,1.75,4.571,,540,2.0,,767,965
+07 31 26.10,Slate Roof Shingles,1600,Red,,1.75,4.571,,"1,475",2.0,,"1,702","1,975"
+07 31 26.10,Slate Roof Shingles,1700,Variegated purple,,1.75,4.571,,575,2.0,,802,"1,000"
+07 31 26.10,Slate Roof Shingles,2700,"Ridge shingles, slate",200,0.04,L.F.,,12.70,1.98,,14.68,17.
+07 31 29.13,Wood Shingles,10,WOOD SHINGLES,,,,,,,,,
+07 31 29.13,Wood Shingles,12,"16"" No. 1 red cedar shingles, 5"" exposure, on roof",1 Carp,2.5,3.2,Sq.,465.0,180,,645.0,780
+07 31 29.13,Wood Shingles,15,Pneumatic nailed,,3.25,2.462,,465.0,139,,604.0,715
+07 31 29.13,Wood Shingles,200,"7-1/2"" exposure, on walls",,2.05,3.902,,310.0,220,,530.0,665
+07 31 29.13,Wood Shingles,205,Pneumatic nailed,,2.67,2.996,,310.0,169,,479.0,590
+07 31 29.13,Wood Shingles,300,"18"" No. 1 red cedar perfections, 5-1/2"" exposure, on roof",,2.75,2.909,,465.0,164,,629.0,755
+07 31 29.13,Wood Shingles,305,Pneumatic nailed,,3.57,2.241,,465.0,126,,591.0,700
+07 31 29.13,Wood Shingles,500,"7-1/2"" exposure, on walls",1 Carp,2.25,3.556,Sq.,340.0,200,,540.0,675
+07 31 29.13,Wood Shingles,505,Pneumatic nailed,,2.92,2.74,,340.0,154,,494.0,605
+07 31 29.13,Wood Shingles,600,"Resquared and rebutted, 5-1/2"" exposure, on roof",,3.0,2.667,,360.0,150,,510.0,620
+07 31 29.13,Wood Shingles,605,Pneumatic nailed,,3.9,2.051,,360.0,115,,475.0,565
+07 31 29.13,Wood Shingles,900,"7-1/2"" exposure, on walls",,2.45,3.265,,264.0,184,,448.0,565
+07 31 29.13,Wood Shingles,905,Pneumatic nailed,,3.18,2.516,,264.0,142,,406.0,500
+07 31 29.13,Wood Shingles,1000,Add to above for fire retardant shingles,,,,,72.0,,,72.0,79
+07 31 29.13,Wood Shingles,1060,Preformed ridge shingles,1 Carp,400.0,0.02,L.F.,4.85,1.13,,5.98,7.0
+07 31 29.13,Wood Shingles,2000,"White cedar shingles, 16"" long, extras, 5"" exposure, on roof",,2.4,3.333,Sq.,160.0,188,,3481.0,455
+07 31 29.13,Wood Shingles,2005,Pneumatic nailed,,3.12,2.564,,160.0,144,,304.0,390
+07 31 29.13,Wood Shingles,2050,"5"" exposure on walls",,2.0,4.0,,160.0,225,,385.0,510
+07 31 29.13,Wood Shingles,2055,Pneumatic nailed,,2.6,3.077,,160.0,173,,333.0,435
+07 31 29.13,Wood Shingles,2100,"7-1/2"" exposure, on walls",,2.0,,,114.0,225,,339.0,460
+07 31 29.13,Wood Shingles,2105,Pneumatic nailed,,2.6,3.077,,114.0,173,,287.0,385
+07 31 29.13,Wood Shingles,2150,"""B"" grade, 5"" exposure on walls",,24.0,1.0,,180.0,225,,405.0,535
+07 31 29.13,Wood Shingles,2155,Pneumatic nailed,,2.6,3.077,,180.0,173,,353.0,455
+07 31 29.13,Wood Shingles,2300,"For #15 organic felt underlayment on roof, 1 layer, add",64,0.125,,,4.43,7.05,,11.48,15.3
+07 31 29.13,Wood Shingles,2400,"2 layers, add",32,0.25,,,8.85,14.10,,22.95,31
+07 31 29.13,Wood Shingles,2600,"For steep roofs (7/12 pitch or greater), add to above",,,,,,,50%,,
+07 31 29.13,Wood Shingles,2700,"Panelized systems, No.1 cedar shingles on 5/16"" CDX plywood",,,,,,,,,
+07 31 29.13,Wood Shingles,2800,"On walls, 8' strips, 7"" or 14"" exposure",2 Carp,700.0,0.023,S.F.,9.3,1.29,,10.59,12.1
+07 31 29.13,Wood Shingles,3500,"On roofs, 8' strips, 7"" or 14"" exposure",1 Carp,3.0,2.667,Sq.,7705.0,150,,855.0,"1,000"
+07 31 29.13,Wood Shingles,3505,Pneumatic nailed,,4.0,2.0,,705.0,113,,818.0,950
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,10,ROOF COATINGS,,,,,,,,,
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,12,"Asphalt, brush grade, material only",,,,Gal.,8.60,,,8.60,9.
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,200,"Asphalt base, fibered aluminum coating",G,,,,10.40,,,10.40,II .
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,300,"Asphalt primer, 5 gal.",,,,,9.70,,,9.70,10 .
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,600,"Coal tar pitch, 200 lb. barrels",,,,Ton,"1,325",,,"1,325","1,450"
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,700,"Tar roof cement, 5 gal. lots",,,,Gal.,13.20,,,13.20,14.
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,800,"Glass fibered roof & patching cement, 5 gal.",,,,Gal.,10.40,,,10.40,11 .
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,900,"Reinforcing glass membrane, 450 S.F./roll",,,,Ea.,52.50,,,52.50,57
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,1000,"Neoprene roof coating, 5 gal., 2 gal./sq.",,,,Gal.,,30,,,30
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,1100,"Roof patch & flashing cement, 5 gal.",,,,,7.85,,,7.85,8.
+07 01 50.10,Maintenance of Membrane Roofing Roof Coatings,1200,"Roof resaturant, glass fibered, 3 gal./sq.",,,,,8.15,,,8.15,8 .
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,10,JOINT SEALANT REPLACEMENT,,,,,,,,,
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,50,Control joints in concrete floors/slabs,,,,,,,,,
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,100,Option 1 for joints with hard dry sealant,,,,,,,,,
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,110,Step 1: Sawcut to remove 95% of old sealant,,,,,,,,,
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,112,"1/4"" wide x 1/2"" deep, with single saw blade",C-27,4800.0,0.003,LF,,1.0,0.18,0.03,0.22
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,114,"3/8"" wide x 3/4"" deep, with single saw blade",,4000.0,0.004,,,,0.21,0.04,0.27
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,116,"1/2"" wide x 1"" deep, with double saw blades",,3600.0,0.004,,,0.05,0.24,0.04,0.33
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,118,"3/4"" wide x 1-1/2"" deep, with double saw blades",,3200.0,0.005,,,0.09,0.27,0.05,0.41
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,120,Step 2: Water blast joint faces and edges,C-29,2500.0,0.003,,,,0.15,0.04,0.19
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,130,Step 3: Air blast joint faces and edges,C-28,2000.0,0.004,,,,0.21,0.02,0.23
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,140,Step 4: Sand blast joint faces and edges,E-11,2000.0,0.016,,,,0.8,0.16,0.96
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,150,Step 5: Air blast joint faces and edges,C-28,2000.0,0.004,,,,0.21,0.02,0.23
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,200,Option 2 for joints with soft pliable sealant,,,,,,,,,
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,210,Step 1: Plow joint with rectangular blade,B-62,2600.0,0.009,LF,,,0.1,,0.1
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,220,Step 2: Sawcut to reface joint faces,,,,,,,,,
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,222,"1/4"" wide x 1/2"" deep, with single saw blade",C-27,2400.0,0.007,LF,,,0.35,0.07,0.44
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,224,"3/8"" wide x 3/4"" deep, with single saw blade",,2000.0,0.008,,,0.03,0.43,0.08,0.54
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,226,"1/2"" wide x 1"" deep, with double saw blades",,1800.0,0.009,,,0.06,0.47,0.09,0.62
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,228,"3/4"" wide x 1-1/2"" deep, with double saw blades",,1600.0,0.01,,,0.12,0.53,0.1,0.75
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,230,Step 3: Water blast joint faces and edges,C-29,2500.0,0.003,,,,0.15,0.04,0.19
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,240,Step 4: Air blast joint faces and edges,C-28,2000.0,0.004,,,,0.21,0.02,0.23
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,250,Step 5: Sand blast joint faces and edges,E-11,2000.0,0.016,,,,0.8,0.16,0.96
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,260,Step 6: Air blast joint faces and edges,C-28,2000.0,0.004,,,,0.21,0.02,0.23
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,290,"For saw cutting new control joints, see Section 03 15 16.20",,,,,,,,,
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,8910,"For backer rod, see Section 07 91 23.10",,,,,,,,,
+07 01 90.81,Maintenance of Joint Protection Joint Sealant Replacement,8920,"For joint sealant, see Section 03 15 16.30 or 07 92 13.20",,,,,,,,,
+07 05 05.10,Selective Demolition for Thermal and Moisture Protection,10,"SELECTIVE DEMO., THERMAL AND MOISTURE PROTECTION",,,,,,,,,
+07 05 05.10,Selective Demolition for Thermal and Moisture Protection,20,"Caulking / sealant, to 1"" x 1"" joint",1 Clab,600.0,0.013,LF .,,,0.61,,0.61
+07 05 05.10,Selective Demolition for Thermal and Moisture Protection,120,"Downspouts, including hangers",,350.0,0.023,"""",,1.04,,1.04,1125.0
+07 05 05.10,Selective Demolition for Thermal and Moisture Protection,220,"Flashing, sheet metal",,290.0,0.028,S.F.,,,1.26,,1.26
+07 05 05.10,Selective Demolition for Thermal and Moisture Protection,420,"Gutters, aluminum or wood, edge hung",,240.0,0.033,L.F.,,1.52,,1.52,2.0
+07 05 05.10,Selective Demolition for Thermal and Moisture Protection,520,Builtin,,100.0,0.08,"""",,,3.65,,3.65
+07 05 05.10,Selective Demolition for Thermal and Moisture Protection,620,"Insulation, air/vapor barrier",,3500.0,0.002,S.F.,,],0.1,,0.1
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,5620,Stucco siding,1 Clab,360.0,0.022,S.F,,,1.01,,1.01
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,5670,Textured plywood,,725.011,,,,,0.5,,0.5
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,5720,Vinyl siding,,510.0,0.016,,,0.72,,0.72,1.0
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,5770,Corner strips,,900.0,0.009,LF,,,0.41,,0.41
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,5870,"Wood, boards, vertical",,400.0,0.02,S.F.,,,0.91,,0.91
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,5880,"Steel siding, corrugated / ribbed",,402.5,0.02,,,,0.91,,0.91
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,5920,"Waterproofing, protection / drain board",2 Clab,3900.0,0.004,B.F.,,,0.19,,0.19
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,5970,"Over 1/2"" thick",,1750.0,0.009,S.F.,,,0.42,,0.42
+07 05 05.10,07 05 05 - Selective Demolition for Thermal and Moisture Protection,6020,"To 1/2"" thick",,2000.0,0.008,,,,0.36,,0.36
+07 05 05.10,07 11 13 - Bituminous Dampproofing,10,BITUMINOUS ASPHALT COATING,,,,,,,,,
+07 05 05.10,07 11 13 - Bituminous Dampproofing,30,"Brushed on, below grade, 1 coat",1 Rofc,665.0,0.012,S.F,,0.22,1737.0,,0.82
+07 05 05.10,07 11 13 - Bituminous Dampproofing,100,2 coat,1 Rofc,500.0,0.016,S.F.,,0.43,0.79,,1.22
+07 05 05.10,07 11 13 - Bituminous Dampproofing,300,"Sprayed on, below grade, 1 coat",,830.0,0.01,,0.22,0.48,,0.7,1.0
+07 05 05.10,07 11 13 - Bituminous Dampproofing,400,2 coat,,500.0,0.016,,0.42,0.79,,1.21,1.0
+07 05 05.10,07 11 13 - Bituminous Dampproofing,500,"Asphalt coating, with fibers",,,,Gal.,10.4,,,10.4,11.0
+07 05 05.10,07 11 13 - Bituminous Dampproofing,600,"Troweled on, asphalt with fibers, 1/16"" thick",Rofc,500.0,0.016,S.F.,0.45,7730.0,,1.24,1.0
+07 05 05.10,07 11 13 - Bituminous Dampproofing,700,"1/8"" thick",,400.0,0.02,,,0.8,0.99,,1.79
+07 05 05.10,07 11 13 - Bituminous Dampproofing,1000,"1/2"" thick",,350.0,0.023,,,2.6,1.13,,3.73
+07 05 05.10,07 11 16 - Cementitious Dampproofing,10,CEMENTITIOUS PARGING,,,,,,,,,
+07 05 05.10,07 11 16 - Cementitious Dampproofing,20,"Portland cement, 2 coats, 1/2"" thick",D-1,250.0,0.064,S.F.,0.35,3.21,,3.56,5.0
+07 05 05.10,07 11 16 - Cementitious Dampproofing,100,"Waterproofed Portland cement, 1/2"" thick, 2 coats",,250.0,0.064,,2.66,3.21,,5.87,7.0
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,10,MEMBRANE WATERPROOFING,,,,,,,,,
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,12,"On slabs, 1 ply, felt, mopped",-1,3000.0,0.019,S.F,0.4,0.87,0.18,1.45,2.0
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,100,"On slabs, 1 ply, glass fiber fabric, mopped",,2100.0,0.027,,0.46,1.24,0.26,1.96,2.0
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,300,"On slabs, 2 ply, felt, mopped",,2500.0,0.022,,,0.81,1.04,0.22,2.07
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,400,"On slabs, 2 ply, glass fiber fabric, mopped",,1650.0,0.034,,1.04,1.57,0.33,22.94,4.0
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,600,"On slabs, 3 ply, felt, mopped",,2100.0,0.027,,,1.21,1.24,0.26,2.71
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,700,"On slabs, 3 ply, glass fiber fabric, mopped",,1550.0,0.036,,1.37,1.67,0.36,3.4,4.0
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,710,"Asphaltic hardboard protection board, 1/8"" thick",2 Rofc,500.0,0.032,,1.24,1.59,,2.83,3.0
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,1000,"EPS membrane protection board, 1/4"" thick",,3500.0,0.005,,,0.37,2222.0,,0.6
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,1050,"3/8"" thick",,3500.0,0.005,,,0.41,0.23,,0.64
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,1060,"1/2"" thick",,3500.0,0.005,,,0.44,0.23,,0.67
+07 05 05.10,07 12 13 - Built-Up Asphalt Waterproofing,1070,"Fiberglass fabric, black, 20/10 mesh",,116.0,0.138,Sq.,18.05,6.85,,24.9,31.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,670,Batts or blankets,1 Clab,1400,.006,C.F.,,0.26,,0.26,0.39
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,720,Foamed or sprayed inplace,2 Clab,1000,.016,B.F.,,0.73,,0.73,1.09
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,770,Loose fitting,1 Clab,3000,.003,C.F,,0.12,,0.12,0.18
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,870,Rigid board,,3450,.002,B.F.,,0.11,,0.11,0.16
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,120,"Roll roofing, cold adhesive",,12,.667,Sq.,,30.5,,30.5,45.5
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,$170,"Roof accessories, adjustable metal chimney flashing",,9,.889,Eo.,,40.5,,40.5,60.5
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,171,"Selective demo, firstopping",,20,.400,,,18.25,,18.25,27.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,325,Plumbing vent flashing,,32,.250,,,11.4,,11.4,17.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,375,"Ridge vent strip, aluminum",,310,.026,L.F,,1.18,,1.18,1.75
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,620,Skylight to 10 S.F.,,8,1,Eo.,,45.5,,45.5,68.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,120,"Roof edge, aluminum soffit and fascia",,570,.014,LF,,0.64,,0.64,0.95
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,170,"Concrete coping, up to 12"" wide",2 Clab,160,.100,,,4.56,,4.56,6.8
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,220,Drip edge,1 Clab,1000,.008,,,0.36,,0.36,0.54
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,270,Gravel stop,,950,.008,,,0.38,,0.38,0.57
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,370,"Sheet metal coping, up to 12"" wide",,240,.033,,,1.52,,1.52,2.26
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,470,"Roof insulation board, over 2"" thick",B-2,7800,.005,B.F.,,0.24,,0.24,0.35
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,520,"Up to 2"" thick",,3900,.010,S.F.,,0.47,223.0,0.47,0.7
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,620,"Roof ventilation, louvered gable vent",1 Clab,16,.500,Eo.,223,,,,34.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,670,"Remove, roof hatch",G-3,15,2.133,,121,,,121.0,181.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,675,Rafter vents,1 Clab,960,.008,,,0.38,,0.38,0.57
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,720,Soffit vent and/or fascia vent,,575,.014,LF,,0.63,,0.63,0.94
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,775,"Soffit vent strip, aluminum, 3"" to 4"" wide",,160,.050,,,2.28,,2.28,3.4
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,820,"Roofing accessories, shingle moulding, to 1"" x 4""",,1600,.005,,,0.23,,0.23,0.34
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,870,Cant strip,B-2,2000,.020,,,0.92,,0.92,1.37
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,920,Concrete block walkway,1 Clab,230,.035,,,1.59,,1.59,2.36
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,070,"Roofing, felt paper, #15",,70,.114,Sq.,,5.2,,5.2,7.75
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,125,#30 felt,,30,.267,,,12.15,,12.15,18.1
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,170,"Asphalt shingles, 1 layer",B-2,3500,.011,S.F.,,0.53,,0.53,0.78
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,180,2 layers,,1750,.023,,,1.05,,1.05,1.57
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,1370,Modified bitumen,B-2,26,11.538,Sq.,,71.0,,71.0,105.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,1420,"Built up, no gravel, 3 ply",,25,1.600,,,73.5,,73.5,110.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,470,4 ply,,21,1.905+,,,87.5,,87.5,130.0
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,620,5 ply,,1600,.025,S.F.,,1.15,,1.15,1.71
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,720,"5 ply, with gravel",,890,.045,,,2.07,,2.07,3.08
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,-725,Loose gravel removal,,5000,.008,,,0.37,,0.37,0.55
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,730,Embedded gravel removal,,2000,.020,,,0.92,,0.92,1.37
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,870,Fiberglass sheet,,1200,.033,,,1.53,,1.53,2.28
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,120,Slate shingles,,1900,.021,,,0.97,,0.97,1.44
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,170,"Ridge shingles, clay or slate",,2000,.020,L.F.,,0.92,,0.92,1.37
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,3201,"Single ply membrane, attached at seams",,52,1.769,Sq.,,35.5,,35.5,52.5
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,-370,Ballasted,,75,.533,,,24.5,,24.5,36.5
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,420,Fully adhered,,39,1.026,,,47.0,,47.0,70.5
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,1550,"Roof hatch, 2' 6"" x 3'-0""",1 Clab,10,.800,Ea.,3 ༷50,36.5,,36.5,54.5
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,4670,Wood shingles,B-2,2200,.018,S.F,ཚ,0.84,,0.84,1.25
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,1820,Sheet metal roofing,"""",2150,.019,,༈,0.86,,0.86,1.27
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,4970,"Siding, horizontal wood clapboards",1 Clab,380,.021,,༈,0.96,,0.96,1.43
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,5025,Exterior insulation finish system,"""",120,.067,,༔3.04,3.04,,3.04,4.53
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,5070,"Tempered hardboard, remove and reset",1 Carp,380,.021,,—1.19,1.19,,1.19,1.76
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,120,Tempered hardboard sheet siding,"""",375,.021,,ཐ1.20,1.2,,1.2,1.79
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,5170,"Metal, corner strips",1 Clab,850,.009,LF.,གྷ.43,0.43,,0.43,0.64
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,$225,Horizontal strips,,444,.018,S.F.,ཚི.82,0.82,,0.82,1.22
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,5320,Vertical strips,,400,.020,,ང.91,0.91,,0.91,1.36
+07 05 05.10,7 05 05 Selective Demolition for Thermal and Moisture Protection,5520,Wood shingles,,350,.023,,1.04,1.04,,1.04,1.55
+07 19 19.10,Silicone Based Water Repellents,10,SILICONE BASED WATER REPELLANTS,,,,,,,,,
+07 19 19.10,Silicone Based Water Repellents,20,"Water base liquid, roller applied",2 Rofc,7000.0,0.002,S.F,,0.45,.===,,0.56
+07 19 19.10,Silicone Based Water Repellents,200,"Silicone or stearate, sprayed on CMU, 1 coat",1 Rofc,4000.0,0.002,,,0.42,.10,,0.52
+07 19 19.10,Silicone Based Water Repellents,300,2 coats,1,3000.0,0.003,,,0.84,.13,,0.97
+07 21 13.10,Rigid Insulation,10,"RIGID INSULATION, for walls",,,,,,,,,
+07 21 13.10,Rigid Insulation,40,"Fiberglass, 1.5 #/C.F., unfaced, 1"" thick, R4.1",1 Carp,1000.0,0.008,S.F,,0.46,44454455555555.0,,0.91
+07 21 13.10,Rigid Insulation,60,"1-1/2"" thick, R6.2",,1000.0,0.008,,,0.56,,,1.01
+07 21 13.10,Rigid Insulation,80,"2"" thick, R8.3",,1000.0,0.008,,,0.62,,,1.07
+07 21 13.10,Rigid Insulation,120,"3"" thick, R12.4",,800.0,0.01,,0.75,0.56,,1.31,1 .
+07 21 13.10,Rigid Insulation,370,"3 #/C.F., unfaced, 1"" thick, R4.3",,1000.0,8.0,,0.73,,,1.18,1 .
+07 21 13.10,Rigid Insulation,390,"1-1/2"" thick, R6.5",,1000.0,0.008,,0.93,,,1.38,122322233
+07 21 13.10,Rigid Insulation,400,"2"" thick, R8.7",,890.0,0.009,,1.47,0.51,,1.98,2 .
+07 21 13.10,Rigid Insulation,420,"2-1/2"" thick, R10.9",,800.0,0.01,,,1.32,0.56,,1.88
+07 21 13.10,Rigid Insulation,440,"3"" thick, R13",,800.0,0.01,,2.08,0.56,,2.64,3.
+07 21 13.10,Rigid Insulation,520,"Foilfaced, 1"" thick, R4.3",,1000.0,0.008,,,1.02,,,1.47
+07 21 13.10,Rigid Insulation,540,"1-1/2"" thick, R6.5",,1000.0,0.008,,,1.41,,,1.86
+07 21 13.10,Rigid Insulation,560,"2"" thick, R8.7",,890.0,0.009,,,1.77,0.51,,2.28
+07 21 13.10,Rigid Insulation,580,"2-1/2"" thick, R10.9",,800.0,0.01,,2.23,0.56,,2.79,3 .
+07 21 13.10,Rigid Insulation,600,"3"" thick, R13",,800.0,10.0,,2.36,0.56,,2.92,3 .
+07 21 13.10,Rigid Insulation,1600,"Isocyanurate, 4' x 8' sheet, foilfaced, both sides",,,,,,,,,
+07 21 13.10,Rigid Insulation,1610,"1/2"" thick",1 Carp,800.0,0.01,S.F,,0.37,0.56,,0.93
+07 21 13.10,Rigid Insulation,1620,"5/8"" thick",,800.0,0.01,,,0.79,0.56,,1.35
+07 21 13.10,Rigid Insulation,1630,"3/4"" thick",,800.0,0.01,,,0.56,0.56,,1.12
+07 21 13.10,Rigid Insulation,1640,"1"" thick",,800.0,0.01,,,0.7,0.56,,1.26
+07 21 13.10,Rigid Insulation,1650,"1-1/2"" thick",,730.0,0.011,,,0.83,0.62,,1.45
+07 21 13.10,Rigid Insulation,1660,"2"" thick",,730.0,0.011,,1.11,0.62,,1.73,2 .
+07 21 13.10,Rigid Insulation,1670,"3"" thick",,730.0,0.011,,1.94,0.62,,2.56,3 .
+07 21 13.10,Rigid Insulation,1680,"4"" thick",,730.0,0.011,,2.66,0.62,,3.28,3 .
+07 21 13.10,Rigid Insulation,1700,"Perlite, 1"" thick, R2.77",,800.0,0.01,,,0.59,0.56,,1.15
+07 21 13.10,Rigid Insulation,1750,"2"" thick, R5.55",,730.0,0.011,,1.06,0.62,,1.68,21231
+07 21 13.10,Rigid Insulation,1900,"Extruded polystyrene, 25 psi compressive strength, 1"" thick, R5",,800.0,0.01,,,0.73,0.56,,1.29
+07 21 13.10,Rigid Insulation,1940,"2"" thick, R10",,730.0,0.011,,,1.45,0.62,,2.07
+07 21 13.10,Rigid Insulation,1960,"3"" thick, R15",,730.0,0.011,,,2.18,0.62,,2.8
+07 21 13.10,Rigid Insulation,2100,"Expanded polystyrene, 1"" thick, R3.85",1 Carp,800.0,0.01,S.F.,,0.28,0.56,,0.84
+07 21 13.10,Rigid Insulation,2120,"2"" thick, R7.69",,730.0,0.011,,0.56,0.62,,1.18,=
+07 21 13.10,Rigid Insulation,2140,"3"" thick, R11.49",,730.0,0.011,,0.84,0.62,,1.46,1.
+07 21 13.13,Foam Board Insulation,10,FOAM BOARD INSULATION,,,,,,,,,
+07 21 13.13,Foam Board Insulation,600,"Polystyrene, expanded, 1"" thick, R4",1 Carp,680.0,0.012,S.F,,0.25,0.66,,0.94
+07 21 13.13,Foam Board Insulation,700,"2"" thick, R8","""",675.0,0.012,,,0.56,0.67,,1.23
+07 21 16.10,Blanket Insulation for Floors/Ceilings,10,BLANKET INSULATION FOR FLOORS/CEILINGS,,,,,,,,,
+07 21 16.10,Blanket Insulation for Floors/Ceilings,20,Including spring type wire fasteners,,,,,,,,,
+07 21 16.10,Blanket Insulation for Floors/Ceilings,2000,"Fiberglass, blankets or batts, paper or foilbacking",,,,,,,,,
+07 21 16.10,Blanket Insulation for Floors/Ceilings,2100,"3-1/2"" thick, R13",1 Corp,700.0,0.011,S.F.,,0.73,0.64,,1.37
+07 21 16.10,07 21 23 Loose-Fill Insulation,10,"MASONRY LOOSE-FILL INSULATION, vermiculite or perlite",,,,,,,,,
+07 21 16.10,07 21 23 Loose-Fill Insulation,100,"In cores of concrete block, 4"" thick wall, .115 C.F./S.E.",D-1,4800.0,0.003,S.F.,0.36,0.17,,0.53,0.65
+07 21 16.10,07 21 23 Loose-Fill Insulation,200,"6"" thick wall, .175 C.F./S.F.",D-1,3000.0,0.005,S.F.,0.55,0.27,,0.82,1.01
+07 21 16.10,07 21 23 Loose-Fill Insulation,300,"8"" thick wall, .258 C.F./S.F.",,2400.0,0.007,,0.81,0.33,,1.14,1.39
+07 21 16.10,07 21 23 Loose-Fill Insulation,400,"10"" thick wall, .340 C.F./S.F.",,1850.0,0.009,,1.07,0.43,,1.5,1.83
+07 21 16.10,07 21 23 Loose-Fill Insulation,500,"12"" thick wall, .422 C.F./S.F.",,1200.0,0.013,,1.33,0.67,,2.0,2.46
+07 21 16.10,07 21 23 Loose-Fill Insulation,600,"Poured cavity wall, vermiculite or perlite, water repellent",,250.0,1.064,C.F.,3.15,3.21,,6.36,8.3
+07 21 16.10,07 21 23 Loose-Fill Insulation,700,"Foamed in place, urethane in 2-5/8"" cavity",G-2A,1035.0,0.023,S.E.,1.84,1.02,0.64,3.5,4.34
+07 21 16.10,07 21 23 Loose-Fill Insulation,800,"For each 1"" added thickness, add",,2372.0,0.01,,0.7,0.45,0.28,1.43,1.78
+07 21 16.10,07 21 26 Blown Insulation,10,"BLOWN INSULATION Ceilings, with open access",,,,,,,,,
+07 21 16.10,07 21 26 Blown Insulation,20,"Cellulose, 3-1/2"" thick, R13",G-4,5000.0,0.005,S.F.,0.29,223762396662.0,=11,0.62,0.77
+07 21 16.10,07 21 26 Blown Insulation,30,"5-3/16"" thick, R19",,3800.0,0.006,,0.42,,*14,0.85,1.07
+07 21 16.10,07 21 26 Blown Insulation,50,"6-1/2"" thick, R22",,3000.0,0.008,,0.54,,818,1.09,1.35
+07 21 16.10,07 21 26 Blown Insulation,100,"8-11/16"" thick, R30",,2600.0,0.009,,0.73,0.43,*21,1.37,1.67
+07 21 16.10,07 21 26 Blown Insulation,120,"10-7/8"" thick, R38",,1800.0,0.013,,0.93,,830,1.85,2.28
+07 21 16.10,07 21 26 Blown Insulation,1000,"Fiberglass, 5.5"" thick, R11",,3800.0,0.006,,0.24,,*14,0.67,0.87
+07 21 16.10,07 21 26 Blown Insulation,1050,"6"" thick, R12",,3000.0,0.008,,0.35,,.18,0.9,1.13
+07 21 16.10,07 21 26 Blown Insulation,1100,"8.8"" thick, R19",,2200.0,0.011,,0.43,0.5,222245,1.18,1.5
+07 21 16.10,07 21 26 Blown Insulation,1200,"10"" thick, R22",,1800.0,0.013,,0.5,,.30,1.42,1.8
+07 21 16.10,07 21 26 Blown Insulation,1300,"11.5"" thick, R26",,1500.0,0.016,,0.6,0.74,.36,1.7,2.16
+07 21 16.10,07 21 26 Blown Insulation,1350,"13"" thick, R30",,1400.0,0.017,,0.69,,.39,1.87,2.37
+07 21 16.10,07 21 26 Blown Insulation,1450,"16"" thick, R38",,1145.0,0.021,,0.88,,,2.33,2.93
+07 21 16.10,07 21 26 Blown Insulation,1500,"20"" thick, R49",,920.0,0.026,,1.17,1.21,.59,2.97,3.74
+07 21 16.10,07 21 29 Sprayed Insulation,10,SPRAYED-ON INSULATION,,,,,,,,,
+07 21 16.10,07 21 29 Sprayed Insulation,20,"Fibrous/cementitious, finished wall, 1"" thick, R3.7",G-2,2050.0,0.012,S.F.,4422.0,0.565,0.07,1.09,1.41
+07 21 16.10,07 21 29 Sprayed Insulation,100,"Attic, 5.2"" thick, R19",,1550.0,0.015,"""",0.54,0.74,0.09,1.37,1.79
+07 21 16.10,07 21 29 Sprayed Insulation,200,"Fiberglass, R4 per inch, vertical",,1600.0,0.015,B.F.,0.26,0.71,0.09,1.06,1.44
+07 21 16.10,07 21 29 Sprayed Insulation,210,Horizontal,,1200.0,0.02,"""",0.26,0.95,0.12,1.33,1.83
+07 21 16.10,07 21 29 Sprayed Insulation,300,"Closed cell, spray polyurethane foam, 2 lb./C.F. density",,,,,,,,,
+07 21 16.10,07 21 29 Sprayed Insulation,310,"1"" thick",G-2A,6000.0,4.0,S.F.,0.7,0.18,0.11,0.99,1.17
+07 21 16.10,07 21 29 Sprayed Insulation,320,"2"" thick",,3000.0,0.008,,1.41,0.35,0.22,1.98,2.35
+07 21 16.10,07 21 29 Sprayed Insulation,330,"3"" thick",,2000.0,0.012,,2.11,0.53,33.0,2.97,3.51
+07 21 16.10,07 21 29 Sprayed Insulation,335,"3-1/2"" thick",,1715.0,0.014,,2.46,0.62,0.39,3.47,4.1
+07 21 16.10,07 21 29 Sprayed Insulation,340,"4"" thick",,1500.0,0.016,,2.81,0.71,0.44,3.96,4.68
+07 21 16.10,07 21 29 Sprayed Insulation,350,"5"" thick",,1200.0,0.02,,3.51,0.88,0.55,4.94,5.85
+07 21 16.10,07 21 29 Sprayed Insulation,355,"5-1/2"" thick",,1090.0,0.022,,3.86,0.97,0.61,5.44,6.45
+07 21 16.10,07 21 29 Sprayed Insulation,360,"6"" thick",G-2A,1000.0,0.024,S.F.,4.22,1.06,0.66,5.94,7.05
+07 21 16.10,07 21 53 Reflective Insulation,10,REFLECTIVE INSULATION OPTIONS,,,,,,,,,
+07 21 16.10,07 21 53 Reflective Insulation,20,Aluminum foil on reinforced scrim,1 Carp,19.0,0.421,C.S.F.,19.05,23.5,,42.55,56.5
+07 21 16.10,07 21 53 Reflective Insulation,100,Reinforced with woven polyolefin,,19.0,0.421,,30.0,23.5,,53.5,69.0
+07 21 16.10,07 21 53 Reflective Insulation,500,"With single bubble airspace, R8.8",,15.0,0.533,,33.5,30.0,,63.5,81.5
+07 21 16.10,07 21 53 Reflective Insulation,600,"With double bubble air space, R9.8",,15.0,533.0,,40.5,30.0,,70.5,89.0
+07 21 16.20,Blanket Insulation for Walls,836,"23"" wide",1 Carp,1600.0,0.005,S.F.,,0.75,0.28,,1.03
+07 21 16.20,Blanket Insulation for Walls,838,"6"" thick, R19, 11"" wide",,1150.0,0.007,,,0.78,0.39,,1.17
+07 21 16.20,Blanket Insulation for Walls,860,"15"" wide",,1150.0,0.007,,,0.78,0.39,,1.17
+07 21 16.20,Blanket Insulation for Walls,880,"23"" wide",,1350.0,0.006,,,0.78,0.33,,1.11
+07 21 16.20,Blanket Insulation for Walls,882,"R21, 11"" wide",,1150.0,0.007,,,0.777,0.39,,1.36
+07 21 16.20,Blanket Insulation for Walls,886,"15"" wide",,1350.0,0.006,,,0.97,0.33,,1.3
+07 21 16.20,Blanket Insulation for Walls,888,"23"" wide",,1600.0,0.005,,,0.797,0.28,,1.25
+07 21 16.20,Blanket Insulation for Walls,890,"9"" thick, R30, 11"" wide",,985.0,0.008,,,1.13,0.46,,1.59
+07 21 16.20,Blanket Insulation for Walls,900,"15"" wide",,1150.0,0.007,,,1.13,0.39,,1.52
+07 21 16.20,Blanket Insulation for Walls,920,"23"" wide",,1350.0,0.006,,,1.13,0.33,,1.46
+07 21 16.20,Blanket Insulation for Walls,930,"12"" thick, R38, 11"" wide",,985.0,0.008,,1.66,0.46,,2.12,2.2
+07 21 16.20,Blanket Insulation for Walls,940,"15"" wide",,1000.0,0.008,,1.66,0.45,,2.11,2.0
+07 21 16.20,Blanket Insulation for Walls,960,"23"" wide",,1150.0,0.007,,,1.66,0.39,,2.05
+07 21 16.20,Blanket Insulation for Walls,1300,"Wall or ceiling insulation, mineral wool batts",,,,,,,,,
+07 21 16.20,Blanket Insulation for Walls,1320,"3-1/2"" thick, R15",1 Carp,1600.0,0.005,S.F.,1.04,0.28,,1.32,122.0
+07 21 16.20,Blanket Insulation for Walls,1340,"5-1/2"" thick, R23",,1600.0,0.005,,,1.63,0.28,,1.91
+07 21 16.20,Blanket Insulation for Walls,1380,"7-1/4"" thick, R30",,1350.0,0.006,,,2.15,0.33,,2.48
+07 21 16.20,Blanket Insulation for Walls,1700,"Non-rigid insul., recycled blue cotton fiber, unfaced batts, R13, 16"" wide",,1600.0,0.005,,0.86,0.28,,1.14,1.0
+07 21 16.20,Blanket Insulation for Walls,1710,"R19, 16"" wide",,1600.0,0.005,,1.29,0.28,,1.57,1.0
+07 21 16.20,Blanket Insulation for Walls,1850,"Friction fit wire insulation supports, 16"" OC",,960.0,0.008,Ea.,,0.13,0.47,,0.6
+07 21 19.10,Masonry Foamed In Place Insulation,10,MASONRY FOAMED IN PLACE INSULATION,,,,,,,,,
+07 21 19.10,Masonry Foamed In Place Insulation,100,"Amino plast foam, injected into block core, 6"" block",2A,6000.0,0.004,Ea.,,0.22348,0.18,0.11,0.51
+07 21 19.10,Masonry Foamed In Place Insulation,110,"8"" block",,5000.0,0.005,,,0.26,0.21,0.13,0.6
+07 21 19.10,Masonry Foamed In Place Insulation,120,"10"" block",,4000.0,0.006,,,0.33,0.26,0.17,0.76
+07 21 19.10,Masonry Foamed In Place Insulation,130,"12"" block",,3000.0,0.008,,0.44,0.35,0.22,1.01,1.0
+07 21 19.10,Masonry Foamed In Place Insulation,140,Injected into cavity wall,,13000.0,0.002,B.F.,,0.08,0.08,0.05,0.21
+07 21 19.10,Masonry Foamed In Place Insulation,150,"Preparation, drill holes into mortar joint every 4 V.L.F., 5/8"" diameter",1 Clab,960.0,0.008,Ea.,,,0.38,,0.38
+07 21 19.10,Masonry Foamed In Place Insulation,160,"7/8"" diameter",,1680.0,0.012,,,,0.54,,0.54
+07 21 19.10,Masonry Foamed In Place Insulation,170,"Patch drilled holes, 5/8"" diameter",,1800.0,0.004,,,0.04,0.2,,0.24
+07 21 19.10,Masonry Foamed In Place Insulation,180,"7/8"" diameter",,1200.0,0.007,,,0.5,0.3,,0.35
+07 21 23.10,Poured Loose-Fill Insulation,10,POURED LOOSE-FILL INSULATION,,,,,,,,,
+07 21 23.10,Poured Loose-Fill Insulation,20,"Cellulose fiber, R3.8 per inch",5G5555GG1GGCarp,200.0,0.04,C.E.,822123623.0,2.25,,3.08,4.0
+07 21 23.10,Poured Loose-Fill Insulation,21,"4"" thick",,1000.0,0.008,S.F.,,0.2,0.45,,0.65
+07 21 23.10,Poured Loose-Fill Insulation,22,"6"" thick",,800.0,0.01,,0.34,0.56,,0.9,14124.0
+07 21 23.10,Poured Loose-Fill Insulation,80,"Fiberglass wool, R4 per inch",,200.0,0.04,C.F.,,0.71,2.25,,2.96
+07 21 23.10,Poured Loose-Fill Insulation,81,"4"" thick",,600.0,0.013,S.F.,0.24,0.75,,0.99,1.0
+07 21 23.10,Poured Loose-Fill Insulation,82,"6"" thick",,400.0,0.02,,,0.35,1.13,,1.48
+07 21 23.10,Poured Loose-Fill Insulation,100,"Mineral wool, R3 per inch",,200.0,0.04,C.F.,0.67,2.25,,2.92,4.0
+07 21 23.10,Poured Loose-Fill Insulation,101,"4"" thick",,600.0,0.013,S.F.,,,0.75,,0.97
+07 21 23.10,Poured Loose-Fill Insulation,102,"6"" thick",,400.0,0.02,,0.34,1.13,,1.47,252262.0
+07 21 23.10,Poured Loose-Fill Insulation,300,"Polystyrene, R4 per inch",,200.0,0.04,C.F.,1.78,2.25,,4.03,5.0
+07 21 23.10,Poured Loose-Fill Insulation,301,"4"" thick",,600.0,0.013,S.F.,,0.59,0.75,,1.34
+07 21 23.10,Poured Loose-Fill Insulation,302,"6"" thick",,400.0,0.02,17,0.89,1.13,,2.02,2.0
+07 21 23.10,Poured Loose-Fill Insulation,400,"Perlite, R2.78 per inch",,200.0,0.04,C.F.,3.15,2.25,,5.4,6.0
+07 21 23.10,Poured Loose-Fill Insulation,401,"4"" thick",,1000.0,0.008,S.F.,1.05,0.45,,1.5,1.0
+07 21 23.10,Poured Loose-Fill Insulation,402,"6"" thick",,800.0,0.01,,1.58,0.56,,2.14,2.0
+07 21 23.10,7 27 13.10 Modified Bituminous Sheet Air Barrier,10,MODIFIED BITUMINOUS SHEET AIR BARRIER,,,,,,,,,
+07 21 23.10,7 27 13.10 Modified Bituminous Sheet Air Barrier,100,"SBS modified sheet laminated to polyethylene sheet, 40 mils, 4"" wide",1 Carp,1200.0,0.007,LE,0.32,0.38,,0.7,0.91
+07 21 23.10,7 27 13.10 Modified Bituminous Sheet Air Barrier,120,"6"" wide",,1100.0,0.007,,0.43,0.41,,0.84,1.08
+07 21 23.10,7 27 13.10 Modified Bituminous Sheet Air Barrier,140,"9"" wide",,1000.0,0.008,?,0.6,0.45,,1.05,1.33
+07 21 23.10,7 27 13.10 Modified Bituminous Sheet Air Barrier,160,"12"" wide",,900.0,1.009,,0.77,0.5,,1.27,1.58
+07 21 23.10,7 27 13.10 Modified Bituminous Sheet Air Barrier,180,"18"" wide",2 Carp,1700.0,0.009,S.F.,0.72,0.53,,1.25,1.58
+07 21 23.10,7 27 13.10 Modified Bituminous Sheet Air Barrier,200,"36"" wide","""",1800.0,0.009,,0.7,0.5,,1.2,1.51
+07 21 23.10,7 27 13.10 Modified Bituminous Sheet Air Barrier,220,Adhesive for above,1 Carp,1400.0,0.006,,,0.32,,0.32,0.48
+07 21 23.10,7 27 26.10 Fluid Applied Membrane Air Barrier,10,FLUID APPLIED MEMBRANE AIR BARRIER,,,,,,,,,
+07 21 23.10,7 27 26.10 Fluid Applied Membrane Air Barrier,100,"Spray applied vapor barrier, 25 S.F./gallon",1 Pord,1375.0,0.006,S.F.,0.02,0.28,,0.3,0.43
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,100,Standard strip shingles,,,,,,,,,
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1150,"Inorganic, class A, 25 year",1 Rofc,5.5,1.455,Sq.,,2962.0,72.0,168.0,223
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,$155,Pneumatic nailed,,7.0,1.143,,,96.0,56.5,152.5,198
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1200,30 year,1,5.0,1.6,,,126.0,79.5,205.5,268
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1205,Pneumatic nailed,I,6.25,1.28,,,126.0,63.5,189.5,242
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1250,Standard laminated multi layered shingles,,,,,,,,,
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1300,"Class A, 240-260 lb./square",11 Rofc,4.5,1.778,Sq.,,12222.0,88.0,211.0,278
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1305,Pneumatic nailed,,5.63,1.422,,,123.0,70.5,193.5,249
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1350,"Class A, 250-270 lb./square",,4.0,2.0,,,123.0,99.0,2221.0,296
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1355,Pneumatic nailed,,5.0,1.6,,,123.0,79.5,202.5,264
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1400,"Premium, laminated multi layered shingles",,,,,,,,,
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1450,"Class A, 260-300 lb./square",1 Rofc,3.5,2.286,Sq.,,160.0,113.0,273.0,360
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,0455,Pneumatic nailed,,4.37,1.831,,,160.0,91.0,251.0,325
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1500,"Class A, 300-385 lb./square",,3.0,2.667,,,415.0,132.0,547.0,675
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,0505,Pneumatic nailed,,3.75,2.133,,,415.0,106.0,521.0,630
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1800,#15 felt underlayment,,64.0,0.125,,,4.43,6.2,10.63,14.90
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1825,#30 felt underlayment,,58.0,0.138,,,8.7,6.85,15.55,20.50
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1850,Self adhering polyethylene and rubberized asphalt underlayment,,22.0,0.364,,,66.0,18.05,84.05,102
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,0900,Ridge shingles,,330.0,0.024,LF.,,2.87,1.2,4.07,5.10
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,1905,Pneumatic nailed,,412.5,0.019,"""",,2.871,0.961,3.83,4.72
+07 21 23.10,7 31 13.10 Asphalt Roof Shingles,000,"For steep roofs (7 to 12 pitch or greater), add",,,,,,,,,50%
+07 31 16.10,Aluminum Shingles,10,ALUMINUM SHINGLES,,,,,,,,,510.0
+07 31 16.10,Aluminum Shingles,20,"Mill finish, .019"" thick",1 Carp,5.0,1.6,Sq.,,283.0,220.0,373.0,445.0
+07 31 16.10,Aluminum Shingles,100,".020"" thick",,5.0,1.6,,,340.0,90.0,430.0,510.0
+07 31 16.10,Aluminum Shingles,300,"For colors, add",,,,,,25.5,,25.5,28.0
+07 31 16.10,Aluminum Shingles,7600,"Ridge cap, .024"" thick",1 Carp,170.0,0.047,L.F.,,3.75,2.65,6.4,8.05
+07 31 16.10,Aluminum Shingles,700,"End wall flashing, .024"" thick",,170.0,0.047,,,3.2,2.65,5.85,7.45
+07 31 16.10,Aluminum Shingles,900,"Valley section, .024"" thick",,170.0,0.047,,,4.2,2.65,6.85,8.55
+07 31 16.10,Aluminum Shingles,1000,"Starter strip, .024"" thick",,400.0,0.02,,,3.2,1.13,4.33,5.2
+07 31 16.10,Aluminum Shingles,1200,"Side wall flashing, .024"" thick",,170.0,0.047,,,3.83,2.65,6.48,8.15
+07 31 16.10,Aluminum Shingles,1500,"Gable flashing, .024"" thick",,400.0,0.02,,,2.43,1.13,3.56,4.35
+07 22 16.10,Roof Deck Insulation,16,"Asphaltic cover board, fiberglass lined, 1/8"" thick",1 Rofc,1400,0.006,S.F.,0.5,0.28333333333332233,,0.78,1.0
+07 22 16.10,Roof Deck Insulation,18,"1/4"" thick",,1400,0.006,,1.02,0.28,,1.3,1.5
+07 22 16.10,Roof Deck Insulation,20,"Fiberboard low density, 1/2"" thick, R1.39",,1300,0.006,,0.38,0.31,,0.69,-
+07 22 16.10,Roof Deck Insulation,30,"1"" thick, R2.78",,1040,0.008,,0.78,0.38,,1.16,1.4
+07 22 16.10,Roof Deck Insulation,80,"1-1/2"" thick, R4.17",,1040,0.008,,1.18,0.38,,1.56,1.9
+07 22 16.10,Roof Deck Insulation,100,"2"" thick, R5.56",,1040,0.008,,1.13,0.38,,1.51,1.8
+07 22 16.10,Roof Deck Insulation,110,"Fiberboard high density, 1/2"" thick, R1.3",,1300,0.006,,,0.41,0.31,,0.72
+07 22 16.10,Roof Deck Insulation,120,"1"" thick, R2.5",,1040,0.008,,0.67,0.38,,1.05,1.3
+07 22 16.10,Roof Deck Insulation,130,"1-1/2"" thick, R3.8",,1040,0.008,,1.42,0.38,,1.8,2.
+07 22 16.10,Roof Deck Insulation,200,"Fiberglass, 3/4"" thick, R2.78",,1300,0.006,,0.64,0.31,,0.95,1.
+07 22 16.10,Roof Deck Insulation,400,"15/16"" thick, R3.70",,1300,0.006,,0.88,0.31,,1.19,1.4
+07 22 16.10,Roof Deck Insulation,460,"1-1/16"" thick, R4.17",,1300,0.006,,1.23,0.31,,1.54,1.8
+07 22 16.10,Roof Deck Insulation,600,"1-5/16"" thick, R5.26",,1300,0.006,,1.53,0.31,,1.84,2.
+07 22 16.10,Roof Deck Insulation,650,"2-1/16"" thick, R8.33",,1040,0.008,,1.72,38.0,,2.1,2.5
+07 22 16.10,Roof Deck Insulation,700,"2-7/16"" thick, R10",,1040,0.008,,1.84,0.38,,2.22,2.
+07 22 16.10,Roof Deck Insulation,800,"Gypsum cover board, fiberglass mat facer, 1/4"" thick",,1400,0.006,,0.52,0.28,,0.8,1.0
+07 22 16.10,Roof Deck Insulation,810,"1/2"" thick",,1300,0.006,,,0.69,0.31,,
+07 22 16.10,Roof Deck Insulation,820,"5/8"" thick",,1200,0.007,,,0.68,,,1.01
+07 22 16.10,Roof Deck Insulation,830,"Primed fiberglass mat facer, 1/4"" thick",,1400,0.006,,0.63,28.0,,0.91,1.
+07 22 16.10,Roof Deck Insulation,840,"1/2"" thick",,1300,0.006,,0.71,0.31,,1.02,1.
+07 22 16.10,Roof Deck Insulation,850,"5/8"" thick",,1200,0.007,,0.73,,,1.06,1.
+07 22 16.10,Roof Deck Insulation,1650,"Perlite, 1/2"" thick, R1.32",,1365,0.006,,,0.31,0.29,,0.6
+07 22 16.10,Roof Deck Insulation,1655,"3/4"" thick, R2.08",,1040,0.008,,0.4,0.38,,0.78,1.
+07 22 16.10,Roof Deck Insulation,1660,"1"" thick, R2.78",,1040,0.008,,,0.62,0.38,,
+07 22 16.10,Roof Deck Insulation,1670,"1-1/2"" thick, R4.17",,1040,0.008,,,0.88,0.38,,1.26
+07 22 16.10,Roof Deck Insulation,1680,"2"" thick, R5.56",,910,0.009,,1.1,,,1.54,1
+07 22 16.10,Roof Deck Insulation,1685,"2-1/2"" thick, R6.67",,910,0.009,,1.41,,,1.85,2.
+07 22 16.10,Roof Deck Insulation,1690,Tapered for drainage,1 Rofc,1040,8.0,B.F.,1.21,0.38,,1.59,1.
+07 22 16.10,Roof Deck Insulation,1700,"Polyisocyanurate, 2#/C.F. density, 3/4"" thick",,1950,0.004,S.F.,0.65,0.2,,0.85,1.
+07 22 16.10,Roof Deck Insulation,1705,"1"" thick",,1820,0.004,,0.84,,,1.06,1.
+07 22 16.10,Roof Deck Insulation,1715,"1-1/2"" thick",,1625,0.005,,,1.03,,,1.27
+07 22 16.10,Roof Deck Insulation,1725,"2"" thick",,1430.,0.006,,,1.36,0.28,,1.64
+07 22 16.10,Roof Deck Insulation,1735,"2-1/2"" thick",,1365,0.006,,1.72,0.29,,2.01,213-
+07 22 16.10,Roof Deck Insulation,1745,"3"" thick",,1300,0.006,,1.13,0.31,,1.44,1.
+07 22 16.10,Roof Deck Insulation,1755,"3-1/2"" thick",,$1300,0.006,,2.55,0.31,,2.86,3.
+07 22 16.10,Roof Deck Insulation,1765,Tapered for drainage,,1820,0.004,B.F.,1.03,,,1.25,1.
+07 22 16.10,Roof Deck Insulation,1900,Extruded polystyrene,,,,,,,,,
+07 22 16.10,Roof Deck Insulation,1910,"15 psi compressive strength, 1"" thick, R5",1 Rofc,1950,0.004,S.F.,,0.58,2.0,,0.78
+07 22 16.10,Roof Deck Insulation,1920,"2"" thick, R10",,1625,0.005,,0.75,,,0.99,122
+07 22 16.10,Roof Deck Insulation,1930,"3"" thick, R15",,1300,0.006,,,1.51,0.31,,1.82
+07 22 16.10,Roof Deck Insulation,1932,"4"" thick, R20",,1300,0.006,,2.03,,,2.34,2.
+07 22 16.10,Roof Deck Insulation,1934,Tapered for drainage,,1950,0.004,B.F.,,0.52,0.2,,0.72
+07 22 16.10,Roof Deck Insulation,1940,"25 psi compressive strength, 1"" thick, R5",,1950,0.004,S.F.,0.79,0.2,,0.99,1.
+07 22 16.10,Roof Deck Insulation,1942,"2"" thick, R10",,1625,0.005,,1.5,,,11.74,23.
+07 22 16.10,Roof Deck Insulation,1944,"3"" thick, R15",,1300,0.006,,2.29,0.31,,2.6,3.
+07 22 16.10,Roof Deck Insulation,1946,"4"" thick, R20",,1300,0.006,,3.16,,,3.47,3.
+07 22 16.10,Roof Deck Insulation,1948,Tapered for drainage,,1950,0.004,B.F.,,0.59,,,0.79
+07 22 16.10,Roof Deck Insulation,1950,"40 psi compressive strength, 1"" thick, R5",,1950,0.004,S.F.,0.88,0.2,,1.08,12331
+07 22 16.10,Roof Deck Insulation,1952,"2"" thick, R10",,1625,0.005,,1.67,0.24,,1.91,2.
+07 22 16.10,Roof Deck Insulation,1954,"3"" thick, R15",,1300,0.006,,2.42,0.31,,2.73,3.
+07 22 16.10,Roof Deck Insulation,1956,"4"" thick, R20",,1300,0.006,,3.17,0.31,,3.48,3.
+07 22 16.10,Roof Deck Insulation,1958,Tapered for drainage,,1820,0.004,B.F.,0.89,0.22,,1.11,1.
+07 22 16.10,7 21 16.10 Blanket Insulation for Floors/Ceilingsx,150,"6-1/4"" thick, R19",1 Carp,600,0.013,S.F.,0.99,0.75,,1.74,2.21
+07 22 16.10,7 21 16.10 Blanket Insulation for Floors/Ceilingsx,210,"9-1/2"" thick, R30",,500,0.016,,1.14,0.9,,2.04,2.59
+07 22 16.10,7 21 16.10 Blanket Insulation for Floors/Ceilingsx,220,"12"" thick, R38",,475,0.017,,1.44,0.95,,2.39,2.99
+07 22 16.10,7 21 16.10 Blanket Insulation for Floors/Ceilingsx,0,"Unfaced, 3-1/2"" thick, R13",,600,0.013,,0.54,0.75,,1.29,1.71
+07 22 16.10,7 21 16.10 Blanket Insulation for Floors/Ceilingsx,10,"6-1/4"" thick, R19",,500,0.016,,0.78,0.9,,1.68,2.2
+07 22 16.10,7 21 16.10 Blanket Insulation for Floors/Ceilingsx,20,"9-1/2"" thick, R30",,450,0.018,,1.13,1.0,,2.13,2.73
+07 22 16.10,7 21 16.10 Blanket Insulation for Floors/Ceilingsx,30,"12"" thick, R38",,425,0.019,,1.66,1.06,,2.72,3.41
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,10,BLANKET INSULATION FOR WALLS,,,,,,,,,
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,20,"Kraft faced fiberglass, 3-1/2"" thick, R11, 15"" wide",1 Carp,0.006,S.F.,.53,,,0.86,1.08,
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,30,"23"" wide",,1600.0,.005,,0.53,0.28,,0.81,1.0
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,60,"R13, 11"" wide",,1150.0,.007,,0.6,0.39,,0.99,1.24
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,80,"15"" wide",,1350.0,.006,,0.6,,,0.93,1.16
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,100,"23"" wide",,1600.0,.005,,0.6,0.28,,0.88,1.08
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,110,"R15, 11"" wide",,1150.0,.007,,0.89,0.39,,1.28,1.56
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,120,"15"" wide",,1350.0,.006,,0.89,,,1.22,1.48
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,130,"23"" wide",,1600.0,.005,,0.89,0.28,,1.17,1.4
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,140,"6"" thick, R19, 11"" wide",,1150.0,.007,,0.86,0.39,,1.25,1.53
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,160,"15"" wide",,1350.0,.006,,0.86,,,1.19,1.45
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,180,"23"" wide",,1600.0,.005,,0.86,0.28,,1.14,1.37
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,182,"R21, 11"" wide",,1150.0,.007,,0.82,0.39,,1.21,1.48
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,184,"15"" wide",,1350.0,.006,,0.82,,,1.15,1.4
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,186,"23"" wide",,1600.0,.005,,0.82,0.28,,1.1,1.32
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,188,"9"" thick, R30, 11"" wide",,985.0,.008,,1.14,46.0,,1.6,1.93
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,200,"15"" wide",,1150.0,.007,,1.14,0.39,,1.53,1.83
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,220,"23"" wide",,1350.0,.006,,1.14,,,1.47,1.75
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,230,"12"" thick, R38, 11"" wide",,985.0,.008,,1.44,0.46,,1.9,2.26
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,240,"15"" wide",1 Carp,1150.0,.007,S.F.,1.44,0.39,,1.83,2.16
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,260,"23"" wide",,1350.0,.006,,1.44,0.33,,1.77,2.08
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,410,"Foil faced fiberglass, 3-1/2"" thick, R13, 11"" wide",,1150.0,.007,,0.7,0.39,,1.09,1.35
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,420,"15"" wide",,1350.0,.006,,0.7,0.33,,1.03,1.27
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,440,"23"" wide",,1600.0,.005,,0.7,0.28,,0.98,1.19
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,442,"R15, 11"" wide",,1150.0,.007,,0.6,0.39,,0.99,1.24
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,444,"15"" wide",,1350.0,.006,,0.6,0.33,,0.93,1.16
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,446,"23"" wide",,1600.0,.005,,0.6,0.28,,0.88,1.08
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,448,"6"" thick, R19, 11"" wide",,1150.0,.007,,0.97,0.39,,1.36,1.65
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,460,"15"" wide",,1350.0,.006,,0.97,0.33,,1.3,1.57
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,480,"23"" wide",,1600.0,.005,,0.97,0.28,,1.25,1.49
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,482,"R21, 11"" wide",,1150.0,.007,,0.84,0.39,,1.23,1.5
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,484,"15"" wide",,1350.0,.006,,0.84,0.33,,1.17,1.42
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,486,"23"" wide",,1600.0,.005,,0.84,0.28,,1.12,1.34
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,488,"9"" thick, R30, 11"" wide",,985.0,.008,,1.54,0.46,,2.0,2.37
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,500,"15"" wide",,1150.0,.007,,1.54,0.39,,1.93,2.27
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,550,"23"" wide",,1350.0,.006,,1.54,0.33,,1.87,2.19
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,560,"12"" thick, R38, 11"" wide",,985.0,.008,,1.44,0.46,,1.9,2.26
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,570,"15"" wide",,1150.0,.007,,1.44,0.39,,1.83,2.16
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,580,"23"" wide",,1350.0,.006,,1.44,0.33,,1.77,2.08
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,620,"Unfaced fiberglass, 3-1/2"" thick, R13, 11"" wide",,1150.0,.007,,0.54,0.39,,0.93,1.17
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,820,"15"" wide",,1350.0,.006,,0.54,0.33,,0.87,1.09
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,830,"23"" wide",,1600.0,.005,,0.54,0.28,,0.82,1.01
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,832,"R15, 11"" wide",,1150.0,.007,,0.75,0.39,,1.14,1.41
+07 22 16.10,7 21 16.20 Blanket Insulation for Walls,834,"15"" wide",,1350.0,.006,,0.75,0.33,,1.08,1.33
+07 22 16.10,Roof Deck Insulation,1960,"60 psi compressive strength, 1"" thick, R5",1 Rofc,1885.0,0.004,S.F.,1.10,2.21,,1.31,1.55
+07 22 16.10,Roof Deck Insulation,1962,"2"" thick, R10",,1560.0,0.005,,2.09,0.25,,2.34,2.71
+07 22 16.10,Roof Deck Insulation,1964,"3"" thick, R15",,1270.0,0.006,,3.41,0.31,,3.72,4.26
+07 22 16.10,Roof Deck Insulation,1966,"4"" thick, R20",,1235.0,0.006,,4.24,0.32,,4.56,5.2
+07 22 16.10,Roof Deck Insulation,1968,Tapered for drainage,,1820.0,0.004,B.F.,1.01,,,1.23,1.46
+07 22 16.10,Roof Deck Insulation,2010,"Expanded polystyrene, 1#/C.F. density, 3/4"" thick, R2.89",,1950.0,0.004,S.F.,.21,0.2,,0.41,0.56
+07 22 16.10,Roof Deck Insulation,2020,"1"" thick, R3.85",,1950.0,0.004,,.28,0.2,,0.48,0.64
+07 22 16.10,Roof Deck Insulation,2100,"2"" thick, R7.69",,1625.0,0.005,,.56,0.24,,0.8,1.02
+07 22 16.10,Roof Deck Insulation,2110,"3"" thick, R11.49",,1625.0,0.005,,.84,0.24,,1.08,1.32
+07 22 16.10,Roof Deck Insulation,2120,"4"" thick, R15.38",,1625.0,0.005,,1.12,0.24,,1.36,1.63
+07 22 16.10,Roof Deck Insulation,2130,"5"" thick, R19.23",,1495.0,0.005,,1.40,0.27,,1.67,1.97
+07 22 16.10,Roof Deck Insulation,2140,"6"" thick, R23.26",,1495.0,0.005,,1.68,0.27,,1.95,2.28
+07 22 16.10,Roof Deck Insulation,2150,Tapered for drainage,,1950.0,0.004,B.F.,.46,0.2,,0.66,0.84
+07 22 16.10,Roof Deck Insulation,2400,"Composites with 2"" EPS",,,,,,,,,
+07 22 16.10,Roof Deck Insulation,2410,"1"" fiberboard",1 Rofc,1325.0,0.006,S.F.,1.59,0.3,,1.89,2.24
+07 22 16.10,Roof Deck Insulation,2420,"7/16"" oriented strand board",,1040.0,0.008,,1.41,0.38,,1.79,2.17
+07 22 16.10,Roof Deck Insulation,2430,"1/2"" plywood",,1040.0,0.008,,3.28,0.38,,3.66,4.23
+07 22 16.10,Roof Deck Insulation,2440,"1"" perlite",,1040.0,0.008,,1.07,0.38,,1.45,1.8
+07 22 16.10,Roof Deck Insulation,2450,"Composites with 1-1/2"" polyisocyanurate",,,,,,,,,
+07 22 16.10,Roof Deck Insulation,2460,"1"" fiberboard",1 Rofc,1040.0,0.008,S.F.,1.23,0.38,,1.61,1.97
+07 22 16.10,Roof Deck Insulation,2470,"1"" perlite",,1105.0,0.007,,1.02,0.36,,1.38,1.7
+07 22 16.10,Roof Deck Insulation,2480,"7/16"" oriented strand board",,1040.0,0.008,,2.75,0.38,,3.13,3.65
+07 22 16.10,Roof Deck Insulation,3000,"Fastening alternatives, coated screws, 2"" long",,3744.0,0.002,Ea.,བྷ.05,11.0,,0.16,0.23
+07 22 16.10,Roof Deck Insulation,3010,"4"" long",,3120.0,0.003,,= .11,0.13,,0.24,0.33
+07 22 16.10,Roof Deck Insulation,3020,"6"" long",,2675.0,0.003,,རྞ.24,0.15,,0.39,0.5
+07 22 16.10,Roof Deck Insulation,3030,"8"" long",,2340.0,0.003,,རྨུ,0.17,,0.46,0.59
+07 22 16.10,Roof Deck Insulation,3040,"10"" long",,1872.0,0.004,,ཞ .53,0.21,,0.74,0.92
+07 22 16.10,Roof Deck Insulation,3050,"Pre-drill and drive wedge spike, 2-1/2""",,1248.0,0.006,,ཝཱ.64,0.32,,0.96,1.22
+07 22 16.10,Roof Deck Insulation,3060,"3-1/2""",,1101.0,0.007,,1.42,0.36,,1.78,2.14
+07 22 16.10,Roof Deck Insulation,3070,"4-1/2""",,936.0,0.009,,1.99,0.42,,2.41,2.88
+07 22 16.10,Roof Deck Insulation,3075,"3"" galvanized deck plates",,7488.0,0.001,,པོ.23,0.05,,0.28,0.34
+07 22 16.10,Roof Deck Insulation,3080,Spot mop asphalt,- 1,295.0,0.19,Sq.,5.50,8.8,1.87,16.17,22.5
+07 22 16.10,Roof Deck Insulation,3090,Full mop asphalt,"""",192.0,0.292,,11,13.5,2.87,27.37,37.5
+07 22 16.10,Roof Deck Insulation,3110,"Low-rise polyurethane adhesive, 12"" OC beads",1 Rofc,45.0,0.178,,97,8.8,,105.8,121.0
+07 22 16.10,Roof Deck Insulation,3120,"6"" OC beads",,32.0,1.25,,194,12.4,,206.4,233.0
+07 22 16.10,Roof Deck Insulation,3130,"4"" OC beads",,30.0,0.267,F,294,13.25,,307.25,345.0
+07 24 13.10,Exterior Insulation and Finish Systems,10,EXTERIOR INSULATION AND FINISH SYSTEMS,,,,,,,,,
+07 24 13.10,Exterior Insulation and Finish Systems,95,"Field applied, 1"" EPS insulation",55555555 J 1,390.0,0.103,S.F.,0.4,5.05,222222278.0,5.74,8.25
+07 24 13.10,Exterior Insulation and Finish Systems,100,"With 1/2"" cement board sheathing",,268.0,0.149,,1.13,7.35,0.42,8.9,12.6
+07 24 13.10,Exterior Insulation and Finish Systems,105,"2"" EPS insulation",,390.0,0.103,,1.59,5.05,0.29,6.93,9.55
+07 24 13.10,Exterior Insulation and Finish Systems,110,"With 1/2"" cement board sheathing",,268.0,0.149,,1.41,7.35,0.42,9.18,12.9
+07 24 13.10,Exterior Insulation and Finish Systems,115,"3"" EPS insulation",,390.0,0.103,,0.96,5.05,0.29,6.3,8.9
+07 24 13.10,Exterior Insulation and Finish Systems,120,"With 1/2"" cement board sheathing",,268.0,0.149,,1.69,7.35,0.42,9.46,13.2
+07 24 13.10,Exterior Insulation and Finish Systems,125,"4"" EPS insulation",,390.0,0.103,,1.24,5.05,0.29,6.58,9.2
+07 24 13.10,Exterior Insulation and Finish Systems,130,"With 1/2"" cement board sheathing",,268.0,0.149,,2.7,7.35,42.0,10.47,14.35
+07 24 13.10,Exterior Insulation and Finish Systems,140,Premium finish add,,1265.0,0.032,,0.45,1.56,0.09,2.1,2.91
+07 24 13.10,Exterior Insulation and Finish Systems,145,"Drainage and ventilation cavity, add",2 Plas,1450.0,0.011,,0.84,0.57,,1.41,1.76
+07 31 29.16,Wood Shakes,1010,WOOD SHAKES,,,,,,,,,
+07 31 29.16,Wood Shakes,100,"Hand split red cedar shakes, 1/2"" thick x 24"" long, 10"" exp. on roof",1 Carp,2.5,3.2,Sq.,500.0,180.0,,680.0,820.0
+07 31 29.16,Wood Shakes,105,Pneumatic nailed,,3.25,2.462,,500.0,139.0,,639.0,755.0
+07 31 29.16,Wood Shakes,110,"3/4"" thick x 24"" long, 10"" exp. on roof",,2.25,3.556,,500.0,200.0,,700.0,850.0
+07 31 29.16,Wood Shakes,115,Pneumatic nailed,,2.92,2.74,,500.0,154.0,,654.0,780.0
+07 31 29.16,Wood Shakes,200,"1/2"" thick, 18"" long, 8-1/2"" exp. on roof",,2.0,4.0,,415.0,225.0,,640.0,790.0
+07 31 29.16,Wood Shakes,205,Pneumatic nailed,,2.6,3.077,,415.0,173.0,,588.0,715.0
+07 31 29.16,Wood Shakes,1210,"3/4"" thick x 18"" long, 8-1/2"" exp. on roof",,1.8,4.444,,415.0,250.0,,665.0,825.0
+07 31 29.16,Wood Shakes,1215,Pneumatic nailed,,2.34,3.419,,415.0,192.0,,607.0,740.0
+07 31 29.16,Wood Shakes,1255,"10"" exposure on walls",,2.0,4.0,,400.0,225.0,,625.0,775.0
+07 31 29.16,Wood Shakes,260,"10"" exposure on walls, pneumatic nailed",,2.6,3.077,,400.0,173.0,,573.0,700.0
+07 31 29.16,Wood Shakes,1700,"Add to above for fire retardant shakes, 24"" long",,,,,72.0,,,72.0,79.0
+07 31 29.16,Wood Shakes,800,"18"" long",,,,,72.0,,,72.0,79.0
+07 31 29.16,Wood Shakes,810,Ridge shakes,1 Carp,350.0,0.023,LF,5.4,1.29,,6.69,7.85
+07 32 13.10,Clay Roof Tiles,10,"CLAY TILES, including accessories",,,,,,,,,
+07 32 13.10,Clay Roof Tiles,300,"Flat shingle, interlocking, 15"", 166 pcs./sq., fireflashed blend",3 Rots,6.0,4.0,,560,198.0,,758,935
+07 32 13.10,Clay Roof Tiles,500,Terra cotta red,,6.0,4.0,,660,198.0,,858,"1,050"
+07 32 13.10,Clay Roof Tiles,600,"Roman pan and top, 18"", 102 pcs./sq., fireflashed blend",,5.5,4.364,,520,216.0,,736,920
+07 32 13.10,Clay Roof Tiles,640,Terra cotta red,11 Rots,2.4,3.333,,605,165.0,,770,935
+07 32 13.10,Clay Roof Tiles,1100,"Barrel mission til, 18"", 166 pcs./sq., fireflashed blend",3 Rots,5.5,4.364,,435,216.0,,651,825
+07 32 13.10,Clay Roof Tiles,1140,Terra cotta red,,5.5,4.364,,440,216.0,,656,835
+07 32 13.10,Clay Roof Tiles,1700,"Scalloped edge flat shingle, 14"", 145 pcs./sq., fireflashed blend",,,,,"1,125",198.0,,"1,323","1,575"
+07 32 13.10,Clay Roof Tiles,1800,Terra cotta red,,6.0,4.0,,"1,125",198.0,,"1,323","1,550"
+07 32 13.10,Clay Roof Tiles,3010,#15 felt underlayment,1 Rofc,64.0,0.125,,4.43,6.2,,10.63,14.90
+07 32 13.10,Clay Roof Tiles,8020,#30 felt underlayment,,58.0,0.138,,8.70,6.85,,15.55,20.50
+07 32 13.10,Clay Roof Tiles,3040,Polyethylene and rubberized asph. underlayment,,22.0,0.364,,66,18.05,,84.05,102
+07 32 16.10,Concrete Roof Tiles,10,CONCRETE TILES,,,,,,,,,
+07 32 16.10,Concrete Roof Tiles,20,"Corrugated, 13"" x 16-1/2"", 90 per sq., 950 lb./sq.",,,,,,,,,
+07 32 16.10,Concrete Roof Tiles,50,"Earthtone colors, nailed to wood deck",1 Rots,1.35,5.926,Sq.,119,294.0,,413.0,605.0
+07 32 16.10,Concrete Roof Tiles,150,Blues,1,1.35,5.926,1,107,294.0,,401.0,590.0
+07 32 16.10,Concrete Roof Tiles,200,Greens,,1.35,5.926,,118,294.0,,412.0,605.0
+07 32 16.10,Concrete Roof Tiles,250,Premium colors,,1.35,5.926,4,118,294.0,,412.0,605.0
+07 32 16.10,Concrete Roof Tiles,500,"Shakes, 13"" x 16-1/2"", 90 per sq, 950 lb./sq.",,,,,,,,,
+07 32 16.10,Concrete Roof Tiles,600,"All colors, nailed to wood deck",1 Rots,1.2,5.333,Sq.,174,265.0,,439.0,620.0
+07 32 16.10,Concrete Roof Tiles,1500,"Accessory pieces, ridge & hip, 10"" x 16-1/2"", 8 lb. each",,19.0,120.0,.067,Eo.,3.78,3.31,7.09,9.5
+07 32 16.10,Concrete Roof Tiles,1700,"Rake, 6-1/2"" x 16-3/4"", 9 lb. each",,,,,3.78,,,3.78,4.16
+07 32 16.10,Concrete Roof Tiles,1800,"Mansard hip, 10"" x 16-1/2"", 9.2 lb. each",,,,,3.78,,,3.78,4.16
+07 32 16.10,Concrete Roof Tiles,1900,"Hip starter, 10"" x 16-1/2"", 10.5 lb. each",,,,,10.50,,,10.5,11.55
+07 32 16.10,Concrete Roof Tiles,2000,"3 or 4 way apex, 10"" each side, 11.5 lb. each",,,,,12,,,12.0,13.2
+07 53 29.10,Polyisobutylene Roofing,10,POLYISOBUTYLENE ROOFING,,,,,,,,,
+07 53 29.10,Polyisobutylene Roofing,7500,"Polyisobutylene (PIB), 100 mils, 0.57 psf",,,,,,,,,
+07 53 29.10,Polyisobutylene Roofing,7600,Loose-laid & ballasted with stone / gravel (10 psf),G-5,51.0,0.784,Sq.,219.0,35.5,3.26,257.76,330.0
+07 53 29.10,Polyisobutylene Roofing,7700,Partially adhered with adhesive,,35.0,1.143,,262.0,51.5,4.75,318.25,38.0
+07 53 29.10,Polyisobutylene Roofing,7800,Hot asphalt attachment,,35.0,1.143,1,,250.0,51.5,4.75,306.25
+07 53 29.10,Polyisobutylene Roofing,7900,Fully adhered with contact cement,,26.0,1.538,,276.0,69.5,6.4,351.9,42.0
+07 54 16.10,Ketone Ethylene Ester Roofing,10,KETONE ETHYLENE ESTER ROOFING,,,,,,,,,
+07 54 16.10,Ketone Ethylene Ester Roofing,100,"Ketone ethylene ester roofing, 50 mil, fully adhered",G-5,26.0,1.538,Sq.,215.0,69.5,6.4,290.9,355.0
+07 54 16.10,Ketone Ethylene Ester Roofing,120,Mechanically attached,,35.0,1.143,,143.0,51.5,4.75,199.25,246.0
+07 54 16.10,Ketone Ethylene Ester Roofing,140,Ballasted with stone,,51.0,0.784,,149.0,35.5,3.26,187.76,225.0
+07 54 16.10,Ketone Ethylene Ester Roofing,160,"50 mil, fleece backed, adhered w/hot asphalt",-1,26.0,2.154,,160.0,100.0,21.0,281.0,360.0
+07 54 16.10,Ketone Ethylene Ester Roofing,180,"Accessories, pipe boot",1Rofc,32.0,250.0,Ea.,26.0,12.4,,38.4,48.0
+07 54 16.10,Ketone Ethylene Ester Roofing,200,Pre-formed corners,,32.0,1.25,"""",9.75,12.44,,22.15,31.0
+07 54 16.10,Ketone Ethylene Ester Roofing,220,"Ketone clad metal, including up to 4 bends",,330.0,0.024,S.F.,4.11,1.2,,5.31,6.4
+07 54 16.10,Ketone Ethylene Ester Roofing,240,Walkway pad,2Rofc,800.0,0.02,,4.27,0.99,,5.26,6.3
+07 54 16.10,Ketone Ethylene Ester Roofing,260,Stripping material,1Rofc,310.0,0.026,LF.,0.97,1.28,,2.25,3.0
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,10,POLYVINYL-CHLORIDE ROOFING (PVC),,,,,,,,,
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8200,Heat welded seams,,,,,,,,,
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8700,"Reinforced, 48 mils, 0.33 psf",,,,,,,,,
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8750,Loose-laid & ballasted with stone /gravel (12 psf),G-5,51.0,0.784,Sq.,124.0,35.5,3.26,162.76,197.0
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8800,Mechanically attached,,35.0,1.143,,118.0,51.5,4.75,174.25,219.0
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8850,Fully adhered with adhesive,,26.0,1.538,,110.0,69.5,6.4,185.9,239.0
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8860,"Reinforced, 60 mils, 0.40 psf",,,,,,,,,
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8870,Loose laid & ballasted with stone /gravel (12 psf),-5,51.0,784.0,Sq.,135.0,35.5,3.26,173.76,209.0
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8880,Mechanically attached,,35.0,1.143,,129.0,51.5,4.75,185.25,231.0
+07 54 16.10,07 54 19 - Polyvinyl-Chloride Roofing,8890,Fully adhered with adhesive,,26.0,1.538,,120.0,69.5,6.4,195.9,251.0
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,10,THERMOPLASTIC POLYOLEFIN ROOFING (T.P.O.),,,,,,,,,
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,100,"45 mil, loose laid & ballasted with stone (1/2 ton/sq.)",G-5,51.0,0.784,Sq.,90.5,35.5,3.26,129.26,161.0
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,120,Fully adhered,,25.0,1.6,,79.0,72.0,6.65,157.65,211.0
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,140,Mechanically attached,,34.0,1.176,,78.5,53.0,4.89,136.39,178.0
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,160,Self adhered,,35.0,1.143,,155.0,51.5,4.75,211.25,260.0
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,180,"60 mil membrane, heat welded seams, ballasted",,50.0,0.8,,106.0,36.0,3.33,145.33,178.0
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,200,Fully adhered,,25.0,1.6,,93.5,72.0,6.65,172.15,227.0
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,220,Mechanically attached,,34.0,1.176,,99.0,53.0,4.89,156.89,200.0
+07 54 16.10,07 54 23 - Thermoplastic-Polyolefin Roofing,240,Self adhered,,35.0,1.143,,186.0,51.5,4.75,242.25,293.0
+07 55 10.10,Protected Membrane Roofing Components,130,Filterfabric,2 Rofc,10000.002,,S.F.,0.4,0.08,,0.13,0.19
+07 55 10.10,Protected Membrane Roofing Components,140,"Ballast ,3/8 "" -1/2 "" inplace",G1,36.0,1.556,Ton,25.0,722.0,15.3,112.3,161.0
+07 55 10.10,Protected Membrane Roofing Components,150,"3/4 "" -1-1 / 2 "" in place","""",36.0,1.556,"""",25.0,72.0,15.3,112.3,161.0
+07 55 10.10,Protected Membrane Roofing Components,200,"2 "" concrete blocks, natural",1 Clab,115.0,0.07,S.F.,3.7,3.17,,6.87,8.8
+07 55 10.10,Protected Membrane Roofing Components,210,Colors,"""",115.0,0.07,"""",2.42,3.17,,5.59,7.4
+07 56 10.10,Elastomeric Roofing,20,"Acrylic, 44% solids, 2 coats, on corrugated metal",2 Rofc,2400.0,0.007,S.F.,0.7,3253532535323332.0,,1.03,1.31
+07 56 10.10,Elastomeric Roofing,25,On smooth metal,,3000.0,0.005,,0.56,0.26,,0.82,1.04
+07 56 10.10,Elastomeric Roofing,30,On foam or modified bitumen,,1500.0,0.011,,1.12,,,1.65,2.09
+07 56 10.10,Elastomeric Roofing,35,On concrete,1,1500.0,0.011,,1.12,,,1.65,2.09
+07 56 10.10,Elastomeric Roofing,40,On tar and gravel,,1500.0,0.011,,1.12,,,1.65,2.09
+07 56 10.10,Elastomeric Roofing,45,"36% solids, 2 coats, on corrugated metal",,2400.007,,,0.7,,,1.03,1.31
+07 56 10.10,Elastomeric Roofing,50,On smooth metal,,3000.005,,,0.56,0.26,,0.82,1.04
+07 56 10.10,Elastomeric Roofing,55,On foam or modified bitumen,,1500.0,0.011,,1.12,,,1.65,2.09
+07 56 10.10,Elastomeric Roofing,60,On concrete,,1500.0,0.011,,1.12,,,1.65,2.09
+07 56 10.10,Elastomeric Roofing,65,On tar and gravel,,1500.0,0.011,,1.12,,,1.65,2.09
+07 56 10.10,Elastomeric Roofing,70,"Primer if required, 2 coats on corrugated metal",,2400.0,0.007,,1.4,,,1.73,2.08
+07 56 10.10,Elastomeric Roofing,75,On smooth metal,1,3000.0,0.005,,1.4,0.26,,1.66,1.97
+07 56 10.10,Elastomeric Roofing,80,On foam or modified bitumen,,1500.0,0.011,,0.83,,,1.36,1.77
+07 56 10.10,Elastomeric Roofing,85,On concrete,,1500.0,0.011,,0.62,,,1.15,1.54
+07 56 10.10,Elastomeric Roofing,90,On tar & gravel / rolled roof,,1500.0,0.011,,0.83,,,1.36,1.77
+07 56 10.10,Elastomeric Roofing,110,"Acrylic rubber, fluid applied, 20 mils thick",G-5,2000.0,0.02,,2.65,0.9,0.08,3.63,4.47
+07 56 10.10,Elastomeric Roofing,120,"50 mils, reinforced",,1200.0,0.033,,0.64,1.5,0.14,2.28,3.29
+07 56 10.10,Elastomeric Roofing,130,"For walking surface, add",,900.0,0.044,,1.7,2.0,0.18,3.88,5.3
+07 56 10.10,Elastomeric Roofing,300,"Neoprene, fluid applied, 20 mil thick, not reinforced",G-1,1135.0,0.049,,1.35,2.29,0.49,4.13,5.7
+07 56 10.10,Elastomeric Roofing,600,"Non woven polyester, reinforced",,1960.0,0.058,,1.51,2.7,0.57,4.78,6.65
+07 56 10.10,Elastomeric Roofing,700,"5 coat neoprene deck, 60 mil thick, under 10,000 S.F.",,325.0,0.172,,4.5,8.0,1.7,14.2,19.75
+07 56 10.10,Elastomeric Roofing,900,"Over 10,000 S.F.",,625.09,,,4.5,4.15,0.88,9.53,12.65
+07 57 13.10,Sprayed Polyurethane Foam Roofing (S.P.F.),100,Primer for metal substrate (when required),G-2A,3000.0,0.008,S.F.,0.59,0.35,0.22,1.16,1.45
+07 57 13.10,Sprayed Polyurethane Foam Roofing (S.P.F.),200,Primer for non-metal substrate (when required),,3000.008,,,0.22,0.35,0.22,0.79,1.04
+07 57 13.10,Sprayed Polyurethane Foam Roofing (S.P.F.),300,"Closed cell spray, polyurethane foam, 3 lb./C.F. density, 1"", R6.7",,15000.0,0.002,,0.83,0.07,0.04,0.94,1.07
+07 57 13.10,Sprayed Polyurethane Foam Roofing (S.P.F.),400,"2"", R13.4",,13125.0,0.002,,1.66,0.08,0.05,1.79,2.01
+07 57 13.10,Sprayed Polyurethane Foam Roofing (S.P.F.),500,"3"", R18.6",,11485.0,0.002,,2.49,0.09,0.06,2.64,2.94
+07 57 13.10,Sprayed Polyurethane Foam Roofing (S.P.F.),550,"4"", R24.8",,10080.0,0.002,,3.31,0.11,0.07,3.49,3.89
+07 57 13.10,Sprayed Polyurethane Foam Roofing (S.P.F.),700,Spray on silicone coating,,2500.0,0.01,,0.02,0.42,0.26,0.7,0.98
+07 44 33.10,Metal Faced Panels and Accessories,1500,"Accessories, outside corner",1 Shee,175,0.046,LF.,1.6,3.09,,4.69,6.4
+07 44 33.10,Metal Faced Panels and Accessories,1600,Inside corner,1 Shee,175,0.046,L.F.,1.29,3.09,,4.38,6.C
+07 44 33.10,Metal Faced Panels and Accessories,1800,Batten mounting clip,,200,0.04,,0.47,2.7,,3.17,4.5
+07 44 33.10,Metal Faced Panels and Accessories,1900,Low profile batten,,480,0.017,,0.6,1.13,,1.73,2.3
+07 44 33.10,Metal Faced Panels and Accessories,2100,High profile batten,,480,0.017,,1.34,1.13,,2.47,3.1
+07 44 33.10,Metal Faced Panels and Accessories,2200,Water table,,200,0.04,,2.02,2.7,,4.72,6.3
+07 44 33.10,Metal Faced Panels and Accessories,2400,Horizontal joint connector,,200,0.04,,1.53,2.7,,4.23,5.7
+07 44 33.10,Metal Faced Panels and Accessories,2500,Corner cap,,200,0.04,,1.77,2.7,,4.47,6
+07 44 33.10,Metal Faced Panels and Accessories,2700,H-moulding,,480,0.017,,2.1,1.13,,3.23,4.0
+07 46 23.10,Wood Board Siding,3200,"Wood, cedar bevel, A grade, 1/2"" x 6""",1 Carp,295,0.027,S.F.,4.6,1.53,,6.13,7.3
+07 46 23.10,Wood Board Siding,3300,"1/2"" x 8""",,330,0.024,,7.85,1.36,,9.21,10.6
+07 46 23.10,Wood Board Siding,3500,"3/4"" x 10"", clear grade",,375,0.021,,7.65,1.2,,8.85,10.2
+07 46 23.10,Wood Board Siding,3600,"""B"" grade",,375,0.021,,4.56,1.2,,5.76,6.8
+07 46 23.10,Wood Board Siding,3800,"Cedar, rough sawn, 1"" x 4"", A grade, natural",,220.036,,,9.15,2.05,,11.2,13.1
+07 46 23.10,Wood Board Siding,3900,Stained,,220 : .036,,,9.1,2.05,,11.15,13.0
+07 46 23.10,Wood Board Siding,4100,"1"" x 12"", board & batten, #3 & Btr., natural",,420,0.019,,5.05,1.07,,6.12,7.1
+07 46 23.10,Wood Board Siding,4200,Stained,,420,0.019,,5.5,1.07,,6.57,7.6
+07 46 23.10,Wood Board Siding,4400,"1"" x 8"" channel siding, #3 & Btr., natural",,330,0.024,,5.45,1.36,,6.81,8.0
+07 46 23.10,Wood Board Siding,4500,Stained,,330,0.024,,6.25,1.36,,7.61,8.9
+07 46 23.10,Wood Board Siding,4700,"Redwood, clear, beveled, vertical grain, 1/2"" x 4""",,220,0.036,,5.2,2.05,,7.25,8.7
+07 46 23.10,Wood Board Siding,4750,"1/2"" x 6""",,295.027,,,5.65,1.53,,7.18,8.4
+07 46 23.10,Wood Board Siding,4800,"1/2"" x 8""",,330,0.024,,5.75,1.36,,7.11,8.4
+07 46 23.10,Wood Board Siding,5000,"3/4"" x 10""",,375,0.021,,5.6,1.2,,6.8,7.9
+07 46 23.10,Wood Board Siding,5200,"Channel siding, 1"" x 10"", B grade",,375,0.021,,5.1,1.2,,6.3,7.4
+07 46 23.10,Wood Board Siding,5250,"Redwood, T&G boards, B grade, 1"" x 4""",,220,0.036,,7.3,2.05,,9.35,11.0
+07 46 23.10,Wood Board Siding,5270,"1"" x 8""",,330,0.024,,9.35,1.36,,10.71,12.3
+07 46 23.10,Wood Board Siding,5400,"White pine, rough sawn, 1"" x 8"", natural",,330,0.024,,2.51,1.36,,3.87,4.7
+07 46 23.10,Wood Board Siding,5500,Stained,,330,0.024,,2.51,1.36,,3.87,4.7
+07 46 29.10,Plywood Siding Options,900,"Plywood, medium density overlaid, 3/8"" thick",2 Carp,750,0.021,S.F.,1.5,1.2,,2.7,3.4
+07 46 29.10,Plywood Siding Options,1000,"1/2"" thick",,700,0.023,,1.98,1.29,,3.27,4.1
+07 46 29.10,Plywood Siding Options,1100,"3/4"" thick",,650,0.025,,2.62,1.39,,4.01,4.9
+07 46 29.10,Plywood Siding Options,1600,"Texture 1-11, cedar, 5/8"" thick, natural",,675,0.024,,2.69,1.33,,4.02,4.9
+07 46 29.10,Plywood Siding Options,1700,Factory stained,,675,1.024,.1,2.98,1.33,,4.31,5.2
+07 46 29.10,Plywood Siding Options,1900,"Texture 1-11, fi, 5/8"" thick, natural",2 Carp,675,0.024,S.F.,1.47,1.33,,2.8,3.6
+07 46 29.10,Plywood Siding Options,2000,Factory stained,,675,1.024,1,2.1,1.33,,3.43,4.3
+07 46 29.10,Plywood Siding Options,2050,"Texture 1-11, S.Y.P., 5/8"" thick, natural",,675,0.024,,1.66,1.33,,2.99,3.8
+07 46 29.10,Plywood Siding Options,2100,Factory stained,,675,0.024,,1.6,1.33,,2.93,3.7
+07 46 29.10,Plywood Siding Options,2200,"Rough sawn cedar, 3/8"" thick, natural",,675,0.024,,1.33,1.33,,2.66,3.4
+07 46 29.10,Plywood Siding Options,2300,Factory stained,,675,0.024,,1.6,1.33,,2.93,3.0
+07 46 29.10,Plywood Siding Options,2500,"Rough sawn fir, 3/8"" thick, natural",,675,0.024,,1.06,1.33,,2.39,3.0
+07 46 29.10,Plywood Siding Options,2600,Factory stained,,675,0.024,,1.18,1.33,,2.51,3.2
+07 46 29.10,Plywood Siding Options,2800,"Redwood, textured siding, 5/8"" thick",,675,0.024,,2.14,1.33,,3.47,4.3
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,10,ALUMINUM ROOF PANELS,,,,,,,,,
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,20,"Corrugated or ribbed, .0155"" thick, natural",- 3,1200.0,0.027,S.F.,0.79,1.51,,2.3,3.13
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,300,Painted,,1200.0,0.027,,1.16,1.51,,2.67,3.54
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,400,"Corrugated, .018"" thick, on steel frame, natural finish",,1200.0,0.027,,1.37,1.51,,2.88,3.77
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,600,Painted,,1200.0,0.027,,1.7,1.51,,3.21,4.13
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,700,"Corrugated, on steel frame, natural, .024"" thick",,1200.0,0.027,,1.98,1.51,,3.49,4.44
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,800,Painted,,1200.0,0.027,,2.26,1.51,,3.77,4.75
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,900,".032"" thick, natural",,1200.0,0.027,,3.22,1.51,,4.73,5.8
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,200,Painted,,1200.0,0.027,,5.25,1.51,,6.76,8.05
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,300,"V-Beam, on steel frame construction, .032"" thick, natural",,1200.0,0.027,,2.82,1.51,,4.33,5.35
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,500,Painted,,1200.0,0.027,,4.57,1.51,,6.08,7.3
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,600,".040"" thick, natural",,1200.0,0.027,,4.11,1.51,,5.62,6.8
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,800,Painted,,1200.0,0.027,,5.5,1.51,,7.01,8.3
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,900,".050"" thick, natural",,1200.0,0.027,,4.22,1.51,,5.73,6.9
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,100,Painted,,1200.0,0.027,,5.05,1.51,,6.56,7.85
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,200,"For roofing on wood frame, deduct",,4600.0,0.007,,0.08,0.39,,0.47,0.68
+07 46 29.10,7 41 13.10 Aluminum Roof Panels,-400,"Ridge cap, .032"" thick, natural",,800.0,0.04,LF,3.47,2.26,,5.73,7.2
+07 46 29.10,7 41 13.20 Steel Roofing Panels,10,STEEL ROOFING PANELS,,,,,,,,,
+07 46 29.10,7 41 13.20 Steel Roofing Panels,12,"Corrugated or ribbed, on steel framing, 30 ga. galv",G-3,1100.0,0.029,S.F.,1.19,1.65,,2.84,3.78
+07 46 29.10,7 41 13.20 Steel Roofing Panels,100,28 ga.,,1050.0,0.03,,1.62,1.72,,3.34,4.37
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1300,26 ga.,,1000.0,0.032,,2.0,1.81,,3.81,4.91
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1400,24 ga.,,950.0,0.034,,3.15,1.91,,5.06,6.35
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1600,"Colored, 28 ga.",,1050.0,0.03,,1.97,1.72,,3.69,4.76
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1700,26 ga.,,1000.0,0.032,,2.23,1.81,,4.04,5.15
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1710,"Flat profile, 1-3/4"" standing seams, 10"" wide, standard finish, 26 ga.",,1000.0,0.032,,4.1,1.81,,5.91,7.2
+07 46 29.10,7 41 13.20 Steel Roofing Panels,715,24 ga.,,950.0,0.034,,4.78,1.91,,6.69,8.1
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1720,22 ga.,,900.0,0.036,,5.9,2.01,,7.91,9.5
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1725,"Zinc aluminum alloy finish, 26 ga.",,1000.0,0.032,,3.27,1.81,,5.08,6.3
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1730,24 ga.,,950.0,0.034,,3.86,1.91,,5.77,7.1
+07 46 29.10,7 41 13.20 Steel Roofing Panels,735,22 ga.,,900.0,0.036,,4.41,2.01,,6.42,7.85
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1740,"12"" wide, standard finish, 26 ga.",,1000.0,0.032,,6.55,1.81,,8.36,9.95
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1745,24 ga.,,950.0,0.034,,5.5,1.91,,7.41,8.9
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1750,"Zinc aluminum alloy finish, 26 ga.",,1000.0,0.032,,4.64,1.81,,6.45,7.8
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1755,24 ga.,,950.0,0.034,,4.97,1.91,,6.88,8.3
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1840,"Flat profile, 1"" x 3/8"" batten, 12"" wide, standard finish, 26 ga.",,1000.0,0.032,,3.6,1.81,,5.41,6.65
+07 46 29.10,7 41 13.20 Steel Roofing Panels,-1845,24 ga.,,950.0,0.034,,6.35,1.91,,8.26,9.8
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1850,22 ga.,,900.0,0.036,,5.1,2.01,,7.11,8.6
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1855,"Zinc aluminum alloy finish, 26 ga.",G-3,1000.0,0.032,S.F.,3.47,1.81,,5.28,6.55
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1860,24 ga.,,950.0,0.034,,5.7,1.91,,7.61,9.15
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1865,22 ga.,,900.0,0.036,,4.45,2.01,,6.46,7.9
+07 46 29.10,7 41 13.20 Steel Roofing Panels,1870,"16-1/2"" wide, standard finish, 24 ga.",,950.0,0.034,,5.6,1.91,,7.51,9.05
+07 46 29.10,7 41 13.20 Steel Roofing Panels,875,22 ga.,,900.0,0.036,,4.7,2.01,,6.71,8.15
+07 46 29.10,7 41 13.20 Steel Roofing Panels,880,"Zinc aluminum alloy finish, 24 ga.",,950.0,0.034,,5.05,1.91,,6.96,8.4
+07 46 29.10,7 41 13.20 Steel Roofing Panels,885,22 ga.,,900.0,0.036,,4.14,2.01,,6.15,7.55
+07 46 29.10,7 41 13.20 Steel Roofing Panels,890,"Flat profile, 2"" x 2"" batten, 12"" wide, standard finish, 26 ga.",,1000.0,0.032,,4.14,1.81,,5.95,7.25
+07 46 29.10,7 41 13.20 Steel Roofing Panels,895,24 ga.,,950.0,0.034,,5.3,1.91,,7.21,8.7
+07 46 29.10,7 41 13.20 Steel Roofing Panels,9001,22 ga.,,900.0,0.036,,6.5,2.01,,8.51,10.15
+07 46 29.10,7 41 13.20 Steel Roofing Panels,905,"Zinc aluminum alloy finish, 26 ga.",,1000.0,0.032,,4.19,1.81,,6.0,7.3
+07 46 29.10,7 41 13.20 Steel Roofing Panels,910,24 ga.,,950.0,0.034,,6.35,1.91,,8.26,9.8
+07 46 29.10,7 41 13.20 Steel Roofing Panels,915,22 ga.,,900.0,0.036,,5.15,2.01,,7.16,8.7
+07 46 29.10,7 41 13.20 Steel Roofing Panels,920,"16-1/2"" wide, standard finish, 24 ga.",,950.0,0.034,,4.6,1.91,,6.51,7.9
+07 46 33.10,Vinyl Siding,4225,"Colors for accessories and trim, odd",,,,LF,,0.3,,,0.3
+07 46 33.20,Polypropylene Siding,10,POLYPROPYLENE SIDING,,,,,,,,,
+07 46 33.20,Polypropylene Siding,4090,"Shingle profile, random grooves, double 7",2 Carp,400.0,0.04,S.F.,3.7,2.25,,5.95,7.4
+07 46 33.20,Polypropylene Siding,4092,Cornerpost for above,1 Carp,365.0,0.022,LF,16.4,1.23,,17.63,19.9
+07 46 33.20,Polypropylene Siding,4095,Triple 5,2 Carp,400.0,0.04,S.F.,3.88,2.25,,6.13,7.6
+07 46 33.20,Polypropylene Siding,4097,Cornerpost for above,11 Carp,365.0,0.022,LF,13.15,1.23,,14.38,16.3
+07 46 33.20,Polypropylene Siding,5000,"Staggered butt, double 7""",12 Carp,400.0,0.04,S.F.,4.33,2.25,,6.58,8.1
+07 46 33.20,Polypropylene Siding,5002,Cornerpost for above,11 Carp,365.0,0.022,LF,15.25,1.23,,16.48,18.6
+07 46 33.20,Polypropylene Siding,5010,"Half round, double 6-1/4""",2 Carp,360.0,0.044,S.F.,4.5,2.5,,7.0,8.6
+07 46 33.20,Polypropylene Siding,5020,"Shake profile, staggered butt, double 9""",,510.0,0.031,"""",4.01,1.77,,5.78,7.0
+07 46 33.20,Polypropylene Siding,5022,Cornerpost for above,1 Carp,365.0,0.022,LF,12.25,1.23,,13.48,15.3
+07 46 33.20,Polypropylene Siding,5030,"Straight butt, double 7""",2 Carp,400.0,0.04,S.F.,4.5,2.25,,6.75,8.3
+07 46 33.20,Polypropylene Siding,5032,Cornerpost for above,1 Carp,365.0,0.022,LF,15.3,1.23,,16.53,18.6
+07 46 33.20,Polypropylene Siding,6000,"Accessories, J channel, 5/8"" pocket",12 Carp,700.0,0.023,"""",0.68,1.29,,1.97,2.6
+07 46 33.20,Polypropylene Siding,6010,"3/4"" pocket",12 Carp,695.0,0.023,LF,0.76,1.3,,2.06,2.7
+07 46 33.20,Polypropylene Siding,6020,"1-1/4"" pocket",,680.0,0.024,,1.28,1.32,,2.6,3.3
+07 46 33.20,Polypropylene Siding,6030,Aluminum starter strip,,700.0,0.023,,0.32,1.29,,1.61,2.2
+07 46 33.20,07 46 46 - Fiber Cement Siding,10,FIBER CEMENT SIDING,,,,,,,,,
+07 46 33.20,07 46 46 - Fiber Cement Siding,20,"Lap siding, 5/16"" thick, 6"" wide, 4-3/4"" exposure, smooth texture",2 Carp,415.0,0.039,S.F.,1.94,2.17,,4.11,5.3
+07 46 33.20,07 46 46 - Fiber Cement Siding,25,Woodgrain texture,,415.0,0.039,,1.94,2.17,,4.11,5.3
+07 46 33.20,07 46 46 - Fiber Cement Siding,30,"7-1/2"" wide, 6-1/4"" exposure, smooth texture",,425.0,0.038,,1.77,2.12,,3.89,5.1
+07 46 33.20,07 46 46 - Fiber Cement Siding,35,Woodgrain texture,,425.0,0.038,,1.77,2.12,,3.89,5.1
+07 46 33.20,07 46 46 - Fiber Cement Siding,40,"8"" wide, 6-3/4"" exposure, smooth texture",,425.0,0.038,,1.9,2.12,,4.02,5.2
+07 46 33.20,07 46 46 - Fiber Cement Siding,45,Rough sawn texture,,425.0,0.038,,1.9,2.12,,4.02,5.2
+07 46 33.20,07 46 46 - Fiber Cement Siding,50,"9-1/2"" wide, 8-1/4"" exposure, smooth texture",,440.0,0.036,,1.77,2.05,,3.82,5.0
+07 46 33.20,07 46 46 - Fiber Cement Siding,55,Woodgrain texture,,440.0,0.036,,1.77,2.05,,3.82,5.0
+07 46 33.20,07 46 46 - Fiber Cement Siding,60,"12"" wide, 10-3/8"" exposure, smooth texture",,455.0,0.035,,1.67,1.98,,3.65,4.7
+07 46 33.20,07 46 46 - Fiber Cement Siding,65,Woodgrain texture,,455.0,0.035,,1.67,1.98,,3.65,4.7
+07 46 33.20,07 46 46 - Fiber Cement Siding,70,"Panel siding, 5/16"" thick, smooth texture",,750.0,0.021,,1.33,1.2,,2.53,3.2
+07 46 33.20,07 46 46 - Fiber Cement Siding,75,Stucco texture,,750.0,0.021,,1.33,1.2,,2.53,3.2
+07 46 33.20,07 46 46 - Fiber Cement Siding,80,Grooved woodgrain texture,,750.0,0.021,,1.33,1.2,,2.53,3.2
+07 46 33.20,07 46 46 - Fiber Cement Siding,88,"Shingle siding, 48"" x 15-1/4"" panels, 7"" exposure",,700.0,0.023,,2.5,1.29,,3.79,4.6
+07 46 33.20,07 46 46 - Fiber Cement Siding,90,Wood starter strip,,400.0,0.04,LF,0.43,2.25,,2.68,3.8
+07 46 33.20,07 46 73 - Soffit Options,10,SOFFIT OPTIONS,,,,,,,,,
+07 46 33.20,07 46 73 - Soffit Options,12,"Aluminum, residential, .020"" thick",1 Carp,210.0,0.038,S.F.,1.69,2.14,,3.83,5.0
+07 46 33.20,07 46 73 - Soffit Options,100,"Baked enamel on steel, 16 or 18 ga.",,105.0,0.076,,4.94,4.29,,9.23,11.8
+07 46 33.20,07 46 73 - Soffit Options,300,"Polyvinyl chloride, white, solid",,230.0,0.035,,1.56,1.96,,3.52,4.6
+07 46 33.20,07 46 73 - Soffit Options,400,Perforated,,230.0,0.035,,1.71,1.96,,3.67,4.7
+07 46 33.20,07 46 73 - Soffit Options,500,"For colors, add",,,,,.זן,,,0.11,0.1
+07 58 10.10,Roll Roofing,100,"Asphalt, mineral surface",,,,,,,,,
+07 58 10.10,Roll Roofing,200,"1 ply #15 organic felt,1 ply mineral surfaced",,,,,,,,,
+07 58 10.10,Roll Roofing,300,"Selvage roofing, lap 19"", nailed & mopped",G1,27.0,2.074,Sq.,72.0,96.0,20.5,188.5,25.0
+07 58 10.10,Roll Roofing,400,"3 plies glass fiber felt (type IV), 1 ply mineral surfaced",,,,,,124.0,,,
+07 58 10.10,Roll Roofing,500,"Selvage roofing, lapped 19"", mopped",-1,25.0,2.24,Sq.,124.0,140.0,222.0,250.0,33.0
+07 58 10.10,Roll Roofing,600,"Coated glass fiber base sheet, 2 plies of glass fiber",,,,,,,,,
+07 58 10.10,Roll Roofing,700,"Felt (type IV), 1 ply mineral surfaced selvage",,,,,,,,,
+07 58 10.10,Roll Roofing,800,"Roofing, lapped 19"", mopped",G-1,25.0,2.24,Sq.,133.0,104.0,223.0,259.0,343.0
+07 58 10.10,Roll Roofing,900,On nailable decks,=,24.0,2.333,"""",,122.0,108.0,,253.0
+07 58 10.10,Roll Roofing,1000,"3 plies glass fiber felt (type II), 1 ply mineral surfaced",,,,,,,,,
+07 58 10.10,Roll Roofing,1100,"Selvage roofing, lapped 19"", mopped",-1,25.0,2.24,Sq.,124.0,1114.0,22.0,250.0,33.0
+07 61 13.10,"Standing Seam Sheet Metal Roofing, Field Fab.",10,"STANDING SEAM SHEET METAL ROOFING, FIELD FABRICATED",,,,,,,,,
+07 61 13.10,"Standing Seam Sheet Metal Roofing, Field Fab.",400,"Copper standing seam roofing, over 10 squares, 16 oz., 125 lb./sq.",1 Shee,1.3,6.154,Sq.,"1,775",415,,"2,190","2,57"
+07 61 13.10,"Standing Seam Sheet Metal Roofing, Field Fab.",600,"18 oz., 140 lb./sq.",,1.2,6.667,,"1,975",450,,"2,425","2,85"
+07 61 13.10,"Standing Seam Sheet Metal Roofing, Field Fab.",700,"20 oz., 150 lb./sq.",,1.1,7.273,,"2,150",490,,"2,640","3,10"
+07 61 13.10,"Standing Seam Sheet Metal Roofing, Field Fab.",1200,"For abnormal conditions or small areas, add",,,,,,25 %,100 %,,
+07 61 13.10,"Standing Seam Sheet Metal Roofing, Field Fab.",1300,"For lead-coated copper, add",,,,,,25 %,,,
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",10,"BATTEN SEAM SHEET METAL ROOFING, FIELD FABRICATED",,,,,,,,,
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",12,"Copper batten seam roofing, over 10 sq., 16 oz., 130 lb./sq.",1 Shee,1.10,7.273,Sq.,"2,250",490.0,,"2,740","3,22"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",20,"Lead batten seam roofing, 5 lb./S.F.",,1.20.6.667,,,"2,725",450.0,,"3,175","3,65"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",100,"Zinc/copper alloy batten seam roofing, .020"" thick",,1.20,6.667,,785,450.0,,"1,235","1,55"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",200,"Copper roofing, batten seam, over 10 sq., 18 oz., 145 lb./sq.",,,8.0,,"2,500",540.0,,"3,040","3,57"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",300,"20 oz., 160 lb./sq.",1 Shee,,8.0,Sq.,"2,725",540.0,,"3,265","3,82"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",500,"Stainless steel batten seam roofing, type 304, 28 ga.",,1.20,6.667,,495,450.0,,945,"1,22"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",600,26 ga.,,1.15,6.957,,615,470.0,,"1,085","1,37"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",800,"Zinc, copper alloy roofing, batten seam, .027"" thick",,1.15,6.957,,935,470.0,,"1,405","1,72"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",900,".032"" thick",,1.10,7.273,,965,490.0,,"1,455","1,80"
+07 61 16.10,"Batten Seam Sheet Metal Roofing, Field Fab.",1000,".040"" thick",,1.05,7.619,,"1,350",515.0,,"1,865","2,27"
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",10,"FLAT SEAM SHEET METAL ROOFING, FIELD FABRICATED",,,,,,,,,
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",900,"Copper flatseam roofing, over 10 squares, 16 oz., 115 lb./sq.",1 Shee,1.2,6.667,Sq.,"1,650",450.0,,"2,100","2,47"
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",950,"18 oz., 130 lb./sq.",,1.15,6.957,,"1,850",470.0,,"2,320","2,72"
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",1000,"20 oz., 145 lb./sq.",,1.1,7.273,,"2,000",490.0,,"2,490","2,95"
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",1008,"Zinc flat seam roofing, .020"" thick",,1.2,6.667,,670,450.0,,"1,120","1,42"
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",1010,".027"" thick",,1.15,6.957,,800,470.0,,"1,270","1,60"
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",1020,".032"" thick",,1.12,7.143,,820,485.0,,"1,305","1,62"
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",1030,".040"" thick",,1.05,7.619,,"1,150",515.0,,"1,665","2,09"
+07 61 19.10,"Flat Seam Sheet Metal Roofing, Field Fabricated",1100,"Lead flat seam roofing, 5 lb./S.F.",,1.3,6.154,,"2,325",415.0,,"2,740","3,17"
+07 13.20,Built-Up Roofing Systems,5010,"glass fiber felt (type IV), mopped",G1,19,2.947,Sq.,185,137,29.0,351.0,455
+07 13.20,Built-Up Roofing Systems,5300,On nailable decks,,18,3.111,,162,144,30.5,336.5,445
+07 13.20,Built-Up Roofing Systems,5600,"4 plies glass fiber felt (type IV), mopped",,21,2.667,,253,124,26.0,403.0,505
+07 13.20,Built-Up Roofing Systems,5800,On nailable decks,,20,2.8,,230,130,27.5,387.5,495
+07 51 13.30,Cants,10,CANTS,,,,,,,,,
+07 51 13.30,Cants,12,"Lumber, treated, 4"" x 4"" cut diagonally",11 Rofc,325.0,0.025,L.F.,1.96,1.22,,3.18,4.1
+07 51 13.30,Cants,300,"Mineral or fiber, trapezoidal, 1"" x 4"" x 48""",,325.0,0.025,,0.37,1.22,,1.59,2.3
+07 51 13.30,Cants,400,"1-1/2"" x 5-5/8"" x 48""",,325.0,0.025,,0.49,1.22,,1.71,2.5
+07 51 13.40,Felts,10,FELTS,,,,,,,,,
+07 51 13.40,Felts,12,"Glass fibered roofing felt, #15, not mopped",1 Rofc,58.0,0.138,Sq.,9.95,6.85,,16.8,22.0
+07 51 13.40,Felts,300,"Base sheet, #80, channel vented",,58.0,0.138,,48.5,6.85,,55.35,64.0
+07 51 13.40,Felts,400,"#70, coated",,58.0,0.138,,19.25,6.85,,26.1,32.0
+07 51 13.40,Felts,500,"Cap, #87, mineral surfaced",,58.0,0.138,,73.5,6.85,,80.35,92.0
+07 51 13.40,Felts,600,"Flashing membrane, #65",,16.0,0.5,,10.35,25.0,,35.35,51.5
+07 51 13.40,Felts,800,"Coal tar fibered, #15, no mopping",,58.0,0.138,,19.15,6.85,,226.0,32.0
+07 51 13.40,Felts,900,"Asphalt felt, #15, 4 sq./roll, no mopping",,58.0,0.138,,4.43,6.85,,11.28,15.9
+07 51 13.40,Felts,1100,"#30, 2 sq./roll",,58.0,0.138,,8.7,6.85,,15.55,20.5
+07 51 13.40,Felts,1200,"Double coated, #33",,58.0,0.138,,12.35,6.85,,19.2,24.5
+07 51 13.40,Felts,1400,"#40, base sheet",,58.0,0.138,,11.35,6.85,,18.2,23.5
+07 51 13.40,Felts,1450,Coated and saturated,,58.0,0.138,,12.45,6.85,,19.3,25.0
+07 51 13.40,Felts,1500,"Tarred felt, organic, #15, 4 sq. rolls",,58.0,0.138,,16.6,6.85,,23.45,29.0
+07 51 13.40,Felts,1550,"#30, 2 sq. roll",,58.0,138.0,,27.5,6.85,,34.35,41.0
+07 51 13.40,Felts,1700,"Add for mopping above felts, per ply, asphalt, 24 lb./sq.",G-1,192.0,0.292,,11.0,13.5,2.87,27.37,37.5
+07 51 13.40,Felts,1800,"Coal tar mopping, 30 lb./sq.",,186.0,0.301,,19.8,13.95,2.96,36.71,148.0
+07 51 13.40,Felts,1900,"Flood coat, with asphalt, 60 lb./sq.",,60.0,0.933,,27.5,43.5,9.2,80.2,110.0
+07 51 13.40,Felts,2000,"With coal tar, 75 lb./sq.",,56.0,1.0,,49.5,46.5,9.85,105.85,140.0
+07 51 13.50,Walkways for Built-Up Roofs,10,WALKWAYS FOR BUILT-UP ROOFS,,,,,,,,,
+07 51 13.50,Walkways for Built-Up Roofs,20,"Asphalt impregnated, 3' x 6' x 1/2"" thick",1 Rofc,400.0,0.02,S.F.,1.74,0.99,,2.73,3.0
+07 51 13.50,Walkways for Built-Up Roofs,100,"3' x 3' x 3/4"" thick",1 Rofc,400.0,0.02,S.F.,5.0,0.99,,5.99,7.0
+07 51 13.50,Walkways for Built-Up Roofs,300,"Concrete patio blocks, 2"" thick, natural",1 Clab,115.0,0.07,,3.7,3.17,,6.87,8.1
+07 51 13.50,Walkways for Built-Up Roofs,400,Colors,,115.0,0.07,,2.42,3.17,,5.59,7.0
+07 52 13.10,APP Modified Bituminous Membrane,10,APP MODIFIED BITUMINOUS MEMBRANE,R075213-30,,,,,,,,
+07 52 13.10,APP Modified Bituminous Membrane,20,"Base sheet, #15 glass fiber felt, nailed to deck",1 Rofc,58.0,0.138,Sq.,11.95,6.85,,18.8,242.233
+07 52 13.10,APP Modified Bituminous Membrane,30,Spot mopped to deck,G-1,295.0,0.19,,,15.45,8.8,1.87,26.12
+07 52 13.10,APP Modified Bituminous Membrane,40,Fully mopped to deck,"""",192.0,0.292,,21.0,13.5,2.87,37.37,48.0
+07 52 13.10,APP Modified Bituminous Membrane,50,"#15 organic felt, nailed to deck",1 Rofc,58.0,0.138,,6.4,6.85,,13.25,18.0
+07 52 13.10,APP Modified Bituminous Membrane,60,Spot mopped to deck,G1,295.0,190.0,,9.95,8.8,1.87,20.62,27.0
+07 52 13.10,APP Modified Bituminous Membrane,70,Fully mopped to deck,"""",192.292,,,15.4,13.5,2.87,31.77,42.0
+07 52 13.10,APP Modified Bituminous Membrane,2100,"APP mod., smooth surf. cap sheet, poly. reinf., torched, 160 mils",G-5,2100.0,0.019,S.F.,0.75,0.86,0.08,1.69,2.0
+07 52 13.10,APP Modified Bituminous Membrane,2150,170 mils,,2100.0,0.019,,0.68,0.86,0.08,1.62,2.0
+07 52 13.10,APP Modified Bituminous Membrane,2200,"Granule surface cap sheet, poly. reinf., torched, 180 mils",,2000.0,0.02,,,0.87,0.9,0.08,1.85
+07 52 13.10,APP Modified Bituminous Membrane,2250,"Smooth surface flashing, torched, 160 mils",,1260.0,0.032,,0.75,1.43,0.13,2.31,3.1
+07 52 13.10,APP Modified Bituminous Membrane,2300,170 mils,,1260.0,0.032,,0.68,1.43,0.13,2.24,3.0
+07 42 13.20,Aluminum Siding Panels,2700,Painted,G 3,775,0.041,S.F,3.65,2.34,,5.99,7.5
+07 42 13.20,Aluminum Siding Panels,2750,".050"" thick, natural",,775,-0.041,,3.59,2.34,,5.93,7.45
+07 42 13.20,Aluminum Siding Panels,2760,Painted,,775,0.041,,8.05,2.34,,10.39,12.35
+07 42 13.20,Aluminum Siding Panels,3300,"For siding on wood frame, deduct from above",,2800,0.011,,0.6,0.65,,0.74,1.07
+07 42 13.20,Aluminum Siding Panels,3400,"Screw fasteners, aluminum, self tapping, neoprene washer, 1""",,,,,214.0,,,214.0,235.0
+07 42 13.20,Aluminum Siding Panels,3600,"Stitch screws, self tapping, with neoprene washer, 5/8""",,,,,111.0,,,111.0,122.0
+07 42 13.20,Aluminum Siding Panels,3630,"Flashing, sidewall, .032"" thick",G 3,800,0.04,LF,2.13,2.26,,4.39,5.75
+07 42 13.20,Aluminum Siding Panels,3650,"End wall, .040"" thick",,800,0.04,,2.51,2.26,,4.77,6.15
+07 42 13.20,Aluminum Siding Panels,3670,"Closure strips, corrugated, .032"" thick",,800,0.04,,1.0,2.26,,3.26,4.49
+07 42 13.20,Aluminum Siding Panels,3680,"Ribbed, 4"" or 8"", .032"" thick",,800,0.04,,1.05,2.26,,3.31,4.55
+07 42 13.20,Aluminum Siding Panels,3690,"V-beam, .040"" thick",,800.040I,,,1.53,2.26,,3.79,5.05
+07 42 13.20,Aluminum Siding Panels,3800,"Horizontal, colored clapboard, 8"" wide, plain",2 Carp,515,0.031,S.F.,3.21,1.75,,4.96,6.15
+07 42 13.20,Aluminum Siding Panels,38101,Insulated,,515,1.031,,3.1,1.75,,4.85,6.0
+07 42 13.20,Aluminum Siding Panels,4000,"Vertical board & batten, colored, non-insulated",12 Carp,515,0.031,S.F.,2.7,1.75,,4.45,5.55
+07 42 13.20,Aluminum Siding Panels,4200,"For simulated wood design, add",,,,,0.18,,,0.18,0.2
+07 42 13.20,Aluminum Siding Panels,4300,"Corners for above, outside",2 Carp,515,0.031,V.L.F,4.13,11775.0,,5.88,7.15
+07 42 13.20,Aluminum Siding Panels,4500,Inside corners,M,515,0.031,,1.85,1.75,,3.6,4.64
+07 42 13.30,Steel Siding,10,STEEL SIDING,,,,,,,,,
+07 42 13.30,Steel Siding,20,"Beveled, vinyl coated, 8"" wide",⚫1 Carp,265,0.03,S.F.,1.95,1.7,,3.65,4.68
+07 42 13.30,Steel Siding,50,"10"" wide","""1",275,0.029,,1.91,1.64,,3.55,4.54
+07 42 13.30,Steel Siding,80,"Galv, corrugated or ribbed, on steel frame, 30 ga.",G-3,800,0.04,,1.21,2.26,,3.47,4.72
+07 42 13.30,Steel Siding,100,28 ga.,,795,0.04,,1.31,2.28,,3.59,4.85
+07 42 13.30,Steel Siding,300,26 ga.,,790.041,,,1.7,2.29,,3.99,5.3
+07 42 13.30,Steel Siding,400,24 go.,,785 1.041,,,1.71,2.31,,4.02,5.35
+07 42 13.30,Steel Siding,600,22 ga.,,770,0.042,,1.86,2.35,,4.21,5.6
+07 42 13.30,Steel Siding,700,"Colored, corrugated/ribbed, on steel frame, 10 yr. finish, 28 ga.",,800,0.04,,2.38,2.26,,4.64,6.0
+07 42 13.30,Steel Siding,900,26 ga.,,795,0.04,,2.09,2.28,,4.37,5.7
+07 42 13.30,Steel Siding,1000,24 ga.,,790,0.041,,2.34,2.29,,4.63,6.0
+07 42 13.30,Steel Siding,1020,20 ga.,,785,0.041,,2.98,2.31,,5.29,6.75
+07 42 13.30,Steel Siding,1200,"Factory sandwich panel, 26 ga., 1"" insulation, galvanized",,380,0.084,,5.4,4.76,,10.16,13.1
+07 42 13.30,Steel Siding,1300,Colored 1 side,,380,0.084,,7.35,4.76,,12.11,15.2
+07 42 13.30,Steel Siding,1500,Galvanized 2 sides,,380 : .084 !,,,8.3,4.76,,13.06,16.25
+07 42 13.30,Steel Siding,1600,Colored 2 sides,,380.084 !,,,8.55,4.76,,13.31,16.55
+07 42 13.30,Steel Siding,1800,"Acrylic paint face, regular paint liner",,380,0.084,,6.3,4.76,,11.06,14.05
+07 42 13.30,Steel Siding,1900,"For 2"" thick polystyrene, add",,3680,,,1.04,,,1.04,1.14
+07 42 13.30,Steel Siding,2000,"22 ga., galv, 2"" insulation, baked enamel exterior",G 3,,0.089,,12.35,5.05,,17.4,21.0
+07 42 13.30,Steel Siding,2100,Polyvinylidene exterior finish,=,,0.089,,13.1,5.05,,18.15,22.0
+07 44 33.10,Metal Faced Panels and Accessories,10,METAL FACED PANELS AND ACCESSORIES,,,,,,,,,
+07 44 33.10,Metal Faced Panels and Accessories,400,"Textured aluminum, 4'x8'x5/16"" plywood backing, single face",2 Shee,375.0,0.043,S.F,4.08,2.88,,6.96,8.85
+07 44 33.10,Metal Faced Panels and Accessories,600,Double face,,375.0,0.043,,4.48,2.88,,7.36,9.25
+07 44 33.10,Metal Faced Panels and Accessories,700,"4'x10'x5/16"" plywood backing, single face",,375.0,0.043,,4.06,2.88,,6.94,8.8
+07 44 33.10,Metal Faced Panels and Accessories,900,Double face,1,375.0,0.043,,5.15,2.88,,8.03,10.0
+07 44 33.10,Metal Faced Panels and Accessories,1000,"4'x12'x5/16"" plywood backing, single face",,375.0,0.043,,3.78,2.88,,6.66,8.5
+07 44 33.10,Metal Faced Panels and Accessories,1300,"Smooth aluminum, 1/4"" plywood panel, fluoropolymer finish, double face",,375.0,0.043,,5.65,2.88,,8.53,10.6
+07 44 33.10,Metal Faced Panels and Accessories,1350,"Clear anodized finish, double face",,375.0,0.043,,9.6,2.88,,12.48,14.9
+07 44 33.10,Metal Faced Panels and Accessories,1400,"Double face textured aluminum, structural panel, 1"" EPS insulation",,375.0,0.043,,5.9,2.88,,8.78,10.8
+07 52 13.10,Atactic-Polypropylene-Modified Bituminous Membrane Roofing,2350,"Granule surface flashing, torched, 180 mils",G 5,1260,0.032,S.F.,0.87,1.43,0.13,2.43,3.43
+07 52 13.10,Atactic-Polypropylene-Modified Bituminous Membrane Roofing,2400,Fibrated aluminum coating,11 Rofc,3800,0.002,,0.1,0.1,,0.2,0.28
+07 52 13.10,Atactic-Polypropylene-Modified Bituminous Membrane Roofing,2450,Seam heat welding,,205,0.039,LF,0.1,1.94,,2.04,3.25
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,10,SBS MODIFIED BITUMINOUS MEMBRANE,,,,,,,,,
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,80,"Mod. bit.rfng., SBS mod, gran surf. cap sheet, poly. reinf.",,,,,,,,,
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,650,120 to 149 mils thick,G-1,2000.0,0.028,S.F.,1.27,1.3,22222.0,2.85,3.8
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,750,150 to 160 mils,,2000.0,0.028,,1.96,1.3,0.28,3.54,4.56
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,1600,"Smooth surface cap sheet, mopped, 145 mils",,2100.0,0.027,,0.85,1.24,0.26,2.35,3.23
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,1620,"Lightweight base sheet, fiberglass reinforced, 35 to 47 mil",,2100.0,0.027,,0.28,1.24,0.26,1.78,2.6
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,1625,"Heavyweight base/ply sheet, reinforced, 87 to 120 mil thick",,2100.0,0.027,,0.87,1.24,0.26,2.37,3.25
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,1650,"Granulated walkpad, 180 to 220 mils",.11 Rofc,400.0,0.02,,1.75,0.99,,2.74,3.53
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,1700,"Smooth surface flashing, 145 mils",G-1,1260.0,0.044,,0.85,2.06,0.44,3.35,4.76
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,1800,150 mils,,1260.0,0.044,,0.49,2.06,0.44,2.99,4.36
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,1900,"Granular surface flashing, 150 mils",,1260.0,0.044,,0.65,2.06,0.44,3.15,4.54
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,2000,160 mils,,1260.0,0.044,,0.73,2.06,0.44,3.23,4.62
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,2010,Elastomeric asphalt primer,1 Rofc,2600.0,0.003,,0.16,0.15,,0.31,0.43
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,2015,"Roofing asphalt, 30 lb./square",G1,19000.0,0.003,,0.14,0.14,0.03,0.31,0.4
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,2020,"Cold process adhesive, 20 to 30 mils thick",1 Rofc,750.0,0.011,S.F.,0.2,0.53,,0.73,1.08
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,2025,"Self adhering vapor retarder, 30 to 45 mils thick",G-5,12150.0,0.019,,1.01,0.84,0.08,1.93,2.56
+07 52 13.10,07 52 16 - Styrene-Butadiene-Styrene Modified Bituminous Membrane Roofing,2050,Seam heat welding,1 Rofc,205.0,0.039,LF,0.1,1.94,,2.04,3.25
+07 52 13.10,07 53 16 - Chlorosulfonate-Polyethylene Roofing,10,CHLOROSULFONATED POLYETHYLENE ROOFING,,,,,,,,,
+07 52 13.10,07 53 16 - Chlorosulfonate-Polyethylene Roofing,800,Chlorosulfonated polyethylene (CSPE),,,,,,,,,
+07 52 13.10,07 53 16 - Chlorosulfonate-Polyethylene Roofing,9004,"45 mils, heat welded seams, plate attachment",G-5,35.0,1.143,Sq.,266.0,51.5,4.75,322.25,380.0
+07 52 13.10,07 53 16 - Chlorosulfonate-Polyethylene Roofing,1100,"Heat welded seams, plate attachment and ballasted",,26.0,1.538,,278.0,69.5,6.4,353.9,425.0
+07 52 13.10,07 53 16 - Chlorosulfonate-Polyethylene Roofing,1200,"60 mils, heat welded seams, plate attachment",,35.0,11.143,,365.0,51.5,4.75,421.25,490.0
+07 52 13.10,07 53 16 - Chlorosulfonate-Polyethylene Roofing,1300,"Heat welded seams, plate attachment and ballasted",,26.0,1.538,,375.0,69.5,6.4,450.9,535.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,10,ETHYLENE - PROPYLENE - DIENE - MONOMER ROOFING (EPDM),,,,,,,,,
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,3500,"Ethylene-propylene diene monomer (EPDM), 45 mils, 0.28 psf",,,,,,,,,
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,3600,Loose laid & ballasted with stone (10 psf),G-5,51.0,0.784,Sq.,122.0,35.5,3.26,139.76,172.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,37001,Mechanically attached,,35.0,1.143,,95.0,51.5,4.75,151.25,193.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,3800,Fully adhered with adhesive,,26.0,1.538,,90.0,69.5,6.4,165.9,218.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4500,"60 mils, 0.40 psf",,,,,,,,,
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4600,Loose-laid & ballasted with stone (10 psf),G-5,51.0,0.784,Sq.,118.0,35.5,3.26,156.76,190.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4700,Mechanically attached,,35.0,1.143,,110.0,51.5,4.75,166.25,210.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4800,Fully adhered with adhesive,,26.0,1.538,,105.0,69.5,6.4,180.9,235.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4810,"45 mil, 0.28 psf, membrane only",,,,,64.5,,,64.5,71.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4820,"60 mil, 0.40 psf, membrane only",,,,,78.5,,,78.5,86.5
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4850,"Seam tape for membrane, 3"" x 100' roll",,,,Ea.,42.0,,,42.0,46.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4900,"Batten strips, 10' sections",,,,,1555.71,,,5.7,6.3
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4910,"Cover tape for batten strips, 6"" x 100' roll",,,,,156.0,,,156.0,172.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4930,Plate anchors,,,,,105.0,,,105.0,115.0
+07 52 13.10,07 53 23 - Ethylene-Propylene-Diene-Monomer Roofing,4970,"Adhesive for fully adhered systems, 60 S.F./gal.",,,,S.F.,0.7,,,0.7,0.77
+07 32 19.10,Metal Roof Tiles,10,METAL ROOF TILES,,,,,,,,,
+07 32 19.10,Metal Roof Tiles,20,"Accessories included, .032"" thick aluminum, mission tile",1 Carp,2.5,3.2,Sq .,805.0,180.0,,985.0,"1,15"
+07 32 19.10,Metal Roof Tiles,200,Spanish tiles,"""",3.0,2.667,03,570.0,150.0,,720.0,85
+07 33 63.10,Green Roof Systems,10,GREEN ROOF SYSTEMS,,,,,,,,,
+07 33 63.10,Green Roof Systems,20,"Soil mixture for green roof 30% sand, 55% gravel, 15% soil",,,,,,,,,
+07 33 63.10,Green Roof Systems,100,"Hoist and spread soil mixture 4"" depth up to 5 stories tall roof",G-13B,4000.0,0.014,S.F.,0.26,.69,.57,1.52,1.9
+07 33 63.10,Green Roof Systems,150,"6"" depth",,2667.0,0.021,S.F.,0.39,1.04,.85,2.28,2.9
+07 33 63.10,Green Roof Systems,200,"8"" depth",,2000.0,0.028,S.F.,0.52,1.39,1.13,3.04,3.8
+07 33 63.10,Green Roof Systems,250,"10"" depth",,1600.0,0.035,S.F.,0.65,1.74,1.42,3.81,4.8
+07 33 63.10,Green Roof Systems,300,"12"" depth",,1335.0,0.042,S.F.,0.78,2.08,1.70,4.56,5.8
+07 33 63.10,Green Roof Systems,310,"Alt. man-made soil mix, hoist & spread, 4"" deep up to 5 stories",,4000.0,0.014,S.F.,1.78,.69,.70,3.04,3.6
+07 33 63.10,Green Roof Systems,350,Mobilization 55 ton crane to site,G 1 Eqhv,3.6,2.222,Ea.,,141,,141,210
+07 33 63.10,Green Roof Systems,355,Hoisting cost to 5 stories per day (Avg. 28 picks per day),G B-13B,1.0,56.0,Day,,"2,775","2,275","5,050","6,625"
+07 33 63.10,Green Roof Systems,360,"Mobilization/demobilization, 100 ton crane to site, driver & escort",A-3E,2.5,6.4,Ea.,,375,72,447,635
+07 33 63.10,Green Roof Systems,365,Hoisting cost 6-10 stories per day (Avg. 21 picks per day),B-13C,1.0,56.0,Day,,"2,775","1,400","4,175","5,675"
+07 33 63.10,Green Roof Systems,370,"Hoist and spread soil mixture 4"" depth 6-10 stories tall roof",,4000.0,0.014,S.F.,0.26,.69,.35,1.30,1.7
+07 33 63.10,Green Roof Systems,375,"6"" depth",,2667.0,0.021,S.F.,0.39,1.04,.53,1.96,2.5
+07 33 63.10,Green Roof Systems,380,"8"" depth",,2000.0,0.028,S.F.,0.52,1.39,.70,2.61,3.4
+07 33 63.10,Green Roof Systems,385,"10"" depth",,1600.0,0.035,S.F.,0.65,1.74,.88,3.27,4.2
+07 33 63.10,Green Roof Systems,390,"12"" depth",,1335.0,0.042,S.F.,0.78,2.08,1.05,3.91,5.0
+07 33 63.10,Green Roof Systems,400,"Green roof edging, treated lumber 4"" x 4"", no hoisting included",2 Carp,400.0,0.04,LF,1.63,2.25,,3.88,5.0
+07 33 63.10,Green Roof Systems,410,"4"" x 6""",,400.0,0.04,LF,2.83,2.25,,5.08,6.4
+07 33 63.10,Green Roof Systems,420,"4"" x 8""",,360.0,0.044,LF,6.75,2.50,,9.25,11.1
+07 33 63.10,Green Roof Systems,430,"4"" x 6"" double stacked",,300.0,0.053,LF,5.65,3.00,,8.65,10.7
+07 33 63.10,Green Roof Systems,500,"Green roof edging, redwood lumber 4"" x 4"", no hoisting included",,400.0,0.04,LF,12.35,2.25,,14.60,16.9
+07 33 63.10,Green Roof Systems,510,"4"" x 6""",,400.0,0.04,LF,19.65,2.25,,21.90,25.0
+07 33 63.10,Green Roof Systems,520,"4"" x 8""",,360.0,0.044,LF,37.0,2.50,,39.50,44.0
+07 33 63.10,Green Roof Systems,530,"4"" x 6"" double stacked",,300.0,0.053,LF,39.5,3.00,,42.50,47.5
+07 33 63.10,Green Roof Systems,550,"Components, not including membrane or insulation",,,,,,,,,
+07 33 63.10,Green Roof Systems,560,"Fluid applied rubber membrane, reinforced, 215 mil thick",G-5,350.0,0.114,S.F.,0.27,5.15,.48,5.90,9.0
+07 33 63.10,Green Roof Systems,570,Root barrier,G-2 Rofc,775.0,0.021,S.F.,0.99,1.02,,2.01,2.7
+07 33 63.10,Green Roof Systems,580,Moisture retention barrier and reservoir,,900.0,0.018,S.F.,3.97,.88,,4.85,5.8
+07 33 63.10,Green Roof Systems,600,"Planting sedum, light soil, potted, 2-1/4"" diameter, 2 per S.F.",G-1 Clab,420.0,0.019,S.F.,15.95,.87,,16.82,18.8
+07 33 63.10,Green Roof Systems,610,1 per S.F.,G-1 Clab,840.0,0.01,S.F.,8.0,.43,,8.43,9.4
+07 33 63.10,Green Roof Systems,630,"Planting sedum mat per S.F., including shipping (4000 S.F. min)",4 Clab,4000.0,0.008,S.F.,19.15,.36,,19.51,21.5
+07 33 63.10,Green Roof Systems,640,Installation sedum mat system (no soil required) per S.F. (4000 S.F. min),4 Clab,4000.0,0.008,S.F.,26.5,.36,,26.86,30.0
+07 33 63.10,Green Roof Systems,645,Note: pricing of sedum mats shipped in full truck loads (4000-5000 S.F.),,,,,,,,,
+07 33 63.10,07 41 13 Roof Panels,925,22 ga.,6-3,900,0.036,S.F.,5.35,2.01,,7.36,8.8
+07 33 63.10,07 41 13 Roof Panels,930,"Zinc aluminum alloy finish, 24 ga.",,950,0.034,,4.14,1.91,,6.05,1A
+07 33 63.10,07 41 13 Roof Panels,935,22 ga.,,900,0.036,,4.72,2.01,,6.73,8.2
+07 33 63.10,07 41 13 Roof Panels,1200,"Ridge, galvanized, 10"" wide",,800,0.04,LF,3.6,2.26,,5.86,7.3
+07 33 63.10,07 41 13 Roof Panels,1203,"14"" wide",G 2,Shee 316,0.051,,4.32,3.42,,7.74,9.9
+07 33 63.10,07 41 13 Roof Panels,1205,"18"" wide",G,""" 308",0.052,,5.05,3.51,,8.56,10.8
+07 33 63.10,07 41 13 Roof Panels,1210,"20"" wide",G G-3,750,0.043,,4.35,2.41,,6.76,8.4
+07 41 33.10,Fiberglass Panels,10,FIBERGLASS PANELS,,,,,,,,,
+07 41 33.10,Fiberglass Panels,12,"Corrugated panels, roofing, 8 oz./S.F.",G-3,1000.0,0.032,S.F.,3.44,1.81,,5.25,6.5
+07 41 33.10,Fiberglass Panels,100,12 oz./S.F.,,1000.0,0.032,,4.78,1.81,,6.59,7.9
+07 41 33.10,Fiberglass Panels,300,"Corrugated siding, 6 oz./S.F.",,880.0,0.036,,2.79,2.06,,4.85,6.1
+07 41 33.10,Fiberglass Panels,400,8 oz./S.F.,,880.0,0.036,,3.44,2.06,,5.5,6.8
+07 41 33.10,Fiberglass Panels,500,Fire retardant,,880.0,0.036,,4.11,2.06,,6.17,7.6
+07 41 33.10,Fiberglass Panels,600,"12 oz. siding, textured",,880.0,0.036,,3.88,2.06,,5.94,7.3
+07 41 33.10,Fiberglass Panels,700,Fire retardant,,880.0,0.036,,4.98,2.06,,7.04,8.6
+07 41 33.10,Fiberglass Panels,900,"Flat panels, 6 oz./S.F., clear or colors",,880.0,0.036,,3.14,2.06,,5.2,6.5
+07 41 33.10,Fiberglass Panels,1100,"Fire retardant, class A",,880.0,0.036,,3.73,2.06,,5.79,7.2
+07 41 33.10,Fiberglass Panels,1300,"8 oz./S.F., clear or colors",,880.0,0.036,,2.47,2.06,,4.53,5.8
+07 41 33.10,Fiberglass Panels,1700,"Sandwich panels, fiberglass, 1-9/16"" thick, panels to 20 S.F.",,180.0,0.178,,37.5,10.05,,47.55,56.0
+07 41 33.10,Fiberglass Panels,1900,"As above, but 2-3/4"" thick, panels to 100 S.F.",,265.0,0.121,,26.5,6.85,,33.35,39.5
+07 42 13.10,Mansard Panels,10,MANSARD PANELS,,,,,,,,,
+07 42 13.10,Mansard Panels,600,"Aluminum, stock units, straight surfaces",1 Shee,115.0,0.07,S.F.,4.85,4.7,,9.55,12.4
+07 42 13.10,Mansard Panels,700,"Concave or convex surfaces, add",,75.0,0.107,,2.63,7.2,,9.83,13.7
+07 42 13.10,Mansard Panels,800,"For framing, to 5' high, add",,115.0,0.07,LF,3.96,4.7,,8.66,11.4
+07 42 13.10,Mansard Panels,900,"Soffits, to 1' wide",,125.0,0.064,S.F.,3.05,4.32,,7.37,9.8
+07 42 13.20,Aluminum Siding Panels,10,ALUMINUM SIDING PANELS,,,,,,,,,
+07 42 13.20,Aluminum Siding Panels,12,"Corrugated, on steel framing, .019"" thick, natural finish",G-3,775.0,0.041,S.F.,1.97,2.34,,4.31,5.6
+07 42 13.20,Aluminum Siding Panels,100,Painted,,775.0,0.041,,1.9,2.34,,4.24,5.6
+07 42 13.20,Aluminum Siding Panels,400,"Farm type, .021"" thick on steel frame, natural",,775.0,0.041,,1.8,2.34,,4.14,5.5
+07 42 13.20,Aluminum Siding Panels,600,Painted,,775.0,0.041,,1.9,2.34,,4.24,5.6
+07 42 13.20,Aluminum Siding Panels,700,"Industrial type, corrugated, on steel, .024"" thick, mill",,775.0,0.041,,2.47,2.34,,4.81,6.2
+07 42 13.20,Aluminum Siding Panels,900,Painted,,775.0,0.041,,2.63,2.34,,4.97,6.4
+07 42 13.20,Aluminum Siding Panels,1000,".032"" thick, mill",,775.0,0.041,,5.25,2.34,,7.59,9.3
+07 42 13.20,Aluminum Siding Panels,1200,Painted,,775.0,0.041,,5.8,2.34,,8.14,9.8
+07 42 13.20,Aluminum Siding Panels,1300,"V-Beam, on steel frame, .032"" thick, mill",,775.0,0.041,,4.57,2.34,,6.91,8.5
+07 42 13.20,Aluminum Siding Panels,1500,Painted,,775.0,0.041,,5.05,2.34,,7.39,9.0
+07 42 13.20,Aluminum Siding Panels,1600,".040"" thick, mill",,775.0,0.041,,2.97,2.34,,5.31,6.7
+07 42 13.20,Aluminum Siding Panels,1800,Pointed,,775.0,0.041,,4.211,2.34,,6.55,8.0
+07 42 13.20,Aluminum Siding Panels,1900,".050"" thick, mill",,775.0,0.041,,3.49,2.34,,5.83,7.3
+07 42 13.20,Aluminum Siding Panels,2100,Painted,,775.0,0.041,,4.06,2.34,,6.4,7.9
+07 42 13.20,Aluminum Siding Panels,2200,"Ribbed, 3"" profile, on steel frame, .032"" thick, natural",,775.0,0.041,,2.73,2.34,,5.07,6.5
+07 42 13.20,Aluminum Siding Panels,2400,Painted,,775.0,0.041,,5.45,2.34,,7.79,9.4
+07 42 13.20,Aluminum Siding Panels,2500,".040"" thick, natural",,775.0,0.041,,3.15,2.34,,5.49,6.9
+07 71 29.10,Expansion Joints,10,EXPANSION JOINTS,,,,,,,,,
+07 71 29.10,Expansion Joints,300,"Butyl or neoprene center with foam insulation, metal flanges",,,,,,,,,
+07 71 29.10,Expansion Joints,400,"Aluminum, .032"" thick for openings to 2-1/2""",1 Rofc,165.0,0.048,LF,15.2,2.4,,17.6,20.5
+07 71 29.10,Expansion Joints,600,"For joint openings to 3-1/2""",,165.0,0.048,,14.0,2.4,,16.4,19.3
+07 71 29.10,Expansion Joints,610,"For joint openings to 5""",,165.0,0.048,,17.3,2.4,,19.7,23.0
+07 71 29.10,Expansion Joints,620,"For joint openings to 8""",,165.0,0.048,,3522.0,2.4,,37.4,42.5
+07 71 29.10,Expansion Joints,700,"Copper, 16 oz. for openings to 2-1/2""",,165.0,0.048,,29.5,2.4,,31.9,36.5
+07 71 29.10,Expansion Joints,900,"For joint openings to 3-1/2""",,165.0,0.048,,,2.4,,25.4,29.5
+07 71 29.10,Expansion Joints,910,"For joint openings to 5""",,165.0,0.048,,29.0,2.4,,31.4,35.5
+07 71 29.10,Expansion Joints,920,"For joint openings to 8""",,165.0,0.048,,31.5,2.4,,33.9,38.5
+07 71 29.10,Expansion Joints,0,"Galvanized steel, 26 ga. for openings to 2-1/2""",,165.0,0.048,,9.25,2.4,,11.65,14.1
+07 71 29.10,Expansion Joints,200,"For joint openings to 3-1/2""",,165.0,0.048,,10.1,2.4,,12.5,15.05
+07 71 29.10,Expansion Joints,210,"For joint openings to 5""",,165.0,0.048,,12.5,2.4,,14.9,17.65
+07 71 29.10,Expansion Joints,220,"For joint openings to 8""",,165.0,0.048,,19.35,2.4,,21.75,25.5
+07 71 29.10,Expansion Joints,300,"Lead-coated copper, 16 oz. for openings to 2-1/2""",,165.0,0.048,,42.5,2.4,,44.9,50.5
+07 71 29.10,Expansion Joints,500,"For joint openings to 3-1/2""",,165.0,0.048,,46.5,2.4,,48.9,55.0
+07 71 29.10,Expansion Joints,600,"Stainless steel, .018"", for openings to 2-1/2""",,165.0,0.048,,14.55,2.4,,16.95,19.9
+07 71 29.10,Expansion Joints,800,"For joint openings to 3-1/2""",,165.0,0.048,,16.75,2.4,,19.15,22.5
+07 71 29.10,Expansion Joints,810,"For joint openings to 5""",,165.0,0.048,,19.05,2.4,,21.45,25.0
+07 71 29.10,Expansion Joints,820,"For joint openings to 8""",,165.0,0.048,,26.0,2.4,,28.4,33.0
+07 71 29.10,Expansion Joints,900,"Neoprene, double seal type with thick center, 4-1/2"" wide",125,0.064,,,17.1,3.17,,20.27,24.0
+07 71 29.10,Expansion Joints,950,"Polyethylene bellows, with galv steel flat flanges",100,0.08,,,9.15,3.97,,13.12,16.55
+07 71 29.10,Expansion Joints,960,With galvanized angle flanges,100,0.08,,,9.25,3.97,,13.22,16.65
+07 71 29.10,Expansion Joints,0,"Roof joint with extruded aluminum cover, 2""",1 Shee,115.0,0.07,,40.0,4.7,,44.7,51.0
+07 71 29.10,Expansion Joints,100,"Expansion, stainless flange, foam center, standard",1 Rofc,100.0,0.08,L.F.,16.3,3.97,,20.27,24.5
+07 71 29.10,Expansion Joints,200,Large,,100.0,0.08,,22.0,3.97,,25.97,30.5
+07 71 29.10,Expansion Joints,500,Roof to wall joint with extruded aluminum cover,1 Shee,115.0,0.07,,36.0,4.7,,40.7,46.5
+07 71 29.10,Expansion Joints,700,"Wall joint, closed cell foam on PVC cover, 9"" wide",1 Rofc,125.0,0.064,,7.4,3.17,,10.57,13.25
+07 71 29.10,Expansion Joints,800,"12"" wide",,115.0,0.07,,8.35,3.45,,11.8,14.8
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",10,"DRIP EDGE, RAKE EDGE, ICE BELTS",,,,,,,,,
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",20,"Aluminum, .016"" thick, 5"" wide, mill finish",1 Carp,400.0,0.02,L.F.,0.69,1.13,,1.82,2.44
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",100,White finish,,400.0,0.02,,0.7,1.13,,1.83,2.45
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",200,"8"" wide, mill finish",,400.0,0.02,,0.84,1.13,,1.97,2.6
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",300,"Ice belt, 28"" wide, mill finish",,100.0,0.08,,6.2,4.5,,10.7,13.5
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",310,"Vented, mill finish",,400.0,0.02,,2.24,1.13,,3.37,4.14
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",320,Painted finish,,400.0,0.02,,2.97,1.13,,4.1,4.95
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",400,"Galvanized, 5"" wide",,400.0,0.02,,0.96,1.13,,2.09,2.74
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",500,"8"" wide, mill finish",,400.0,0.02,,0.99,1.13,,2.12,2.77
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",510,"Rake edge, aluminum, 1-1/2"" x 1-1/2""",,400.0,0.02,,0.34,1.13,,1.47,2.05
+07 71 43.10,"Drip Edge, Rake Edge, Ice Belts",520,"3-1/2"" x 1-1/2""",,400.0,0.02,,0.49,1.13,,1.62,2.22
+07 72 80.30,Vent Options,10,VENT OPTIONS,,,,,,,,,
+07 72 80.30,Vent Options,20,"Plastic, for insulated decks, 1 per M.S.F.",1 Rofc,40.0,0.2,Eo.,23.0,9.9,,32.9,41.5
+07 72 80.30,Vent Options,0,Heavy duty,,20.0,0.4,,59.5,19.85,,79.35,97.5
+07 72 80.30,Vent Options,0,Aluminum,,30.0,0.267,,21.0,13.25,,34.25,44.5
+07 72 80.30,Vent Options,300,"Polystyrene baffles, 12"" wide for 16"" OC rafter spacing",1 Carp,90.0,0.089,,0.48,5.0,,5.48,8.0
+07 72 80.30,Vent Options,0,"For 24"" OC rafter spacing",,110.0,0.073,,0.83,4.09,,4.92,7.0
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,100,"Roof decking pavers, concrete blocks, 2"" thick, natural",1 Clab,115,0.07,S.F,3.7,3.17,,6.87,8.8
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,00,Colors,,115,0.07,,2.42,3.17,,5.59,7.4
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,00,"Support pedestal, bottom cap",,960,0.008,Ea.,2.73,0.38,,3.11,3.57
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,100,Top cap,,960,0.008,,5.0,0.38,,5.38,6.05
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,000,"Leveling shims, 1/16""",,1920,0.004,,1.24,0.19,,1.43,1.64
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,",00","1/8""",,1920,0.004,,2.05,0.19,,2.24,2.54
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,",00",Buffer pad,,960,0.008,,4.63,0.38,,5.01,5.65
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,'00,"PVC legs (4"" SDR 35)",,2880,0.003,Inch,0.18,0.13,,0.31,0.39
+07 72 80.30,7 76 16.10 Roof Pavers and Supports,100,"Alternate pricing method, system in place",,101,0.079,S.F,8.2,3.61,,11.81,14.45
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,150,"Not including canvas protection, normal density",,,,,,,,,
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,00,"Per 1"" thick, on flat plate steel",G2,3000.0,0.008,S.F,0.59866,0.38,560-223,1.02,1.26
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,200,Flat decking,,2400.0,0.01,,0.59,0.48,,1.13,1.41
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,100,Beams,,1500.0,0.016,,0.59,0.76,.09,1.44,1.87
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,00,Corrugated or fluted decks,,1250.0,0.019,,0.88,0.91,.זו,1.9,2.45
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,'00,"Columns, 1-1/8"" thick",,1100.0,0.022,,0.66,1.04,.13,1.83,2.41
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,300,"2-3/16"" thick",,700.0,0.034,,1.66,1.63,,3.49,4.48
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,'00,"For canvas protection, add",,5000.0,0.005,,0.11,0.23,,0.37,0.49
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,100,"Not including canvas protection, high density",,,,,,,,,
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,00,"Per 1"" thick, on flat plate steel",G-2,3000.0,0.008,S.F.,2.35,0.38,.05,2.78,3.21
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,10,On flat decking,,2400.0,0.01,,2.35,0.48,.06,2.89,3.36
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,20,On beams,,1500.0,0.016,,2.35,0.76,.09,3.2,3.82
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,30,Corrugated or fluted decks,,1250.0,0.019,,2.35,0.91,.11,3.37,4.07
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,40,"Columns, 1-1/8"" thick",,1100.0,0.022,,2.64,1.04,.13,3.81,4.6
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,50,"2-3/16"" thick",,1100.0,0.022,,5.3,1.04,.13,6.47,7.5
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,70,"For canvas protection, add",,5000.0,0.005,,0.11,0.23,.03,0.37,0.49
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,00,"Not including canvas protection, retrofitting",,,,,,,,,
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,10,"Per 1"" thick, on flat plate steel",G2,1500.0,0.016,S.F,0.53,0.76,.09,1.38,1.82
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,20,On flat decking,,1200.0,0.02,,0.53,0.95,.12,1.6,2.14
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,30,On beams,,1.75,0.0321,,0.53,1.52,.18  !,2.231,3.06
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,40,Corrugated or fluted decks,,625.0,0.038,,0.8,1.83,.22,2.85,3.84
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,50,"Columns, 1-1/8"" thick",,550.0,0.044,,0.6,2.08,.25,2.93,4.03
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,160,"2-3/16"" thick",,500.0,0.048,,1.2,2.29,.28,3.77,5.0
+07 72 80.30,7 81 16.10 Sprayed Cementitious Fireproofing,100,"Accessories, preliminary spattered texture coat",G2,4500.0,0.005,S.F.,0.05,0.25,.03,0.33,0.46
+07 72 80.30,7  65 26.10 Self-Adhering Sheet or Roll Flashing,10,SELF-ADHERING SHEET OR ROLL FLASHING,,,,,,,,,
+07 72 80.30,7  65 26.10 Self-Adhering Sheet or Roll Flashing,20,"Self-adhered flashing, 25 mil cross laminated HDPE, 4"" wide",1 Rofc,960.0,0.008,LF,0.27,0.41,,0.68,0.97
+07 72 80.30,7  65 26.10 Self-Adhering Sheet or Roll Flashing,40,"6"" wide",,896.0,0.009,,0.41,0.44,,0.85,1.17
+07 72 80.30,7  65 26.10 Self-Adhering Sheet or Roll Flashing,60,"9"" wide",,832.0,0.01,,0.62,0.48,,1.1,1.45
+07 72 80.30,7  65 26.10 Self-Adhering Sheet or Roll Flashing,80,"12"" wide",,768.0,1.01,,0.82,0.52,,1.34,1.74
+07 72 80.30,"7 71 16.20 Pitch Pockets, Variable Sizes",10,"PITCH POCKETS, VARIABLE SIZES",,,,,,,,,
+07 72 80.30,"7 71 16.20 Pitch Pockets, Variable Sizes",100,"Adjustable, 4"" to 7"", welded corners, 4"" deep",1 Rofc,48.0,0.167,Ea,26.5,8.25,,34.75,42.5
+07 72 80.30,"7 71 16.20 Pitch Pockets, Variable Sizes",200,"Side extenders, 6""","""",240.0,0.033,,3.59,1.65,,5.24,6.65
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,10,GRAVEL STOP,,,,,,,,,
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,20,"Aluminum, .050"" thick, 4"" face height, mill finish",1 Shee,145.0,0.055,LF,4.26,3.73,,7.99,10.3
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,80,Duranodic finish,,145.0,0.055,,4.26,3.73,,7.99,10.3
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,100,Painted,,145.0,0.055,,4.26,3.73,,7.99,10.3
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,300,"6"" face height",,135.0,0.059,,9.3,4.0,,13.3,16.3
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,350,Duranodic finish,,135.0,0.059,,10.8,4.0,,14.8,17.95
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,400,Painted,,135.0,0.059,,9.5,4.0,,13.5,16.5
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,500,"8"" face height",,125.0,0.064,,8.9,4.32,,13.22,16.3
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,550,Duranodic finish,,125.0,0.064,,10.8,4.32,,15.12,18.35
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,700,Painted,,125.0,0.064,,12.0,4.32,,16.32,19.7
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,900,"12"" face height, .080"" thick, 2 piece",,100.0,0.08,,13.1,5.4,,18.5,22.5
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,750,Duranodic finish,,100.0,0.08,,12.7,5.4,,18.1,22.0
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,0,Painted,,100.0,0.08,,17.05,5.4,,22.45,27.0
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,200,"Copper, 16 oz., 3"" face height",,145.0,0.055,,41.5,3.73,,45.23,51.0
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,300,"6"" face height",,135.0,0.059,,50.0,4.0,,54.0,61.0
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,350,"Galv. steel, 24 ga., 4"" leg, plain, with continuous cleat, 4"" face",,145.0,0.055,,8.55,3.73,,12.28,15.0
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,360,"6"" face height",,145.0,0.055,,7.8,3.73,,11.53,14.2
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,500,"Polyvinyl chloride, 6"" face height",,135.0,0.059,,6.9,4.0,,10.9,13.65
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,510,"Polyvinyl chloride, 9"" face height",,125.0,0.064,,8.25,4.32,,12.57,15.6
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,600,"Stainless steel, 24 ga., 6"" face height",,135.0,0.059,,20.22,4.0,,24.22,28.5
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,700,"12"" face height",,100.0,0.08,,26.5,5.4,,31.9,37.0
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,800,"20 ga., 6"" face height",,135.0,0.059,,25.0,4.0,,29.0,33.5
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,900,"12"" face height",1 Shee,100.0,0.08,LF,31.5,5.4,,36.9,42.5
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,10,FASCIA,,,,,,,,,
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,100,"Aluminum, reverse board and batten, .032"" thick, colored, no furring incl.",1 Shee,145.0,0.055,S.F.,8.85,3.73,,12.58,15.35
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,300,"Steel, galv. and enameled, stock, no furring, long panels",,145.0,0.055,,6.9,3.73,,10.63,13.2
+07 72 80.30,7 71 19.10 Gravel Stop and Fascia,500,Short panels,,115.0,0.07,,6.5,4.7,,11.2,14.25
+771 19.30,Fascia,10,FASCIA,,,,,,,,,
+771 19.30,Fascia,100,"Aluminum, reverse board and batten, .032"" thick, colored, no furring incl.",1 Shee,145.0,0.055,S.F,8.85,3.73,,12.58,15.35
+771 19.30,Fascia,300,"Steel, galv and enameled, stock, no furring, long panels",,145.0,0.055,,6.9,3.73,,10.63,13.2
+771 19.30,Fascia,500,Short panels,,115.0,0.07,,6.5,4.7,,11.2,14.25
+771 19.30,7 71 23.10 Downspouts,10,DOWNSPOUTS,,,,,,,,,
+771 19.30,7 71 23.10 Downspouts,20,"Aluminum, embossed, .020"" thick, 2"" x 3""",1 Shee,190.0,0.042,LF,1.4,2.84,,4.24,55.8
+771 19.30,7 71 23.10 Downspouts,100,Enameled,,190.0,0.042,,1.4,2.84,,4.24,5.8
+771 19.30,7 71 23.10 Downspouts,300,".024"" thick, 2"" x 3""",,180.0,0.044,,1.4,3.0,,4.4,6.05
+771 19.30,7 71 23.10 Downspouts,400,"3"" x 4""",,140.0,0.057,,2.9,3.86,,6.76,9.0
+771 19.30,7 84 13.10 Firestopping,80,"With stiffener /closure angle, through floors, 6"" x 12""",1 Carp,10.0,0.8,Ea.,10.50,455,,55.50,78.50
+771 19.30,7 84 13.10 Firestopping,90,"12"" x 24""",,8.0,,,52,56.50,,108.50,141
+771 19.30,7 84 13.10 Firestopping,600,"24"" x 48""",,6.0,1.333,,104,75,,179,226
+771 19.30,7 84 13.10 Firestopping,$10,Multi trade openings,,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,$20,"Through walls, 6"" x 12""",Carp,2.0,4.0,Ea.,79,225,,304,420
+771 19.30,7 84 13.10 Firestopping,530,"12"" x 24""",PF,1.0,8.0,,213,450,,663,905
+771 19.30,7 84 13.10 Firestopping,$40,"24"" x 48""",2 Carp,1.0,16.0,,645,900,,"1,545","2,050"
+771 19.30,7 84 13.10 Firestopping,$50,"48"" x 96""",3,75.0,21.333,,"2,575","1,200",,"3,775","4,625"
+771 19.30,7 84 13.10 Firestopping,60,"Through floors, 6"" x 12""",1 Carp,2.0,4.0,,48.50,225,,273.50,390
+771 19.30,7 84 13.10 Firestopping,170,"12"" x 24""",,,8.0,,64.50,450,,514.50,740
+771 19.30,7 84 13.10 Firestopping,$80,"24"" x 48""",2 Carp,0.75,21.333,,139,"1,200",,"1,339","1,950"
+771 19.30,7 84 13.10 Firestopping,90,"48"" x 96""",,0.5,32.0,,325,"1,800",,"2,125","3,025"
+771 19.30,7 84 13.10 Firestopping,,"Structural penetrations, through walls",,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,10,"Steel beams, W8 x 10",1 Carp,8.0,1.0,Ea.,74.50,56.50,,131,166
+771 19.30,7 84 13.10 Firestopping,20,W12 x 14,,6.0,1.333,,108,75,,183,231
+771 19.30,7 84 13.10 Firestopping,$30,W21 x 44,,53.0,1.6,,166,90,,256,315
+771 19.30,7 84 13.10 Firestopping,40,W36 x 135,,,2.667,,235,150,,385,480
+771 19.30,7 84 13.10 Firestopping,50,"Bar joists, 18"" deep",,6.0,1.333,,43.50,75,,118.50,160
+771 19.30,7 84 13.10 Firestopping,60,"24"" deep",,6.0,1.333,,61,75,,136,180
+771 19.30,7 84 13.10 Firestopping,.70,"36"" deep",,5.0,1.6,,92,90,,182,235
+771 19.30,7 84 13.10 Firestopping,80,"48"" deep",,42.0,,,133,113,4.0,246,315
+771 19.30,7 84 13.10 Firestopping,.90,"Construction joints, floor slab at exterior wall",,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,100,"Precast, brick, block or drywall exterior",,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,10,"2"" wide joint",1 Carp,125.0,0.064,L.F.,11.10,3.60,,14.70,717.55
+771 19.30,7 84 13.10 Firestopping,20,"4"" wide joint",,75.0,0.107,,17.10,61,,23.10,28
+771 19.30,7 84 13.10 Firestopping,30,"Metal panel, glass or curtain wall exterior",,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,40,"2"" wide joint",1 Carp,40.0,1.2,L.F.,12.60,11.25,,23.85,30.50
+771 19.30,7 84 13.10 Firestopping,50,"4"" wide joint",,25.0,0.32,,14.30,18,,32.30,43
+771 19.30,7 84 13.10 Firestopping,60,Floor slab to drywall partition,,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,'70,Flat joint,1 Carp,100.0,0.08,LF,14.50,4.50,,19,22.50
+771 19.30,7 84 13.10 Firestopping,780,Fluted joint,,50.0,0.16,,16.85,9,,25.85,32
+771 19.30,7 84 13.10 Firestopping,90,Etched fluted joint,,75.0,0.107,,20.50,6,,26.50,31.50
+771 19.30,7 84 13.10 Firestopping,00,Floor slab to concrete / masonry partition,,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,10,Flat joint,Carp,75.0,0.107,LF,16.90,6,,22.90,27.50
+771 19.30,7 84 13.10 Firestopping,20,Fluted joint,,50.16,,,18.40,9,,27.40,33.50
+771 19.30,7 84 13.10 Firestopping,130,Concrete / CMU wall joints,,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,40,"1"" wide",1 Carp,100.0,0.08,LF,20.50,4.50,,254,2933
+771 19.30,7 84 13.10 Firestopping,50,"2"" wide",,75.0,0.107,,32,69,,38,44
+771 19.30,7 84 13.10 Firestopping,60,"4"" wide",,50.0,0.16,,36,,,45,53.50
+771 19.30,7 84 13.10 Firestopping,70,Concrete /CMU floor joints,,,,,,,,,
+771 19.30,7 84 13.10 Firestopping,80,"1"" wide",1 Carp,200.0,0.04,L.F.,21.50,2.25,,23.75,27.50
+771 19.30,7 84 13.10 Firestopping,90,"2"" wide",,150.0,0.053,,25,3,,28,32
+771 19.30,7 84 13.10 Firestopping,00,"4"" wide",,100.0,0.08,,36,4.50,,40.50,46.50
+07 65 13.10,Laminated Sheet Flashing,10,"LAMINATED SHEET FLASHING, Including up to 4 bends",,,,,,,,,
+07 65 13.10,Laminated Sheet Flashing,500,"Aluminum, fabric backed 2 sides, mill finish, .004"" thick",1 Rofc,330.0,0.024,S.F.,1.62,1.2222222222222222e+16,,2.82,3.j
+07 65 13.10,Laminated Sheet Flashing,700,".005"" thick",,330.0,0.024,,1.9,1.2,,3.1,4.0
+07 65 13.10,Laminated Sheet Flashing,750,"Mastic-backed, self adhesive",,460.0,0.017,,3.49,,,4.35,5.1
+07 65 13.10,Laminated Sheet Flashing,800,"Mastic-coated 2 sides, .004"" thick",1 Rofc,330.0,0.024,S.F.,1.62,1.2,,2.82,3.7
+07 65 13.10,Laminated Sheet Flashing,2800,"Copper, paperbacked 1 side, 2 oz.",,330.0,0.024,,2.2,1.2,,3.4,4.3
+07 65 13.10,Laminated Sheet Flashing,2900,3 oz.,,330.0,0.024,,3.21,1.2,,4.41,5.5
+07 65 13.10,Laminated Sheet Flashing,3100,"Paperbacked 2 sides, 2 oz.",,330.0,0.024,,2.44,1.2,,3.64,4.6
+07 65 13.10,Laminated Sheet Flashing,3150,3 oz.,,330.0,0.024,,2.28,1.2,,3.48,4.4
+07 65 13.10,Laminated Sheet Flashing,3200,5 oz.,,330.0,0.024,,3.97,1.2,,5.17,6.3
+07 65 13.10,Laminated Sheet Flashing,3250,7 oz.,,330.0,0.024,,6.25,1.2,,7.45,8446
+07 65 13.10,Laminated Sheet Flashing,3400,"Mastic-backed 2 sides, copper, 2 oz.",,330.0,0.024,,,2.32,1.2,,3.52
+07 65 13.10,Laminated Sheet Flashing,3500,3 oz.,,330.0,0.024,,,2.63,1.2,,3.83
+07 65 13.10,Laminated Sheet Flashing,3700,5 oz.,,330.0,0.024,,4.0,1.2,,5.2,6.3
+07 65 13.10,Laminated Sheet Flashing,3800,"Fabric backed 2 sides, copper, 2 oz.",,330.0,0.024,,2.09,1.2,,3.29,4.2
+07 65 13.10,Laminated Sheet Flashing,4000,3 oz.,,330.0,0.024,,2.95,1.2,,4.15,5.1
+07 65 13.10,Laminated Sheet Flashing,4100,5 oz.,,330.0,0.024,,4.13,1.2,,5.33,6.
+07 65 13.10,Laminated Sheet Flashing,4300,"Copper-clad stainless steel, .015"" thick, under 500 lb.",,115.0,0.07,,7.05,3.45,,10.5,13.3
+07 65 13.10,Laminated Sheet Flashing,4400,Over 2000 lb.,,155.0,0.052,,6.95,2.56,,9.51,11.3
+07 65 13.10,Laminated Sheet Flashing,4600,".018"" thick, under 500 lb.",,100.0,0.08,,8.1,3.97,,12.07,15.3
+07 65 13.10,Laminated Sheet Flashing,4700,Over 2000 lb.,,145.055,,,8.35,2.74,,11.09,13.
+07 65 13.10,Laminated Sheet Flashing,8550,"Shower pan, 3 ply copper and fabric, 3 oz.",,155.0,0.052,,4.22,2.56,,6.78,8.8
+07 65 13.10,Laminated Sheet Flashing,8600,7 oz.,,155.0,0.052,,5.1,2.56,,7.66,9.
+07 65 13.10,Laminated Sheet Flashing,9300,"Stainless steel, paperbacked 2 sides, .005"" thick",,330.0,0.024,,4.14,1.2,,5.34,6.5
+07 65 19.10,Plastic Sheet Flashing and Counter Flashing,10,PLASTIC SHEET FLASHING AND COUNTER FLASHING,,,,,,,,,
+07 65 19.10,Plastic Sheet Flashing and Counter Flashing,7300,"Polyvinyl chloride, black, 10 mil",1 Rofc,285.0,0.028,S.F.,0.28,1.39,,1.67,2.53N
+07 65 19.10,Plastic Sheet Flashing and Counter Flashing,7400,20 mil,,285.0,0.028,,,0.27,1.39,,1.66
+07 65 19.10,Plastic Sheet Flashing and Counter Flashing,7600,30 mil,,285.0,0.028,,,0.34,1.39,,1.73
+07 65 19.10,Plastic Sheet Flashing and Counter Flashing,7700,60 mil,,285.0,0.028,,0.9,1.39,,2.29,3.2
+07 65 19.10,Plastic Sheet Flashing and Counter Flashing,7900,"Black or white for exposed roofs, 60 mil",,285.0,0.028,,4.89,1.39,,6.28,7.6
+07 65 19.10,Plastic Sheet Flashing and Counter Flashing,8060,"PVC tape, 5"" x 45 mils, for joint covers, 100 L.F./roll",,,,Ea,189.0,,,189.0,208
+07 65 19.10,Plastic Sheet Flashing and Counter Flashing,8850,"Polyvinyl chloride, 30 mil",1 Rofc,160.0,0.05,S.F.,1.06,2.48,,3.54,5.2
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,10,RUBBER SHEET FLASHING AND COUNTER FLASHING,,,,,,,,,
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,4810,"EPDM 90 mils, 1"" diameter pipe flashing",1 Rofc,32.0,0.25,Ea.,22.0,12.4,,34.4,44.0
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,4820,"2"" diameter",,30.0,0.267,,4.15,13.25,,17.4,26.0
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,4830,"3"" diameter",,28.0,0.286,,4.65,14.15,,18.8,28.0
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,4840,"4"" diameter",,24.0,0.3331,,8.35,16.55,,24.9,36.0
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,4850,"6"" diameter",,22.0,0.364,,9.65,18.05,,27.7,39.5
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,8100,"Rubber, butyl, 1/32"" thick",,285.0,0.028,S.F.,2.35,1.39,,3.74,4.8
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,8200,"1/16"" thick",1 Rofc,285.0,0.028,S.F.,4.91,1.39,,6.3,7.0
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,8300,"Neoprene, cured, 1/16"" thick",,285.0,0.028,,2.35,1.39,,3.74,4.8
+07 65 23.10,Rubber Sheet Flashing and Counter Flashing,8400,"1/8"" thick",,285.0,0.028,,6.2,1.39,,7.59,9.0
+07 51 13.10,Built-Up Roofing Components,10,BUILT-UP ROOFING COMPONENTS,,,,,,,,,
+07 51 13.10,Built-Up Roofing Components,12,"Asphalt saturated felt, #30, 2 sq./roll",1 Rofc,58.0,0.138,Sq.,8.7,6.85,,15.55,20.50
+07 51 13.10,Built-Up Roofing Components,200,"#15, 4 sq./roll, plain or perforated, not mopped",,58.0,0.138,,4.43,6.85,,11.28,15.95
+07 51 13.10,Built-Up Roofing Components,300,"Roll roofing, smooth, #65",,15.0,0.533,,10.35,26.5,,36.85,54.50
+07 51 13.10,Built-Up Roofing Components,500,#90,,12.0,0.667,,43.0,33.0,1.0,76.0,101
+07 51 13.10,Built-Up Roofing Components,520,Mineralized,,12.0,0.667,,43.0,331.0,,76.0,101
+07 51 13.10,Built-Up Roofing Components,540,"D.C. (double coverage), 19"" selvage edge",,10.0,0.8,,50.0,39.5,,89.5,120
+07 51 13.10,Built-Up Roofing Components,580,Adhesive (lap cement),,,,Gal.,11.2,,,11.2,12.35
+07 51 13.10,Built-Up Roofing Components,800,"Steep, flat or dead level asphalt, 10 ton lots, packaged",,,,Ton,915.0,,,915.0,"1,000"
+07 51 13.13,Cold-Applied Built-Up Asphalt Roofing,10,COLD-APPLIED BUILT-UP ASPHALT ROOFING,,,,,,,,,
+07 51 13.13,Cold-Applied Built-Up Asphalt Roofing,20,"3 ply system, installation only (components listed below)",G-5,50.0,0.8,Sq.,,36.0,3.33,39.33,62.0
+07 51 13.13,Cold-Applied Built-Up Asphalt Roofing,100,"Spunbond poly. fabric, 1.35 oz./S.Y., 36""W, 10.8 sq./roll",,,,Ea.,113.0,,,173.0,191.0
+07 51 13.13,Cold-Applied Built-Up Asphalt Roofing,500,"Base & finish coat, 3 gal./sq., 5 gal./con",,,,Gal.,8.6,,,8.6,9.45
+07 51 13.13,Cold-Applied Built-Up Asphalt Roofing,600,"Coating, ceramic granules, 1/2 sq./bag",,,,Ea.,30.5,,,30.5,33.5
+07 51 13.13,Cold-Applied Built-Up Asphalt Roofing,700,"Aluminum, 2 gal./sq.",,,,Gal.,19.8,,,19.8,22.0
+07 51 13.13,Cold-Applied Built-Up Asphalt Roofing,800,"Emulsion, fibered or non-fibered, 4 gal./sq.",,,,,7.4,,,7.4,8.15
+07 51 13.20,Built-Up Roofing Systems,10,BUILT-UP ROOFING SYSTEMS,,,,,,,,,
+07 51 13.20,Built-Up Roofing Systems,120,"Asphalt flood coat with gravel/slag surfacing, not including insulation, flashing or wood noilers",,,,,,,,,
+07 51 13.20,Built-Up Roofing Systems,200,"Asphalt base sheet, 3 plies #15 asphalt felt, mopped",G-1,22.0,2.545,Sq.,109.0,118.0,25    1,252.0,340.0
+07 51 13.20,Built-Up Roofing Systems,350,On nailable decks,,21.0,2.6671,,101.0,124.0,26,251.0,340.0
+07 51 13.20,Built-Up Roofing Systems,500,"4 plies #15 asphalt felt, mopped",,20.0,2.8,,134.0,130.0,27.50,291.5,390.0
+07 51 13.20,Built-Up Roofing Systems,550,On nailable decks,,19.0,12.947,,118.0,137.0,29    1,284.0,385.0
+07 51 13.20,Built-Up Roofing Systems,700,"Coated glass base sheet, 2 plies glass (type IV), mopped",,22.0,2.545,,111.0,118.0,25,254.0,340.0
+07 51 13.20,Built-Up Roofing Systems,850,"3 plies glass, mopped",,20.0,2.8,,133.0,130.0,27.50,290.5,390.0
+07 51 13.20,Built-Up Roofing Systems,950,On nailable decks,,19.0,2.947,,126.0,137.0,29,292.0,390.0
+07 51 13.20,Built-Up Roofing Systems,100,"4 plies glass fiber felt (type IV), mopped",,20.0,2.8,,164.0,130.0,27.50,321.5,420.0
+07 51 13.20,Built-Up Roofing Systems,150,On nailable decks,,19.0,2.947,,149.0,137.0,29,315.0,415.0
+07 51 13.20,Built-Up Roofing Systems,200,"Coated & saturated base sheet, 3 plies #15 asph. felt, mopped",,20.0,2.8,,110.0,130.0,27.50,267.5,360.0
+07 51 13.20,Built-Up Roofing Systems,250,On nailable decks,,119.0,12.947,,102.0,137.0,29,268.0,365.0
+07 51 13.20,Built-Up Roofing Systems,300,"plies #15 asphalt felt, mopped",,22.0,2.545,,127.0,118.0,25,270.0,360.0
+07 51 13.20,Built-Up Roofing Systems,2000,"Asphalt flood coat, smooth surface",,,,,,,,,
+07 51 13.20,Built-Up Roofing Systems,200,"Asphalt base sheet & 3 plies #15 asphalt felt, mopped",G-1,24.0,2.333,Sq.,103.0,108.0,2232,234.0,315.0
+07 51 13.20,Built-Up Roofing Systems,2400,On nailable decks,,23.0,2.435,,95.0,113.0,24,232.0,315.0
+07 51 13.20,Built-Up Roofing Systems,600,"4 plies #15 asphalt felt, mopped",,24.0,2.333,,120.0,108.0,23,251.0,335.0
+07 51 13.20,Built-Up Roofing Systems,700,On nailable decks,,23.0,2.435,,112.0,113.0,24,249.0,335.0
+07 51 13.20,Built-Up Roofing Systems,900,"Coated glass fiber base sheet, mopped, and 2 plies of glass fiber felt (type IV)",G-1,25.0,2.24,Sq.,105.0,104.0,2222222225,231.0,305.0
+07 51 13.20,Built-Up Roofing Systems,100,On nailable decks,,24.0,2.333,,99.0,108.0,23,230.0,310.0
+07 51 13.20,Built-Up Roofing Systems,2001,"3 plies, mopped",,23.0,2.435,,127.0,113.0,24,264.0,350.0
+07 51 13.20,Built-Up Roofing Systems,300,On nailable decks,,22.0,2.545,,120.0,118.0,,263.0,350.0
+07 51 13.20,Built-Up Roofing Systems,800,"4 plies glass fiber felt (type IV), mopped",,23.0,2.435,,150.0,113.0,24,287.0,375.0
+07 51 13.20,Built-Up Roofing Systems,900,On nailable decks,G-1,22.0,2.545,Sq.,142.0,118.0,,285.0,375.0
+07 51 13.20,Built-Up Roofing Systems,1000,"Coated & saturated base sheet, 3 plies #15 asph. felt, mopped",*,24.0,2.333,,104.0,108.0,23,235.0,315.0
+07 51 13.20,Built-Up Roofing Systems,200,On nailable decks,,23.0,2.435,,96.0,113.0,24,233.0,315.0
+07 51 13.20,Built-Up Roofing Systems,300,"4 plies #15 organic felt, mopped",,22.0,2.545,+,121.0,118.0,,264.0,350.0
+07 51 13.20,Built-Up Roofing Systems,500,Coal tar pitch with gravel/slag surfacing,,,,,,,,,
+07 51 13.20,Built-Up Roofing Systems,600,"4 plies #15 tarred felt, mopped",-1,21.0,2.667,Sq.,222.0,124.0,26,372.0,475.0
+07 51 13.20,Built-Up Roofing Systems,800,"3 plies glass fiber felt (type IV), mopped","""",19.0,2.947,"""",182.0,137.0,29,348.0,455.0
+07 51 13.20,Built-Up Roofing Systems,5000,"Coated glass fiber base sheet, and 2 plies of",,,,,,,,,
+07 92 19.10,Acoustical Sealant,30,"1/4"" x 1/2""",1 Bric,288,0.028,LF,0.67,1.53,,2.2,3.0
+07 92 19.10,Acoustical Sealant,35,"1/2"" x 1/2""",,275,0.029,,1.35,1.61,,2.96,3.0
+07 92 19.10,Acoustical Sealant,40,"1/2"" x 3/4""",,263,0.03,,2.02,1.68,,3.7,4.0
+07 92 19.10,Acoustical Sealant,45,"3/4"" x 3/4""",,244,0.033,,3.04,1.81,,4.85,6.0
+07 92 19.10,Acoustical Sealant,50,ייןגייך,,200,0.04,,5.4,2.21,,7.61,9.0
+07 95 13.50,Expansion Joint Assemblies,10,EXPANSION JOINT ASSEMBLIES,,,,,,,,,
+07 95 13.50,Expansion Joint Assemblies,200,"1 Floor cover assemblies, 1"" space, aluminum",1 Sswk,38.0,0.211,LF,0.29,13.0,,42.0,52.0
+07 95 13.50,Expansion Joint Assemblies,300,Bronze,$,38.0,0.211,,54.0,13.0,,67.0,79.0
+07 95 13.50,Expansion Joint Assemblies,500,"2"" space, aluminum",,38.0,0.211,,40.5,13.0,,53.5,65.0
+07 95 13.50,Expansion Joint Assemblies,600,Bronze,1,38.0,0.2111,,62.5,13.0,,75.5,88.4
+07 95 13.50,Expansion Joint Assemblies,800,"Wall and ceiling assemblies, 1"" space, aluminum",,38.0,0.211,☐ ],17.4,13.0,,30.4,39.0
+07 95 13.50,Expansion Joint Assemblies,900,Bronze,1,38.0,211.0,,55.0,13.0,,68.0,80.0
+07 95 13.50,Expansion Joint Assemblies,1100,"2"" space, aluminum",,38.0,2211.0,,25.5,13.0,,38.5,48.0
+07 95 13.50,Expansion Joint Assemblies,1200,Bronze,,38.0,0.211,,53.0,13.0,,66.0,78.0
+07 95 13.50,Expansion Joint Assemblies,1400,"Floor to wall assemblies, 1"" space, aluminum",,38.0,0.211,,25.0,13.0,,38.0,47.5
+07 95 13.50,Expansion Joint Assemblies,1500,Bronze or stainless,,38.0,0.211,,64.5,13.0,,77.5,91.0
+07 95 13.50,Expansion Joint Assemblies,1700,"Gym floor angle covers, aluminum, 3"" x 3"" angle",,46.0,0.174,,21.5,10.75,,32.25,40.0
+07 95 13.50,Expansion Joint Assemblies,1800,"3"" x 4"" angle",,46.0,0.174,,25.5,10.75,,36.25,44.5
+07 95 13.50,Expansion Joint Assemblies,2000,"Roof closures, aluminum, flatroof, low profile, 1"" space",,57.14,,,18.9,8.7,,27.6,34.5
+07 95 13.50,Expansion Joint Assemblies,2100,High profile,,57.0,0.14,,263.0,8.7,,34.7,42.0
+07 95 13.50,Expansion Joint Assemblies,2300,"Roof to wall, low profile, 1"" space",,57.0,0.14,,25.0,8.7,,33.7,41.0
+07 95 13.50,Expansion Joint Assemblies,2400,High profile,,57.0,0.14,,33.0,8.7,,41.7,49.5
+07 91 13.10,Compression Seals,4900,"O-ring type cord, 1/4""",1 Bric,472,0.017,LF,0.43,0.94,,1.37,1.8
+07 91 13.10,Compression Seals,4910,"1/2""",,440,0.018,,1.14,1.0,,2.14,2.7
+07 91 13.10,Compression Seals,4920,"3/4""",,424,0.019,,2.29,1.04,,3.33,4.0
+07 91 13.10,Compression Seals,4930,"ן""",,408,0.02,,4.59,1.08,,5.67,6.7
+07 91 13.10,Compression Seals,4940,"1-1/4""",,384,0.021,,11.05,1.15,,12.2,13.9
+07 91 13.10,Compression Seals,4950,"1-1/2""",,368,0.022,,13.55,1.2,,14.75,16.7
+07 91 13.10,Compression Seals,4960,"1-3/4""",,352,0.023,,15.85,1.26,,17.11,19.3
+07 91 13.10,Compression Seals,4970,"2""",,344,0.023,,27.5,1.28,,28.78,32.5
+07 91 16.10,Joint Gaskets,4400,"Joint gaskets, neoprene, closed cell w/adh, 1/8"" x 3/8""",1 Bric,240,0.033,LF,0.22,1.84,,2.06,3.0
+07 91 16.10,Joint Gaskets,4500,"1/4"" x 3/4""",,215,0.037,,0.76,2.06,,2.82,3.9
+07 91 16.10,Joint Gaskets,4700,"1/2"" x 1""",,200,0.04,,0.73,2.21,,2.94,4.1
+07 91 16.10,Joint Gaskets,4800,"3/4"" x 1-1/2""",,165,0.048,,1.42,2.68,,4.1,5.6
+07 91 23.10,Backer Rods,30,"Backer rod, polyethylene, 1/4"" diameter",1 Bric,4.6,1.739,C.LF,7,96,,103,152
+07 91 23.10,Backer Rods,50,"1/2"" diameter",1 Bric,4.6,1.739,C.LF,16,96,,112,162
+07 91 23.10,Backer Rods,70,"3/4"" diameter",,4.6,1.739,,17,96,,113,163
+07 91 23.10,Backer Rods,90,"1"" diameter",,4.6,1.739,,30,96,,126,177
+07 91 26.10,Joint Fillers,4360,"Butyl rubber filler, 1/4"" x 1/4""",1 Bric,290.0,0.028,L.F,.28,1.52,,1.8,2.6
+07 91 26.10,Joint Fillers,4365,"1/2"" x 1/2""",,250.0,0.032,,1.13,1.77,,2.9,3.8
+07 91 26.10,Joint Fillers,4370,"1/2"" x 3/4""",,210.0,0.038,,1.69,2.1,,3.79,5.0
+07 91 26.10,Joint Fillers,4375,"3/4"" x 3/4""",,230.0,0.035,,2.54,1.92,,4.46,5.7
+07 91 26.10,Joint Fillers,4380,"1"" x 1""",,180.0,1.044,,3.38,2.46,,5.84,7.4
+07 91 26.10,Joint Fillers,4390,"For coloring, add",,,,,,312 %,243.0,,
+07 91 26.10,Joint Fillers,4980,"Polyethylene joint backing, 1/4"" x 2""",1 Bric,2.08,3.846,C.L.F.,13,213.0,,226.0,335.0
+07 91 26.10,Joint Fillers,4990,"1/4"" x 6""",,1.28,6.25,,,345.0,,375.0,555.0
+07 91 26.10,Joint Fillers,5600,"Silicone, room temp vulcanizing foam seal, 1/4"" x 1/2""",,1312.0,0.006,LF,.31,0.34,,0.65,8.0
+07 91 26.10,Joint Fillers,5610,"1/2"" x 1/2""",,656.0,0.012,,.61,0.67,,1.28,1.6
+07 91 26.10,Joint Fillers,5620,"1/2"" x 3/4""",,442.0,0.018,,.92,1.0,,1.92,2.5
+07 91 26.10,Joint Fillers,5630,"3/4"" x 3/4""",,328.0,0.024,,1.38,1.35,,2.73,3.5
+07 91 26.10,Joint Fillers,5640,"1/8"" x 1""",,1312.0,0.006,,.31,0.34,,0.65,0.8
+07 91 26.10,Joint Fillers,5650,"1/8"" x 3""",,442.0,0.018,,.92,1.0,,1.92,2.5
+07 91 26.10,Joint Fillers,5670,"1/4"" x 3""",,295.0,0.027,,1.84,1.5,,3.34,4.2
+07 91 26.10,Joint Fillers,5680,"1/4"" x 6""",,148.0,0.054,,3.68,2.99,,6.67,8.5
+07 91 26.10,Joint Fillers,5690,"1/2"" x 6""",,82.0,0.098,,7.35,5.4,,12.75,16.2
+07 91 26.10,Joint Fillers,5700,"1/2"" x 9""",,52.5,0.152,,11.05,8.4,,19.45,235.0
+07 91 26.10,Joint Fillers,5710,"1/2"" x 12""",,33.0,0.242,,14.70,13.4,,28.1,36.0
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,10,SHEET METAL FLASHING AND COUNTER FLASHING,,,,,,,,,
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,11,Including up to 4 bends,,,,,,,,,
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,20,"Aluminum, mill finish, .013"" thick",1 Rofc,145.0,0.055,S.F.,1.33,2.74,,4.07,5.9
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,30,".016"" thick",,145.0,0.055,,2.59,2.74,,5.33,7.3
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,60,".019"" thick",,145.0,0.055,,5.20,2.74,,7.94,10.2
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,100,".032"" thick",,145.0,0.055,,4.24,2.74,,6.98,9.1
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,200,".040"" thick",,145.0,0.055,,4.47,2.74,,7.21,9.35
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,300,".050"" thick",,145.0,0.055,,6.25,2.74,,8.99,11.3
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,325,"Mill finish 5"" x 7"" step flashing, .016"" thick",,1920.0,0.004,Eo.,.17,0.21,,0.38,0.53
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,350,"Mill finish 12"" x 12"" step flashing, .016"" thick",,1600.0,0.005,"""",.62,0.25,,0.87,1.08
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,400,"Painted finish, add",,,,S.F.,.32,,,0.32,0.35
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,1000,"Mastic-coated 2 sides, .005"" thick",1 Rofc,330.0,0.024,,1.91,1.22,,3.11,4.05
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,1100,".016"" thick",,330.0,0.024,,2.11,1.2,,3.31,4.27
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,1600,"Copper, 16 oz, sheets, under 1000 lb.",,115.0,0.07,,14.15,3.45,,17.6,21.0
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,1700,Over 4000 lb.,,155.0,0.052,,14.15,2.56,,16.71,19.7
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,1900,"20 oz. sheets, under 1000 lb.",,110.0,0.073,,17.15,3.61,,20.76,25.0
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,2000,Over 4000 lb.,,145.0,0.055,,16.30,2.74,,19.04,22.5
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,2200,"24 oz. sheets, under 1000 lb.",,105.0,0.076,,20.50,3.78,,24.28,28.5
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,2300,Over 4000 lb.,1 Rofc,135.0,0.059,S.F.,19.35,2.94,,22.29,26.5
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,2500,"32 oz. sheets, under 1000 lb.",,100.0,0.08,,27.50,3.97,,31.47,36.5
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,2600,Over 4000 lb.,,130.0,0.062,,26,3.05,,29.05,33.5
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,2700,"W shape for valleys, 16 oz., 24"" wide",,100.0,0.08,L.F.,18.40,3.97,,22.37,26.5
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,5800,"Lead, 2.5 lb./S.F, up to 12"" wide",,135.0,0.059,S.F.,6.45,2.94,,9.39,11.85
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,5900,"Over 12"" wide",,135.0,0.059,,4.44,2.94,,7.38,9.65
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,3900,"Stainless steel sheets, 32 ga.",,155.0,0.052,,3.63,2.56,,6.19,8.15
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,0,28 ga.,,155.0,0.052,,8.30,2.56,,10.86,13.3
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,100,26 go.,,155.0,0.052,,6.45,2.56,,9.01,11.25
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,200,24 ga.,,155.0,0.052,,7.75,2.56,,10.31,12.65
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,9290,"For mechanically keyed flashing, add",,,,,,40%,,,
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,9320,"Steel sheets, galvanized, 20 ga.",1 Rofc,130.0,0.062,S.F.,3,3.05,,6.05,8.25
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,322,22 ga.,,135.0,0.059,,1.69,2.94,,4.63,6.6
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,324,24 ga.,,140.0,0.057,,.99,2.83,,3.82,5.7
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,326,26 ga.,,148.0,0.054,,2.30,2.68,,4.98,6.9
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,328,28 ga.,,155.0,0.052,,1.98,2.56,,4.54,6.35
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,340,30 ga.,,160.0,0.05,,1.67,2.48,,4.15,5.85
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,400,"Terne coated stainless steel, .015"" thick, 28 ga.",,155.0,0.052,,8.35,2.56,,10.91,13.3
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,500,".018"" thick, 26 ga.",,155.0,0.052,,9.30,2.56,,11.86,14.4
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,600,"Zinc and copper alloy (brass), .020"" thick",,155.0,0.052,,9.25,2.56,,11.81,14.3
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,700,".027"" thick",,155.0,0.052,,10.90,2.56,,13.46,16.1
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,800,".032"" thick",,155.0,0.052,,13.65,2.56,,16.21,19.15
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,900,".040"" thick",,155.0,0.052,,19.90,2.56,,22.46,26.0
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,7,65 12 E Fabric and Mastic Flashings,,,,,,,,,
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,7,65 12.10 Fabric and Mastic Flashing and Counter Flashing,,,,,,,,,
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,10,FABRIC AND MASTIC FLASHING AND COUNTER FLASHING,,,,,,,,,
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,1300,"Asphalt flashing cement, 5 gallon",,,,Gal.,11.75,,,11.75,12.95
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,1900,"Fabric, asphalt-saturated cotton, specification grade",1 Rofc,35.0,0.229,S.Y.,3.40,11.35,,14.75,22.0
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,5000,Utilitygrade,,35.0,0.229,,1.48,11.35,,12.83,20.0
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,5300,"Close-mesh fabric, saturated, 17 oz./S.Y.",,35.0,0.229,,2.26,11.35,,13.61,21.0
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,5500,"Fiberglass, resin-coated",,35.0,0.229,,1.17,11.35,,12.52,19.7
+07 91 26.10,7 65 10.10 Sheet Metal Flashing and Counter Flashing,3500,"Shower pan, bituminous membrane, 7 oz.",,155.0,0.052,S.F.,1.84,2.56,,4.4,6.15
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,150,"Latex acrylicbased, bulk",,,,Gal.,31.0,,,31.0,34.0
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,155,"Bulk in place 1/4"" x 1/4"" bead",1 Bric,300.0,0.027,LF.,0.1,1.47,,1.57,2.32
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,160,"1/4"" x 3/8""",,294.0,0.027,,0.16,1.5,,1.66,2.44
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,65,"1/4"" x 1/2""",,288.0,0.028,,0.22,1.53,,1.75,2.54
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,75,"3/8"" x 3/8""",,284.0,0.028,,0.24,1.56,,1.8,2.61
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,80,"3/8"" x 1/2""",,280.0,0.029,,0.33,1.58,,1.91,2.73
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,85,"3/8"" x 5/8""",,276.0,0.029,,0.41,1.6,,2.01,2.85
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,195,"3/8"" x 3/4""",,272.0,0.029,,0.49,1.63,,2.12,2.98
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,100,"1/2"" x 1/2""",,275.0,0.029,,0.44,1.61,,2.05,2.89
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,105,"1/2"" x 5/8""",,269.0,0.03,,0.54,1.64,,2.18,3.07
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,110,"1/2"" x 3/4""",,263.0,0.03,,0.65,1.68,,2.33,3.24
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,115,"1/2"" x 7/8""",1 Bric,256.0,0.031,L.F,0.76,1.73,,2.49,3.43
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,120,"1/2"" x 1""",,250.0,0.032,,0.87,1.77,,2.64,3.61
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,125,"3/4"" x 3/4""",,244.0,0.033,,0.98,1.81,,2.79,3.8
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,130,"3/4"" x 1""",,225.0,0.036,,1.31,1.96,,3.27,4.39
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,135,"1"" x1""",,200.0,0.04,,1.74,2.21,,3.95,5.25
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,190,Cartridges,,,,Gal.,54.5,,,54.5,60.0
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,200,11 fl.oz. cartridge,,,,Eo.,4.68,,,4.68,5.15
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,500,"1/4"" x 1/2""",1 Bric,288.0,0.028,LF,0.38,1.53,,1.91,2.72
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,500,"1/2"" x 1/2""",,275.0,0.029,,0.76,1.61,,2.37,3.25
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,300,"3/4"" x 3/4""",,244.0,0.033,,1.72,1.81,,3.53,4.61
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,700,"3/4"" x 1""",,225.0,0.036,,2.29,1.96,,4.25,5.45
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,0,"1"" x1""",,200.0,0.04,,2.87,2.21,,5.08,6.5
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,400,"Butyl based, bulk",,,,Gal.,42.0,,,42.0,46.5
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,500,Cartridges,,,,,42.0,,,42.0,46.5
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,700,"1/4"" x 1/2"", 154 L.F./gal.",1 Bric,288.0,0.028,LF,0.27,1.53,,1.8,2.6
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,800,"1/2"" x 1/2"", 77 L.F./gal.",,275.0,0.029,"""",0.55,1.61,,2.16,3.01
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,300,"Polysulfide compounds, 1 component, bulk",,,,Gal.,86.0,,,86.0,94.5
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,600,"1 or 2 component, inplace, 1/4"" x 1/4"", 308 L.F./gal.",Bric,300.0,0.027,,0.28,1.47,,1.75,2.52
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,700,"1/2"" x 1/4"", 154 LF./gal.",,288.0,0.028,,0.56,1.53,,2.09,2.91
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,700,"3/4"" x 3/8"", 68 L.F./gal.",,272.0,0.029,,1.26,1.63,,2.89,3.83
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,0,"1"" x 1/2"", 38 L.F./gal.",,250.0,0.032,,2.26,1.77,,4.03,5.15
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,200,"Polyurethane, 1 or 2 component",,,,Gal.,56.0,,,56.0,61.5
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,500,"Bulk, in place, 1/4"" x 1/4""",1 Bric,300.0,0.027,LF,0.18,1.47,,1.65,2.41
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,555,"1/2"" x 1/4""",,288.0,0.028,,0.36,1.53,,1.89,2.7
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,300,"3/4"" x 3/8""",,272.0,0.029,,0.82,1.63,,2.45,3.35
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,900,"1"" x 1/2""",,250.0,0.032,,1.45,1.77,,3.22,4.25
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,100,"Silicone rubber, bulk",,,,Gal.,67.5,,,67.5,74.0
+07 91 26.10,7 92 13.20 Caulking and Sealant Options,200,Cartridges,,,,=,45.5,,,45.5,50.5
+07 91 26.10,7 92 16.10 Rigid Joint Sealants,800,"Tapes, sealant, PVC foam adhesive, 1/16"" x 1/4""",,,,C.L.F.,4.07,,,4.07,4.48
+07 91 26.10,7 92 16.10 Rigid Joint Sealants,900,"1/16"" x 1/2""",,,,,9.3,,,9.3,10.2
+07 91 26.10,7 92 16.10 Rigid Joint Sealants,950,"1/16"" x 1""",,,,,15.45,,,15.45,16.95
+07 91 26.10,7 92 16.10 Rigid Joint Sealants,0,"1/8"" x 1/2""",,,,,9.4,,,9.4,10.35
+07 91 26.10,7 92 19.10 Acoustical Sealant,20,"Acoustical sealant, elastomeric, cartridges",,,,Eo.,8.25,,,8.25,9.1
+07 91 26.10,7 92 19.10 Acoustical Sealant,25,"Inplace, 1/4"" x 1/4""",1 Bric,300.0,0.027,LF,0.34,1.47,,1.81,2.58
+07 91 26.10,7 46 29.10 Plywood Siding Options,0,"Polyvinyl chloride coated, 3/8"" thick",2 Carp,750,0.021,S.F.,1.23,1.2,,2.43,3.14
+07 91 26.10,7 46 33.10 Vinyl Siding,10,VINYL SIDING,,,,,,,,,
+07 91 26.10,7 46 33.10 Vinyl Siding,795,"Clapboard profile, woodgrain texture, .048 thick, double 4",2 Carp,495.0,.032,S.F.,1.15,1.82,,2.97,3.98
+07 91 26.10,7 46 33.10 Vinyl Siding,300,Double 5,,550.0,.029,,1.15,1.64,,2.79,3.71
+07 91 26.10,7 46 33.10 Vinyl Siding,5,Single &,,495.0,.032,,1.96,1.82,,3.78,4.87
+07 91 26.10,7 46 33.10 Vinyl Siding,10,Single 10,,550.0,.029,],2.35,1.64,,3.99,5.0
+07 91 26.10,7 46 33.10 Vinyl Siding,15,".044 thick, double 4",,495.0,.032,,1.14,1.82,,2.96,3.97
+07 91 26.10,7 46 33.10 Vinyl Siding,20,Double 5,,550.0,.029,,1.17,1.64,,2.81,3.73
+07 91 26.10,7 46 33.10 Vinyl Siding,25,".042 thick, double 4",,495.0,.032,!,1.25,1.82,,3.07,4.09
+07 91 26.10,7 46 33.10 Vinyl Siding,30,Double 5,,550.0,.029,,1.89,1.64,,3.53,4.52
+07 91 26.10,7 46 33.10 Vinyl Siding,35,"Cross sawn texture, .040 thick, double 4",,495.0,.032,,0.8,1.82,,22.62,3.59
+07 91 26.10,7 46 33.10 Vinyl Siding,40,Double 5,,550.0,.029,,0.77,1.64,,2.41,3.29
+07 91 26.10,7 46 33.10 Vinyl Siding,45,"Smooth texture, .042 thick, double 4",,495.0,.032,,1.91,1.82,,3.73,4.81
+07 91 26.10,7 46 33.10 Vinyl Siding,50,Double 5,,550.0,.029,,0.85,1.64,,2.49,3.38
+07 91 26.10,7 46 33.10 Vinyl Siding,55,Single 8,,495.0,.032,,0.77,1.82,,2.59,3.56
+07 91 26.10,7 46 33.10 Vinyl Siding,60,"Cedar texture, .044 thick, double 4",,495.0,.032,,1.21,1.82,1.0,3.03,4.04
+07 91 26.10,7 46 33.10 Vinyl Siding,65,Double 6,,600.0,.027,,1.56,1.50,,3.06,3.95
+07 91 26.10,7 46 33.10 Vinyl Siding,70,"Dutch lap profile, woodgrain texture, .048 thick, double 5",,550.0,.029,,1.28,1.64,,2.92,3.85
+07 91 26.10,7 46 33.10 Vinyl Siding,75,".044 thick, double 4.5",,525.0,.030,,1.15,1.72,,2.87,3.82
+07 91 26.10,7 46 33.10 Vinyl Siding,80,".042 thick, double 4.5",,525.0,.030,,0.96,1.72,,2.68,3.61
+07 91 26.10,7 46 33.10 Vinyl Siding,85,".040 thick, double 4.5",,525.0,.030,,0.79,1.72,,22.51,3.42
+07 91 26.10,7 46 33.10 Vinyl Siding,100,"Shake profile, 10"" wide",,400.0,: .040,,3.93,2.25,,6.18,7.7
+07 91 26.10,7 46 33.10 Vinyl Siding,105,"Vertical pattern, .046 thick, double 5",,550.0,.029,,2.1,1.64,,3.74,4.75
+07 91 26.10,7 46 33.10 Vinyl Siding,110,".044 thick, triple 3",,550.0,.029,,1.8,1.64,,3.44,4.42
+07 91 26.10,7 46 33.10 Vinyl Siding,115,".040 thick, triple 4",,550.0,.029,,1.82,1.64,,3.46,4.44
+07 91 26.10,7 46 33.10 Vinyl Siding,120,".040 thick, triple 2.66",,550.0,.029,,2.01,1.64,,3.65,4.65
+07 91 26.10,7 46 33.10 Vinyl Siding,125,"Insulation, fan folded extruded polystyrene, 1/4""",,2000.0,.008,,0.32,.45,,0.77,1.02
+07 91 26.10,7 46 33.10 Vinyl Siding,130,"3/8""",2 Carp,2000.0,.008,S.F.,0.35,.45,,0.8,1.06
+07 91 26.10,7 46 33.10 Vinyl Siding,135,"Accessories, I channel, 5/8"" pocket",,700.0,.023,LF .,0.68,1.29,,1.97,2.66
+07 91 26.10,7 46 33.10 Vinyl Siding,140,"3/4"" pocket",,695.0,.023,,0.76,1.30,,2.06,2.76
+07 91 26.10,7 46 33.10 Vinyl Siding,145,"1-1/4"" pocket",,680.0,.024,,1.28,1.32,,2.6,3.37
+07 91 26.10,7 46 33.10 Vinyl Siding,150,"Flexible, 3/4"" pocket",,600.0,.027,,3.5,1.50,,5.0,6.1
+07 91 26.10,7 46 33.10 Vinyl Siding,155,Under sillfinish trim,,500.0,.032,,0.73,1.80,,2.384,3.48
+07 91 26.10,7 46 33.10 Vinyl Siding,160,Vinyl starter strip,,700.0,.023,,0.79,1.29,,2.08,2.78
+07 91 26.10,7 46 33.10 Vinyl Siding,165,Aluminum starter strip,,700.0,.023,,0.32,1.29,,11.61,2.27
+07 91 26.10,7 46 33.10 Vinyl Siding,170,"Window casing, 2-1/2"" wide, 3/4"" pocket",,510.0,.031,,2.04,1.77,,3.81,4.87
+07 91 26.10,7 46 33.10 Vinyl Siding,175,"Outside corner, woodgrain finish, 4"" face, 3/4"" pocket",,700.0,.023,,2.74,1.29,,4.03,4.94
+07 91 26.10,7 46 33.10 Vinyl Siding,180,"5/8"" pocket",,700.0,.023,,2.11,1.29,,3.4,4.24
+07 91 26.10,7 46 33.10 Vinyl Siding,185,"Smooth finish, 4"" face, 3/4"" pocket",,700.0,.023,,2.78,1.29,,4.07,4.98
+07 91 26.10,7 46 33.10 Vinyl Siding,190,"7/8"" pocket",,690.0,.023,,2.01,1.31,,3.32,4.15
+07 91 26.10,7 46 33.10 Vinyl Siding,195,"1-1/4"" pocket",,700.0,.023,,1.59,1.29,,2.88,3.67
+07 91 26.10,7 46 33.10 Vinyl Siding,200,"Soffit and fascia, 1' overhang, solid",,120.0,.133,,5.8,7.50,,13.3,17.55
+07 91 26.10,7 46 33.10 Vinyl Siding,-205,Vented,,120.0,.133,,5.8,7.50,,13.3,17.55
+07 91 26.10,7 46 33.10 Vinyl Siding,207,"18"" overhang, solid",,110.0,.145,,6.85,8.20,,15.05,19.75
+07 91 26.10,7 46 33.10 Vinyl Siding,208,Vented,,110.0,.145,,6.85,8.20,,15.05,19.75
+07 91 26.10,7 46 33.10 Vinyl Siding,210,"2' overhang, solid",,100.0,.160,,7.9,9,,16.9,2222.0
+07 91 26.10,7 46 33.10 Vinyl Siding,215,Vented,,100.0,.160,,,7.9,9,,16.9
+07 91 26.10,7 46 33.10 Vinyl Siding,217,"3' overhang, solid",,100.0,.160,I,9.95,9 1,,18.95,24.5
+07 91 26.10,7 46 33.10 Vinyl Siding,218,Vented,,100.0,.160,,9.95,9,,18.95,24.5
+07 91 26.10,7 46 33.10 Vinyl Siding,220,"Colors for siding and soffits, add",,,,S.F.,0.16,,,0.16,0.18
+07 81 16.10,Sprayed Cementitious Fireproofing,1410,Bonding agent,1 Plas,1000.0,0.008,S.F,,0.11,0.41,,0.52
+07 81 16.10,Sprayed Cementitious Fireproofing,1500,"Intumescent epoxy fireproofing on wire mesh, 3/16"" thick",,,,,,,,,
+07 81 16.10,Sprayed Cementitious Fireproofing,1550,"1 hour rating, exterior use",G-2,136.0,0.176,S.F.,7.85,8.4,1.02,17.27,22.5
+07 81 16.10,Sprayed Cementitious Fireproofing,1551,"2 hour rating, exterior use",,136.0,0.176,,7.85,8.4,1.02,17.27,22.5
+07 81 16.10,Sprayed Cementitious Fireproofing,1600,"Magnesium oxychloride, 35# to 40# density, 1/4"" thick",,3000.0,0.008,,1.69,0.38,0.05,2.12,2.4
+07 81 16.10,Sprayed Cementitious Fireproofing,1650,"1/2"" thick",,2000.0,0.012,,3.45,0.57,0.07,4.09,4.7
+07 81 16.10,Sprayed Cementitious Fireproofing,1700,"60# to 70# density, 1/4"" thick",,3000.0,0.008,,2.19,0.38,0.05,2.62,3.0
+07 81 16.10,Sprayed Cementitious Fireproofing,1750,"1/2"" thick",,2000.0,0.012,,4.4,0.57,,5.04,5.7
+07 81 16.10,Sprayed Cementitious Fireproofing,2000,"Vermiculite cement, troweled or sprayed, 1/4"" thick",,3000.0,0.008,,1.53,0.38,0.05,1.96,2.3
+07 81 16.10,Sprayed Cementitious Fireproofing,2050,"1/2"" thick",,2000.0,0.012,,3.05,0.57,0.07,3.69,4.2
+07 84 13.10,Firestopping,10,FIRESTOPPING,,,,,,,,,R078413-30
+07 84 13.10,Firestopping,100,"Metallic piping, non insulated",,,,,,,,,
+07 84 13.10,Firestopping,110,"Through walls, 2"" diameter",1 Carp,16,.500,Ea.,11.5,28.0,,39.5,54.5
+07 84 13.10,Firestopping,120,"4"" diameter",,14,.571,,20.0,32.0,,52.0,70
+07 84 13.10,Firestopping,130,"6"" diameter",,12,1.667,,29.5,37.5,,67.0,88.5
+07 84 13.10,Firestopping,140,"12"" diameter",,10,1.800,,25.0,45.0,,70.0,94.5
+07 84 13.10,Firestopping,150,"Through floors, 2"" diameter",,32,.250,,5.75,14.1,,19.85,27.5
+07 84 13.10,Firestopping,160,"4"" diameter",,28,.286,,10.1,16.1,,26.2,35
+07 84 13.10,Firestopping,170,"6"" diameter",,24,.333,,14.75,18.75,,33.5,44.5
+07 84 13.10,Firestopping,180,"12"" diameter",,20,.400,,12.95,22.5,,35.45,48
+07 84 13.10,Firestopping,190,"Metallic piping, insulated",,,,,,,,,
+07 84 13.10,Firestopping,200,"Through walls, 2"" diameter",1 Carp,16LOS2222.500,Eo.,20,,28.0,,48.0,64.0
+07 84 13.10,Firestopping,210,"4"" diameter",,14,.571,,29.5,32.0,,61.5,80.5
+07 84 13.10,Firestopping,220,"6"" diameter",,12,.667,,39.5,37.5,,77.0,99.5
+07 84 13.10,Firestopping,230,"12"" diameter",,10,1.800,,67.5,45.0,,112.5,142
+07 84 13.10,Firestopping,240,"Through floors, 2"" diameter",,32,.250,,10.1,14.1,,24.2,32
+07 84 13.10,Firestopping,250,"4"" diameter",,28,.286,,14.75,16.1,,30.85,40.5
+07 84 13.10,Firestopping,260,"6"" diameter",,24,.333,,19.8,18.75,,38.55,50
+07 84 13.10,Firestopping,270,"12"" diameter",,20,.400,,34.0,22.5,,56.5,70.5
+07 84 13.10,Firestopping,280,"Non metallic piping, non insulated",,,,,,,,,
+07 84 13.10,Firestopping,290,"Through walls, 2"" diameter",1 Carp,12,.667,Ea.,70.0,37.5,,107.5,133
+07 84 13.10,Firestopping,300,"4"" diameter",1,110,1.800,,129.0,45.0,,174.0,209
+07 84 13.10,Firestopping,310,"6"" diameter",,81,,,247.0,56.5,,303.5,355
+07 84 13.10,Firestopping,330,"Through floors, 2"" diameter",,16,.500,,44.5,28.0,,72.5,90.50
+07 84 13.10,Firestopping,340,"4"" diameter",1 Carp,6,1.333,Ea.,81.0,75.0,,156.0,201
+07 84 13.10,Firestopping,350,"6"" diameter","""",6,1.333,"""",147.0,75.0,,222.0,273
+07 84 13.10,Firestopping,370,"Ductwork, insulated & non insulated, round",,,,,,,,,
+07 84 13.10,Firestopping,380,"Through walls, 6"" diameter",1 Carp,12,.667,Ea.,39.5,37.5,,77.0,99.50
+07 84 13.10,Firestopping,390,"12"" diameter",,10,1.800,,67.5,45.0,,112.5,142
+07 84 13.10,Firestopping,400,"18"" diameter",[,18,1,,82.0,56.5,,138.5,175
+07 84 13.10,Firestopping,410,"Through floors, 6"" diameter",,16,.500,,19.8,28.0,,47.8,64
+07 84 13.10,Firestopping,420,"12"" diameter",,14,.571,,14.75,321.0,,46.75,64.50
+07 84 13.10,Firestopping,430,"18"" diameter",,12,.667,,17.8,37.5,,55.3,75.50
+07 84 13.10,Firestopping,440,"Ductwork, insulated & non insulated, rectangular",,,,,,,,,
+07 84 13.10,Firestopping,450,"With stiffener/closure angle, through walls, 6"" x 12""",1 Carp,8,,Eg.,52.0,56.5,,108.5,141
+07 84 13.10,Firestopping,460,"12"" x 24""",,6,1.333,,104.0,75.0,,179.0,226
+07 84 13.10,Firestopping,470,"24"" x 48""",,4,2,,207.0,113.0,,320.0,395
+07 71 23.20,Downspout Elbows,200,"Embossed, 3"" x 4"", .025"" thick",1 Shee,100.0,0.08,Ea .,1.41,5.4,,6.81,9.7
+07 71 23.20,Downspout Elbows,300,Enameled,,100.0,0.08,,4.39,5.4,,9.79,13.0
+07 71 23.20,Downspout Elbows,400,"Embossed, corrugated, 3"" diameter, .020"" thick",,100.0,0.08,,4.61,5.4,,10.01,13.2
+07 71 23.20,Downspout Elbows,500,"4"" diameter, .025"" thick",,100.0,0.08,,8.25,5.4,,13.65,17.25
+07 71 23.20,Downspout Elbows,600,"Copper, 16 oz., 2"" diameter",,100.0,0.08,,12.4,5.4,,17.8,22.0
+07 71 23.20,Downspout Elbows,700,"3"" diameter",,100.0,0.08,,14.1,5.4,,19.5,23.5
+07 71 23.20,Downspout Elbows,800,"4"" diameter",,100.08,,,18.1,5.4,,23.5,28.0
+07 71 23.20,Downspout Elbows,0,"Rectangular, 2"" x 3"" corrugated",,100.0,0.08,,10.95,5.4,,16.35,20.0
+07 71 23.20,Downspout Elbows,100,"3"" x 4"" corrugated",,100.0,0.08,,16.9,5.4,,22.3,26.5
+07 71 23.20,Downspout Elbows,300,"Vinyl, 2-1/2"" diameter, 45 or 75 degree bend",,100.0,0.08,,5.9,5.4,,11.3,14.6
+07 71 23.20,Downspout Elbows,400,Tee Y junction,,75.0,0.107,,14.65,7.2,,21.85,27.0
+07 71 23.30,Gutters,10,"Aluminum, stock units, 5"" K type, .027"" thick, plain",1 Shee,125,.064,L.F.,2.4,4.32,,6.72,9.15
+07 71 23.30,Gutters,100,Enameled,,125,.064,,2.35,4.32,,6.67,9.1
+07 71 23.30,Gutters,300,"5"" K type, .032"" thick, plain",,125,.064,,2.7,4.32,,7.02,9.45
+07 71 23.30,Gutters,400,Enameled,,125,.064,,2.67,4.32,,6.99,9.45
+07 71 23.30,Gutters,700,"Copper, half round, 16 oz., stock units, 4"" wide",,125,.064,,8.3,4.32,,12.62,15.6
+07 71 23.30,Gutters,900,"5"" wide",,125.064,,,8.3,4.32,,12.62,15.6
+07 71 23.30,Gutters,0,"6"" wide",,118.068,,,11.15,4.58,,15.73,19.15
+07 71 23.30,Gutters,200,"K type, 16 oz., stock, 5"" wide",,125,.064,,11.75,4.32,,16.07,19.45
+07 71 23.30,Gutters,300,"6"" wide",,125,.064,,10.95,4.32,,15.27,18.55
+07 71 23.30,Gutters,500,"Lead coated copper, 16 oz, half round, stock, 4"" wide",,125,.064,,19.4,4.32,,23.72,28.0
+07 71 23.30,Gutters,600,"6"" wide",,118,.068,,19.55,4.58,,24.13,28.5
+07 71 23.30,Gutters,300,"K type, stock, 5"" wide",,125,.064,,20.5,4.32,,24.82,29.0
+07 71 23.30,Gutters,900,"6"" wide",,125 1.064,,,11.75,4.32,,16.07,19.45
+07 71 23.30,Gutters,100,"Copper clad stainless steel, K type, 5"" wide",,125,.064,,8.15,4.32,,12.47,15.45
+07 71 23.30,Gutters,200,"6"" wide",,125.0641,,,4.22,4.32,,8.54,11.15
+07 71 23.30,Gutters,400,"Steel, galv, half round or box, 28 ga., 5"" wide, plain",,125,.064,,3.63,4.32,,7.95,10.5
+07 71 23.30,Gutters,500,Enameled,,125.064,,,3.6,4.32,,7.92,10.45
+07 71 23.30,Gutters,700,"26 ga., stock, 5"" wide",,125,.064,,3.63,4.32,,7.95,10.5
+07 71 23.30,Gutters,300,"6"" wide",,125,.064,,4.9,4.32,,9.22,11.9
+07 71 23.30,Gutters,0,"Vinyl, 0.6, 4"" wide",1 Carp,115,.070,,2.13,3.92,,6.05,8.2
+07 71 23.30,Gutters,100,"5"" wide",,115.070,,,2.13,3.92,,6.05,8.2
+07 71 23.30,Gutters,200,"4"" half round, stock units",,115.070,,,1.49,3.92,,5.41,7.5
+07 71 23.30,Gutters,250,Joint connectors,,,,Ea .,4.88,,,4.88,5.35
+07 71 23.30,Gutters,300,"Wood, clear treated cedar, fir or hemlock, 3"" x 4""",1 Carp,100,.080,LE,10.75,4.5,,15.25,18.55
+07 71 23.30,Gutters,100,"4"" x 5""",P,100,.080,"""",18.95,4.5,,23.45,27.5
+07 71 23.30,Gutters,0,"Accessories, end cap, K type, aluminum 5""",1 Shee,625,.013,Eo .,0.84,0.86,,1.67,2.19
+07 71 23.30,Gutters,10,"6""",,625,.013,,1.44,0.86,,2.3,2.88
+07 71 23.30,Gutters,20,"Copper, 5""",,625,0131,,3.77,0.86,,4.63,5.45
+07 71 23.30,Gutters,30,"6""",,625,.013,,3.97,0.86,,4.83,5.65
+07 71 23.30,Gutters,40,"Lead coated copper, 5""",,625,.013,,14.45,0.86,,15.31,17.2
+07 71 23.30,Gutters,50,"6""",,625,.013,,15.45,0.86,,16.31,18.25
+07 71 23.30,Gutters,60,"Copper clad stainless steel, 5""",,625,.013,,3.93,0.86,,4.79,5.6
+07 71 23.30,Gutters,370,"6""",,625,.013,,3.93,0.86,,4.79,5.6
+07 71 23.30,Gutters,80,"Galvanized steel, 5""",,625,.013,,1.73,0.86,,2.59,3.2
+07 71 23.30,Gutters,90,"6""",,625,.013-,,3.58,0.86,,4.44,5.25
+07 71 23.30,Gutters,100,"Vinyl, 4""",1 Carp,625,.013,,2.88,0.72,,3.6,4.24
+07 71 23.30,Gutters,110,"5""",,625,.013,,3.19,0.72,,3.91,4.58
+07 71 23.30,Gutters,120,"Half round, copper, 4""",Shee,625,013,Ea .,5.1,0.86,,5.96,6.9
+07 71 23.30,Gutters,130,"5""",,625,.013,,5.8,0.86,,6.66,7.65
+07 72 23.10,Roof Vents,10,ROOF VENTS,,,,,,,,,
+07 72 23.10,Roof Vents,20,"Mushroom shape, for built-up roofs, aluminum",1 Rofc,30.0,0.267,Ea .,89 S,13.25,,102.25,120
+07 72 23.10,Roof Vents,100,"PVC, 6"" high","""",30.0,0.267,"""",29,13.25,,42.25,53 .
+07 72 26.10,Ridge Vents and Accessories,10,Ridge vents and accessories,,,,,,,,,
+07 72 26.10,Ridge Vents and Accessories,100,"Aluminum strips, mill finish",1 Rofc,160.0,0.05,LF,2.53,2.48,,5.01,6.0
+07 72 26.10,Ridge Vents and Accessories,150,Painted finish,,160.0,0.05,LF,3.75,2.48,,6.23,8.0
+07 72 26.10,Ridge Vents and Accessories,200,Connectors,,48.0,0.167,Ea,4.44,8.25,,12.69,18.3
+07 72 26.10,Ridge Vents and Accessories,300,End caps,,48.0,0.167,Ea,2.04,8.25,,10.29,15.0
+07 72 26.10,Ridge Vents and Accessories,400,Galvanized strips,,160.0,0.05,LF,5.0,2.48,,7.48,9.0
+07 72 26.10,Ridge Vents and Accessories,430,"Molded polyethylene, shingles not included",,160.0,0.05,LF,2.62,2.48,,5.1,6.5
+07 72 26.10,Ridge Vents and Accessories,440,End plugs,,48.0,0.167,Ea,2.04,8.25,,10.29,15.0
+07 72 26.10,Ridge Vents and Accessories,450,"Flexible roll, shingles not included",,160.0,0.05,LF,2.55,2.48,,5.03,6.0
+07 72 26.10,Ridge Vents and Accessories,2300,"Ridge vent strip, mill finish",1 Shee,155.0,0.052,LF,2.75,3.49,,6.24,8.0
+07 72 33.10,Roof Hatch Options,10,ROOF HATCH OPTIONS,,,,,,,,,
+07 72 33.10,Roof Hatch Options,500,"2' 6"" x 3', aluminum curb and cover",6-3,10.0,3.2,Ea .,"1,125",181.0,,"1,306","1,525"
+07 72 33.10,Roof Hatch Options,520,Galvanized steel curb and aluminum cover,,10.0,3.2,"""","1,050",181.0,,"1,231","1,425"
+07 72 33.10,Roof Hatch Options,540,Galvanized steel curb and cover,G-3,10.0,3.2,Ea .,835,181.0,,"1,016","1,200"
+07 72 33.10,Roof Hatch Options,600,"2'6"" x 4'6"", aluminum curb and cover",119,,3.556,,"1,400",201.0,,"1,601","1,825"
+07 72 33.10,Roof Hatch Options,800,Galvanized steel curb and aluminum cover,,9.0,3.556,,"1,500",201.0,,"1,701","1,950"
+07 72 33.10,Roof Hatch Options,900,Galvanized steel curb and cover,,9.0,3.556,,"1,100",201.0,,"1,301","1,525"
+07 72 33.10,Roof Hatch Options,1100,4' x 4' aluminum curb and cover,,8.0,4.0,,"2,250",226.0,,"2,476","2,825"
+07 72 33.10,Roof Hatch Options,1120,Galvanized steel curb and aluminum cover,,8.0,4.0,,"2,350",226.0,,"2,576","2,925"
+07 72 33.10,Roof Hatch Options,1140,Galvanized steel curb and cover,,8.0,4.0,,"11,225",226.0,,"1,451","1,700"
+07 72 33.10,Roof Hatch Options,1200,"2'6"" x 8'0"", aluminum curb and cover",,6.6,4.848,,"2,250",274.0,,"2,524","2,875"
+07 72 33.10,Roof Hatch Options,1400,Galvanized steel curb and aluminum cover,,6.6,4.848,,"2,425",274.0,,"2,699","3,075"
+07 72 33.10,Roof Hatch Options,1500,Galvanized steel curb and cover,,6.6,4.848,,"2,025",274.0,,"2,299","2,625"
+07 72 33.10,Roof Hatch Options,1800,"For plexiglass panels, 2'-6"" x 3'0"", add to above",,,,,630,,,630,695
+07 72 36.10,Smoke Hatches,10,SMOKE HATCHES,,,,,,,,,
+07 72 36.10,Smoke Hatches,200,"For 3'-0"" long, add to roof hatches from Section 07 72 33.10",,,,Ea .,,25 %,5%,,
+07 72 36.10,Smoke Hatches,250,"For 4'0"" long, add to roof hatches from Section 07 72 33.10",,,,,,20 %,5%,,
+07 72 36.10,Smoke Hatches,300,"For 8'0"" long, add to roof hatches from Section 07 72 33.10",,,,,,10 %,5%,,
+07 72 36.20,Smoke Vent Options,10,SMOKE VENT OPTIONS,,,,,,,,,
+07 72 36.20,Smoke Vent Options,100,4' x 4' aluminum cover and frame,- 3,13.0,2.462,Ea .,"2,475",139.0,,"2,614","2,925"
+07 72 36.20,Smoke Vent Options,200,Galvanized steel cover and frame,,13.0,2.462,,"1,925",139.0,,"2,064","2,300"
+07 72 36.20,Smoke Vent Options,300,4' x 8' aluminum cover and frame,,8.0,4.0,,"3,750",226.0,,"3,976","4,475"
+07 72 36.20,Smoke Vent Options,400,Galvanized steel cover and frame,,8.0,4.0,,"3,100",226.0,,"3,326","3,775"
+07 72 53.10,Snow Guard Options,10,SNOW GUARD OPTIONS,,,,,,,,,
+07 72 53.10,Snow Guard Options,100,"Slate & asphalt shingle roofs, fastened with nails",1 Rofc,160.0,0.05,Ea .,14.15,2.48,,16.63,19
+07 72 53.10,Snow Guard Options,200,"Standing seam metal roofs, fastened with set screws",,48.0,0.167,,20.0,8.25,,28.25,35 .
+07 72 53.10,Snow Guard Options,300,"Surface mount for metal roofs, fastened with solder",,48.0,0.167,,8.8,8.25,,17.05,23
+07 72 53.10,Snow Guard Options,400,"Double railpipe type, including pipe",,130.0,0.062,L.F.,40.5,3.05,,43.55,50
+07 71 23.30,Gutters,5140,"6 """,1 Shee,625.0,0.013,Ea .,9.4,0.86,,10.26,11.6
+07 71 23.30,Gutters,5150,"Lead coated copper, 5 """,,625.0,0.013,,16.3,0.86,,17.16,19.2
+07 71 23.30,Gutters,5160,"6 """,,625.0,0.013,,24.0,0.86,,24.86,28.0
+07 71 23.30,Gutters,5170,"Copper clad stainless steel, 5 """,,625.0,0.013,,5.55,0.86,,6.41,74.0
+07 71 23.30,Gutters,5180,"6 """,,625.0,0.013,,5.05,0.86,,5.91,6.9
+07 71 23.30,Gutters,5190,"Galvanized steel, 5""",,625.0,0.013,,3.68,0.86,,4.54,5.3
+07 71 23.30,Gutters,5200,"6 """,,625.0,0.013,,3.84,0.86,,4.7,5.5
+07 71 23.30,Gutters,5210,"Outlet, aluminum, 2"" x 3""",,420.0,0.019,,0.98,1.29,,2.27,3.0
+07 71 23.30,Gutters,5220,"3 "" x 4 """,,420.0,0.019,,1.15,1.29,,2.44,3.2
+07 71 23.30,Gutters,5230,"2-3 / 8 "" round",,420.0,0.019,,0.73,1.29,,2.02,2.7
+07 71 23.30,Gutters,5240,"Copper, 2 "" x 3 """,,420.0,0.019,,8.55,1.29,,9.84,11.4
+07 71 23.30,Gutters,5250,"3 "" x 4 """,,420.0,0.019,,9.65,1.29,,10.94,12.5
+07 71 23.30,Gutters,5260,"2-3 / 8 "" round",,420.0,0.019,,5.4,1.22222,,6.69,7.9
+07 71 23.30,Gutters,5270,"Lead coated copper, 2"" x 3 """,,420.0,0.019,,29.0,1.29,,30.29,33.5
+07 71 23.30,Gutters,5280,"3 "" x 4 """,,420.0,0.019,,32.5,1.29,,33.79,38.0
+07 71 23.30,Gutters,5290,"2-3 / 8 "" round",,420.0,0.019,,29.0,1.29,,30.29,34.0
+07 71 23.30,Gutters,5300,"Copper clad stainless steel, 2"" x 3""",,420.0,0.019,,8.05,1.29,,9.34,10.8
+07 71 23.30,Gutters,5310,"3 "" x 4 """,,420.0,0.019,,9.15,1.29,,10.44,1226.0
+07 71 23.30,Gutters,5320,"2-3 / 8 "" round",,420.0,0.019,,5.4,1.29,,6.69,7.9
+07 71 23.30,Gutters,5330,"Galvanized steel, 2"" x 3""",,420.0,0.019,,4.18,1.29,,5.47,6.5
+07 71 23.30,Gutters,5340,"3 "" x 4 """,,420.0,1.019,,8.0,1.29,,9.29,10.7
+07 71 23.30,Gutters,5350,"2-3 / 8 "" round",,420.0,0.019,,5.45,1.29,,6.74,7.9
+07 71 23.30,Gutters,5360,"K type mitres, aluminum",,65.123,,,7.15,8.3,,15.45,20.5
+07 71 23.30,Gutters,5370,Copper,,65.123,,,19.35,8.3,,27.65,34.0
+07 71 23.30,Gutters,5380,Lead coated copper,,65.0,0.123,,61.5,8.3,,69.8,80.0
+07 71 23.30,Gutters,5390,Copper clad stainless steel,,65.0,0.123,,30.5,8.3,,38.8,46.0
+07 71 23.30,Gutters,5400,Galvanized steel,,65.0,0.123,,31.0,8.3,,39.3,46.5
+07 71 23.30,Gutters,5420,"Half round mitres, copper",,65.0,0.123,,78.0,8.3,,86.3,98.5
+07 71 23.30,Gutters,5430,Lead coated copper,,65.123,,,100.0,8.3,,108.3,123.0
+07 71 23.30,Gutters,5440,Copper clad stainless steel,,65.123,,,63.0,8.3,,71.3,81.5
+07 71 23.30,Gutters,5450,Galvanized steel,,65.123,,,37.0,8.3,,45.3,53.5
+07 71 23.30,Gutters,5460,Vinyl mitres and outlets,,65.123,,,12.0,8.3,,20.3,25.5
+07 71 23.30,Gutters,5470,Sealant,,940.0,0.009,LF .,,0.01,0.57,,0.58
+07 71 23.30,Gutters,5480,Soldering,,96.0,0.083,,0.4,5.65,,6.05,8.9
+07 71 23.35,Gutter Guard,10,GUTTER GUARD,,,,,,,,,90.0
+07 71 23.35,Gutter Guard,20,"6 "" wide strip, aluminum mesh",1 Carp,500.0,0.016,LF,2.32,0.9,,3.22,3.8
+07 71 23.35,Gutter Guard,100,Vinyl mesh,,500.0,0.016,"""",1.29,0.9,,2.19,2.7
+07 71 26.10,Reglets and Accessories,10,REGLETS AND ACCESSORIES,,,,,,,,,
+07 71 26.10,Reglets and Accessories,20,"Reglet, aluminum, .025 "" thick, inparapet",1 Carp,225.0,0.036,LF,2.25,2222.0,,4.25,5.48
+07 71 26.10,Reglets and Accessories,300,16 oz .copper,,225.0,0.036,,8.65,,,10.65,12.5
+07 71 26.10,Reglets and Accessories,400,"Galvanized steel, 24 ga .",,225.0,0.036,,2.16,,,4.16,5.3
+07 71 26.10,Reglets and Accessories,600,"Stainless steel, .020 "" thick",,225.036,,,4.88,,,6.88,8.3
+07 71 26.10,Reglets and Accessories,900,"Counter flashing for above, 12"" wide, .032"" aluminum",1 Shee,150.0,0.053,,3.41,3.6,,7.01,9.2
+07 71 26.10,Reglets and Accessories,1200,16 oz .copper,,150.0,0.053,,12.2,3.6,,15.8,1824.0
+07 71 26.10,Reglets and Accessories,1300,"Galvanized steel, 26 ga .",,150.0,0.053,,1.95,3.6,,5.55,7.6
+07 71 26.10,Reglets and Accessories,1500,"Stainless steel, .020 "" thick",,150.0,0.053,,8.25,3.6,,11.85,14.5
+07 71 23.10,Downspouts,600,"Round, corrugated aluminum, 3"" diameter, .020"" thick",1 Shee,190.0,0.042,L.F.,4.8,2.84,,7.64,9.6
+07 71 23.10,Downspouts,700,"4"" diameter, .025"" thick",,140.0,0.057,,8.4,3.86,,12.26,15
+07 71 23.10,Downspouts,900,"Wire strainer, round, 2"" diameter",,155.0,0.052,Eo .,2.14,3.49,,5.63,7 .
+07 71 23.10,Downspouts,1000,"4"" diameter",,155.0,0.052,,3.79,3.49,,7278.0,9.4
+07 71 23.10,Downspouts,1200,"Rectangular, perforated, 2"" x 3""",,145.0,0.055,,3.06,3.73,,6.79,8.9
+07 71 23.10,Downspouts,1300,"3"" x 4""",,145.0,0.055,,4.62,3.73,,8.35,10.7
+07 71 23.10,Downspouts,1500,"Copper, round, 16 oz., stock, 2"" diameter",,190.0,0.042,L.F,9.65,2.84,,12.49,14.9
+07 71 23.10,Downspouts,1600,"3"" diameter",,190.0,0.042,,9.65,2.84,,12.49,14.9
+07 71 23.10,Downspouts,1800,"4"" diameter",,145.0,0.055,,13.05,3.73,,16.78,19.9
+07 71 23.10,Downspouts,1900,"5"" diameter",,130.0,0.062,,18.85,4.16,,23.01,27.5
+07 71 23.10,Downspouts,2100,"Rectangular, corrugated copper, stock, 2"" x 3""",,190.0,0.042,,10.55,2.84,,13.39,15.9
+07 71 23.10,Downspouts,2200,"3"" x 4""",,145.0,0.055,,15.2,3.73,,18.93,22.5
+07 71 23.10,Downspouts,2400,"Rectangular, plain copper, stock '2"" x 3""",,190.0,0.042,,8.95,2.84,,11.79,14.1
+07 71 23.10,Downspouts,2500,"3"" x 4""",,145.0,0.055,,9.9,3.73,,13.63,16.5
+07 71 23.10,Downspouts,2700,"Wire strainers, rectangular, 2"" x 3""",,145.0,0.055,Ea .,22.0,3.73,,25.73,30
+07 71 23.10,Downspouts,2800,"3"" x 4""",,145.0,0.055,,18.3,3.73,,22.03,25.5
+07 71 23.10,Downspouts,3000,"Round, 2"" diameter",,145.0,0.055,,12.2,3.73,,15.93,19
+07 71 23.10,Downspouts,3100,"3"" diameter",,145.0,0.055,,14.1,3.73,,17.83,21
+07 71 23.10,Downspouts,3300,"4"" diameter",,145.055,,,16.3,3.73,,20.03,23.5
+07 71 23.10,Downspouts,3400,"5"" diameter",,115.0,0.07,,21.0,4.7,,25.7,30
+07 71 23.10,Downspouts,3600,"Lead-coated copper, round, stock, 2"" diameter",,190.0,0.042,LF,35.0,2.84,,37.84,43
+07 71 23.10,Downspouts,3700,"3"" diameter",,190.0,0.042,,33.5,2.84,,36.34,41
+07 71 23.10,Downspouts,3900,"4"" diameter",,145.0,0.055,,37.0,3.73,,40.73,46.
+07 71 23.10,Downspouts,4000,"5"" diameter, corrugated",,130.0,0.062,,18.85,4.16,,23.01,27.
+07 71 23.10,Downspouts,4200,"6"" diameter, corrugated",,105.0,0.076,,25.0,5.15,,30.15,35.
+07 71 23.10,Downspouts,4300,"Rectangular, corrugated, stock, 2"" x 3""",1 Shee,190.0,0.042,LF .,19.75,2.84,,22.59,26
+07 71 23.10,Downspouts,4500,"Plain, stock, 2"" x 3""",,190.0,0.042,,34.5,2.84,,37.34,42.
+07 71 23.10,Downspouts,4600,"3"" x 4""",,145.0,0.055,,55.0,3.73,,58.73,66
+07 71 23.10,Downspouts,4800,"Steel, galvanized, round, corrugated, 2"" or 3"" diameter, 28 ga.",,190.0,0.042,,3.45,2.84,,6.29,8.
+07 71 23.10,Downspouts,4900,"4"" diameter, 28 ga.",,145.0,0.055,,4.7,3.73,,8.43,10.
+07 71 23.10,Downspouts,5100,"5"" diameter, 26 ga.",,130.0,0.062,,5.15,4.16,,9.31,11.
+07 71 23.10,Downspouts,5400,"6"" diameter, 28 ga.",,105.0,0.076,,5.9,5.15,,11.05,14.
+07 71 23.10,Downspouts,5500,26 go.,,105.0,0.076,,5.95,5.15,,11.1,14 .
+07 71 23.10,Downspouts,5700,"Rectangular, corrugated, 28 ga., 2"" x 3""",,190.0,0.042,,3.1,2.84,,5.94,7 .
+07 71 23.10,Downspouts,5800,"3"" x 4""",,145.0,0.055,,3.86,3.73,,7.59,9 .
+07 71 23.10,Downspouts,6000,"Rectangular, plain, 28 ga., galvanized, 2"" x 3""",,190.0,0.042,,,3.1,2.84,,5.94
+07 71 23.10,Downspouts,6100,"3"" x 4""",,145.0,0.055,,3.8,3.73,,7.53,9 .
+07 71 23.10,Downspouts,6300,"Epoxy painted, 24 ga., corrugated, 2"" x 3""",,190.0,0.042,,5.8,2.84,,8.64,10.
+07 71 23.10,Downspouts,6400,"3"" x 4""",,145.0,0.055,,7.1,3.73,,10.83,13.4
+07 71 23.10,Downspouts,6600,"Wire strainers, rectangular, 2"" x 3""",,145.0,0.055,Ea  .,25.0,3.73,,28.73,33
+07 71 23.10,Downspouts,6700,"3"" x 4""",,145.0,0.055,,25.5,3.73,,29.23,33 .
+07 71 23.10,Downspouts,6900,"Round strainers, 2"" or 3"" diameter",,145.0,0.055,,6.25,3.73,,9.98,12 .
+07 71 23.10,Downspouts,7000,"4"" diameter",,145.055,,,9.45,3.73,,13.18,16
+07 71 23.10,Downspouts,7800,"Stainless steel tubing, schedule 5, 2"" x 3"" or 3"" diameter",,190.0,0.042,L.F.,194.0,2.84,,96.84,107
+07 71 23.10,Downspouts,7900,"3"" x 4"" or 4"" diameter",,145.0,0.055,,162.0,3.73,,165.73,184
+07 71 23.10,Downspouts,8100,"4"" x 5"" or 5"" diameter",,135.0,0.059,,-196.0,4.0,,200.0,222
+07 71 23.10,Downspouts,8200,"Vinyl, rectangular, 2"" x 3""",,210.0,0.038,,2.45,2.57,,5.02,6.
+07 71 23.10,Downspouts,8300,"Round, 2-1/2""",,220.0,0.036,,1.69,2.46,,4.15,5.
+07 71 23.20,Downspout Elbows,10,DOWNSPOUT ELBOWS,,,,,,,,,
+07 71 23.20,Downspout Elbows,20,"Aluminum, embossed, 2"" x 3"", .020"" thick",1 Shee,100.0,0.08,Ea .,1.41,5.4,,6.81,9.
+07 71 23.20,Downspout Elbows,100,Enameled,,100.0,0.08,,2.49,5.4,,7.89,10 .

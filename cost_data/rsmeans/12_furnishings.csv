@@ -1,0 +1,621 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+,12 52 23.13| Office Chairs,2320,Maximum,,,,Ea.,74.5,,,74.5,82
+,12 54 13.10| Hotel Furniture,10,HOTEL FURNITURE,,,,,,,,,
+,12 54 13.10| Hotel Furniture,20,"Standard quality set, minimum",,,,Room,"2,675",,,"2,675","2,925"
+,12 54 13.10| Hotel Furniture,200,Maximum,,,,"""","8,500",,,"8,500","9,350"
+,"12 54 16.10| Tables, Folding",10,"TABLES, FOLDING Laminated plastictops",,,,,,,,,
+,"12 54 16.10| Tables, Folding",1000,Tubular steel legs with glides,,,,,,,,,
+,"12 54 16.10| Tables, Folding",1020,"18"" x 60"", minimum",,,,Ea.,157,,,157,172
+,"12 54 16.10| Tables, Folding",1040,Maximum,,,,,249,,,249,274
+,"12 54 16.10| Tables, Folding",1840,"36"" x 96"", minimum",,,,,355,,,355,390
+,"12 54 16.10| Tables, Folding",1860,Maximum,,,,,"2,925",,,"2,925","3,200"
+,"12 54 16.10| Tables, Folding",2000,"Round, wood stained, plywood top, 60"" diameter, minimum",,,,Ea.,125,,,125,137
+,"12 54 16.10| Tables, Folding",2020,Maximum,,,,,400,,,400,445
+,"12 54 16.20| Furniture, Restaurant",10,"FURNITURE, RESTAURANT",,,,,,,,,
+,"12 54 16.20| Furniture, Restaurant",20,"Bars, buil-in, front bar",1 Carp,5.0,1.6,LF,320.0,905.0,,410.0,490.0
+,"12 54 16.20| Furniture, Restaurant",200,Back bar,"""",5.0,1.6,"""",234.0,90.0,,324.0,390.0
+,"12 54 16.20| Furniture, Restaurant",300,"Booth seating, see Section 12:54 16.70",,,,,,,,,
+,"12 54 16.20| Furniture, Restaurant",2000,"Chair, bentwood side chair, metal, minimum",,,,Ea.,113.0,,,113.0,124.0
+,"12 54 16.20| Furniture, Restaurant",2020,Maximum,,,,,132.0,,,132.0,146.0
+,"12 54 16.20| Furniture, Restaurant",2600,"Upholstered seat & back, arms, minimum",,,,,182.0,,,182.0,200.0
+,"12 54 16.20| Furniture, Restaurant",2620,Maximum,,,,,555.0,,,555.0,610.0
+,12 54 16.70| Booths,10,BOOTHS,,,,,,,,,
+,12 54 16.70| Booths,1000,"Banquet, upholstered seat and back, custom",,,,,,,,,
+,12 54 16.70| Booths,1500,"Straight, minimum",2 Carp,40.0,0.4,LF,225,22.5,,247.50,281
+,12 54 16.70| Booths,1520,Maximum,,36.0,0.444,,"1,325",25.0,,"1,350","1,475"
+,12 54 16.70| Booths,1600,"""L"" or ""U"" shape, minimum",,35.0,0.457,,229,25.5,,254.50,291
+,12 54 16.70| Booths,1620,Maximum,,30.0,0.533,,405,30.0,,435,495
+,12 54 16.70| Booths,1800,Upholstered outside finished backs for,,,,,,,,,
+,12 54 16.70| Booths,1810,single booths and custom banquets,,,,,,,,,
+,12 54 16.70| Booths,1820,Minimum,2 Carp,444.0,0.364,LF.,31.50,20.5,,52,65
+,12 54 16.70| Booths,1840,Maximum,,40.0,0.4,"""",84.50,22.5,,107,127
+,12 54 16.70| Booths,3000,"Fixed seating, one piece plastic chair and",,,,,,,,,
+,12 54 16.70| Booths,3010,plastic laminate table top,,,,,,,,,
+,12 54 16.70| Booths,3100,"Two seat, 24"" x 24"" table, minimum",F-7,30.0,1.067,Ea.,905,54.5,,959.50,"1,075"
+,12 54 16.70| Booths,3120,Maximum,,26.0,1.231,,"1,275",62.5,,"1,337.50","1,525"
+,12 54 16.70| Booths,3200,"Four seat, 24"" x 48"" table, minimum",,28.0,1.143,,895,58.0,,953,"1,075"
+,12 54 16.70| Booths,3220,Maximum,,24.0,1.333,,"1,525",68.0,,"1,593","1,775"
+,12 54 16.70| Booths,5000,"Mount infloor, wood fiber core with",,,,,,,,,
+,12 54 16.70| Booths,5010,"plastic laminate face, single booth",,,,,,4440,,,
+,12 54 16.70| Booths,5050,"24"" wide",F 7,30.0,1.067,Ea.,345,54.5,,399.50,460
+,12 54 16.70| Booths,5100,"48"" wide","""",28.0,1.143,"""",440,58.0,,498,570
+,12 51 16 Furniture Case Goods,10,METAL CASE GOODS,,,,,,,,,
+,12 51 16 Furniture Case Goods,20,"Desks, 29"" high, double pedestal, 30"" x 60"", metal, minimum",,,,Ea.,"1,425",,,"1,425","1,550"
+,12 51 16 Furniture Case Goods,30,Maximum,,,,,"1,650",,,"1,650","1,825"
+,12 51 16 Furniture Case Goods,600,"Desks, single pedestal, 30"" x 60"", metal, minimum",,,,,"1,025",,,"1,025","1,125"
+,12 51 16 Furniture Case Goods,620,Maximum,,,,,630,,,630,690
+,12 51 16 Furniture Case Goods,720,"Desks, secretarial, 30"" x 60"", metal, minimum",,,,,530,,,530,585
+,12 51 16 Furniture Case Goods,730,Maximum,,,,,590,,,590,650
+,12 51 16 Furniture Case Goods,740,"Return, 20"" x 42"", minimum",,,,,400,,,400,440
+,12 51 16 Furniture Case Goods,750,Maximum,,,,,700,,,700,765
+,12 51 16 Furniture Case Goods,940,"59"" x 12"" x 23"" high, steel, minimum",,,,,320,,,320,350
+,12 51 16 Furniture Case Goods,960,Maximum,,,,,480,,,480,530
+12 51 16.16,Wood Case Goods,10,WOOD CASE GOODS,,,,,,,,,
+12 51 16.16,Wood Case Goods,150,"Desk, 29"" high, double pedestal, 30"" x 60""",,,,,,,,,
+12 51 16.16,Wood Case Goods,160,"Wood, minimum",,,,Ea.,830,,,830,910
+12 51 16.16,Wood Case Goods,180,Maximum,,,,"""","1,250",,,"1,250","1,375"
+12 51 16.16,Wood Case Goods,630,"Single pedestal, 30"" x 60""",,,,,,,,,
+12 51 16.16,Wood Case Goods,640,"Wood, minimum",,,,Ea.,385,,,385,425
+12 51 16.16,Wood Case Goods,650,Maximum,,,,,435,,,435,480
+12 51 16.16,Wood Case Goods,670,"Executive return, 24"" x 42"", with box, file, wood, minimum",,,,,435,,,435,480
+12 51 16.16,Wood Case Goods,680,Moximum,,,,,"1,000",,,"1,000","1,100"
+12 51 16.16,Wood Case Goods,790,"Desk, 29"" high, secretarial, 30"" x 60""",,,,,,,,,
+12 51 16.16,Wood Case Goods,800,"Wood, minimum",,,,Eg.,435,,,435,480
+12 51 16.16,Wood Case Goods,810,Maximum,,,,,530,,,530,585
+12 51 16.16,Wood Case Goods,820,"Return, 20"" x 42"", minimum",,,,,390,,,390,430
+12 51 16.16,Wood Case Goods,830,Maximum,,,,,585,,,585,645
+12 51 16.16,Wood Case Goods,900,"Desktop organizer, 72"" x 14"" x 36"" high, wood, minimum",,,,,142,,,142,157
+12 51 16.16,Wood Case Goods,920,Maximum,,,,,430,,,430,470
+12 51 16.16,Wood Case Goods,1110,"Furniture, credenza, 29"" high, 18"" to 22"" x 60"" to 72""",,,,,,,,,
+12 51 16.16,Wood Case Goods,1120,"Wood, minimum",,,,Ea.,845,,,845,930
+12 51 16.16,Wood Case Goods,1140,Maximum,,,,"""",845,,,845,930
+12 51 23.33,Conference Tables,10,CONFERENCE TABLES,,,,,,,,,
+12 51 23.33,Conference Tables,6050,"Boat, 96"" x 42"", minimum",,,,Ea.,"1,300",,,"1,300","1,425"
+12 51 23.33,Conference Tables,6150,Maximum,,,,,"2,250",,,"2,250","2,450"
+12 51 23.33,Conference Tables,6720,"Rectangle, 96"" x 42"", minimum",,,,,"1,275",,,"1,275","1,400"
+12 51 23.33,Conference Tables,6740,Maximum,,,,,"1,850",,,"1,850","2,025"
+12 52 23.13,Office Chairs,10,OFFICE CHAIRS,,,,,,,,,
+12 52 23.13,Office Chairs,2000,"Standard office chair, executive, minimum",,,,Ea.,169,,,169,186
+12 52 23.13,Office Chairs,2150,Maximum,,,,,"1,625",,,"1,625","1,800"
+12 52 23.13,Office Chairs,2200,"Management, minimum",,,,,95,,,95,104
+12 52 23.13,Office Chairs,2250,Maximum,,,,,"1,675",,,"1,675","1,850"
+12 52 23.13,Office Chairs,2280,"Task, minimum",,,,,128,,,128,141
+12 52 23.13,Office Chairs,2290,Maximum,,,,,227,,,227,250
+12 52 23.13,Office Chairs,2300,"Arm kit, minimum",,,,,34.50,,,34.50,38
+12 21 13.13,Metal Vertical Louver Blinds,10,METAL VERTICAL LOUVER BLINDS,,,,,,,,,
+12 21 13.13,Metal Vertical Louver Blinds,1500,"Vertical, 3"" PVC strips, minimum",1 Carp,460.0,0.017,S.F,0.15,0.98,,1.13,1.63
+12 21 13.13,Metal Vertical Louver Blinds,1600,Maximum,,400.0,0.02,,5.25,1.13,,6.38,7.5
+12 21 13.13,Metal Vertical Louver Blinds,1800,"4"" aluminum slats, minimum",,460.0,0.017,,10.05,0.98,,11.03,12.5
+12 21 13.13,Metal Vertical Louver Blinds,1900,Maximum,,400.0,0.0201,,19.0,1.13,,20.13,22.5
+12 22 16.10,Drapery Hardware,10,DRAPERY HARDWARE,,,,,,,,,
+12 22 16.10,Drapery Hardware,30,"Standard traverse, per foot, minimum",1 Carp,222264330.0,0.136987,L.F.,8.75,7.65,,16.4,21.0
+12 22 16.10,Drapery Hardware,100,Maximum,,51.0,0.157,"""",17.50,8.85,,26.35,32.5
+12 22 16.10,Drapery Hardware,4000,"Traverse rods, adjustable, 28"" to 48""",,,0.364,Eq.,,R702222222222,20.5,90.5,108.0
+12 22 16.10,Drapery Hardware,4020,"48"" to 84""",,,0.4,,89,22.5,,111.5,132.0
+12 22 16.10,Drapery Hardware,4040,"66"" to 120""",,18.0,0.444,,108,25.0,,133.0,156.0
+12 22 16.10,Drapery Hardware,4060,"84"" to 156""",,16.0,0.5,,,28.0,,150.0,177.0
+12 22 16.10,Drapery Hardware,4080,"100"" to 180""",,14.0,0.571,,143,32.0,,175.0,205.0
+12 22 16.10,Drapery Hardware,4090,"156"" to 228""",,13.0,0.615,,171,34.5,,205.5,241.0
+12 22 16.10,Drapery Hardware,4100,"228"" to 312""",,13.0,0.615,,198,34.5,,232.5,270.0
+12 22 16.10,Drapery Hardware,4200,"Double rods, adjustable, 30"" to 48""",,,0.889,,50,50.0,,100.0,130.0
+12 22 16.10,Drapery Hardware,4220,"48"" to 86""",,,0.889,,69.50,50.0,,119.5,151.0
+12 22 16.10,Drapery Hardware,4240,"86"" to 150""",,18.0,1.0,,77,56.5,,133.5,169.0
+12 22 16.10,Drapery Hardware,4260,"100"" to 180""",,7.0,1.143,,81,64.5,,145.5,185.0
+12 22 16.10,Drapery Hardware,4300,"Curtain rod & brackets, adjustable, 30"" to 48""",,,0.889,,18,50.0,,68.0,94.5
+12 22 16.10,Drapery Hardware,4320,"48"" to 86""",,,0.889,,25.50,50.0,,75.5,103.0
+12 22 16.10,Drapery Hardware,4340,"86"" to 150""",,,1.0,,31.50,56.5,,88.0,119.0
+12 22 16.10,Drapery Hardware,4360,"100"" to 180""",,,1.143,,39,64.5,,103.5,139.0
+12 22 16.10,Drapery Hardware,4600,"Valance, pinch pleated fabric, 12"" deep, up to 54"" long, minimum",,,,Eo.,49,,,49.0,54.0
+12 22 16.10,Drapery Hardware,4610,Maximum,,,,,,,,122.0,134.0
+12 22 16.10,Drapery Hardware,4620,"Up to 77"" long, minimum",,,,,85,,,85.0,93.5
+12 22 16.10,Drapery Hardware,4630,Maximum,,,,,197,,,197.0,216.0
+12 22 16.10,Drapery Hardware,5000,"Stationary rods, first 2'",,,,,8.20,,,8.2,9.0
+12 22 16.10,Drapery Hardware,5020,"Each additional foot, add",,,,LE,5.10,,,5.1,5.6
+12 22 16.20,Blast Curtains,10,"BLAST CURTAINS per L.F. horizontal opening width, off-white or gray fabric",,,,,,,,,
+12 22 16.20,Blast Curtains,100,"Blast curtains, drapery system, complete, including hardware, minimum",1 Carp,10.25,0.78,LF.,330.0,444.0,,374.0,430.0
+12 22 16.20,Blast Curtains,120,Average,,10.25,0.78,,295.0,44.0,,339.0,390.0
+12 22 16.20,Blast Curtains,140,Maximum,,10.25,0.78,,315.0,44.0,,359.0,415.0
+12 22 16.20,12 55 13 Detention Bunks,10,COTS,E-4,20,1.6,Eg.,355,1880,7.4,462.40,550
+12 22 16.20,12 55 13 Detention Bunks,2700,Stainless steel,"""",20,1.6,"""","1,025",100,7.4,"1,132.40","1,275"
+12 22 16.20,12 56 33 Classroom Furniture,10,"FURNITURE, SCHOOL",,,,,,,,,
+12 22 16.20,12 56 33 Classroom Furniture,1000,"Chair, molded plastic",,,,Eg.,25.5,,,25.5,28.0
+12 22 16.20,12 56 33 Classroom Furniture,1100,"Integral tablet arm, minimum",,,,,,,,,
+12 22 16.20,12 56 33 Classroom Furniture,1150,Maximum,,,,,264.0,,,264.0,290.0
+12 22 16.20,12 56 33 Classroom Furniture,2000,"Desk, single pedestal, top book compartment, minimum",,,,,50.0,,,50.0,55.0
+12 22 16.20,12 56 33 Classroom Furniture,2020,Maximum,,,,,149.0,,,149.0,164.0
+12 22 16.20,12 56 33 Classroom Furniture,2200,"Flip top, minimum",,,,,172.0,,,172.0,189.0
+12 22 16.20,12 56 33 Classroom Furniture,2220,Maximum,,,,,169.0,,,169.0,186.0
+12 22 16.20,12 56 43 Dormitory Furniture,10,DORMITORY FURNISHINGS,,,,,,,,,
+12 22 16.20,12 56 43 Dormitory Furniture,300,"Bunkable bed, twin, minimum",,,,Ea.,410.0,,,410.0,455.0
+12 22 16.20,12 56 43 Dormitory Furniture,320,Maximum,,,,,475.0,,,475.0,520.0
+12 22 16.20,12 56 43 Dormitory Furniture,1000,"Chest, four drawer, minimum",,,,,400.0,,,400.0,440.0
+12 22 16.20,12 56 43 Dormitory Furniture,1020,Maximum,,,,,805.0,,,805.0,890.0
+12 22 16.20,12 56 43 Dormitory Furniture,1050,"Builtin, minimum",12 Carp,13.0,1.231,LF,139.0,69.5,,208.5,256.0
+12 22 16.20,12 56 43 Dormitory Furniture,1150,Maximum,110,1.6,,,257.0,90.0,,347.0,415.0
+12 22 16.20,12 56 43 Dormitory Furniture,1200,"Desk top, built-in, laminated plastic, 24"" deep, minimum",50,0.32,,,54.0,18.0,,72.0,86.5
+12 22 16.20,12 56 43 Dormitory Furniture,1300,Maximum,40,400.0,,,162.0,22.5,,184.5,212.0
+12 22 16.20,12 56 43 Dormitory Furniture,1450,"30"" deep, minimum",50,0.32,,,69.0,18.0,,87.0,103.0
+12 22 16.20,12 56 43 Dormitory Furniture,1550,Maximum,40,0.4,,,300.0,22.5,,322.5,365.0
+12 22 16.20,12 56 43 Dormitory Furniture,1750,"Dressing unit, built-in, minimum",12,1.333,,,209.0,75.0,,284.0,340.0
+12 22 16.20,12 56 43 Dormitory Furniture,1850,Maximum,8,,,,625.0,113.0,,738.0,860.0
+12 22 16.20,12 56 51 BO Library Furniture,10,LIBRARY FURNISHINGS,,,,,,,,,
+12 22 16.20,12 56 51 BO Library Furniture,100,"Attendant desk, 36"" x 62"" x 29"" high",1 Carp,16.0,0.5,Ea.,"2,375",28.0,,"2,403","2,650"
+12 22 16.20,12 56 51 BO Library Furniture,200,"Book display, ""A"" frame display, both sides, 42"" x 42"" x 60"" high",,16.0,0.5,,"1,125",28.0,,"1,153","1,300"
+12 22 16.20,12 56 51 BO Library Furniture,220,"Table with bulletin board, 42"" x 24"" x 49"" high",,16.0,0.5,,825,28.0,,853,945
+12 22 16.20,12 56 51 BO Library Furniture,800,"Card catalog, 30 tray unit",[    ],16.0,0.5,,"3,800",28.0,,"3,828","4,225"
+12 22 16.20,12 56 51 BO Library Furniture,840,60 tray unit,,16.0,0.5,,"7,700",28.0,,"7,728","8,525"
+12 22 16.20,12 56 51 BO Library Furniture,880,72 tray unit,12 Carp,16.0,,,"8,725",56.5,,"8,781.50","9,650"
+12 22 16.20,12 56 51 BO Library Furniture,1000,"Carrels, single face, initial unit",1 Carp,16.0,0.5,,"1,050",28.0,,"1,078","1,225"
+12 22 16.20,12 56 51 BO Library Furniture,1500,"Double face, initial unit",2 Carp,16.0,1.0,,"1,650",56.5,,"1,706.50","1,900"
+12 22 16.20,12 56 51 BO Library Furniture,1710,"Carrels, hardwood, 36"" x 24"", minimum",1 Carp,5.0,1.6,,570,90.0,,660,765
+12 22 16.20,12 56 51 BO Library Furniture,1720,Maximum,,4.0,2.0,,"1,950",113.0,,"2,063","2,300"
+12 22 16.20,12 56 51 BO Library Furniture,2700,"Card catalog file, 60 trays, complete",,,,,"10,900",,,"10,900","12,000"
+12 22 16.20,12 56 51 BO Library Furniture,2720,Alternate method: each tray,,,,,182,,,182,200
+12 22 16.20,12 56 51 BO Library Furniture,3800,"Charging desk, builtin, with counter, plastic laminated top",1 Carp,7.0,1.143,LF,540,64.5,,604.50,690
+12 22 16.20,12 56 51 BO Library Furniture,4000,"Dictionary stand, stationary",1 Carp,16.0,1.5,Ea.,575,28.0,,603,670
+12 22 16.20,12 56 51 BO Library Furniture,4020,Revolving,,16.0,0.5,,299,28.0,,327,370
+12 22 16.20,12 56 51 BO Library Furniture,4200,"Exhibit case, table style, 60"" x 28"" x 36""",,11.0,0.727,,"2,925",41.0,,"2,966","3,275"
+12 22 16.20,12 56 51 BO Library Furniture,6010,"Bookshelf, metal, 90"" high, 10"" shelf, double face",,11.5,0.696,L.F.,213,39.0,,252,294
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",7780,Toe kick trim,1 Carp,256.0,0.031,LF,3.78,1.76,,5.54,6.8
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",7790,Base cabinet corner filler,11 Carp,16.0,0.5,Ea.,53,2282,,81.0,100.0
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",7800,"Cabinet fille, 3"" x 24""",,20.0,0.4,,20.50,22.50,,43.0,56.0
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",7810,"3"" x 30""",,20.0,0.4,,25.50,22.50,,489.0,61.5
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",7820,"3"" x 42""",,18.0,0.444,,36,25,,61.0,76.5
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",7830,"3"" x 80""",,16.5,,,68.50,28,,96.5,117.0
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",7850,Cabinet panel,,50.0,0.16,S.F.,12,a,,21.0,26.5
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",9000,"For deluxe models of all cabinets, add",,,,,,40%,,,
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",9500,"For custom built in place, add",,,,,,25%,10%,,
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",9558,"Rule of thumb, kitchen cabinets not including",,,,,,,,,
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",9560,"appliances & counter top, minimum",2 Carp,30.0,0.533,LF,208,30,,238.0,274.0
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",9600,Maximum,,25.0,0.64,"""",460,36,,496.0,565.0
+12 32 23.10,"Manufactured Wood Casework, Stock Casework",9610,"For metal cabinets, see Section 12 35 70.13",,,,,,,,,
+12 32 23.30,Manufactured Wood Casework Vanities,10,MANUFACTURED WOOD CASEWORK VANITIES,,,,,,,,,
+12 32 23.30,Manufactured Wood Casework Vanities,8000,"Vanity bases, 2 doors, 30"" high, 21"" deep, 24"" wide",2 Carp,20.0,0.8,Ea.,455,45,,500.0,565.0
+12 32 23.30,Manufactured Wood Casework Vanities,8050,"30"" wide",,16.0,,,480,56.50,,536.5,610.0
+12 32 23.30,Manufactured Wood Casework Vanities,8100,"36"" wide",,13.33,1.2,,405,67.50,,472.5,545.0
+12 32 23.30,Manufactured Wood Casework Vanities,8150,"48"" wide",,11.43,1.4,,530,79,,609.0,695.0
+12 32 23.30,Manufactured Wood Casework Vanities,9000,"For deluxe models of all vanities, add to above",,,,,,40%,,,
+12 32 23.30,Manufactured Wood Casework Vanities,9500,"For custom built in place, add to above",,,,,,25%,10%,,
+12 32 23.35,Manufactured Wood Casework Hardware,10,MANUFACTURED WOOD CASEWORK HARDWARE,,,,,,,,,
+12 32 23.35,Manufactured Wood Casework Hardware,1000,"Catches, minimum",1 Carp,235.0,.034,Eg.,1.63,1.92,,3.55,4.64
+12 32 23.35,Manufactured Wood Casework Hardware,1040,Maximum,,80.0,.100,PT,9.4,5.65,,15.05,18.75
+12 32 23.35,Manufactured Wood Casework Hardware,2000,"Door / drawer pulls, handles",,,,,,,,,
+12 32 23.35,Manufactured Wood Casework Hardware,2200,"Handles and pulls, projecting, metal, minimum",11 Carp,48.0,.167,Ea.,1.13,9.4,,10.53,15.2
+12 32 23.35,Manufactured Wood Casework Hardware,2240,Maximum,,36.222,,,12.0,12.5,,24.5,32.0
+12 32 23.35,Manufactured Wood Casework Hardware,2300,"Wood, minimum",,48.0,.167,,6.05,9.4,,15.45,20.5
+12 32 23.35,Manufactured Wood Casework Hardware,23401,Maximum,,136.0,: .222,,11.2,12.5,,23.7,31.0
+12 32 23.35,Manufactured Wood Casework Hardware,2400,"Drawer pulls, antimicrobial copper alloy finish",,50.0,.160,,13.75,9.0,,22.75,28.5
+12 32 23.35,Manufactured Wood Casework Hardware,2600,"Flush, metal, minimum",,48.0,.167,,6.05,9.4,,15.45,20.5
+12 32 23.35,Manufactured Wood Casework Hardware,2640,Maximum,,36.0,.222,,11.35,12.5,,23.85,31.0
+12 32 23.35,Manufactured Wood Casework Hardware,2900,"Drawer knobs, antimicrobial copper alloy finish",,50.0,.160,,7.85,0.9,,16.85,22.0
+12 32 23.35,Manufactured Wood Casework Hardware,3000,"Drawer tracks / glides, minimum",,48.0,.167,Pr. 1,10.1,9.4,,19.5,25.0
+12 32 23.35,Manufactured Wood Casework Hardware,3040,Maximum,,24.0,.333,,29.5,18.75,,48.25,60.0
+12 32 23.35,Manufactured Wood Casework Hardware,4000,"Cabinet hinges, minimum",,160.0,.050,,1.48,2.82,,4.3,5.8
+12 32 23.35,Manufactured Wood Casework Hardware,4040,Maximum,,68.0,.118,,10.6,6.6,,17.2,21.5
+12 32 23.35,Manufactured Wood Casework Hardware,7000,"Appliance pulls, antimicrobial copper alloy finish",,50.0,.160,LF.,77.0,9.0,,86.0,98.5
+12 35 39.13,Metal Kitchen Casework,10,METAL KITCHEN CASEWORK,,,,,,,,,
+12 35 39.13,Metal Kitchen Casework,3500,"Base cabinets, metal, minimum",2 Carp,30.0,0.533,LF,108.0,30.0,,138.0,163.0
+12 35 39.13,Metal Kitchen Casework,3600,Maximum,,25.0,0.64,,273.0,36.0,,309.0,35.0
+12 35 39.13,Metal Kitchen Casework,3700,"Wall cabinets, metal, minimum",,30.0,0.533,,108.0,30.0,,138.0,163.0
+12 35 39.13,Metal Kitchen Casework,3800,Maximum,,25.0,0.64,,247.0,36.0,,283.0,325.0
+12 36 61.16,Solid Surface Countertops,3300,Cutouts for sinks,1 Carp,,,Ea.,,56.5,,56.5,84.0
+12 36 61.16,Solid Surface Countertops,3400,"Sinks, pricing for order of 51-99 units",,,,,,,,,
+12 36 61.16,Solid Surface Countertops,3500,"Single bowl, hard seamed, solid colors, 13"" x 17""",11 Carp,2.55,3.137,Ea.,485.0,177.0,,662.0,800.0
+12 36 61.16,Solid Surface Countertops,3600,"10"" x 15""",,6.0,1.333,,224.0,75.0,,299.0,360.0
+12 36 61.16,Solid Surface Countertops,3700,Cutouts for sinks,,,1.143,,,64.5,,64.5,96.0
+12 36 61.16,Solid Surface Countertops,3800,"Sinks, pricing for order of 1-50 units",,,,,,,,,
+12 36 61.16,Solid Surface Countertops,3900,"Single bowl, hard seamed, solid colors, 13"" x 17""",1 Carp,2.0,4.0,Ea.,570.0,225.0,,795.0,960.0
+12 36 61.16,Solid Surface Countertops,4000,"10"" x 15""",,4.55,1.758,,263.0,99.0,,362.0,435.0
+12 36 61.16,Solid Surface Countertops,4100,Cutouts for sinks,,5.25,1.524,,,86.0,,86.0,128.0
+12 36 61.16,Solid Surface Countertops,4200,"Cooktop cutouts, pricing for 100 or greater units",,4.0,2.0,,28.5,113.0,,141.5,200.0
+12 36 61.16,Solid Surface Countertops,4300,51-99 units,,3.4,2.353,,33.0,132.0,,165.0,233.0
+12 36 61.16,Solid Surface Countertops,4400,1-50 units,The,3.0,2.667,,38.5,150.0,,188.5,266.0
+12 36 61.17,Solid Surface Vanity Tops,10,SOLID SURFACE VANITY TOPS,,,,,,,,,
+12 36 61.17,Solid Surface Vanity Tops,15,"Solid surface, center bowl, 17"" x 19""",1 Carp,22222222.667∞,Ea.,300.0,,37.50,,337.5,385
+12 36 61.17,Solid Surface Vanity Tops,20,"19"" x 25""",,12,.667,,305,37.5,,342.50,395
+12 36 61.17,Solid Surface Vanity Tops,30,"19"" x 31""",,12,.667,,360,37.5,,397.50,450
+12 36 61.17,Solid Surface Vanity Tops,40,"19"" x 37""",,12,.667,,420,37.5,,457.50,515
+12 36 61.17,Solid Surface Vanity Tops,50,"22"" x 25""",,10,.800,,305,45.0,,350,405
+12 36 61.17,Solid Surface Vanity Tops,60,"22"" x 31""",,10,.800,,360,45.0,,405,460
+12 36 61.17,Solid Surface Vanity Tops,70,"22"" x 37""",,10,.800,,420,45.0,,465,525
+12 36 61.17,Solid Surface Vanity Tops,80,"22"" x 43""",,10,.800,,475,45.0,,520,590
+12 36 61.17,Solid Surface Vanity Tops,90,"22"" x 49""",,10,.800,,530,45.0,,575,645
+12 36 61.17,Solid Surface Vanity Tops,110,"22"" x 55""",,8,1,,600,56.5,,656.50,745
+12 36 61.17,Solid Surface Vanity Tops,120,"22"" x 61""",,8,1,,685,56.5,,741.50,835
+12 36 61.17,Solid Surface Vanity Tops,220,"Double bowl, 22"" x 61""",1,8,1,,775,56.5,,831.50,935
+12 36 61.17,Solid Surface Vanity Tops,230,"Double bowl, 22"" x 73""",,,,,"1,500",56.5,,"1,556.50","1,725"
+12 36 61.17,Solid Surface Vanity Tops,240,"For aggregate colors, add",,,,,,35 %,,,
+12 36 61.17,Solid Surface Vanity Tops,250,"For faucets and fittings, see Section 22 41 39.10",,,,,,,,,
+12 36 61.19,Quartz Agglomerate Countertops,10,QUARTZ AGGLOMERATE COUNTERTOPS,,,,,,,,,
+12 36 61.19,Quartz Agglomerate Countertops,100,"25"" wide, 4"" backsplash, color group A, minimum",2 Carp,15.0,1.067,LF.,64.0,60.0,,124.0,160.0
+12 36 61.19,Quartz Agglomerate Countertops,110,Maximum,,15.0,1.067,,105.0,60.0,,165.0,206.0
+12 36 61.19,Quartz Agglomerate Countertops,120,"Color group B, minimum",,15.0,1.067,,74.5,60.0,,134.5,172.0
+12 36 61.19,Quartz Agglomerate Countertops,1301,Maximum,115,1.067,,,118.0,60.0,,178.0,220.0
+12 36 61.19,Quartz Agglomerate Countertops,140,"Color group C, minimum",[,15.0,1.067,,93.0,60.0,,153.0,192.0
+12 36 61.19,Quartz Agglomerate Countertops,150,Maximum,,15.0,1.067,,167.0,60.0,,227.0,273.0
+12 36 61.19,Quartz Agglomerate Countertops,160,"Color group D, minimum",2 Carp,15.0,1.067,LF,99.5,60.0,,159.5,199.0
+12 36 61.19,Quartz Agglomerate Countertops,170,Maximum,"""",15.0,1.067,,128.0,60.0,,188.0,231.0
+12 46 13.10,Ash / Trash Receivers,10,ASH / TRASH RECEIVERS,,,,,,,,,
+12 46 13.10,Ash / Trash Receivers,1000,"Ash urn, cylindrical metal",,,,,,,,,
+12 46 13.10,Ash / Trash Receivers,1020,"8"" diameter, 20"" high",1 Clab,600.0,0.133,Ea.,56.0,6.1,,62.1,70.5
+12 46 13.10,Ash / Trash Receivers,1060,"10"" diameter, 26"" high","""",60.0,0.133,=,45.0,6.1,,51.1,58.0
+12 46 13.10,Ash / Trash Receivers,2000,"Combination ash/trash urn, metal",,,,,,,,,
+12 46 13.10,Ash / Trash Receivers,2020,"8"" diameter, 20"" high",11 Clab,60.0,0.133,Ea.,113.0,6.1,,119.1,133.0
+12 46 13.10,Ash / Trash Receivers,2050,"10"" diameter, 26"" high",,60.0,0.133,"""",90.5,6.1,,96.6,109.0
+12 05 05.10,"Selective Demolition, Interiors",0010,"SELECTIVE DEMOLITION, INTERIORS",,,,,,,,,
+12 05 05.10,"Selective Demolition, Interiors",1100,"Casework, wood base cabinets",2 Clab,24.0,0.667,LF,,30.5,,30.5,45.5
+12 05 05.10,"Selective Demolition, Interiors",1200,Countertop,,96.0,0.167,,7.6,,,7.6,11.3
+12 05 05.10,"Selective Demolition, Interiors",3100,"Casework, metal base cabinets",,20.0,0.8,,36.5,,,36.5,54.5
+12 05 05.10,"Selective Demolition, Interiors",3110,Cabinet base trim,[   ],400.0,0.04,,1.82,,,1.82,2.72
+12 05 05.10,"Selective Demolition, Interiors",3120,"Countertop, stainless steel or acid proof",,80.0,0.2,,9.1,,,9.1,13.6
+12 05 05.10,"Selective Demolition, Interiors",3122,custom,1 Carp,48.0,0.167,S.F,9.4,,,9.4,13.95
+12 05 05.10,"Selective Demolition, Interiors",3125,Ceramic tile,11 Clab,120.0,0.067,"""",3.04,,,3.04,4.53
+12 05 05.10,"Selective Demolition, Interiors",3127,Trim,1 Tilf,72.0,0.111,LF,5.9,,,5.9,8.65
+12 05 05.10,"Selective Demolition, Interiors",3130,"Wall cabinets, wood, 84"" high",2 Clab,30.0,0.533,,24.5,,,24.5,36.0
+12 05 05.10,"Selective Demolition, Interiors",3500,"Laboratory casework, tall storage cabinets, 84"" high",,40.0,0.4,,18.25,,,18.25,27.0
+12 05 05.10,"Selective Demolition, Interiors",3510,"Wall cabinets, metal",,40.0,0.4,,18.25,,,18.25,27.0
+12 05 05.10,"Selective Demolition, Interiors",4830,"Floor mats, recessed or linkmats",1 Clab,300.0,0.027,S.F,1.22,,,1.22,1.81
+12 05 05.10,"Selective Demolition, Interiors",4832,Skate lock tile,,200.0,0.04,I,1.82,,,1.82,2.72
+12 05 05.10,"Selective Demolition, Interiors",4834,Duckboord,II,1300.0,0.027,,1.22,,,1.22,1.81
+12 05 05.10,"Selective Demolition, Interiors",4920,"Blinds, interior, horizontal or vertical",,150.0,0.053,L.F.,2.43,,,2.43,3.62
+12 05 05.10,"Selective Demolition, Interiors",4922,Wood folding panels,,35.0,0.229,Pr.,10.4,,,10.4,15.5
+12 05 05.10,"Selective Demolition, Interiors",4924,"Shades, interior",,700.0,0.011,S.F.,0.52,,,0.52,78.0
+12 05 05.10,"Selective Demolition, Interiors",4930,"Drapery hardware, traverse rods",,35.0,0.229,Ea.,10.4,,,10.4,15.5
+12 05 05.10,"Selective Demolition, Interiors",4950,"Blast curtains, including hardware",,25.0,0.32,,14.6,,,14.6,21.5
+12 05 05.10,"Selective Demolition, Interiors",5200,"Fixed seating, per seat",2 Carp,44.0,0.364,,20.5,,,20.5,30.5
+12 05 05.10,"Selective Demolition, Interiors",6400,"Booth, restaurant",2 Clab,80.0,0.2,LF,9.1,,,9.1,13.6
+12 05 05.10,"Selective Demolition, Interiors",7400,"Office systems, furniture, cubicle","""",3000.0,0.005,S.F.,0.24,0.241,,,36.0
+12 05 05.10,"Selective Demolition, Interiors",12 21,Window Blinds,,,,,,,,,
+12 21 13.13,| Metal Horizontal Louver Blinds,10,METAL HORIZONTAL LOUVER BLINDS,,,,,,,,,
+12 21 13.13,| Metal Horizontal Louver Blinds,20,"Horizontal, 1"" aluminum slats, solid color, stock",1 Carp,590.0,0.014,S.E,5.25,0.76,,6.01,6.95
+12 21 13.13,| Metal Horizontal Louver Blinds,250,"2"" aluminum slats, solid color, stock",,590.0,0.014,,6.7,0.76,,7.46,8.55
+12 21 13.33,| Vinyl Horizontal Louver Blinds,10,VINYL HORIZONTAL LOUVER BLINDS,,,,,,,,,
+12 21 13.33,| Vinyl Horizontal Louver Blinds,100,"2"" composite, 48"" wide, 48"" high",1 Carp,222222222.26722,Ea.,119.0,,15.0,,134.0,154.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,120,"72"" high",,29.0,.276,,161.0,15.55,,176.55,200.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,140,"96"" high",,28.0,.286,,219.0,16.1,,235.1,265.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,200,"60"" wide, 60"" high",,27.0,.296,,246.0,16.7,,262.7,295.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,220,"72"" high",,25.0,.320,,283.0,18.0,,301.0,335.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,240,"96"" high",,24.0,.333,,425.0,18.75,,443.75,495.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,300,"72"" wide, 72"" high",,25.0,.320,,355.0,18.0,,373.0,415.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,320,"96"" high",,23.0,.348,,485.0,19.6,,504.6,565.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,400,"96"" wide, 96"" high",,20.0,.400,,615.0,25.5,,637.5,710.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,1000,"2"" faux wood, 48"" wide, 48"" high",,30.0,.267,,80.5,15.0,,95.5,111.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,1020,"72"" high",,29.0,.276,,104.0,15.55,,119.55,138.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,1040,"96"" high",,28.0,.286,,124.0,16.1,,140.1,161.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,1300,"72"" wide, 72"" high",,25.0,.320,,222.0,18.0,,240.0,271.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,1320,"96"" high",,23.0,.348,,330.0,19.6,,349.6,395.0
+12 21 13.33,| Vinyl Horizontal Louver Blinds,1400,"96"" wide, 96"" high",,20.0,1.400,,335.0,22.5,,357.5,405.0
+12 35 70.13,Casework Hospital Casework,2600,Enameled steel,2 Carp,15.0,1.067,LF,365,60.0,,425,495
+12 35 70.13,Casework Hospital Casework,27001,Stainless steel,,15.0,1.067,,730,60.0,,790,895
+12 35 70.13,Casework Hospital Casework,3000,"Hospital cabinets, stainless steel with glass door(s), lockable",,,,,,,,,
+12 35 70.13,Casework Hospital Casework,3010,"One door, 24"" W x 18"" D x 60"" H",2 Clab,18.0,0.889,Ea.,"3,400",40.5,,"3,440.50","3,800"
+12 35 70.13,Casework Hospital Casework,3020,"Two doors, 36"" W x 18"" D x 60"" H",,15.0,1.067,,"3,925",48.5,,"3,973.50","4,375"
+12 35 70.13,Casework Hospital Casework,3030,"36"" W x 24"" D x 67"" H",,15.0,1.067,,"5,025",48.5,,"5,073.50","5,625"
+12 35 70.13,Casework Hospital Casework,3040,"48"" W x 24"" D x 66"" H",,12.0,1.333,,"6,250",61.0,,"6,311","6,975"
+12 35 70.13,Casework Hospital Casework,3050,"48"" W x 24"" D x 72"" H",,12.0,1.333,,"5,125",61.0,,"5,186","5,725"
+12 35 70.13,Casework Hospital Casework,3060,"60"" W x 24"" D x 72"" H",,9.0,1.778,,"7,750",81.0,,"7,831","8,650"
+12 35 70.16,Nurse Station Casework,10,NURSE STATION CASEWORK,,,,,,,,,
+12 35 70.16,Nurse Station Casework,2100,"Door type, laminated plastic",2 Carp,10.0,1.6,LF,460.0,900.0,,550.0,645
+12 35 70.16,Nurse Station Casework,2200,Enameled steel,,10.0,1.6,,440.0,90.0,,530.0,620
+12 35 70.16,Nurse Station Casework,2300,Stainless steel,Far,10.0,1.6,',885.0,90.0,,975.0,"1,100"
+12 35 70.16,Nurse Station Casework,2400,"For drawer type, add",,,,,375.0,,,375.0,415
+12 36 16.10,Stainless Steel Countertops,10,STAINLESS STEEL COUNTERTOPS,,,,,,,,,
+12 36 16.10,Stainless Steel Countertops,3200,"Stainless steel, custom",1 Corp,24.0,0.333,S.F.,200.0,18.75,,218.75,248.0
+12 36 16.10,Stainless Steel Countertops,3210,Stainless steel,1 Carp,12.0,0.667,L.F.,400.0,37.5,,437.5,495.0
+12 36 19.10,Maple Countertops,10,MAPLE COUNTERTOPS,,,,,,,,,
+12 36 19.10,Maple Countertops,2900,"Solid, laminated, 1-1/2"" thick, no splash",1 Carp,28.0,0.286,LF.,93.5,16.1,,109.6,127.0
+12 36 19.10,Maple Countertops,3000,With square splash,,28.0,0.286,"""",111.0,16.1,,127.1,146.0
+12 36 19.10,Maple Countertops,3400,"Recessed cutting block with trim, 16"" x 20"" x 1""",,8.0,1.0,Eo.,144.0,56.5,,200.5,242.0
+12 36 23.13,Plastic-Laminate-Clad Countertops,10,PLASTIC-LAMINATE-CLAD COUNTERTOPS,,,,,,,,,
+12 36 23.13,Plastic-Laminate-Clad Countertops,20,"Stock, 24"" wide w/backsplash, minimum",1 Carp,30.0,0.267,LF,17.65,158556655.0,,32.65,42.0
+12 36 23.13,Plastic-Laminate-Clad Countertops,100,Maximum,,25.0,0.32,,42.5,18.0,,60.5,74.0
+12 36 23.13,Plastic-Laminate-Clad Countertops,300,"Custom plastic, 7/8"" thick, aluminum molding, no splash",,30.0,0.267,,39.0,15.0,,54.0,65.5
+12 36 23.13,Plastic-Laminate-Clad Countertops,400,Cove splash,,30.0,1.267,,50.0,15.0,,65.0,77.5
+12 36 23.13,Plastic-Laminate-Clad Countertops,600,"1-1/4"" thick, no splash",,28.0,0.286,,43.0,16.1,,59.1,71.5
+12 36 23.13,Plastic-Laminate-Clad Countertops,700,Square splash,,28.0,0.286,,47.5,16.1,,63.6,76.5
+12 36 23.13,Plastic-Laminate-Clad Countertops,900,"Square edge, plastic face, 7/8"" thick, no splash",,30.0,267.0,,37.0,15.0,,52.0,63.5
+12 36 23.13,Plastic-Laminate-Clad Countertops,1000,With splash,,30.0,0.267,,57.5,15.0,,72.5,85.5
+12 36 23.13,Plastic-Laminate-Clad Countertops,1200,"For stainless channel edge, 7/8"" thick, add",,,,,4.06,,,4.06,4.47
+12 36 23.13,Plastic-Laminate-Clad Countertops,1300,"1-1/4"" thick, add",,,,,4.66,,,4.66,5.15
+12 36 23.13,Plastic-Laminate-Clad Countertops,1500,"For solid color suede finish, add",,,,,6.1,,,6.1,6.7
+12 36 23.13,Plastic-Laminate-Clad Countertops,1700,"For end splash, add",,,,Ea.,28.0,,,28.0,30.5
+12 36 23.13,Plastic-Laminate-Clad Countertops,1900,"For cut outs, standard, add, minimum",11 Carp,32.0,0.25,,17.75,14.1,,31.85,40.5
+12 36 23.13,Plastic-Laminate-Clad Countertops,2000,Maximum,,8.0,1.0,,9.2,56.5,,65.7,94.0
+12 36 23.13,Plastic-Laminate-Clad Countertops,2100,"Postformed, including backsplash and front edge",,30.0,0.267,L.F.,13.3,15.0,,28.3,37.0
+12 36 23.13,Plastic-Laminate-Clad Countertops,2110,"Mitred, add",,12.0,0.667,Ea.,,37.5,,37.5,56.0
+12 36 23.13,Plastic-Laminate-Clad Countertops,2200,"Built in place, 25"" wide, plastic laminate",,25.0,0.32,LE,70.0,18.0,,88.0,104.0
+12 36 33.10,Ceramic Tile Countertops,2300,Ceramic tile mosaic,1 Carp,25,0.32,L.F.,47,18,,65,78.5
+12 36 40.10,Natural Stone Countertops,2500,"Marble, stock, with splash, 1/2"" thick, minimum",1 Bric,17.0,0.471,LF,56,263,,82,101
+12 36 40.10,Natural Stone Countertops,2700,"3/4"" thick, maximum",,13.0,0.615,,137,34,,171,201
+12 36 40.10,Natural Stone Countertops,2800,"Granite, average, 1-1/4"" thick, 24"" wide, no splash",,13.01,0.615,,179,34,,213,248
+12 36 53.10,Laboratory Countertops and Sinks,20,"Countertops, epoxy resin, not incl. base cabinets, acid proof, min.",2 Carp,82,0.195,S.F.,97,11.0,,108.0,123
+12 36 53.10,Laboratory Countertops and Sinks,30,Maximum,,70,0.229,1,550,12.85,,562.85,625
+12 36 53.10,Laboratory Countertops and Sinks,40,Stainless steel,,82,0.195,,53,11.0,,64.0,75
+12 36 61.16,Solid Surface Countertops,100,"25"" wide, solid colors",2 Carp,28.0,LF,58.50,,32.0,,90.5,113.0
+12 36 61.16,Solid Surface Countertops,200,Patterned colors,,28.0,.571,,74.5,32.0,,106.5,130.0
+12 36 61.16,Solid Surface Countertops,300,Premium patterned colors,,28.0,.571,,99.0,32.0,,131.0,157.0
+12 36 61.16,Solid Surface Countertops,400,"With silicone attached 4"" backsplash, solid colors",,27.0,.593,,68.5,33.5,,102.0,125.0
+12 36 61.16,Solid Surface Countertops,500,Patterned colors,,27.0,.593,,87.0,33.5,,120.5,145.0
+12 36 61.16,Solid Surface Countertops,600,Premium patterned colors,,27.0,.593,,108.0,33.5,,141.5,169.0
+12 36 61.16,Solid Surface Countertops,700,"With hard seam attached 4"" backsplash, solid colors",,23.0,.696,,68.5,39.0,,107.5,134.0
+12 36 61.16,Solid Surface Countertops,800,Patterned colors,,23.0,.696,,87.0,39.0,,126.0,154.0
+12 36 61.16,Solid Surface Countertops,900,Premium patterned colors,,23.0,.696,,108.0,39.0,,147.0,178.0
+12 36 61.16,Solid Surface Countertops,1000,Pricing for order of 51-99 LF.,,,,,,,,,
+12 36 61.16,Solid Surface Countertops,1100,"25"" wide, solid colors",2 Corp,24.0,LF,67,,37.5,,104.5,130.0
+12 36 61.16,Solid Surface Countertops,1200,Patterned colors,,24.0,.667,,85.5,37.5,,123.0,150.0
+12 36 61.16,Solid Surface Countertops,1300,Premium patterned colors,,24.0,.667,,114.0,37.5,,151.5,181.0
+12 36 61.16,Solid Surface Countertops,1400,"With silicone attached 4"" backsplash, solid colors",,23.0,.696,,79.0,39.0,,118.0,145.0
+12 36 61.16,Solid Surface Countertops,1500,Patterned colors,,23.0,.696,,100.0,39.0,,139.0,169.0
+12 36 61.16,Solid Surface Countertops,1600,Premium patterned colors,,23.0,.696,,125.0,39.0,,164.0,196.0
+12 36 61.16,Solid Surface Countertops,1700,"With hard seam attached 4"" backsplash, solid colors",,20.0,.800,,79.0,45.0,,124.0,154.0
+12 36 61.16,Solid Surface Countertops,1800,Patterned colors,,20.0,.800,,100.0,45.0,,145.0,177.0
+12 36 61.16,Solid Surface Countertops,1900,Premium patterned colors,,20.0,.800,,125.0,45.0,,170.0,204.0
+12 36 61.16,Solid Surface Countertops,2000,Pricing for order of 1-50 LF.,,,,,,,,,
+12 36 61.16,Solid Surface Countertops,2100,"25"" wide, solid colors",2 Carp,20.0,.800,LF,79.0,45.0,,124.0,154.0
+12 36 61.16,Solid Surface Countertops,2200,Patterned colors,1,20.0,.800,,100.0,45.0,,145.0,177.0
+12 36 61.16,Solid Surface Countertops,2300,Premium patterned colors,,20.0,.800,,134.0,45.0,,179.0,214.0
+12 36 61.16,Solid Surface Countertops,2400,"With silicone attached 4"" backsplash, solid colors",,19.0,.842,,92.5,47.5,,140.0,173.0
+12 36 61.16,Solid Surface Countertops,2500,Patterned colors,,19.0,.842,,117.0,47.5,,164.5,200.0
+12 36 61.16,Solid Surface Countertops,2600,Premium patterned colors,,19.0,.842,,146.0,47.5,,193.5,232.0
+12 36 61.16,Solid Surface Countertops,2700,"With hard seam attached 4"" backsplash, solid colors",,15.0,1.067,,92.5,60.0,,152.5,192.0
+12 36 61.16,Solid Surface Countertops,2800,Patterned colors,,15.0,1.067,,117.0,60.0,,177.0,219.0
+12 36 61.16,Solid Surface Countertops,2900,Premium patterned colors,,15.0,1.067,,146.0,60.0,,206.0,251.0
+12 36 61.16,Solid Surface Countertops,3000,"Sinks, pricing for order of 100 or greater units",,,,,,,,,
+12 36 61.16,Solid Surface Countertops,3100,"Single bowl, hard seamed, solid colors, 13"" x 17""",1 Carp,3.0,2.667,Ea.,420.0,150.0,,570.0,690.0
+12 36 61.16,Solid Surface Countertops,3200,"10"" x 15""",,7.0,1.143,,195.0,64.5,,259.5,310.0
+12 24 13.10,Roller Window Shades,1800,Lightproof,1 Corp,685.0,0.012,S.F,6.95,0.66,,7.61,8.65
+12 24 13.10,Roller Window Shades,2000,"Polyester, room darkening, with continuous cord, GEI",,,,,,,,,
+12 24 13.10,Roller Window Shades,2010,"36"" x 72""",1 Carp,38.0,0.211,Ea.,242.0,11.85,,253.85,284.0
+12 24 13.10,Roller Window Shades,2020,"48"" x 72""",,28.0,0.286,,315.0,16.1,,331.1,375.0
+12 24 13.10,Roller Window Shades,2030,"60"" x 72""",,23.0,0.348,,425.0,19.6,,444.6,500.0
+12 24 13.10,Roller Window Shades,2040,"72"" x 72""",,19.0,0.421,,450.0,23.5,,473.5,530.0
+12 24 13.10,Roller Window Shades,6011,"Solar screening, fiberglass",G,85.0,0.094,S.F.,8.9,5.3,,14.2,17.7
+12 32 23.10,"Manufactured Wood Casework, Stock Units",400,"Builtin drawer units, pine, 18"" deep, 32"" high, unfinished, Minimum",2 Carp,53.0,0.302,LF,139,17.0,,156,179
+12 32 23.10,"Manufactured Wood Casework, Stock Units",500,"Builtin drawer units, pine, 18"" deep, 32"" high, unfinished, Maximum","""",40.0,0.4,,164,22.5,,186.50,215
+12 32 23.10,"Manufactured Wood Casework, Stock Units",800,"Kitchen base cabinets, hardwood, not incl. counter tops, 24"" deep, 35"" high, prefinished, One top drawer, one door below, 12"" wide",2 Carp,24.8,0.645,Ea.,390,36.5,,426.50,480
+12 32 23.10,"Manufactured Wood Casework, Stock Units",840,"18"" wide",1,23.3,0.687,,415,38.5,,453.50,515
+12 32 23.10,"Manufactured Wood Casework, Stock Units",880,"24"" wide",,22.3,0.717,,470,40.5,,510.50,575
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1000,"Four drawers, 12"" wide",,24.8,0.645,,735,36.5,,771.50,865
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1040,"18"" wide",,23.3,0.687,,770,38.5,,808.50,910
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1060,"24"" wide",,22.3,0.717,,815,40.5,,855.50,955
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1200,"Two top drawers, two doors below, 27"" wide",,22.727,,,480,41.0,,521,590
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1260,"36"" wide",,20.3,0.788,,540,44.5,,584.50,660
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1300,"48"" wide",,18.9,0.847,,680,47.5,,727.50,820
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1500,"Range or sink base, two doors below, 30"" wide",,21.4,0.748,,365,42.0,,407,470
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1540,"36"" wide",,20.3,0.788,,405,44.5,,449.50,510
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1580,"48"" wide",,18.9,0.847,,445,47.5,,492.50,560
+12 32 23.10,"Manufactured Wood Casework, Stock Units",1800,"For sink front units, deduct",,,,,177,,,177,195
+12 32 23.10,"Manufactured Wood Casework, Stock Units",2000,"Corner base cabinets, 36"" wide, standard",2 Carp,18.0,0.889,,385,50.0,,435,500
+12 32 23.10,"Manufactured Wood Casework, Stock Units",2100,Lazy Susan with revolving door,"""",16.5,0.97,,510,54.5,,564.50,640
+12 32 23.10,"Manufactured Wood Casework, Stock Units",4050,"Kitchen wall cabinets, hardwood, 12"" deep with two doors, 12"" high, 30"" wide",2 Carp,24.8,0.645,Ea.,222,36.5,,258.50,298
+12 32 23.10,"Manufactured Wood Casework, Stock Units",4400,"15"" high, 30"" wide",,24.0,0.667,,330,37.5,,367.50,415
+12 32 23.10,"Manufactured Wood Casework, Stock Units",4440,"36"" wide",,22.7,0.705,,155,39.5,,194.50,230
+12 32 23.10,"Manufactured Wood Casework, Stock Units",4700,"24"" high, 30"" wide",,23.3,0.687,,166,38.5,,204.50,241
+12 32 23.10,"Manufactured Wood Casework, Stock Units",4720,"36"" wide",,22.7,0.705,,475,39.5,,514.50,585
+12 32 23.10,"Manufactured Wood Casework, Stock Units",5000,"30"" high, one door, 12"" wide",,22.0,0.727,,108,41.0,,149,180
+12 32 23.10,"Manufactured Wood Casework, Stock Units",5040,"18"" wide",,20.9,0.766,,270,43.0,,313,360
+12 32 23.10,"Manufactured Wood Casework, Stock Units",5060,"24"" wide",,20.3,0.788,,315,44.5,,359.50,410
+12 32 23.10,"Manufactured Wood Casework, Stock Units",5300,"Two doors, 27"" wide",,19.8,0.808,,181,45.5,,226.50,268
+12 32 23.10,"Manufactured Wood Casework, Stock Units",5340,"36"" wide",,18.8,0.851,,385,48.0,,433,495
+12 32 23.10,"Manufactured Wood Casework, Stock Units",5380,"48"" wide",,18.4,0.87,,780,49.0,,829,930
+12 32 23.10,"Manufactured Wood Casework, Stock Units",6000,"Corner wall, 30"" high, 24"" wide",,18.0,0.889,,201,50.0,,251,296
+12 32 23.10,"Manufactured Wood Casework, Stock Units",6050,"30"" wide",,17.2,0.93,,530,52.5,,582.50,660
+12 32 23.10,"Manufactured Wood Casework, Stock Units",6100,"36"" wide",,16.5,0.97,,470,54.5,,524.50,595
+12 32 23.10,"Manufactured Wood Casework, Stock Units",6500,Revolving Lazy Susan,,15.2,1.053,,146,59.5,,205.50,249
+12 32 23.10,"Manufactured Wood Casework, Stock Units",7000,"Broom cabinet, 84"" high, 24"" deep, 18"" wide",,10.0,1.6,,815,90.0,,905,"1,025"
+12 32 23.10,"Manufactured Wood Casework, Stock Units",7500,"Oven cabinets, 84"" high, 24"" deep, 27"" wide",,8.0,2.0,,"1,050",113.0,,"1,163","1,325"
+12 32 23.10,"Manufactured Wood Casework, Stock Units",7750,Valance board trim,,396.0,0.04,LF.,24.50,2.27,,26.77,30.50
+12 35 50.13,Specialty Educational/Library Casework,5000,"School, 24"" deep, metal, 84"" high units",2 Carp,15255.0,1.067,LF,620,14566.0,,680,775
+12 35 50.13,Specialty Educational/Library Casework,5150,Counter height units,,20.0,0.8,,"1,200",,,"1,245","1,400"
+12 35 50.13,Specialty Educational/Library Casework,5450,"Wood, custom fabricated, 32"" high counter",,20.0,0.8,,275,,,320,365
+12 35 50.13,Specialty Educational/Library Casework,5600,Add for counter top,,56.0,0.286,,29,16.1,,45.10,56
+12 35 50.13,Specialty Educational/Library Casework,5800,"84"" high wall units",,15.0,1.067,,680,60.0,,740,835
+12 35 50.13,Specialty Educational/Library Casework,6000,Laminated plastic finish is same price as wood,,,,,,,,,
+12 35 53.13,Metal Laboratory Casework,10,METAL LABORATORY CASEWORK,,,,,,,,,
+12 35 53.13,Metal Laboratory Casework,20,"Cabinets, base, door units, metal",2 Carp,18222.0,0.889,LF,"2,375",505544.0,,"2,425","2,675"
+12 35 53.13,Metal Laboratory Casework,300,Drawer units,,18.0,0.889,,"1,675",50.0,,"1,725","1,900"
+12 35 53.13,Metal Laboratory Casework,700,"Tall storage cabinets, open, 7' high",,20.0,0.8,,284,,,329,375
+12 35 53.13,Metal Laboratory Casework,900,With glazed doors,,20.0,0.8,,730,,,775,865
+12 35 53.13,Metal Laboratory Casework,1300,"Wall cabinets, metal, 12-1/2"" deep, open",,20.0,0.8,,151,,,196,233
+12 35 53.13,Metal Laboratory Casework,1500,With doors,,20.0,0.8,,296,,,341,390
+12 35 53.13,Metal Laboratory Casework,6300,Rule of thumb: lab furniture including installation & connection,,,,,,,,,
+12 35 59.10,Display Cases,10,"DISPLAY CASES Free standing, all glass",,,,,,,,,
+12 35 59.10,Display Cases,20,"Aluminum frame, 42"" high x 36"" wide x 12"" deep",2 Carp,88.0,2.0,Eo .,208,113.0,,321,395
+12 35 59.10,Display Cases,100,"70"" high x 48"" wide x 18"" deep","""",6.0,2.667,,"1,325",150.0,,"1,475","1,675"
+12 35 59.10,Display Cases,500,"For wood bases, add",,,,,,9%,,,
+12 35 59.10,Display Cases,600,"For hardwood frames, deduct",,,,,,8%,,,
+12 35 59.10,Display Cases,700,"For bronze, baked enamel finish, add",,,,,,10%,,,
+12 35 59.10,Display Cases,2000,"Wall mounted, glass front, aluminum frame",,,,,,,,,
+12 35 59.10,Display Cases,2010,"Non illuminated, one section 3' x 4' x 1'-4""",12 Corp,5.0,3.2,Ea .,"1,600",180.0,,"1,780","2,025"
+12 35 59.10,Display Cases,2100,"5' x 4' x 1'-4""",,5.0,3.2,,"1,475",180.0,,"1,655","1,900"
+12 35 59.10,Display Cases,2200,"6' x 4' x 1'-4""",,4.0,4.0,,"4,000",225.0,,"4,225","4,725"
+12 35 59.10,Display Cases,2500,"Two sections, 8' x 4' x 1'-4""",,2.0,8.0,,"3,000",450.0,,"3,450","3,975"
+12 35 59.10,Display Cases,2600,"10' x 4' x 1'-4""",,2.0,8.0,,"6,050",450.0,,"6,500","7,350"
+12 35 59.10,Display Cases,3000,"Three sections, 16' x 4' x 1' 4""",,1.5,10.667,,"5,350",600.0,,"5,950","6,775"
+12 35 59.10,Display Cases,3500,"For fluorescent lights, add",,,,Section,"1,225",,,"1,225","1,325"
+12 35 59.10,Display Cases,4000,"Table exhibit cases, 2' wide, 3' high, 4' long, flat top",2 Carp,5.0,3.2,Ea .,"1,225",180.0,,"1,405","1,625"
+12 35 59.10,Display Cases,4100,"3' wide, 3' high, 4' long, sloping top",,3.0,5.333,"""",885,300.0,,"1,185","1,425"
+12 35 70.13,Hospital Casework,10,HOSPITAL CASEWORK,,,,,,,,,
+12 35 70.13,Hospital Casework,500,"Base cabinets, laminated plastic",2 Carp,10.0,1.6,LF,400,900.0,,490,575
+12 35 70.13,Hospital Casework,1000,Stainless steel,,10.0,1.6,,735,90.0,,825,945
+12 35 70.13,Hospital Casework,1200,"For all drawers, add",,,,,41.50,,,41.50,46
+12 35 70.13,Hospital Casework,1300,"Cabinet base trim, 4"" high, enameled steel",2 Carp,200.08,,,67,4.5,,71.50,80
+12 35 70.13,Hospital Casework,1400,Stainless steel,],200.0,0.08,,134,4.5,,138.50,154
+12 35 70.13,Hospital Casework,1450,"Countertop, laminated plastic, no backsplash",,40.0,0.4,,59.50,22.5,,32,99
+12 35 70.13,Hospital Casework,1650,With backsplash,,40.0,0.4,,74,22.5,,96.50,115
+12 35 70.13,Hospital Casework,1800,"For sink cutout, add",,12.2,1.311,Eo .,,74.0,,74,110
+12 35 70.13,Hospital Casework,1900,Stainless steel counter top,,40.0,0.4,LF,193,22.5,,215.50,246
+12 35 70.13,Hospital Casework,2000,"For drop-in stainless 43"" x 21"" sink, odd",,,,Ea .,"1,475",,,"1,475","1,600"
+12 35 70.13,Hospital Casework,2050,Laminate with antimicrobial finish #4,2 Carp,40.0,0.4,LF,39,22.5,,61.50,76.50
+12 35 70.13,Hospital Casework,2500,"Wall cabinets, laminated plastic",,15.0,1.067,,299,60.0,,359,420
+12 46 19.50,Wall Clocks,10,WALL CLOCKS,,,,,,,,,
+12 46 19.50,Wall Clocks,80,"12"" diameter, single face",1 Elec,8.0,,Eq.,143.0,66.0,,209.0,256.0
+12 46 19.50,Wall Clocks,100,Double face,-,6.2,1.29,"""",143.0,85.5,,228.5,285.0
+12 46 33.13,Trash Receptacles,10,TRASH RECEPTACLES,,,,,,,,,
+12 46 33.13,Trash Receptacles,4000,"Trash receptacle, metal",,,,,,,,,
+12 46 33.13,Trash Receptacles,4020,"8"" diameter, 15"" high",1 Clab,60.0,.133,Eg.,55.5,66===,,61.6,70.5
+12 46 33.13,Trash Receptacles,4040,"10"" diameter, 18"" high",,60.0,.133,,104.0,6.10,,110.1,124.0
+12 46 33.13,Trash Receptacles,5040,"16"" x 8"" x 14"" high",,60.133,>,,30.5,6.10,,36.6,43.0
+12 46 33.13,Trash Receptacles,5500,"Plastic, with lid",,,,,,,,,
+12 46 33.13,Trash Receptacles,5520,35 gal.,1 Clab,60.0,.133,Ea.,174.0,6.10,,180.1,200.0
+12 46 33.13,Trash Receptacles,55401,45 gal.,,60.0,133,,280.0,6.10,,286.1,320.0
+12 46 33.13,Trash Receptacles,5550,"Plastic recycling barrel, w/lid & wheels, 32 gal.",G,60.0,.133,,70.0,6.10,,76.1,86.0
+12 46 33.13,Trash Receptacles,5560,65 gal.,,60.0,.133,,450.0,6.10,,456.1,505.0
+12 46 33.13,Trash Receptacles,5570,95 gal.,G,60.0,.133,,840.0,6.10,,846.1,935.0
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,10,ENTRANCE FLOOR MATS,,,,,,,,,
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,20,"Recessed, black rubber, 3/8"" thick, solid",1 Clab,155.0,0.052,S.F.,حب,2.35,,5.35,6.8
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,50,% Perforated,,155.0,0.052,,25.50,2.35,,27.85,31.5
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,100,"1/2"" thick, solid",,155.0,0.052,,30.50,2.35,,32.85,37.5
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,150,Perforated,,155.0,0.052,,10.35,2.35,,12.7,14.85
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,200,"In colors, 3/8"" thick, solid",,155.0,0.052,,2295,2.35,,31.35,35.5
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,250,Perforated,,155.0,0.052,,27,2.35,,29.35,33.5
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,300,"1/2"" thick, solid",,155.0,0.052,,43,2.35,,45.35,50.5
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,350,Perforated,,155.0,0.052,,5.60,2.35,,7.95,9.7
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,1225,"Recessed, alum. rail, hinged mat, 7/16"" thick",,,,,,,,,
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,1250,Carpet insert,1 Clab,360.0,0.022,S.F.,75,1.01,,76.01,84.0
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,1275,Vinyl insert,,360.0,0.022,,75,1.01,,76.01,84.0
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,1300,Abrasive insert,,360.0,0.022,,75,1.01,,76.01,84.0
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,1325,"Recessed, vinyl rail, hinged mat, 7/16"" thick",,,,,,,,,
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,1350,Carpet insert,1 Clab,360.0,0.022,S.F.,83,1.01,,84.01,93.0
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,1375,Vinyl insert,,360.0,0.022,,83,1.01,,84.01,93.0
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,1400,Abrasive insert,,360.0,0.022,,83,1.01,,84.01,93.0
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,2000,"Recycled rubber tire tile, 12"" x 12"" x 3/8"" thick",G555,125.0,0.064,,11.30,2.92,,14.22,16.75
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,2510,"Natural cocoa fiber, 1/2"" thick",,125.0,0.064,,8.40,2.92,,11.32,13.6
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,2520,"3/4"" thick",,125.0,0.064,,7.70,2.92,,10.62,12.85
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,2530,"1"" thick",,125.0,0.064,+,8.40,2.92,,11.32,13.6
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,3000,"Hospital tacky mats, package of 30 with frame",,,,Ea.,763,,,76.0,83.5
+12 48 13.13,| Entrance Floor Mats |      |            |             |      |          |       |           |        |                |,3010,4 packages of 30,,,,"=""",75,,,75.0,82.5
+12 63 13.13,Bleachers,10,BLEACHERS,,,,,,,,,
+12 63 13.13,Bleachers,3000,"Telescoping, manual to 15 tie, minimum",ऊ5.,65.0,0.492,Seat,98,28.0,,126,150
+12 63 13.13,Bleachers,3100,Maximum,,60.0,0.533,,211,30.5,,241.50,277
+12 63 13.13,Bleachers,3300,"16 to 20 tier, minimum",,60.0,0.533,,213,30.5,,243.50,279
+12 63 13.13,Bleachers,34001,Maximum,,155.0,0.582,,415,33.0,,448,510
+12 63 13.13,Bleachers,3600,"21 to 30 fier, minimum",,50.0,0.64,,279,36.5,,315.50,360
+12 63 13.13,Bleachers,3700,Maximum,,40.0,0.8,,445,45.5,,490.50,560
+12 63 13.13,Bleachers,3900,"For integral power operation, add, minimum",2 Elec,300.0,0.053,,800,3.53,,803.53,880
+12 63 13.13,Bleachers,4000,Maximum,,250.0,0.064,,"1,475",4.24,,"1,479.24","1,625"
+12 63 13.13,Bleachers,5000,"Benches, folding, in wall, 14' table, 2 benches",L-4,2.0,12.0,Set,"2,500",645.0,,"3,145","3,725"
+12 67 13.13,Pews and Benches,10,SANCTUARY PEWS,,,,,,,,,
+12 67 13.13,Pews and Benches,1500,"Bench type, hardwood, minimum",1 Carp,20.0,0.4,LF,135.0,22.5,,157.5,183.0
+12 67 13.13,Pews and Benches,1550,Maximum,,15.0,0.533,!,650.0,30.0,,680.0,760.0
+12 67 13.13,Pews and Benches,1570,"For kneeler, add",,,,,20.5,,,20.5,22.5
+12 92 33.10,Interior Planters and Artificial Plants,10,PLANTERS,,,,,,,,,
+12 92 33.10,Interior Planters and Artificial Plants,1000,"Fiberglass, hanging, 12"" diameter, 7"" high",,,,Ea.,71.0,,,71.0,78.0
+12 92 33.10,Interior Planters and Artificial Plants,1500,"Rectangular, 48"" long, 16"" high, 15"" wide",,,,,350.0,,,350.0,385.0
+12 92 33.10,Interior Planters and Artificial Plants,1650,"60"" long, 30"" high, 28"" wide",,,,,885.0,,,885.0,975.0
+12 92 33.10,Interior Planters and Artificial Plants,2000,"Round, 12"" diameter, 13"" high",,,,,90.0,,,90.0,99.0
+12 92 33.10,Interior Planters and Artificial Plants,2050,"25"" high",,,,,226.0,,,226.0,249.0
+12 92 33.10,Interior Planters and Artificial Plants,5000,"Square, 10"" side, 20"" high",,,,,187.0,,,187.0,206.0
+12 92 33.10,Interior Planters and Artificial Plants,5100,"14"" side, 15"" high",,,,,85.0,,,85.0,93.5
+12 92 33.10,Interior Planters and Artificial Plants,6000,"Metal bowl, 32"" diameter, 8"" high, minimum",,,,,515.0,,,515.0,570.0
+12 92 33.10,Interior Planters and Artificial Plants,6050,Maximum,,,,,254.0,,,254.0,279.0
+12 92 33.10,Interior Planters and Artificial Plants,8750,"Wood, fiberglass liner, square",,,,,,,,,
+12 92 33.10,Interior Planters and Artificial Plants,8780,"14"" square, 15"" high, minimum",,,,Ea.,385.0,,,385.0,2242.0
+12 92 33.10,Interior Planters and Artificial Plants,8800,Maximum,,,,,470.0,,,470.0,520.0
+12 92 33.10,Interior Planters and Artificial Plants,9400,"Plastic cylinder, molded, 10"" diameter, 10"" high",,,,,41.5,,,41.5,46.0
+12 92 33.10,Interior Planters and Artificial Plants,9500,"11"" diameter, 11"" high",,,,Ea.,79.5,,,79.5,87.0
+12 93 13.10,Bicycle Racks,10,BICYCLE RACKS,,,,,,,,,
+12 93 13.10,Bicycle Racks,20,"Single side, grid, 1-5/8"" OD stl. pipe, w/1/2"" bars, galv, 5 bike cap",2 Clab,10.0,1.6,Ea.,345.0,73.0,,418.0,490
+12 93 13.10,Bicycle Racks,25,Powder coat finish,i,10.0,1.6,,380.0,73.0,,453.0,530
+12 93 13.10,Bicycle Racks,30,"Single side, grid, 1-5/8"" OD stl. pipe, w/1/2"" bars, galv, 9 bike cap",,8.0,22.0,,380.0,91.0,,471.0,550
+12 93 13.10,Bicycle Racks,35,Powder coat finish,,8.0,,,600.0,91.0,,691.0,795
+12 93 13.10,Bicycle Racks,40,"Single side, grid, 1-5/8"" OD stl. pipe, w/1/2"" bars, galv, 18 bike cap",,4.0,,,710.0,182.0,,892.0,"1,050"
+12 93 13.10,Bicycle Racks,45,Powder coat finish,,,,,710.0,182.0,,892.0,"1,050"
+12 93 13.10,Bicycle Racks,50,"S curve, 1-7/8"" OD stl. pipe, 11 ga., galv, 5 bike cap",,10.0,1.6,,219.0,73.0,,292.0,350
+12 93 13.10,Bicycle Racks,55,Powder coat finish,,10.0,1.6,,187.0,73.0,,260.0,315
+12 93 13.10,Bicycle Racks,60,"S curve, 1-7/8"" OD stl. pipe, 11 ga., galv, 7 bike cap",,9.0,1.778,,330.0,81.0,,411.0,485
+12 93 13.10,Bicycle Racks,65,Powder coat finish,,9.0,1.778,,289.0,81.0,,370.0,440
+12 93 13.10,Bicycle Racks,70,"S curve, 1-7/8"" OD stl. pipe, 11 ga., galv, 9 bike cap",,8.0,2.0,,425.0,91.0,,516.0,605
+12 93 13.10,Bicycle Racks,75,Powder coat finish,,8.0,2.0,,340.0,91.0,,431.0,510
+12 93 13.10,Bicycle Racks,80,"S curve, 1-7/8"" OD stl. pipe, 11 ga., galv, 11 bike cap",,16.0,2.667,,540.0,122.0,,662.0,775
+12 93 13.10,Bicycle Racks,85,Powder coat finish,,6.0,2.667,,540.0,122.0,,662.0,775
+12 93 23.10,Trash Receptacles,10,TRASH RECEPTACLES,,,,,,,,,
+12 93 23.10,Trash Receptacles,20,"Fiberglass, 2' square, 18"" high",2 Clab,30.0,0.533,Eo.,750,24.5,,774.50,860
+12 93 23.10,Trash Receptacles,100,"2' square, 2'-6"" high",,30.0,0.533,,"1,075",24.5,,"1,099.50","1,200"
+12 93 23.10,Trash Receptacles,300,"Circular, 2' diameter, 18"" high",,30.0,0.533,,750,24.5,,774.50,860
+12 93 23.10,Trash Receptacles,400,"2' diameter, 2'-6"" high",,30.0,0.533,,700,24.5,,724.50,805
+12 93 23.10,Trash Receptacles,500,"Recycled plastic, var colors, round, 32 gal., 28"" x 38"" high",G,5.0,3.2,,880,146.0,,"1,026","1,175"
+12 93 23.10,Trash Receptacles,510,"32 gal, 31"" x 32"" high",G,5.0,3.2,,945,146.0,,"1,091","1,275"
+12 93 23.10,Trash Receptacles,9110,"Plastic, with dome lid, 32 gal. capacity",,35.0,0.457,,70.50,21.0,,91.50,109
+12 93 23.10,Trash Receptacles,9120,"Recycled plastic slats, plastic dome lid, 32 gal. capacity",,35.0,0.457,,350,21.0,,371,415
+12 93 23.20,Trash Closure,10,TRASH CLOSURE,,,,,,,,,
+12 93 23.20,Trash Closure,20,"Steel with pullover cover, 2'-3"" wide, 4'-7"" high, 6'-2"" long",2 Clab,5.0,3.2,Ea.,"2,425",146.0,,"2,571","2,900"
+12 93 23.20,Trash Closure,100,"10'-1"" long",,4.0,4.0,,"3,400",182.0,,"3,582","4,025"
+12 93 23.20,Trash Closure,300,"Wood, 10' wide, 6' high, 10' long",,1.2,13.333,,"2,250",610.0,,"2,860","3,375"
+12 56 51.10,Library Furnishings,6020,Single face,1 Carp,12.0,0.667,LF,119,37.5,,156.50,187
+12 56 51.10,Library Furnishings,6050,"For 8"" shelving, subtract from above",,,,,,,,,10 %
+12 56 51.10,Library Furnishings,6060,"For 12"" shelving, add to above",,,,,,,,,10 %
+12 56 51.10,Library Furnishings,6070,"For 42"" high with countertop, subtract above",,,,,,,,,20 %
+12 56 51.10,Library Furnishings,6100,"Mobile compacted shelving, hand crank, 9'-0"" high",,,,,,,,,
+12 56 51.10,Library Furnishings,6110,"Double face, including track, 3' section",,,,Ea.,"2,300",,,"2,300","2,550"
+12 56 51.10,Library Furnishings,6150,"For electrical operation, add",,,,,,,,,25 %
+12 56 51.10,Library Furnishings,6200,"Magazine shelving, 82"" high, 12"" deep, single face",1 Carp,11.5,0.696,L.F.,203,39.0,,242,282
+12 56 51.10,Library Furnishings,6210,Double face,,11.5,0.696,"""",275,39.0,,314,360
+12 56 51.10,Library Furnishings,7200,"Reading table, laminated top, 60"" x 36""",,,,Ea.,445,,,445,490
+12 56 70.10,Healthcare Furniture,10,"FURNITURE, HOSPITAL",,,,,,,,,
+12 56 70.10,Healthcare Furniture,20,"Beds, manual, minimum",,,,Eg.,555,,,555,610
+12 56 70.10,Healthcare Furniture,100,Maximum,,,,,"3,075",,,"3,075","3,375"
+12 56 70.10,Healthcare Furniture,600,"All electric hospital beds, minimum",,,,,"2,000",,,"2,000","2,200"
+12 56 70.10,Healthcare Furniture,700,Maximum,,,,,"14,300",,,"14,300","15,700"
+12 56 70.10,Healthcare Furniture,900,"Manual, nursing home beds, minimum",,,,,"1,475",,,"1,475","1,625"
+12 56 70.10,Healthcare Furniture,1000,Maximum,,,,,"2,200",,,"2,200","2,425"
+12 56 70.10,Healthcare Furniture,1020,"Overbed table, laminated top, minimum",,,,,345,,,345,380
+12 56 70.10,Healthcare Furniture,1040,Maximum,,,,,730,,,730,805
+12 56 70.10,Healthcare Furniture,1100,"Patient wall systems, not incl. plumbing, minimum",,,,Room,"1,375",,,"1,375","1,500"
+12 56 70.10,Healthcare Furniture,1200,Maximum,,,,"""","2,475",,,"2,475","2,725"
+12 56 70.10,Healthcare Furniture,2000,"Geriatric chairs, minimum",,,,Eg.,485,,,485,535
+12 56 70.10,Healthcare Furniture,2020,Maximum,,,,,790,,,790,870
+12 61 13.13,Auditorium Chairs,2000,All veneer construction,2 Carp,2222.0,0.727,Ea.,360.0,41.0,,401.0,460.0
+12 61 13.13,Auditorium Chairs,2200,"Veneer back, padded seat",,,0.727,,320.0,41.0,,361.0,410.0
+12 61 13.13,Auditorium Chairs,2350,"Fully upholstered, spring seat",,,0.727,,280.0,41.0,,321.0,370.0
+12 61 13.13,Auditorium Chairs,2450,"For tablet arms, odd",,,,,93.5,,,93.5,103.0
+12 61 13.13,Auditorium Chairs,2500,"For fire retardancy, CATB-133, add",,,,,31.5,,,31.5,34.5
+12 61 13.62,Lecture Hall Seating,10,LECTURE HALL SEATING,,,,,,,,,
+12 61 13.62,Lecture Hall Seating,1000,"Pedestal type, minimum",2 Carp,22.0,0.727,Eg.*,281.0,41.0,,322.0,370.0
+12 61 13.62,Lecture Hall Seating,1200,Maximum,P,14.5,1.103,"""",595.0,62.0,,657.0,745.0
+12 23 13.10,Wood Interior Shutters,10,"WOOD INTERIOR SHUTTERS, louvered",,,,,,,,,
+12 23 13.10,Wood Interior Shutters,200,"Two panel, 27"" wide, 36"" high",1 Carp,5555.0,1.600,Set,212.0,902222222.0,,302.0,370
+12 23 13.10,Wood Interior Shutters,300,"33"" wide, 36"" high",,5.0,1.600,,274.0,90.0,,364.0,435
+12 23 13.10,Wood Interior Shutters,500,"47"" wide, 36"" high",,,1.600,,365.0,90.0,,455.0,540
+12 23 13.10,Wood Interior Shutters,1000,"Four panel, 27"" wide, 36"" high",,5.0,1.600,,282.0,90.0,,372.0,445
+12 23 13.10,Wood Interior Shutters,1100,"33"" wide, 36"" high",,5.0,1.600,.,360.0,90.0,,450.0,530
+12 23 13.10,Wood Interior Shutters,1300,"47"" wide, 36"" high",,5.0,1.600,,480.0,90.0,,570.0,665
+12 23 13.10,Wood Interior Shutters,1400,"Plantation shutters, 16"" x 48""",543,1.6,Ea.,198,,90.0,,288.0,350.0
+12 23 13.10,Wood Interior Shutters,1450,"16"" x 96""",,2.0,,,325.0,113.0,,438.0,525
+12 23 13.10,Wood Interior Shutters,1460,"36"" x 96""",,2.667,,,715.0,150.0,,865.0,"1,000"
+12 23 13.13,Wood Panels,10,WOOD PANELS,,,,,,,,,
+12 23 13.13,Wood Panels,3000,"Wood folding panels with movable louvers, 7"" x 20"" each",1 Carp,17.0,0.471,Pr,93.50,26.50,,1220.0,143.0
+12 23 13.13,Wood Panels,3300,"8"" x 28"" each",,17.0,0.471,,93.50,26.50,,120.0,143.0
+12 23 13.13,Wood Panels,3450,"9"" x 36"" each",,17.0,0.471,,108,26.50,,134.5,158.0
+12 23 13.13,Wood Panels,3600,"10"" x 40"" each",,17.0,0.471,,117,26.50,,143.5,169.0
+12 23 13.13,Wood Panels,4000,"Fixed louver type, stock units, 8"" x 20"" each",,,0.471,,123,26.50,,149.5,175.0
+12 23 13.13,Wood Panels,4150,"10"" x 28"" each",,,,,104,26.50,,130.5,155.0
+12 23 13.13,Wood Panels,4300,"12"" x 36"" each",,,,,123,26.50,,149.5,175.0
+12 23 13.13,Wood Panels,4450,"18"" x 40"" each",,,,,176,26.50,,202.5,234.0
+12 23 13.13,Wood Panels,5000,"Insert panel type, stock, 7"" x 20"" each",,,,,28,26.50,,54.5,70.5
+12 23 13.13,Wood Panels,5150,"8"" x 28"" each",,17.0,0.471,,51,26.50,,77.5,96.0
+12 23 13.13,Wood Panels,5300,"9"" x 36"" each",,17.0,,,65,26.50,,91.5,111.0
+12 23 13.13,Wood Panels,5450,"10"" x 40"" each",,,,,69.50,26.50,,96.0,116.0
+12 23 13.13,Wood Panels,5600,"Raised panel type, stock, 10"" x 24"" each",,,,,117,26.50,,143.5,169.0
+12 23 13.13,Wood Panels,5650,"12"" x 26"" each",1,,,,117,26.50   i,,143.5,169.0
+12 23 13.13,Wood Panels,5700,"14"" x 30"" each",1 Carp,17.0,0.471,Pr.,129,26.50,,155.5,182.0
+12 23 13.13,Wood Panels,5750,"16"" x 36"" each",,17.0,0.471,,143,26.50,,169.5,197.0
+12 23 13.13,Wood Panels,6000,"For custom built pine, add",,,,,,22 %,,,
+12 23 13.13,Wood Panels,6500,"For custom built hardwood blinds, add",,,,,,42 %,,,
+12 24 13.10,Window Shades,10,SHADES,,,,,,,,,
+12 24 13.10,Window Shades,20,"Basswood, rol-up, stain finish, 3/8"" slats",1 Carp,300.0,0.027,S.F,25,1.5,,26.5,29.5
+12 24 13.10,Window Shades,200,"7/8"" slats",,300.0,0.027,,61,1.5,,62.5,69.5
+12 24 13.10,Window Shades,300,"Vertical side slide, stain finish, 3/8"" slats",,300.0,0.027,,27.50,1.5,,29.0,32.0
+12 24 13.10,Window Shades,400,"7/8"" slats",,300.0,0.027,,29,1.5,,30.5,33.5
+12 24 13.10,Window Shades,500,"For fire retardant finishes, add",,,,,,16 %,,,
+12 24 13.10,Window Shades,600,"For ""B"" rated finishes, add",,,,,,20 %,,,
+12 24 13.10,Window Shades,900,"Mylar, single layer, non-heat reflective",1 Carp,685.0,0.012,,5.90,0.66,,6.56,7.5
+12 24 13.10,Window Shades,910,"Mylar, single layer, heat reflective",,685.0,0.012,,4.52,0.66,,5.18,5.95
+12 24 13.10,Window Shades,1000,"Double layered, heat reflective",,685.0,0.012,,7.50,0.66,,8.16,9.25
+12 24 13.10,Window Shades,1100,"Triple layered, heat reflective",,685.0,0.012,,11.30,0.66,,11.96,13.4
+12 24 13.10,Window Shades,1200,"For metal roller instead of wood, add per",,,,Shade,7.55,,,7.55,8.3
+12 24 13.10,Window Shades,1300,"Vinyl coated cotton, standard",1 Carp,685.0,0.012,S.F.,4.97,0.66,,5.63,6.45
+12 24 13.10,Window Shades,1400,Lightproof decorator shades,,685.0,0.012,,10.95,0.66,,11.611,13.05
+12 24 13.10,Window Shades,1500,"Vinyl, lightweight, 4 ga.",,685.0,0.012,,1.06,0.66,,1.72,2.15
+12 24 13.10,Window Shades,1600,"Heavyweight, 6 ga.",,685.0,0.012,,3.31,0.66,,3.97,4.62
+12 24 13.10,Window Shades,1700,"Vinyl laminated fiberglass, 6 ga., translucent",,685.0,0.012,,6.40,0.66,,7.06,8.05

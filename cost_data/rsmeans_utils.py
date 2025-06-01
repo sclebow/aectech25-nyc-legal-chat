@@ -60,10 +60,12 @@ def find_by_section_code(df, section_code):
     return fuzzy_contains
 
 
-def find_by_description(description, confidence_threshold=0.5):
+def find_by_description(description, confidence_threshold=0.9):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
+    For each relevant chapter, send a separate LLM call for section selection.
     Only loads the relevant chapter CSVs for section selection.
+    Instead of sending Masterformat codes to the LLM, send only the section descriptions (Section Name).
     """
     from llm_calls import run_llm_query  # Import here to avoid circular dependency
     import pandas as pd
@@ -88,52 +90,51 @@ def find_by_description(description, confidence_threshold=0.5):
     selected_chapters = [c.strip() for c in selected_chapters_str.split(",") if c.strip()]
     print(f"Selected chapters: {', '.join(selected_chapters)}")
 
-    # 3. Load only the relevant chapter CSVs
+    # 3. For each relevant chapter, send a separate LLM call for section selection (using only descriptions)
+    import re
+    code_confidence = {}
     dfs = []
     for fname, chapter in chapter_csvs:
-        if chapter in selected_chapters:
+        if str(chapter) in str(selected_chapters):
+            print(f"Processing chapter {chapter} from file {fname}")
             df = pd.read_csv(os.path.join(RSMEANS_CSV_DIR, fname))
             dfs.append(df)
+            unique_sections = df[['Masterformat Section Code', 'Section Name']].drop_duplicates().reset_index(drop=True)
+            # Only send the section descriptions (Section Name) to the LLM
+            section_names = unique_sections['Section Name'].tolist()
+            # LLM call for this chapter's section descriptions
+            system_prompt = (
+                "You are an expert at mapping construction task descriptions to Masterformat section names. "
+                "Given a list of Masterformat section names, you will select all relevant names for a user's description. "
+                "Return your answer as a comma-separated list of section names with a confidence percentage (0-100) for each, in the format: name1:confidence1, name2:confidence2, ... "
+                "Return only the section names and confidence percentages, no other text. "
+            )
+            user_input = (
+                f"Masterformat section names list:\n{chr(10).join(section_names)}\n"
+                f"Description: {description}"
+            )
+            selected_names_str = run_llm_query(system_prompt, user_input)
+            print(f"Selected section names for chapter {chapter}: {selected_names_str}")
+            for part in selected_names_str.split(','):
+                match = re.match(r"(.+?):\s*(\d{1,3})", part.strip())
+                if match:
+                    name = match.group(1).strip()
+                    confidence = int(match.group(2)) / 100.0
+                    # Map section name back to code(s) in this chapter
+                    codes = unique_sections[unique_sections['Section Name'] == name]['Masterformat Section Code'].tolist()
+                    for code in codes:
+                        if code in code_confidence:
+                            code_confidence[code] = max(code_confidence[code], confidence)
+                        else:
+                            code_confidence[code] = confidence
     if not dfs:
         # fallback: load all
         dfs = [pd.read_csv(os.path.join(RSMEANS_CSV_DIR, fname)) for fname, _ in chapter_csvs]
     df = pd.concat(dfs, ignore_index=True)
-
-    # 4. Build section list and proceed as before (NO CHUNKING)
-    unique_sections = df[['Masterformat Section Code', 'Section Name']].drop_duplicates().reset_index(drop=True)
-    section_list = unique_sections.apply(lambda row: f"{row['Masterformat Section Code']}: {row['Section Name']}", axis=1).tolist()
-
-    def llm_section_query(section_list):
-        system_prompt = (
-            "You are an expert at mapping construction task descriptions to Masterformat section codes. "
-            "First, simplify the description to its core elements, "
-            "then select the most relevant Masterformat section codes from the provided list. "
-            "Given a list of Masterformat sections, you will select all relevant codes for a user's description. "
-            "Return your answer as a comma-separated list of section codes with a confidence percentage (0-100) for each, in the format: code1:confidence1, code2:confidence2, ... "
-        )
-        user_input = (
-            f"Masterformat sections list:\n{chr(10).join(section_list)}\n"
-            f"Description: {description}"
-        )
-        return run_llm_query(system_prompt, user_input)
-
-    import re
-    code_confidence = {}
-    selected_codes_str = llm_section_query(section_list)
-    for part in selected_codes_str.split(','):
-        match = re.match(r"([\w .-]+):\s*(\d{1,3})", part.strip())
-        if match:
-            code = match.group(1).strip()
-            confidence = int(match.group(2)) / 100.0
-            if code in code_confidence:
-                code_confidence[code] = max(code_confidence[code], confidence)
-            else:
-                code_confidence[code] = confidence
     # Filter by confidence threshold
     filtered_codes = [code for code, conf in code_confidence.items() if conf >= confidence_threshold]
     match = df[df['Masterformat Section Code'].isin(filtered_codes)]
     if not match.empty:
-        # Print the matched section codes and their confidence levels
         match['Confidence'] = match['Masterformat Section Code'].map(code_confidence)
         match = match[match['Confidence'] >= confidence_threshold]
         match = match.sort_values(by='Confidence', ascending=False)

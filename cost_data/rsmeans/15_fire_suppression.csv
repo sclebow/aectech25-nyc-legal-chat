@@ -1,0 +1,187 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,3700,"Standard spray, pendent or upright, brass, 135°F to 286°F",,,,,,,,,
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,3730,"1/2"" NPT, 7/16"" orifice",1 Spri,16.0,0.5,Ea.,19.05,34.5,,53.55,72.0
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,3740,"1/2"" NPT, K5.6",IT,16.0,0.5,"""",16.45,34.5,,50.95,69.0
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,3920,"For 360°F, same cost",,,,,,,,,
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,3930,For 400°F,1 Spri,16.0,1.5,Ea.,1224.0,34.5,,158.5,187.0
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,3940,For 500°F,"""",16.0,0.5,,124.0,34.5,,158.5,187.0
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,4500,"Sidewall, horizontal, brass, 135°F to 286°F",,,,,,,,,
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,4520,"1/2"" NPT, 1/2"" orifice",1 Spri,16.0,0.5,Ea.,33.5,34.5,,88.0,87.5
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,4540,"For 360°F, same cost",,,,,,,,,
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,4800,"Recessed pendent, brass, 135°F to 286°F",,,,,,,,,
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,4820,"1/2"" NPT, K2.8",11 Spri,10.0,800.0,Ea.,57.0,555.0,,112.0,145.0
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,4830,"1/2"" NPT, 7/16"" orifice",,10.0,0.8,,25.5,,,80.5,110.0
+,0010 WET-PIPE SPRINKLER SYSTEM COMPONENTS,4840,"1/2"" NPT, K5.6",,10.0,0.8,,19.15,,,74.15,103.0
+21 13 16.50,Dry-Pipe Sprinkler System Components,10,DRY-PIPE SPRINKLER SYSTEM COMPONENTS,,,,,,,,,
+21 13 16.50,Dry-Pipe Sprinkler System Components,600,Accelerator,1 Spri,8.0,1.0,Eo.,"1,075",68.5,,"1,143.50","1,275"
+21 13 16.50,Dry-Pipe Sprinkler System Components,2600,"Sprinkler heads, not including supply piping",,,,,,,,,
+21 13 16.50,Dry-Pipe Sprinkler System Components,2640,"Dry, pendent, 1/2"" orifice, 3/4"" or 1"" NPT",,,,,,,,,
+21 13 16.50,Dry-Pipe Sprinkler System Components,2700,"15-1/4"" to 18"" length",1 Spri,4.0,0.571,Ea.,279,39.0,,318,365
+21 13 16.50,Dry-Pipe Sprinkler System Components,2710,"18-1/4"" to 21"" length",,13.615,,,291,42.0,,333,385
+21 13 16.50,Dry-Pipe Sprinkler System Components,2720,"21-1/4"" to 24"" length",,13.615,,,305,42.0,,347,400
+21 13 16.50,Dry-Pipe Sprinkler System Components,2730,"24-1/4"" to 27"" length",,13.0,0.615,B,320,42.0,,362,420
+21 13 19.50,Preaction Sprinkler System Components,10,PREACTION SPRINKLER SYSTEM COMPONENTS,,,,,,,,,
+21 13 19.50,Preaction Sprinkler System Components,3000,Preaction valve cabinet,,,,,,,,,
+21 13 19.50,Preaction Sprinkler System Components,3100,"Single interlock, pneum. release, panel, 1/2 HP comp. regul. air trim",,,,,,,,,
+21 13 19.50,Preaction Sprinkler System Components,3110,"1-1/2""",Q-12,333321.0,5.333,Ea.,"27,900",330.0,,"28,230","31,200"
+21 13 19.50,Preaction Sprinkler System Components,3120,"2""",,,5.3331,,"27,900",330.0,,"28,230","31,200"
+21 13 19.50,Preaction Sprinkler System Components,3130,"2-1/2""",,,5.333,,"27,900",330.0,,"28,230","31,200"
+21 13 19.50,Preaction Sprinkler System Components,3140,"3""",,,5.333,,"27,900",330.0,,"28,230","31,200"
+21 13 19.50,Preaction Sprinkler System Components,3150,"4""",,,88.0,,"29,000",495.0,,"29,495","32,600"
+21 13 19.50,Preaction Sprinkler System Components,3160,"6""",Q-13,4.0,,,"30,400",520.0,,"30,920","34,300"
+21 13 19.50,Preaction Sprinkler System Components,3200,"Double interlock, pneum. release, panel, 1/2 HP comp. regul. air trim",,,,,,,,,
+21 13 19.50,Preaction Sprinkler System Components,3210,"1-1/2""",Q-12,33.0,5.333,Ea.,"28,700",330.0,,"29,030","32,100"
+21 13 19.50,Preaction Sprinkler System Components,3220,"2""",,,5.333,,"28,700",330.0,,"29,030","32,100"
+21 13 19.50,Preaction Sprinkler System Components,3230,"2-1/2""",33,5.333,,,"28,700",330.0,,"29,030","32,100"
+21 13 19.50,Preaction Sprinkler System Components,3240,"3""",3,5.333,,,"28,800",330.0,,"29,130","32,200"
+21 13 19.50,Preaction Sprinkler System Components,3250,"4""",2,,,,"30,200",495.0,,"30,695","33,900"
+21 13 19.50,Preaction Sprinkler System Components,3260,"6""",Q-13,4.0,,,"31,400",520.0,,"31,920","35,400"
+21 13 26.50,Deluge Fire-Suppression Sprinkler System Components,10,DELUGE FIRE-SUPPRESSION SPRINKLER SYSTEM COMPONENTS,,,,,,,,,
+21 13 26.50,Deluge Fire-Suppression Sprinkler System Components,1400,"Deluge system, monitoring panel w/ deluge valve & trim",1 Spri,18.0,0.444,Ea.,"8,350",30.5,,"8,380.50","9,250"
+21 13 26.50,Deluge Fire-Suppression Sprinkler System Components,6200,Valves and components,,,,,,,,,
+21 13 26.50,Deluge Fire-Suppression Sprinkler System Components,7000,"Deluge, assembly, incl. trim, pressure",,,,,,,,,
+21 13 26.50,Deluge Fire-Suppression Sprinkler System Components,7020,"Operated relief, emergency release, gauges",,,,,,,,,
+21 13 26.50,Deluge Fire-Suppression Sprinkler System Components,7040,"2"" size",Q-12,2.0,8.0,Ea.,"5,025",495.0,,"5,520","6,250"
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,200,"Adapters, rough brass, straight hose threads",,,,,,,,,
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,220,"One piece, female to male, rocker lugs",,,,,,,,,
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,240,"1"" x 1""",,,,Ea.,60.50,,,60.50,66.50
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,320,"2"" x 2""",,,,,70,,,70,77
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,380,"2-1/2"" x 2-1/2""",,,,,122,,,122,134
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,2200,"Hose, less couplings",,,,,,,,,
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,2260,"Synthetic jacket, lined, 300 lb. test, 1-1/2"" diameter",Q-12,2600.0,0.006,LF,3.31,344434.0,,3.69,4.21
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,2270,"2"" diameter",,2200.0,0.007,,4.63,0.45,,5.08,5.75
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,2280,"2-1/2"" diameter",,2200.0,0.007,,5.80,0.45,,6.25,7.05
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,2290,"3"" diameter",,2200.0,0.007,,9.10,0.45,,9.55,10.65
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,2360,"High strength, 500 lb. test, 1-1/2"" diameter",,2600.0,0.006,,3.62,0.38,,4,4.55
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,2380,"2-1/2"" diameter",,2200.0,0.007,,6.10,0.45,,6.55,7.35
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5600,"Nozzles, brass",,,,,,,,,
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5620,"Adjustable fog, 3/4"" booster line",,,,Ea.,154,,,154,170
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5630,"1"" booster line",,,,,184,,,184,202
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5640,"1-1/2"" leader line",,,,,120,,,120,132
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5660,"2-1/2"" direct connection",,,,,280,,,280,310
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5680,"2-1/2"" playpipe nozzle",,,,,335,,,335,370
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5780,"For chrome plated, add",,,,,,8%,,,
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5850,"Electrical fire, adjustable fog, no shock",,,,,,,,,
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5900,"1-1/2""",,,,Ea.,194,,,194,213
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5920,"2-1/2""",,,,,"1,500",,,"1,500","1,650"
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,5980,"For polished chrome, add",,,,,,6%,,,
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,6200,"Heavy duty, comb. adj. fog and str.stream, with handle",,,,,,,,,
+21 12 13.50,0010 FIRE HOSES AND NOZZLES,6210,"1"" booster line",,,,Ea.,297,,,297,255
+21 12 19.50,0010 FIRE HOSE RACKS,2600,"Hose rack, swinging, for 1-1/2"" diameter hose",,,,,,,,,
+21 12 19.50,0010 FIRE HOSE RACKS,2620,"Enameled steel, 50' and 75' lengths of hose",0-12,220.0,0.8,Ea.,132.0,49.5,,181.5,219.0
+21 12 19.50,0010 FIRE HOSE RACKS,2640,100' and 125' lengths of hose,,,0.8,"""1",67.5,49.5,,117.0,148.0
+21 12 23.70,0010 FIRE HOSE VALVES,80,"Wheel handle, 300 lb., 1-1/2""",1 Spri,12.0,0.667,Ea.,101,45.5,,146.5,179.0
+21 12 23.70,0010 FIRE HOSE VALVES,90,"2-1/2""",,7.0,1.143,=,194,78.5,,272.5,330.0
+21 12 23.70,0010 FIRE HOSE VALVES,100,"For polished brass, add",,,,,,35%,,,
+21 12 23.70,0010 FIRE HOSE VALVES,110,"For polished chrome, add",,,,,,50%,,,
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7250,"250 lb.cyl, w / 250 lb. agent , w / solenoid",Q 12,5.0,3.2,Ea.,"14,400",197.0,,"14,597","16,200"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7320,"560 lb.cyl, w / 300 lb. agent , no solenoid",,4.0,4.0,,"14,600",247.0,,"14,847","16,400"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7330,"560 lb. cyl, w / 560 lb.agent , no solenoid",,2.5,6.4,,"22,300",395.0,,"22,695","25,100"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7340,"560 lb.cyl, w / 300 lb. agent , w / solenoid",Q 12,4.0,4.0,Ea.,"19,700",247.0,,"19,947","22,000"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7350,"560 lb. cyl, w / 560 lb. agent , w / solenoid","""",2.5,6.4,,"27,700",395.0,,"28,095","31,100"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7420,"1,200 lb. cyl,w /600 lb. agent , no solenoid",Q-13,4.0,8.0,,"27,800",520.0,,"28,320","31,300"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7430,"1,200 lb.cyl ,w / 1,200 lb.agent , no solenoid",,3.0,10.667,,"45,500",695.0,,"46,195","51,000"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7440,"1,200 lb. cyl,w / 600 lb. agent ,w / solenoid",,4.0,8.0,,"64,500",520.0,,"65,020","72,000"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7450,"1,200 lb. cyl,w / 1,200 lb. agent , w /solenoid",,3.0,10.667,,"107,500",695.0,,"108,195","119,000"
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7500,Accessories,,,,,,,,,
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7510,Dispersion nozzle,1Spri,16.0,0.5,Ea.,132,34.5,,166.50,196
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7520,Agent release panel,1 Elec,4.0,2.0,,91,132.0,,223,297
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7530,Maintenance switch,,6.0,1.333,,289,88.5,,377.50,450
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7540,"Solenoid valve, 12v dc",1 Spri,8.0,1.0,,288,68.5,,356.50,415
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7550,12v ac,,18.0,1.0,,670,68.5,,738.50,-835
+21 12 23.70,21 2- Agentlean-Agent Fire-ExtiFireshing Equ-pmExtinguishing,7560,"12v dc, explosion proof",,8.0,1.0,,745,68.5,,813.50,920
+21 12 23.70,"21 31 13 - Electric-Drive, Centrifugal Fire Pumps",3100,"250 GPM, 55 psi, 15 HP, 3550 RPM, 2"" pump",Q -13,0.7,45.714,Ea.,"17,600","2,975",,"20,575","23,900"
+21 12 23.70,"21 31 13 - Electric-Drive, Centrifugal Fire Pumps",3200,"500 GPM, 50 psi, 27 HP, 1770 RPM, 4"" pump",,0.68,47.059,,"21,800","3,075",,"24,875","28,600"
+21 12 23.70,"21 31 13 - Electric-Drive, Centrifugal Fire Pumps",3350,"750 GPM, 50 psi, 44 HP, 1770 RPM, 5"" pump",,0.64,50.0,,"31,900","3,275",,"35,175","40,000"
+21 12 23.70,"21 31 13 - Electric-Drive, Centrifugal Fire Pumps",3400,"750 GPM, 100 psi, 66 HP, 3550 RPM, 4"" pump",,0.58,55.172,,"28,300","3,600",,"31,900","36,500"
+21 12 23.70,"21 31 13 - Electric-Drive, Centrifugal Fire Pumps",5000,"For jockey pump 1"", 3 HP, with control, add",Q -12,2.0,8.0,,"4,150",495,,"4,645","5,275"
+21 12 23.70,"21 31 16 - Diesel-Drive, Centrifugal Fire Pumps",50,"500 GPM, 50 psi, 27 HP, 4"" pump",Q 13,0.64,50.0,Ea.,"70,500","3,275",,"73,775","82,500"
+21 12 23.70,"21 31 16 - Diesel-Drive, Centrifugal Fire Pumps",200,"750 GPM, 50 psi, 44 HP, 5"" pump",,0.6,53.333,,"75,000","3,475",,"78,475","87,500"
+21 12 23.70,"21 31 16 - Diesel-Drive, Centrifugal Fire Pumps",400,"1000 GPM, 100 psi, 89 HP, 4"" pump",,0.56,57.143,,"80,500","3,725",,"84,225","94,000"
+21 12 23.70,"21 31 16 - Diesel-Drive, Centrifugal Fire Pumps",700,"2000 GPM, 100 psi, 167 HP, 6"" pump",,0.34,94.118,,"85,000","6,150",,"91,150","102,500"
+21 12 23.70,"21 31 16 - Diesel-Drive, Centrifugal Fire Pumps",950,"3500 GPM, 100 psi, 300 HP, 10"" pump",,0.24,133.0,,"150,000","8,700",,"158,700","178,000"
+21 12 23.70,21 05 23,21 05 23.50,General -Duty Valves,,,,,,,,,
+21 12 23.70,21 05 23,0010,"GENERAL-DUTY VALVES, for water based firesuppression",,,,,,,,,
+21 12 23.70,21 05 23,6200,Valves and components,,,,,,,,,
+21 12 23.70,21 05 23,6500,"Check, swing, C.I. body, brass fittings, auto. ball drip",,,,,,,,,
+21 12 23.70,21 05 23,6520,"4"" size",Q-12,3.0,5.333,Ea.,475,330.0,,805,"1,000"
+21 12 23.70,21 05 23,6800,"Check, wafer, butterfly type, C.I. body, bronze fittings",,,,,,,,,
+21 12 23.70,21 05 23,6820,"4"" size",Q-12,4.0,4.0,Ea.,"1,975",247.0,,"2,222","2,550"
+21 12 23.70,21 05 23,21 11,Facility Fire-Suppression Water - Service Piping,,,,,,,,,
+21 12 23.70,21 05 23,21 11 16,Facility Fire Hydrants,,,,,,,,,
+21 12 23.70,21 05 23,21 11 16.50,Fire Hydrants for Buildings,,,,,,,,,
+21 12 23.70,21 05 23,0010,FIRE HYDRANTS FOR BUILDINGS,,,,,,,,,
+21 12 23.70,21 05 23,3750,"Hydrants, wall, w/caps, single, flush, polished brass",,,,,,,,,
+21 12 23.70,21 05 23,3800,"2-1/2"" x 2-1/2""",Q-12,5.0,3.2,Ea.,236,197.0,,433,555
+21 12 23.70,21 05 23,3840,"2-1/2"" x 3""",,5.0,3.2,,540,197.0,,737,890
+21 12 23.70,21 05 23,3900,"For polished chrome, add",,,,,,20%,,,
+21 12 23.70,21 05 23,3950,"Double, flush, polished brass",,,,,,,,,
+21 12 23.70,21 05 23,4000,"2-1/2"" x 2-1/2"" x 4""",Q-12,5.0,3.2,Ea.,635,197.0,,832,995
+21 12 23.70,21 05 23,4040,"2-1/2"" x 2-1/2"" x 6""",,4.6,3.478,,915,215.0,,"1,130","1,325"
+21 12 23.70,21 05 23,4200,"For polished chrome, add",,,,,,10%,,,
+21 12 23.70,21 05 23,4350,"Double, projecting, polished brass",,,,,,,,,
+21 12 23.70,21 05 23,4400,"2-1/2"" x 2-1/2"" x 4""",Q-12,5.0,3.2,Ea.,282,197.0,,479,605
+21 12 23.70,21 05 23,4450,"2-1/2"" x 2-1/2"" x 6""",,4.6,3.478,,785,215.0,,"1,000","1,175"
+21 12 23.70,21 05 23,4460,"Valve control, dbl. flush/projecting hydrant, cap &",,,,,,,,,
+21 12 23.70,21 05 23,4470,"chain, extension rod & cplg., escutcheon, polished brass",Q-12,8.0,2.0,Ea.,335,123.0,,458,555
+21 12 23.70,21 05 23,21 11 19,Fire - Department Connections,,,,,,,,,
+21 12 23.70,21 05 23,21 11 19.50,Connections for the Fire - Department,,,,,,,,,
+21 12 23.70,21 05 23,0010,CONNECTIONS FOR THE FIRE -DEPARTMENT,,,,,,,,,
+21 12 23.70,21 05 23,0020,"For fire pro. cabinets, see Section 10 44 13.53",,,,,,,,,
+21 12 23.70,21 05 23,7140,"Standpipe connections, wall, w/plugs & chains",,,,,,,,319,495
+21 12 23.70,21 05 23,7160,"Single, flush, brass, 2-1/2"" x 2-1/2"", Fire Dept Conn.",Q-12,5.0,3.2,Ea.,177,197.0,,374,490
+21 12 23.70,21 05 23,7180,"2-1/2"" x 3""",,5.0,3.2,,182,197.0,,379,495
+21 12 23.70,21 05 23,7240,"For polished chrome, add",,,,,,15%,,,
+21 12 23.70,21 05 23,7280,"Double, flush, polished brass",,,,,,,,,
+21 12 23.70,21 05 23,7300,"2-1/2"" x 2-1/2"" x 4""",Q-12,5.0,3.2,Ea.,575,197.0,,772,925
+21 12 23.70,21 05 23,7330,"2-1/2"" x 2-1/2"" x 6""",,4.6,3.478,,925,215.0,,"1,140","1,350"
+21 12 23.70,21 05 23,7400,"For polished chrome, add",,,,,,15%,,,
+21 12 23.70,21 05 23,7440,"For sillcock combination, add",,,,Ea.,103,,,103,113
+21 12 23.70,21 05 23,7900,"Three way, flush, polished brass",,,,,,,,,
+21 12 23.70,21 05 23,7920,"2-1/2"" (3)x 4""",Q-12,4.8,3.333,Ea.,"1,475",206.0,,"1,681","1,925"
+21 12 23.70,21 05 23,7930,"2-1/2"" (3)x 6""",,4.6,3.478,,"2,450",215.0,,"2,665","3,025"
+21 12 23.70,21 05 23,8000,"For polished chrome, add",,,,,,9%,,,
+21 12 23.70,21 05 23,80201,"Three way, projecting, polished brass",,,,,,,,,
+21 12 23.70,21 05 23,8040,"2-1/2"" (3)x 4""",Q-12,4.8,3.333,Eq.,"1,475",266.0,,"1,681","1,925"
+21 12 23.70,Fire Suppression Systems,21 13 26.50,Deluge Fire-Suppression Sprinkler Sys. Comp.,Q-12,1.5,10.667,Eq.,"5,650",660,,"6,310","7,175"
+21 12 23.70,Fire Suppression Systems,21 13 39.50,Foam-Water System Components,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,0010,FOAM-WATER SYSTEM COMPONENTS,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,2600,"Sprinkler heads, not including supply piping",,,,,,,,,
+21 12 23.70,Fire Suppression Systems,3600,"Foam-water, pendent or upright, 1/2"" NPT",1 Spri,12.0,0.667,Ea.,268,45.50,,313.50,365
+21 12 23.70,Fire Suppression Systems,21 21 16.50,CO2 Fire Extinguishing System,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,0010,CO₂ FIRE EXTINGUISHING SYSTEM,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,0042,"For detectors and control stations, see Section 28 31 23.50",,,,,,,,,
+21 12 23.70,Fire Suppression Systems,0100,"Control panel, single zone with batteries (2 zones det., 1 suppr)",1 Elec,1.0,8.0,Ea.,"1,375",530,,"1,905","2,275"
+21 12 23.70,Fire Suppression Systems,0150,"Multizone (4) with batteries (8 zones det., 4 suppr)","""F",0.5,16.0,,"3,325","1,050",,"4,375","5,250"
+21 12 23.70,Fire Suppression Systems,1000,"Dispersion nozzle, CO2, 3"" x 5""",1 Plum,18.0,0.444,,172,31,,203,237
+21 12 23.70,Fire Suppression Systems,2000,"Extinguisher, CO2 system, high pressure, 75 lb. cylinder",Q-1,6.0,2.667,Ea.,"1,525",168,,"1,693","1,925"
+21 12 23.70,Fire Suppression Systems,2100,100 lb. cylinder,"""",5.0,3.2,,"2,025",201,,"2,226","2,525"
+21 12 23.70,Fire Suppression Systems,3000,Electro / mechanical release,11-1,4.0,4.0,,"1,150",272,,"1,422","1,650"
+21 12 23.70,Fire Suppression Systems,3400,Manual pull station,1 Plum,6.0,1.333,,91,93,,184,239
+21 12 23.70,Fire Suppression Systems,4000,Pneumatic damper release,"""",8.0,1.0,,200,70,,270,325
+21 12 23.70,Fire Suppression Systems,21 22 16.50,Clean-Agent Extinguishing Systems,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,0010,CLEAN-AGENT EXTINGUISHING SYSTEMS,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,0020,FM200 fireextinguishing system,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,1100,"Dispersion nozzle FM200, 1-1/2""",1 Plum,14.0,0.571,Ea.,274,40,,314,360
+21 12 23.70,Fire Suppression Systems,2400,"Extinguisher, FM200 system, filled, with mounting bracket",,,,,,,,,
+21 12 23.70,Fire Suppression Systems,2460,26 lb. container,QT,8.0,2.0,Ea.,"2,275",126,,"2,401","2,675"
+21 12 23.70,Fire Suppression Systems,2480,44 lb. container,,7.0,2.286,,"2,950",144,,"3,094","3,450"
+21 12 23.70,Fire Suppression Systems,2500,63 lb. container,,6.0,2.667,,"4,175",168,,"4,343","4,850"
+21 12 23.70,Fire Suppression Systems,2520,101 lb. container,,5.0,3.2,,"6,025",201,,"6,226","6,925"
+21 12 23.70,Fire Suppression Systems,2540,196 lb. container,,4.0,,,"7,275",251,,"7,526","8,375"
+21 12 23.70,Fire Suppression Systems,6000,"FM200 system, simple nozzle layout, with broad dispersion",,,,C.F.,1.98,,,1.98,2.18
+21 12 23.70,Fire Suppression Systems,6010,"Extinguisher, FM200 system, filled, with mounting bracket",,,,,,,,,
+21 12 23.70,Fire Suppression Systems,6020,Complex nozzle layout and/or including underfloor dispersion,,,,C.F.,3.93,,,3.93,4.32
+21 12 23.70,Fire Suppression Systems,6100,"20,000 C.F. 2 exits, 8' cing",,,,,2.20,,,2.20,2.42
+21 12 23.70,Fire Suppression Systems,6200,"100,000 C.F. 4 exits, 8' cing",,,,,1.99,,,1.99,2.19
+21 12 23.70,Fire Suppression Systems,6300,"250,000 C.F. 6 exits, 8' cing",,,,,1.68,,,1.68,1.85
+21 12 23.70,Fire Suppression Systems,7010,HFC-227ea fire extinguishing system,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,7100,Cylinders with clean agent,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,7110,Does not include pallet jack/fork liftrental fees,,,,,,,,,
+21 12 23.70,Fire Suppression Systems,7120,"70 lb. cyl, w/ 35 lb. agent, no solenoid",Q-12,14.0,1.143,Ea.,"3,300",70.50,,"3,370.50","3,725"
+21 12 23.70,Fire Suppression Systems,7130,"70 lb. cyl w/ 70 lb. agent, no solenoid",,10.0,1.6001,,"4,325",98.50,,"4,423.50","4,900"
+21 12 23.70,Fire Suppression Systems,7140,"70 lb. cyl w/ 35 lb. agent, w/ solenoid",,14.0,1.143,,"4,900",70.50,,"4,970.50","5,500"
+21 12 23.70,Fire Suppression Systems,7150,"70 lb. cyl w/ 70 lb. agent, w/ solenoid",,10.0,1.6,,"5,875",98.50,,"5,973.50","6,600"
+21 12 23.70,Fire Suppression Systems,7220,"250 lb. cyl, w/ 125 lb. agent, no solenoid",,8.0,2.0,,"8,250",123,,"8,373","9,250"
+21 12 23.70,Fire Suppression Systems,7230,"250 lb. cyl, w/ 250 lb. agent, no solenoid",,5.0,3.2,,"8,250",197,,"8,447","9,375"
+21 12 23.70,Fire Suppression Systems,7240,"250 lb. cyl, w/ 125 lb. agent, w/ solenoid",,8.0,2.0,,"10,000",123,,"10,123","11,300"

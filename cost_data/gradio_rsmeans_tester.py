@@ -46,6 +46,12 @@ def ask_cost_question(question):
 
 with gr.Blocks() as demo:
     gr.Markdown("# RSMeans Utility Tester")
+    with gr.Tab("Search by Description"):
+        desc_input = gr.Textbox(label="Description", value="Concrete Footing")
+        desc_btn = gr.Button("Search")
+        gr.Markdown("### Result: ")
+        desc_output = gr.Markdown("_Enter a description and click 'Search' to see results here._", label="Result")
+        desc_btn.click(search_by_description, inputs=desc_input, outputs=desc_output)
     with gr.Tab("Ask Cost Question"):
         question_input = gr.Textbox(label="Cost Question (natural language)", value="What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.")
         question_btn = gr.Button("Ask")
@@ -58,12 +64,6 @@ with gr.Blocks() as demo:
         gr.Markdown("### Result: ")
         code_output = gr.Markdown("_Enter a section code and click 'Search' to see results here._", label="Result")
         code_btn.click(search_by_code, inputs=code_input, outputs=code_output)
-    with gr.Tab("Search by Description"):
-        desc_input = gr.Textbox(label="Description", value="Aggregate")
-        desc_btn = gr.Button("Search")
-        gr.Markdown("### Result: ")
-        desc_output = gr.Markdown("_Enter a description and click 'Search' to see results here._", label="Result")
-        desc_btn.click(search_by_description, inputs=desc_input, outputs=desc_output)
     with gr.Tab("Get Cost Data (Code or Description)"):
         cost_input = gr.Textbox(label="Section Code or Description", value="03 05 13.25")
         cost_btn = gr.Button("Get Cost Data")

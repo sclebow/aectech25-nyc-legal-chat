@@ -1,0 +1,322 @@
+Masterformat Section Code,Section Name,ID,Name,Crew,Daily Output,Labor-Hours,Unit,Material,Labor,Equipment,Total,Total Incl O&P
+,"2 stop, hand powered, up to 75 lb. capacity",10,MANUAL DUMBWAITERS,,,,,,,,,
+,"2 stop, hand powered, up to 75 lb. capacity",20,"2 stop, hand powered, up to 75 lb. capacity",2 Elev,0.75,21.333,Ea.,"3,200","2,000",,"5,200","6,475"
+,"2 stop, hand powered, up to 75 lb. capacity",100,76 lb. capacity and up,,0.5,32.0,,"6,275","3,000",,"9,275","11,300"
+,"2 stop, hand powered, up to 75 lb. capacity",300,"For each additional stop, add",,0.75,21.333,Stop,"1,025","2,000",,"3,025","4,075"
+,Electric Dumbwaiters,10,ELECTRIC DUMBWAITERS,,,,,,,,,
+,Electric Dumbwaiters,20,"2 stop, up to 75 lb. capacity",2 Elev,0.13,123.0,Ea.,"4,225","11,500",,"15,725","21,700"
+,Electric Dumbwaiters,100,76 lb. capacity and up,,0.11,145.0,,"10,600","13,600",,"24,200","31,800"
+,Electric Dumbwaiters,600,"For each additional stop, add",,0.54,29.63,Stop,555,"2,775",,"3,330","4,700"
+,Electric Traction Freight Elevators,10,ELECTRIC TRACTION FREIGHT ELEVATORS AND OPTIONS R142000-10,,,,,,,,,
+,Electric Traction Freight Elevators,425,"Electric freight, base unit, 4000 lb., 200 fpm, 4 stop, std. fin. R142000-20",2 Elev,0.05,320.0,Ea.,"130,000","29,900",,"159,900","187,500"
+,Electric Traction Freight Elevators,450,"For 5000 lb. capacity, add R142000-30",,,,,"7,400",,,"7,400","8,125"
+,Electric Traction Freight Elevators,500,"For 6000 lb. capacity, add R142000-40",,,,,"17,300",,,"17,300","19,100"
+,Electric Traction Freight Elevators,525,"For 7000 lb. capacity, add",,,,,"23,700",,,"23,700","26,100"
+,Electric Traction Freight Elevators,550,"For 8000 lb. capacity, add",,,,,"27,700",,,"27,700","30,500"
+,Electric Traction Freight Elevators,575,"For 10000 lb. capacity, add",,,,,"38,600",,,"38,600","42,500"
+,Electric Traction Freight Elevators,600,"For 12000 lb. capacity, add",,,,,"46,700",,,"46,700","51,500"
+,Electric Traction Freight Elevators,625,"For 16000 lb. capacity, add",,,,,"57,000",,,"57,000","62,500"
+,Electric Traction Freight Elevators,650,"For 20000 lb. capacity, add",,,,,"66,000",,,"66,000","72,500"
+,Electric Traction Freight Elevators,675,"For increased speed, 250 fpm, add",,,,,"17,200",,,"17,200","18,900"
+,Electric Traction Freight Elevators,700,"300 fpm, geared electric, add",,,,,"21,500",,,"21,500","23,700"
+,Electric Traction Freight Elevators,725,"350 fpm, geared electric, add",,,,,"26,300",,,"26,300","28,900"
+,Electric Traction Freight Elevators,750,"400 fpm, geared electric, add",,,,,"30,800",,,"30,800","33,900"
+,Electric Traction Freight Elevators,775,"500 fpm, gearless electric, add",,,,,"42,900",,,"42,900","47,200"
+,Electric Traction Freight Elevators,800,"600 fpm, gearless electric, add",,,,,"47,600",,,"47,600","52,500"
+,Electric Traction Freight Elevators,825,"700 fpm, gearless electric, add",,,,,"56,500",,,"56,500","62,000"
+,Electric Traction Freight Elevators,850,"800 fpm, gearless electric, add",,,,,"62,500",,,"62,500","69,000"
+,Electric Traction Freight Elevators,875,"For class ""B"" loading, add",,,,,"3,500",,,"3,500","3,850"
+,Electric Traction Freight Elevators,900,"For class ""C-1"" loading, add",,,,,"8,600",,,"8,600","9,450"
+,Electric Traction Freight Elevators,925,"For class ""C 2"" loading, add",,,,,"10,100",,,"10,100","11,100"
+,Electric Traction Freight Elevators,950,"For class ""C 3"" loading, add",,,,,"14,100",,,"14,100","15,600"
+,Electric Traction Freight Elevators,975,"For travel over 40 V.L.F., add",12 Elev,7.25,2.207,V.LF.,720,206,,926,"1,100"
+,Electric Traction Freight Elevators,1000,"For number of stops over 4, add",,0.27,59.259,Stop,"5,450","5,550",,"11,000","14,200"
+,Electric Traction Passenger Elevators,10,ELECTRIC TRACTION PASSENGER ELEVATORS AND OPTIONS R142000-10,,,,,,,,,
+,Electric Traction Passenger Elevators,1625,"Electric pass., base unit, 2,000 lb., 200 fpm, 4 stop, std. fin. R142000-20",2 Elev,0.05,320.0,Ea.,"109,500","29,900",,"139,400","165,000"
+,Electric Traction Passenger Elevators,1650,"For 2,500 lb. capacity, add R142000-30",,,,,"4,675",,,"4,675","5,150"
+,Electric Traction Passenger Elevators,1675,"For 3,000 lb. capacity, add R142000-40",,,,,"5,125",,,"5,125","5,650"
+,Electric Traction Passenger Elevators,1700,"For 3,500 lb. capacity, add",,,,,"6,525",,,"6,525","7,175"
+,Electric Traction Passenger Elevators,1725,"For 4,000 lb. capacity, add",,,,,"7,650",,,"7,650","8,425"
+,Electric Traction Passenger Elevators,1750,"For 4,500 lb. capacity, add",,,,,"10,600",,,"10,600","11,600"
+,Vehicle Lifts,14,45 10 - Hydraulic Vehicle Lifts,,,,,,,,,
+,Vehicle Lifts,14,45 10.10 Hydraulic Lifts,,,,,,,,,
+,Vehicle Lifts,2870,Electric/hydraulic jacking beam,,,,Eg .,"5,250",,,"5,250","5,775"
+,Vehicle Lifts,2880,"Scissor lift, portable, 6,000 lb. capacity",,,,,"2,000",,,"2,000","2,200"
+,Facility Chutes,14,91 Facility Chutes,,,,,,,,,
+,Facility Chutes,14,91 33 - Laundry and Linen Chutes,,,,,,,,,
+,Facility Chutes,14,91 33.10 Chutes,,,,,,,,,
+,Facility Chutes,11,"CHUTES, linen, trash or refuse",,,,,,,,,
+,Facility Chutes,50,"Aluminized steel, 16 ga., 18"" diameter",2 Shee,3.5,4.571,Floor,"1,925",310.0,,"2,235","2,600"
+,Facility Chutes,100,"24"" diameter",,3.2,5.0,,"2,150",340.0,,"2,490","2,850"
+,Facility Chutes,200,"30"" diameter",,3.0,5.333,,"2,475",360.0,,"2,835","3,275"
+,Facility Chutes,300,"36"" diameter",,2.8,5.714,,"2,825",385.0,,"3,210","3,700"
+,Facility Chutes,400,"Galvanized steel, 16 ga., 18"" diameter",,3.5,4.571,,"1,150",310.0,,"1,460","1,750"
+,Facility Chutes,500,"24"" diameter",,3.205,,,"1,300",340.0,,"1,640","1,925"
+,Facility Chutes,600,"30"" diameter",,3.0,5.333,,"1,450",360.0,,"1,810","2,150"
+,Facility Chutes,700,"36"" diameter",,2.8,5.714,,"1,725",385.0,,"2,110","2,475"
+,Facility Chutes,800,"Stainless steel, 18"" diameter",2 Shee,3.5,4.571,Floor,"3,725",310.0,,"4,035","4,575"
+,Facility Chutes,900,"24"" diameter",,3.2,5.0,,"3,250",340.0,,"3,590","4,075"
+,Facility Chutes,1000,"30"" diameter",,3.0,5.333,,"4,250",360.0,,"4,610","5,225"
+,Facility Chutes,1005,"36"" diameter",,2.8,5.714,,"4,500",385.0,,"4,885","5,500"
+,Facility Chutes,1200,"Linen chute bottom collector, aluminized steel",,44.0,,Ea .,"1,625",270.0,,"1,895","2,200"
+,Facility Chutes,1300,Stainless steel,,44.0,,,"2,075",270.0,,"2,345","2,700"
+,Facility Chutes,1500,"Refuse, bottom hopper, aluminized steel, 18"" diameter",,3.0,5.333,,"1,150",360.0,,"1,510","1,825"
+,Facility Chutes,1600,"24"" diameter",,3.0,5.333,,"1,325",360.0,,"1,685","2,025"
+,Facility Chutes,1800,"36"" diameter",,3.0,5.333,,"2,525",360.0,,"2,885","3,325"
+,Trash Chutes,14,91 82 - Trash Chutes,,,,,,,,,
+,Trash Chutes,14,91 82.10 Trash Chutes and Accessories,,,,,,,,,
+,Trash Chutes,10,TRASH CHUTES AND ACCESSORIES,,,,,,,,,
+,Trash Chutes,2900,"Package chutes, spiral type, minimum",2 Shee,4.5,3.556,Floor,"2,750",240.0,,"2,990","3,375"
+,Trash Chutes,3000,Maximum,"""T""",1.5,10.667,"""","7,200",720.0,,"7,920","9,000"
+,Pneumatic Tube Systems,14,92 Pneumatic Tube Systems,,,,,,,,,
+,Pneumatic Tube Systems,14,"92 10 - Conventional, Automatic and Computer Controlled Pneumatic Tube Systems",,,,,,,,,
+,Pneumatic Tube Systems,14,92 10.10 Pneumatic Tube Systems,,,,,,,,,
+,Pneumatic Tube Systems,10,PNEUMATIC TUBE SYSTEMS,,,,,,,,,
+,Pneumatic Tube Systems,20,"100' long, single tube, 2 stations, stock",,,,,,,,,
+,Pneumatic Tube Systems,100,"3"" diameter",2 Stpi,122.0,133.0,Total,"5,625","9,375",,"15,000","20,200"
+,Pneumatic Tube Systems,300,"4"" diameter",P,0.09,178.0,,"6,675","12,500",,"19,175","26,000"
+,Pneumatic Tube Systems,400,"Twin tube, two stations or more, conventional system",,,,,,,,,
+,Pneumatic Tube Systems,600,"2-1/2"" round",2 Stpi,62.5,0.256,LE,37,18,,55,67.50
+,Pneumatic Tube Systems,700,"3"" round",,46.0,0.348,,56.50,24.50,,81,98.50
+,Pneumatic Tube Systems,900,"4"" round",,49.6,0.323,,67,22.50,,89.50,108
+,Pneumatic Tube Systems,1000,"4"" x 7"" oval",,37.6,0.426,,84.50,30,,114.50,138
+,Pneumatic Tube Systems,1050,Add for blower,,2.0,8.0,System,"6,025",565,,"6,590","7,475"
+,Pneumatic Tube Systems,1110,"Plus for each round station, add",,7.5,2.133,Ea .,"1,850",150,,"2,000","2,250"
+,Pneumatic Tube Systems,1150,"Plus for each oval station, add",,7.5,2.133,H,"1,850",150,,"2,000","2,250"
+,Pneumatic Tube Systems,1200,"Alternate pricing method: base cost, economy model",,0.75,21.333,Total,"5,625","1,500",,"7,125","8,450"
+,Pneumatic Tube Systems,1300,Custom model,,0.25,64.0,,"12,600","4,500",,"17,100","20,600"
+,Pneumatic Tube Systems,1500,"Plus total system length, add, for economy model",,93.4,0.171,LF .,8.15,12.05,,20.20,27
+,Pneumatic Tube Systems,1600,For custom model,,37.6,0.426,,17.90,30,,47.90,64
+,14 31 10 Glass and Steel Escalators,14,31 10,Glass and Steel Escalators,,,,,,,,
+,14 31 10 Glass and Steel Escalators,14,31 10.10,Escalators,M-1,0.04,800.0,"152,000","71,000","8,550","231,550","282,500"
+,14 31 10 Glass and Steel Escalators,2500,"48"" wide x 25' floor to floor height",,,,,,,,,
+,14 32 Moving Walks,14,32,Moving Walks,,,,,,,,
+,14 32 Moving Walks,14,32 10,Moving Walkways,,,,,,,,
+,14 32 Moving Walks,14,32 10.10,Moving Walks,,,,,,,,
+,14 32 Moving Walks,10,MOVING WALKS,R143210-20,,,,,,,,
+,14 32 Moving Walks,20,"Walk, 27"" tread width, minimum",M-1,6.5,4.923,LE,"1,050",440.0,52.5,"1,542.50","1,875"
+,14 32 Moving Walks,100,"300' to 500', maximum",,4.43,7.223,,"1,425",640.0,77.5,"2,142.50","2,600"
+,14 32 Moving Walks,300,"48"" tread width walk, minimum",,4.43,7.223,,"2,425",640.0,77.5,"3,142.50","3,700"
+,14 32 Moving Walks,400,"100' to 350', maximum",,3.82,8.377,,"2,750",745.0,89.5,"3,584.50","4,225"
+,14 32 Moving Walks,600,"Ramp, 12° incline, 36"" tread width, minimum",,5.27,6.072,,"1,925",540.0,65.0,"2,530","3,000"
+,14 32 Moving Walks,700,70' to 90' maximum,,3.82,8.377,,"2,750",745.0,89.5,"3,584.50","4,225"
+,14 32 Moving Walks,900,"48"" tread width, minimum",,3.57,8.964,,"2,850",795.0,96.0,"3,741","4,425"
+,14 32 Moving Walks,1000,"40' to 70', maximum",,2.91,10.997,,"3,550",975.0,118.0,"4,643","5,475"
+,14 42 Wheelchair Lifts,14,42,Wheelchair Lifts,,,,,,,,
+,14 42 Wheelchair Lifts,14,42 13,Inclined Wheelchair Lifts,,,,,,,,
+,14 42 Wheelchair Lifts,14,42 13.10,Inclined Wheelchair Lifts and Stairclimbers,,,,,,,,
+,14 42 Wheelchair Lifts,10,INCLINED WHEELCHAIR LIFTS AND STAIRCLIMBERS,,,,,,,,,
+,14 42 Wheelchair Lifts,7700,"Stair climber (chair lif), single seat, minimum",2 Elev,1212.0,1618.0,فف .,"4,125","1,500",,"5,625","6,750"
+,14 42 Wheelchair Lifts,7800,Maximum,2 Elev,0.2,80.0,Eo .,"7,125","7,475",,"14,600","19,000"
+,14 42 Wheelchair Lifts,8700,"Stair lif, minimum",,,16.0,,"13,800","1,500",,"15,300","17,300"
+,14 42 Wheelchair Lifts,8900,Maximum,,0.2,80.0,,"19,900","7,475",,"27,375","33,000"
+,14 42 Wheelchair Lifts,14,42 16,Vertical Wheelchair Lifts,,,,,,,,
+,14 42 Wheelchair Lifts,14,42 16.10,Wheelchair Lifts,,,,,,,,
+,14 42 Wheelchair Lifts,10,WHEELCHAIR LIFTS,,,,,,,,,
+,14 42 Wheelchair Lifts,8000,"Wheelchair lif, minimum",2 Elev,150.0,16.0,Ea .,"6,500","1,500",,"8,000","9,375"
+,14 42 Wheelchair Lifts,8500,Maximum,"""",0.5,32.0,€,"15,700","3,000",,"18,700","21,700"
+,14 45 Vehicle Lifts,14,45,Vehicle Lifts,,,,,,,,
+,14 45 Vehicle Lifts,14,45 10,Hydraulic Vehicle Lifts,,,,,,,,
+,14 45 Vehicle Lifts,14,45 10.10,Hydraulic Lifts,,,,,,,,
+,14 45 Vehicle Lifts,10,HYDRAULIC LIFTS,,,,,,,,,
+,14 45 Vehicle Lifts,2200,"Single post, 8,000 lb. capacity",L-4,0.4,60.0,Ea .,"5,575","3,225",,"8,800","11,000"
+,14 45 Vehicle Lifts,2810,"Double post, 6,000 lb. capacity",,2.67,8.989,,"2,775",485,,"3,260","3,775"
+,14 45 Vehicle Lifts,2815,"9,000 lb. capacity",,2.29,10.48,,"3,650",565,,"4,215","4,875"
+,14 45 Vehicle Lifts,2820,"15,000 lb. capacity",,2.0,12.0,,"7,625",645,,"8,270","9,350"
+,14 45 Vehicle Lifts,2822,"Four post, 26,000 lb. capacity",,1.8,13.333,,"15,900",715,,"16,615","18,600"
+,14 45 Vehicle Lifts,2825,"30,000 lb. capacity",,1.6,15.0,,"72,000",805,,"72,805","80,500"
+,14 45 Vehicle Lifts,2830,"Ramp style, 4 post, 25,000 lb. capacity",,2.0,1222.0,,"14,200",645,,"14,845","16,600"
+,14 45 Vehicle Lifts,2835,"35,000 lb. capacity",,,24.0,,"22,700","1,300",,"24,000","26,900"
+,14 45 Vehicle Lifts,2840,"50,000 lb. capacity",,,24.0,,"112,500","1,300",,"113,800","125,500"
+,14 45 Vehicle Lifts,2845,"75,000 lb. capacity",,,24.0,,"110,000","1,300",,"111,300","123,000"
+,14 45 Vehicle Lifts,2850,"For drive thru tracks, add, minimum",,,,,"1,275",,,"1,275","1,400"
+,14 45 Vehicle Lifts,2855,Maximum,,,,,"2,200",,,"2,200","2,400"
+,14 45 Vehicle Lifts,2860,"Ramp extensions, 3' (set of 2)",,,,,520,,,520,570
+,14 45 Vehicle Lifts,2865,Rolling jack platform,,,,,"1,825",,,"1,825","2,000"
+,Daily Elevators 2022 Bare Costs,1775,"For 5000 lb. capacity, add",,,,Eo.,"13,600",,,"13,600","14,900"
+,Daily Elevators 2022 Bare Costs,1800,"For increased speed, 250 fpm, geared electric, add",,,,,"4,125",,,"4,125","4,550"
+,Daily Elevators 2022 Bare Costs,1825,"300 fpm, geared electric, add",,,,,"7,975",,,"7,975","8,750"
+,Daily Elevators 2022 Bare Costs,1850,"350 fpm, geared electric, add",,,,,"10,200",,,"10,200","11,300"
+,Daily Elevators 2022 Bare Costs,1875,"400 fpm, geared electric, add",,,,,"14,900",,,"14,900","16,400"
+,Daily Elevators 2022 Bare Costs,1900,"500 fpm, gearless electric, add",,,,,"36,000",,,"36,000","39,600"
+,Daily Elevators 2022 Bare Costs,1925,"600 fpm, gearless electric, add",,,,,"58,500",,,"58,500","64,000"
+,Daily Elevators 2022 Bare Costs,1950,"700 fpm, gearless electric, add",,,,,"65,500",,,"65,500","72,000"
+,Daily Elevators 2022 Bare Costs,1975,"800 fpm, gearless electric, add",,,,,"73,000",,,"73,000","80,000"
+,Daily Elevators 2022 Bare Costs,2000,"For travel over 40 V.L.F., add",2 Elev,7.25,2.207,V.L.F,775,206,,981,"1,150"
+,Daily Elevators 2022 Bare Costs,2025,"For number of stops over 4, add",,0.27,59.259,Stop,"3,475","5,550",,"9,025","12,000"
+,Daily Elevators 2022 Bare Costs,2400,"Electric hospital, base unit, 4,000 lb., 200 fpm, 4 stop, std fin.",,0.05,320.0,Ea.,"101,500","29,900",,"131,400","156,000"
+,Daily Elevators 2022 Bare Costs,2425,"For 4,500 lb. capacity, add",,,,,"6,500",,,"6,500","7,150"
+,Daily Elevators 2022 Bare Costs,2450,"For 5,000 lb. capacity, add",,,,,"8,500",,,"8,500","9,350"
+,Daily Elevators 2022 Bare Costs,2475,"For increased speed, 250 fpm, geared electric, add",,,,,"4,600",,,"4,600","5,050"
+,Daily Elevators 2022 Bare Costs,2500,"300 fpm, geared electric, add",,,,,"8,800",,,"8,800","9,700"
+,Daily Elevators 2022 Bare Costs,2525,"350 fpm, geared electric, add",,,,,"10,600",,,"10,600","11,700"
+,Daily Elevators 2022 Bare Costs,2550,"400 fpm, geared electric, add",,,,,"15,400",,,"15,400","16,900"
+,Daily Elevators 2022 Bare Costs,2575,"500 fpm, gearless electric, add",,,,,"42,300",,,"42,300","46,500"
+,Daily Elevators 2022 Bare Costs,2600,"600 fpm, gearless electric, add",,,,,"63,500",,,"63,500","70,000"
+,Daily Elevators 2022 Bare Costs,2625,"700 fpm, gearless electric, add",,,,,"70,500",,,"70,500","77,500"
+,Daily Elevators 2022 Bare Costs,2650,"800 fpm, gearless electric, add",,,,,"79,500",,,"79,500","87,000"
+,Daily Elevators 2022 Bare Costs,2675,"For travel over 40 V.L.F., add",2 Elev,7.25,2.207,.V.L.F,205,206,,4111,530
+,Daily Elevators 2022 Bare Costs,2700,"For number of stops over 4, add",11,0.27,59.259,Stop,"5,175","5,550",,"10,725","13,900"
+,14 21 33 - Electric Traction Residential Elevators,10,RESIDENTIAL ELEVATORS,,,,,,,,,
+,14 21 33 - Electric Traction Residential Elevators,7000,"Residential, cab type, 1 floor, 2 stop, economy model",2 Elev,0.2,80.0,Ea.,"12,800","7,475",,"20,275","25,200"
+,14 21 33 - Electric Traction Residential Elevators,7100,Custom model,,0.1,160.0,"""","17,000","15,000",,"32,000","40,900"
+,14 21 33 - Electric Traction Residential Elevators,7200,"2 floor, 3 stop, economy model",2 Elev,0.12,133.0,Ea.,"13,700","12,500",,"26,200","33,600"
+,14 21 33 - Electric Traction Residential Elevators,7300,Custom model,"""",0.06,267.0,"""","23,500","24,900",,"48,400","62,500"
+,14 24 13 - Hydraulic Freight Elevators,10,HYDRAULIC FREIGHT ELEVATORS AND OPTIONS R142000-10 60,,,,,,,,,
+,14 24 13 - Hydraulic Freight Elevators,1025,"Hydraulic freight, base unit, 2,000 lb, 50 fpm, 2 stop, std.fin. R142000-20",2 Elev,0.1,160.0,Ea.,"96,000","15,000",,"111,000","128,000"
+,14 24 13 - Hydraulic Freight Elevators,1050,"For 2,500 lb. capacity, add R142000-30",,,,,"4,550",,,"4,550","5,000"
+,14 24 13 - Hydraulic Freight Elevators,1075,"For 3,000 lb. capacity, add R142000-40",,,,,"6,000",,,"6,000","6,600"
+,14 24 13 - Hydraulic Freight Elevators,1100,"For 3,500 lb. capacity, add",,,,,"9,825",,,"9,825","10,800"
+,14 24 13 - Hydraulic Freight Elevators,1125,"For 4,000 lb. capacity, add",,,,,"11,300",,,"11,300","12,400"
+,14 24 13 - Hydraulic Freight Elevators,1150,"For 4,500 lb. capacity, add",,,,,"13,000",,,"13,000","14,300"
+,14 24 13 - Hydraulic Freight Elevators,1175,"For 5,000 lb. capacity, add",,,,,"17,700",,,"17,700","19,500"
+,14 24 13 - Hydraulic Freight Elevators,1200,"For 6,000 lb. capacity, add",,,,,"20,000",,,"20,000","22,000"
+,14 24 13 - Hydraulic Freight Elevators,1225,"For 7,000 lb. capacity, add",,,,,"30,800",,,"30,800","33,900"
+,14 24 13 - Hydraulic Freight Elevators,1250,"For 8,000 lb. capacity, add",,,,,"37,300",,,"37,300","41,000"
+,14 24 13 - Hydraulic Freight Elevators,1275,"For 10,000 lb. capacity, add",,,,,"39,400",,,"39,400","43,400"
+,14 24 13 - Hydraulic Freight Elevators,1300,"For 12,000 lb. capacity, add",,,,,"48,000",,,"48,000","53,000"
+,14 24 13 - Hydraulic Freight Elevators,1325,"For 16,000 lb. capacity, add",,,,,"64,500",,,"64,500","71,000"
+,14 24 13 - Hydraulic Freight Elevators,1350,"For 20,000 lb. capacity, add",,,,,"71,500",,,"71,500","78,500"
+,10 Hydraulic Freight Elevators and Options,14,24,13,-,Hydraulic,Freight,,Elevators,,,
+,10 Hydraulic Freight Elevators and Options,14,24,13.10,Hydraulic,Freight,Elevators and Options,,,,,
+,10 Hydraulic Freight Elevators and Options,1375,"For increased speed, 100 fpm, add",,,,Eo.,"1,300",,,"1,300","1,425"
+,10 Hydraulic Freight Elevators and Options,1400,"125 fpm, odd",,,,,"3,400",,,"3,400","3,750"
+,10 Hydraulic Freight Elevators and Options,1425,"150 fpm, add",,,,,"5,350",,,"5,350","5,900"
+,10 Hydraulic Freight Elevators and Options,1450,"175 fpm, add",,,,,"7,675",,,"7,675","8,425"
+,10 Hydraulic Freight Elevators and Options,14751,"For class ""B"" loading, add",,,,,"3,050",,,"3,050","3,350"
+,10 Hydraulic Freight Elevators and Options,1500,"For class ""C-1"" loading, add",,,,,"7,675",,,"7,675","8,450"
+,10 Hydraulic Freight Elevators and Options,1525,"For class ""C-2"" loading, add",,,,,"9,225",,,"9,225","10,200"
+,10 Hydraulic Freight Elevators and Options,1550,"For class ""C-3"" loading, add",,,,,"12,700",,,"12,700","13,900"
+,10 Hydraulic Freight Elevators and Options,1575,"For travel over 20 V.L.F., add",2 Elev,7.25,2.207,V.L.F,965,206,,"1,171","1,350"
+,10 Hydraulic Freight Elevators and Options,1600,"For number of stops over 2, add",,.27,59.259,Stop,"2,575","5,550",,"8,125","11,100"
+,Hydraulic Passenger Elevators,14,24 23 - Hydraulic Passenger Elevators,,,,,,,,,
+,Hydraulic Passenger Elevators,14,24 23.10 - Hydraulic Passenger Elevators and Options,,,,,,,,,
+,Hydraulic Passenger Elevators,10,HYDRAULIC PASSENGER ELEVATORS AND OPTIONS,,,,R142000-10,,,,,
+,Hydraulic Passenger Elevators,2050,"Hyd. pass., base unit, 1,500 lb., 100 fpm, 2 stop, std. fin.",2 Elev,0.1,160.0,Ea.,"46,900","15,000",,"61,900","73,500"
+,Hydraulic Passenger Elevators,2075,"For 2,000 lb. capacity, add",,,,,890,,,890,980
+,Hydraulic Passenger Elevators,2100,"For 2,500 lb. capacity, add",,,,,"3,325",,,"3,325","3,675"
+,Hydraulic Passenger Elevators,2125,"For 3,000 lb. capacity, add",,,,,"4,800",,,"4,800","5,275"
+,Hydraulic Passenger Elevators,2150,"For 3,500 lb. capacity, add",,,,,"8,000",,,"8,000","8,800"
+,Hydraulic Passenger Elevators,2175,"For 4,000 lb. capacity, add",,,,Ea.,"9,625",,,"9,625","10,600"
+,Hydraulic Passenger Elevators,2200,"For 4,500 lb. capacity, add",,,,,"12,700",,,"12,700","14,000"
+,Hydraulic Passenger Elevators,2225,"For 5,000 lb. capacity, add",,,,,"17,900",,,"17,900","19,700"
+,Hydraulic Passenger Elevators,2250,"For increased speed, 125 fpm, add",,,,,"1,300",,,"1,300","1,425"
+,Hydraulic Passenger Elevators,2275,"150 fpm, add",,,,,"2,875",,,"2,875","3,175"
+,Hydraulic Passenger Elevators,2300,"175 fpm, add",,,,,"5,600",,,"5,600","6,175"
+,Hydraulic Passenger Elevators,2325,"200 fpm, add",,,,,"10,800",,,"10,800","11,900"
+,Hydraulic Passenger Elevators,2350,"For travel over 12 V.L.F., add",12 Elev,7.25,2.207,V.L.F,765,206,,971,"1,150"
+,Hydraulic Passenger Elevators,2375,"For number of stops over 2, add",,0.27,59.259,Stop,"1,175","5,550",,"6,725","9,475"
+,Hydraulic Passenger Elevators,2725,"Hydraulic hospital, base unit, 4,000 lb., 100 fpm, 2 stop, std. fin.",,0.1,160.0,Ea.,"77,000","15,000",,"92,000","107,000"
+,Hydraulic Passenger Elevators,2775,"For 4,500 lb. capacity, add",,,,,"8,125",,,"8,125","8,950"
+,Hydraulic Passenger Elevators,2800,"For 5,000 lb. capacity, add",,,,,"11,800",,,"11,800","13,000"
+,Hydraulic Passenger Elevators,2825,"For increased speed, 125 fpm, add",,,,,"2,425",,,"2,425","2,675"
+,Hydraulic Passenger Elevators,2850,"150 fpm, add",,,,,"4,050",,,"4,050","4,450"
+,Hydraulic Passenger Elevators,2875,"175 fpm, add",,,,,"6,825",,,"6,825","7,500"
+,Hydraulic Passenger Elevators,2900,"200 fpm, add",,,,,"10,000",,,"10,000","11,000"
+,Hydraulic Passenger Elevators,2925,"For travel over 12 V.L.F., add",12 Elev,7.25,2.207,V.L.F.,445,206,,651,795
+,Hydraulic Passenger Elevators,2950,"For number of stops over 2, add",,0.27,59.259,Stop,"5,375","5,550",,"10,925","14,100"
+,Custom Elevator Cab Finishes,14,27,13.0,Custom,Elevator,Cab Finishes,,,,,
+,Custom Elevator Cab Finishes,14,27,13.1,Cab Finishes,,,,,,,
+,Custom Elevator Cab Finishes,10,CAB FINISHES,,,,,,,,,
+,Custom Elevator Cab Finishes,3325,"Passenger elevator cab finishes (based on 3,500 lb. cab size)",,,,,,,,,
+,Custom Elevator Cab Finishes,3350,Acrylic panel ceiling,,,,Ea.,825,,,825,910
+,Custom Elevator Cab Finishes,3375,Aluminum eggcrate ceiling,,,,,745,,,745,820
+,Custom Elevator Cab Finishes,3400,Stainless steel doors,,,,,"4,300",,,"4,300","4,725"
+,Custom Elevator Cab Finishes,3425,Carpet flooring,,,,,660,,,660,725
+,Custom Elevator Cab Finishes,3450,Epoxy flooring,,,,,495,,,495,545
+,Custom Elevator Cab Finishes,3475,Quarry tile flooring,,,,,960,,,960,"1,050"
+,Custom Elevator Cab Finishes,3500,Slate flooring,,,,,"1,725",,,"1,725","1,900"
+,Custom Elevator Cab Finishes,3525,Textured rubber flooring,,,,,695,,,695,765
+14 27 13.10,Cab Finishes,3550,Stainless steel walls,,,,Ea.,"4,325",,,"4,325","4,750"
+14 27 13.10,Cab Finishes,3575,Stainless steel returns at door,,,,,"1,250",,,"1,250","1,375"
+14 27 13.10,Cab Finishes,4450,"Hospital elevator cab finishes (based on 3,500 lb. cab size)",,,,,,,,,
+14 27 13.10,Cab Finishes,4475,Aluminum eggcrate ceiling,,,,Eq.,755,,,755,830
+14 27 13.10,Cab Finishes,4500,Stainless steel doors,,,,,"4,300",,,"4,300","4,725"
+14 27 13.10,Cab Finishes,4525,Epoxy flooring,,,,,495,,,495,545
+14 27 13.10,Cab Finishes,4550,Quarry tileflooring,,,,,960,,,960,"1,050"
+14 27 13.10,Cab Finishes,4575,Textured rubber flooring,,,,Ea.,690,,,690,755
+14 27 13.10,Cab Finishes,4600,Stainless steel walls,,,,,"4,900",,,"4,900","5,375"
+14 27 13.10,Cab Finishes,4625,Stainless steel returns at door,,,,,965,,,965,"1,075"
+14 28 10.10,Elevator Controls and Doors,10,ELEVATOR CONTROLS AND DOORS,,,,,,,,,
+14 28 10.10,Elevator Controls and Doors,2975,Passenger elevator options,,,,,,,,,
+14 28 10.10,Elevator Controls and Doors,3000,2 car group automatic controls,2 Elev,0.66,24.242,Ea.,"3,750","2,275",,"6,025","7,475"
+14 28 10.10,Elevator Controls and Doors,3025,3 car group automatic controls,,0.44,36.364,,"5,750","3,400",,"9,150","11,400"
+14 28 10.10,Elevator Controls and Doors,3050,4 car group automatic controls,,0.33,48.485,,"10,000","4,525",,"14,525","17,700"
+14 28 10.10,Elevator Controls and Doors,3075,5 car group automatic controls,,0.26,61.538,,"15,100","5,750",,"20,850","25,100"
+14 28 10.10,Elevator Controls and Doors,3100,6 car group automatic controls,,22.0,72.727,,"23,000","6,800",,"29,800","35,400"
+14 28 10.10,Elevator Controls and Doors,3125,Intercom service,,3.0,5.333,,605,500,,"1,105","1,400"
+14 28 10.10,Elevator Controls and Doors,3150,Duplex car selective collective,,62222624.242,,,"4,350","2,275",,"6,625","8,150"
+14 28 10.10,Elevator Controls and Doors,3175,Center opening 1 speed doors,,,8.0,,"2,175",750,,"2,925","3,475"
+14 28 10.10,Elevator Controls and Doors,3200,Center opening 2 speed doors,,,8.0,,"3,050",750,,"3,800","4,450"
+14 28 10.10,Elevator Controls and Doors,3225,Rear opening doors (opposite front),,,8.0,,"4,650",750,,"5,400","6,200"
+14 28 10.10,Elevator Controls and Doors,3250,Side opening 2 speed doors,2,8.0,,,"7,975",750,,"8,725","9,875"
+14 28 10.10,Elevator Controls and Doors,3275,Automatic emergency power switching,,0.66,24.242,,"1,325","2,275",,"3,600","4,800"
+14 28 10.10,Elevator Controls and Doors,3300,Manual emergency power switching,,2.0,,,560,187,,747,890
+14 28 10.10,Elevator Controls and Doors,3625,"Hall finishes, stainless steel doors",,,,,"1,550",,,"1,550","1,700"
+14 28 10.10,Elevator Controls and Doors,3650,Stainless steel frames,,,,,"1,600",,,"1,600","1,775"
+14 28 10.10,Elevator Controls and Doors,3675,12 month maintenance contract,,,,,,,,"4,425","4,425"
+14 28 10.10,Elevator Controls and Doors,3700,"Signal devices, hall lanterns",2 Elev,8.0,2.0,,565,187,,752,895
+14 28 10.10,Elevator Controls and Doors,3725,"Position indicators, up to 3",,9.4,1.702,,365,159,,524,635
+14 28 10.10,Elevator Controls and Doors,3750,"Position indicators, per each over 3",,32.0,0.5,,98.50,47,,145.50,178
+14 28 10.10,Elevator Controls and Doors,3775,High speed heavy duty door opener,,,,,"2,875",,,"2,875","3,175"
+14 28 10.10,Elevator Controls and Doors,3800,"Variable voltage, O.H. gearless machine, min.",2 Elev,0.16,100.0,,"36,000","9,350",,"45,350","53,500"
+14 28 10.10,Elevator Controls and Doors,3815,Maximum,,0.07,229.0,,"80,500","21,400",,"101,900","120,000"
+14 28 10.10,Elevator Controls and Doors,3825,Basement installed geared machine,,0.33,48.485,,"16,300","4,525",,"20,825","24,700"
+14 28 10.10,Freight Elevator Options,3850,Freight elevator options,,,,,,,,,
+14 28 10.10,Freight Elevator Options,3875,"Doors, bi-parting",2 Elev,0.66,24.242,Ea.,"6,875","2,275",,"9,150","10,900"
+14 28 10.10,Freight Elevator Options,3900,Power operated door and gate,,0.66,24.242,,"27,600","2,275",,"29,875","33,800"
+14 28 10.10,Freight Elevator Options,3925,"Finishes, steel plate floor",,,,,"1,250",,,"1,250","1,375"
+14 28 10.10,Freight Elevator Options,3950,"14 go. 1/4"" x 4' steel plate walls",,,,,"2,275",,,"2,275","2,500"
+14 28 10.10,Freight Elevator Options,3975,12 month maintenance contract,,,,,,,,"3,400","3,400"
+14 28 10.10,Freight Elevator Options,4000,"Signal devices, hall lanterns",2 Elev,8.0,2.0,Eo.,585,187,,772,920
+14 28 10.10,Freight Elevator Options,4025,"Position indicators, up to 3",,9.4,1.702,,415,159,,574,690
+14 28 10.10,Freight Elevator Options,4050,"Position indicators, per each over 3",,32.0,0.5,,113,47,,160,195
+14 28 10.10,Freight Elevator Options,4075,Variable voltage basement installed geared machine,,0.66,24.242,,"23,100","2,275",,"25,375","28,800"
+14 28 10.10,Hospital Elevator Options,4100,Hospital elevator options,,,,,,,,,
+14 28 10.10,Hospital Elevator Options,4125,2 car group automatic controls,2 Elev,0.66,24.242,Ea.,"3,750","2,275",,"6,025","7,475"
+14 28 10.10,Elevator Equipment and Control Options,4150,3 car group automatic controls,2 Elev,0.44,36.364,Ea.,"5,725","3,400",,"9,125","11,300"
+14 28 10.10,Elevator Equipment and Control Options,4175,4 car group automatic controls,,0.33,48.485,,"13,600","4,525",,"18,125","21,700"
+14 28 10.10,Elevator Equipment and Control Options,4200,5 car group automatic controls,,0.26,61.538,,"13,600","5,750",,"19,350","23,500"
+14 28 10.10,Elevator Equipment and Control Options,4225,6 car group automatic controls,,0.22,72.727,,"20,800","6,800",,"27,600","33,000"
+14 28 10.10,Elevator Equipment and Control Options,4250,Intercom service,3,5.333,,,575,500,,"1,075","1,375"
+14 28 10.10,Elevator Equipment and Control Options,4275,Duplex car selective collective,,0.66,24.242,,"4,400","2,275",,"6,675","8,200"
+14 28 10.10,Elevator Equipment and Control Options,4300,Center opening 1 speed doors,2,8.0,,,"2,150",750,,"2,900","3,450"
+14 28 10.10,Elevator Equipment and Control Options,4325,Center opening 2 speed doors,28,,,,"2,850",750,,"3,600","4,225"
+14 28 10.10,Elevator Equipment and Control Options,4350,Rear opening doors (opposite front),2,8.0,,,"4,650",750,,"5,400","6,200"
+14 28 10.10,Elevator Equipment and Control Options,4375,Side opening 2 speed doors,2,8.0,,,"6,900",750,,"7,650","8,700"
+14 28 10.10,Elevator Equipment and Control Options,4400,Automatic emergency power switching,,0.66,24.222,,"1,300","2,275",,"3,575","4,775"
+14 28 10.10,Elevator Equipment and Control Options,4425,Manual emergency power switching,8,,,,545,187,,732,875
+14 28 10.10,Elevator Equipment and Control Options,4675,"Hall finishes, stainless steel doors",,,,,"1,600",,,"1,600","1,775"
+14 28 10.10,Elevator Equipment and Control Options,4700,Stainless steel frames,,,,,"1,625",,,"1,625","1,775"
+14 28 10.10,Elevator Equipment and Control Options,4725,12 month maintenance contract,,,,,,,,"6,125","6,125"
+14 28 10.10,Elevator Equipment and Control Options,4750,"Signal devices, hall lanterns",2 Elev,8.0,2.0,,540,187,,727,870
+14 28 10.10,Elevator Equipment and Control Options,4775,"Position indicators, up to 3",1 ☐,9.4,1.702,,370,159,,529,640
+14 28 10.10,Elevator Equipment and Control Options,4800,"Position indicators, per each over 3",132,,1.5,,99,47,,146,179
+14 28 10.10,Elevator Equipment and Control Options,4825,High speed heavy duty door opener,,,,,"2,925",,,"2,925","3,200"
+14 28 10.10,Elevator Equipment and Control Options,4850,"Variable voltage, O.H. gearless machine, min.",2 Elev,0.16,100.0,,"37,800","9,350",,"47,150","55,500"
+14 28 10.10,Elevator Equipment and Control Options,4865,Maximum,,0.07,229.0,,"82,000","21,400",,"103,400","121,500"
+14 28 10.10,Elevator Equipment and Control Options,4875,Basement installed geared machine,,0.33,48.485,,"19,000","4,525",,"23,525","27,600"
+14 28 10.10,Elevator Equipment and Control Options,5000,"Drilling for piston, casing included, 18"" diameter",B-48,80.0,0.7,V.LF.,63.50,36,15.3,114.80,140
+14 28 10.10,Glass and Steel Escalators,1000,"Glass, 32"" wide x 10' floor to floor height",M-1,0.07,457,Ea.,"93,000","40,600","4,900","138,500","168,000"
+14 28 10.10,Glass and Steel Escalators,1010,"48"" wide x 10' floor to floor height",,0.07,457,,"100,500","40,600","4,900","146,000","176,000"
+14 28 10.10,Glass and Steel Escalators,1020,"32"" wide x 15' floor to floor height",,0.06,533,,"98,500","47,400","5,700","151,600","185,000"
+14 28 10.10,Glass and Steel Escalators,1030,"48"" wide x 15' floor to floor height",,0.06,533,,"104,500","47,400","5,700","157,600","191,000"
+14 28 10.10,Glass and Steel Escalators,1040,"32"" wide x 20' floor to floor height",M-1,0.05,653,Ea.,"104,500","58,000","7,000","169,500","208,500"
+14 28 10.10,Glass and Steel Escalators,1050,"48"" wide x 20' floor to floor height",,0.05,653,,"113,500","58,000","7,000","178,500","218,000"
+14 28 10.10,Glass and Steel Escalators,1060,"32"" wide x 25' floor to floor height",,0.04,800,,"116,000","71,000","8,550","195,550","242,500"
+14 28 10.10,Glass and Steel Escalators,1070,"48"" wide x 25' floor to floor height",,0.04,800,,"134,000","71,000","8,550","213,550","262,000"
+14 28 10.10,Glass and Steel Escalators,1080,"Enameled steel, 32"" wide x 10' floor to floor height",,0.07,457,,"101,000","40,600","4,900","146,500","176,500"
+14 28 10.10,Glass and Steel Escalators,1090,"48"" wide x 10' floor to floor height",,0.07,457,,"110,500","40,600","4,900","156,000","187,000"
+14 28 10.10,Glass and Steel Escalators,1110,"32"" wide x 15' floor to floor height",,0.06,533,,"108,000","47,400","5,700","161,100","195,500"
+14 28 10.10,Glass and Steel Escalators,1120,"48"" wide x 15' floor to floor height",,0.06,533,,"112,000","47,400","5,700","165,100","200,000"
+14 28 10.10,Glass and Steel Escalators,1130,"32"" wide x 20' floor to floor height",,0.05,653,,"114,500","58,000","7,000","179,500","219,500"
+14 28 10.10,Glass and Steel Escalators,1140,"48"" wide x 20' floor to floor height",,0.05,653,,"124,000","58,000","7,000","189,000","230,000"
+14 28 10.10,Glass and Steel Escalators,1150,"32"" wide x 25' floor to floor height",,0.04,800,,"126,500","71,000","8,550","206,050","254,000"
+14 28 10.10,Glass and Steel Escalators,1160,"48"" wide x 25' floor to floor height",,0.04,800,,"144,000","71,000","8,550","223,550","273,500"
+14 28 10.10,Glass and Steel Escalators,1170,"Stainless steel, 32"" wide x 10' floor to floor height",,0.07,457,,"108,000","40,600","4,900","153,500","184,000"
+14 28 10.10,Glass and Steel Escalators,1180,"48"" wide x 10' floor to floor height",,0.07,457,,"116,000","40,600","4,900","161,500","193,000"
+14 28 10.10,Glass and Steel Escalators,1500,"32"" wide x 15' floor to floor height",,0.06,533,,"115,000","47,400","5,700","168,100","203,000"
+14 28 10.10,Glass and Steel Escalators,1700,"48"" wide x 15' floor to floor height",,0.06,533,,"119,500","47,400","5,700","172,600","208,000"
+14 28 10.10,Glass and Steel Escalators,1750,"32"" wide x 18' floor to floor height",,0.05,615,,"144,500","54,500","6,575","205,575","247,500"
+14 28 10.10,Glass and Steel Escalators,1775,"48"" wide x 18' floor to floor height",,0.05,615,,"157,000","54,500","6,575","218,075","261,000"
+14 28 10.10,Glass and Steel Escalators,2300,"32"" wide x 25' floor to floor height",,0.04,800,,"144,000","71,000","8,550","223,550","273,500"
