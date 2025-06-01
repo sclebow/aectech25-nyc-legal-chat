@@ -74,7 +74,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
         return generator()
 
 
-def find_by_description(df, description):
+def find_by_description(df, description, section_chunk_size=500):
     """
     Use LLM to select the most appropriate Masterformat codes from the available list for a given description.
     Returns the matching row(s) from the DataFrame.
@@ -83,22 +83,35 @@ def find_by_description(df, description):
     # Get unique list of codes and section names
     unique_sections = df[['Masterformat Section Code', 'Section Name']].drop_duplicates().reset_index(drop=True)
     section_list = unique_sections.apply(lambda row: f"{row['Masterformat Section Code']}: {row['Section Name']}", axis=1).tolist()
-    # Build prompt for LLM
-    system_prompt = (
-        "You are an expert at mapping construction task descriptions to Masterformat section codes. "
-        "First, simplify the description to its core elements, "
-        "then select the most relevant Masterformat section codes from the provided list. "
-        "Given a list of Masterformat sections, you will select all relevant codes for a user's description. "
-        "Return only the section codes as a comma-separated list, nothing else."
-        # "Always return at least two codes, even if the description is vague or general. "
-    )
-    user_input = (
-        f"Masterformat sections list:\n{chr(10).join(section_list)}\n"
-        f"Description: {description}"
-    )
-    selected_codes_str = run_llm_query(system_prompt, user_input)
-    # Parse the LLM response into a list of codes
-    selected_codes = [code.strip() for code in selected_codes_str.replace('\n', ',').split(',') if code.strip()]
+    # Chunk the section list if it's too long, the chunks should overlap to ensure no sections are missed
+    if len(section_list) > section_chunk_size:
+        chunked_sections = []
+        for i in range(0, len(section_list), section_chunk_size):
+            # Overlap by half the chunk size
+            start = max(0, i - section_chunk_size // 2)
+            chunk = section_list[start:i + section_chunk_size]
+            chunked_sections.append(chunk)
+    else:
+        chunked_sections = [section_list]
+
+    print(f"Chunked sections into {len(chunked_sections)} parts for processing.")
+    
+    selected_codes = set()
+    for chunk in chunked_sections:
+        system_prompt = (
+            "You are an expert at mapping construction task descriptions to Masterformat section codes. "
+            "First, simplify the description to its core elements, "
+            "then select the most relevant Masterformat section codes from the provided list. "
+            "Given a list of Masterformat sections, you will select all relevant codes for a user's description. "
+            "Return only the section codes as a comma-separated list, nothing else."
+        )
+        user_input = (
+            f"Masterformat sections list:\n{chr(10).join(chunk)}\n"
+            f"Description: {description}"
+        )
+        selected_codes_str = run_llm_query(system_prompt, user_input)
+        codes = [code.strip() for code in selected_codes_str.replace('\n', ',').split(',') if code.strip()]
+        selected_codes.update(codes)
     # Filter DataFrame for all selected codes
     match = df[df['Masterformat Section Code'].isin(selected_codes)]
     if not match.empty:
