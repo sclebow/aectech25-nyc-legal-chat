@@ -2,7 +2,7 @@ import server.config as config
 from cost_data.rsmeans_utils import load_rsmeans_data, get_cost_data
 
 # Routing Functions Below
-from utils import rag_utils
+from project_utils import rag_utils
 
 # Load RSMeans data once at module level
 rsmeans_df = load_rsmeans_data()
@@ -25,145 +25,145 @@ def classify_input(message: str) -> str:
     )
     return response.choices[0].message.content.strip()
 
-# Design Ideation & Concept Functions
-def generate_concept(initial_info: str) -> str:
-    """
-    Generate a short, imaginative concept statement for a building design based on initial info.
-    Useful for early-stage creative brainstorming.
-    """
-    system_prompt = (
-        "You are a visionary designer at a leading architecture firm.\n"
-        "Your task is to craft a short, poetic and imaginative concept for a building design, based on the given information.\n"
-        "- Weave the provided details into a bold and evocative idea, like the opening lines of a story.\n"
-        "- Keep it one paragraph, focusing on mood and atmosphere rather than technical details.\n"
-        "- Avoid generic descriptions; use vivid imagery and emotional resonance."
-    )
-    user_prompt = f"What is the concept for this building?\nInitial information: {initial_info}"
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ],
-        temperature=0.8,  # Higher temperature for more creative output
-    )
-    return response.choices[0].message.content.strip()
+# # Design Ideation & Concept Functions
+# def generate_concept(initial_info: str) -> str:
+#     """
+#     Generate a short, imaginative concept statement for a building design based on initial info.
+#     Useful for early-stage creative brainstorming.
+#     """
+#     system_prompt = (
+#         "You are a visionary designer at a leading architecture firm.\n"
+#         "Your task is to craft a short, poetic and imaginative concept for a building design, based on the given information.\n"
+#         "- Weave the provided details into a bold and evocative idea, like the opening lines of a story.\n"
+#         "- Keep it one paragraph, focusing on mood and atmosphere rather than technical details.\n"
+#         "- Avoid generic descriptions; use vivid imagery and emotional resonance."
+#     )
+#     user_prompt = f"What is the concept for this building?\nInitial information: {initial_info}"
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": user_prompt}
+#         ],
+#         temperature=0.8,  # Higher temperature for more creative output
+#     )
+#     return response.choices[0].message.content.strip()
 
-def extract_attributes(description: str) -> str:
-    """
-    Extract key design attributes (shape, theme, materials) from a text description.
-    Returns a JSON string with fields "shape", "theme", "materials".
-    """
-    system_prompt = (
-        "You are a keyword extraction assistant.\n"
-        "# Instructions:\n"
-        "Extract relevant keywords from the given building description, categorized into three fields: shape, theme, materials.\n"
-        "Provide the output as a JSON object with exactly those keys.\n"
-        "# Rules:\n"
-        "- If a category has no relevant info, use \"None\" as the value.\n"
-        "- Separate multiple keywords with commas in a single string.\n"
-        "- Output JSON only, no explanation or extra text."
-    )
-    user_prompt = f"GIVEN DESCRIPTION:\n{description}"
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ],
-        temperature=0.0,  # Lower temperature for more deterministic output
-    )
-    return response.choices[0].message.content.strip()
+# def extract_attributes(description: str) -> str:
+#     """
+#     Extract key design attributes (shape, theme, materials) from a text description.
+#     Returns a JSON string with fields "shape", "theme", "materials".
+#     """
+#     system_prompt = (
+#         "You are a keyword extraction assistant.\n"
+#         "# Instructions:\n"
+#         "Extract relevant keywords from the given building description, categorized into three fields: shape, theme, materials.\n"
+#         "Provide the output as a JSON object with exactly those keys.\n"
+#         "# Rules:\n"
+#         "- If a category has no relevant info, use \"None\" as the value.\n"
+#         "- Separate multiple keywords with commas in a single string.\n"
+#         "- Output JSON only, no explanation or extra text."
+#     )
+#     user_prompt = f"GIVEN DESCRIPTION:\n{description}"
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": user_prompt}
+#         ],
+#         temperature=0.0,  # Lower temperature for more deterministic output
+#     )
+#     return response.choices[0].message.content.strip()
 
-def create_question(theme: str) -> str:
-    """
-    Create an open-ended question for further exploration, based on a given theme (e.g., a design theme).
-    This can be used to prompt the knowledge base or user for more input.
-    """
-    system_prompt = (
-        "You are a thoughtful research assistant specializing in architecture.\n"
-        "Your task is to formulate an open-ended question related to the theme provided, inviting deeper exploration.\n"
-        "- The question should connect to architectural examples or theory (e.g., notable projects, historical context) related to the theme.\n"
-        "- Keep it open-ended and intellectually curious, so it could be answered with detailed insights.\n"
-        "- Do not include any extra text, just the question itself."
-    )
-    user_prompt = theme  # The theme or topic from which to derive a question
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ],
-        temperature=0.3,  # Adjust temperature for more or less creative responses
-    )
-    return response.choices[0].message.content.strip()
+# def create_question(theme: str) -> str:
+#     """
+#     Create an open-ended question for further exploration, based on a given theme (e.g., a design theme).
+#     This can be used to prompt the knowledge base or user for more input.
+#     """
+#     system_prompt = (
+#         "You are a thoughtful research assistant specializing in architecture.\n"
+#         "Your task is to formulate an open-ended question related to the theme provided, inviting deeper exploration.\n"
+#         "- The question should connect to architectural examples or theory (e.g., notable projects, historical context) related to the theme.\n"
+#         "- Keep it open-ended and intellectually curious, so it could be answered with detailed insights.\n"
+#         "- Do not include any extra text, just the question itself."
+#     )
+#     user_prompt = theme  # The theme or topic from which to derive a question
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": user_prompt}
+#         ],
+#         temperature=0.3,  # Adjust temperature for more or less creative responses
+#     )
+#     return response.choices[0].message.content.strip()
 
-# Group 4 Prompts:
+# # Group 4 Prompts:
 
-# Cost Estimation & ROI Analysis Functions
-def analyze_cost_tradeoffs(query: str) -> str:
-    """
-    Analyze cost trade-offs based on the user's query.
-    E.g., comparing two design options or the impact of a design change on cost/ROI.
-    """
-    system_prompt = (
-        "You are an expert architectural cost consultant.\n"
-        "# Task:\n"
-        "Given a scenario or query, analyze and compare the cost trade-offs between the design options or changes described. Consider both initial construction costs and long-term financial impacts (such as ROI, maintenance, or operational costs) if relevant.\n"
-        "# Instructions:\n"
-        "- Break down each option or change, explaining how it affects construction cost (e.g., cost per area, material and/or labor differences) and potential changes to the project's value.\n"
-        "- Highlight the pros and cons of each option: which is more expensive upfront, which may save money over time, and any relevant risks or benefits.\n"
-        "- Use any specific numbers given in the query; if none are given, provide reasoned estimates or qualitative comparisons.\n"
-        "- Clearly state any assumptions for your estimates (e.g., unit costs, rates, location, or market conditions).\n"
-        "- Structure your answer logically (e.g., Option A vs Option B, or Before vs After change), and quantify differences where possible.\n"
-        "- Conclude with a recommendation or summary of which option is cost-favorable and why, if asked for advice.\n"
-        "- Always mention that actual costs can vary by project and location, and the comparison is based on typical scenarios.\n"
-        "# Example:\n"
-        "Query: Should we use steel or timber for the main structure?\n"
-        "Output: Steel framing typically costs 10-20% more than timber for similar spans, but offers greater durability and fire resistance. Timber is less expensive upfront and can be installed faster, reducing labor costs. However, steel may have lower maintenance costs over the building's life. In most urban markets, timber is more cost-effective for low-rise buildings, while steel is preferred for high-rise or long-span structures. Actual costs depend on local material prices and labor rates." # TODO fact-check this example
-    )
-    # (Optionally, I think we might be able to retrieve relevant data here via rag_utils if needed to inform the comparison.)
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": query}
-        ],
-        temperature=0.5,  # Adjust temperature for more or less creative responses
-    )
-    return response.choices[0].message.content.strip()
+# # Cost Estimation & ROI Analysis Functions
+# def analyze_cost_tradeoffs(query: str) -> str:
+#     """
+#     Analyze cost trade-offs based on the user's query.
+#     E.g., comparing two design options or the impact of a design change on cost/ROI.
+#     """
+#     system_prompt = (
+#         "You are an expert architectural cost consultant.\n"
+#         "# Task:\n"
+#         "Given a scenario or query, analyze and compare the cost trade-offs between the design options or changes described. Consider both initial construction costs and long-term financial impacts (such as ROI, maintenance, or operational costs) if relevant.\n"
+#         "# Instructions:\n"
+#         "- Break down each option or change, explaining how it affects construction cost (e.g., cost per area, material and/or labor differences) and potential changes to the project's value.\n"
+#         "- Highlight the pros and cons of each option: which is more expensive upfront, which may save money over time, and any relevant risks or benefits.\n"
+#         "- Use any specific numbers given in the query; if none are given, provide reasoned estimates or qualitative comparisons.\n"
+#         "- Clearly state any assumptions for your estimates (e.g., unit costs, rates, location, or market conditions).\n"
+#         "- Structure your answer logically (e.g., Option A vs Option B, or Before vs After change), and quantify differences where possible.\n"
+#         "- Conclude with a recommendation or summary of which option is cost-favorable and why, if asked for advice.\n"
+#         "- Always mention that actual costs can vary by project and location, and the comparison is based on typical scenarios.\n"
+#         "# Example:\n"
+#         "Query: Should we use steel or timber for the main structure?\n"
+#         "Output: Steel framing typically costs 10-20% more than timber for similar spans, but offers greater durability and fire resistance. Timber is less expensive upfront and can be installed faster, reducing labor costs. However, steel may have lower maintenance costs over the building's life. In most urban markets, timber is more cost-effective for low-rise buildings, while steel is preferred for high-rise or long-span structures. Actual costs depend on local material prices and labor rates." # TODO fact-check this example
+#     )
+#     # (Optionally, I think we might be able to retrieve relevant data here via rag_utils if needed to inform the comparison.)
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": query}
+#         ],
+#         temperature=0.5,  # Adjust temperature for more or less creative responses
+#     )
+#     return response.choices[0].message.content.strip()
 
-def analyze_roi_sensitivity(query: str) -> str:
-    """
-    Analyze ROI sensitivity given a scenario in the user's query.
-    Describes how changes in inputs (cost, revenue, etc.) affect the return on investment.
-    """
-    system_prompt = (
-        "You are a financial analyst for architecture projects, focusing on ROI sensitivity.\n"
-        "# Task:\n"
-        "Given a scenario or query, explain how the project's return on investment (ROI) or other financial metrics would change if key variables (such as construction cost, rent, interest rate, or occupancy) increase or decrease.\n"
-        "# Instructions:\n"
-        "- Identify the main variables mentioned in the query that could impact ROI.\n"
-        "- For each variable, describe how changes (e.g., +10% cost, -10% revenue) would affect ROI or payback period.\n"
-        "- Use approximate calculations if possible (e.g., \"ROI drops from 15% to ~12% if cost rises 10%\"), or provide qualitative analysis if no numbers are given.\n"
-        "- Clearly state any assumptions you make (such as base ROI, cost, or revenue figures).\n"
-        "- Highlight which variables have the greatest impact on ROI, if relevant.\n"
-        "- End with a note that these are scenario estimates for planning, not exact predictions, and that actual results may vary by project and market.\n"
-        "# Example:\n"
-        "Query: What happens to ROI if construction costs rise by 10% and rents fall by 5%?\n"
-        "Output: Assuming a base ROI of 15%, a 10% increase in construction costs would reduce ROI to approximately 13%. If rents also fall by 5%, ROI could drop further to around 11%. ROI is generally more sensitive to changes in revenue than to moderate cost overruns. Actual impacts depend on the project's financial structure and local market conditions." # TODO fact-check this example
-    )
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": query}
-        ],
-        temperature=0.5,  # Adjust temperature for more or less creative responses
-    )
-    return response.choices[0].message.content.strip()
+# def analyze_roi_sensitivity(query: str) -> str:
+#     """
+#     Analyze ROI sensitivity given a scenario in the user's query.
+#     Describes how changes in inputs (cost, revenue, etc.) affect the return on investment.
+#     """
+#     system_prompt = (
+#         "You are a financial analyst for architecture projects, focusing on ROI sensitivity.\n"
+#         "# Task:\n"
+#         "Given a scenario or query, explain how the project's return on investment (ROI) or other financial metrics would change if key variables (such as construction cost, rent, interest rate, or occupancy) increase or decrease.\n"
+#         "# Instructions:\n"
+#         "- Identify the main variables mentioned in the query that could impact ROI.\n"
+#         "- For each variable, describe how changes (e.g., +10% cost, -10% revenue) would affect ROI or payback period.\n"
+#         "- Use approximate calculations if possible (e.g., \"ROI drops from 15% to ~12% if cost rises 10%\"), or provide qualitative analysis if no numbers are given.\n"
+#         "- Clearly state any assumptions you make (such as base ROI, cost, or revenue figures).\n"
+#         "- Highlight which variables have the greatest impact on ROI, if relevant.\n"
+#         "- End with a note that these are scenario estimates for planning, not exact predictions, and that actual results may vary by project and market.\n"
+#         "# Example:\n"
+#         "Query: What happens to ROI if construction costs rise by 10% and rents fall by 5%?\n"
+#         "Output: Assuming a base ROI of 15%, a 10% increase in construction costs would reduce ROI to approximately 13%. If rents also fall by 5%, ROI could drop further to around 11%. ROI is generally more sensitive to changes in revenue than to moderate cost overruns. Actual impacts depend on the project's financial structure and local market conditions." # TODO fact-check this example
+#     )
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": query}
+#         ],
+#         temperature=0.5,  # Adjust temperature for more or less creative responses
+#     )
+#     return response.choices[0].message.content.strip()
 
-def assess_material_impact(query: str) -> str:
+# def assess_material_impact(query: str) -> str:
     """
     Evaluate how different material or structural choices impact cost (and possibly ROI or schedule).
     """

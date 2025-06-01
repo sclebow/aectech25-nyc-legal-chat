@@ -7,6 +7,35 @@ from neo4j import GraphDatabase
 import networkx as nx
 from tqdm import tqdm
 from collections import defaultdict
+import argparse
+
+args = argparse.ArgumentParser(description="Process IFC files and load into Neo4j.")
+args.add_argument("--reset", help="Reset the Neo4j database before loading new data.")
+
+# Connect to Neo4j
+URI = "bolt://localhost:7687"
+
+USERNAME = "neo4j"
+PASSWORD = "macad2025"
+
+# Create a Neo4j driver
+driver = GraphDatabase.driver(URI, auth=(USERNAME, PASSWORD))
+
+# Verify connectivity
+try:
+    driver.verify_connectivity()
+    print("Connection successful!")
+except Exception as e:
+    print("Connection failed:", e)
+
+if args.parse_args().reset:
+    with driver.session() as session:
+        # Reset the database
+        # session.run("DROP DATABASE neo4j IF EXISTS")
+        session.run("SHOW DATABASES")
+        print("Database reset successfully!")
+
+# TODO: put the update / reset graphdb script in another file and call the method here if the user asks for it, and route queries here to the LLM
 
 def extract_properties(entity):
     """Extracts general and identity-related properties from an IFC entity."""
@@ -264,10 +293,8 @@ nodes[nodes['SolarRad'].notna()]['IfcType'].value_counts()
 def replace_nans(df):
     for col in df.columns:
         if pd.api.types.is_numeric_dtype(df[col]):
-            # df[col].fillna(0, inplace=True)
             df.fillna({col: 0}, inplace=True)
         else:
-            # df[col].fillna('N/A', inplace=True)
             df.fillna({col: 'N/A'}, inplace=True)
     return df
 
@@ -280,21 +307,7 @@ edges['relation_type'] = edges['attributes'].apply(lambda x: x.get('relation', N
 # ________________________________________________________________________________________________________________________________
 # load nodes and edges into neo4j
 
-# Connect to Neo4j
-URI = "bolt://localhost:7687"
 
-USERNAME = "neo4j"
-PASSWORD = "macad2025"
-
-# Create a Neo4j driver
-driver = GraphDatabase.driver(URI, auth=(USERNAME, PASSWORD))
-
-# Verify connectivity
-try:
-    driver.verify_connectivity()
-    print("Connection successful!")
-except Exception as e:
-    print("Connection failed:", e)
 
 def batch_merge_nodes(tx, batch):
     """
@@ -320,12 +333,9 @@ with driver.session() as session:
     for i in tqdm(range(0, len(nodes), batch_size), desc="Batch merging nodes"):
         batch = nodes.iloc[i:i+batch_size].to_dict('records')
         session.execute_write(batch_merge_nodes, batch)
-
+    
 # driver.close()
 print("Nodes loaded successfully!")
-
-# print(edges.info())
-# print(edges.head())
 
 def batch_merge_edges_without_apoc(tx, relation_type, batch):
     query = f"""

@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 
 import llm_calls
-from utils import rag_utils
+from project_utils import rag_utils
 from server import config
 
 app = Flask(__name__)
@@ -53,5 +53,5 @@ def status():
     return jsonify({'status': 'ok'}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=5555)
 
