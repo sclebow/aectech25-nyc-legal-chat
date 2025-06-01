@@ -60,7 +60,7 @@ def find_by_section_code(df, section_code):
     return fuzzy_contains
 
 
-def find_by_description(description, confidence_threshold=0.6):
+def find_by_description(description, section_confidence_threshold=0.6, row_confidence_threshold=0.6):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
     For each relevant chapter, send a separate LLM call for section selection.
@@ -133,18 +133,18 @@ def find_by_description(description, confidence_threshold=0.6):
         dfs = [pd.read_csv(os.path.join(RSMEANS_CSV_DIR, fname)) for fname, _ in chapter_csvs]
     df = pd.concat(dfs, ignore_index=True)
     # Filter by confidence threshold
-    filtered_codes = [code for code, conf in code_confidence.items() if conf >= confidence_threshold]
+    filtered_codes = [code for code, conf in code_confidence.items() if conf >= section_confidence_threshold]
     match = df[df['Masterformat Section Code'].isin(filtered_codes)]
     output_df = None
     if not match.empty:
         match['Confidence'] = match['Masterformat Section Code'].map(code_confidence)
-        match = match[match['Confidence'] >= confidence_threshold]
+        match = match[match['Confidence'] >= section_confidence_threshold]
         match = match.sort_values(by='Confidence', ascending=False)
         match = match.reset_index(drop=True)
         # Print the matched codes and their confidence levels
         print("Matched section codes with confidence levels:")
         for code, conf in code_confidence.items():
-            if conf >= confidence_threshold:
+            if conf >= section_confidence_threshold:
                 print(f"{code}: {conf:.2f}")
         print(f"Found {len(match)} exact matches for section codes above threshold: {', '.join(filtered_codes)}")
         output_df = match
@@ -187,15 +187,15 @@ def find_by_description(description, confidence_threshold=0.6):
         name_conf_pairs = [n.strip() for n in selected_names_str.split("||") if n.strip()]
         selected_names = []
         for pair in name_conf_pairs:
-            match = re.match(r"(.+?):\s*(\d{1,3})", pair)
+            match = re.match(r"(.+?)::\s*(\d{1,3})", pair)
             if match:
                 name = match.group(1).strip()
                 confidence = int(match.group(2)) / 100.0
-                if confidence >= confidence_threshold:
+                if confidence >= row_confidence_threshold:
                     selected_names.append(name)
         filtered_df = output_df[output_df['Name'].isin(selected_names)]
         if not filtered_df.empty:
-            print(f"Further filtered to {len(filtered_df)} line items by LLM pass on Name/Section Name with confidence threshold {confidence_threshold}.")
+            print(f"Further filtered to {len(filtered_df)} line items by LLM pass on Name/Section Name with confidence threshold {row_confidence_threshold}.")
             output_df = filtered_df
         else:
             print("No further matches found in LLM Name/Section filter, returning previous output.")
