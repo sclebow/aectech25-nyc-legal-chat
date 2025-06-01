@@ -60,7 +60,7 @@ def find_by_section_code(df, section_code):
     return fuzzy_contains
 
 
-def find_by_description(description, confidence_threshold=0.9):
+def find_by_description(description, confidence_threshold=0.6):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
     For each relevant chapter, send a separate LLM call for section selection.
@@ -135,6 +135,7 @@ def find_by_description(description, confidence_threshold=0.9):
     # Filter by confidence threshold
     filtered_codes = [code for code, conf in code_confidence.items() if conf >= confidence_threshold]
     match = df[df['Masterformat Section Code'].isin(filtered_codes)]
+    output_df = None
     if not match.empty:
         match['Confidence'] = match['Masterformat Section Code'].map(code_confidence)
         match = match[match['Confidence'] >= confidence_threshold]
@@ -146,18 +147,54 @@ def find_by_description(description, confidence_threshold=0.9):
             if conf >= confidence_threshold:
                 print(f"{code}: {conf:.2f}")
         print(f"Found {len(match)} exact matches for section codes above threshold: {', '.join(filtered_codes)}")
-        return match
-    # Fuzzy match: try to find section names that contain the description (case-insensitive)
-    desc_norm = description.strip().lower()
-    fuzzy = df[df['Section Name'].str.lower().str.contains(desc_norm)]
-    if not fuzzy.empty:
-        print(f"Found {len(fuzzy)} fuzzy matches: {', '.join(fuzzy['Section Name'].unique())}")
-        return fuzzy
-    # Also try fuzzy match on Masterformat Section Code (in case user enters a partial code as description)
-    code_fuzzy = df[df['Masterformat Section Code'].fillna('').str.replace(' ', '').str.lower().str.contains(desc_norm.replace(' ', ''))]
-    print(f"Found {len(code_fuzzy)} fuzzy matches for section codes: {', '.join(code_fuzzy['Masterformat Section Code'].unique())}")
-    return code_fuzzy
+        output_df = match
+    
+    if output_df is None:
+        # Fuzzy match: try to find section names that contain the description (case-insensitive)
+        desc_norm = description.strip().lower()
+        fuzzy = df[df['Section Name'].str.lower().str.contains(desc_norm)]
+        if not fuzzy.empty:
+            print(f"Found {len(fuzzy)} fuzzy matches: {', '.join(fuzzy['Section Name'].unique())}")
+            output_df = fuzzy
+    if output_df is None:
+        # Also try fuzzy match on Masterformat Section Code (in case user enters a partial code as description)
+        code_fuzzy = df[df['Masterformat Section Code'].fillna('').str.replace(' ', '').str.lower().str.contains(desc_norm.replace(' ', ''))]
+        print(f"Found {len(code_fuzzy)} fuzzy matches for section codes: {', '.join(code_fuzzy['Masterformat Section Code'].unique())}")
+        output_df = code_fuzzy
 
+    # return output_df
+
+    # --- New LLM pass for further filtering by Name and Section Name ---
+    if output_df is not None and not output_df.empty:
+        from llm_calls import run_llm_query
+        # Prepare a list of combined Name and Section Name values
+        combined_list = [
+            f"Section: {row['Section Name']}, Name: {row['Name']}" for _, row in output_df.iterrows()
+        ]
+        system_prompt = (
+            "You are an expert at mapping construction task descriptions to specific RSMeans line items. "
+            "Given a list of line items (with both Name and Section Name), select all that are most relevant for a user's description. "
+            "Return your answer as a |-separated list of the exact 'Name' values (not Section Name), no other text. "
+        )
+        user_input = (
+            f"Line items list:\n{chr(10).join(combined_list)}\n"
+            f"Description: {description}"
+        )
+        # print(f"LLM Query for further filtering by Name/Section Name: {user_input}")
+        selected_names_str = run_llm_query(system_prompt, user_input)
+        # print(f"LLM selected names: {selected_names_str}")
+        selected_names = [n.strip() for n in selected_names_str.split("|") if n.strip()]
+        filtered_df = output_df[output_df['Name'].isin(selected_names)]
+        if not filtered_df.empty:
+            print(f"Further filtered to {len(filtered_df)} line items by LLM pass on Name/Section Name.")
+            output_df = filtered_df
+        else:
+            print("No further matches found in LLM Name/Section filter, returning previous output.")
+            
+    # Remove the 'Confidence' column if it exists
+    if 'Confidence' in output_df.columns:
+        output_df = output_df.drop(columns=['Confidence'])
+    return output_df
 
 def get_cost_data(section_code_or_desc):
     """

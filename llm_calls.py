@@ -293,7 +293,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
             temperature=0.0,
             max_tokens=max_tokens,
         )
-        return response.choices[0].message.content.strip()
+        return str(response.choices[0].message.content).strip()
     else:
         response = config.client.chat.completions.create(
             model=config.completion_model,
