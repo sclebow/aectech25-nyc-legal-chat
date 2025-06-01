@@ -76,7 +76,7 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
         gen_model = None
         emb_model = None
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    output_header_markdown = f"### Input: {user_input}\n\n"
+    # output_header_markdown = f"### Input: {user_input}\n\n"
     url = RAG_URLS.get(rag_mode, FLASK_URL)
     try:
         if stream_mode == "Streaming":
@@ -87,7 +87,7 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
                     if chunk:
                         streamed_text += chunk
-                        placeholder.markdown(output_header_markdown + streamed_text)
+                        placeholder.markdown(streamed_text)
                         time.sleep(0.05)
                 logger.info({
                     "timestamp": timestamp,
@@ -100,7 +100,7 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
                 })
                 return streamed_text
             else:
-                return output_header_markdown + f"Error: {response.status_code} - {response.text}"
+                return f"Error: {response.status_code} - {response.text}"
         else:
             response = requests.post(url, json={"input": user_input, "max_tokens": int(max_tokens)})
             if response.status_code == 200:
@@ -108,15 +108,14 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
                 if "sources" in data:
                     response_text = data.get('response', 'No response from server.')
                     output = (
-                        output_header_markdown
-                        + f"{response_text}\n\n**Sources:**\n{data['sources']}"
+                        f"{response_text}\n\n**Sources:**\n{data['sources']}"
                     )
                 else:
                     response_text = data.get("response", "No response from server.")
-                    output = output_header_markdown + response_text
+                    output = response_text
             else:
                 response_text = f"Error: {response.status_code} - {response.text}"
-                output = output_header_markdown + response_text
+                output = response_text
             logger.info({
                 "timestamp": timestamp,
                 "prompt": user_input,
@@ -129,7 +128,7 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
             return output
     except Exception as e:
         response_text = f"Exception: {str(e)}"
-        output = output_header_markdown + response_text
+        output = response_text
         logger.info({
             "timestamp": timestamp,
             "prompt": user_input,
@@ -263,11 +262,39 @@ if "running" in flask_status.lower():
     max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
 
     st.markdown("# LLM Output Viewer\nEnter your question below:")
-    sample = st.selectbox("Or select a sample question", sample_questions, key="sample_dropdown")
-    user_input = st.text_area("Your Question", value=sample, key="user_input")
+    # --- Streamlit Chat Interface with Sample Questions ---
+    if "messages" not in st.session_state:
+        st.session_state["messages"] = []
+    if "sample_input" not in st.session_state:
+        st.session_state["sample_input"] = ""
 
-    if st.button("Submit"):
-        st.markdown("_Processing..._")
-        output = query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens)
+    sample = st.selectbox("Or select a sample question", sample_questions, key="sample_dropdown")
+    send_sample = st.button("Send Sample Question")
+
+    for msg in st.session_state["messages"]:
+        with st.chat_message(msg["role"]):
+            st.markdown(msg["content"])
+
+    user_input = st.chat_input("Type your question or select a sample above...", key="chat_input")
+
+    # Handle sending a sample question
+    if send_sample and sample:
+        st.session_state["messages"].append({"role": "user", "content": sample})
+        with st.chat_message("user"):
+            st.markdown(sample)
+        with st.chat_message("assistant"):
+            st.markdown("_Processing..._")
+            output = query_llm_with_rag(sample, rag_mode, stream_mode, max_tokens)
+        st.session_state["messages"].append({"role": "assistant", "content": output})
+
+    # Handle freeform chat input
+    if user_input:
+        st.session_state["messages"].append({"role": "user", "content": user_input})
+        with st.chat_message("user"):
+            st.markdown(user_input)
+        with st.chat_message("assistant"):
+            st.markdown("_Processing..._")
+            output = query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens)
+        st.session_state["messages"].append({"role": "assistant", "content": output})
 else:
     st.warning("The Flask server must be running to get a response.")
