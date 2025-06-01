@@ -27,6 +27,7 @@ def find_by_section_code(df, section_code):
     """
     Filter the DataFrame by Masterformat Section Code (exact match or fuzzy match).
     Fuzzy match: if no exact match, return rows where the code starts with or contains the input (ignoring whitespace/case).
+    Handles NaN values in the code column.
     """
     # Exact match first
     match = df[df['Masterformat Section Code'] == section_code]
@@ -34,11 +35,43 @@ def find_by_section_code(df, section_code):
         return match
     # Fuzzy match: ignore case/whitespace, allow startswith or contains
     code_norm = section_code.replace(' ', '').lower()
-    fuzzy = df[df['Masterformat Section Code'].str.replace(' ', '').str.lower().str.startswith(code_norm)]
+    code_series = df['Masterformat Section Code'].fillna('').str.replace(' ', '').str.lower()
+    fuzzy = df[code_series.str.startswith(code_norm)]
     if not fuzzy.empty:
         return fuzzy
-    fuzzy_contains = df[df['Masterformat Section Code'].str.replace(' ', '').str.lower().str.contains(code_norm)]
+    fuzzy_contains = df[code_series.str.contains(code_norm)]
     return fuzzy_contains
+
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500):
+    import server.config as config
+    if not stream:
+        response = config.client.chat.completions.create(
+            model=config.completion_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.0,
+            max_tokens=max_tokens,
+        )
+        return response.choices[0].message.content.strip()
+    else:
+        response = config.client.chat.completions.create(
+            model=config.completion_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.0,
+            max_tokens=max_tokens,
+            stream=True,
+        )
+        def generator():
+            for chunk in response:
+                delta = getattr(chunk.choices[0], 'delta', None)
+                if delta and hasattr(delta, 'content') and delta.content:
+                    yield delta.content
+        return generator()
 
 
 def find_by_description(df, description):
@@ -47,7 +80,6 @@ def find_by_description(df, description):
     Returns the matching row(s) from the DataFrame.
     Also supports fuzzy matching: if LLM returns no match, try fuzzy search on section names.
     """
-    from llm_calls import run_llm_query  # Local import to avoid circular import
     # Get unique list of codes and section names
     unique_sections = df[['Masterformat Section Code', 'Section Name']].drop_duplicates().reset_index(drop=True)
     section_list = unique_sections.apply(lambda row: f"{row['Masterformat Section Code']}: {row['Section Name']}", axis=1).tolist()
@@ -58,6 +90,7 @@ def find_by_description(df, description):
         "then select the most relevant Masterformat section codes from the provided list. "
         "Given a list of Masterformat sections, you will select all relevant codes for a user's description. "
         "Return only the section codes as a comma-separated list, nothing else."
+        # "Always return at least two codes, even if the description is vague or general. "
     )
     user_input = (
         f"Masterformat sections list:\n{chr(10).join(section_list)}\n"

@@ -76,5 +76,5 @@ with gr.Blocks() as demo:
     with gr.Tab("List All Sections"):
         gr.Markdown(label="Sections", value=show_sections())
 
-if __name__ == "__main__":
-    demo.launch()
+
+demo.launch(inbrowser=True)
