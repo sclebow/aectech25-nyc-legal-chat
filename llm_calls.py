@@ -360,6 +360,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     Classify the user message into one of the five core categories and route it to the appropriate response function.
     If stream=True, returns a generator for streaming output.
     """
+    from utils import rag_utils
+    
     classification = classify_question_type(message).lower()
     print(classification)
 
