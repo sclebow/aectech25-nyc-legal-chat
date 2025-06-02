@@ -502,16 +502,31 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
 
     print(f"Data context: {data_context}")
 
+    # Now that we have the data context, we can provide it with the system prompt and user input
+    system_prompt = (
+        "You are an expert in building cost estimation, ROI analysis, and project data analysis.\n"
+        "Your task is to answer the user's question using the provided relevant context. "
+        "Use the relevant context to inform your answer, and always explicitly list out any assumptions you are making (such as location, year, unit, or scope). "
+        "If the question is not related to cost, ROI, or project data, politely refuse to answer.\n"
+        "Provide a summary of the relavent context used in your answer, and if applicable, include a markdown table with the data.\n"
+        f"Relevant context: {data_context}\n"
+    )
+
+    response = run_llm_query(
+        system_prompt=system_prompt,
+        user_input=message,
+        stream=stream,
+        max_tokens=max_tokens
+    )
+
+    return response   
+
     # classification = classify_question_type(message).lower()
-    # print(classification)
+    # print(f"System Prompt Classification: {classification}")
 
     # match classification:
     #     case x if "cost benchmark" in x:
-    #         answer = get_cost_benchmark_answer(message, stream=stream, use_rag=use_rag, collection=collection, ranker=ranker, max_tokens=max_tokens)
-    #         if use_rag:
-    #             return answer  # already (answer, sources)
-    #         else:
-    #             return answer
+    #         prompt = agent_prompt_dict["get cost benchmarks"]
     #     case x if "roi analysis" in x:
     #         prompt = agent_prompt_dict["analyze roi sensitivity"]
     #     case x if "design-cost comparison" in x:
@@ -522,10 +537,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     #         # prompt = agent_prompt_dict["analyze project data inputs"]
     #         prompt = get_project_data_answer(message)
     #     case _:
-    #         if use_rag:
-    #             return ("I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data.", None)
-    #         else:
-    #             return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
+    #         return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
     # if use_rag:
     #     (answer, source) = rag_call_alt(message, collection, ranker, agent_prompt=prompt, max_context_length=max_tokens)
     #     return (answer, source)
