@@ -422,9 +422,7 @@ def get_ifc_context(message: str) -> str:
     Get the IFC context for the user message.
     Returns a string with the IFC data or a prompt to use IFC.
     """
-    # Here we could implement a more complex logic to fetch relevant IFC data
-    # For now, we just return a prompt to use IFC
-    return "" # Placeholder
+    return ifc_utils.get_ifc_context_from_query(message)
 
 
 def get_project_data_context(message: str) -> str:

@@ -19,6 +19,52 @@ else:
 
 ifc = ifcopenshell.open(latest_file)
 
+def get_ifc_context_from_query(query):
+    """
+    Use an LLM call to determine the IFC context from a query.
+    """
+    from llm_calls import run_llm_query
+
+    valid_shapes_dict = {
+        'column':'IfcColumn',
+        'wall':'IfcWall',
+        'slab':'IfcSlab',
+        'beam':'IfcBeam',
+        'roof':'IfcRoof',
+        'stair':'IfcStair',
+        'door':'IfcDoor',
+        'window':'IfcWindow',
+        'curtain wall':'IfcCurtainWall'
+    }
+    valid_shapes_keys = list(valid_shapes_dict.keys())
+
+    system_prompt = f"""
+        Provide the most relevant items from the following list based on the user's query:
+        {valid_shapes_keys}
+        The user may refer to these items by their common names, such as 'wall', 'door', etc.
+        If the user refers to an item not in the list, respond with 'unknown'.
+        The response should be a single string containing the item names, separated by commas.
+        If the user refers to multiple items, return all of them.
+    """
+
+    shapes_string = run_llm_query(system_prompt, query, max_tokens=1500)
+    print("Shapes string from LLM:", shapes_string)
+
+    shapes_list = [shape.strip().lower() for shape in shapes_string.split(',') if shape.strip()]
+    print("Shapes list after processing:", shapes_list)
+    print(f'type(shapes_list): {type(shapes_list)}')
+
+    shape_statistics = []
+    for shape in shapes_list:
+        if shape in valid_shapes_dict:
+            shape_statistics.append(get_shape_statistics(valid_shapes_dict[shape]))
+
+    shape_statistics_string = "\n".join(shape_statistics)
+    if not shape_statistics_string:
+        shape_statistics_string = "No valid shapes found in the query."
+    
+    return shape_statistics_string    
+
 def get_shape_statistics(shape):
     global ifc
     """Calculate and return the number, total volume and surface area of a shape."""
@@ -32,7 +78,7 @@ def get_shape_statistics(shape):
         'door':'IfcDoor',
         'window':'IfcWindow',
         'curtain wall':'IfcCurtainWall'
-}
+    }
     if shape not in valid_shapes.values():
         try:
             shape = valid_shapes[shape.lower()]
@@ -86,4 +132,4 @@ def get_shape_statistics(shape):
         total_volume += volume
         total_surface_area += area
 
-    return {f'{shape} statistics: count: {total_count}, total volume: {total_volume} m3, total surface area: {total_surface_area} m2'}
+    return f'{shape} statistics: count: {total_count}, total volume: {total_volume} m3, total surface area: {total_surface_area} m2'
