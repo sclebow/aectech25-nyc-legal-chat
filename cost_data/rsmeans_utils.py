@@ -139,7 +139,7 @@ def find_by_description(description, section_confidence_threshold=0.6, row_confi
         match = match.copy()
     output_df = None
     if not match.empty:
-        match['Confidence'] = match['Masterformat Section Code'].map(code_confidence)
+        match.loc[:, 'Confidence'] = match['Masterformat Section Code'].map(code_confidence)
         match = match[match['Confidence'] >= section_confidence_threshold]
         match = match.sort_values(by='Confidence', ascending=False)
         match = match.reset_index(drop=True)
