@@ -334,38 +334,7 @@ def get_project_data_answer(query: str) -> str:
     else:
         return "No relevant project data found."
 
-
-def get_cost_benchmark_answer(query: str) -> str:
-    if not stream:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=1500,
-        )
-        return response.choices[0].message.content.strip()
-    else:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=1500,
-            stream=True,
-        )
-        def generator():
-            for chunk in response:
-                delta = getattr(chunk.choices[0], 'delta', None)
-                if delta and hasattr(delta, 'content') and delta.content:
-                    yield delta.content
-        return generator()
-
-def get_cost_benchmark_answer(query: str, stream: bool = False):
+def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = False, collection=None, ranker=None, max_tokens: int = 1500):
     """
     Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
     If RSMeans data is found, include a summary table and a short LLM-generated explanation referencing the data.
