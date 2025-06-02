@@ -2,7 +2,7 @@ import server.config as config
 from cost_data.rsmeans_utils import load_rsmeans_data, get_cost_data
 
 # Routing Functions Below
-from project_utils import rag_utils
+from project_utils import rag_utils, ifc_utils
 
 # Load RSMeans data once at module level
 rsmeans_df = load_rsmeans_data()
@@ -295,6 +295,28 @@ def run_llm_query(system_prompt: str, user_input: str) -> str:
     )
     return response.choices[0].message.content.strip()
 
+def get_project_data_answer(query: str) -> str:
+    prompt = ("You are an assistant that analyzes project data inputs from an IFC file."
+              "You have access to a function that returns statistics about the project elements."
+              "Project elements in the IFC file include IfcWall, IfcSlab, IfcColumn, IfcBeam, IfcRoof, IfcStair, IfcDoor, IfcWindow, and IfcCurtainWall."
+              "Provide a list of which elements are needed to answer the question."
+              "Provide only the list of elements in a comma separated list, no other text."
+              f"User's question: {query}"
+    )
+    response = run_llm_query(system_prompt=prompt, user_input=query)
+    if response:
+        stats = ifc_utils.get_shape_statistics(response.strip()) 
+        following_prompt = (
+            "You are a project data analysis assistant."
+            "Answer the user's question using the following project data statistics"
+            f"User's question: {query}"
+            f"{response} statistics: {stats}."
+        )
+        return following_prompt
+    else:
+        return "No relevant project data found."
+
+
 def get_cost_benchmark_answer(query: str) -> str:
     """
     Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
@@ -341,7 +363,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         case x if "value engineering" in x:
             prompt = agent_prompt_dict["suggest cost optimizations"]
         case x if "project data lookup" in x:
-            prompt = agent_prompt_dict["analyze project data inputs"]
+            # prompt = agent_prompt_dict["analyze project data inputs"]
+            prompt = get_project_data_answer(message)
         case _:
             return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
     
