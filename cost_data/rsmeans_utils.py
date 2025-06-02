@@ -146,7 +146,7 @@ def find_by_description(description, section_confidence_threshold=0.6, row_confi
         for code, conf in code_confidence.items():
             if conf >= section_confidence_threshold:
                 print(f"{code}: {conf:.2f}")
-        print(f"Found {len(match)} exact matches for section codes above threshold: {', '.join(filtered_codes)}")
+        print(f"Found {len(match)} exact matches for section codes above threshold: {', '.join(str(code) for code in filtered_codes)}")
         output_df = match
     
     if output_df is None:
