@@ -3,6 +3,7 @@ from cost_data.rsmeans_utils import get_cost_data
 from project_utils.rag_utils import rag_call_alt
 
 # Routing Functions Below
+from project_utils import rag_utils, ifc_utils
 
 # Remove global rsmeans_df and all references to load_rsmeans_data
 
@@ -24,80 +25,80 @@ def classify_input(message: str) -> str:
     )
     return response.choices[0].message.content.strip()
 
-# Design Ideation & Concept Functions
-def generate_concept(initial_info: str) -> str:
-    """
-    Generate a short, imaginative concept statement for a building design based on initial info.
-    Useful for early-stage creative brainstorming.
-    """
-    system_prompt = (
-        "You are a visionary designer at a leading architecture firm.\n"
-        "Your task is to craft a short, poetic and imaginative concept for a building design, based on the given information.\n"
-        "- Weave the provided details into a bold and evocative idea, like the opening lines of a story.\n"
-        "- Keep it one paragraph, focusing on mood and atmosphere rather than technical details.\n"
-        "- Avoid generic descriptions; use vivid imagery and emotional resonance."
-    )
-    user_prompt = f"What is the concept for this building?\nInitial information: {initial_info}"
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ],
-        temperature=0.8,  # Higher temperature for more creative output
-    )
-    return response.choices[0].message.content.strip()
+# # Design Ideation & Concept Functions
+# def generate_concept(initial_info: str) -> str:
+#     """
+#     Generate a short, imaginative concept statement for a building design based on initial info.
+#     Useful for early-stage creative brainstorming.
+#     """
+#     system_prompt = (
+#         "You are a visionary designer at a leading architecture firm.\n"
+#         "Your task is to craft a short, poetic and imaginative concept for a building design, based on the given information.\n"
+#         "- Weave the provided details into a bold and evocative idea, like the opening lines of a story.\n"
+#         "- Keep it one paragraph, focusing on mood and atmosphere rather than technical details.\n"
+#         "- Avoid generic descriptions; use vivid imagery and emotional resonance."
+#     )
+#     user_prompt = f"What is the concept for this building?\nInitial information: {initial_info}"
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": user_prompt}
+#         ],
+#         temperature=0.8,  # Higher temperature for more creative output
+#     )
+#     return response.choices[0].message.content.strip()
 
-def extract_attributes(description: str) -> str:
-    """
-    Extract key design attributes (shape, theme, materials) from a text description.
-    Returns a JSON string with fields "shape", "theme", "materials".
-    """
-    system_prompt = (
-        "You are a keyword extraction assistant.\n"
-        "# Instructions:\n"
-        "Extract relevant keywords from the given building description, categorized into three fields: shape, theme, materials.\n"
-        "Provide the output as a JSON object with exactly those keys.\n"
-        "# Rules:\n"
-        "- If a category has no relevant info, use \"None\" as the value.\n"
-        "- Separate multiple keywords with commas in a single string.\n"
-        "- Output JSON only, no explanation or extra text."
-    )
-    user_prompt = f"GIVEN DESCRIPTION:\n{description}"
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ],
-        temperature=0.0,  # Lower temperature for more deterministic output
-    )
-    return response.choices[0].message.content.strip()
+# def extract_attributes(description: str) -> str:
+#     """
+#     Extract key design attributes (shape, theme, materials) from a text description.
+#     Returns a JSON string with fields "shape", "theme", "materials".
+#     """
+#     system_prompt = (
+#         "You are a keyword extraction assistant.\n"
+#         "# Instructions:\n"
+#         "Extract relevant keywords from the given building description, categorized into three fields: shape, theme, materials.\n"
+#         "Provide the output as a JSON object with exactly those keys.\n"
+#         "# Rules:\n"
+#         "- If a category has no relevant info, use \"None\" as the value.\n"
+#         "- Separate multiple keywords with commas in a single string.\n"
+#         "- Output JSON only, no explanation or extra text."
+#     )
+#     user_prompt = f"GIVEN DESCRIPTION:\n{description}"
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": user_prompt}
+#         ],
+#         temperature=0.0,  # Lower temperature for more deterministic output
+#     )
+#     return response.choices[0].message.content.strip()
 
-def create_question(theme: str) -> str:
-    """
-    Create an open-ended question for further exploration, based on a given theme (e.g., a design theme).
-    This can be used to prompt the knowledge base or user for more input.
-    """
-    system_prompt = (
-        "You are a thoughtful research assistant specializing in architecture.\n"
-        "Your task is to formulate an open-ended question related to the theme provided, inviting deeper exploration.\n"
-        "- The question should connect to architectural examples or theory (e.g., notable projects, historical context) related to the theme.\n"
-        "- Keep it open-ended and intellectually curious, so it could be answered with detailed insights.\n"
-        "- Do not include any extra text, just the question itself."
-    )
-    user_prompt = theme  # The theme or topic from which to derive a question
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_prompt}
-        ],
-        temperature=0.3,  # Adjust temperature for more or less creative responses
-    )
-    return response.choices[0].message.content.strip()
+# def create_question(theme: str) -> str:
+#     """
+#     Create an open-ended question for further exploration, based on a given theme (e.g., a design theme).
+#     This can be used to prompt the knowledge base or user for more input.
+#     """
+#     system_prompt = (
+#         "You are a thoughtful research assistant specializing in architecture.\n"
+#         "Your task is to formulate an open-ended question related to the theme provided, inviting deeper exploration.\n"
+#         "- The question should connect to architectural examples or theory (e.g., notable projects, historical context) related to the theme.\n"
+#         "- Keep it open-ended and intellectually curious, so it could be answered with detailed insights.\n"
+#         "- Do not include any extra text, just the question itself."
+#     )
+#     user_prompt = theme  # The theme or topic from which to derive a question
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": user_prompt}
+#         ],
+#         temperature=0.3,  # Adjust temperature for more or less creative responses
+#     )
+#     return response.choices[0].message.content.strip()
 
-# Group 4 Prompts:
+# # Group 4 Prompts:
 
 # Cost Estimation & ROI Analysis Functions
 def analyze_cost_tradeoffs(query: str) -> str:
@@ -132,37 +133,37 @@ def analyze_cost_tradeoffs(query: str) -> str:
     )
     return response.choices[0].message.content.strip()
 
-def analyze_roi_sensitivity(query: str) -> str:
-    """
-    Analyze ROI sensitivity given a scenario in the user's query.
-    Describes how changes in inputs (cost, revenue, etc.) affect the return on investment.
-    """
-    system_prompt = (
-        "You are a financial analyst for architecture projects, focusing on ROI sensitivity.\n"
-        "# Task:\n"
-        "Given a scenario or query, explain how the project's return on investment (ROI) or other financial metrics would change if key variables (such as construction cost, rent, interest rate, or occupancy) increase or decrease.\n"
-        "# Instructions:\n"
-        "- Identify the main variables mentioned in the query that could impact ROI.\n"
-        "- For each variable, describe how changes (e.g., +10% cost, -10% revenue) would affect ROI or payback period.\n"
-        "- Use approximate calculations if possible (e.g., \"ROI drops from 15% to ~12% if cost rises 10%\"), or provide qualitative analysis if no numbers are given.\n"
-        "- Clearly state any assumptions you make (such as base ROI, cost, or revenue figures).\n"
-        "- Highlight which variables have the greatest impact on ROI, if relevant.\n"
-        "- End with a note that these are scenario estimates for planning, not exact predictions, and that actual results may vary by project and market.\n"
-        "# Example:\n"
-        "Query: What happens to ROI if construction costs rise by 10% and rents fall by 5%?\n"
-        "Output: Assuming a base ROI of 15%, a 10% increase in construction costs would reduce ROI to approximately 13%. If rents also fall by 5%, ROI could drop further to around 11%. ROI is generally more sensitive to changes in revenue than to moderate cost overruns. Actual impacts depend on the project's financial structure and local market conditions." # TODO fact-check this example
-    )
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": query}
-        ],
-        temperature=0.5,  # Adjust temperature for more or less creative responses
-    )
-    return response.choices[0].message.content.strip()
+# def analyze_roi_sensitivity(query: str) -> str:
+#     """
+#     Analyze ROI sensitivity given a scenario in the user's query.
+#     Describes how changes in inputs (cost, revenue, etc.) affect the return on investment.
+#     """
+#     system_prompt = (
+#         "You are a financial analyst for architecture projects, focusing on ROI sensitivity.\n"
+#         "# Task:\n"
+#         "Given a scenario or query, explain how the project's return on investment (ROI) or other financial metrics would change if key variables (such as construction cost, rent, interest rate, or occupancy) increase or decrease.\n"
+#         "# Instructions:\n"
+#         "- Identify the main variables mentioned in the query that could impact ROI.\n"
+#         "- For each variable, describe how changes (e.g., +10% cost, -10% revenue) would affect ROI or payback period.\n"
+#         "- Use approximate calculations if possible (e.g., \"ROI drops from 15% to ~12% if cost rises 10%\"), or provide qualitative analysis if no numbers are given.\n"
+#         "- Clearly state any assumptions you make (such as base ROI, cost, or revenue figures).\n"
+#         "- Highlight which variables have the greatest impact on ROI, if relevant.\n"
+#         "- End with a note that these are scenario estimates for planning, not exact predictions, and that actual results may vary by project and market.\n"
+#         "# Example:\n"
+#         "Query: What happens to ROI if construction costs rise by 10% and rents fall by 5%?\n"
+#         "Output: Assuming a base ROI of 15%, a 10% increase in construction costs would reduce ROI to approximately 13%. If rents also fall by 5%, ROI could drop further to around 11%. ROI is generally more sensitive to changes in revenue than to moderate cost overruns. Actual impacts depend on the project's financial structure and local market conditions." # TODO fact-check this example
+#     )
+#     response = config.client.chat.completions.create(
+#         model=config.completion_model,
+#         messages=[
+#             {"role": "system", "content": system_prompt},
+#             {"role": "user", "content": query}
+#         ],
+#         temperature=0.5,  # Adjust temperature for more or less creative responses
+#     )
+#     return response.choices[0].message.content.strip()
 
-def assess_material_impact(query: str) -> str:
+# def assess_material_impact(query: str) -> str:
     """
     Evaluate how different material or structural choices impact cost (and possibly ROI or schedule).
     """
@@ -312,7 +313,59 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                     yield delta.content
         return generator()
 
-def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = False, collection=None, ranker=None, max_tokens: int = 1500):
+def get_project_data_answer(query: str) -> str:
+    prompt = ("You are an assistant that analyzes project data inputs from an IFC file."
+              "You have access to a function that returns statistics about the project elements."
+              "Project elements in the IFC file include IfcWall, IfcSlab, IfcColumn, IfcBeam, IfcRoof, IfcStair, IfcDoor, IfcWindow, and IfcCurtainWall."
+              "Provide a list of which elements are needed to answer the question."
+              "Provide only the list of elements in a comma separated list, no other text."
+              f"User's question: {query}"
+    )
+    response = run_llm_query(system_prompt=prompt, user_input=query)
+    if response:
+        stats = ifc_utils.get_shape_statistics(response.strip()) 
+        following_prompt = (
+            "You are a project data analysis assistant."
+            "Answer the user's question using the following project data statistics"
+            f"User's question: {query}"
+            f"{response} statistics: {stats}."
+        )
+        return following_prompt
+    else:
+        return "No relevant project data found."
+
+
+def get_cost_benchmark_answer(query: str) -> str:
+    if not stream:
+        response = config.client.chat.completions.create(
+            model=config.completion_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.0,
+            max_tokens=1500,
+        )
+        return response.choices[0].message.content.strip()
+    else:
+        response = config.client.chat.completions.create(
+            model=config.completion_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.0,
+            max_tokens=1500,
+            stream=True,
+        )
+        def generator():
+            for chunk in response:
+                delta = getattr(chunk.choices[0], 'delta', None)
+                if delta and hasattr(delta, 'content') and delta.content:
+                    yield delta.content
+        return generator()
+
+def get_cost_benchmark_answer(query: str, stream: bool = False):
     """
     Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
     If RSMeans data is found, include a summary table and a short LLM-generated explanation referencing the data.
@@ -373,7 +426,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         case x if "value engineering" in x:
             prompt = agent_prompt_dict["suggest cost optimizations"]
         case x if "project data lookup" in x:
-            prompt = agent_prompt_dict["analyze project data inputs"]
+            # prompt = agent_prompt_dict["analyze project data inputs"]
+            prompt = get_project_data_answer(message)
         case _:
             if use_rag:
                 return ("I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data.", None)

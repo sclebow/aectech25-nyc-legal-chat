@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 
 import llm_calls
-from utils import rag_utils
+from project_utils import rag_utils
 from server import config
 import ghhops_server as hs
 import os
@@ -386,5 +386,5 @@ def extract_properties(entity):
     return data
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, port=6767)
 

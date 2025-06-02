@@ -4,7 +4,6 @@ from openai import OpenAI
 import os
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -54,6 +53,18 @@ llama3 = [
         }
 ]
 
+# Notice how this model is running locally. Uses local server with LMStudio
+devstral = [
+        {
+            "model": "unsloth/Devstral-Small-2505-GGUF", #change this to point to a new model
+            'api_key': 'any string here is fine',
+            'api_type': 'openai',
+            'base_url': "http://127.0.0.1:1234",
+            "cache_seed": random.randint(0, 100000),
+        }
+]
+
+
 # This is a cloudflare model
 cloudflare_model = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
 
@@ -62,6 +73,7 @@ def api_mode (mode, cf_gen_model=None, cf_emb_model=None):
     if mode == "local":
         client = local_client
         completion_model = llama3[0]['model']
+        code_model = devstral[0]['model']
         embedding_model = local_embedding_model
         return client, completion_model, embedding_model
     
@@ -69,12 +81,13 @@ def api_mode (mode, cf_gen_model=None, cf_emb_model=None):
         client = cloudflare_client
         completion_model = cf_gen_model if cf_gen_model else cloudflare_model
         embedding_model = cf_emb_model if cf_emb_model else cloudflare_embedding_model
+        code_model = devstral[0]['model']
         return client, completion_model, embedding_model
     
     elif mode == "openai":
         client = openai_client
-        completion_model = gpt4o
-        completion_model = completion_model[0]['model']
+        completion_model = gpt4o[0]['model']
+        code_model = devstral[0]['model']
         embedding_model = openai_embedding_model
 
         return client, completion_model, embedding_model
