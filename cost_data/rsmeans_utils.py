@@ -68,7 +68,7 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500):
     system_prompt = (
         "You are an expert at extracting relevant materials from construction task descriptions. "
         "Given a user's description, extract the most relevant materials that can be used to look up costs in RSMeans data. "
-        "Be descriptive and include all materials that might be relevant. "
+        "Don't include materials that are not directly related to the task. "
         "Return your answer as a comma-separated list of materials."
         "Provide only the comma-separated list of materials, no other text and no explanations. "
         "Example: 'concrete, steel, wood, insulation, drywall'. "
@@ -77,28 +77,28 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500):
     materials = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
     # print(f'materials output: {materials}')
     # Clean up the materials string
-    materials = materials.split("\n")[-1].strip()  # Get the last line in case of multiple lines
-    materials = [m.strip() for m in materials.split(",") if m.strip()]
-    # print(f"{materials}")
-
-    rsmeans_strings = [] # List to hold the RSMeans strings for each material
-    for material in materials:
-        # For each material, we will search the RSMeans data
-        # We will use the find_by_description function to get the relevant section codes
-        # and then format them into a string for the LLM
-        section_df = find_by_description(material)
-        if not section_df.empty:
-            # Create a string representation of the section codes and names
-            section_codes = section_df['Masterformat Section Code'].unique()
-            section_names = section_df['Section Name'].unique()
-            rsmeans_strings.append(f"{material}: {', '.join(section_codes)} ({', '.join(section_names)})")
-        else:
-            rsmeans_strings.append(f"{material}: No relevant sections found")
-    # Join all the RSMeans strings into a single string
-    rsmeans_context = "\n".join(rsmeans_strings)
+    # materials = materials.split("\n")[-1].strip()  # Get the last line in case of multiple lines
+    # materials = [m.strip() for m in materials.split(",") if m.strip()]
+    print(f"Extracted materials: {materials}")
+    rsmeans_context = find_by_description(", ".join(materials))
+    # rsmeans_strings = [] # List to hold the RSMeans strings for each material
+    # for material in materials:
+    #     # For each material, we will search the RSMeans data
+    #     # We will use the find_by_description function to get the relevant section codes
+    #     # and then format them into a string for the LLM
+    #     section_df = find_by_description(material)
+    #     if not section_df.empty:
+    #         # Create a string representation of the section codes and names
+    #         section_codes = section_df['Masterformat Section Code'].unique()
+    #         section_names = section_df['Section Name'].unique()
+    #         rsmeans_strings.append(f"{material}: {', '.join(section_codes)} ({', '.join(section_names)})")
+    #     else:
+    #         rsmeans_strings.append(f"{material}: No relevant sections found")
+    # # Join all the RSMeans strings into a single string
+    # rsmeans_context = "\n".join(rsmeans_strings)
     return rsmeans_context
 
-def find_by_description(description, section_confidence_threshold=0.6, row_confidence_threshold=0.6):
+def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.6):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
     For each relevant chapter, send a separate LLM call for section selection.
@@ -118,6 +118,7 @@ def find_by_description(description, section_confidence_threshold=0.6, row_confi
         "You are an expert at mapping construction task descriptions to Masterformat chapters. "
         "Given a list of Masterformat chapters, select all relevant chapters for a user's description. "
         "Consider exact matches first, then partial matches based on the description. "
+        "If a chapter is mostly relevant, it should be included in the response, even if it is not an exact match. "
         "Return your answer as a comma-separated list of chapter numbers (e.g. 03, 04, 10, etc)."
         "Return only the chapter numbers, no other text. "
     )
@@ -153,7 +154,7 @@ def find_by_description(description, section_confidence_threshold=0.6, row_confi
                 f"Description: {description}"
             )
             selected_names_str = run_llm_query(system_prompt, user_input)
-            print(f"Selected section names for chapter {chapter}: {selected_names_str}")
+            # print(f"Selected section names for chapter {chapter}: {selected_names_str}")
             for part in selected_names_str.split(','):
                 match = re.match(r"(.+?):\s*(\d{1,3})", part.strip())
                 if match:
@@ -166,6 +167,10 @@ def find_by_description(description, section_confidence_threshold=0.6, row_confi
                             code_confidence[code] = max(code_confidence[code], confidence)
                         else:
                             code_confidence[code] = confidence
+            # Print the filtered section names and their confidence levels
+            for code, conf in code_confidence.items():
+                if conf >= section_confidence_threshold:
+                    print(f"Chapter {chapter} - Matched section code '{code}' with confidence {conf:.2f}")
     if not dfs:
         # fallback: load all
         dfs = [pd.read_csv(os.path.join(RSMEANS_CSV_DIR, fname)) for fname, _ in chapter_csvs]

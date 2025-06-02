@@ -414,7 +414,7 @@ def get_rsmeans_context(message: str) -> str:
     Returns a string with the RSMeans data or a prompt to use RSMeans.
     """
     rsmeans_context = get_rsmeans_context_from_prompt(message)
-    return "" # Placeholder
+    return rsmeans_context
 
 
 def get_ifc_context(message: str) -> str:
@@ -503,7 +503,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     if data_sources_needed_dict["cost model"]:
         data_context["cost model"] = get_cost_model_context(message)
 
-    
+    print(f"Data context: {data_context}")
 
     # classification = classify_question_type(message).lower()
     # print(classification)
