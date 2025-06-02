@@ -241,7 +241,7 @@ with st.expander("Flask Server Controls", expanded=False):
             st.session_state["flask_status"] = status
 flask_status = st.session_state.get("flask_status", "Default Status: Not Running")
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([3, 1], vertical_alignment="center")
 
 with col2:
     # Add a refresh button
