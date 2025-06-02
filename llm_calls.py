@@ -432,7 +432,7 @@ def get_project_data_context(message: str) -> str:
     """
     # Here we could implement a more complex logic to fetch relevant project data
     # For now, we just return a prompt to use project data
-    return "" # Placeholder
+    return "Project data is not implemented yet."  # Placeholder
 
 
 def get_knowledge_base_context(message: str) -> str:
@@ -442,7 +442,7 @@ def get_knowledge_base_context(message: str) -> str:
     """
     # Here we could implement a more complex logic to fetch relevant knowledge base data
     # For now, we just return a prompt to use the knowledge base
-    return "" # Placeholder
+    return rag_utils.get_rag_context_from_query(message)
 
 
 def get_value_model_context(message: str) -> str:
@@ -452,7 +452,7 @@ def get_value_model_context(message: str) -> str:
     """
     # Here we could implement a more complex logic to fetch relevant value model data
     # For now, we just return a prompt to use the value model
-    return "" # Placeholder
+    return "Value model is not implemented yet."  # Placeholder
 
 
 def get_cost_model_context(message: str) -> str:
@@ -462,8 +462,7 @@ def get_cost_model_context(message: str) -> str:
     """
     # Here we could implement a more complex logic to fetch relevant cost model data
     # For now, we just return a prompt to use the cost model
-    return "" # Placeholder
-
+    return "Cost model is not implemented yet."  # Placeholder
 
 def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500):
     """
