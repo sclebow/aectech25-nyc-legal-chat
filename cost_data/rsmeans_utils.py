@@ -68,14 +68,35 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500):
     system_prompt = (
         "You are an expert at extracting relevant materials from construction task descriptions. "
         "Given a user's description, extract the most relevant materials that can be used to look up costs in RSMeans data. "
+        "Be descriptive and include all materials that might be relevant. "
         "Return your answer as a comma-separated list of materials."
+        "Provide only the comma-separated list of materials, no other text and no explanations. "
+        "Example: 'concrete, steel, wood, insulation, drywall'. "
     )
     user_input = f"Description: {prompt}"
     materials = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
+    # print(f'materials output: {materials}')
     # Clean up the materials string
+    materials = materials.split("\n")[-1].strip()  # Get the last line in case of multiple lines
     materials = [m.strip() for m in materials.split(",") if m.strip()]
-    print(f"Extracted materials: {materials}")
-    return materials
+    # print(f"{materials}")
+
+    rsmeans_strings = [] # List to hold the RSMeans strings for each material
+    for material in materials:
+        # For each material, we will search the RSMeans data
+        # We will use the find_by_description function to get the relevant section codes
+        # and then format them into a string for the LLM
+        section_df = find_by_description(material)
+        if not section_df.empty:
+            # Create a string representation of the section codes and names
+            section_codes = section_df['Masterformat Section Code'].unique()
+            section_names = section_df['Section Name'].unique()
+            rsmeans_strings.append(f"{material}: {', '.join(section_codes)} ({', '.join(section_names)})")
+        else:
+            rsmeans_strings.append(f"{material}: No relevant sections found")
+    # Join all the RSMeans strings into a single string
+    rsmeans_context = "\n".join(rsmeans_strings)
+    return rsmeans_context
 
 def find_by_description(description, section_confidence_threshold=0.6, row_confidence_threshold=0.6):
     """
