@@ -227,7 +227,10 @@ def set_cloudflare_models(mode, gen_model, emb_model):
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
 st.markdown("This is a Streamlit GUI for the ROI LLM Assistant. It allows you to interact with the LLM and RAG system.")
-
+# Start the Flask server if not already running
+if "flask_status" not in st.session_state:
+    st.session_state["flask_status"] = "Default Status: Not Running"
+    start_flask_and_wait()
 # Flask server controls
 with st.expander("Flask Server Controls", expanded=False):
     col1, col2 = st.columns(2)

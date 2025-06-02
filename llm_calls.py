@@ -373,37 +373,165 @@ def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = 
         )
         return run_llm_query(system_prompt=prompt, user_input=query, stream=stream, max_tokens=max_tokens)
 
+def classify_data_sources(message: str, data_sources: dict) -> dict:
+    """
+    Classify the user message into one of the five core data sources.
+    Returns a dictionary with boolean values indicating which data sources are relevant.
+    """
+    system_prompt = (
+        "You are a data source classification agent for a building project assistant.\n"
+        "Classify the user's query into one or more of the following data sources:\n"
+        + "\n".join([f"{key}: {value}" for key, value in data_sources.items()]) + "\n"
+        "Return a comma-separated list of the relevant data sources, or 'None' if none apply.\n\n"
+        "Examples:\n"
+        "Query: What is the typical cost per sqft for concrete in NYC?\nOutput: rsmeans\n"
+        "Query: How many units does my current project support and what’s the total cost of concrete?\nOutput: project data, rsmeans\n"
+        "Query: What is the value of this building based on its size and type?\nOutput: value model\n"
+        "Query: How can I reduce construction costs without changing the layout?\nOutput: knowledge base, cost model\n"
+        "Query: What is the total concrete cost for this project?\nOutput: project data, rsmeans\n"
+    )
+
+    response = config.client.chat.completions.create(
+        model=config.completion_model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": message}
+        ],
+        temperature=0.0,
+    )
+    
+    classification = response.choices[0].message.content.strip()
+    if classification.lower() == "none":
+        return {key: False for key in data_sources.keys()}
+    
+    # Split the classification into a list and create a dictionary with boolean values
+    classified_sources = classification.split(", ")
+    return {key: (key in classified_sources) for key in data_sources.keys()}
+
+def get_rsmeans_context(message: str) -> str:
+    """
+    Get the RSMeans context for the user message.
+    Returns a string with the RSMeans data or a prompt to use RSMeans.
+    """
+    # Here we could implement a more complex logic to fetch relevant RSMeans data
+    # For now, we just return a prompt to use RSMeans
+    return "" # Placeholder
+
+
+def get_ifc_context(message: str) -> str:
+    """
+    Get the IFC context for the user message.
+    Returns a string with the IFC data or a prompt to use IFC.
+    """
+    # Here we could implement a more complex logic to fetch relevant IFC data
+    # For now, we just return a prompt to use IFC
+    return "" # Placeholder
+
+
+def get_project_data_context(message: str) -> str:
+    """
+    Get the project data context for the user message.
+    Returns a string with the project data or a prompt to use project data.
+    """
+    # Here we could implement a more complex logic to fetch relevant project data
+    # For now, we just return a prompt to use project data
+    return "" # Placeholder
+
+
+def get_knowledge_base_context(message: str) -> str:
+    """
+    Get the knowledge base context for the user message.
+    Returns a string with the knowledge base data or a prompt to use the knowledge base.
+    """
+    # Here we could implement a more complex logic to fetch relevant knowledge base data
+    # For now, we just return a prompt to use the knowledge base
+    return "" # Placeholder
+
+
+def get_value_model_context(message: str) -> str:
+    """
+    Get the value model context for the user message.
+    Returns a string with the value model data or a prompt to use the value model.
+    """
+    # Here we could implement a more complex logic to fetch relevant value model data
+    # For now, we just return a prompt to use the value model
+    return "" # Placeholder
+
+
+def get_cost_model_context(message: str) -> str:
+    """
+    Get the cost model context for the user message.
+    Returns a string with the cost model data or a prompt to use the cost model.
+    """
+    # Here we could implement a more complex logic to fetch relevant cost model data
+    # For now, we just return a prompt to use the cost model
+    return "" # Placeholder
+
+
 def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500):
     """
     Classify the user message into one of the five core categories and route it to the appropriate response function.
     If stream=True, returns a generator for streaming output.
     """
-    classification = classify_question_type(message).lower()
-    print(classification)
+    data_sources = {
+        "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.",
+        "ifc": "This is a database for a building model in IFC format, which includes detailed information about the building's components and quantities.",
+        "project data": "This is a database for project data, which includes volumes, areas, and quantities of building elements.",
+        "knowledge base": "This is a knowledge base for architecture and construction, which includes general information about design, materials, and construction practices.",
+        "value model": "This is a machine learning model that predicts the value of a building based some of its features, such as size, and type.",
+        "cost model": "This is a machine learning model that predicts the cost of a building based on some of its features, such as size, and type.",
+    }
 
-    match classification:
-        case x if "cost benchmark" in x:
-            answer = get_cost_benchmark_answer(message, stream=stream, use_rag=use_rag, collection=collection, ranker=ranker, max_tokens=max_tokens)
-            if use_rag:
-                return answer  # already (answer, sources)
-            else:
-                return answer
-        case x if "roi analysis" in x:
-            prompt = agent_prompt_dict["analyze roi sensitivity"]
-        case x if "design-cost comparison" in x:
-            prompt = agent_prompt_dict["analyze cost tradeoffs"]
-        case x if "value engineering" in x:
-            prompt = agent_prompt_dict["suggest cost optimizations"]
-        case x if "project data lookup" in x:
-            # prompt = agent_prompt_dict["analyze project data inputs"]
-            prompt = get_project_data_answer(message)
-        case _:
-            if use_rag:
-                return ("I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data.", None)
-            else:
-                return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
-    if use_rag:
-        (answer, source) = rag_call_alt(message, collection, ranker, agent_prompt=prompt, max_context_length=max_tokens)
-        return (answer, source)
-    else:
-        return run_llm_query(system_prompt=prompt, user_input=message, stream=stream, max_tokens=max_tokens)
+    # Run the query through the classification function
+    data_sources_needed_dict = classify_data_sources(message, data_sources)
+
+    # Debugging output
+    print(f"Data sources needed: {data_sources_needed_dict}")
+
+    # Create a data context dictionary based on the classification
+    data_context = {}
+
+    if data_sources_needed_dict["rsmeans"]:
+        data_context["rsmeans"] = get_rsmeans_context(message)
+    if data_sources_needed_dict["ifc"]:
+        data_context["ifc"] = get_ifc_context(message)
+    if data_sources_needed_dict["project data"]:
+        data_context["project data"] = project_data_context
+    if data_sources_needed_dict["knowledge base"]:
+        data_context["knowledge base"] = get_knowledge_base_context(message)
+    if data_sources_needed_dict["value model"]:
+        data_context["value model"] = get_value_model_context(message)
+    if data_sources_needed_dict["cost model"]:
+        data_context["cost model"] = get_cost_model_context(message)
+
+    
+
+    # classification = classify_question_type(message).lower()
+    # print(classification)
+
+    # match classification:
+    #     case x if "cost benchmark" in x:
+    #         answer = get_cost_benchmark_answer(message, stream=stream, use_rag=use_rag, collection=collection, ranker=ranker, max_tokens=max_tokens)
+    #         if use_rag:
+    #             return answer  # already (answer, sources)
+    #         else:
+    #             return answer
+    #     case x if "roi analysis" in x:
+    #         prompt = agent_prompt_dict["analyze roi sensitivity"]
+    #     case x if "design-cost comparison" in x:
+    #         prompt = agent_prompt_dict["analyze cost tradeoffs"]
+    #     case x if "value engineering" in x:
+    #         prompt = agent_prompt_dict["suggest cost optimizations"]
+    #     case x if "project data lookup" in x:
+    #         # prompt = agent_prompt_dict["analyze project data inputs"]
+    #         prompt = get_project_data_answer(message)
+    #     case _:
+    #         if use_rag:
+    #             return ("I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data.", None)
+    #         else:
+    #             return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
+    # if use_rag:
+    #     (answer, source) = rag_call_alt(message, collection, ranker, agent_prompt=prompt, max_context_length=max_tokens)
+    #     return (answer, source)
+    # else:
+    #     return run_llm_query(system_prompt=prompt, user_input=message, stream=stream, max_tokens=max_tokens)
