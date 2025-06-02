@@ -135,6 +135,8 @@ def find_by_description(description, section_confidence_threshold=0.6, row_confi
     # Filter by confidence threshold
     filtered_codes = [code for code, conf in code_confidence.items() if conf >= section_confidence_threshold]
     match = df[df['Masterformat Section Code'].isin(filtered_codes)]
+    if not match.empty:
+        match = match.copy()
     output_df = None
     if not match.empty:
         match['Confidence'] = match['Masterformat Section Code'].map(code_confidence)
