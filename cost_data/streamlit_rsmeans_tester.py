@@ -44,8 +44,8 @@ def ask_cost_question(question):
 
 st.title("RSMeans Utility Tester")
 tabs = st.tabs([
-    "Search by Description",
     "Ask Cost Question",
+    "Search by Description",
     "Search by Section Code",
     "Get Cost Data (Code or Description)",
     "List All Sections"
