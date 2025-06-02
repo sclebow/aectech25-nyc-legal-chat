@@ -1,5 +1,5 @@
 import server.config as config  
-from cost_data.rsmeans_utils import get_cost_data
+from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
 from project_utils.rag_utils import rag_call_alt
 
 # Routing Functions Below
@@ -163,7 +163,7 @@ def analyze_cost_tradeoffs(query: str) -> str:
 #     )
 #     return response.choices[0].message.content.strip()
 
-# def assess_material_impact(query: str) -> str:
+def assess_material_impact(query: str) -> str:
     """
     Evaluate how different material or structural choices impact cost (and possibly ROI or schedule).
     """
@@ -334,44 +334,44 @@ def get_project_data_answer(query: str) -> str:
     else:
         return "No relevant project data found."
 
-def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = False, collection=None, ranker=None, max_tokens: int = 1500):
-    """
-    Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
-    If RSMeans data is found, include a summary table and a short LLM-generated explanation referencing the data.
-    If not, fallback to LLM only.
-    If use_rag is True, use the RAG pipeline to answer and return (answer, sources).
-    """
-    if use_rag and collection is not None and ranker is not None:
-        # Use RAG pipeline for cost benchmark
-        agent_prompt = agent_prompt_dict["get cost benchmarks"]
-        answer, sources = rag_call_alt(query, collection, ranker, agent_prompt=agent_prompt, max_context_length=max_tokens)
-        return answer, sources
-    result = get_cost_data(query)
-    if hasattr(result, 'empty') and not result.empty:
-        summary_md = result[['Masterformat Section Code', 'Section Name', 'Name', 'Unit', 'Total Incl O&P']].to_markdown(index=False)
-        system_prompt = (
-            "You are a cost benchmark assistant. "
-            "Given the following RSMeans cost data (in markdown table format) and the user's question, provide a concise, clear answer. "
-            "Summarize the typical cost per unit, mention any relevant range, and note that actual costs may vary by project and location. "
-            "If multiple items are shown, explain the range and what affects it. "
-            "Always explicitly list out any assumptions you are making (such as location, year, unit, or scope). "
-            "Do not invent numbers; use only the data provided."
-        )
-        user_input = f"User question: {query}\n\nRSMeans data (markdown table):\n{summary_md}"
-        if not stream:
-            explanation = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
-            return f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n{explanation}"
-        else:
-            def generator():
-                yield f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n"
-                for chunk in run_llm_query(system_prompt, user_input, stream=True, max_tokens=max_tokens):
-                    yield chunk
-            return generator()
-    else:
-        prompt = (
-            agent_prompt_dict["get cost benchmarks"] + "\nAlways explicitly list out any assumptions you are making (such as location, year, unit, or scope)."
-        )
-        return run_llm_query(system_prompt=prompt, user_input=query, stream=stream, max_tokens=max_tokens)
+# def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = False, collection=None, ranker=None, max_tokens: int = 1500):
+#     """
+#     Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
+#     If RSMeans data is found, include a summary table and a short LLM-generated explanation referencing the data.
+#     If not, fallback to LLM only.
+#     If use_rag is True, use the RAG pipeline to answer and return (answer, sources).
+#     """
+#     if use_rag and collection is not None and ranker is not None:
+#         # Use RAG pipeline for cost benchmark
+#         agent_prompt = agent_prompt_dict["get cost benchmarks"]
+#         answer, sources = rag_call_alt(query, collection, ranker, agent_prompt=agent_prompt, max_context_length=max_tokens)
+#         return answer, sources
+#     result = get_cost_data(query)
+#     if hasattr(result, 'empty') and not result.empty:
+#         summary_md = result[['Masterformat Section Code', 'Section Name', 'Name', 'Unit', 'Total Incl O&P']].to_markdown(index=False)
+#         system_prompt = (
+#             "You are a cost benchmark assistant. "
+#             "Given the following RSMeans cost data (in markdown table format) and the user's question, provide a concise, clear answer. "
+#             "Summarize the typical cost per unit, mention any relevant range, and note that actual costs may vary by project and location. "
+#             "If multiple items are shown, explain the range and what affects it. "
+#             "Always explicitly list out any assumptions you are making (such as location, year, unit, or scope). "
+#             "Do not invent numbers; use only the data provided."
+#         )
+#         user_input = f"User question: {query}\n\nRSMeans data (markdown table):\n{summary_md}"
+#         if not stream:
+#             explanation = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
+#             return f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n{explanation}"
+#         else:
+#             def generator():
+#                 yield f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n"
+#                 for chunk in run_llm_query(system_prompt, user_input, stream=True, max_tokens=max_tokens):
+#                     yield chunk
+#             return generator()
+#     else:
+#         prompt = (
+#             agent_prompt_dict["get cost benchmarks"] + "\nAlways explicitly list out any assumptions you are making (such as location, year, unit, or scope)."
+#         )
+#         return run_llm_query(system_prompt=prompt, user_input=query, stream=stream, max_tokens=max_tokens)
 
 def classify_data_sources(message: str, data_sources: dict) -> dict:
     """
@@ -413,8 +413,7 @@ def get_rsmeans_context(message: str) -> str:
     Get the RSMeans context for the user message.
     Returns a string with the RSMeans data or a prompt to use RSMeans.
     """
-    # Here we could implement a more complex logic to fetch relevant RSMeans data
-    # For now, we just return a prompt to use RSMeans
+    rsmeans_context = get_rsmeans_context_from_prompt(message)
     return "" # Placeholder
 
 
@@ -496,7 +495,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     if data_sources_needed_dict["ifc"]:
         data_context["ifc"] = get_ifc_context(message)
     if data_sources_needed_dict["project data"]:
-        data_context["project data"] = project_data_context
+        data_context["project data"] = get_project_data_context(message)
     if data_sources_needed_dict["knowledge base"]:
         data_context["knowledge base"] = get_knowledge_base_context(message)
     if data_sources_needed_dict["value model"]:

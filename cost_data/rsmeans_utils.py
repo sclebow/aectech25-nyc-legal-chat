@@ -59,6 +59,23 @@ def find_by_section_code(df, section_code):
     fuzzy_contains = df[code_series.str.contains(code_norm)]
     return fuzzy_contains
 
+def get_rsmeans_context_from_prompt(prompt, max_tokens=1500):
+    """
+    Use an LLM to extract relevant materials from a prompt.
+    The materials will be used to extract data from the RSMeans CSV files.
+    """
+    from llm_calls import run_llm_query  # Import here to avoid circular dependency
+    system_prompt = (
+        "You are an expert at extracting relevant materials from construction task descriptions. "
+        "Given a user's description, extract the most relevant materials that can be used to look up costs in RSMeans data. "
+        "Return your answer as a comma-separated list of materials."
+    )
+    user_input = f"Description: {prompt}"
+    materials = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
+    # Clean up the materials string
+    materials = [m.strip() for m in materials.split(",") if m.strip()]
+    print(f"Extracted materials: {materials}")
+    return materials
 
 def find_by_description(description, section_confidence_threshold=0.6, row_confidence_threshold=0.6):
     """
