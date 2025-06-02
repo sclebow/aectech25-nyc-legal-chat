@@ -28,6 +28,8 @@ sample_questions = [
     "What are the ROI advantages of using precast concrete in construction projects?",
     "Can you provide a cost estimate for a 10,000 sq ft commercial building?",
     "What are the key factors affecting the cost of a residential building?",
+    "What are some cost modeling best practices?",
+    "How many windows are in the IFC model and what is the total cost of the windows?",
     "",
 ]
 cloudflare_models = [
