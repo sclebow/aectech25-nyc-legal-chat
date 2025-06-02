@@ -282,18 +282,36 @@ agent_prompt_dict = {
     """
 }
 
-def run_llm_query(system_prompt: str, user_input: str) -> str:
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False):
     import server.config as config
-    response = config.client.chat.completions.create(
-        model=config.completion_model,
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_input}
-        ],
-        temperature=0.0,
-        max_tokens=1500,
-    )
-    return response.choices[0].message.content.strip()
+    if not stream:
+        response = config.client.chat.completions.create(
+            model=config.completion_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.0,
+            max_tokens=1500,
+        )
+        return response.choices[0].message.content.strip()
+    else:
+        response = config.client.chat.completions.create(
+            model=config.completion_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.0,
+            max_tokens=1500,
+            stream=True,
+        )
+        def generator():
+            for chunk in response:
+                delta = getattr(chunk.choices[0], 'delta', None)
+                if delta and hasattr(delta, 'content') and delta.content:
+                    yield delta.content
+        return generator()
 
 def get_project_data_answer(query: str) -> str:
     prompt = ("You are an assistant that analyzes project data inputs from an IFC file."
@@ -318,6 +336,36 @@ def get_project_data_answer(query: str) -> str:
 
 
 def get_cost_benchmark_answer(query: str) -> str:
+    if not stream:
+        response = config.client.chat.completions.create(
+            model=config.completion_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.0,
+            max_tokens=1500,
+        )
+        return response.choices[0].message.content.strip()
+    else:
+        response = config.client.chat.completions.create(
+            model=config.completion_model,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_input}
+            ],
+            temperature=0.0,
+            max_tokens=1500,
+            stream=True,
+        )
+        def generator():
+            for chunk in response:
+                delta = getattr(chunk.choices[0], 'delta', None)
+                if delta and hasattr(delta, 'content') and delta.content:
+                    yield delta.content
+        return generator()
+
+def get_cost_benchmark_answer(query: str, stream: bool = False):
     """
     Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
     If RSMeans data is found, include a summary table and a short LLM-generated explanation referencing the data.
@@ -325,9 +373,7 @@ def get_cost_benchmark_answer(query: str) -> str:
     """
     result = get_cost_data(rsmeans_df, query)
     if not result.empty:
-        # Format a summary of the relevant RSMeans data as a markdown table
         summary_md = result[['Masterformat Section Code', 'Section Name', 'Name', 'Unit', 'Total Incl O&P']].to_markdown(index=False)
-        # Compose a prompt for the LLM to interpret the data
         system_prompt = (
             "You are a cost benchmark assistant. "
             "Given the following RSMeans cost data (in markdown table format) and the user's question, provide a concise, clear answer. "
@@ -337,25 +383,35 @@ def get_cost_benchmark_answer(query: str) -> str:
             "Do not invent numbers; use only the data provided."
         )
         user_input = f"User question: {query}\n\nRSMeans data (markdown table):\n{summary_md}"
-        explanation = run_llm_query(system_prompt, user_input)
-        return f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n{explanation}"
+        if not stream:
+            explanation = run_llm_query(system_prompt, user_input)
+            return f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n{explanation}"
+        else:
+            def generator():
+                yield f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n"
+                for chunk in run_llm_query(system_prompt, user_input, stream=True):
+                    yield chunk
+            return generator()
     else:
-        # Fallback to LLM only, but require assumptions
         prompt = (
             agent_prompt_dict["get cost benchmarks"] + "\nAlways explicitly list out any assumptions you are making (such as location, year, unit, or scope)."
         )
-        return run_llm_query(system_prompt=prompt, user_input=query)
+        if not stream:
+            return run_llm_query(system_prompt=prompt, user_input=query)
+        else:
+            return run_llm_query(system_prompt=prompt, user_input=query, stream=True)
 
-def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False):
+def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False):
     """
     Classify the user message into one of the five core categories and route it to the appropriate response function.
+    If stream=True, returns a generator for streaming output.
     """
     classification = classify_question_type(message).lower()
     print(classification)
 
     match classification:
         case x if "cost benchmark" in x:
-            return agent_prompt_dict["get cost benchmarks"]
+            return get_cost_benchmark_answer(message, stream=stream)
         case x if "roi analysis" in x:
             prompt = agent_prompt_dict["analyze roi sensitivity"]
         case x if "design-cost comparison" in x:
@@ -369,7 +425,10 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
             return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
     
     if use_rag:
-        (answer, source) =  rag_utils.rag_call_alt(message, collection, ranker, agent_prompt=prompt)
+        (answer, source) = rag_utils.rag_call_alt(message, collection, ranker, agent_prompt=prompt)
         return (answer, source)
     else:
-        return run_llm_query(system_prompt=prompt, user_input=message)
+        if not stream:
+            return run_llm_query(system_prompt=prompt, user_input=message)
+        else:
+            return run_llm_query(system_prompt=prompt, user_input=message, stream=True)

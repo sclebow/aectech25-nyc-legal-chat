@@ -17,10 +17,10 @@ def get_mode():
     global _mode
     return _mode
 
-def set_mode(new_mode):
+def set_mode(new_mode, cf_gen_model=None, cf_emb_model=None):
     global _mode, client, completion_model, embedding_model
     _mode = new_mode
-    client, completion_model, embedding_model = api_mode(_mode)
+    client, completion_model, embedding_model = api_mode(_mode, cf_gen_model, cf_emb_model)
 
 # API
 local_client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
@@ -69,7 +69,7 @@ devstral = [
 cloudflare_model = "@cf/meta/llama-3.3-70b-instruct-fp8-fast"
 
 # Define what models to use according to chosen "mode"
-def api_mode (mode):
+def api_mode (mode, cf_gen_model=None, cf_emb_model=None):
     if mode == "local":
         client = local_client
         completion_model = llama3[0]['model']
@@ -79,9 +79,9 @@ def api_mode (mode):
     
     if mode == "cloudflare":
         client = cloudflare_client
-        completion_model = cloudflare_model
+        completion_model = cf_gen_model if cf_gen_model else cloudflare_model
+        embedding_model = cf_emb_model if cf_emb_model else cloudflare_embedding_model
         code_model = devstral[0]['model']
-        embedding_model = cloudflare_embedding_model
         return client, completion_model, embedding_model
     
     elif mode == "openai":
