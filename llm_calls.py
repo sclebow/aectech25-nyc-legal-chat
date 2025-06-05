@@ -483,8 +483,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     """
     data_sources = {
         "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.",
-        "ifc": "This is a database for a building model in IFC format, which includes detailed information about the building's components and quantities.",
-        "project data": "This is a database for project data, which includes volumes, areas, and quantities of building elements.",
+        "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.",
+        "project data": "This is a database for this project's data, which includes volumes, areas, and quantities of building elements.",
         "knowledge base": "This is a knowledge base for architecture and construction, which includes general information about design, materials, and construction practices.",
         "value model": "This is a machine learning model that predicts the value of a building based some of its features, such as size, and type.",
         "cost model": "This is a machine learning model that predicts the cost of a building based on some of its features, such as size, and type.",
@@ -540,26 +540,3 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response
 
     return response   
-
-    # classification = classify_question_type(message).lower()
-    # print(f"System Prompt Classification: {classification}")
-
-    # match classification:
-    #     case x if "cost benchmark" in x:
-    #         prompt = agent_prompt_dict["get cost benchmarks"]
-    #     case x if "roi analysis" in x:
-    #         prompt = agent_prompt_dict["analyze roi sensitivity"]
-    #     case x if "design-cost comparison" in x:
-    #         prompt = agent_prompt_dict["analyze cost tradeoffs"]
-    #     case x if "value engineering" in x:
-    #         prompt = agent_prompt_dict["suggest cost optimizations"]
-    #     case x if "project data lookup" in x:
-    #         # prompt = agent_prompt_dict["analyze project data inputs"]
-    #         prompt = get_project_data_answer(message)
-    #     case _:
-    #         return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
-    # if use_rag:
-    #     (answer, source) = rag_call_alt(message, collection, ranker, agent_prompt=prompt, max_context_length=max_tokens)
-    #     return (answer, source)
-    # else:
-    #     return run_llm_query(system_prompt=prompt, user_input=message, stream=stream, max_tokens=max_tokens)
