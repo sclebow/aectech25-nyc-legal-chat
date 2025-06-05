@@ -455,7 +455,7 @@ def get_project_data_context(message: str) -> str:
     """
     # Here we could implement a more complex logic to fetch relevant project data
     # For now, we just return a prompt to use project data
-    return bdg_utils.get_project_data_context_from_query()
+    return bdg_utils.get_project_data_context_from_query(message)
 
 def get_knowledge_base_context(message: str) -> str:
     """

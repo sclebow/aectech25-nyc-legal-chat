@@ -110,11 +110,13 @@ def build_rsmeans_cost_data():
     rsmeans_df.to_csv(cost_data_from_rsmeans_csv_filepath, index=False)
     return rsmeans_df
 
-def get_project_data_context_from_query() -> str:
+def get_project_data_context_from_query(message) -> str:
     """
     Retrieves project data context by reading the material export CSV and BDG cost database,
     merging them on 'Source Qty', and returning a string representation of the DataFrame.
     If either file is missing, it returns an error message.
+    Use an LLM call to filter the data based on the message.
+    If the cost data from RSMeans CSV does not exist, it builds it.
     """
     material_df = read_material_export_csv()
     bdg_df = read_bdg_cost_database()
