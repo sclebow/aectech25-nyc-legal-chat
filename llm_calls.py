@@ -1,6 +1,7 @@
 import server.config as config  
 from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
 from project_utils.rag_utils import rag_call_alt
+import time
 
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
@@ -283,36 +284,54 @@ agent_prompt_dict = {
     """
 }
 
-def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500):
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2) -> str:
+    """ Run a query against the LLM with a system prompt and user input.
+    If stream is True, returns a generator for streaming output.
+    If stream is False, returns the full response as a string.
+    If the LLM call fails, it will retry up to max_retries times with a delay of retry_delay seconds between retries.
+    """
     import server.config as config
-    if not stream:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=max_tokens,
-        )
-        return str(response.choices[0].message.content).strip()
-    else:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=max_tokens,
-            stream=True,
-        )
-        def generator():
-            for chunk in response:
-                delta = getattr(chunk.choices[0], 'delta', None)
-                if delta and hasattr(delta, 'content') and delta.content:
-                    yield delta.content
-        return generator()
+    attempt = 0
+    while attempt < max_retries:
+        try:
+            if not stream:
+                response = config.client.chat.completions.create(
+                    model=config.completion_model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_input}
+                    ],
+                    temperature=0.0,
+                    max_tokens=max_tokens,
+                )
+                return str(response.choices[0].message.content).strip()
+            else:
+                response = config.client.chat.completions.create(
+                    model=config.completion_model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_input}
+                    ],
+                    temperature=0.0,
+                    max_tokens=max_tokens,
+                    stream=True,
+                )
+                def generator():
+                    for chunk in response:
+                        delta = getattr(chunk.choices[0], 'delta', None)
+                        if delta and hasattr(delta, 'content') and delta.content:
+                            yield delta.content
+                return generator()
+        except Exception as e:
+            # Check for rate limit or retryable error
+            if hasattr(e, "status_code") and e.status_code == 429 or "rate limit" in str(e).lower():
+                print(f"Rate limit hit, retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+            else:
+                print(f"Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+            time.sleep(retry_delay)
+            attempt += 1
+    raise RuntimeError(f"LLM call failed after {max_retries} attempts due to repeated errors or rate limits.")
+# ...existing code...
 
 def get_project_data_answer(query: str) -> str:
     prompt = ("You are an assistant that analyzes project data inputs from an IFC file."

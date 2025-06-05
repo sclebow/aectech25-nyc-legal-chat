@@ -2,6 +2,7 @@
 
 import os
 import pandas as pd
+from concurrent.futures import ThreadPoolExecutor, as_completed
 try:
     import cost_data.rsmeans_utils as rsmeans_utils
 except ImportError:
@@ -71,26 +72,38 @@ def build_rsmeans_cost_data():
     """
     Builds the RSMeans cost data by reading the bdg_cost_database and using the rsmeans_utils module.
     It saves the resulting DataFrame to a CSV file and returns the DataFrame.
+    Now uses parallel processing for faster cost lookup.
     """
     bdg_df = read_bdg_cost_database()
     unique_descriptions = bdg_df['Description'].unique()
     total_costs = {}
-    for description in unique_descriptions:
+
+    def get_cost(description):
         print(f"\n\n\nFinding cost for description: {description}\n\n\n")
         cost_data = rsmeans_utils.find_by_description(description)
         print(f"Cost dataframe")
         print(cost_data)
-        # total_cost should be the max cost from the Total Incl O&P column
         if cost_data.empty:
             print(f"No cost data found for description: {description}")
-            total_costs[description] = "No cost data found"
-        # Convert the 'Total Incl O&P' column to numeric, coercing errors to NaN
+            return (description, "No cost data found")
         cost_data['Total Incl O&P'] = pd.to_numeric(cost_data['Total Incl O&P'], errors='coerce')
-        total_cost = cost_data['Total Incl O&P'].max()
-        # print(f"Total cost for {description}: {total_cost}")
-        total_costs[description] = total_cost
-        # print(f"Total cost for {description}: {total_cost}")
-    
+        # Drop rows with NaN values in 'Total Incl O&P'
+        cost_data.dropna(subset=['Total Incl O&P'], inplace=True)
+        total_cost = cost_data['Total Incl O&P'].median()
+        return (description, total_cost)
+
+    # Use ThreadPoolExecutor for parallel processing with progress reporting
+    total = len(unique_descriptions)
+    processed = 0
+    print(f"Starting RSMeans cost lookup for {total} descriptions...")
+    with ThreadPoolExecutor() as executor:
+        future_to_desc = {executor.submit(get_cost, desc): desc for desc in unique_descriptions}
+        for future in as_completed(future_to_desc):
+            desc, total_cost = future.result()
+            total_costs[desc] = total_cost
+            processed += 1
+            print(f"Processed {processed}/{total} descriptions ({processed/total:.1%})")
+
     # Create a DataFrame from the total costs
     rsmeans_df = pd.DataFrame(list(total_costs.items()), columns=['Description', 'Total Cost'])
     # Save the DataFrame to a CSV file
@@ -134,13 +147,13 @@ def get_project_data_context_from_query() -> str:
     output_strings = []
     for index, row in material_df.iterrows():
         output_strings.append(
-            f"Code: {row['Code']}, Description: {row['Description']}, "
-            f"Unit: {row['Unit']}, Source Qty: {row['Source Qty']}, "
+            f"Description: {row['Description']}, "
+            f"Unit: {row['Unit']},"
             f"Total Cost: {row['Total Cost'] if 'Total Cost' in row else 'N/A'}"
         )
 
     output = "\n".join(output_strings)
-    return output        
+    return output
 
 if __name__ == "__main__":
     output = get_project_data_context_from_query()
