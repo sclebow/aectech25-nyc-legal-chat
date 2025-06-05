@@ -6,6 +6,7 @@ import server.config as config
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
+import difflib
 
 # For reference, the following are the columns in the RSMeans DataFrame:
 # ['Masterformat Section Code', 'Section Name', 'ID', 'Name', 'Crew', 'Daily Output', 'Labor-Hours','Unit', 'Material', 'Labor', 'Equipment', 'Total', 'Total Incl O&P']
@@ -238,7 +239,22 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
                 confidence = int(match.group(2)) / 100.0
                 if confidence >= row_confidence_threshold:
                     selected_names.append(name)
-        filtered_df = output_df[output_df['Name'].isin(selected_names)]
+                else:
+                    print(f"Filtered out '{name}' with low confidence {confidence:.2f} (threshold: {row_confidence_threshold})")
+        print(f'Selected names with confidence above threshold {row_confidence_threshold}: {", ".join(selected_names)}')
+        # Fuzzy match: use difflib for partial/similarity matching
+        def normalize(s):
+            return str(s).strip().lower()
+
+        norm_selected_names = [normalize(n) for n in selected_names]
+
+        def is_fuzzy_match(name):
+            name_norm = normalize(name)
+            # Find the best match among selected names
+            matches = difflib.get_close_matches(name_norm, norm_selected_names, n=1, cutoff=0.2)
+            return bool(matches)
+
+        filtered_df = output_df[output_df['Name'].apply(is_fuzzy_match)]
         if not filtered_df.empty:
             print(f"Further filtered to {len(filtered_df)} line items by LLM pass on Name/Section Name with confidence threshold {row_confidence_threshold}.")
             output_df = filtered_df

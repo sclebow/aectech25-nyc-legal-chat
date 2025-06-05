@@ -4,6 +4,7 @@ from project_utils.rag_utils import rag_call_alt
 
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
+from bdg_data import bdg_utils
 
 # Remove global rsmeans_df and all references to load_rsmeans_data
 
@@ -424,7 +425,6 @@ def get_ifc_context(message: str) -> str:
     """
     return ifc_utils.get_ifc_context_from_query(message)
 
-
 def get_project_data_context(message: str) -> str:
     """
     Get the project data context for the user message.
@@ -432,9 +432,8 @@ def get_project_data_context(message: str) -> str:
     """
     # Here we could implement a more complex logic to fetch relevant project data
     # For now, we just return a prompt to use project data
-    return "Project data is not implemented yet."  # Placeholder
+    return bdg_utils.get_project_data_context_from_query(message)
 
-# TODO: Implement a function to fetch project data based on the message
 def get_knowledge_base_context(message: str) -> str:
     """
     Get the knowledge base context for the user message.
