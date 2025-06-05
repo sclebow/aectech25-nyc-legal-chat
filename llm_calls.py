@@ -406,12 +406,13 @@ def classify_data_sources(message: str, data_sources: dict) -> dict:
         "Classify the user's query into one or more of the following data sources:\n"
         + "\n".join([f"{key}: {value}" for key, value in data_sources.items()]) + "\n"
         "Return a comma-separated list of the relevant data sources, or 'None' if none apply.\n\n"
+        "rsmeans and project data are mutually exclusive, so if project data is needed, do not include rsmeans.\n"
         "Examples:\n"
         "Query: What is the typical cost per sqft for concrete in NYC?\nOutput: rsmeans\n"
-        "Query: How many units does my current project support and what’s the total cost of concrete?\nOutput: project data, rsmeans\n"
+        "Query: How many units does my current project support and what’s the total cost of concrete?\nOutput: project data\n"
         "Query: What is the value of this building based on its size and type?\nOutput: value model\n"
         "Query: How can I reduce construction costs without changing the layout?\nOutput: knowledge base, cost model\n"
-        "Query: What is the total concrete cost for this project?\nOutput: project data, rsmeans\n"
+        "Query: What is the total concrete cost for this project?\nOutput: project data\n"
     )
 
     response = config.client.chat.completions.create(
@@ -485,9 +486,9 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     If stream=True, returns a generator for streaming output.
     """
     data_sources = {
-        "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.",
+        "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
         "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.",
-        "project data": "This is a database for this project's data, which includes volumes, areas, and quantities of building elements.",
+        "project data": "This is a database for this specific building's data, which includes quantities and costs of materials and labor.  If the user describes a project or asks a general cost question, this source will not be used. Only use this source if the user asks about the current project data.",
         "knowledge base": "This is a knowledge base for architecture and construction, which includes general information about design, materials, and construction practices.",
         "value model": "This is a machine learning model that predicts the value of a building based some of its features, such as size, and type.",
         "cost model": "This is a machine learning model that predicts the cost of a building based on some of its features, such as size, and type.",
