@@ -61,7 +61,9 @@ def get_ifc_context_from_query(query):
 
     shape_statistics_string = "\n".join(shape_statistics)
     if not shape_statistics_string:
-        shape_statistics_string = "No valid shapes found in the query."
+        # shape_statistics_string = "No valid shapes found in the query."
+        # Return all shapes statistics
+        shape_statistics_string = "\n".join([get_shape_statistics(shape) for shape in valid_shapes_dict.values()])
     
     return shape_statistics_string    
 

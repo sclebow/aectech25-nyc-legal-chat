@@ -118,6 +118,8 @@ def get_project_data_context_from_query(message) -> str:
     Use an LLM call to filter the data based on the message.
     If the cost data from RSMeans CSV does not exist, it builds it.
     """
+    from llm_calls import run_llm_query
+
     material_df = read_material_export_csv()
     bdg_df = read_bdg_cost_database()
 
@@ -145,18 +147,65 @@ def get_project_data_context_from_query(message) -> str:
     # Merge the material_df with rsmeans_df on 'Description'
     material_df = material_df.merge(rsmeans_df, on='Description', how='left')
 
+    # Drop rows where 'Value' is NaN or 'Value' is 0
+    material_df.dropna(subset=['Value'], inplace=True)
+    material_df = material_df[material_df['Value'] != 0]
+
+    # Ensure Description column is string type
+    material_df['Description'] = material_df['Description'].astype(str)
+
+    # Get the unique descriptions from the material_df
+    unique_descriptions = material_df['Description'].unique()
+
+    # Ask the LLM to filter the data based on the message
+    system_prompt = (
+        "You are an expert at mapping construction task descriptions to specific descriptiions in a table. "
+        "Given a list of line items (with both Name and Section Name), select all that are most relevant for a user's description. "
+        "Return your answer as a ||-separated list of the exact 'Name' values (not Section Name) with a confidence percentage (0-100) for each, in the format: Name1::confidence1||Name2::confidence2||... "
+        "Return only the names and confidence percentages, no other text. "
+        f"Here are the descriptions: {', '.join(unique_descriptions)}"
+    )
+    user_prompt = (
+        f"Please filter the following descriptions based on the user's message: {message}. "
+        "Return only the most relevant descriptions."
+    )
+    response = run_llm_query(system_prompt, user_prompt)
+    confidence_threshold = 0.5  # Set a confidence threshold for filtering
+    filtered_descriptions = []
+    for item in response.split('||'):
+        if '::' in item:
+            name, confidence = item.split('::')
+            confidence = float(confidence)
+            if confidence >= confidence_threshold:
+                filtered_descriptions.append(name.strip())
+
+    # Filter the material_df to only include rows with descriptions in the filtered_descriptions
+    material_df = material_df[material_df['Description'].isin(filtered_descriptions)]
+
+    # Print the headers for debugging
+    print("Headers of the final DataFrame:")
+    print(material_df.columns.tolist())
+
+    # Add a new column 'Total Cost Amount', that is the product of 'Value' and 'Total Cost'
+    if 'Total Cost' in material_df.columns:
+        material_df['Total Cost Amount'] = material_df['Value'] * material_df['Total Cost']
+        # Rename 'Total Cost' to 'Cost (per Unit)'
+        material_df.rename(columns={'Total Cost': 'Cost (per Unit)'}, inplace=True)
+
     # Write the final DataFrame as a description string
     output_strings = []
     for index, row in material_df.iterrows():
         output_strings.append(
             f"Description: {row['Description']}, "
-            f"Unit: {row['Unit']},"
-            f"Total Cost: {row['Total Cost'] if 'Total Cost' in row else 'N/A'}"
+            f"Total Amount: {row['Value']}, "
+            f"Amount Unit: {row['Unit']},"
+            f"Cost (per Unit): {row['Total Cost'] if 'Total Cost' in row else 'N/A'}",
+            f"Total Cost Amount: {row['Total Cost Amount'] if 'Total Cost Amount' in row else 'N/A'}"
         )
 
     output = "\n".join(output_strings)
     return output
 
-if __name__ == "__main__":
-    output = get_project_data_context_from_query()
-    print(output)
+# if __name__ == "__main__":
+#     output = get_project_data_context_from_query()
+#     print(output)
