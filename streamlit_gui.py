@@ -31,6 +31,7 @@ sample_questions = [
     "What are some cost modeling best practices?",
     "How many windows are in the IFC model and what is the total cost of the windows?",
     "What is the cost benefit of triple glazing compared to double glazing?",
+    "Using only the project data and the ifc, estimate the building's cost",
     "",
 ]
 cloudflare_models = [
@@ -147,7 +148,7 @@ def run_flask_server():
     global flask_process
     if flask_process is None or flask_process.poll() is not None:
         flask_process = subprocess.Popen(
-            ["python", "gh_server.py"],
+            ["python", "-u", "gh_server.py"],
             cwd=os.path.dirname(os.path.abspath(__file__)),
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,

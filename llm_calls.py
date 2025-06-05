@@ -2,6 +2,7 @@ import server.config as config
 from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
 from project_utils.rag_utils import rag_call_alt
 import time
+import concurrent.futures
 
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
@@ -328,6 +329,8 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                 print(f"Rate limit hit, retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
             else:
                 print(f"Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+                print(f"System prompt: {system_prompt}")
+                print(f"User input: {user_input}")
             time.sleep(retry_delay)
             attempt += 1
     raise RuntimeError(f"LLM call failed after {max_retries} attempts due to repeated errors or rate limits.")
@@ -451,7 +454,7 @@ def get_project_data_context(message: str) -> str:
     """
     # Here we could implement a more complex logic to fetch relevant project data
     # For now, we just return a prompt to use project data
-    return bdg_utils.get_project_data_context_from_query(message)
+    return bdg_utils.get_project_data_context_from_query()
 
 def get_knowledge_base_context(message: str) -> str:
     """
@@ -493,24 +496,35 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     # Run the query through the classification function
     data_sources_needed_dict = classify_data_sources(message, data_sources)
 
+    # If project data is needed, do not use rsmeans
+    if data_sources_needed_dict.get("project data"):
+        data_sources_needed_dict["rsmeans"] = False
+
     # Debugging output
     print(f"Data sources needed: {data_sources_needed_dict}")
 
     # Create a data context dictionary based on the classification
     data_context = {}
 
-    if data_sources_needed_dict["rsmeans"]:
-        data_context["rsmeans"] = get_rsmeans_context(message)
-    if data_sources_needed_dict["ifc"]:
-        data_context["ifc"] = get_ifc_context(message)
-    if data_sources_needed_dict["project data"]:
-        data_context["project data"] = get_project_data_context(message)
-    if data_sources_needed_dict["knowledge base"]:
-        data_context["knowledge base"] = get_knowledge_base_context(message)
-    if data_sources_needed_dict["value model"]:
-        data_context["value model"] = get_value_model_context(message)
-    if data_sources_needed_dict["cost model"]:
-        data_context["cost model"] = get_cost_model_context(message)
+    # Map data source keys to their context functions
+    context_functions = {
+        "rsmeans": get_rsmeans_context,
+        "ifc": get_ifc_context,
+        "project data": get_project_data_context,
+        "knowledge base": get_knowledge_base_context,
+        "value model": get_value_model_context,
+        "cost model": get_cost_model_context,
+    }
+
+    # Prepare futures for relevant data sources
+    futures = {}
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        for key, needed in data_sources_needed_dict.items():
+            if needed and key in context_functions:
+                futures[key] = executor.submit(context_functions[key], message)
+        # Collect results as they complete
+        for key, future in futures.items():
+            data_context[key] = future.result()
 
     # Use utf-8 encoding to avoid UnicodeEncodeError in Windows console
     # print(f"Data context: {data_context}".encode("utf-8", errors="replace").decode("utf-8"))
@@ -537,6 +551,6 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         max_tokens=max_tokens
     )
 
-    response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response
+    # response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response # For debugging purposes, uncomment this line to see the data sources and context used in the response
 
-    return response   
+    return response
