@@ -452,7 +452,8 @@ def rag_call_alt(question, collection, ranker, agent_prompt=None, n_results=10, 
                 QUESTION: {question}
                 PROVIDED INFORMATION: {rag_result}"""
     
-    return rag_answer(question=question, prompt=prompt), rag_result
+    # return rag_answer(question=question, prompt=prompt), rag_result
+    return rag_result
 
 def get_rag_context_from_query(query) -> str:
     """
@@ -464,5 +465,5 @@ def get_rag_context_from_query(query) -> str:
     # Initialize RAG collection and ranker
     collection, ranker = init_rag(mode=get_mode())
     # Use rag_call_alt to get the reranked context (second return value is the context string)
-    _, rag_context_string = rag_call_alt(query, collection, ranker)
+    rag_context_string = rag_call_alt(query, collection, ranker)
     return rag_context_string

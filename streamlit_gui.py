@@ -30,6 +30,7 @@ sample_questions = [
     "What are the key factors affecting the cost of a residential building?",
     "What are some cost modeling best practices?",
     "How many windows are in the IFC model and what is the total cost of the windows?",
+    "What is the cost benefit of triple glazing compared to double glazing?",
     "",
 ]
 cloudflare_models = [

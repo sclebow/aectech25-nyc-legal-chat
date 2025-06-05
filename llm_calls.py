@@ -494,7 +494,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     if data_sources_needed_dict["cost model"]:
         data_context["cost model"] = get_cost_model_context(message)
 
-    print(f"Data context: {data_context}")
+    # Use utf-8 encoding to avoid UnicodeEncodeError in Windows console
+    # print(f"Data context: {data_context}".encode("utf-8", errors="replace").decode("utf-8"))
 
     # Now that we have the data context, we can provide it with the system prompt and user input
     system_prompt = (
@@ -505,6 +506,9 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         "If the question is not related to cost, ROI, or project data, politely refuse to answer.\n"
         "Provide a summary of the relavent context used in your answer, and if applicable, include a markdown table with the data.\n"
         "Respond in markdown format, include any formulas in LaTeX format\n"
+        "Ignore any mathmatical information or example cost data or calculations in the knowledge base, as it is not relevant to the user's question\n"
+        "You must cite your sources and page number.  However, if you have no sources, you can say 'No sources found'.\n"
+        "Format references as: [Source: filename, Page: X]\n"
         f"Relevant context: {data_context}\n"
     )
 
@@ -514,6 +518,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         stream=stream,
         max_tokens=max_tokens
     )
+
+    response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response
 
     return response   
 
