@@ -59,11 +59,14 @@ def query_llm(user_input):
     try:
         response = requests.post(FLASK_URL, json={"input": user_input})
         if response.status_code == 200:
-            return response.json().get("response", "No response from server.")
+            data = response.json()
+            data_context = data.get("data_context", "No data context returned.")
+            response_text = data.get("response", "No response from server.")
+            return {"data_context": data_context, "response": response_text}
         else:
-            return f"Error: {response.status_code} - {response.text}"
+            return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}"}
     except Exception as e:
-        return f"Exception: {str(e)}"
+        return {"data_context": "", "response": f"Exception: {str(e)}"}
 
 def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
     mode = config.get_mode() if hasattr(config, 'get_mode') else 'unknown'
@@ -80,7 +83,6 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
         gen_model = None
         emb_model = None
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    # output_header_markdown = f"### Input: {user_input}\n\n"
     url = RAG_URLS.get(rag_mode, FLASK_URL)
     try:
         if stream_mode == "Streaming":
@@ -93,56 +95,24 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
                         streamed_text += chunk
                         placeholder.markdown(streamed_text)
                         time.sleep(0.05)
-                logger.info({
-                    "timestamp": timestamp,
-                    "prompt": user_input,
-                    "mode": mode,
-                    "text_generation_model": gen_model,
-                    "embedding_model": emb_model,
-                    "rag_state": rag_mode,
-                    "output": streamed_text
-                })
-                return streamed_text
+                return {"data_context": "(See stream above)", "response": streamed_text}
             else:
-                return f"Error: {response.status_code} - {response.text}"
+                return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}"}
         else:
             response = requests.post(url, json={"input": user_input, "max_tokens": int(max_tokens)})
             if response.status_code == 200:
                 data = response.json()
-                if "sources" in data:
-                    response_text = data.get('response', 'No response from server.')
-                    output = (
-                        f"{response_text}\n\n**Sources:**\n{data['sources']}"
-                    )
-                else:
-                    response_text = data.get("response", "No response from server.")
-                    output = response_text
+                data_context = data.get("data_context", "No data context returned.")
+                response_text = data.get('response', 'No response from server.')
+                sources = data.get('sources', None)
+                result = {"data_context": data_context, "response": response_text}
+                if sources:
+                    result["sources"] = sources
+                return result
             else:
-                response_text = f"Error: {response.status_code} - {response.text}"
-                output = response_text
-            logger.info({
-                "timestamp": timestamp,
-                "prompt": user_input,
-                "mode": mode,
-                "text_generation_model": gen_model,
-                "embedding_model": emb_model,
-                "rag_state": rag_mode,
-                "output": response_text
-            })
-            return output
+                return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}"}
     except Exception as e:
-        response_text = f"Exception: {str(e)}"
-        output = response_text
-        logger.info({
-            "timestamp": timestamp,
-            "prompt": user_input,
-            "mode": mode,
-            "text_generation_model": gen_model,
-            "embedding_model": emb_model,
-            "rag_state": rag_mode,
-            "output": response_text
-        })
-        return output
+        return {"data_context": "", "response": f"Exception: {str(e)}"}
 
 def run_flask_server():
     global flask_process
@@ -262,6 +232,9 @@ with col2:
         except Exception:
             st.session_state["flask_status"] = "Flask server is not running."
 
+# Move this assignment after the refresh button logic so it always gets the latest value
+flask_status = st.session_state.get("flask_status", "Default Status: Not Running")
+
 with col1:
     flask_status_info = st.info(f"Flask Server Status: {flask_status}")
 
@@ -298,7 +271,15 @@ if "running" in flask_status.lower() and "not" not in flask_status.lower():
     with chat_message_container:
         for msg in st.session_state["messages"]:
             with st.chat_message(msg["role"]):
-                st.markdown(msg["content"])
+                if isinstance(msg["content"], dict):
+                    # Show data context in expander above the response
+                    with st.expander("Show Data Context", expanded=False):
+                        st.markdown(msg["content"].get("data_context", "No data context returned."))
+                    st.markdown(msg["content"].get("response", ""))
+                    if "sources" in msg["content"]:
+                        st.markdown(f"**Sources:**\n{msg['content']['sources']}")
+                else:
+                    st.markdown(msg["content"])
     with st.container():
         user_input = st.chat_input("Type your question or select a sample below...", key="chat_input")
     

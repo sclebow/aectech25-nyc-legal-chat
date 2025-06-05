@@ -554,4 +554,4 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
 
     # response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response # For debugging purposes, uncomment this line to see the data sources and context used in the response
 
-    return response
+    return data_context, response

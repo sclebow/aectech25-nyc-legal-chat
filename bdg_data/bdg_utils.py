@@ -186,6 +186,12 @@ def get_project_data_context_from_query(message) -> str:
     print("Headers of the final DataFrame:")
     print(material_df.columns.tolist())
 
+    # Ensure 'Value' and 'Total Cost' are numeric before multiplication
+    if 'Value' in material_df.columns:
+        material_df['Value'] = pd.to_numeric(material_df['Value'], errors='coerce')
+    if 'Total Cost' in material_df.columns:
+        material_df['Total Cost'] = pd.to_numeric(material_df['Total Cost'], errors='coerce')
+
     # Add a new column 'Total Cost Amount', that is the product of 'Value' and 'Total Cost'
     if 'Total Cost' in material_df.columns:
         material_df['Total Cost Amount'] = material_df['Value'] * material_df['Total Cost']
@@ -198,10 +204,13 @@ def get_project_data_context_from_query(message) -> str:
         output_strings.append(
             f"Description: {row['Description']}, "
             f"Total Amount: {row['Value']}, "
-            f"Amount Unit: {row['Unit']},"
-            f"Cost (per Unit): {row['Total Cost'] if 'Total Cost' in row else 'N/A'}",
+            f"Amount Unit: {row['Unit']}, "
+            f"Cost (per Unit): {row['Total Cost'] if 'Total Cost' in row else 'N/A'}, "
             f"Total Cost Amount: {row['Total Cost Amount'] if 'Total Cost Amount' in row else 'N/A'}"
         )
+    
+    total_cost = material_df['Total Cost Amount'].sum() if 'Total Cost Amount' in material_df.columns else 0
+    output_strings.append(f"\nTotal Cost for all items for prompt: {total_cost}")
 
     output = "\n".join(output_strings)
     return output
