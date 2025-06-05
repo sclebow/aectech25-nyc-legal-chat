@@ -10,6 +10,7 @@ import server.config as config
 import datetime
 from logger_setup import setup_logger
 import time
+import threading
 
 # === Constants and Config ===
 FLASK_URL = "http://127.0.0.1:5000/llm_call"  # Update if Flask runs elsewhere
@@ -21,12 +22,13 @@ RAG_URLS = {
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
 MODE_URL = "http://127.0.0.1:5000/set_mode"
 sample_questions = [
-    "",
+    "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
     "What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.",
     "How do steel frame structures compare to concrete frame structures, considering cost and durability?",
     "What are the ROI advantages of using precast concrete in construction projects?",
     "Can you provide a cost estimate for a 10,000 sq ft commercial building?",
     "What are the key factors affecting the cost of a residential building?",
+    "",
 ]
 cloudflare_models = [
     "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
@@ -58,7 +60,7 @@ def query_llm(user_input):
     except Exception as e:
         return f"Exception: {str(e)}"
 
-def query_llm_with_rag(user_input, rag_mode, stream_mode):
+def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
     mode = config.get_mode() if hasattr(config, 'get_mode') else 'unknown'
     gen_model = None
     emb_model = None
@@ -81,15 +83,14 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode):
     url = RAG_URLS.get(rag_mode, FLASK_URL)
     try:
         if stream_mode == "Streaming":
-            # Streaming mode: use requests with stream=True
-            response = requests.post(url, json={"input": user_input, "stream": True}, stream=True)
+            response = requests.post(url, json={"input": user_input, "stream": True, "max_tokens": int(max_tokens)}, stream=True)
             if response.status_code == 200:
                 streamed_text = ""
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
                     if chunk:
-                        print(chunk, end="", flush=True)  # Print to console for testing
                         streamed_text += chunk
-                        yield streamed_text  # Update Gradio output live
+                        # Always yield markdown-formatted output
+                        yield output_header_markdown + streamed_text
                 # Log the call
                 logger.info({
                     "timestamp": timestamp,
@@ -103,7 +104,7 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode):
             else:
                 yield output_header_markdown + f"Error: {response.status_code} - {response.text}"
         else:
-            response = requests.post(url, json={"input": user_input})
+            response = requests.post(url, json={"input": user_input, "max_tokens": int(max_tokens)})
             if response.status_code == 200:
                 data = response.json()
                 if "sources" in data:
@@ -153,9 +154,18 @@ def run_flask_server():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
+        stream_subprocess_output(flask_process)
         return "Flask server started."
     else:
         return "Flask server is already running."
+
+def stream_subprocess_output(process):
+    def stream(pipe):
+        for line in iter(pipe.readline, b''):
+            print("Flask Server:", line.decode(errors="replace").rstrip())
+        pipe.close()
+    threading.Thread(target=stream, args=(process.stdout,), daemon=True).start()
+    threading.Thread(target=stream, args=(process.stderr,), daemon=True).start()
 
 def stop_flask_server():
     global flask_process
@@ -327,6 +337,15 @@ def build_gradio_app():
                     label="Response Mode",
                     interactive=True
                 )
+            # Add max_tokens input
+            max_tokens_input = gr.Number(
+                value=1500,
+                label="Max Tokens",
+                minimum=100,
+                maximum=4096,
+                step=1,
+                interactive=True
+            )
 
             gr.Markdown("# LLM Output Viewer\nEnter your question below:")
 
@@ -335,7 +354,7 @@ def build_gradio_app():
                     choices=sample_questions,
                     label="Or select a sample question",
                     interactive=True,
-                    value=None,
+                    value=sample_questions[0],
                     allow_custom_value=False,
                     info="Pick a sample or type your own below."
                 )
@@ -359,7 +378,8 @@ def build_gradio_app():
                 output = gr.Markdown(label="LLM Output")
 
             submit_btn.click(fn=show_processing, inputs=[], outputs=output, queue=False)
-            submit_btn.click(fn=query_llm_with_rag, inputs=[user_input, rag_radio, stream_radio], outputs=output, queue=True)
+            # Pass max_tokens_input to query_llm_with_rag
+            submit_btn.click(fn=query_llm_with_rag, inputs=[user_input, rag_radio, stream_radio, max_tokens_input], outputs=output, queue=True)
             start_flask_btn.click(fn=start_flask_and_wait, outputs=flask_status)
             stop_flask_btn.click(fn=stop_flask_server, outputs=flask_status)
 

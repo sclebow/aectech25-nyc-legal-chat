@@ -1,11 +1,14 @@
 import server.config as config  
-from cost_data.rsmeans_utils import load_rsmeans_data, get_cost_data
+from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
+from project_utils.rag_utils import rag_call_alt
+import time
+import concurrent.futures
 
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
+from bdg_data import bdg_utils
 
-# Load RSMeans data once at module level
-rsmeans_df = load_rsmeans_data()
+# Remove global rsmeans_df and all references to load_rsmeans_data
 
 # Routing & Filtering Functions
 def classify_input(message: str) -> str:
@@ -100,38 +103,38 @@ def classify_input(message: str) -> str:
 
 # # Group 4 Prompts:
 
-# # Cost Estimation & ROI Analysis Functions
-# def analyze_cost_tradeoffs(query: str) -> str:
-#     """
-#     Analyze cost trade-offs based on the user's query.
-#     E.g., comparing two design options or the impact of a design change on cost/ROI.
-#     """
-#     system_prompt = (
-#         "You are an expert architectural cost consultant.\n"
-#         "# Task:\n"
-#         "Given a scenario or query, analyze and compare the cost trade-offs between the design options or changes described. Consider both initial construction costs and long-term financial impacts (such as ROI, maintenance, or operational costs) if relevant.\n"
-#         "# Instructions:\n"
-#         "- Break down each option or change, explaining how it affects construction cost (e.g., cost per area, material and/or labor differences) and potential changes to the project's value.\n"
-#         "- Highlight the pros and cons of each option: which is more expensive upfront, which may save money over time, and any relevant risks or benefits.\n"
-#         "- Use any specific numbers given in the query; if none are given, provide reasoned estimates or qualitative comparisons.\n"
-#         "- Clearly state any assumptions for your estimates (e.g., unit costs, rates, location, or market conditions).\n"
-#         "- Structure your answer logically (e.g., Option A vs Option B, or Before vs After change), and quantify differences where possible.\n"
-#         "- Conclude with a recommendation or summary of which option is cost-favorable and why, if asked for advice.\n"
-#         "- Always mention that actual costs can vary by project and location, and the comparison is based on typical scenarios.\n"
-#         "# Example:\n"
-#         "Query: Should we use steel or timber for the main structure?\n"
-#         "Output: Steel framing typically costs 10-20% more than timber for similar spans, but offers greater durability and fire resistance. Timber is less expensive upfront and can be installed faster, reducing labor costs. However, steel may have lower maintenance costs over the building's life. In most urban markets, timber is more cost-effective for low-rise buildings, while steel is preferred for high-rise or long-span structures. Actual costs depend on local material prices and labor rates." # TODO fact-check this example
-#     )
-#     # (Optionally, I think we might be able to retrieve relevant data here via rag_utils if needed to inform the comparison.)
-#     response = config.client.chat.completions.create(
-#         model=config.completion_model,
-#         messages=[
-#             {"role": "system", "content": system_prompt},
-#             {"role": "user", "content": query}
-#         ],
-#         temperature=0.5,  # Adjust temperature for more or less creative responses
-#     )
-#     return response.choices[0].message.content.strip()
+# Cost Estimation & ROI Analysis Functions
+def analyze_cost_tradeoffs(query: str) -> str:
+    """
+    Analyze cost trade-offs based on the user's query.
+    E.g., comparing two design options or the impact of a design change on cost/ROI.
+    """
+    system_prompt = (
+        "You are an expert architectural cost consultant.\n"
+        "# Task:\n"
+        "Given a scenario or query, analyze and compare the cost trade-offs between the design options or changes described. Consider both initial construction costs and long-term financial impacts (such as ROI, maintenance, or operational costs) if relevant.\n"
+        "# Instructions:\n"
+        "- Break down each option or change, explaining how it affects construction cost (e.g., cost per area, material and/or labor differences) and potential changes to the project's value.\n"
+        "- Highlight the pros and cons of each option: which is more expensive upfront, which may save money over time, and any relevant risks or benefits.\n"
+        "- Use any specific numbers given in the query; if none are given, provide reasoned estimates or qualitative comparisons.\n"
+        "- Clearly state any assumptions for your estimates (e.g., unit costs, rates, location, or market conditions).\n"
+        "- Structure your answer logically (e.g., Option A vs Option B, or Before vs After change), and quantify differences where possible.\n"
+        "- Conclude with a recommendation or summary of which option is cost-favorable and why, if asked for advice.\n"
+        "- Always mention that actual costs can vary by project and location, and the comparison is based on typical scenarios.\n"
+        "# Example:\n"
+        "Query: Should we use steel or timber for the main structure?\n"
+        "Output: Steel framing typically costs 10-20% more than timber for similar spans, but offers greater durability and fire resistance. Timber is less expensive upfront and can be installed faster, reducing labor costs. However, steel may have lower maintenance costs over the building's life. In most urban markets, timber is more cost-effective for low-rise buildings, while steel is preferred for high-rise or long-span structures. Actual costs depend on local material prices and labor rates." # TODO fact-check this example
+    )
+    # (Optionally, I think we might be able to retrieve relevant data here via rag_call_alt if needed to inform the comparison.)
+    response = config.client.chat.completions.create(
+        model=config.completion_model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": query}
+        ],
+        temperature=0.5,  # Adjust temperature for more or less creative responses
+    )
+    return response.choices[0].message.content.strip()
 
 # def analyze_roi_sensitivity(query: str) -> str:
 #     """
@@ -163,7 +166,7 @@ def classify_input(message: str) -> str:
 #     )
 #     return response.choices[0].message.content.strip()
 
-# def assess_material_impact(query: str) -> str:
+def assess_material_impact(query: str) -> str:
     """
     Evaluate how different material or structural choices impact cost (and possibly ROI or schedule).
     """
@@ -282,36 +285,56 @@ agent_prompt_dict = {
     """
 }
 
-def run_llm_query(system_prompt: str, user_input: str, stream: bool = False):
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2) -> str:
+    """ Run a query against the LLM with a system prompt and user input.
+    If stream is True, returns a generator for streaming output.
+    If stream is False, returns the full response as a string.
+    If the LLM call fails, it will retry up to max_retries times with a delay of retry_delay seconds between retries.
+    """
     import server.config as config
-    if not stream:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=1500,
-        )
-        return response.choices[0].message.content.strip()
-    else:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=1500,
-            stream=True,
-        )
-        def generator():
-            for chunk in response:
-                delta = getattr(chunk.choices[0], 'delta', None)
-                if delta and hasattr(delta, 'content') and delta.content:
-                    yield delta.content
-        return generator()
+    attempt = 0
+    while attempt < max_retries:
+        try:
+            if not stream:
+                response = config.client.chat.completions.create(
+                    model=config.completion_model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_input}
+                    ],
+                    temperature=0.0,
+                    max_tokens=max_tokens,
+                )
+                return str(response.choices[0].message.content).strip()
+            else:
+                response = config.client.chat.completions.create(
+                    model=config.completion_model,
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_input}
+                    ],
+                    temperature=0.0,
+                    max_tokens=max_tokens,
+                    stream=True,
+                )
+                def generator():
+                    for chunk in response:
+                        delta = getattr(chunk.choices[0], 'delta', None)
+                        if delta and hasattr(delta, 'content') and delta.content:
+                            yield delta.content
+                return generator()
+        except Exception as e:
+            # Check for rate limit or retryable error
+            if hasattr(e, "status_code") and e.status_code == 429 or "rate limit" in str(e).lower():
+                print(f"Rate limit hit, retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+            else:
+                print(f"Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+                print(f"System prompt: {system_prompt}")
+                print(f"User input: {user_input}")
+            time.sleep(retry_delay)
+            attempt += 1
+    raise RuntimeError(f"LLM call failed after {max_retries} attempts due to repeated errors or rate limits.")
+# ...existing code...
 
 def get_project_data_answer(query: str) -> str:
     prompt = ("You are an assistant that analyzes project data inputs from an IFC file."
@@ -334,101 +357,201 @@ def get_project_data_answer(query: str) -> str:
     else:
         return "No relevant project data found."
 
+# def get_cost_benchmark_answer(query: str, stream: bool = False, use_rag: bool = False, collection=None, ranker=None, max_tokens: int = 1500):
+#     """
+#     Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
+#     If RSMeans data is found, include a summary table and a short LLM-generated explanation referencing the data.
+#     If not, fallback to LLM only.
+#     If use_rag is True, use the RAG pipeline to answer and return (answer, sources).
+#     """
+#     if use_rag and collection is not None and ranker is not None:
+#         # Use RAG pipeline for cost benchmark
+#         agent_prompt = agent_prompt_dict["get cost benchmarks"]
+#         answer, sources = rag_call_alt(query, collection, ranker, agent_prompt=agent_prompt, max_context_length=max_tokens)
+#         return answer, sources
+#     result = get_cost_data(query)
+#     if hasattr(result, 'empty') and not result.empty:
+#         summary_md = result[['Masterformat Section Code', 'Section Name', 'Name', 'Unit', 'Total Incl O&P']].to_markdown(index=False)
+#         system_prompt = (
+#             "You are a cost benchmark assistant. "
+#             "Given the following RSMeans cost data (in markdown table format) and the user's question, provide a concise, clear answer. "
+#             "Summarize the typical cost per unit, mention any relevant range, and note that actual costs may vary by project and location. "
+#             "If multiple items are shown, explain the range and what affects it. "
+#             "Always explicitly list out any assumptions you are making (such as location, year, unit, or scope). "
+#             "Do not invent numbers; use only the data provided."
+#         )
+#         user_input = f"User question: {query}\n\nRSMeans data (markdown table):\n{summary_md}"
+#         if not stream:
+#             explanation = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
+#             return f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n{explanation}"
+#         else:
+#             def generator():
+#                 yield f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n"
+#                 for chunk in run_llm_query(system_prompt, user_input, stream=True, max_tokens=max_tokens):
+#                     yield chunk
+#             return generator()
+#     else:
+#         prompt = (
+#             agent_prompt_dict["get cost benchmarks"] + "\nAlways explicitly list out any assumptions you are making (such as location, year, unit, or scope)."
+#         )
+#         return run_llm_query(system_prompt=prompt, user_input=query, stream=stream, max_tokens=max_tokens)
 
-def get_cost_benchmark_answer(query: str) -> str:
-    if not stream:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=1500,
-        )
-        return response.choices[0].message.content.strip()
-    else:
-        response = config.client.chat.completions.create(
-            model=config.completion_model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": user_input}
-            ],
-            temperature=0.0,
-            max_tokens=1500,
-            stream=True,
-        )
-        def generator():
-            for chunk in response:
-                delta = getattr(chunk.choices[0], 'delta', None)
-                if delta and hasattr(delta, 'content') and delta.content:
-                    yield delta.content
-        return generator()
-
-def get_cost_benchmark_answer(query: str, stream: bool = False):
+def classify_data_sources(message: str, data_sources: dict) -> dict:
     """
-    Answer a cost benchmark question using both RSMeans data and a tailored LLM prompt.
-    If RSMeans data is found, include a summary table and a short LLM-generated explanation referencing the data.
-    If not, fallback to LLM only.
+    Classify the user message into one of the five core data sources.
+    Returns a dictionary with boolean values indicating which data sources are relevant.
     """
-    result = get_cost_data(rsmeans_df, query)
-    if not result.empty:
-        summary_md = result[['Masterformat Section Code', 'Section Name', 'Name', 'Unit', 'Total Incl O&P']].to_markdown(index=False)
-        system_prompt = (
-            "You are a cost benchmark assistant. "
-            "Given the following RSMeans cost data (in markdown table format) and the user's question, provide a concise, clear answer. "
-            "Summarize the typical cost per unit, mention any relevant range, and note that actual costs may vary by project and location. "
-            "If multiple items are shown, explain the range and what affects it. "
-            "Always explicitly list out any assumptions you are making (such as location, year, unit, or scope). "
-            "Do not invent numbers; use only the data provided."
-        )
-        user_input = f"User question: {query}\n\nRSMeans data (markdown table):\n{summary_md}"
-        if not stream:
-            explanation = run_llm_query(system_prompt, user_input)
-            return f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n{explanation}"
-        else:
-            def generator():
-                yield f"**RSMeans Data:**\n\n{summary_md}\n\n**Interpretation:**\n"
-                for chunk in run_llm_query(system_prompt, user_input, stream=True):
-                    yield chunk
-            return generator()
-    else:
-        prompt = (
-            agent_prompt_dict["get cost benchmarks"] + "\nAlways explicitly list out any assumptions you are making (such as location, year, unit, or scope)."
-        )
-        if not stream:
-            return run_llm_query(system_prompt=prompt, user_input=query)
-        else:
-            return run_llm_query(system_prompt=prompt, user_input=query, stream=True)
+    system_prompt = (
+        "You are a data source classification agent for a building project assistant.\n"
+        "Classify the user's query into one or more of the following data sources:\n"
+        + "\n".join([f"{key}: {value}" for key, value in data_sources.items()]) + "\n"
+        "Return a comma-separated list of the relevant data sources, or 'None' if none apply.\n\n"
+        "rsmeans and project data are mutually exclusive, so if project data is needed, do not include rsmeans.\n"
+        "Examples:\n"
+        "Query: What is the typical cost per sqft for concrete in NYC?\nOutput: rsmeans\n"
+        "Query: How many units does my current project support and what’s the total cost of concrete?\nOutput: project data\n"
+        "Query: What is the value of this building based on its size and type?\nOutput: value model\n"
+        "Query: How can I reduce construction costs without changing the layout?\nOutput: knowledge base, cost model\n"
+        "Query: What is the total concrete cost for this project?\nOutput: project data\n"
+    )
 
-def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False):
+    response = config.client.chat.completions.create(
+        model=config.completion_model,
+        messages=[
+            {"role": "system", "content": system_prompt},
+            {"role": "user", "content": message}
+        ],
+        temperature=0.0,
+    )
+    
+    classification = response.choices[0].message.content.strip()
+    if classification.lower() == "none":
+        return {key: False for key in data_sources.keys()}
+    
+    # Split the classification into a list and create a dictionary with boolean values
+    classified_sources = classification.split(", ")
+    return {key: (key in classified_sources) for key in data_sources.keys()}
+
+def get_rsmeans_context(message: str) -> str:
+    """
+    Get the RSMeans context for the user message.
+    Returns a string with the RSMeans data or a prompt to use RSMeans.
+    """
+    rsmeans_context = get_rsmeans_context_from_prompt(message)
+    return rsmeans_context
+
+
+def get_ifc_context(message: str) -> str:
+    """
+    Get the IFC context for the user message.
+    Returns a string with the IFC data or a prompt to use IFC.
+    """
+    return ifc_utils.get_ifc_context_from_query(message)
+
+def get_project_data_context(message: str) -> str:
+    """
+    Get the project data context for the user message.
+    Returns a string with the project data or a prompt to use project data.
+    """
+    # Here we could implement a more complex logic to fetch relevant project data
+    # For now, we just return a prompt to use project data
+    return bdg_utils.get_project_data_context_from_query(message)
+
+def get_knowledge_base_context(message: str) -> str:
+    """
+    Get the knowledge base context for the user message.
+    Returns a string with the knowledge base data or a prompt to use the knowledge base.
+    """
+    return rag_utils.get_rag_context_from_query(message)
+
+# TODO: Implement a function to fetch value model data based on the message
+def get_value_model_context(message: str) -> str:
+    """
+    Get the value model context for the user message.
+    Returns a string with the value model data or a prompt to use the value model.
+    """
+    return "Value model is not implemented yet."  # Placeholder
+
+# TODO: Implement a function to fetch cost model data based on the message
+def get_cost_model_context(message: str) -> str:
+    """
+    Get the cost model context for the user message.
+    Returns a string with the cost model data or a prompt to use the cost model.
+    """
+    return "Cost model is not implemented yet."  # Placeholder
+
+def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500):
     """
     Classify the user message into one of the five core categories and route it to the appropriate response function.
     If stream=True, returns a generator for streaming output.
     """
-    classification = classify_question_type(message).lower()
-    print(classification)
+    data_sources = {
+        "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
+        "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.",
+        "project data": "This is a database for this specific building's data, which includes quantities and costs of materials and labor.  If the user describes a project or asks a general cost question, this source will not be used. Only use this source if the user asks about the current project data.",
+        "knowledge base": "This is a knowledge base for architecture and construction, which includes general information about design, materials, and construction practices.",
+        "value model": "This is a machine learning model that predicts the value of a building based some of its features, such as size, and type.",
+        "cost model": "This is a machine learning model that predicts the cost of a building based on some of its features, such as size, and type.",
+    }
 
-    match classification:
-        case x if "cost benchmark" in x:
-            return get_cost_benchmark_answer(message, stream=stream)
-        case x if "roi analysis" in x:
-            prompt = agent_prompt_dict["analyze roi sensitivity"]
-        case x if "design-cost comparison" in x:
-            prompt = agent_prompt_dict["analyze cost tradeoffs"]
-        case x if "value engineering" in x:
-            prompt = agent_prompt_dict["suggest cost optimizations"]
-        case x if "project data lookup" in x:
-            # prompt = agent_prompt_dict["analyze project data inputs"]
-            prompt = get_project_data_answer(message)
-        case _:
-            return "I'm sorry, I cannot process this request. Please ask a question related to cost, ROI, or project data."
-    
-    if use_rag:
-        (answer, source) = rag_utils.rag_call_alt(message, collection, ranker, agent_prompt=prompt)
-        return (answer, source)
-    else:
-        if not stream:
-            return run_llm_query(system_prompt=prompt, user_input=message)
-        else:
-            return run_llm_query(system_prompt=prompt, user_input=message, stream=True)
+    # Run the query through the classification function
+    data_sources_needed_dict = classify_data_sources(message, data_sources)
+
+    # If project data is needed, do not use rsmeans
+    if data_sources_needed_dict.get("project data"):
+        data_sources_needed_dict["rsmeans"] = False
+
+    # Debugging output
+    print(f"Data sources needed: {data_sources_needed_dict}")
+
+    # Create a data context dictionary based on the classification
+    data_context = {}
+
+    # Map data source keys to their context functions
+    context_functions = {
+        "rsmeans": get_rsmeans_context,
+        "ifc": get_ifc_context,
+        "project data": get_project_data_context,
+        "knowledge base": get_knowledge_base_context,
+        "value model": get_value_model_context,
+        "cost model": get_cost_model_context,
+    }
+
+    # Prepare futures for relevant data sources
+    futures = {}
+    with concurrent.futures.ThreadPoolExecutor() as executor:
+        for key, needed in data_sources_needed_dict.items():
+            if needed and key in context_functions:
+                futures[key] = executor.submit(context_functions[key], message)
+        # Collect results as they complete
+        for key, future in futures.items():
+            data_context[key] = future.result()
+
+    # Use utf-8 encoding to avoid UnicodeEncodeError in Windows console
+    # print(f"Data context: {data_context}".encode("utf-8", errors="replace").decode("utf-8"))
+
+    # Now that we have the data context, we can provide it with the system prompt and user input
+    system_prompt = (
+        "You are an expert in building cost estimation, ROI analysis, and project data analysis.\n"
+        "Your task is to answer the user's question using the provided relevant context. "
+        "The user is a designer or project manager, tailor the level of detail and technicality to their expertise.\n"
+        "Use the relevant context to inform your answer, and always explicitly list out any assumptions you are making (such as location, year, unit, or scope). "
+        "If the question is not related to cost, ROI, or project data, politely refuse to answer.\n"
+        "Provide a summary of the relavent context used in your answer, and if applicable, include a markdown table with the data.\n"
+        "Respond in markdown format, include any formulas in LaTeX format\n"
+        "Ignore any mathmatical information or example cost data or calculations in the knowledge base, as it is not relevant to the user's question\n"
+        "You must cite your sources and page number.  However, if you have no sources, you can say 'No sources found'.\n"
+        "Format references as: [Source: filename, Page: X]\n"
+        f"Relevant context: {data_context}\n"
+    )
+
+    response = run_llm_query(
+        system_prompt=system_prompt,
+        user_input=message,
+        stream=stream,
+        max_tokens=max_tokens
+    )
+
+    # response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response # For debugging purposes, uncomment this line to see the data sources and context used in the response
+
+    return data_context, response

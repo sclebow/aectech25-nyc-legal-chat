@@ -13,38 +13,45 @@ def llm_call():
     data = request.get_json()
     input_string = data.get('input', '')
     stream = data.get('stream', False)
+    max_tokens = data.get('max_tokens', 1500)
 
     if stream:
         def generate():
-            for chunk in llm_calls.route_query_to_function(input_string, stream=True):
-                yield chunk
+            data_context, response = llm_calls.route_query_to_function(input_string, stream=True, max_tokens=max_tokens)
+            # Prepend data_context at the start of the stream
+            yield f"[DATA CONTEXT]: {data_context}\n\n"
+            if hasattr(response, '__iter__') and not isinstance(response, str):
+                for chunk in response:
+                    yield chunk
+            else:
+                yield str(response)
         return Response(generate(), mimetype='text/plain')
     else:
-        answer = llm_calls.route_query_to_function(input_string)
-        return jsonify({'response': answer})
+        data_context, response = llm_calls.route_query_to_function(input_string, max_tokens=max_tokens)
+        return jsonify({'data_context': data_context, 'response': response})
 
 @app.route('/llm_rag_call', methods=['POST'])
 def llm_rag_call():
     data = request.get_json()
     input_string = data.get('input', '')
     stream = data.get('stream', False)
+    max_tokens = data.get('max_tokens', 1500)
 
     if stream:
         def generate():
-            answer, sources = llm_calls.route_query_to_function(input_string, collection, ranker, True, stream=True)
-            # If answer is a generator, yield from it
-            if hasattr(answer, '__iter__') and not isinstance(answer, str):
-                for chunk in answer:
+            (data_context, response), sources = llm_calls.route_query_to_function(input_string, collection, ranker, True, stream=True, max_tokens=max_tokens)
+            yield f"[DATA CONTEXT]: {data_context}\n\n"
+            if hasattr(response, '__iter__') and not isinstance(response, str):
+                for chunk in response:
                     yield chunk
             else:
-                yield str(answer)
-            # Optionally, yield sources at the end (as JSON or plain text)
+                yield str(response)
             if sources:
                 yield f"\n\n[SOURCES]: {sources}"
         return Response(generate(), mimetype='text/plain')
     else:
-        answer, sources = llm_calls.route_query_to_function(input_string, collection, ranker, True)
-        return jsonify({'response': answer, 'sources': sources})
+        (data_context, response), sources = llm_calls.route_query_to_function(input_string, collection, ranker, True, max_tokens=max_tokens)
+        return jsonify({'data_context': data_context, 'response': response, 'sources': sources})
 
 @app.route('/set_mode', methods=['POST'])
 def set_mode():
@@ -72,5 +79,5 @@ def status():
     }), 200
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5555)
+    app.run(debug=False, use_reloader=False)
 
