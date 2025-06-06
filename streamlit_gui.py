@@ -12,15 +12,17 @@ import datetime
 import server.config as config
 from logger_setup import setup_logger
 
+port = '5555'
+
 # === Constants and Config ===
-FLASK_URL = "http://127.0.0.1:5000/llm_call"
+FLASK_URL = f"http://127.0.0.1:{port}/llm_call"
 RAG_OPTIONS = ["LLM only", "LLM + RAG"]
 RAG_URLS = {
     "LLM only": FLASK_URL,
-    "LLM + RAG": "http://127.0.0.1:5000/llm_rag_call"
+    "LLM + RAG": f"http://127.0.0.1:{port}/llm_rag_call"
 }
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
-MODE_URL = "http://127.0.0.1:5000/set_mode"
+MODE_URL = f"http://127.0.0.1:{port}/set_mode"
 sample_questions = [
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
     "What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.",
@@ -156,7 +158,7 @@ def set_mode_on_server(selected_mode):
         return f"Exception: {str(e)}"
 
 def poll_flask_status(max_retries=20, delay=0.5):
-    url = "http://127.0.0.1:5000/status"
+    url = f"http://127.0.0.1:{port}/status"
     for _ in range(max_retries):
         try:
             resp = requests.get(url, timeout=1)
@@ -175,7 +177,7 @@ def start_flask_and_wait():
 
 def get_cloudflare_model_status():
     try:
-        resp = requests.get("http://127.0.0.1:5000/status")
+        resp = requests.get(f"http://127.0.0.1:{port}/status")
         if resp.status_code == 200:
             data = resp.json()
             if data.get("mode") == "cloudflare":
@@ -224,7 +226,7 @@ with col2:
     # Add a refresh button
     if st.button("Refresh Status"):
         try:
-            resp = requests.get("http://127.0.0.1:5000/status", timeout=1)
+            resp = requests.get(f"http://127.0.0.1:{port}/status", timeout=1)
             if resp.status_code == 200:
                 st.session_state["flask_status"] = "Flask server is running."
             else:
