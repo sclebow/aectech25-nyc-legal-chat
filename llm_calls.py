@@ -5,6 +5,7 @@ import time
 import concurrent.futures
 import logging
 import inspect
+import threading
 
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
@@ -19,8 +20,23 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
     import server.config as config
     attempt = 0
     caller = inspect.stack()[1].function
-    log_prefix = f"[id={request_id}] [run_llm_query] [called_by={caller}]"
-    logging.info(f"{log_prefix} Starting LLM query | system_prompt_len={len(system_prompt)} | user_input={user_input}")
+    thread_id = threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    log_prefix = f"[id={request_id}] [thread={thread_id}]"
+    if parent_thread_id:
+        log_prefix += f" [parent_thread={parent_thread_id}]"
+    log_prefix += f" [run_llm_query] [called_by={caller}]"
+    # Truncate and format long/multiline strings for logging
+    def format_log_string(label, value):
+        if not isinstance(value, str):
+            value = str(value)
+        # Replace newlines for log readability
+        value = value.replace('\n', '\\n')
+        return f"{label}={value}"
+
+    logging.info(f"{log_prefix} Starting LLM query | "
+                 f"{format_log_string('system_prompt', system_prompt)} | "
+                 f"{format_log_string('user_input', user_input)}")
     while attempt < max_retries:
         try:
             if not stream:
@@ -33,7 +49,9 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                     temperature=0.0,
                     max_tokens=max_tokens,
                 )
-                logging.info(f"{log_prefix} LLM query successful on attempt {attempt+1}")
+                logging.info(f"{log_prefix} LLM query successful on attempt {attempt+1} | "
+                             f"{format_log_string('system_prompt', system_prompt)} | "
+                             f"{format_log_string('user_input', user_input)}")
                 return str(response.choices[0].message.content).strip()
             else:
                 response = config.client.chat.completions.create(
@@ -54,11 +72,12 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                         if delta and hasattr(delta, 'content') and delta.content:
                             full_message += delta.content
                             yield delta.content
-                        # Try to extract usage data if present in chunk
                         if hasattr(chunk, 'usage') and chunk.usage:
                             usage_data = chunk.usage
-                    logging.info(f"{log_prefix} LLM streaming query started on attempt {attempt+1}")
-                    logging.info(f"{log_prefix} LLM streaming query full message: {full_message}")
+                    logging.info(f"{log_prefix} LLM streaming query started on attempt {attempt+1} | "
+                                 f"{format_log_string('system_prompt', system_prompt)} | "
+                                 f"{format_log_string('user_input', user_input)}")
+                    logging.info(f"{log_prefix} LLM streaming query full message: {format_log_string('full_message', full_message)}")
                     if usage_data:
                         logging.info(f"{log_prefix} LLM streaming usage data: {usage_data}")
                 return generator()
@@ -66,12 +85,16 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
             if hasattr(e, "status_code") and e.status_code == 429 or "rate limit" in str(e).lower():
                 logging.warning(f"{log_prefix} Rate limit hit, retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
             else:
-                logging.error(f"{log_prefix} Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+                logging.error(f"{log_prefix} Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries}) | "
+                              f"{format_log_string('system_prompt', system_prompt)} | "
+                              f"{format_log_string('user_input', user_input)}")
                 logging.error(f"{log_prefix} System prompt: {system_prompt}")
                 logging.error(f"{log_prefix} User input: {user_input}")
             time.sleep(retry_delay)
             attempt += 1
-    logging.critical(f"{log_prefix} LLM call failed after {max_retries} attempts.")
+    logging.critical(f"{log_prefix} LLM call failed after {max_retries} attempts. | "
+                    f"{format_log_string('system_prompt', system_prompt)} | "
+                    f"{format_log_string('user_input', user_input)}")
     raise RuntimeError(f"LLM call failed after {max_retries} attempts due to repeated errors or rate limits.")
 
 def classify_data_sources(message: str, data_sources: dict, request_id: str = None) -> dict:

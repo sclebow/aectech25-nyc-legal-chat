@@ -7,6 +7,8 @@ import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import difflib
+import threading
+import logging
 
 # For reference, the following are the columns in the RSMeans DataFrame:
 # ['Masterformat Section Code', 'Section Name', 'ID', 'Name', 'Crew', 'Daily Output', 'Labor-Hours','Unit', 'Material', 'Labor', 'Equipment', 'Total', 'Total Incl O&P']
@@ -82,6 +84,8 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
     import pandas as pd
     import re
     from concurrent.futures import ThreadPoolExecutor, as_completed
+    import threading
+    import logging
 
     # 1. List all chapters
     chapter_csvs = list_chapter_csvs()
@@ -109,6 +113,9 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
     dfs = []
 
     def process_chapter(fname, chapter):
+        thread_id = threading.get_ident()
+        parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+        logging.info(f"[rsmeans_utils] [process_chapter] [thread={thread_id}]" + (f" [parent_thread={parent_thread_id}]" if parent_thread_id else "") + f" Processing chapter {chapter} from file {fname}")
         if str(chapter) not in str(selected_chapters):
             return None, None
         print(f"Processing chapter {chapter} from file {fname}")
@@ -141,9 +148,16 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
                         local_code_confidence[code] = confidence
         return df, local_code_confidence
 
-    # Parallelize per-chapter processing
+    # Parallelize per-chapter processing with parent-child thread tracking
+    parent_id = threading.get_ident()
+    def submit_with_parent(executor, fn, *args, **kwargs):
+        def wrapper(*a, **kw):
+            threading.current_thread()._parent_ident = parent_id
+            return fn(*a, **kw)
+        return executor.submit(wrapper, *args, **kwargs)
+
     with ThreadPoolExecutor() as executor:
-        futures = [executor.submit(process_chapter, fname, chapter) for fname, chapter in chapter_csvs]
+        futures = [submit_with_parent(executor, process_chapter, fname, chapter) for fname, chapter in chapter_csvs]
         for future in as_completed(futures):
             df, local_code_conf = future.result()
             if df is not None:

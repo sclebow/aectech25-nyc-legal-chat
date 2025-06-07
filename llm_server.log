@@ -1,0 +1,886 @@
+2025-06-07 15:48:31,777 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-07 15:48:31,778 [INFO] [33mPress CTRL+C to quit[0m
+2025-06-07 15:48:32,637 [INFO] 127.0.0.1 - - [07/Jun/2025 15:48:32] "GET /status HTTP/1.1" 200 -
+2025-06-07 15:48:33,165 [INFO] 127.0.0.1 - - [07/Jun/2025 15:48:33] "POST /set_mode HTTP/1.1" 200 -
+2025-06-07 15:48:33,694 [INFO] 127.0.0.1 - - [07/Jun/2025 15:48:33] "POST /set_mode HTTP/1.1" 200 -
+2025-06-07 15:48:33,699 [INFO] 127.0.0.1 - - [07/Jun/2025 15:48:33] "GET /status HTTP/1.1" 200 -
+2025-06-07 15:48:33,713 [INFO] Received /llm_call request | id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c | input=What are some cost modeling best practices?
+2025-06-07 15:48:33,714 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [route_query_to_function] Routing message: What are some cost modeling best practices?
+2025-06-07 15:48:33,714 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [classify_data_sources] Classifying message: What are some cost modeling best practices?
+2025-06-07 15:48:34,394 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 15:48:34,400 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [classify_data_sources] Classification result: knowledge base, cost model
+2025-06-07 15:48:34,400 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] Data sources needed: {'rsmeans': False, 'ifc': False, 'project data': False, 'knowledge base': True, 'value model': False, 'cost model': True}
+2025-06-07 15:48:34,402 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [get_knowledge_base_context] message: What are some cost modeling best practices?
+2025-06-07 15:48:34,403 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [get_cost_model_context] message: What are some cost modeling best practices?
+2025-06-07 15:48:35,260 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/embeddings "HTTP/1.1 200 OK"
+2025-06-07 15:48:44,988 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [run_llm_query] [called_by=route_query_to_function] Starting LLM query | system_prompt_len=5163 | user_input=What are some cost modeling best practices?
+2025-06-07 15:48:45,205 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 15:48:45,206 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [route_query_to_function] Finished routing and LLM call.
+2025-06-07 15:48:45,207 [INFO] 127.0.0.1 - - [07/Jun/2025 15:48:45] "POST /llm_call HTTP/1.1" 200 -
+2025-06-07 15:48:58,679 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [run_llm_query] [called_by=route_query_to_function] LLM streaming query started on attempt 1
+2025-06-07 15:48:58,679 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [run_llm_query] [called_by=route_query_to_function] LLM streaming query full message: ### Cost Modeling Best Practices
+Cost modeling is a crucial aspect of project management, and following best practices can help ensure accurate and reliable cost estimates. Here are some cost modeling best practices:
+
+* **Define the scope and requirements**: Clearly define the project scope, requirements, and deliverables to ensure that the cost model is accurate and comprehensive.
+* **Use a structured approach**: Use a structured approach to cost modeling, such as a work breakdown structure (WBS) or a cost breakdown structure (CBS), to ensure that all costs are captured and organized.
+* **Gather accurate data**: Gather accurate and relevant data to support the cost model, including historical data, industry benchmarks, and vendor quotes.
+* **Use a bottom-up approach**: Use a bottom-up approach to cost modeling, where costs are estimated at the lowest level of detail and then rolled up to higher levels, to ensure that all costs are captured and accurate.
+* **Consider all cost components**: Consider all cost components, including labor, materials, equipment, and overheads, to ensure that the cost model is comprehensive.
+* **Use sensitivity analysis**: Use sensitivity analysis to test the robustness of the cost model and identify areas of uncertainty.
+* **Regularly update and refine the model**: Regularly update and refine the cost model as new information becomes available, to ensure that it remains accurate and relevant.
+
+### Assumptions
+The following assumptions are made:
+* The project scope and requirements are well-defined.
+* The cost model is based on accurate and relevant data.
+* The cost model is regularly updated and refined.
+
+### Relevant Context
+The relevant context used in this answer is based on general cost modeling principles and best practices. No specific data or calculations are used.
+
+### References
+[Source: Len Holm, John E. Schaufelberger - Construction Cost Estimating-Routledge (2021).pdf, Page:]
+No specific table is provided for this answer, as it is a general discussion of cost modeling best practices.
+2025-06-07 15:48:58,679 [INFO] [id=63ade4ea-af9b-4688-b5c6-834fb2bacd9c] [run_llm_query] [called_by=route_query_to_function] LLM streaming usage data: CompletionUsage(completion_tokens=404, prompt_tokens=1520, total_tokens=1924, completion_tokens_details=None, prompt_tokens_details=None)
+2025-06-07 16:19:11,999 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:11] "GET /status HTTP/1.1" 200 -
+2025-06-07 16:19:12,806 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:12] "POST /set_mode HTTP/1.1" 200 -
+2025-06-07 16:19:13,540 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:13] "POST /set_mode HTTP/1.1" 200 -
+2025-06-07 16:19:13,546 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:13] "GET /status HTTP/1.1" 200 -
+2025-06-07 16:19:14,828 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:14] "GET /status HTTP/1.1" 200 -
+2025-06-07 16:19:15,549 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:15] "POST /set_mode HTTP/1.1" 200 -
+2025-06-07 16:19:16,240 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:16] "POST /set_mode HTTP/1.1" 200 -
+2025-06-07 16:19:16,244 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:16] "GET /status HTTP/1.1" 200 -
+2025-06-07 16:19:16,260 [INFO] Received /llm_call request | id=534c722d-1beb-462f-a7a7-cdb6696369e9 | input=What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:19:16,260 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [route_query_to_function] Routing message: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:19:16,260 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [classify_data_sources] Classifying message: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:19:16,818 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:19:16,819 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [classify_data_sources] Classification result: rsmeans, knowledge base
+2025-06-07 16:19:16,819 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] Data sources needed: {'rsmeans': True, 'ifc': False, 'project data': False, 'knowledge base': True, 'value model': False, 'cost model': False}
+2025-06-07 16:19:16,820 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [get_rsmeans_context] message: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:19:16,821 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [get_knowledge_base_context] message: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:19:16,852 [INFO] [id=None] [run_llm_query] [called_by=get_rsmeans_context_from_prompt] Starting LLM query | system_prompt_len=470 | user_input=Description: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:19:17,633 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/embeddings "HTTP/1.1 200 OK"
+2025-06-07 16:19:17,809 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:19:17,811 [INFO] [id=None] [run_llm_query] [called_by=get_rsmeans_context_from_prompt] LLM query successful on attempt 1
+2025-06-07 16:19:17,816 [INFO] [id=None] [run_llm_query] [called_by=find_by_description] Starting LLM query | system_prompt_len=498 | user_input=Masterformat chapters list:
+10: 10_specialties.csv
+11: 11_equipment.csv
+12: 12_furnishings.csv
+13: 13_special_construction.csv
+14: 14_conveying_equipment.csv
+15: 15_fire_suppression.csv
+16: 16_plumbing.csv
+17: 17_heating_ventilation_air_conditioning.csv
+18: 18_electrical.csv
+19: 19_communications.csv
+20: 20_electronic_safety_sensors.csv
+22: 22_exterior_improvements.csv
+23: 23_utilities.csv
+24: 24_transportation.csv
+25: 25_waterway_marine.csv
+26: 26_material_processing_handling_equipment.csv
+27: 27_pollution_control_equipment.csv
+28: 28_electrical_power_generation.csv
+2: 2_existing_conditions.csv
+31: 31_earthwork.csv
+3: 3_concrete.csv
+4: 4_masonry.csv
+5: 5_metals.csv
+6: 6_wood_plastics_composites.csv
+7: 7_thermal_moisture_protection.csv
+8: 8_openings.csv
+9: 9_finishes.csv
+Description: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:19:18,267 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:19:18,268 [INFO] [id=None] [run_llm_query] [called_by=find_by_description] LLM query successful on attempt 1
+2025-06-07 16:19:18,340 [INFO] [id=None] [run_llm_query] [called_by=process_chapter] Starting LLM query | system_prompt_len=435 | user_input=Masterformat section names list:
+Pointing Masonry
+Pointing CMU
+Sawing Masonry
+Unit Masonry Stabilization
+Daily Labor - 2022 Bare Costs
+Brick Washing
+04 05 05 - Selective Demolition for Masonry
+3000 Copings, precast or masonry, to 8" wide
+3100 To 12" wide
+4000 Fireplace, brick, 30" x 24" opening
+5000 Veneers, brick, soft old mortar
+Cement
+Lime
+Surface Bonding Masonry Mortaring
+Mortar
+Masonry Restoration Mortaring
+Mortar Pigments
+Sand
+Mortar Admixtures
+Grouting
+04 05 16 - Masonry Grout Work
+Anchor Bolts
+Masonry Anchors
+Masonry Reinforcing Bars
+04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars
+Masonry Control and Expansion Joints
+Masonry Cavity Drainage, Weepholes, and Vents
+Wall Plugs
+Brick Veneer Masonry
+4 21 13.13 Brick Masonry
+Thin Brick Veneer
+Chimney
+Columns
+Oversized Brick
+Oversized Brick Masonry
+Common Building Brick
+Structural Brick
+Face Brick
+Structural Facing Tile
+Terra Cotta Masonry Components
+Terra Cotta Tile
+Autoclave Aerated Concrete Block
+Chimney Block
+Concrete Block, Back-Up
+Concrete Block, Bond Beam
+Concrete Masonry, Bond Beam
+Concrete Block, Column
+Concrete Block, Insulation Inserts
+Concrete Block, Decorative
+04 22 10 Concrete Masonry Units
+Concrete Block, Exterior
+Concrete Block Foundation Wall
+Concrete Block, High Strength
+Concrete Block, Interlocking
+Concrete Block, Lintels
+Lintel Block
+Concrete Block, Partitions
+04 22 10 - Concrete Masonry Units
+Concrete Brick
+Concrete Block, Screen Block
+Glazed Concrete Block
+Glass Block
+Adobe Brick
+Brick and Epoxy Mortar Panels
+Cavity Walls
+Brick Walls
+Steps
+Rough Stone Wall
+Ashlar Veneer
+Bluestone
+Granite
+Pavers, 4" x 4" x 4" blocks, splitface and joints
+Soffits, 2" thick
+Reclaimed or Antique
+Lightweight Natural Stone
+Limestone
+Marble
+Sandstone or Brownstone
+Slate
+Window Sill
+Flue Lining
+Fire Brick
+Fire Clay
+Fireplace
+Simulated Brick
+Cast Stone Masonry Features
+Cultured Stone Veneer
+Simulated Stone
+Description: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:19:18,347 [INFO] [id=None] [run_llm_query] [called_by=process_chapter] Starting LLM query | system_prompt_len=435 | user_input=Masterformat section names list:
+0010 POLISHED CONCRETE FLOORS
+Gunite (Dry-Mix)
+Shotcrete (Wet-Mix)
+Water Curing
+Precast Stairs
+Precast Beams
+Precast Columns
+Precast Joists
+03 41 33 Precast Structural Pretensioned Concrete
+Precast Wall Panels
+2022 Bare Costs
+0010 GYPSUM ROOF DECK
+Cement Underlayment
+Grout, Non-Metallic Non-Shrink
+Grout, Metallic Non-Shrink
+Epoxy Only
+Concrete Patching
+03 05 05 - Selective Demolition for Concrete
+03 05 13 - Basic Concrete Materials
+Concrete Admixtures and Surface Treatments
+Aggregate
+Cement
+03 05 13 - Basic Concrete Materials
+Forms In Place, Beams and Girders
+Forms In Place, Columns
+Steel framed plywood, based on 50 uses of purchased forms, and 4 uses of bracing lumber
+Forms In Place, Culvert
+Forms In Place, Elevated Slabs
+Forms In Place, Equipment Foundations
+Forms In Place, Footings
+Forms In Place, Gas Station Forms
+Forms In Place, Grade Beam
+Forms In Place, Mat Foundation
+Forms In Place, Slab On Grade
+Forms In Place, Walls
+Concrete Form Liners
+Insulating Forms, Left In Place
+90 degree corner blocks or panels, molded, walls up to 4' high
+45 degree corner blocks or panels, molded, walls up to 4' high
+I blocks or panels, molded, walls up to 4' high
+Radius blocks or panels, molded, walls up to 4' high, 6" core wall
+Additional labor for blocks/panels in higher walls (excludes scaffolding)
+Forming 9.10 Insulating Forms, Left In Place
+Roof Deck Form Boards
+Forms In Place, Stairs
+Chamfer Strips
+03 15 05 - Concrete Forming Accessories
+Hangers
+Shores
+Concrete Forming Accessories 05.70 Shores
+Sleeves and Chases
+Snap Ties
+Stair Tread Inserts
+Wall and Foundation Form Accessories
+Waterstops
+03 15 13 Waterstops
+03 15 16 Concrete Construction Joints
+Expansion Joints
+Anchor Bolt Accessories
+Anchor Bolts
+Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts
+03 15 19 - Cast-In Concrete Anchors
+Dovetail Anchor System
+Inserts
+Machinery Anchors
+Rebar Accessories
+Splicing Reinforcing Bars
+03 21 11 Plain Steel Reinforcement Bars
+Reinforcing In Place
+Galvanized Reinforcing
+Epoxy-Coated Reinforcing
+Glass Fiber-Reinforced Polymer Reinf. Bars
+Plain Welded Wire Fabric
+Galvanized Welded Wire Fabric
+0010 EPOXY-COATED WELDED WIRE FABRIC
+Prestressing Steel
+Prestressing Reinforcing
+Synthetic Fibers
+Steel Fibers
+Concrete In Place
+Daily Labor
+Concrete, Hand Mix
+Concrete, Volumetric Site - Mixed
+Heavyweight Concrete, Ready Mix
+Placing Concrete
+Finishing Floors, High Tolerance
+Finishing Floors, Heavy-Duty
+Finishing Floors, Colored
+Finishing Floors, Exposed Aggregate
+Finishing Floors, Tooled
+Finishing Walls
+Slab Texture Stamping
+Description: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:19:21,114 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:19:21,116 [INFO] [id=None] [run_llm_query] [called_by=process_chapter] LLM query successful on attempt 1
+2025-06-07 16:19:21,401 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:19:21,403 [INFO] [id=None] [run_llm_query] [called_by=process_chapter] LLM query successful on attempt 1
+2025-06-07 16:19:21,493 [INFO] [id=None] [run_llm_query] [called_by=find_by_description] Starting LLM query | system_prompt_len=473 | user_input=Line items list:
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Splicing Reinforcing Bars, Name: #10 bars
+Section: Splicing Reinforcing Bars, Name: #8 bars
+Section: Splicing Reinforcing Bars, Name: #7 bars
+Section: Splicing Reinforcing Bars, Name: #6 bars
+Section: Splicing Reinforcing Bars, Name: #5 bars
+Section: Splicing Reinforcing Bars, Name: Standard, self-aligning type, taper threaded, #4 bars
+Section: Splicing Reinforcing Bars, Name: Including holding bars in place while splicing
+Section: Splicing Reinforcing Bars, Name: SPLICING REINFORCING BARS R032110-70
+Section: Rebar Accessories, Name: Tie wire, 16 ga. annealed steel
+Section: Rebar Accessories, Name: 24" long
+Section: Rebar Accessories, Name: 7/8" diameter, 12" long
+Section: Rebar Accessories, Name: 24" long
+Section: Rebar Accessories, Name: Subgrade stakes, no nail holes, 3/4" diameter, 12" long
+Section: Rebar Accessories, Name: 12" high
+Section: Rebar Accessories, Name: #6 bar head, 3-1/2" high
+Section: Rebar Accessories, Name: 12" high
+Section: Rebar Accessories, Name: Subgrade chairs, #4 bar head, 3-1/2" high
+Section: Rebar Accessories, Name: 1-1/2" diameter, 8" high
+Section: Rebar Accessories, Name: 7" high
+Section: Rebar Accessories, Name: Double pickup lifting inserts, 1" diameter, 5-1/2" high
+Section: Rebar Accessories, Name: 7" high
+Section: Rebar Accessories, Name: 1" diameter, 5-1/2" high
+Section: Rebar Accessories, Name: 7" high
+Section: Rebar Accessories, Name: 6" high
+Section: Rebar Accessories, Name: Slab lifting inserts, single pickup, galv, 3/4" diam., 5" high
+Section: Rebar Accessories, Name: 1" x 12" long
+Section: Splicing Reinforcing Bars, Name: #9 bars
+Section: Splicing Reinforcing Bars, Name: #11 bars
+Section: Rebar Accessories, Name: 1-1/2" x 6" long
+Section: Splicing Reinforcing Bars, Name: #14 bars
+Section: Splicing Reinforcing Bars, Name: #9-8
+Section: Splicing Reinforcing Bars, Name: #10-9
+Section: Splicing Reinforcing Bars, Name: #11-10
+Section: Splicing Reinforcing Bars, Name: #14-11
+Section: Splicing Reinforcing Bars, Name: #18-11
+Section: Splicing Reinforcing Bars, Name: Transition position coupler for curved bars, taper threaded, #18-14
+Section: Splicing Reinforcing Bars, Name: #18 bars
+Section: Splicing Reinforcing Bars, Name: #14 bars
+Section: Splicing Reinforcing Bars, Name: #11 bars
+Section: Splicing Reinforcing Bars, Name: #10 bars
+Section: Splicing Reinforcing Bars, Name: #9 bars
+Section: Splicing Reinforcing Bars, Name: #8 bars
+Section: Splicing Reinforcing Bars, Name: #7 bars
+Section: Splicing Reinforcing Bars, Name: #6 bars
+Section: Splicing Reinforcing Bars, Name: #5 bars
+Section: Splicing Reinforcing Bars, Name: Position coupler for curved bars, taper threaded, #4 bars
+Section: Splicing Reinforcing Bars, Name: #7-6
+Section: Splicing Reinforcing Bars, Name: #8-7
+Section: Splicing Reinforcing Bars, Name: #9-8
+Section: Splicing Reinforcing Bars, Name: #10-9
+Section: Splicing Reinforcing Bars, Name: #11-10
+Section: Splicing Reinforcing Bars, Name: #14-11
+Section: Splicing Reinforcing Bars, Name: #18-11
+Section: Splicing Reinforcing Bars, Name: Transition self-aligning, taper threaded, #18-14
+Section: Splicing Reinforcing Bars, Name: #18 bars
+Section: Rebar Accessories, Name: Screw anchor bolts, 3/4" x 9" long
+Section: Rebar Accessories, Name: 1" x 3-1/2" long
+Section: Splicing Reinforcing Bars, Name: #7-6
+Section: Rebar Accessories, Name: Epoxy dipped
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: Continuous high chairs (CHC), legs 8" OC, 4" high, plain steel
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: Bar chair (BC), 1-1/2" high, plain steel
+Section: Rebar Accessories, Name: 8" high
+Section: Rebar Accessories, Name: Individual high chairs, with plate (HCP), 5" high
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 12" high, plain
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 8" high, plain
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 5" high, plain
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: High chairs, individual (HC), 3" high, plain steel
+Section: Rebar Accessories, Name: 7" long
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: 6" high, plain
+Section: Rebar Accessories, Name: Screw anchor eye bolts, 3/4" x 3" long
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 1-1/2" diameter x 8" long
+Section: Rebar Accessories, Name: 1" diameter x 6" long
+Section: Rebar Accessories, Name: Screw anchor for bolts, plain steel, 3/4" diameter x 4" long
+Section: Rebar Accessories, Name: 12" long
+Section: Rebar Accessories, Name: 3/4" coil thread diam. for pipe screed, plain steel, 6" long
+Section: Rebar Accessories, Name: 12" long
+Section: Rebar Accessories, Name: Screed holder, 1/2" coil thread diam. for pipe screed, plain steel, 6" long
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 5-1/2" high, plain steel
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 3/4" coil thread diam., 2-1/2" high, plain steel
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 5-1/2" high, plain
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: Screed chair base, 1/2" coilthread diam., 2-1/2" high, plain steel
+Section: Rebar Accessories, Name: For continuous bottom plate, add
+Section: Rebar Accessories, Name: For continuous bottom wire runners, add
+Section: Rebar Accessories, Name: Epoxy dipped
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 8" high, plain
+Section: Rebar Accessories, Name: Epoxy dipped
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Splicing Reinforcing Bars, Name: #8-7
+Section: Splicing Reinforcing Bars, Name: Sleeve type w/grout fille, for precast concrete, #6 bars
+Section: Rebar Accessories, Name: 5" long
+Section: Masonry Anchors, Name: For brick veneer, galv., corrugated, 7/8" x 7", 22 ga.
+Section: Anchor Bolts, Name: 12" long
+Section: Anchor Bolts, Name: 3/4" diameter, 8" long
+Section: Anchor Bolts, Name: 12" long
+Section: Anchor Bolts, Name: 5/8" diameter, 8" long
+Section: Anchor Bolts, Name: 12" long
+Section: Anchor Bolts, Name: Hooked, with nut and washer, 1/2" diameter, 8" long
+Section: Anchor Bolts, Name: Installed in fresh grout in CMU bond beams or filled cores, no templates
+Section: Anchor Bolts, Name: ANCHOR BOLTS
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowel caps, visual warning only, plastic, #3 to #8
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, 12" long, for 1" smooth dowel
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, for 1" smooth dowel sleeve
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, 12" long, for 3/4" smooth dowel
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, for 3/4" smooth dowel sleeve
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, plastic, 12" long, for 5/8" smooth dowel, snap onto base
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, plastic, for 5/8" smooth dowel sleeve, fasten to edge form
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowel sleeves for CIP concrete, 2-part system
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 3/4" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 5/8" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Smooth dowels, 12" long, 1/4" or 3/8" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Longer and heavier dowels, add
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #6
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #5
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #4
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowels, 2 feet long, deformed, #3
+Section: Masonry Anchors, Name: MASONRY ANCHORS
+Section: Masonry Anchors, Name: 24 ga.
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 1.0 ton/bundle
+Section: Masonry Anchors, Name: 16 ga.
+Section: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: Cavity truss with drip section, to 6" wide
+Section: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: 12" wide
+Section: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: Joint reinforcing, regular truss, to 6" wide, mill std galvanized
+Section: Masonry Reinforcing Bars, Name: #5 & #6 bars
+Section: Masonry Reinforcing Bars, Name: Placed vertical, #3 & #4 bars
+Section: Masonry Reinforcing Bars, Name: #5 & #6 bars
+Section: Masonry Reinforcing Bars, Name: Steel bars A615, placed horiz., #3 & #4 bars
+Section: Masonry Reinforcing Bars, Name: MASONRY REINFORCING BARS R040519-50
+Section: Masonry Anchors, Name: 2" x 1/4"
+Section: Masonry Anchors, Name: 2" x 1/8"
+Section: Masonry Anchors, Name: 1-1/2" x 1/4"
+Section: Masonry Anchors, Name: 1-1/2" x 1/8"
+Section: Masonry Anchors, Name: 1" x 1/4"
+Section: Masonry Anchors, Name: Rigid partition anchors, plain, 8" long, 1" x 1/8"
+Section: Masonry Anchors, Name: 4" x 6"
+Section: Masonry Anchors, Name: 3/16" diameter, 2" x 6"
+Section: Masonry Anchors, Name: 4" x 6"
+Section: Masonry Anchors, Name: Rectangular type, galvanized, 1/4" diameter, 2" x 6"
+Section: Masonry Anchors, Name: 1/4" diameter
+Section: Masonry Anchors, Name: 8" long, 3/16" diameter
+Section: Masonry Anchors, Name: 1/4" diameter
+Section: Masonry Anchors, Name: 3/16" diameter
+Section: Masonry Anchors, Name: Cavity wall, Z-type, galvanized, 6" long, 1/8" diam.
+Section: Masonry Anchors, Name: 8" x 3"
+Section: Masonry Anchors, Name: Buck anchors, galv., corrugated, 16 ga., 2" bend, 8" x 2"
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 0.5 ton/bundle
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Crane cost for handling, 90 picks/day, up to 1.5 tons/bundle, add to above
+Section: Splicing Reinforcing Bars, Name: #7 bars
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Beams & Girders, #3 to #7
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Includes labor, but not material cost, to install accessories
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: REINFORCING IN PLACE, 50-60 ton lots, A615 Grade 60
+Section: Splicing Reinforcing Bars, Name: #18 bars
+Section: Splicing Reinforcing Bars, Name: #14 bars
+Section: Splicing Reinforcing Bars, Name: #11 bars
+Section: Splicing Reinforcing Bars, Name: #10 bars
+Section: Splicing Reinforcing Bars, Name: #9 bars
+Section: Splicing Reinforcing Bars, Name: #8 bars
+Section: Splicing Reinforcing Bars, Name: #7 bars
+Section: Splicing Reinforcing Bars, Name: #6 bars
+Section: Splicing Reinforcing Bars, Name: #5 bars
+Section: Splicing Reinforcing Bars, Name: Weldable half coupler, taper threaded, #4 bars
+Section: Splicing Reinforcing Bars, Name: #18 bars
+Section: Splicing Reinforcing Bars, Name: #14 bars
+Section: Splicing Reinforcing Bars, Name: #11 bars
+Section: Splicing Reinforcing Bars, Name: #10 bars
+Section: Splicing Reinforcing Bars, Name: #9 bars
+Section: Splicing Reinforcing Bars, Name: #8 bars
+Section: Splicing Reinforcing Bars, Name: #7 bars
+Section: Splicing Reinforcing Bars, Name: Sleeve type w/ferrous fille, for critical structures, #6 bars
+Section: Splicing Reinforcing Bars, Name: #14 bars
+Section: Splicing Reinforcing Bars, Name: #11 bars
+Section: Splicing Reinforcing Bars, Name: #10 bars
+Section: Splicing Reinforcing Bars, Name: #9 bars
+Section: Splicing Reinforcing Bars, Name: #8 bars
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Made from recycled materials
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Unloading & sorting, add to above
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Columns, #3 to #7
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Grade 90, add
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Reinforcing inplace, A615 Grade 75, add
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, deduct
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Over 100 ton job, #3 to #7, deduct
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, deduct
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 60-100 ton job, #3 to #7, deduct
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, add
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 10-50 ton job, #3 to #7, add
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, add
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Under 10 ton job, #3 to #7, add
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: For other than 50-60 ton lots
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Walls, #3 to #7
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Slab on grade, #3 to #7
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Footings, #4 to #7
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Elevated slabs, #4 to #7
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 84" to 96" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 64" to 84" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 48" to 64" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 36" to 48" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 24" to 36" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: 15" to 24" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: Spirals, hot rolled, 8" to 15" diameter
+Section: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18
+Section: Rebar Accessories, Name: 6" long
+Section: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: 12" wide
+Section: Rebar Accessories, Name: Bag ties, 16 ga., plain, 4" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-3/4" diameter x 18" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1" diameter x 12" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/2" diameter x 18" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 12" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 3/4" diameter x 8" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 12" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: J-type, incl. hex nut & washer, 1/2" diameter x 6" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 4-bolt pattern, including job-built 4-hole template, per set
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 72" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 66" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 2" diameter x 24" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long
+Section: Anchor Bolts, Name: 1" diameter x 12" long
+Section: Anchor Bolts, Name: 12" long
+Section: Anchor Bolts, Name: 3/4" diameter x 8" long
+Section: Anchor Bolts, Name: 18" long
+Section: Anchor Bolts, Name: 12" long
+Section: Anchor Bolts, Name: J type, inc. hex nut & washer, 1/2" diameter x 6" long
+Section: Anchor Bolts, Name: 2-bolt pattern, including job-built 2-hole template, per set
+Section: Anchor Bolts, Name: 12" long
+Section: Anchor Bolts, Name: 3/4" diameter, 8" long
+Section: Anchor Bolts, Name: 12" long
+Section: Anchor Bolts, Name: 5/8" diameter, 8" long
+Section: Anchor Bolts, Name: 12" long
+Section: Anchor Bolts, Name: Hooked w/nut and washer, 1/2" diameter, 8" long
+Section: Anchor Bolts, Name: Single bolts installed in fresh concrete, no templates
+Section: Anchor Bolts, Name: Made from recycled materials
+Section: Anchor Bolts, Name: ANCHOR BOLTS
+Section: Anchor Bolts, Name: 18" long
+Section: Anchor Bolts, Name: 18" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/4" diameter x 18" long
+Section: Anchor Bolts, Name: 24" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long
+Section: Anchor Bolts, Name: 42" long
+Section: Anchor Bolts, Name: 36" long
+Section: Anchor Bolts, Name: 30" long
+Section: Anchor Bolts, Name: 24" long
+Section: Anchor Bolts, Name: 18" long
+Section: Rebar Accessories, Name: For bolsters with plates (SBP), add
+Section: Anchor Bolts, Name: 36" long
+Section: Anchor Bolts, Name: 30" long
+Section: Anchor Bolts, Name: 24" long
+Section: Anchor Bolts, Name: 18" long
+Section: Anchor Bolts, Name: L type, incl. hex nut & washer, 3/4" diameter x 12" long
+Section: Anchor Bolts, Name: 24" long
+Section: Anchor Bolts, Name: 1-1/2" diameter x 18" long
+Section: Anchor Bolts, Name: 36" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long
+Section: Anchor Bolts, Name: 1" diameter x 12" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long
+Section: Rebar Accessories, Name: Epoxy dipped
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: Beam bolsters (BB), lower, 1-1/2" high, plain steel
+Section: Rebar Accessories, Name: Steel & plastic made from recycled materials
+Section: Rebar Accessories, Name: REBAR ACCESSORIES
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 72" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 66" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 2" diameter x 24" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: 2" high, plain
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long
+Section: Rebar Accessories, Name: Galvanized
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long
+Section: Rebar Accessories, Name: For bolsters with wire runners (SBR), add
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: 2" high, plain steel
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: Rebar Accessories, Name: Galvanized
+Section: Rebar Accessories, Name: Slab bolsters, continuous (SB), 1" high, plain steel
+Section: Rebar Accessories, Name: 3" high
+Section: Rebar Accessories, Name: Upper (BBU), 1-1/2" high, plain steel
+Section: Rebar Accessories, Name: Epoxy dipped
+Section: Rebar Accessories, Name: Plastic tipped legs
+Section: Rebar Accessories, Name: Stainless tipped legs
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: For galvanized, add
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1" diameter x 12" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 1-1/4" diameter x 18" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 18" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: L-type, incl. hex nut & washer, 3/4" diameter x 12" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/2" diameter x 18" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long
+Section: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 1-3/4" diameter x 18" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 1-1/2" diameter x 18" long
+Section: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long
+Section: 03 15 05 - Concrete Forming Accessories, Name: For sizes to 36" x 36", buy
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: Friction collars 2' 6" diam., buy
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: Scissor type with wedges, 36" x 36", buy
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: 48" x 48", buy
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: Bar type with wedges, 36" x 36", buy
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: 60" x 60", buy
+Section: Chamfer Strips, Name: 1" wide
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: For sizes to 30" x 30", buy
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: Column clamps, adjustable to 24" x 24", buy
+Section: 03 15 05 - Concrete Forming Accessories, Name: COLUMN FORM ACCESSORIES
+Section: 03 15 05 - Concrete Forming Accessories, Name: Column Form Accessories
+Section: Chamfer Strips, Name: 3/4" wide
+Section: Chamfer Strips, Name: Wood, 1/2" wide
+Section: Chamfer Strips, Name: 2" radius with leg
+Section: Chamfer Strips, Name: 1" radius with leg
+Section: Chamfer Strips, Name: 3/4" wide with leg
+Section: 03 15 05 - Concrete Forming Accessories, Name: Rent per month
+Section: 03 15 05 - Concrete Forming Accessories, Name: 4'-0" diam., buy
+Section: Chamfer Strips, Name: CHAMFER STRIPS
+Section: Chamfer Strips, Name: Polyvinyl chloride, 1/2" wide with leg
+Section: Waterstops, Name: 9" wide
+Section: Waterstops, Name: 9" wide
+Section: 03 15 13 Waterstops, Name: 9" wide
+Section: 03 15 13 Waterstops, Name: Vertical tee, 6" wide
+Section: 03 15 13 Waterstops, Name: Waterstops
+Section: 03 15 13 Waterstops, Name: Waterstops
+Section: Waterstops, Name: 9" wide
+Section: Waterstops, Name: Flot ell, 6" wide
+Section: Waterstops, Name: Flat tee, 6" wide
+Section: 03 15 13 Waterstops, Name: 9" wide
+Section: Waterstops, Name: WATERSTOPS, PVC and Rubber
+Section: Waterstops, Name: PVC, ribbed 3/16" thick, 4" wide
+Section: Waterstops, Name: 6" wide
+Section: Waterstops, Name: With center bulb, 6" wide, 3/16" thick
+Section: Waterstops, Name: 3/8" thick
+Section: Waterstops, Name: 9" wide x 3/8" thick
+Section: 03 15 13 Waterstops, Name: Vertical ell, 6" wide
+Section: 03 15 16 Concrete Construction Joints, Name: Concrete Construction Joints
+Section: Waterstops, Name: Flat cross, 6" wide
+Section: 03 15 16 Concrete Construction Joints, Name: Control Joints, Saw Cut
+Section: 03 15 16 Concrete Construction Joints, Name: CONTROL JOINTS, SAW CUT
+Section: 03 15 16 Concrete Construction Joints, Name: Sawcut control joints in green concrete
+Section: 03 15 16 Concrete Construction Joints, Name: 1" depth
+Section: 03 15 16 Concrete Construction Joints, Name: 2" depth
+Section: 03 15 16 Concrete Construction Joints, Name: Sawcut joint reservoir in cured concrete
+Section: 03 15 16 Concrete Construction Joints, Name: 3/8" wide x 3/4" deep, with single saw blade
+Section: 03 15 16 Concrete Construction Joints, Name: 1/2" wide x 1" deep, with double saw blades
+Section: 03 15 16 Concrete Construction Joints, Name: 3/4" wide x 1-1/2" deep, with double saw blades
+Section: 03 15 16 Concrete Construction Joints, Name: Water blast joint to wash away laitance, 2 passes
+Section: 03 15 16 Concrete Construction Joints, Name: Air blast joint to blow out debris and air dry, 2 passes
+Section: 03 15 16 Concrete Construction Joints, Name: For backer rod, see Section 07 91 23.10
+Section: 03 15 16 Concrete Construction Joints, Name: For joint sealant, see Section 03 15 16.30 or 07 92 13.20
+Section: 03 15 16 Concrete Construction Joints, Name: For replacement of joint sealant, see Section 07 01 90.81
+Section: Waterstops, Name: Dumbbell type, 6" wide, 3/16" thick
+Section: Waterstops, Name: 3/8" thick
+Section: Waterstops, Name: 9" wide, 3/8" thick, plain
+Section: Waterstops, Name: Center bulb, 1/4" thick, " wide
+Section: Grouting, Name: GROUTING
+Section: Waterstops, Name: 3/8" thick
+Section: Waterstops, Name: Rubber, flat dumbbell, 3/8" thick, 6" wide
+Section: Waterstops, Name: 9" wide
+Section: Waterstops, Name: Flat dumbbell split, 3/8" thick, 6" wide
+Section: Waterstops, Name: 9" wide
+Section: Waterstops, Name: 9" wide
+Section: Waterstops, Name: Center bulb
+Section: Waterstops, Name: Center bulb split, 3/8" thick, 6" wide
+Section: Waterstops, Name: 9" wide
+Section: Waterstops, Name: Waterstop fitting, rubber, flat
+Section: Waterstops, Name: Dumbbell or center bulb, 3/8" thick,
+Section: Waterstops, Name: Field union, 6" wide
+Section: Waterstops, Name: 9" wide
+Section: Grouting, Name: Bond beams & lintels, 8" deep, 6" thick, 0.15 C.F./L.F.
+Section: Grouting, Name: 8" thick, 0.2 C.F./L.F.
+Section: 04 05 16 - Masonry Grout Work, Name: 10" thick, 0.25 C.F./L.E.
+Section: 04 05 16 - Masonry Grout Work, Name: 12" thick, 0.3 C.F./L.F.
+Section: 04 05 16 - Masonry Grout Work, Name: Concrete block cores, solid, 4" thk., by hand, 0.067 C.F./S.F. of wall
+Section: 04 05 16 - Masonry Grout Work, Name: 6" thick, pumped, 0.175 C.E./S.F
+Section: 04 05 16 - Masonry Grout Work, Name: 8" thick, pumped, 0.258 C.F./S.F.
+Section: 04 05 16 - Masonry Grout Work, Name: 10" thick, pumped, 0.340 C.F./S.F
+Section: 04 05 16 - Masonry Grout Work, Name: 12" thick, pumped, 0.422 C.F./S.F.
+Section: 04 05 16 - Masonry Grout Work, Name: Cavity walls, 2" space, pumped, 0.167 C.F./S.F. of wall
+Section: 04 05 16 - Masonry Grout Work, Name: 3" space, 0.250 C.F./S.F.
+Section: 04 05 16 - Masonry Grout Work, Name: 4" space, 0.333 C.F./S.F.
+Section: 04 05 16 - Masonry Grout Work, Name: 6" space, 0.500 C.F./S.F.
+Section: 04 05 16 - Masonry Grout Work, Name: Door frames, 3' x 7' opening, 2.5 C.F. per opening
+Section: 04 05 16 - Masonry Grout Work, Name: 6' x 7' opening, 3.5 C.F. per opening
+Section: 04 05 16 - Masonry Grout Work, Name: Grout, C476, for bond beams, lintels and CMU cores
+Section: Waterstops, Name: Ribbed type, split, 3/16" thick, 6" wide
+Section: 03 15 16 Concrete Construction Joints, Name: 1-1/2" depth
+Description: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:19:22,851 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-07 16:19:22,851 [INFO] [33mPress CTRL+C to quit[0m
+2025-06-07 16:19:27,228 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-07 16:19:27,228 [INFO] [33mPress CTRL+C to quit[0m
+2025-06-07 16:19:27,537 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:19:27,540 [INFO] [id=None] [run_llm_query] [called_by=find_by_description] LLM query successful on attempt 1
+2025-06-07 16:19:27,646 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [run_llm_query] [called_by=route_query_to_function] Starting LLM query | system_prompt_len=5835 | user_input=What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:19:27,891 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:19:27,891 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [route_query_to_function] Finished routing and LLM call.
+2025-06-07 16:19:27,907 [INFO] 127.0.0.1 - - [07/Jun/2025 16:19:27] "POST /llm_call HTTP/1.1" 200 -
+2025-06-07 16:20:01,883 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [run_llm_query] [called_by=route_query_to_function] LLM streaming query started on attempt 1
+2025-06-07 16:20:01,883 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [run_llm_query] [called_by=route_query_to_function] LLM streaming query full message: ### Cost Benchmark for Concrete Column Footings
+To establish a cost benchmark for six concrete column footings for a 10,000 sq ft commercial building, we need to consider several factors, including the size and depth of the footings, the type of concrete used, and the labor costs associated with excavation, forming, and pouring the concrete.
+
+#### Assumptions:
+- Location: United States (for the purpose of this estimate, as location can significantly affect costs due to variations in labor rates, material costs, and local regulations).
+- Year: 2023 (to account for current market prices and labor rates).
+- Unit: Dollars per square foot ($/SF) or dollars per cubic yard ($/CY) for concrete.
+- Scope: The estimate includes excavation, forming, reinforcement (rebar), concrete pouring, and finishing for the footings.
+
+### Relevant Context Summary
+The provided context includes a table from 'rsmeans' that lists various construction activities with their respective costs, including some concrete-related work. However, it does not directly provide the cost of concrete column footings. The 'knowledge base' mentions patch and sack material costs, concrete structures, shoring requirements, and a pre-cast concrete tilt-up wall panel cost recapitulation sheet, which indirectly relates to concrete work but does not offer a direct cost benchmark for column footings.
+
+### Cost Estimation Approach
+Given the lack of direct information on the cost of concrete column footings in the provided context, we'll rely on general construction cost estimation principles. The cost of concrete column footings can be broken down into material costs (concrete, rebar, forms), labor costs (excavation, forming, pouring, finishing), and equipment costs (if applicable).
+
+#### Material Costs
+- Concrete: The cost of concrete can vary widely depending on the mix design, location, and supplier. A typical range might be $100 to $200 per cubic yard.
+- Rebar: The cost of rebar can also vary, but a rough estimate might be $0.50 to $1. per pound.
+
+#### Labor Costs
+- Labor costs for excavation, forming, and concrete work can vary significantly by location and union rates. A rough estimate for labor might be $50 to $150 per hour, depending on the task and location.
+
+### Example Calculation
+Let's assume each footing is approximately feet by feet by foot deep (a small footing for a commercial building, as actual sizes can vary widely based on structural requirements). This gives a volume of 4 cubic feet or about 0. cubic yards per footing. For six footings, the total volume would be approximately 0.9 cubic yards.
+
+Using a mid-range concrete cost of $150 per cubic yard, the material cost for the concrete would be:
+\[ \text{Concrete Cost} = 0. \, \text{CY} \times \$150/\text{CY} = \$135 \]
+
+Adding rebar costs (assuming a small amount is needed, e.g., $ for all footings) and labor costs (which could easily exceed the material costs, e.g., $1,000 to $3,000 for all footings depending on complexity and location), the total cost could range from:
+\[ \text{Total Cost} = \$135 + \$100 + \$1,000 \, \text{to} \, \$3,000 = \$1, \, \text{to} \, \$3,235 \]
+
+For a 10,000 sq ft commercial building, this would translate to a cost per square foot of:
+\[ \text{Cost/SF} = \frac{\$1,235 \, \text{to} \, \$3,235}{10,000 \, \text{SF}} = \$5 \, \text{to} \, \$0.323/\text{SF} \]
+
+### Conclusion
+The cost benchmark for six concrete column footings in a 10,000 sq ft commercial building could range from $,235 to $3,235, depending on the factors mentioned above. This translates to a cost per square foot of $0.1235 to $0.3235. However, this is a very rough estimate and actual costs could vary significantly based on the specific requirements of the project, including footing size, concrete strength, rebar requirements, labor rates, and location.
+
+### References
+No specific references were used for this calculation, as it is based on general principles of construction cost estimation. For detailed and accurate cost estimation, consulting specific cost databases like RSMeans or local construction cost guides is recommended.
+
+[Source: No sources found]
+2025-06-07 16:20:01,883 [INFO] [id=534c722d-1beb-462f-a7a7-cdb6696369e9] [run_llm_query] [called_by=route_query_to_function] LLM streaming usage data: CompletionUsage(completion_tokens=963, prompt_tokens=1679, total_tokens=2642, completion_tokens_details=None, prompt_tokens_details=None)
+2025-06-07 16:25:28,875 [INFO] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-06-07 16:25:28,875 [INFO] [33mPress CTRL+C to quit[0m
+2025-06-07 16:25:29,346 [INFO] 127.0.0.1 - - [07/Jun/2025 16:25:29] "GET /status HTTP/1.1" 200 -
+2025-06-07 16:25:29,918 [INFO] 127.0.0.1 - - [07/Jun/2025 16:25:29] "POST /set_mode HTTP/1.1" 200 -
+2025-06-07 16:25:30,476 [INFO] 127.0.0.1 - - [07/Jun/2025 16:25:30] "POST /set_mode HTTP/1.1" 200 -
+2025-06-07 16:25:30,482 [INFO] 127.0.0.1 - - [07/Jun/2025 16:25:30] "GET /status HTTP/1.1" 200 -
+2025-06-07 16:25:30,493 [INFO] Received /llm_call request | id=48c7037e-9e49-4017-a193-e8b77a7022b3 | input=What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:25:30,493 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [route_query_to_function] Routing message: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:25:30,494 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [classify_data_sources] Classifying message: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:25:31,089 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:25:31,093 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [classify_data_sources] Classification result: rsmeans, knowledge base
+2025-06-07 16:25:31,093 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] Data sources needed: {'rsmeans': True, 'ifc': False, 'project data': False, 'knowledge base': True, 'value model': False, 'cost model': False}
+2025-06-07 16:25:31,093 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [get_rsmeans_context] message: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:25:31,094 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [get_knowledge_base_context] message: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:25:31,944 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/embeddings "HTTP/1.1 200 OK"
+2025-06-07 16:25:32,765 [INFO] [id=None] [thread=23132] [run_llm_query] [called_by=get_rsmeans_context_from_prompt] Starting LLM query | system_prompt=You are an expert at extracting relevant materials from construction task descriptions. Given a user's description, extract the most relevant materials that can be used to look up costs in RSMeans data. Don't include materials that are not directly related to the task. Return your answer as a comma-separated list of materials.Provide only the comma-separated list of materials, no other text and no explanations. Example: 'concrete, steel, wood, insulation, drywall'.  | user_input=Description: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:25:33,344 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:25:33,346 [INFO] [id=None] [thread=23132] [run_llm_query] [called_by=get_rsmeans_context_from_prompt] LLM query successful on attempt 1 | system_prompt=You are an expert at extracting relevant materials from construction task descriptions. Given a user's description, extract the most relevant materials that can be used to look up costs in RSMeans data. Don't include materials that are not directly related to the task. Return your answer as a comma-separated list of materials.Provide only the comma-separated list of materials, no other text and no explanations. Example: 'concrete, steel, wood, insulation, drywall'.  | user_input=Description: What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:25:33,350 [INFO] [id=None] [thread=23132] [run_llm_query] [called_by=find_by_description] Starting LLM query | system_prompt=You are an expert at mapping construction task descriptions to Masterformat chapters. Given a list of Masterformat chapters, select all relevant chapters for a user's description. Consider exact matches first, then partial matches based on the description. If a chapter is mostly relevant, it should be included in the response, even if it is not an exact match. Return your answer as a comma-separated list of chapter numbers (e.g. 03, 04, 10, etc).Return only the chapter numbers, no other text.  | user_input=Masterformat chapters list:\n10: 10_specialties.csv\n11: 11_equipment.csv\n12: 12_furnishings.csv\n13: 13_special_construction.csv\n14: 14_conveying_equipment.csv\n15: 15_fire_suppression.csv\n16: 16_plumbing.csv\n17: 17_heating_ventilation_air_conditioning.csv\n18: 18_electrical.csv\n19: 19_communications.csv\n20: 20_electronic_safety_sensors.csv\n22: 22_exterior_improvements.csv\n23: 23_utilities.csv\n24: 24_transportation.csv\n25: 25_waterway_marine.csv\n26: 26_material_processing_handling_equipment.csv\n27: 27_pollution_control_equipment.csv\n28: 28_electrical_power_generation.csv\n2: 2_existing_conditions.csv\n31: 31_earthwork.csv\n3: 3_concrete.csv\n4: 4_masonry.csv\n5: 5_metals.csv\n6: 6_wood_plastics_composites.csv\n7: 7_thermal_moisture_protection.csv\n8: 8_openings.csv\n9: 9_finishes.csv\nDescription: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:25:33,734 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:25:33,736 [INFO] [id=None] [thread=23132] [run_llm_query] [called_by=find_by_description] LLM query successful on attempt 1 | system_prompt=You are an expert at mapping construction task descriptions to Masterformat chapters. Given a list of Masterformat chapters, select all relevant chapters for a user's description. Consider exact matches first, then partial matches based on the description. If a chapter is mostly relevant, it should be included in the response, even if it is not an exact match. Return your answer as a comma-separated list of chapter numbers (e.g. 03, 04, 10, etc).Return only the chapter numbers, no other text.  | user_input=Masterformat chapters list:\n10: 10_specialties.csv\n11: 11_equipment.csv\n12: 12_furnishings.csv\n13: 13_special_construction.csv\n14: 14_conveying_equipment.csv\n15: 15_fire_suppression.csv\n16: 16_plumbing.csv\n17: 17_heating_ventilation_air_conditioning.csv\n18: 18_electrical.csv\n19: 19_communications.csv\n20: 20_electronic_safety_sensors.csv\n22: 22_exterior_improvements.csv\n23: 23_utilities.csv\n24: 24_transportation.csv\n25: 25_waterway_marine.csv\n26: 26_material_processing_handling_equipment.csv\n27: 27_pollution_control_equipment.csv\n28: 28_electrical_power_generation.csv\n2: 2_existing_conditions.csv\n31: 31_earthwork.csv\n3: 3_concrete.csv\n4: 4_masonry.csv\n5: 5_metals.csv\n6: 6_wood_plastics_composites.csv\n7: 7_thermal_moisture_protection.csv\n8: 8_openings.csv\n9: 9_finishes.csv\nDescription: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:25:33,740 [INFO] [rsmeans_utils] [process_chapter] [thread=22160] [parent_thread=23132] Processing chapter 10 from file 10_specialties.csv
+2025-06-07 16:25:33,741 [INFO] [rsmeans_utils] [process_chapter] [thread=22160] [parent_thread=23132] Processing chapter 11 from file 11_equipment.csv
+2025-06-07 16:25:33,742 [INFO] [rsmeans_utils] [process_chapter] [thread=22160] [parent_thread=23132] Processing chapter 12 from file 12_furnishings.csv
+2025-06-07 16:25:33,742 [INFO] [rsmeans_utils] [process_chapter] [thread=12232] [parent_thread=23132] Processing chapter 13 from file 13_special_construction.csv
+2025-06-07 16:25:33,742 [INFO] [rsmeans_utils] [process_chapter] [thread=22160] [parent_thread=23132] Processing chapter 14 from file 14_conveying_equipment.csv
+2025-06-07 16:25:33,742 [INFO] [rsmeans_utils] [process_chapter] [thread=12232] [parent_thread=23132] Processing chapter 15 from file 15_fire_suppression.csv
+2025-06-07 16:25:33,742 [INFO] [rsmeans_utils] [process_chapter] [thread=23360] [parent_thread=23132] Processing chapter 16 from file 16_plumbing.csv
+2025-06-07 16:25:33,743 [INFO] [rsmeans_utils] [process_chapter] [thread=22160] [parent_thread=23132] Processing chapter 17 from file 17_heating_ventilation_air_conditioning.csv
+2025-06-07 16:25:33,743 [INFO] [rsmeans_utils] [process_chapter] [thread=12232] [parent_thread=23132] Processing chapter 18 from file 18_electrical.csv
+2025-06-07 16:25:33,744 [INFO] [rsmeans_utils] [process_chapter] [thread=3708] [parent_thread=23132] Processing chapter 19 from file 19_communications.csv
+2025-06-07 16:25:33,744 [INFO] [rsmeans_utils] [process_chapter] [thread=22160] [parent_thread=23132] Processing chapter 20 from file 20_electronic_safety_sensors.csv
+2025-06-07 16:25:33,744 [INFO] [rsmeans_utils] [process_chapter] [thread=23360] [parent_thread=23132] Processing chapter 22 from file 22_exterior_improvements.csv
+2025-06-07 16:25:33,744 [INFO] [rsmeans_utils] [process_chapter] [thread=6412] [parent_thread=23132] Processing chapter 23 from file 23_utilities.csv
+2025-06-07 16:25:33,744 [INFO] [rsmeans_utils] [process_chapter] [thread=12232] [parent_thread=23132] Processing chapter 24 from file 24_transportation.csv
+2025-06-07 16:25:33,745 [INFO] [rsmeans_utils] [process_chapter] [thread=23176] [parent_thread=23132] Processing chapter 25 from file 25_waterway_marine.csv
+2025-06-07 16:25:33,745 [INFO] [rsmeans_utils] [process_chapter] [thread=3708] [parent_thread=23132] Processing chapter 26 from file 26_material_processing_handling_equipment.csv
+2025-06-07 16:25:33,745 [INFO] [rsmeans_utils] [process_chapter] [thread=22160] [parent_thread=23132] Processing chapter 27 from file 27_pollution_control_equipment.csv
+2025-06-07 16:25:33,746 [INFO] [rsmeans_utils] [process_chapter] [thread=6412] [parent_thread=23132] Processing chapter 28 from file 28_electrical_power_generation.csv
+2025-06-07 16:25:33,746 [INFO] [rsmeans_utils] [process_chapter] [thread=22172] [parent_thread=23132] Processing chapter 2 from file 2_existing_conditions.csv
+2025-06-07 16:25:33,746 [INFO] [rsmeans_utils] [process_chapter] [thread=23360] [parent_thread=23132] Processing chapter 31 from file 31_earthwork.csv
+2025-06-07 16:25:33,747 [INFO] [rsmeans_utils] [process_chapter] [thread=12232] [parent_thread=23132] Processing chapter 3 from file 3_concrete.csv
+2025-06-07 16:25:33,747 [INFO] [rsmeans_utils] [process_chapter] [thread=23176] [parent_thread=23132] Processing chapter 4 from file 4_masonry.csv
+2025-06-07 16:25:33,747 [INFO] [rsmeans_utils] [process_chapter] [thread=22172] [parent_thread=23132] Processing chapter 5 from file 5_metals.csv
+2025-06-07 16:25:33,747 [INFO] [rsmeans_utils] [process_chapter] [thread=3708] [parent_thread=23132] Processing chapter 6 from file 6_wood_plastics_composites.csv
+2025-06-07 16:25:33,747 [INFO] [rsmeans_utils] [process_chapter] [thread=17280] [parent_thread=23132] Processing chapter 7 from file 7_thermal_moisture_protection.csv
+2025-06-07 16:25:33,747 [INFO] [rsmeans_utils] [process_chapter] [thread=22160] [parent_thread=23132] Processing chapter 8 from file 8_openings.csv
+2025-06-07 16:25:33,748 [INFO] [rsmeans_utils] [process_chapter] [thread=22452] [parent_thread=23132] Processing chapter 9 from file 9_finishes.csv
+2025-06-07 16:25:33,794 [INFO] [id=None] [thread=23176] [parent_thread=23132] [run_llm_query] [called_by=process_chapter] Starting LLM query | system_prompt=You are an expert at mapping construction task descriptions to Masterformat section names. Given a list of Masterformat section names, you will select all relevant names for a user's description. Return your answer as a comma-separated list of section names with a confidence percentage (0-100) for each, in the format: name1:confidence1, name2:confidence2, ... Return only the section names and confidence percentages, no other text.  | user_input=Masterformat section names list:\nPointing Masonry\nPointing CMU\nSawing Masonry\nUnit Masonry Stabilization\nDaily Labor - 2022 Bare Costs\nBrick Washing\n04 05 05 - Selective Demolition for Masonry\n3000 Copings, precast or masonry, to 8" wide\n3100 To 12" wide\n4000 Fireplace, brick, 30" x 24" opening\n5000 Veneers, brick, soft old mortar\nCement\nLime\nSurface Bonding Masonry Mortaring\nMortar\nMasonry Restoration Mortaring\nMortar Pigments\nSand\nMortar Admixtures\nGrouting\n04 05 16 - Masonry Grout Work\nAnchor Bolts\nMasonry Anchors\nMasonry Reinforcing Bars\n04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars\nMasonry Control and Expansion Joints\nMasonry Cavity Drainage, Weepholes, and Vents\nWall Plugs\nBrick Veneer Masonry\n4 21 13.13 Brick Masonry\nThin Brick Veneer\nChimney\nColumns\nOversized Brick\nOversized Brick Masonry\nCommon Building Brick\nStructural Brick\nFace Brick\nStructural Facing Tile\nTerra Cotta Masonry Components\nTerra Cotta Tile\nAutoclave Aerated Concrete Block\nChimney Block\nConcrete Block, Back-Up\nConcrete Block, Bond Beam\nConcrete Masonry, Bond Beam\nConcrete Block, Column\nConcrete Block, Insulation Inserts\nConcrete Block, Decorative\n04 22 10 Concrete Masonry Units\nConcrete Block, Exterior\nConcrete Block Foundation Wall\nConcrete Block, High Strength\nConcrete Block, Interlocking\nConcrete Block, Lintels\nLintel Block\nConcrete Block, Partitions\n04 22 10 - Concrete Masonry Units\nConcrete Brick\nConcrete Block, Screen Block\nGlazed Concrete Block\nGlass Block\nAdobe Brick\nBrick and Epoxy Mortar Panels\nCavity Walls\nBrick Walls\nSteps\nRough Stone Wall\nAshlar Veneer\nBluestone\nGranite\nPavers, 4" x 4" x 4" blocks, splitface and joints\nSoffits, 2" thick\nReclaimed or Antique\nLightweight Natural Stone\nLimestone\nMarble\nSandstone or Brownstone\nSlate\nWindow Sill\nFlue Lining\nFire Brick\nFire Clay\nFireplace\nSimulated Brick\nCast Stone Masonry Features\nCultured Stone Veneer\nSimulated Stone\nDescription: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:25:33,798 [INFO] [id=None] [thread=12232] [parent_thread=23132] [run_llm_query] [called_by=process_chapter] Starting LLM query | system_prompt=You are an expert at mapping construction task descriptions to Masterformat section names. Given a list of Masterformat section names, you will select all relevant names for a user's description. Return your answer as a comma-separated list of section names with a confidence percentage (0-100) for each, in the format: name1:confidence1, name2:confidence2, ... Return only the section names and confidence percentages, no other text.  | user_input=Masterformat section names list:\n0010 POLISHED CONCRETE FLOORS\nGunite (Dry-Mix)\nShotcrete (Wet-Mix)\nWater Curing\nPrecast Stairs\nPrecast Beams\nPrecast Columns\nPrecast Joists\n03 41 33 Precast Structural Pretensioned Concrete\nPrecast Wall Panels\n2022 Bare Costs\n0010 GYPSUM ROOF DECK\nCement Underlayment\nGrout, Non-Metallic Non-Shrink\nGrout, Metallic Non-Shrink\nEpoxy Only\nConcrete Patching\n03 05 05 - Selective Demolition for Concrete\n03 05 13 - Basic Concrete Materials\nConcrete Admixtures and Surface Treatments\nAggregate\nCement\n03 05 13 - Basic Concrete Materials\nForms In Place, Beams and Girders\nForms In Place, Columns\nSteel framed plywood, based on 50 uses of purchased forms, and 4 uses of bracing lumber\nForms In Place, Culvert\nForms In Place, Elevated Slabs\nForms In Place, Equipment Foundations\nForms In Place, Footings\nForms In Place, Gas Station Forms\nForms In Place, Grade Beam\nForms In Place, Mat Foundation\nForms In Place, Slab On Grade\nForms In Place, Walls\nConcrete Form Liners\nInsulating Forms, Left In Place\n90 degree corner blocks or panels, molded, walls up to 4' high\n45 degree corner blocks or panels, molded, walls up to 4' high\nI blocks or panels, molded, walls up to 4' high\nRadius blocks or panels, molded, walls up to 4' high, 6" core wall\nAdditional labor for blocks/panels in higher walls (excludes scaffolding)\nForming 9.10 Insulating Forms, Left In Place\nRoof Deck Form Boards\nForms In Place, Stairs\nChamfer Strips\n03 15 05 - Concrete Forming Accessories\nHangers\nShores\nConcrete Forming Accessories 05.70 Shores\nSleeves and Chases\nSnap Ties\nStair Tread Inserts\nWall and Foundation Form Accessories\nWaterstops\n03 15 13 Waterstops\n03 15 16 Concrete Construction Joints\nExpansion Joints\nAnchor Bolt Accessories\nAnchor Bolts\nConcrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts\n03 15 19 - Cast-In Concrete Anchors\nDovetail Anchor System\nInserts\nMachinery Anchors\nRebar Accessories\nSplicing Reinforcing Bars\n03 21 11 Plain Steel Reinforcement Bars\nReinforcing In Place\nGalvanized Reinforcing\nEpoxy-Coated Reinforcing\nGlass Fiber-Reinforced Polymer Reinf. Bars\nPlain Welded Wire Fabric\nGalvanized Welded Wire Fabric\n0010 EPOXY-COATED WELDED WIRE FABRIC\nPrestressing Steel\nPrestressing Reinforcing\nSynthetic Fibers\nSteel Fibers\nConcrete In Place\nDaily Labor\nConcrete, Hand Mix\nConcrete, Volumetric Site - Mixed\nHeavyweight Concrete, Ready Mix\nPlacing Concrete\nFinishing Floors, High Tolerance\nFinishing Floors, Heavy-Duty\nFinishing Floors, Colored\nFinishing Floors, Exposed Aggregate\nFinishing Floors, Tooled\nFinishing Walls\nSlab Texture Stamping\nDescription: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:25:36,831 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:25:36,833 [INFO] [id=None] [thread=12232] [parent_thread=23132] [run_llm_query] [called_by=process_chapter] LLM query successful on attempt 1 | system_prompt=You are an expert at mapping construction task descriptions to Masterformat section names. Given a list of Masterformat section names, you will select all relevant names for a user's description. Return your answer as a comma-separated list of section names with a confidence percentage (0-100) for each, in the format: name1:confidence1, name2:confidence2, ... Return only the section names and confidence percentages, no other text.  | user_input=Masterformat section names list:\n0010 POLISHED CONCRETE FLOORS\nGunite (Dry-Mix)\nShotcrete (Wet-Mix)\nWater Curing\nPrecast Stairs\nPrecast Beams\nPrecast Columns\nPrecast Joists\n03 41 33 Precast Structural Pretensioned Concrete\nPrecast Wall Panels\n2022 Bare Costs\n0010 GYPSUM ROOF DECK\nCement Underlayment\nGrout, Non-Metallic Non-Shrink\nGrout, Metallic Non-Shrink\nEpoxy Only\nConcrete Patching\n03 05 05 - Selective Demolition for Concrete\n03 05 13 - Basic Concrete Materials\nConcrete Admixtures and Surface Treatments\nAggregate\nCement\n03 05 13 - Basic Concrete Materials\nForms In Place, Beams and Girders\nForms In Place, Columns\nSteel framed plywood, based on 50 uses of purchased forms, and 4 uses of bracing lumber\nForms In Place, Culvert\nForms In Place, Elevated Slabs\nForms In Place, Equipment Foundations\nForms In Place, Footings\nForms In Place, Gas Station Forms\nForms In Place, Grade Beam\nForms In Place, Mat Foundation\nForms In Place, Slab On Grade\nForms In Place, Walls\nConcrete Form Liners\nInsulating Forms, Left In Place\n90 degree corner blocks or panels, molded, walls up to 4' high\n45 degree corner blocks or panels, molded, walls up to 4' high\nI blocks or panels, molded, walls up to 4' high\nRadius blocks or panels, molded, walls up to 4' high, 6" core wall\nAdditional labor for blocks/panels in higher walls (excludes scaffolding)\nForming 9.10 Insulating Forms, Left In Place\nRoof Deck Form Boards\nForms In Place, Stairs\nChamfer Strips\n03 15 05 - Concrete Forming Accessories\nHangers\nShores\nConcrete Forming Accessories 05.70 Shores\nSleeves and Chases\nSnap Ties\nStair Tread Inserts\nWall and Foundation Form Accessories\nWaterstops\n03 15 13 Waterstops\n03 15 16 Concrete Construction Joints\nExpansion Joints\nAnchor Bolt Accessories\nAnchor Bolts\nConcrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts\n03 15 19 - Cast-In Concrete Anchors\nDovetail Anchor System\nInserts\nMachinery Anchors\nRebar Accessories\nSplicing Reinforcing Bars\n03 21 11 Plain Steel Reinforcement Bars\nReinforcing In Place\nGalvanized Reinforcing\nEpoxy-Coated Reinforcing\nGlass Fiber-Reinforced Polymer Reinf. Bars\nPlain Welded Wire Fabric\nGalvanized Welded Wire Fabric\n0010 EPOXY-COATED WELDED WIRE FABRIC\nPrestressing Steel\nPrestressing Reinforcing\nSynthetic Fibers\nSteel Fibers\nConcrete In Place\nDaily Labor\nConcrete, Hand Mix\nConcrete, Volumetric Site - Mixed\nHeavyweight Concrete, Ready Mix\nPlacing Concrete\nFinishing Floors, High Tolerance\nFinishing Floors, Heavy-Duty\nFinishing Floors, Colored\nFinishing Floors, Exposed Aggregate\nFinishing Floors, Tooled\nFinishing Walls\nSlab Texture Stamping\nDescription: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:25:38,129 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:25:38,136 [INFO] [id=None] [thread=23176] [parent_thread=23132] [run_llm_query] [called_by=process_chapter] LLM query successful on attempt 1 | system_prompt=You are an expert at mapping construction task descriptions to Masterformat section names. Given a list of Masterformat section names, you will select all relevant names for a user's description. Return your answer as a comma-separated list of section names with a confidence percentage (0-100) for each, in the format: name1:confidence1, name2:confidence2, ... Return only the section names and confidence percentages, no other text.  | user_input=Masterformat section names list:\nPointing Masonry\nPointing CMU\nSawing Masonry\nUnit Masonry Stabilization\nDaily Labor - 2022 Bare Costs\nBrick Washing\n04 05 05 - Selective Demolition for Masonry\n3000 Copings, precast or masonry, to 8" wide\n3100 To 12" wide\n4000 Fireplace, brick, 30" x 24" opening\n5000 Veneers, brick, soft old mortar\nCement\nLime\nSurface Bonding Masonry Mortaring\nMortar\nMasonry Restoration Mortaring\nMortar Pigments\nSand\nMortar Admixtures\nGrouting\n04 05 16 - Masonry Grout Work\nAnchor Bolts\nMasonry Anchors\nMasonry Reinforcing Bars\n04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars\nMasonry Control and Expansion Joints\nMasonry Cavity Drainage, Weepholes, and Vents\nWall Plugs\nBrick Veneer Masonry\n4 21 13.13 Brick Masonry\nThin Brick Veneer\nChimney\nColumns\nOversized Brick\nOversized Brick Masonry\nCommon Building Brick\nStructural Brick\nFace Brick\nStructural Facing Tile\nTerra Cotta Masonry Components\nTerra Cotta Tile\nAutoclave Aerated Concrete Block\nChimney Block\nConcrete Block, Back-Up\nConcrete Block, Bond Beam\nConcrete Masonry, Bond Beam\nConcrete Block, Column\nConcrete Block, Insulation Inserts\nConcrete Block, Decorative\n04 22 10 Concrete Masonry Units\nConcrete Block, Exterior\nConcrete Block Foundation Wall\nConcrete Block, High Strength\nConcrete Block, Interlocking\nConcrete Block, Lintels\nLintel Block\nConcrete Block, Partitions\n04 22 10 - Concrete Masonry Units\nConcrete Brick\nConcrete Block, Screen Block\nGlazed Concrete Block\nGlass Block\nAdobe Brick\nBrick and Epoxy Mortar Panels\nCavity Walls\nBrick Walls\nSteps\nRough Stone Wall\nAshlar Veneer\nBluestone\nGranite\nPavers, 4" x 4" x 4" blocks, splitface and joints\nSoffits, 2" thick\nReclaimed or Antique\nLightweight Natural Stone\nLimestone\nMarble\nSandstone or Brownstone\nSlate\nWindow Sill\nFlue Lining\nFire Brick\nFire Clay\nFireplace\nSimulated Brick\nCast Stone Masonry Features\nCultured Stone Veneer\nSimulated Stone\nDescription: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:25:38,223 [INFO] [id=None] [thread=23132] [run_llm_query] [called_by=find_by_description] Starting LLM query | system_prompt=You are an expert at mapping construction task descriptions to specific RSMeans line items. Given a list of line items (with both Name and Section Name), select all that are most relevant for a user's description. Return your answer as a ||-separated list of the exact 'Name' values (not Section Name) with a confidence percentage (0-100) for each, in the format: Name1::confidence1||Name2::confidence2||... Return only the names and confidence percentages, no other text.  | user_input=Line items list:\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: Splicing Reinforcing Bars, Name: #6 bars\nSection: Splicing Reinforcing Bars, Name: #5 bars\nSection: Splicing Reinforcing Bars, Name: Standard, self-aligning type, taper threaded, #4 bars\nSection: Splicing Reinforcing Bars, Name: Including holding bars in place while splicing\nSection: Splicing Reinforcing Bars, Name: SPLICING REINFORCING BARS R032110-70\nSection: Rebar Accessories, Name: Tie wire, 16 ga. annealed steel\nSection: Rebar Accessories, Name: 24" long\nSection: Rebar Accessories, Name: 7/8" diameter, 12" long\nSection: Rebar Accessories, Name: 24" long\nSection: Rebar Accessories, Name: Subgrade stakes, no nail holes, 3/4" diameter, 12" long\nSection: Rebar Accessories, Name: 12" high\nSection: Rebar Accessories, Name: #6 bar head, 3-1/2" high\nSection: Rebar Accessories, Name: 12" high\nSection: Rebar Accessories, Name: Subgrade chairs, #4 bar head, 3-1/2" high\nSection: Rebar Accessories, Name: 1-1/2" diameter, 8" high\nSection: Rebar Accessories, Name: 7" high\nSection: Rebar Accessories, Name: Double pickup lifting inserts, 1" diameter, 5-1/2" high\nSection: Rebar Accessories, Name: 7" high\nSection: Rebar Accessories, Name: 1" diameter, 5-1/2" high\nSection: Rebar Accessories, Name: 7" high\nSection: Rebar Accessories, Name: 6" high\nSection: Rebar Accessories, Name: Slab lifting inserts, single pickup, galv, 3/4" diam., 5" high\nSection: Rebar Accessories, Name: 1" x 12" long\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Rebar Accessories, Name: 1-1/2" x 6" long\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #9-8\nSection: Splicing Reinforcing Bars, Name: #10-9\nSection: Splicing Reinforcing Bars, Name: #11-10\nSection: Splicing Reinforcing Bars, Name: #14-11\nSection: Splicing Reinforcing Bars, Name: #18-11\nSection: Splicing Reinforcing Bars, Name: Transition position coupler for curved bars, taper threaded, #18-14\nSection: Splicing Reinforcing Bars, Name: #18 bars\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: Splicing Reinforcing Bars, Name: #6 bars\nSection: Splicing Reinforcing Bars, Name: #5 bars\nSection: Splicing Reinforcing Bars, Name: Position coupler for curved bars, taper threaded, #4 bars\nSection: Splicing Reinforcing Bars, Name: #7-6\nSection: Splicing Reinforcing Bars, Name: #8-7\nSection: Splicing Reinforcing Bars, Name: #9-8\nSection: Splicing Reinforcing Bars, Name: #10-9\nSection: Splicing Reinforcing Bars, Name: #11-10\nSection: Splicing Reinforcing Bars, Name: #14-11\nSection: Splicing Reinforcing Bars, Name: #18-11\nSection: Splicing Reinforcing Bars, Name: Transition self-aligning, taper threaded, #18-14\nSection: Splicing Reinforcing Bars, Name: #18 bars\nSection: Rebar Accessories, Name: Screw anchor bolts, 3/4" x 9" long\nSection: Rebar Accessories, Name: 1" x 3-1/2" long\nSection: Splicing Reinforcing Bars, Name: #7-6\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Continuous high chairs (CHC), legs 8" OC, 4" high, plain steel\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Bar chair (BC), 1-1/2" high, plain steel\nSection: Rebar Accessories, Name: 8" high\nSection: Rebar Accessories, Name: Individual high chairs, with plate (HCP), 5" high\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 12" high, plain\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 8" high, plain\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 5" high, plain\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: High chairs, individual (HC), 3" high, plain steel\nSection: Rebar Accessories, Name: 7" long\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: 6" high, plain\nSection: Rebar Accessories, Name: Screw anchor eye bolts, 3/4" x 3" long\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 1-1/2" diameter x 8" long\nSection: Rebar Accessories, Name: 1" diameter x 6" long\nSection: Rebar Accessories, Name: Screw anchor for bolts, plain steel, 3/4" diameter x 4" long\nSection: Rebar Accessories, Name: 12" long\nSection: Rebar Accessories, Name: 3/4" coil thread diam. for pipe screed, plain steel, 6" long\nSection: Rebar Accessories, Name: 12" long\nSection: Rebar Accessories, Name: Screed holder, 1/2" coil thread diam. for pipe screed, plain steel, 6" long\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 5-1/2" high, plain steel\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 3/4" coil thread diam., 2-1/2" high, plain steel\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 5-1/2" high, plain\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Screed chair base, 1/2" coilthread diam., 2-1/2" high, plain steel\nSection: Rebar Accessories, Name: For continuous bottom plate, add\nSection: Rebar Accessories, Name: For continuous bottom wire runners, add\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 8" high, plain\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Splicing Reinforcing Bars, Name: #8-7\nSection: Splicing Reinforcing Bars, Name: Sleeve type w/grout fille, for precast concrete, #6 bars\nSection: Rebar Accessories, Name: 5" long\nSection: Masonry Anchors, Name: For brick veneer, galv., corrugated, 7/8" x 7", 22 ga.\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 3/4" diameter, 8" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 5/8" diameter, 8" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: Hooked, with nut and washer, 1/2" diameter, 8" long\nSection: Anchor Bolts, Name: Installed in fresh grout in CMU bond beams or filled cores, no templates\nSection: Anchor Bolts, Name: ANCHOR BOLTS\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowel caps, visual warning only, plastic, #3 to #8\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, 12" long, for 1" smooth dowel\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, for 1" smooth dowel sleeve\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, 12" long, for 3/4" smooth dowel\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, for 3/4" smooth dowel sleeve\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, plastic, 12" long, for 5/8" smooth dowel, snap onto base\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, plastic, for 5/8" smooth dowel sleeve, fasten to edge form\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowel sleeves for CIP concrete, 2-part system\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 3/4" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 5/8" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Smooth dowels, 12" long, 1/4" or 3/8" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Longer and heavier dowels, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #6\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #5\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #4\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowels, 2 feet long, deformed, #3\nSection: Masonry Anchors, Name: MASONRY ANCHORS\nSection: Masonry Anchors, Name: 24 ga.\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 1.0 ton/bundle\nSection: Masonry Anchors, Name: 16 ga.\nSection: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: Cavity truss with drip section, to 6" wide\nSection: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: 12" wide\nSection: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: Joint reinforcing, regular truss, to 6" wide, mill std galvanized\nSection: Masonry Reinforcing Bars, Name: #5 & #6 bars\nSection: Masonry Reinforcing Bars, Name: Placed vertical, #3 & #4 bars\nSection: Masonry Reinforcing Bars, Name: #5 & #6 bars\nSection: Masonry Reinforcing Bars, Name: Steel bars A615, placed horiz., #3 & #4 bars\nSection: Masonry Reinforcing Bars, Name: MASONRY REINFORCING BARS R040519-50\nSection: Masonry Anchors, Name: 2" x 1/4"\nSection: Masonry Anchors, Name: 2" x 1/8"\nSection: Masonry Anchors, Name: 1-1/2" x 1/4"\nSection: Masonry Anchors, Name: 1-1/2" x 1/8"\nSection: Masonry Anchors, Name: 1" x 1/4"\nSection: Masonry Anchors, Name: Rigid partition anchors, plain, 8" long, 1" x 1/8"\nSection: Masonry Anchors, Name: 4" x 6"\nSection: Masonry Anchors, Name: 3/16" diameter, 2" x 6"\nSection: Masonry Anchors, Name: 4" x 6"\nSection: Masonry Anchors, Name: Rectangular type, galvanized, 1/4" diameter, 2" x 6"\nSection: Masonry Anchors, Name: 1/4" diameter\nSection: Masonry Anchors, Name: 8" long, 3/16" diameter\nSection: Masonry Anchors, Name: 1/4" diameter\nSection: Masonry Anchors, Name: 3/16" diameter\nSection: Masonry Anchors, Name: Cavity wall, Z-type, galvanized, 6" long, 1/8" diam.\nSection: Masonry Anchors, Name: 8" x 3"\nSection: Masonry Anchors, Name: Buck anchors, galv., corrugated, 16 ga., 2" bend, 8" x 2"\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 0.5 ton/bundle\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Crane cost for handling, 90 picks/day, up to 1.5 tons/bundle, add to above\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Beams & Girders, #3 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Includes labor, but not material cost, to install accessories\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: REINFORCING IN PLACE, 50-60 ton lots, A615 Grade 60\nSection: Splicing Reinforcing Bars, Name: #18 bars\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: Splicing Reinforcing Bars, Name: #6 bars\nSection: Splicing Reinforcing Bars, Name: #5 bars\nSection: Splicing Reinforcing Bars, Name: Weldable half coupler, taper threaded, #4 bars\nSection: Splicing Reinforcing Bars, Name: #18 bars\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: Splicing Reinforcing Bars, Name: Sleeve type w/ferrous fille, for critical structures, #6 bars\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Made from recycled materials\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Unloading & sorting, add to above\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Columns, #3 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Grade 90, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Reinforcing inplace, A615 Grade 75, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, deduct\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Over 100 ton job, #3 to #7, deduct\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, deduct\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 60-100 ton job, #3 to #7, deduct\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 10-50 ton job, #3 to #7, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Under 10 ton job, #3 to #7, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: For other than 50-60 ton lots\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Walls, #3 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Slab on grade, #3 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Footings, #4 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Elevated slabs, #4 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 84" to 96" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 64" to 84" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 48" to 64" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 36" to 48" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 24" to 36" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 15" to 24" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Spirals, hot rolled, 8" to 15" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: Rebar Accessories, Name: 6" long\nSection: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: 12" wide\nSection: Rebar Accessories, Name: Bag ties, 16 ga., plain, 4" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-3/4" diameter x 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1" diameter x 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/2" diameter x 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 3/4" diameter x 8" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: J-type, incl. hex nut & washer, 1/2" diameter x 6" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 4-bolt pattern, including job-built 4-hole template, per set\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 72" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 66" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 2" diameter x 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Anchor Bolts, Name: 1" diameter x 12" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 3/4" diameter x 8" long\nSection: Anchor Bolts, Name: 18" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: J type, inc. hex nut & washer, 1/2" diameter x 6" long\nSection: Anchor Bolts, Name: 2-bolt pattern, including job-built 2-hole template, per set\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 3/4" diameter, 8" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 5/8" diameter, 8" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: Hooked w/nut and washer, 1/2" diameter, 8" long\nSection: Anchor Bolts, Name: Single bolts installed in fresh concrete, no templates\nSection: Anchor Bolts, Name: Made from recycled materials\nSection: Anchor Bolts, Name: ANCHOR BOLTS\nSection: Anchor Bolts, Name: 18" long\nSection: Anchor Bolts, Name: 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/4" diameter x 18" long\nSection: Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Anchor Bolts, Name: 42" long\nSection: Anchor Bolts, Name: 36" long\nSection: Anchor Bolts, Name: 30" long\nSection: Anchor Bolts, Name: 24" long\nSection: Anchor Bolts, Name: 18" long\nSection: Rebar Accessories, Name: For bolsters with plates (SBP), add\nSection: Anchor Bolts, Name: 36" long\nSection: Anchor Bolts, Name: 30" long\nSection: Anchor Bolts, Name: 24" long\nSection: Anchor Bolts, Name: 18" long\nSection: Anchor Bolts, Name: L type, incl. hex nut & washer, 3/4" diameter x 12" long\nSection: Anchor Bolts, Name: 24" long\nSection: Anchor Bolts, Name: 1-1/2" diameter x 18" long\nSection: Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long\nSection: Anchor Bolts, Name: 1" diameter x 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Beam bolsters (BB), lower, 1-1/2" high, plain steel\nSection: Rebar Accessories, Name: Steel & plastic made from recycled materials\nSection: Rebar Accessories, Name: REBAR ACCESSORIES\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 72" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 66" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 2" diameter x 24" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: 2" high, plain\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: Rebar Accessories, Name: Galvanized\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Rebar Accessories, Name: For bolsters with wire runners (SBR), add\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 2" high, plain steel\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Slab bolsters, continuous (SB), 1" high, plain steel\nSection: Rebar Accessories, Name: 3" high\nSection: Rebar Accessories, Name: Upper (BBU), 1-1/2" high, plain steel\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: For galvanized, add\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1" diameter x 12" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 1-1/4" diameter x 18" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: L-type, incl. hex nut & washer, 3/4" diameter x 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/2" diameter x 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 1-3/4" diameter x 18" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 1-1/2" diameter x 18" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long\nSection: 03 15 05 - Concrete Forming Accessories, Name: For sizes to 36" x 36", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Friction collars 2' 6" diam., buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Scissor type with wedges, 36" x 36", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: 48" x 48", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Bar type with wedges, 36" x 36", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: 60" x 60", buy\nSection: Chamfer Strips, Name: 1" wide\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: For sizes to 30" x 30", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Column clamps, adjustable to 24" x 24", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: COLUMN FORM ACCESSORIES\nSection: 03 15 05 - Concrete Forming Accessories, Name: Column Form Accessories\nSection: Chamfer Strips, Name: 3/4" wide\nSection: Chamfer Strips, Name: Wood, 1/2" wide\nSection: Chamfer Strips, Name: 2" radius with leg\nSection: Chamfer Strips, Name: 1" radius with leg\nSection: Chamfer Strips, Name: 3/4" wide with leg\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: 4'-0" diam., buy\nSection: Chamfer Strips, Name: CHAMFER STRIPS\nSection: Chamfer Strips, Name: Polyvinyl chloride, 1/2" wide with leg\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: 9" wide\nSection: 03 15 13 Waterstops, Name: 9" wide\nSection: 03 15 13 Waterstops, Name: Vertical tee, 6" wide\nSection: 03 15 13 Waterstops, Name: Waterstops\nSection: 03 15 13 Waterstops, Name: Waterstops\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: Flot ell, 6" wide\nSection: Waterstops, Name: Flat tee, 6" wide\nSection: 03 15 13 Waterstops, Name: 9" wide\nSection: Waterstops, Name: WATERSTOPS, PVC and Rubber\nSection: Waterstops, Name: PVC, ribbed 3/16" thick, 4" wide\nSection: Waterstops, Name: 6" wide\nSection: Waterstops, Name: With center bulb, 6" wide, 3/16" thick\nSection: Waterstops, Name: 3/8" thick\nSection: Waterstops, Name: 9" wide x 3/8" thick\nSection: 03 15 13 Waterstops, Name: Vertical ell, 6" wide\nSection: 03 15 16 Concrete Construction Joints, Name: Concrete Construction Joints\nSection: Waterstops, Name: Flat cross, 6" wide\nSection: 03 15 16 Concrete Construction Joints, Name: Control Joints, Saw Cut\nSection: 03 15 16 Concrete Construction Joints, Name: CONTROL JOINTS, SAW CUT\nSection: 03 15 16 Concrete Construction Joints, Name: Sawcut control joints in green concrete\nSection: 03 15 16 Concrete Construction Joints, Name: 1" depth\nSection: 03 15 16 Concrete Construction Joints, Name: 2" depth\nSection: 03 15 16 Concrete Construction Joints, Name: Sawcut joint reservoir in cured concrete\nSection: 03 15 16 Concrete Construction Joints, Name: 3/8" wide x 3/4" deep, with single saw blade\nSection: 03 15 16 Concrete Construction Joints, Name: 1/2" wide x 1" deep, with double saw blades\nSection: 03 15 16 Concrete Construction Joints, Name: 3/4" wide x 1-1/2" deep, with double saw blades\nSection: 03 15 16 Concrete Construction Joints, Name: Water blast joint to wash away laitance, 2 passes\nSection: 03 15 16 Concrete Construction Joints, Name: Air blast joint to blow out debris and air dry, 2 passes\nSection: 03 15 16 Concrete Construction Joints, Name: For backer rod, see Section 07 91 23.10\nSection: 03 15 16 Concrete Construction Joints, Name: For joint sealant, see Section 03 15 16.30 or 07 92 13.20\nSection: 03 15 16 Concrete Construction Joints, Name: For replacement of joint sealant, see Section 07 01 90.81\nSection: Waterstops, Name: Dumbbell type, 6" wide, 3/16" thick\nSection: Waterstops, Name: 3/8" thick\nSection: Waterstops, Name: 9" wide, 3/8" thick, plain\nSection: Waterstops, Name: Center bulb, 1/4" thick, " wide\nSection: Grouting, Name: GROUTING\nSection: Waterstops, Name: 3/8" thick\nSection: Waterstops, Name: Rubber, flat dumbbell, 3/8" thick, 6" wide\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: Flat dumbbell split, 3/8" thick, 6" wide\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: Center bulb\nSection: Waterstops, Name: Center bulb split, 3/8" thick, 6" wide\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: Waterstop fitting, rubber, flat\nSection: Waterstops, Name: Dumbbell or center bulb, 3/8" thick,\nSection: Waterstops, Name: Field union, 6" wide\nSection: Waterstops, Name: 9" wide\nSection: Grouting, Name: Bond beams & lintels, 8" deep, 6" thick, 0.15 C.F./L.F.\nSection: Grouting, Name: 8" thick, 0.2 C.F./L.F.\nSection: 04 05 16 - Masonry Grout Work, Name: 10" thick, 0.25 C.F./L.E.\nSection: 04 05 16 - Masonry Grout Work, Name: 12" thick, 0.3 C.F./L.F.\nSection: 04 05 16 - Masonry Grout Work, Name: Concrete block cores, solid, 4" thk., by hand, 0.067 C.F./S.F. of wall\nSection: 04 05 16 - Masonry Grout Work, Name: 6" thick, pumped, 0.175 C.E./S.F\nSection: 04 05 16 - Masonry Grout Work, Name: 8" thick, pumped, 0.258 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: 10" thick, pumped, 0.340 C.F./S.F\nSection: 04 05 16 - Masonry Grout Work, Name: 12" thick, pumped, 0.422 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: Cavity walls, 2" space, pumped, 0.167 C.F./S.F. of wall\nSection: 04 05 16 - Masonry Grout Work, Name: 3" space, 0.250 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: 4" space, 0.333 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: 6" space, 0.500 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: Door frames, 3' x 7' opening, 2.5 C.F. per opening\nSection: 04 05 16 - Masonry Grout Work, Name: 6' x 7' opening, 3.5 C.F. per opening\nSection: 04 05 16 - Masonry Grout Work, Name: Grout, C476, for bond beams, lintels and CMU cores\nSection: Waterstops, Name: Ribbed type, split, 3/16" thick, 6" wide\nSection: 03 15 16 Concrete Construction Joints, Name: 1-1/2" depth\nDescription: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:25:44,137 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:25:44,140 [INFO] [id=None] [thread=23132] [run_llm_query] [called_by=find_by_description] LLM query successful on attempt 1 | system_prompt=You are an expert at mapping construction task descriptions to specific RSMeans line items. Given a list of line items (with both Name and Section Name), select all that are most relevant for a user's description. Return your answer as a ||-separated list of the exact 'Name' values (not Section Name) with a confidence percentage (0-100) for each, in the format: Name1::confidence1||Name2::confidence2||... Return only the names and confidence percentages, no other text.  | user_input=Line items list:\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: Splicing Reinforcing Bars, Name: #6 bars\nSection: Splicing Reinforcing Bars, Name: #5 bars\nSection: Splicing Reinforcing Bars, Name: Standard, self-aligning type, taper threaded, #4 bars\nSection: Splicing Reinforcing Bars, Name: Including holding bars in place while splicing\nSection: Splicing Reinforcing Bars, Name: SPLICING REINFORCING BARS R032110-70\nSection: Rebar Accessories, Name: Tie wire, 16 ga. annealed steel\nSection: Rebar Accessories, Name: 24" long\nSection: Rebar Accessories, Name: 7/8" diameter, 12" long\nSection: Rebar Accessories, Name: 24" long\nSection: Rebar Accessories, Name: Subgrade stakes, no nail holes, 3/4" diameter, 12" long\nSection: Rebar Accessories, Name: 12" high\nSection: Rebar Accessories, Name: #6 bar head, 3-1/2" high\nSection: Rebar Accessories, Name: 12" high\nSection: Rebar Accessories, Name: Subgrade chairs, #4 bar head, 3-1/2" high\nSection: Rebar Accessories, Name: 1-1/2" diameter, 8" high\nSection: Rebar Accessories, Name: 7" high\nSection: Rebar Accessories, Name: Double pickup lifting inserts, 1" diameter, 5-1/2" high\nSection: Rebar Accessories, Name: 7" high\nSection: Rebar Accessories, Name: 1" diameter, 5-1/2" high\nSection: Rebar Accessories, Name: 7" high\nSection: Rebar Accessories, Name: 6" high\nSection: Rebar Accessories, Name: Slab lifting inserts, single pickup, galv, 3/4" diam., 5" high\nSection: Rebar Accessories, Name: 1" x 12" long\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Rebar Accessories, Name: 1-1/2" x 6" long\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #9-8\nSection: Splicing Reinforcing Bars, Name: #10-9\nSection: Splicing Reinforcing Bars, Name: #11-10\nSection: Splicing Reinforcing Bars, Name: #14-11\nSection: Splicing Reinforcing Bars, Name: #18-11\nSection: Splicing Reinforcing Bars, Name: Transition position coupler for curved bars, taper threaded, #18-14\nSection: Splicing Reinforcing Bars, Name: #18 bars\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: Splicing Reinforcing Bars, Name: #6 bars\nSection: Splicing Reinforcing Bars, Name: #5 bars\nSection: Splicing Reinforcing Bars, Name: Position coupler for curved bars, taper threaded, #4 bars\nSection: Splicing Reinforcing Bars, Name: #7-6\nSection: Splicing Reinforcing Bars, Name: #8-7\nSection: Splicing Reinforcing Bars, Name: #9-8\nSection: Splicing Reinforcing Bars, Name: #10-9\nSection: Splicing Reinforcing Bars, Name: #11-10\nSection: Splicing Reinforcing Bars, Name: #14-11\nSection: Splicing Reinforcing Bars, Name: #18-11\nSection: Splicing Reinforcing Bars, Name: Transition self-aligning, taper threaded, #18-14\nSection: Splicing Reinforcing Bars, Name: #18 bars\nSection: Rebar Accessories, Name: Screw anchor bolts, 3/4" x 9" long\nSection: Rebar Accessories, Name: 1" x 3-1/2" long\nSection: Splicing Reinforcing Bars, Name: #7-6\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Continuous high chairs (CHC), legs 8" OC, 4" high, plain steel\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Bar chair (BC), 1-1/2" high, plain steel\nSection: Rebar Accessories, Name: 8" high\nSection: Rebar Accessories, Name: Individual high chairs, with plate (HCP), 5" high\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 12" high, plain\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 8" high, plain\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 5" high, plain\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: High chairs, individual (HC), 3" high, plain steel\nSection: Rebar Accessories, Name: 7" long\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: 6" high, plain\nSection: Rebar Accessories, Name: Screw anchor eye bolts, 3/4" x 3" long\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 1-1/2" diameter x 8" long\nSection: Rebar Accessories, Name: 1" diameter x 6" long\nSection: Rebar Accessories, Name: Screw anchor for bolts, plain steel, 3/4" diameter x 4" long\nSection: Rebar Accessories, Name: 12" long\nSection: Rebar Accessories, Name: 3/4" coil thread diam. for pipe screed, plain steel, 6" long\nSection: Rebar Accessories, Name: 12" long\nSection: Rebar Accessories, Name: Screed holder, 1/2" coil thread diam. for pipe screed, plain steel, 6" long\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 5-1/2" high, plain steel\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 3/4" coil thread diam., 2-1/2" high, plain steel\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 5-1/2" high, plain\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Screed chair base, 1/2" coilthread diam., 2-1/2" high, plain steel\nSection: Rebar Accessories, Name: For continuous bottom plate, add\nSection: Rebar Accessories, Name: For continuous bottom wire runners, add\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 8" high, plain\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Splicing Reinforcing Bars, Name: #8-7\nSection: Splicing Reinforcing Bars, Name: Sleeve type w/grout fille, for precast concrete, #6 bars\nSection: Rebar Accessories, Name: 5" long\nSection: Masonry Anchors, Name: For brick veneer, galv., corrugated, 7/8" x 7", 22 ga.\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 3/4" diameter, 8" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 5/8" diameter, 8" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: Hooked, with nut and washer, 1/2" diameter, 8" long\nSection: Anchor Bolts, Name: Installed in fresh grout in CMU bond beams or filled cores, no templates\nSection: Anchor Bolts, Name: ANCHOR BOLTS\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowel caps, visual warning only, plastic, #3 to #8\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, 12" long, for 1" smooth dowel\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, for 1" smooth dowel sleeve\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, 12" long, for 3/4" smooth dowel\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, for 3/4" smooth dowel sleeve\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve, plastic, 12" long, for 5/8" smooth dowel, snap onto base\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Sleeve base, plastic, for 5/8" smooth dowel sleeve, fasten to edge form\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowel sleeves for CIP concrete, 2-part system\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 3/4" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 5/8" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Smooth dowels, 12" long, 1/4" or 3/8" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Longer and heavier dowels, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #6\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #5\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #4\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Dowels, 2 feet long, deformed, #3\nSection: Masonry Anchors, Name: MASONRY ANCHORS\nSection: Masonry Anchors, Name: 24 ga.\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 1.0 ton/bundle\nSection: Masonry Anchors, Name: 16 ga.\nSection: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: Cavity truss with drip section, to 6" wide\nSection: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: 12" wide\nSection: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: Joint reinforcing, regular truss, to 6" wide, mill std galvanized\nSection: Masonry Reinforcing Bars, Name: #5 & #6 bars\nSection: Masonry Reinforcing Bars, Name: Placed vertical, #3 & #4 bars\nSection: Masonry Reinforcing Bars, Name: #5 & #6 bars\nSection: Masonry Reinforcing Bars, Name: Steel bars A615, placed horiz., #3 & #4 bars\nSection: Masonry Reinforcing Bars, Name: MASONRY REINFORCING BARS R040519-50\nSection: Masonry Anchors, Name: 2" x 1/4"\nSection: Masonry Anchors, Name: 2" x 1/8"\nSection: Masonry Anchors, Name: 1-1/2" x 1/4"\nSection: Masonry Anchors, Name: 1-1/2" x 1/8"\nSection: Masonry Anchors, Name: 1" x 1/4"\nSection: Masonry Anchors, Name: Rigid partition anchors, plain, 8" long, 1" x 1/8"\nSection: Masonry Anchors, Name: 4" x 6"\nSection: Masonry Anchors, Name: 3/16" diameter, 2" x 6"\nSection: Masonry Anchors, Name: 4" x 6"\nSection: Masonry Anchors, Name: Rectangular type, galvanized, 1/4" diameter, 2" x 6"\nSection: Masonry Anchors, Name: 1/4" diameter\nSection: Masonry Anchors, Name: 8" long, 3/16" diameter\nSection: Masonry Anchors, Name: 1/4" diameter\nSection: Masonry Anchors, Name: 3/16" diameter\nSection: Masonry Anchors, Name: Cavity wall, Z-type, galvanized, 6" long, 1/8" diam.\nSection: Masonry Anchors, Name: 8" x 3"\nSection: Masonry Anchors, Name: Buck anchors, galv., corrugated, 16 ga., 2" bend, 8" x 2"\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 0.5 ton/bundle\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Crane cost for handling, 90 picks/day, up to 1.5 tons/bundle, add to above\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Beams & Girders, #3 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Includes labor, but not material cost, to install accessories\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: REINFORCING IN PLACE, 50-60 ton lots, A615 Grade 60\nSection: Splicing Reinforcing Bars, Name: #18 bars\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: Splicing Reinforcing Bars, Name: #6 bars\nSection: Splicing Reinforcing Bars, Name: #5 bars\nSection: Splicing Reinforcing Bars, Name: Weldable half coupler, taper threaded, #4 bars\nSection: Splicing Reinforcing Bars, Name: #18 bars\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: Splicing Reinforcing Bars, Name: #7 bars\nSection: Splicing Reinforcing Bars, Name: Sleeve type w/ferrous fille, for critical structures, #6 bars\nSection: Splicing Reinforcing Bars, Name: #14 bars\nSection: Splicing Reinforcing Bars, Name: #11 bars\nSection: Splicing Reinforcing Bars, Name: #10 bars\nSection: Splicing Reinforcing Bars, Name: #9 bars\nSection: Splicing Reinforcing Bars, Name: #8 bars\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Made from recycled materials\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Unloading & sorting, add to above\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Columns, #3 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Grade 90, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Reinforcing inplace, A615 Grade 75, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, deduct\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Over 100 ton job, #3 to #7, deduct\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, deduct\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 60-100 ton job, #3 to #7, deduct\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 10-50 ton job, #3 to #7, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Under 10 ton job, #3 to #7, add\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: For other than 50-60 ton lots\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Walls, #3 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Slab on grade, #3 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Footings, #4 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Elevated slabs, #4 to #7\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 84" to 96" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 64" to 84" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 48" to 64" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 36" to 48" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 24" to 36" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: 15" to 24" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: Spirals, hot rolled, 8" to 15" diameter\nSection: 03 21 11 Plain Steel Reinforcement Bars, Name: #8 to #18\nSection: Rebar Accessories, Name: 6" long\nSection: 04 05 19 - Masonry Anchorage and Reinforcing Results 19.26 Masonry Reinforcing Bars, Name: 12" wide\nSection: Rebar Accessories, Name: Bag ties, 16 ga., plain, 4" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-3/4" diameter x 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1" diameter x 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/2" diameter x 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 3/4" diameter x 8" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: J-type, incl. hex nut & washer, 1/2" diameter x 6" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 4-bolt pattern, including job-built 4-hole template, per set\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 72" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 66" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 60" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 54" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 2" diameter x 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Anchor Bolts, Name: 1" diameter x 12" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 3/4" diameter x 8" long\nSection: Anchor Bolts, Name: 18" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: J type, inc. hex nut & washer, 1/2" diameter x 6" long\nSection: Anchor Bolts, Name: 2-bolt pattern, including job-built 2-hole template, per set\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 3/4" diameter, 8" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: 5/8" diameter, 8" long\nSection: Anchor Bolts, Name: 12" long\nSection: Anchor Bolts, Name: Hooked w/nut and washer, 1/2" diameter, 8" long\nSection: Anchor Bolts, Name: Single bolts installed in fresh concrete, no templates\nSection: Anchor Bolts, Name: Made from recycled materials\nSection: Anchor Bolts, Name: ANCHOR BOLTS\nSection: Anchor Bolts, Name: 18" long\nSection: Anchor Bolts, Name: 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/4" diameter x 18" long\nSection: Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 48" long\nSection: Anchor Bolts, Name: 42" long\nSection: Anchor Bolts, Name: 36" long\nSection: Anchor Bolts, Name: 30" long\nSection: Anchor Bolts, Name: 24" long\nSection: Anchor Bolts, Name: 18" long\nSection: Rebar Accessories, Name: For bolsters with plates (SBP), add\nSection: Anchor Bolts, Name: 36" long\nSection: Anchor Bolts, Name: 30" long\nSection: Anchor Bolts, Name: 24" long\nSection: Anchor Bolts, Name: 18" long\nSection: Anchor Bolts, Name: L type, incl. hex nut & washer, 3/4" diameter x 12" long\nSection: Anchor Bolts, Name: 24" long\nSection: Anchor Bolts, Name: 1-1/2" diameter x 18" long\nSection: Anchor Bolts, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long\nSection: Anchor Bolts, Name: 1" diameter x 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Beam bolsters (BB), lower, 1-1/2" high, plain steel\nSection: Rebar Accessories, Name: Steel & plastic made from recycled materials\nSection: Rebar Accessories, Name: REBAR ACCESSORIES\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 72" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 66" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 2" diameter x 24" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: 2" high, plain\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: Rebar Accessories, Name: Galvanized\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Rebar Accessories, Name: For bolsters with wire runners (SBR), add\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: 2" high, plain steel\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: Rebar Accessories, Name: Galvanized\nSection: Rebar Accessories, Name: Slab bolsters, continuous (SB), 1" high, plain steel\nSection: Rebar Accessories, Name: 3" high\nSection: Rebar Accessories, Name: Upper (BBU), 1-1/2" high, plain steel\nSection: Rebar Accessories, Name: Epoxy dipped\nSection: Rebar Accessories, Name: Plastic tipped legs\nSection: Rebar Accessories, Name: Stainless tipped legs\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: For galvanized, add\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1" diameter x 12" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 1-1/4" diameter x 18" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: L-type, incl. hex nut & washer, 3/4" diameter x 12" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 1-1/2" diameter x 18" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long\nSection: Concrete - Cast-In Concrete Anchors Accessories 0 Anchor Bolts, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 36" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 1-3/4" diameter x 18" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 42" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 60" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 48" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 54" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 30" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 1-1/2" diameter x 18" long\nSection: 03 15 19 - Cast-In Concrete Anchors, Name: 24" long\nSection: 03 15 05 - Concrete Forming Accessories, Name: For sizes to 36" x 36", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Friction collars 2' 6" diam., buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Scissor type with wedges, 36" x 36", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: 48" x 48", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Bar type with wedges, 36" x 36", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: 60" x 60", buy\nSection: Chamfer Strips, Name: 1" wide\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: For sizes to 30" x 30", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: Column clamps, adjustable to 24" x 24", buy\nSection: 03 15 05 - Concrete Forming Accessories, Name: COLUMN FORM ACCESSORIES\nSection: 03 15 05 - Concrete Forming Accessories, Name: Column Form Accessories\nSection: Chamfer Strips, Name: 3/4" wide\nSection: Chamfer Strips, Name: Wood, 1/2" wide\nSection: Chamfer Strips, Name: 2" radius with leg\nSection: Chamfer Strips, Name: 1" radius with leg\nSection: Chamfer Strips, Name: 3/4" wide with leg\nSection: 03 15 05 - Concrete Forming Accessories, Name: Rent per month\nSection: 03 15 05 - Concrete Forming Accessories, Name: 4'-0" diam., buy\nSection: Chamfer Strips, Name: CHAMFER STRIPS\nSection: Chamfer Strips, Name: Polyvinyl chloride, 1/2" wide with leg\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: 9" wide\nSection: 03 15 13 Waterstops, Name: 9" wide\nSection: 03 15 13 Waterstops, Name: Vertical tee, 6" wide\nSection: 03 15 13 Waterstops, Name: Waterstops\nSection: 03 15 13 Waterstops, Name: Waterstops\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: Flot ell, 6" wide\nSection: Waterstops, Name: Flat tee, 6" wide\nSection: 03 15 13 Waterstops, Name: 9" wide\nSection: Waterstops, Name: WATERSTOPS, PVC and Rubber\nSection: Waterstops, Name: PVC, ribbed 3/16" thick, 4" wide\nSection: Waterstops, Name: 6" wide\nSection: Waterstops, Name: With center bulb, 6" wide, 3/16" thick\nSection: Waterstops, Name: 3/8" thick\nSection: Waterstops, Name: 9" wide x 3/8" thick\nSection: 03 15 13 Waterstops, Name: Vertical ell, 6" wide\nSection: 03 15 16 Concrete Construction Joints, Name: Concrete Construction Joints\nSection: Waterstops, Name: Flat cross, 6" wide\nSection: 03 15 16 Concrete Construction Joints, Name: Control Joints, Saw Cut\nSection: 03 15 16 Concrete Construction Joints, Name: CONTROL JOINTS, SAW CUT\nSection: 03 15 16 Concrete Construction Joints, Name: Sawcut control joints in green concrete\nSection: 03 15 16 Concrete Construction Joints, Name: 1" depth\nSection: 03 15 16 Concrete Construction Joints, Name: 2" depth\nSection: 03 15 16 Concrete Construction Joints, Name: Sawcut joint reservoir in cured concrete\nSection: 03 15 16 Concrete Construction Joints, Name: 3/8" wide x 3/4" deep, with single saw blade\nSection: 03 15 16 Concrete Construction Joints, Name: 1/2" wide x 1" deep, with double saw blades\nSection: 03 15 16 Concrete Construction Joints, Name: 3/4" wide x 1-1/2" deep, with double saw blades\nSection: 03 15 16 Concrete Construction Joints, Name: Water blast joint to wash away laitance, 2 passes\nSection: 03 15 16 Concrete Construction Joints, Name: Air blast joint to blow out debris and air dry, 2 passes\nSection: 03 15 16 Concrete Construction Joints, Name: For backer rod, see Section 07 91 23.10\nSection: 03 15 16 Concrete Construction Joints, Name: For joint sealant, see Section 03 15 16.30 or 07 92 13.20\nSection: 03 15 16 Concrete Construction Joints, Name: For replacement of joint sealant, see Section 07 01 90.81\nSection: Waterstops, Name: Dumbbell type, 6" wide, 3/16" thick\nSection: Waterstops, Name: 3/8" thick\nSection: Waterstops, Name: 9" wide, 3/8" thick, plain\nSection: Waterstops, Name: Center bulb, 1/4" thick, " wide\nSection: Grouting, Name: GROUTING\nSection: Waterstops, Name: 3/8" thick\nSection: Waterstops, Name: Rubber, flat dumbbell, 3/8" thick, 6" wide\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: Flat dumbbell split, 3/8" thick, 6" wide\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: Center bulb\nSection: Waterstops, Name: Center bulb split, 3/8" thick, 6" wide\nSection: Waterstops, Name: 9" wide\nSection: Waterstops, Name: Waterstop fitting, rubber, flat\nSection: Waterstops, Name: Dumbbell or center bulb, 3/8" thick,\nSection: Waterstops, Name: Field union, 6" wide\nSection: Waterstops, Name: 9" wide\nSection: Grouting, Name: Bond beams & lintels, 8" deep, 6" thick, 0.15 C.F./L.F.\nSection: Grouting, Name: 8" thick, 0.2 C.F./L.F.\nSection: 04 05 16 - Masonry Grout Work, Name: 10" thick, 0.25 C.F./L.E.\nSection: 04 05 16 - Masonry Grout Work, Name: 12" thick, 0.3 C.F./L.F.\nSection: 04 05 16 - Masonry Grout Work, Name: Concrete block cores, solid, 4" thk., by hand, 0.067 C.F./S.F. of wall\nSection: 04 05 16 - Masonry Grout Work, Name: 6" thick, pumped, 0.175 C.E./S.F\nSection: 04 05 16 - Masonry Grout Work, Name: 8" thick, pumped, 0.258 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: 10" thick, pumped, 0.340 C.F./S.F\nSection: 04 05 16 - Masonry Grout Work, Name: 12" thick, pumped, 0.422 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: Cavity walls, 2" space, pumped, 0.167 C.F./S.F. of wall\nSection: 04 05 16 - Masonry Grout Work, Name: 3" space, 0.250 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: 4" space, 0.333 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: 6" space, 0.500 C.F./S.F.\nSection: 04 05 16 - Masonry Grout Work, Name: Door frames, 3' x 7' opening, 2.5 C.F. per opening\nSection: 04 05 16 - Masonry Grout Work, Name: 6' x 7' opening, 3.5 C.F. per opening\nSection: 04 05 16 - Masonry Grout Work, Name: Grout, C476, for bond beams, lintels and CMU cores\nSection: Waterstops, Name: Ribbed type, split, 3/16" thick, 6" wide\nSection: 03 15 16 Concrete Construction Joints, Name: 1-1/2" depth\nDescription: c, o, n, c, r, e, t, e, ,,  , r, e, b, a, r, ,,  , f, o, o, t, i, n, g,  , f, o, r, m, s, ,,  , a, n, c, h, o, r,  , b, o, l, t, s
+2025-06-07 16:25:44,225 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [thread=21016] [run_llm_query] [called_by=route_query_to_function] Starting LLM query | system_prompt=You are an expert in building cost estimation, ROI analysis, and project data analysis.\nYour task is to answer the user's question using the provided relevant context. The user is a designer or project manager, tailor the level of detail and technicality to their expertise.\nUse the relevant context to inform your answer, and always explicitly list out any assumptions you are making (such as location, year, unit, or scope). If the question is not related to cost, ROI, or project data, politely refuse to answer.\nProvide a summary of the relavent context used in your answer, and if applicable, include a markdown table with the data.\nRespond in markdown format, include any formulas in LaTeX format\nIgnore any mathmatical information or example cost data or calculations in the knowledge base, as it is not relevant to the user's question\nYou must cite your sources and page number.  However, if you have no sources, you can say 'No sources found'.\nFormat references as: [Source: filename, Page: X]\nRelevant context: {'rsmeans':     Masterformat Section Code  ... Total Incl O&P\n1                 03 21 05.75  ...          115.0\n2                 03 21 05.75  ...           48.0\n3                 03 21 05.75  ...           41.5\n4                 03 21 05.75  ...           35.5\n5                 03 21 05.75  ...           30.5\n..                        ...  ...            ...\n441               03 15 13.50  ...            NaN\n445               03 15 13.50  ...            9.6\n449               03 15 13.50  ...          11.35\n455               03 15 13.50  ...          16.65\n479               03 15 13.50  ...           0.84\n\n[220 rows x 13 columns], 'knowledge base': 'Patch and sack material recap20,000 SF of columns @ 50% @ $0.50/SFC\xa0=\xa0$5,000106,000 SF of walls @ 50% @ $0.50/SFW\xa0=\xa0$26,500T otal material cost: $31,500\nAs mentioned with QTO, elevated concrete structures must be ‘shored’ in addition to \nformed until the concrete has cured to its design strength. This includes beams, drop caps, \nand elevated CIP slabs . After the forms are dropped from the concrete, often with assis -\ntance of small forklifts, the slabs will be ‘re-  shored’ with fewer shoring poles laid-  out on \na predetermined grid. Although this is somewhat a means and methods process, the GC will typically employ a structural engineer to calculate shoring requirements. Shoring is a cost that must be included with the recap sheets, which is usually calculated on a $/SF of form area basis.\nComposite concrete slabs on metal deck differ from elevated slabs because the metal deck \nis essentially the temporary form for the wet concrete but remains with the concrete. The \nmetal deck will also require shoring and re-  shoring, similar to the previous process. Struc -\ntural steel beams that support the metal deck often have lugs that are welded to the beams and penetrate through the de\n[Source: Len Holm, John E. Schaufelberger - Construction Cost Estimating-Routledge (2021).pdf]\n\n @ 2 months each @ $1,500/mo.\xa0=\xa0$6,000T otal direct estimate: $1,546,263, or $13.76/SFS, or\n(2) Subcontractor pre-bid da  y unit price budget of $15/SFS, or(3) Subcontractor lump sum quote received 30 minutes before the bid was due: $1,350,000\nPre- cast concrete tilt-  up walls\nThe pricing recapitulation of concrete tilt-  up panels will be similar to that of other con -\ncrete elements except that it will also include the hoisting, shimming, bracing, and grout-ing of the panels. Figure\xa011.2 is an expanded pricing recap sheet for the panel samples \nISTUDY\n\nPage 170: Concrete pricing  141\nFigure 11.2  Tilt- up wall panel cost recapitulation sheetAugust\xa018, 2021\n\xa0\n\xa0\n\xa0acobs\n1. J P\nTTC-Date:\n: Estimator\nEstimate #:uction Company City Constr\nCost Recapitulation Sheet\nraining Center\nA ent, WProject: The T\nr.: LMLocation: K\nch./Eng Ar\xa0\n\xa0\n\xa0\nDivision 3 Concrete \notal T\nCostial/Equipment\nCostMater\nUnit CostLabor\nCostUnit\nL Costage W\nRate sMan\nHourUMH\n\xa0Unit\n\xa0Qty\n\xa0iption Descr\n\xa0Code\n\xa0\n4,792\n25,463\n39,638\n8,460\n7,800\n69,720\n8,715\n10,16812,862\n5,266\n1,200\n1,080\n4,406\n6,822\n7,200\n10,500\n2,250\n2,152\n2,865\xa0\n$231,358\n$9.17\n$36.931,261\n9,645\n39,600\n6,000\n5,340\n69,720\n8,715\n3,783\n1,080\n4,406\n3,762\n7,20\n[Source: Len Holm, John E. Schaufelberger - Construction Cost Estimating-Routledge (2021).pdf]\n\nists \nare 30 inches on center?\n6 Building on the joist question in Exercise 5, assume that WF girders sit atop steel \ncolumns which are 33\u2032 apart and the joist span from girder to girder. How many joists \nwill be in this 100\u2032 square grid? Y ou may want to draw a sketch for this question.\n7 Looking to the list of materials in Exercise 4, and assuming that each steel member \nwas the same length, let’s say approximately 30 \u2032, and all things being equal (which \nthey never are, but.\xa0.\xa0.), which element would take the most labor to install?\nISTUDY\n\nPage 132: 9  Carpentry\nIntroduction\nChapters\xa06 and 7 focused on quantity take-  off (QTO) measurements for concrete, and \nChapter\xa08 focused on structural steel. In this chapter we are going to cover several remain -\ning categories of work, many of which may be installed by the general contractor (GC). \nWe have grouped all of these items together in this chapter because they are predominately scopes of work claimed by the carpenters’ union and/or usually installed by the carpenter trade. It is customary to think of the carpenter trade performing woodwork specified in Construction Specification Institute (CSI) division 06, but there is also carp\n[Source: Len Holm, John E. Schaufelberger - Construction Cost Estimating-Routledge (2021).pdf]\n\neceive rebar supply quotes.\n8 Why do the dollar totals in the self-  performed option of '}\n | user_input=What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:25:44,405 [INFO] HTTP Request: POST https://api.cloudflare.com/client/v4/accounts/36a05d8b3e0784bd885e89f48deed539/ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-06-07 16:25:44,405 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [route_query_to_function] Finished routing and LLM call.
+2025-06-07 16:25:44,434 [INFO] 127.0.0.1 - - [07/Jun/2025 16:25:44] "POST /llm_call HTTP/1.1" 200 -
+2025-06-07 16:26:06,034 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [thread=21016] [run_llm_query] [called_by=route_query_to_function] LLM streaming query started on attempt 1 | system_prompt=You are an expert in building cost estimation, ROI analysis, and project data analysis.\nYour task is to answer the user's question using the provided relevant context. The user is a designer or project manager, tailor the level of detail and technicality to their expertise.\nUse the relevant context to inform your answer, and always explicitly list out any assumptions you are making (such as location, year, unit, or scope). If the question is not related to cost, ROI, or project data, politely refuse to answer.\nProvide a summary of the relavent context used in your answer, and if applicable, include a markdown table with the data.\nRespond in markdown format, include any formulas in LaTeX format\nIgnore any mathmatical information or example cost data or calculations in the knowledge base, as it is not relevant to the user's question\nYou must cite your sources and page number.  However, if you have no sources, you can say 'No sources found'.\nFormat references as: [Source: filename, Page: X]\nRelevant context: {'rsmeans':     Masterformat Section Code  ... Total Incl O&P\n1                 03 21 05.75  ...          115.0\n2                 03 21 05.75  ...           48.0\n3                 03 21 05.75  ...           41.5\n4                 03 21 05.75  ...           35.5\n5                 03 21 05.75  ...           30.5\n..                        ...  ...            ...\n441               03 15 13.50  ...            NaN\n445               03 15 13.50  ...            9.6\n449               03 15 13.50  ...          11.35\n455               03 15 13.50  ...          16.65\n479               03 15 13.50  ...           0.84\n\n[220 rows x 13 columns], 'knowledge base': 'Patch and sack material recap20,000 SF of columns @ 50% @ $0.50/SFC\xa0=\xa0$5,000106,000 SF of walls @ 50% @ $0.50/SFW\xa0=\xa0$26,500T otal material cost: $31,500\nAs mentioned with QTO, elevated concrete structures must be ‘shored’ in addition to \nformed until the concrete has cured to its design strength. This includes beams, drop caps, \nand elevated CIP slabs . After the forms are dropped from the concrete, often with assis -\ntance of small forklifts, the slabs will be ‘re-  shored’ with fewer shoring poles laid-  out on \na predetermined grid. Although this is somewhat a means and methods process, the GC will typically employ a structural engineer to calculate shoring requirements. Shoring is a cost that must be included with the recap sheets, which is usually calculated on a $/SF of form area basis.\nComposite concrete slabs on metal deck differ from elevated slabs because the metal deck \nis essentially the temporary form for the wet concrete but remains with the concrete. The \nmetal deck will also require shoring and re-  shoring, similar to the previous process. Struc -\ntural steel beams that support the metal deck often have lugs that are welded to the beams and penetrate through the de\n[Source: Len Holm, John E. Schaufelberger - Construction Cost Estimating-Routledge (2021).pdf]\n\n @ 2 months each @ $1,500/mo.\xa0=\xa0$6,000T otal direct estimate: $1,546,263, or $13.76/SFS, or\n(2) Subcontractor pre-bid da  y unit price budget of $15/SFS, or(3) Subcontractor lump sum quote received 30 minutes before the bid was due: $1,350,000\nPre- cast concrete tilt-  up walls\nThe pricing recapitulation of concrete tilt-  up panels will be similar to that of other con -\ncrete elements except that it will also include the hoisting, shimming, bracing, and grout-ing of the panels. Figure\xa011.2 is an expanded pricing recap sheet for the panel samples \nISTUDY\n\nPage 170: Concrete pricing  141\nFigure 11.2  Tilt- up wall panel cost recapitulation sheetAugust\xa018, 2021\n\xa0\n\xa0\n\xa0acobs\n1. J P\nTTC-Date:\n: Estimator\nEstimate #:uction Company City Constr\nCost Recapitulation Sheet\nraining Center\nA ent, WProject: The T\nr.: LMLocation: K\nch./Eng Ar\xa0\n\xa0\n\xa0\nDivision 3 Concrete \notal T\nCostial/Equipment\nCostMater\nUnit CostLabor\nCostUnit\nL Costage W\nRate sMan\nHourUMH\n\xa0Unit\n\xa0Qty\n\xa0iption Descr\n\xa0Code\n\xa0\n4,792\n25,463\n39,638\n8,460\n7,800\n69,720\n8,715\n10,16812,862\n5,266\n1,200\n1,080\n4,406\n6,822\n7,200\n10,500\n2,250\n2,152\n2,865\xa0\n$231,358\n$9.17\n$36.931,261\n9,645\n39,600\n6,000\n5,340\n69,720\n8,715\n3,783\n1,080\n4,406\n3,762\n7,20\n[Source: Len Holm, John E. Schaufelberger - Construction Cost Estimating-Routledge (2021).pdf]\n\nists \nare 30 inches on center?\n6 Building on the joist question in Exercise 5, assume that WF girders sit atop steel \ncolumns which are 33\u2032 apart and the joist span from girder to girder. How many joists \nwill be in this 100\u2032 square grid? Y ou may want to draw a sketch for this question.\n7 Looking to the list of materials in Exercise 4, and assuming that each steel member \nwas the same length, let’s say approximately 30 \u2032, and all things being equal (which \nthey never are, but.\xa0.\xa0.), which element would take the most labor to install?\nISTUDY\n\nPage 132: 9  Carpentry\nIntroduction\nChapters\xa06 and 7 focused on quantity take-  off (QTO) measurements for concrete, and \nChapter\xa08 focused on structural steel. In this chapter we are going to cover several remain -\ning categories of work, many of which may be installed by the general contractor (GC). \nWe have grouped all of these items together in this chapter because they are predominately scopes of work claimed by the carpenters’ union and/or usually installed by the carpenter trade. It is customary to think of the carpenter trade performing woodwork specified in Construction Specification Institute (CSI) division 06, but there is also carp\n[Source: Len Holm, John E. Schaufelberger - Construction Cost Estimating-Routledge (2021).pdf]\n\neceive rebar supply quotes.\n8 Why do the dollar totals in the self-  performed option of '}\n | user_input=What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?
+2025-06-07 16:26:06,035 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [thread=21016] [run_llm_query] [called_by=route_query_to_function] LLM streaming query full message: full_message=### Cost Benchmark for Concrete Column Footings\nTo establish a cost benchmark for six concrete column footings for a 10,000 sq ft commercial building, we need to consider several factors, including the size and depth of the footings, the type of concrete used, and the labor costs associated with excavation, forming, and pouring the concrete.\n\n#### Assumptions:\n- Location: United States (for the purpose of this estimate, as location can significantly affect costs due to variations in labor rates, material costs, and local regulations).\n- Year: 2023 (to account for current market prices and labor rates).\n- Unit: Dollars per square foot ($/SF) or dollars per cubic yard ($/CY) for concrete.\n- Scope: The estimate includes excavation, forming, reinforcement (rebar), concrete pouring, and finishing for the footings.\n\n### Relevant Context Summary\nThe provided context includes a table from 'rsmeans' that lists various construction activities with their respective costs, including some concrete-related work. However, it does not directly provide the cost of concrete column footings. The 'knowledge base' mentions patch and sack material costs, concrete structures, shoring requirements, and a pre-cast concrete tilt-up wall panel cost recapitulation sheet, which indirectly relates to concrete work but does not offer a direct cost benchmark for column footings.\n\n### Cost Estimation Approach\nGiven the lack of direct information on the cost of concrete column footings in the provided context, we'll rely on general construction cost estimation principles. The cost of concrete column footings can be broken down into material costs (concrete, rebar, forms), labor costs (excavation, forming, pouring, finishing), and equipment costs (if applicable).\n\n#### Material Costs\n- Concrete: The cost of concrete can vary widely depending on the mix design, location, and supplier. A typical range might be $100 to $200 per cubic yard.\n- Rebar: The cost of rebar can also vary, but a rough estimate might be $0.50 to $1. per pound.\n\n#### Labor Costs\n- Labor costs for excavation, forming, and concrete work can vary significantly by location and union rates. A rough estimate for labor might be $50 to $100 per hour.\n\n### Example Calculation\nLet's assume each footing is approximately 10 feet deep and  feet in diameter (a rough estimate for a commercial building), requiring about.5 cubic yards of concrete per footing. For six footings, that's 9 cubic yards of concrete.\n\n- Material Cost (Concrete): 9 cubic yards * $150/cubic yard = $1,350\n- Material Cost (Rebar): Assuming pounds of rebar per footing (a very rough estimate), 6 footings * 100 pounds * $1/pound = $\n- Labor Cost: Assuming hours of labor per footing (again, a rough estimate), 6 footings * 10 hours * $75/hour = $4,500\n\nTotal Estimated Cost for Six Concrete Column Footings: $1,350 (concrete) + $600 (rebar) + $4,500 (labor) = $6,450\n\n### Conclusion\nThe estimated cost benchmark for six concrete column footings for a 10,000 sq ft commercial building, based on rough assumptions and estimates, is approximately $6,450. This is a very simplified calculation and actual costs can vary widely based on specific project requirements, location, and other factors.\n\n### References\nNo specific sources were cited in the calculation as it's based on general construction cost estimation principles. However, for detailed cost estimation, one should consult up-to-date construction cost manuals, such as those published by RSMeans or local construction associations.\n\n[Source: No sources found]
+2025-06-07 16:26:06,035 [INFO] [id=48c7037e-9e49-4017-a193-e8b77a7022b3] [thread=21016] [run_llm_query] [called_by=route_query_to_function] LLM streaming usage data: CompletionUsage(completion_tokens=777, prompt_tokens=1679, total_tokens=2456, completion_tokens_details=None, prompt_tokens_details=None)
