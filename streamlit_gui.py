@@ -14,11 +14,7 @@ from logger_setup import setup_logger
 
 # === Constants and Config ===
 FLASK_URL = "http://127.0.0.1:5000/llm_call"
-RAG_OPTIONS = ["LLM only", "LLM + RAG"]
-RAG_URLS = {
-    "LLM only": FLASK_URL,
-    "LLM + RAG": "http://127.0.0.1:5000/llm_rag_call"
-}
+default_rag_mode = "LLM only"
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
 MODE_URL = "http://127.0.0.1:5000/set_mode"
 sample_questions = [
@@ -69,6 +65,7 @@ def query_llm(user_input):
         return {"data_context": "", "response": f"Exception: {str(e)}"}
 
 def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
+    # Only support LLM only mode now
     mode = config.get_mode() if hasattr(config, 'get_mode') else 'unknown'
     gen_model = None
     emb_model = None
@@ -83,7 +80,7 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
         gen_model = None
         emb_model = None
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    url = RAG_URLS.get(rag_mode, FLASK_URL)
+    url = FLASK_URL
     try:
         if stream_mode == "Streaming":
             response = requests.post(url, json={"input": user_input, "stream": True, "max_tokens": int(max_tokens)}, stream=True)
@@ -257,7 +254,6 @@ if "running" in flask_status.lower() and "not" not in flask_status.lower():
             st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
 
         st.markdown("## LLM Call Type")
-        rag_mode = st.segmented_control("Choose LLM Call Type", RAG_OPTIONS, default=RAG_OPTIONS[0], key="rag_radio", selection_mode="single")
         stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
         max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
 
@@ -297,7 +293,7 @@ if "running" in flask_status.lower() and "not" not in flask_status.lower():
                 st.markdown(sample)
             with st.chat_message("assistant"):
                 st.markdown("_Processing..._")
-                output = query_llm_with_rag(sample, rag_mode, stream_mode, max_tokens)
+                output = query_llm_with_rag(sample, default_rag_mode, stream_mode, max_tokens)
         st.session_state["messages"].append({"role": "assistant", "content": output})
 
     # Handle freeform chat input
@@ -308,7 +304,7 @@ if "running" in flask_status.lower() and "not" not in flask_status.lower():
                 st.markdown(user_input)
             with st.chat_message("assistant"):
                 st.markdown("_Processing..._")
-                output = query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens)
+                output = query_llm_with_rag(user_input, default_rag_mode, stream_mode, max_tokens)
         st.session_state["messages"].append({"role": "assistant", "content": output})
 else:
     st.warning("The Flask server must be running to get a response.")
