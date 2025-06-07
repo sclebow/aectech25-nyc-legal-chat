@@ -197,115 +197,83 @@ def set_cloudflare_models(mode, gen_model, emb_model):
 # === Streamlit UI ===
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
-st.markdown("This is a Streamlit GUI for the ROI LLM Assistant. It allows you to interact with the LLM and RAG system.")
-# Start the Flask server if not already running
-if "flask_status" not in st.session_state:
-    st.session_state["flask_status"] = "Default Status: Not Running"
-    start_flask_and_wait()
-# Flask server controls
-flask_server_expander = st.expander("Flask Server Controls", expanded=True)
-with flask_server_expander:
-    col1, col2 = st.columns(2)
-    with col1:
-        if st.button("Start Flask Server"):
-            status = start_flask_and_wait()
-            st.session_state["flask_status"] = status
-    with col2:
-        if st.button("Stop Flask Server"):
-            status = stop_flask_server()
-            st.session_state["flask_status"] = status
-    flask_status = st.session_state.get("flask_status", "Default Status: Not Running")
+st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
 
-    col1, col2 = st.columns([3, 1], vertical_alignment="center")
+start_message = st.warning("Starting Flask server...")
 
-    with col2:
-        # Add a refresh button
-        if st.button("Refresh Status"):
-            try:
-                resp = requests.get("http://127.0.0.1:5000/status", timeout=1)
-                if resp.status_code == 200:
-                    st.session_state["flask_status"] = "Flask server is running."
-                else:
-                    st.session_state["flask_status"] = "Flask server is not running."
-            except Exception:
-                st.session_state["flask_status"] = "Flask server is not running."
+# Force start the Flask server if not already running
+while (start_flask_and_wait() != "Flask server is running."):
+    st.warning("Starting Flask server...")
+    time.sleep(1)
 
-    # Move this assignment after the refresh button logic so it always gets the latest value
-    flask_status = st.session_state.get("flask_status", "Default Status: Not Running")
+# Update the start message
+start_message.empty()
 
-    with col1:
-        flask_status_info = st.info(f"Flask Server Status: {flask_status}")
+with st.expander("LLM Configuration", expanded=False):
+    st.markdown("## LLM Mode Selection")
+    mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
+    mode_status = set_mode_on_server(mode)
+    st.text(mode_status)
 
-if "running" in flask_status.lower() and "not" not in flask_status.lower():
-    # Update the status placeholder
-    flask_status_info.info(f"Flask Server Status: {flask_status}", icon="✅")
-    with st.expander("LLM Configuration", expanded=False):
-        st.markdown("## LLM Mode Selection")
-        mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
-        mode_status = set_mode_on_server(mode)
-        st.text(mode_status)
+    # Cloudflare model selectors
+    if mode == "cloudflare":
+        st.markdown("### Cloudflare Model Selection")
+        cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
+        cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
+        set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
+        cf_model_status = get_cloudflare_model_status()
+        st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
 
-        # Cloudflare model selectors
-        if mode == "cloudflare":
-            st.markdown("### Cloudflare Model Selection")
-            cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
-            cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
-            set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
-            cf_model_status = get_cloudflare_model_status()
-            st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
+    st.markdown("## LLM Call Type")
+    stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
+    max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
 
-        st.markdown("## LLM Call Type")
-        stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
-        max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
+# --- Streamlit Chat Interface with Sample Questions ---
+if "messages" not in st.session_state:
+    st.session_state["messages"] = []
+if "sample_input" not in st.session_state:
+    st.session_state["sample_input"] = ""
 
-    # --- Streamlit Chat Interface with Sample Questions ---
-    if "messages" not in st.session_state:
-        st.session_state["messages"] = []
-    if "sample_input" not in st.session_state:
-        st.session_state["sample_input"] = ""
+chat_message_container = st.container(border=True, height=400)
+with chat_message_container:
+    for msg in st.session_state["messages"]:
+        with st.chat_message(msg["role"]):
+            if isinstance(msg["content"], dict):
+                # Show data context in expander above the response
+                with st.expander("Show Data Context", expanded=False):
+                    st.markdown(msg["content"].get("data_context", "No data context returned."))
+                st.markdown(msg["content"].get("response", ""))
+                if "sources" in msg["content"]:
+                    st.markdown(f"**Sources:**\n{msg['content']['sources']}")
+            else:
+                st.markdown(msg["content"])
+with st.container():
+    user_input = st.chat_input("Type your question or select a sample below...", key="chat_input")
 
-    chat_message_container = st.container(border=True, height=400)
+col1, col2 = st.columns([3, 1], vertical_alignment="bottom")
+with col1:
+    sample = st.selectbox("Or select a sample question", sample_questions, key="sample_dropdown")
+with col2:
+    send_sample = st.button("Send Sample Question")
+
+# Handle sending a sample question
+if send_sample and sample:
+    st.session_state["messages"].append({"role": "user", "content": sample})
     with chat_message_container:
-        for msg in st.session_state["messages"]:
-            with st.chat_message(msg["role"]):
-                if isinstance(msg["content"], dict):
-                    # Show data context in expander above the response
-                    with st.expander("Show Data Context", expanded=False):
-                        st.markdown(msg["content"].get("data_context", "No data context returned."))
-                    st.markdown(msg["content"].get("response", ""))
-                    if "sources" in msg["content"]:
-                        st.markdown(f"**Sources:**\n{msg['content']['sources']}")
-                else:
-                    st.markdown(msg["content"])
-    with st.container():
-        user_input = st.chat_input("Type your question or select a sample below...", key="chat_input")
-    
-    col1, col2 = st.columns([3, 1], vertical_alignment="bottom")
-    with col1:
-        sample = st.selectbox("Or select a sample question", sample_questions, key="sample_dropdown")
-    with col2:
-        send_sample = st.button("Send Sample Question")
+        with st.chat_message("user"):
+            st.markdown(sample)
+        with st.chat_message("assistant"):
+            st.markdown("_Processing..._")
+            output = query_llm_with_rag(sample, default_rag_mode, stream_mode, max_tokens)
+    st.session_state["messages"].append({"role": "assistant", "content": output})
 
-    # Handle sending a sample question
-    if send_sample and sample:
-        st.session_state["messages"].append({"role": "user", "content": sample})
-        with chat_message_container:
-            with st.chat_message("user"):
-                st.markdown(sample)
-            with st.chat_message("assistant"):
-                st.markdown("_Processing..._")
-                output = query_llm_with_rag(sample, default_rag_mode, stream_mode, max_tokens)
-        st.session_state["messages"].append({"role": "assistant", "content": output})
-
-    # Handle freeform chat input
-    if user_input:
-        st.session_state["messages"].append({"role": "user", "content": user_input})
-        with chat_message_container:
-            with st.chat_message("user"):
-                st.markdown(user_input)
-            with st.chat_message("assistant"):
-                st.markdown("_Processing..._")
-                output = query_llm_with_rag(user_input, default_rag_mode, stream_mode, max_tokens)
-        st.session_state["messages"].append({"role": "assistant", "content": output})
-else:
-    st.warning("The Flask server must be running to get a response.")
+# Handle freeform chat input
+if user_input:
+    st.session_state["messages"].append({"role": "user", "content": user_input})
+    with chat_message_container:
+        with st.chat_message("user"):
+            st.markdown(user_input)
+        with st.chat_message("assistant"):
+            st.markdown("_Processing..._")
+            output = query_llm_with_rag(user_input, default_rag_mode, stream_mode, max_tokens)
+    st.session_state["messages"].append({"role": "assistant", "content": output})
