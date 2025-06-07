@@ -30,29 +30,6 @@ def llm_call():
         data_context, response = llm_calls.route_query_to_function(input_string, max_tokens=max_tokens)
         return jsonify({'data_context': data_context, 'response': response})
 
-@app.route('/llm_rag_call', methods=['POST'])
-def llm_rag_call():
-    data = request.get_json()
-    input_string = data.get('input', '')
-    stream = data.get('stream', False)
-    max_tokens = data.get('max_tokens', 1500)
-
-    if stream:
-        def generate():
-            (data_context, response), sources = llm_calls.route_query_to_function(input_string, collection, ranker, True, stream=True, max_tokens=max_tokens)
-            yield f"[DATA CONTEXT]: {data_context}\n\n"
-            if hasattr(response, '__iter__') and not isinstance(response, str):
-                for chunk in response:
-                    yield chunk
-            else:
-                yield str(response)
-            if sources:
-                yield f"\n\n[SOURCES]: {sources}"
-        return Response(generate(), mimetype='text/plain')
-    else:
-        (data_context, response), sources = llm_calls.route_query_to_function(input_string, collection, ranker, True, max_tokens=max_tokens)
-        return jsonify({'data_context': data_context, 'response': response, 'sources': sources})
-
 @app.route('/set_mode', methods=['POST'])
 def set_mode():
     data = request.get_json()
