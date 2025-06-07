@@ -3,12 +3,14 @@ from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
 from project_utils.rag_utils import rag_call_alt
 import time
 import concurrent.futures
+import logging
+import inspect
 
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
 from bdg_data import bdg_utils
 
-def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2) -> str:
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2, request_id: str = None) -> str:
     """ Run a query against the LLM with a system prompt and user input.
     If stream is True, returns a generator for streaming output.
     If stream is False, returns the full response as a string.
@@ -16,6 +18,9 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
     """
     import server.config as config
     attempt = 0
+    caller = inspect.stack()[1].function
+    log_prefix = f"[id={request_id}] [run_llm_query] [called_by={caller}]"
+    logging.info(f"{log_prefix} Starting LLM query | system_prompt_len={len(system_prompt)} | user_input={user_input}")
     while attempt < max_retries:
         try:
             if not stream:
@@ -28,6 +33,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                     temperature=0.0,
                     max_tokens=max_tokens,
                 )
+                logging.info(f"{log_prefix} LLM query successful on attempt {attempt+1}")
                 return str(response.choices[0].message.content).strip()
             else:
                 response = config.client.chat.completions.create(
@@ -41,24 +47,34 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                     stream=True,
                 )
                 def generator():
+                    full_message = ""
+                    usage_data = None
                     for chunk in response:
                         delta = getattr(chunk.choices[0], 'delta', None)
                         if delta and hasattr(delta, 'content') and delta.content:
+                            full_message += delta.content
                             yield delta.content
+                        # Try to extract usage data if present in chunk
+                        if hasattr(chunk, 'usage') and chunk.usage:
+                            usage_data = chunk.usage
+                    logging.info(f"{log_prefix} LLM streaming query started on attempt {attempt+1}")
+                    logging.info(f"{log_prefix} LLM streaming query full message: {full_message}")
+                    if usage_data:
+                        logging.info(f"{log_prefix} LLM streaming usage data: {usage_data}")
                 return generator()
         except Exception as e:
-            # Check for rate limit or retryable error
             if hasattr(e, "status_code") and e.status_code == 429 or "rate limit" in str(e).lower():
-                print(f"Rate limit hit, retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+                logging.warning(f"{log_prefix} Rate limit hit, retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
             else:
-                print(f"Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
-                print(f"System prompt: {system_prompt}")
-                print(f"User input: {user_input}")
+                logging.error(f"{log_prefix} Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+                logging.error(f"{log_prefix} System prompt: {system_prompt}")
+                logging.error(f"{log_prefix} User input: {user_input}")
             time.sleep(retry_delay)
             attempt += 1
+    logging.critical(f"{log_prefix} LLM call failed after {max_retries} attempts.")
     raise RuntimeError(f"LLM call failed after {max_retries} attempts due to repeated errors or rate limits.")
 
-def classify_data_sources(message: str, data_sources: dict) -> dict:
+def classify_data_sources(message: str, data_sources: dict, request_id: str = None) -> dict:
     """
     Classify the user message into one of the five core data sources.
     Returns a dictionary with boolean values indicating which data sources are relevant.
@@ -77,6 +93,8 @@ def classify_data_sources(message: str, data_sources: dict) -> dict:
         "Query: What is the total concrete cost for this project?\nOutput: project data\n"
     )
 
+    log_prefix = f"[id={request_id}] [classify_data_sources]"
+    logging.info(f"{log_prefix} Classifying message: {message}")
     response = config.client.chat.completions.create(
         model=config.completion_model,
         messages=[
@@ -87,6 +105,7 @@ def classify_data_sources(message: str, data_sources: dict) -> dict:
     )
     
     classification = response.choices[0].message.content.strip()
+    logging.info(f"{log_prefix} Classification result: {classification}")
     if classification.lower() == "none":
         return {key: False for key in data_sources.keys()}
     
@@ -94,59 +113,58 @@ def classify_data_sources(message: str, data_sources: dict) -> dict:
     classified_sources = classification.split(", ")
     return {key: (key in classified_sources) for key in data_sources.keys()}
 
-def get_rsmeans_context(message: str) -> str:
+def get_rsmeans_context(message: str, request_id: str = None) -> str:
     """
     Get the RSMeans context for the user message.
     Returns a string with the RSMeans data or a prompt to use RSMeans.
     """
+    logging.info(f"[id={request_id}] [get_rsmeans_context] message: {message}")
     rsmeans_context = get_rsmeans_context_from_prompt(message)
     return rsmeans_context
 
 
-def get_ifc_context(message: str) -> str:
+def get_ifc_context(message: str, request_id: str = None) -> str:
     """
     Get the IFC context for the user message.
     Returns a string with the IFC data or a prompt to use IFC.
     """
+    logging.info(f"[id={request_id}] [get_ifc_context] message: {message}")
     return ifc_utils.get_ifc_context_from_query(message)
 
-def get_project_data_context(message: str) -> str:
+def get_project_data_context(message: str, request_id: str = None) -> str:
     """
     Get the project data context for the user message.
     Returns a string with the project data or a prompt to use project data.
     """
-    # Here we could implement a more complex logic to fetch relevant project data
-    # For now, we just return a prompt to use project data
+    logging.info(f"[id={request_id}] [get_project_data_context] message: {message}")
     return bdg_utils.get_project_data_context_from_query(message)
 
-def get_knowledge_base_context(message: str) -> str:
+def get_knowledge_base_context(message: str, request_id: str = None) -> str:
     """
     Get the knowledge base context for the user message.
     Returns a string with the knowledge base data or a prompt to use the knowledge base.
     """
+    logging.info(f"[id={request_id}] [get_knowledge_base_context] message: {message}")
     return rag_utils.get_rag_context_from_query(message)
 
-# TODO: Implement a function to fetch value model data based on the message
-def get_value_model_context(message: str) -> str:
+def get_value_model_context(message: str, request_id: str = None) -> str:
     """
     Get the value model context for the user message.
     Returns a string with the value model data or a prompt to use the value model.
     """
+    logging.info(f"[id={request_id}] [get_value_model_context] message: {message}")
     return "Value model is not implemented yet."  # Placeholder
 
-# TODO: Implement a function to fetch cost model data based on the message
-def get_cost_model_context(message: str) -> str:
+def get_cost_model_context(message: str, request_id: str = None) -> str:
     """
     Get the cost model context for the user message.
     Returns a string with the cost model data or a prompt to use the cost model.
     """
+    logging.info(f"[id={request_id}] [get_cost_model_context] message: {message}")
     return "Cost model is not implemented yet."  # Placeholder
 
-def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500):
-    """
-    Classify the user message into one of the five core categories and route it to the appropriate response function.
-    If stream=True, returns a generator for streaming output.
-    """
+def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500, request_id: str = None):
+    logging.info(f"[id={request_id}] [route_query_to_function] Routing message: {message}")
     data_sources = {
         "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
         "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.",
@@ -157,14 +175,14 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     }
 
     # Run the query through the classification function
-    data_sources_needed_dict = classify_data_sources(message, data_sources)
+    data_sources_needed_dict = classify_data_sources(message, data_sources, request_id=request_id)
 
     # If project data is needed, do not use rsmeans
     if data_sources_needed_dict.get("project data"):
         data_sources_needed_dict["rsmeans"] = False
 
     # Debugging output
-    print(f"Data sources needed: {data_sources_needed_dict}")
+    logging.info(f"[id={request_id}] Data sources needed: {data_sources_needed_dict}")
 
     # Create a data context dictionary based on the classification
     data_context = {}
@@ -184,7 +202,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     with concurrent.futures.ThreadPoolExecutor() as executor:
         for key, needed in data_sources_needed_dict.items():
             if needed and key in context_functions:
-                futures[key] = executor.submit(context_functions[key], message)
+                futures[key] = executor.submit(context_functions[key], message, request_id)
         # Collect results as they complete
         for key, future in futures.items():
             data_context[key] = future.result()
@@ -211,9 +229,11 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         system_prompt=system_prompt,
         user_input=message,
         stream=stream,
-        max_tokens=max_tokens
+        max_tokens=max_tokens,
+        request_id=request_id
     )
 
     # response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response # For debugging purposes, uncomment this line to see the data sources and context used in the response
 
+    logging.info(f"[id={request_id}] [route_query_to_function] Finished routing and LLM call.")
     return data_context, response

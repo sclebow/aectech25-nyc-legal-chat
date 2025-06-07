@@ -3,8 +3,17 @@ from flask import Flask, request, jsonify, Response
 import llm_calls
 from project_utils import rag_utils
 from server import config
+import uuid
+import logging
 
 app = Flask(__name__)
+
+# Set up logging
+logging.basicConfig(
+    filename='llm_server.log',
+    level=logging.INFO,
+    format='%(asctime)s [%(levelname)s] %(message)s'
+)
 
 collection, ranker = rag_utils.init_rag(mode=config.get_mode())
 
@@ -14,10 +23,12 @@ def llm_call():
     input_string = data.get('input', '')
     stream = data.get('stream', False)
     max_tokens = data.get('max_tokens', 1500)
+    request_id = str(uuid.uuid4())
+    logging.info(f"Received /llm_call request | id={request_id} | input={input_string}")
 
     if stream:
         def generate():
-            data_context, response = llm_calls.route_query_to_function(input_string, stream=True, max_tokens=max_tokens)
+            data_context, response = llm_calls.route_query_to_function(input_string, stream=True, max_tokens=max_tokens, request_id=request_id)
             # Prepend data_context at the start of the stream
             yield f"[DATA CONTEXT]: {data_context}\n\n"
             if hasattr(response, '__iter__') and not isinstance(response, str):
@@ -27,8 +38,8 @@ def llm_call():
                 yield str(response)
         return Response(generate(), mimetype='text/plain')
     else:
-        data_context, response = llm_calls.route_query_to_function(input_string, max_tokens=max_tokens)
-        return jsonify({'data_context': data_context, 'response': response})
+        data_context, response = llm_calls.route_query_to_function(input_string, max_tokens=max_tokens, request_id=request_id)
+        return jsonify({'data_context': data_context, 'response': response, 'request_id': request_id})
 
 @app.route('/set_mode', methods=['POST'])
 def set_mode():
