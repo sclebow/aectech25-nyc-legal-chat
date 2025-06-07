@@ -5,6 +5,7 @@ from project_utils import rag_utils
 from server import config
 import uuid
 import logging
+import time
 
 app = Flask(__name__)
 
@@ -65,6 +66,23 @@ def status():
         'cf_gen_model': getattr(config, 'completion_model', None),
         'cf_emb_model': getattr(config, 'embedding_model', None)
     }), 200
+
+@app.route('/log_stream', methods=['GET'])
+def log_stream():
+    def generate():
+        log_path = 'llm_server.log'
+        try:
+            with open(log_path, 'r') as f:
+                f.seek(0, 2)  # Move to end of file
+                while True:
+                    line = f.readline()
+                    if line:
+                        yield line
+                    else:
+                        time.sleep(0.5)
+        except Exception as e:
+            yield f'Error reading log: {str(e)}\n'
+    return Response(generate(), mimetype='text/plain')
 
 if __name__ == '__main__':
     app.run(debug=False, use_reloader=False)
