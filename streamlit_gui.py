@@ -203,7 +203,8 @@ if "flask_status" not in st.session_state:
     st.session_state["flask_status"] = "Default Status: Not Running"
     start_flask_and_wait()
 # Flask server controls
-with st.expander("Flask Server Controls", expanded=False):
+flask_server_expander = st.expander("Flask Server Controls", expanded=True)
+with flask_server_expander:
     col1, col2 = st.columns(2)
     with col1:
         if st.button("Start Flask Server"):
@@ -213,27 +214,27 @@ with st.expander("Flask Server Controls", expanded=False):
         if st.button("Stop Flask Server"):
             status = stop_flask_server()
             st.session_state["flask_status"] = status
-flask_status = st.session_state.get("flask_status", "Default Status: Not Running")
+    flask_status = st.session_state.get("flask_status", "Default Status: Not Running")
 
-col1, col2 = st.columns([3, 1], vertical_alignment="center")
+    col1, col2 = st.columns([3, 1], vertical_alignment="center")
 
-with col2:
-    # Add a refresh button
-    if st.button("Refresh Status"):
-        try:
-            resp = requests.get("http://127.0.0.1:5000/status", timeout=1)
-            if resp.status_code == 200:
-                st.session_state["flask_status"] = "Flask server is running."
-            else:
+    with col2:
+        # Add a refresh button
+        if st.button("Refresh Status"):
+            try:
+                resp = requests.get("http://127.0.0.1:5000/status", timeout=1)
+                if resp.status_code == 200:
+                    st.session_state["flask_status"] = "Flask server is running."
+                else:
+                    st.session_state["flask_status"] = "Flask server is not running."
+            except Exception:
                 st.session_state["flask_status"] = "Flask server is not running."
-        except Exception:
-            st.session_state["flask_status"] = "Flask server is not running."
 
-# Move this assignment after the refresh button logic so it always gets the latest value
-flask_status = st.session_state.get("flask_status", "Default Status: Not Running")
+    # Move this assignment after the refresh button logic so it always gets the latest value
+    flask_status = st.session_state.get("flask_status", "Default Status: Not Running")
 
-with col1:
-    flask_status_info = st.info(f"Flask Server Status: {flask_status}")
+    with col1:
+        flask_status_info = st.info(f"Flask Server Status: {flask_status}")
 
 if "running" in flask_status.lower() and "not" not in flask_status.lower():
     # Update the status placeholder
