@@ -64,21 +64,7 @@ def query_llm(user_input):
     except Exception as e:
         return {"data_context": "", "response": f"Exception: {str(e)}"}
 
-def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
-    mode = config.get_mode() if hasattr(config, 'get_mode') else 'unknown'
-    gen_model = None
-    emb_model = None
-    try:
-        if mode == "cloudflare":
-            gen_model = st.session_state.get("cf_gen_model", cloudflare_models[0])
-            emb_model = st.session_state.get("cf_emb_model", cloudflare_embedding_models[0])
-        else:
-            gen_model = getattr(config, 'completion_model', None)
-            emb_model = getattr(config, 'embedding_model', None)
-    except Exception:
-        gen_model = None
-        emb_model = None
-    timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
     url = FLASK_URL
     try:
         if stream_mode == "Streaming":
@@ -91,9 +77,11 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
                 section = None
                 chat_container = st.container()
                 with chat_container:
-                    placeholder_data_context = st.empty()
+                    with st.expander("Show Data Context", expanded=False):
+                        placeholder_data_context = st.empty()
+                    with st.expander("Show Logs", expanded=False):
+                        placeholder_logs = st.empty()
                     placeholder_response = st.empty()
-                    placeholder_logs = st.empty()
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
                     if not chunk:
                         continue
@@ -105,43 +93,43 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
                             before, tag, after = chunk.partition("[DATA CONTEXT]:")
                             if section == "data_context" and before.strip():
                                 data_context += before
-                                placeholder_data_context.markdown(f"**Data Context:**\n{data_context}")
+                                placeholder_data_context.markdown(data_context)
                             section = "data_context"
                             data_context = after.strip()
-                            placeholder_data_context.markdown(f"**Data Context:**\n{data_context}")
+                            placeholder_data_context.markdown(data_context)
                             chunk = ""
                         elif "[RESPONSE]:" in chunk:
                             before, tag, after = chunk.partition("[RESPONSE]:")
                             if section == "response" and before.strip():
                                 response_text += before
-                                placeholder_response.markdown(f"**Response:**\n{response_text}")
+                                placeholder_response.markdown(response_text)
                             section = "response"
                             response_text += after
-                            placeholder_response.markdown(f"**Response:**\n{response_text}")
+                            placeholder_response.markdown(response_text)
                             chunk = ""
                         elif "[LOG]:" in chunk:
                             before, tag, after = chunk.partition("[LOG]:")
                             if section == "logs" and before.strip():
                                 logs += before
-                                placeholder_logs.markdown(f"**Logs:**\n{logs}")
+                                placeholder_logs.markdown(logs)
                             section = "logs"
                             # Support multiple log lines in a single chunk
                             log_lines = after.split("[LOG]:")
                             logs += log_lines[0].strip() + "\n"
-                            placeholder_logs.markdown(f"**Logs:**\n{logs}")
+                            placeholder_logs.markdown(logs)
                             # If more [LOG]: tags, process them in next loop
                             chunk = "[LOG]:".join(log_lines[1:]) if len(log_lines) > 1 else ""
                         else:
                             # No tag found, append to current section
                             if section == "data_context":
                                 data_context += chunk
-                                placeholder_data_context.markdown(f"**Data Context:**\n{data_context}")
+                                placeholder_data_context.markdown(data_context)
                             elif section == "response":
                                 response_text += chunk
-                                placeholder_response.markdown(f"**Response:**\n{response_text}")
+                                placeholder_response.markdown(response_text)
                             elif section == "logs":
                                 logs += chunk
-                                placeholder_logs.markdown(f"**Logs:**\n{logs}")
+                                placeholder_logs.markdown(logs)
                             chunk = ""
                     time.sleep(0.02)
                 return {"data_context": data_context, "response": response_text, "logs": logs}
@@ -153,11 +141,8 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
                 data = response.json()
                 data_context = data.get("data_context", "No data context returned.")
                 response_text = data.get('response', 'No response from server.')
-                sources = data.get('sources', None)
                 logs = data.get('logs', '')
                 result = {"data_context": data_context, "response": response_text, "logs": logs}
-                if sources:
-                    result["sources"] = sources
                 return result
             else:
                 return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
@@ -297,9 +282,10 @@ with chat_message_container:
                 # Show data context in expander above the response
                 with st.expander("Show Data Context", expanded=False):
                     st.markdown(msg["content"].get("data_context", "No data context returned."))
+                # Show logs in expander below the response
+                with st.expander("Show Logs", expanded=False):
+                    st.markdown(msg["content"].get("logs", "No logs available."))
                 st.markdown(msg["content"].get("response", ""))
-                if "sources" in msg["content"]:
-                    st.markdown(f"**Sources:**\n{msg['content']['sources']}")
             else:
                 st.markdown(msg["content"])
 with st.container():
@@ -319,7 +305,7 @@ if send_sample and sample:
             st.markdown(sample)
         with st.chat_message("assistant"):
             st.markdown("_Processing..._")
-            output = query_llm_with_rag(sample, default_rag_mode, stream_mode, max_tokens)
+            output = query_llm(sample, default_rag_mode, stream_mode, max_tokens)
     st.session_state["messages"].append({"role": "assistant", "content": output})
 
 # Handle freeform chat input
@@ -330,5 +316,5 @@ if user_input:
             st.markdown(user_input)
         with st.chat_message("assistant"):
             st.markdown("_Processing..._")
-            output = query_llm_with_rag(user_input, default_rag_mode, stream_mode, max_tokens)
+            output = query_llm(user_input, default_rag_mode, stream_mode, max_tokens)
     st.session_state["messages"].append({"role": "assistant", "content": output})
