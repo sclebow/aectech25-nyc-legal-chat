@@ -199,8 +199,8 @@ st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
 st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
 
+start_message = st.warning("Starting Flask server...")
 if poll_flask_status() != "Flask server is running.":
-    start_message = st.warning("Starting Flask server...")
     # Start the Flask server in a separate thread
     start_flask_and_wait()
 
