@@ -29,14 +29,47 @@ def llm_call():
 
     if stream:
         def generate():
+            import threading
+            import queue
+            log_queue = queue.Queue()
+            stop_event = threading.Event()
+            log_path = 'llm_server.log'
+
+            def tail_log(log_queue, stop_event):
+                try:
+                    with open(log_path, 'r') as f:
+                        f.seek(0, 2)  # Move to end of file
+                        while not stop_event.is_set():
+                            line = f.readline()
+                            if line:
+                                log_queue.put(line)
+                            else:
+                                time.sleep(0.2)
+                except Exception as e:
+                    log_queue.put(f'[LOG ERROR]: {str(e)}\n')
+
+            log_thread = threading.Thread(target=tail_log, args=(log_queue, stop_event), daemon=True)
+            log_thread.start()
+
             data_context, response = llm_calls.route_query_to_function(input_string, stream=True, max_tokens=max_tokens, request_id=request_id)
-            # Prepend data_context at the start of the stream
             yield f"[DATA CONTEXT]: {data_context}\n\n"
-            if hasattr(response, '__iter__') and not isinstance(response, str):
-                for chunk in response:
-                    yield chunk
-            else:
-                yield str(response)
+
+            response_iter = response if (hasattr(response, '__iter__') and not isinstance(response, str)) else [str(response)]
+            for chunk in response_iter:
+                # Yield any new log lines first
+                while not log_queue.empty():
+                    log_line = log_queue.get()
+                    yield f"[LOG]: {log_line}"
+                yield f"[LLM]: {chunk}"
+            # After LLM is done, flush remaining log lines for a short period
+            flush_start = time.time()
+            while time.time() - flush_start < 2:
+                while not log_queue.empty():
+                    log_line = log_queue.get()
+                    yield f"[LOG]: {log_line}"
+                time.sleep(0.2)
+            stop_event.set()
+            log_thread.join(timeout=1)
         return Response(generate(), mimetype='text/plain')
     else:
         data_context, response = llm_calls.route_query_to_function(input_string, max_tokens=max_tokens, request_id=request_id)

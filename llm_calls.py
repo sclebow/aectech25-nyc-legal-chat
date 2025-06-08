@@ -52,7 +52,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                 logging.info(f"{log_prefix} LLM query successful on attempt {attempt+1} | "
                              f"{format_log_string('system_prompt', system_prompt)} | "
                              f"{format_log_string('user_input', user_input)}")
-                return str(response.choices[0].message.content).strip()
+                return str(response.choices[0].message.content)  # REMOVE .strip() TO PRESERVE NEWLINES
             else:
                 response = config.client.chat.completions.create(
                     model=config.completion_model,
@@ -71,7 +71,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                         delta = getattr(chunk.choices[0], 'delta', None)
                         if delta and hasattr(delta, 'content') and delta.content:
                             full_message += delta.content
-                            yield delta.content
+                            yield delta.content  # DO NOT STRIP OR ALTER NEWLINES
                         if hasattr(chunk, 'usage') and chunk.usage:
                             usage_data = chunk.usage
                     logging.info(f"{log_prefix} LLM streaming query started on attempt {attempt+1} | "
