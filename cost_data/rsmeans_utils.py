@@ -9,6 +9,7 @@ import os
 import difflib
 import threading
 import logging
+from logger_setup import set_request_id
 
 # For reference, the following are the columns in the RSMeans DataFrame:
 # ['Masterformat Section Code', 'Section Name', 'ID', 'Name', 'Crew', 'Daily Output', 'Labor-Hours','Unit', 'Material', 'Labor', 'Equipment', 'Total', 'Total Incl O&P']
@@ -52,7 +53,7 @@ def find_by_section_code(df, section_code):
     fuzzy_contains = df[code_series.str.contains(code_norm)]
     return fuzzy_contains
 
-def get_rsmeans_context_from_prompt(prompt, max_tokens=1500):
+def get_rsmeans_context_from_prompt(prompt, max_tokens=1500, request_id=None):
     """
     Use an LLM to extract relevant materials from a prompt.
     The materials will be used to extract data from the RSMeans CSV files.
@@ -67,12 +68,12 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500):
         "Example: 'concrete, steel, wood, insulation, drywall'. "
     )
     user_input = f"Description: {prompt}"
-    materials = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
+    materials = run_llm_query(system_prompt, user_input, max_tokens=max_tokens, request_id=request_id)
     print(f"Extracted materials: {materials}")
-    rsmeans_context = find_by_description(", ".join(materials))
+    rsmeans_context = find_by_description(", ".join(materials), request_id=request_id)
     return rsmeans_context
 
-def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.6):
+def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.6, request_id=None):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
     For each relevant chapter, send a separate LLM call for section selection.
@@ -113,6 +114,8 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
     dfs = []
 
     def process_chapter(fname, chapter):
+        if request_id:
+            set_request_id(request_id)
         thread_id = threading.get_ident()
         parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
         logging.info(f"[rsmeans_utils] [process_chapter] [thread={thread_id}]" + (f" [parent_thread={parent_thread_id}]" if parent_thread_id else "") + f" Processing chapter {chapter} from file {fname}")

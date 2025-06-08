@@ -65,7 +65,6 @@ def query_llm(user_input):
         return {"data_context": "", "response": f"Exception: {str(e)}"}
 
 def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
-    # Only support LLM only mode now
     mode = config.get_mode() if hasattr(config, 'get_mode') else 'unknown'
     gen_model = None
     emb_model = None
@@ -86,15 +85,68 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
             response = requests.post(url, json={"input": user_input, "stream": True, "max_tokens": int(max_tokens)}, stream=True)
             if response.status_code == 200:
                 streamed_text = ""
-                placeholder = st.empty()
+                data_context = ""
+                logs = ""
+                response_text = ""
+                section = None
+                chat_container = st.container()
+                with chat_container:
+                    placeholder_data_context = st.empty()
+                    placeholder_response = st.empty()
+                    placeholder_logs = st.empty()
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
-                    if chunk:
-                        streamed_text += chunk
-                        placeholder.markdown(streamed_text)
-                        time.sleep(0.05)
-                return {"data_context": "(See stream above)", "response": streamed_text}
+                    if not chunk:
+                        continue
+                    streamed_text += chunk
+                    # Parse tags for new log format
+                    # Handle multiple tags in a single chunk
+                    while chunk:
+                        if "[DATA CONTEXT]:" in chunk:
+                            before, tag, after = chunk.partition("[DATA CONTEXT]:")
+                            if section == "data_context" and before.strip():
+                                data_context += before
+                                placeholder_data_context.markdown(f"**Data Context:**\n{data_context}")
+                            section = "data_context"
+                            data_context = after.strip()
+                            placeholder_data_context.markdown(f"**Data Context:**\n{data_context}")
+                            chunk = ""
+                        elif "[RESPONSE]:" in chunk:
+                            before, tag, after = chunk.partition("[RESPONSE]:")
+                            if section == "response" and before.strip():
+                                response_text += before
+                                placeholder_response.markdown(f"**Response:**\n{response_text}")
+                            section = "response"
+                            response_text += after
+                            placeholder_response.markdown(f"**Response:**\n{response_text}")
+                            chunk = ""
+                        elif "[LOG]:" in chunk:
+                            before, tag, after = chunk.partition("[LOG]:")
+                            if section == "logs" and before.strip():
+                                logs += before
+                                placeholder_logs.markdown(f"**Logs:**\n{logs}")
+                            section = "logs"
+                            # Support multiple log lines in a single chunk
+                            log_lines = after.split("[LOG]:")
+                            logs += log_lines[0].strip() + "\n"
+                            placeholder_logs.markdown(f"**Logs:**\n{logs}")
+                            # If more [LOG]: tags, process them in next loop
+                            chunk = "[LOG]:".join(log_lines[1:]) if len(log_lines) > 1 else ""
+                        else:
+                            # No tag found, append to current section
+                            if section == "data_context":
+                                data_context += chunk
+                                placeholder_data_context.markdown(f"**Data Context:**\n{data_context}")
+                            elif section == "response":
+                                response_text += chunk
+                                placeholder_response.markdown(f"**Response:**\n{response_text}")
+                            elif section == "logs":
+                                logs += chunk
+                                placeholder_logs.markdown(f"**Logs:**\n{logs}")
+                            chunk = ""
+                    time.sleep(0.02)
+                return {"data_context": data_context, "response": response_text, "logs": logs}
             else:
-                return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}"}
+                return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
         else:
             response = requests.post(url, json={"input": user_input, "max_tokens": int(max_tokens)})
             if response.status_code == 200:
@@ -102,14 +154,15 @@ def query_llm_with_rag(user_input, rag_mode, stream_mode, max_tokens=1500):
                 data_context = data.get("data_context", "No data context returned.")
                 response_text = data.get('response', 'No response from server.')
                 sources = data.get('sources', None)
-                result = {"data_context": data_context, "response": response_text}
+                logs = data.get('logs', '')
+                result = {"data_context": data_context, "response": response_text, "logs": logs}
                 if sources:
                     result["sources"] = sources
                 return result
             else:
-                return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}"}
+                return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
     except Exception as e:
-        return {"data_context": "", "response": f"Exception: {str(e)}"}
+        return {"data_context": "", "response": f"Exception: {str(e)}", "logs": ""}
 
 def run_flask_server():
     global flask_process

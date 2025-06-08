@@ -1,11 +1,11 @@
 import server.config as config  
-from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
 from project_utils.rag_utils import rag_call_alt
 import time
 import concurrent.futures
 import logging
 import inspect
 import threading
+from logger_setup import get_request_id, set_request_id
 
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
@@ -17,7 +17,6 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
     If stream is False, returns the full response as a string.
     If the LLM call fails, it will retry up to max_retries times with a delay of retry_delay seconds between retries.
     """
-    import server.config as config
     attempt = 0
     caller = inspect.stack()[1].function
     thread_id = threading.get_ident()
@@ -34,6 +33,8 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
         value = value.replace('\n', '\\n')
         return f"{label}={value}"
 
+    if request_id:
+        set_request_id(request_id)
     logging.info(f"{log_prefix} Starting LLM query | "
                  f"{format_log_string('system_prompt', system_prompt)} | "
                  f"{format_log_string('user_input', user_input)}")
@@ -141,8 +142,11 @@ def get_rsmeans_context(message: str, request_id: str = None) -> str:
     Get the RSMeans context for the user message.
     Returns a string with the RSMeans data or a prompt to use RSMeans.
     """
+    if request_id:
+        set_request_id(request_id)
     logging.info(f"[id={request_id}] [get_rsmeans_context] message: {message}")
-    rsmeans_context = get_rsmeans_context_from_prompt(message)
+    from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
+    rsmeans_context = get_rsmeans_context_from_prompt(message, request_id=request_id)
     return rsmeans_context
 
 
@@ -151,6 +155,8 @@ def get_ifc_context(message: str, request_id: str = None) -> str:
     Get the IFC context for the user message.
     Returns a string with the IFC data or a prompt to use IFC.
     """
+    if request_id:
+        set_request_id(request_id)
     logging.info(f"[id={request_id}] [get_ifc_context] message: {message}")
     return ifc_utils.get_ifc_context_from_query(message)
 
@@ -159,6 +165,8 @@ def get_project_data_context(message: str, request_id: str = None) -> str:
     Get the project data context for the user message.
     Returns a string with the project data or a prompt to use project data.
     """
+    if request_id:
+        set_request_id(request_id)
     logging.info(f"[id={request_id}] [get_project_data_context] message: {message}")
     return bdg_utils.get_project_data_context_from_query(message)
 
@@ -167,6 +175,8 @@ def get_knowledge_base_context(message: str, request_id: str = None) -> str:
     Get the knowledge base context for the user message.
     Returns a string with the knowledge base data or a prompt to use the knowledge base.
     """
+    if request_id:
+        set_request_id(request_id)
     logging.info(f"[id={request_id}] [get_knowledge_base_context] message: {message}")
     return rag_utils.get_rag_context_from_query(message)
 
@@ -175,6 +185,8 @@ def get_value_model_context(message: str, request_id: str = None) -> str:
     Get the value model context for the user message.
     Returns a string with the value model data or a prompt to use the value model.
     """
+    if request_id:
+        set_request_id(request_id)
     logging.info(f"[id={request_id}] [get_value_model_context] message: {message}")
     return "Value model is not implemented yet."  # Placeholder
 
@@ -183,6 +195,8 @@ def get_cost_model_context(message: str, request_id: str = None) -> str:
     Get the cost model context for the user message.
     Returns a string with the cost model data or a prompt to use the cost model.
     """
+    if request_id:
+        set_request_id(request_id)
     logging.info(f"[id={request_id}] [get_cost_model_context] message: {message}")
     return "Cost model is not implemented yet."  # Placeholder
 

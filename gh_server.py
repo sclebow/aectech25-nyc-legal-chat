@@ -5,17 +5,27 @@ from project_utils import rag_utils
 from server import config
 import uuid
 import logging
+import time
+import threading
+import queue
+from logger_setup import setup_logger, set_request_id
 
 app = Flask(__name__)
 
 # Set up logging
-logging.basicConfig(
-    filename='llm_server.log',
-    level=logging.INFO,
-    format='%(asctime)s [%(levelname)s] %(message)s'
-)
+logger = setup_logger(name="app_logger", log_dir="logs", log_file="app.log")
+logging.basicConfig(level=logging.DEBUG)  # Ensure root logger is DEBUG
 
 collection, ranker = rag_utils.init_rag(mode=config.get_mode())
+
+class QueueLogHandler(logging.Handler):
+    def __init__(self, log_queue):
+        super().__init__()
+        self.log_queue = log_queue
+
+    def emit(self, record):
+        msg = self.format(record)
+        self.log_queue.put(msg)
 
 @app.route('/llm_call', methods=['POST'])
 def llm_call():
@@ -24,22 +34,53 @@ def llm_call():
     stream = data.get('stream', False)
     max_tokens = data.get('max_tokens', 1500)
     request_id = str(uuid.uuid4())
-    logging.info(f"Received /llm_call request | id={request_id} | input={input_string}")
+    set_request_id(request_id)  # Set thread-local request_id for all logs in this request
+    logger.info(f"Received /llm_call request | id={request_id} | input={input_string}", extra={"request_id": request_id})
 
     if stream:
         def generate():
-            data_context, response = llm_calls.route_query_to_function(input_string, stream=True, max_tokens=max_tokens, request_id=request_id)
-            # Prepend data_context at the start of the stream
-            yield f"[DATA CONTEXT]: {data_context}\n\n"
-            if hasattr(response, '__iter__') and not isinstance(response, str):
-                for chunk in response:
-                    yield chunk
-            else:
-                yield str(response)
+            set_request_id(request_id)
+            log_q = queue.Queue()
+            queue_handler = QueueLogHandler(log_q)
+            queue_handler.setFormatter(logging.Formatter('%(asctime)s [%(levelname)s] %(message)s'))
+            # Attach to root logger to capture all logs
+            root_logger = logging.getLogger()
+            root_logger.addHandler(queue_handler)
+            root_logger.setLevel(logging.DEBUG)
+            logger.debug("[TEST LOG] Streaming started.")
+            try:
+                data_context, response = llm_calls.route_query_to_function(input_string, stream=True, max_tokens=max_tokens, request_id=request_id)
+                yield f"[DATA CONTEXT]: {data_context}\n"
+                yield "[RESPONSE]:\n"
+                if hasattr(response, '__iter__') and not isinstance(response, str):
+                    for chunk in response:
+                        # Always prefix response chunks with [RESPONSE]:
+                        if chunk.strip():
+                            yield f"[RESPONSE]:{chunk}"
+                        # Drain log queue after each chunk
+                        while not log_q.empty():
+                            log_line = log_q.get()
+                            if log_line != "__END__":
+                                yield f"[LOG]: {log_line}\n"
+                else:
+                    yield f"[RESPONSE]:{str(response)}"
+                # Drain any remaining logs
+                log_q.put("__END__")
+                while not log_q.empty():
+                    log_line = log_q.get()
+                    if log_line != "__END__":
+                        yield f"[LOG]: {log_line}\n"
+            finally:
+                root_logger.removeHandler(queue_handler)
         return Response(generate(), mimetype='text/plain')
     else:
         data_context, response = llm_calls.route_query_to_function(input_string, max_tokens=max_tokens, request_id=request_id)
-        return jsonify({'data_context': data_context, 'response': response, 'request_id': request_id})
+        # For non-streaming, collect logs from the in-memory handler as before
+        if hasattr(logger, 'memory_handler'):
+            logs = '\n'.join(logger.memory_handler.get_logs(50, request_id=request_id))
+        else:
+            logs = '[No in-memory logs available]'
+        return jsonify({'data_context': data_context, 'response': response, 'request_id': request_id, 'logs': logs})
 
 @app.route('/set_mode', methods=['POST'])
 def set_mode():
