@@ -18,13 +18,13 @@ default_rag_mode = "LLM only"
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
 MODE_URL = "http://127.0.0.1:5000/set_mode"
 sample_questions = [
+    "What are some cost modeling best practices?",
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
     "What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.",
     "How do steel frame structures compare to concrete frame structures, considering cost and durability?",
     "What are the ROI advantages of using precast concrete in construction projects?",
     "Can you provide a cost estimate for a 10,000 sq ft commercial building?",
     "What are the key factors affecting the cost of a residential building?",
-    "What are some cost modeling best practices?",
     "How many windows are in the IFC model and what is the total cost of the windows?",
     "What is the cost benefit of triple glazing compared to double glazing?",
     "Using only the project data and the ifc, estimate the building's cost",
@@ -199,12 +199,14 @@ st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
 st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
 
-start_message = st.warning("Starting Flask server...")
+if poll_flask_status() != "Flask server is running.":
+    start_message = st.warning("Starting Flask server...")
+    # Start the Flask server in a separate thread
+    start_flask_and_wait()
 
-# Force start the Flask server if not already running
-while (start_flask_and_wait() != "Flask server is running."):
-    st.warning("Starting Flask server...")
-    time.sleep(1)
+# Wait for the Flask server to be ready
+while poll_flask_status() != "Flask server is running.":
+    time.sleep(0.5)
 
 # Update the start message
 start_message.empty()
