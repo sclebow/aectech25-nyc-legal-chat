@@ -284,7 +284,13 @@ with chat_message_container:
                     st.markdown(msg["content"].get("data_context", "No data context returned."))
                 # Show logs in expander below the response
                 with st.expander("Show Logs", expanded=False):
-                    st.markdown(msg["content"].get("logs", "No logs available."))
+                    logs = msg["content"].get("logs", "No logs available.")
+                    if logs and logs.strip():
+                        for log_line in logs.splitlines():
+                            if "[id=" in log_line:
+                                st.markdown(f"- {log_line}")
+                    else:
+                        st.markdown("No logs available.")
                 st.markdown(msg["content"].get("response", ""))
             else:
                 st.markdown(msg["content"])
