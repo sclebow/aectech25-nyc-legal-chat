@@ -114,11 +114,50 @@ def plot_flowchart(G):
         y = -node_to_ygroup[node]  # Evenly spaced by group
         node_pos[node] = (x, y)
     pos = node_pos
+    # Build edges: connect each node to the next in the same thread
+    # If a node is the last in its thread and not in the main thread, connect to the next node in the main thread
+    # Assume the main thread is the first in ordered_threads
+    main_thread = ordered_threads[0][0] if ordered_threads else None
+    thread_nodes = {}
+    for idx, node in enumerate(node_order):
+        thread = node_thread[node]
+        thread_nodes.setdefault(thread, []).append((idx, node))
+    edges = []
+    for thread, nodes in thread_nodes.items():
+        nodes_sorted = sorted(nodes, key=lambda x: x[0])
+        for i in range(len(nodes_sorted) - 1):
+            edges.append((nodes_sorted[i][1], nodes_sorted[i+1][1]))
+        # If not main thread, connect last node to next node in main thread (by y-group)
+        if thread != main_thread and main_thread in thread_nodes:
+            last_idx, last_node = nodes_sorted[-1]
+            # Find the next main thread node with a higher y-group
+            last_ygroup = node_to_ygroup[last_node]
+            main_nodes = thread_nodes[main_thread]
+            for main_idx, main_node in main_nodes:
+                if node_to_ygroup[main_node] > last_ygroup:
+                    edges.append((last_node, main_node))
+                    break
+    # Add: first node of a non-main thread connects to closest previous node of main thread
+    for thread, nodes in thread_nodes.items():
+        if thread != main_thread and main_thread in thread_nodes:
+            first_idx, first_node = sorted(nodes, key=lambda x: x[0])[0]
+            first_ygroup = node_to_ygroup[first_node]
+            main_nodes = thread_nodes[main_thread]
+            # Find the main thread node with the highest y-group less than or equal to first_ygroup
+            prev_main = None
+            prev_main_ygroup = -1
+            for main_idx, main_node in main_nodes:
+                main_ygroup = node_to_ygroup[main_node]
+                if main_ygroup <= first_ygroup and main_ygroup > prev_main_ygroup:
+                    prev_main = main_node
+                    prev_main_ygroup = main_ygroup
+            if prev_main is not None:
+                edges.append((prev_main, first_node))
     edge_x = []
     edge_y = []
-    for edge in G.edges():
-        x0, y0 = pos[edge[0]]
-        x1, y1 = pos[edge[1]]
+    for src, dst in edges:
+        x0, y0 = pos[src]
+        x1, y1 = pos[dst]
         edge_x += [x0, x1, None]
         edge_y += [y0, y1, None]
     edge_trace = go.Scatter(
