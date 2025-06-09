@@ -98,6 +98,20 @@ def parse_log_flowchart(logs):
         next_in_parent = find_next_in_parent_chain(last_node, parent_thread)
         if next_in_parent is not None:
             G.add_edge(last_node, next_in_parent)
+    # Check for first node in each thread and connect to the most recent node in the parent thread, if that node is not already connected upstream
+    for thread, nodes in thread_nodes.items():
+        if not nodes:
+            continue
+        first_node = nodes[0]
+        parent_thread = thread_parent.get(thread, None)
+        if parent_thread and parent_thread in thread_nodes:
+            # Find the most recent node in parent thread
+            parent_indices = [idx for idx in thread_nodes[parent_thread] if idx < first_node]
+            if parent_indices:
+                closest_prev = max(parent_indices)
+                # Only connect if only connected to one node
+                if G.in_degree(closest_prev) == 1 and G.out_degree(first_node) == 0:
+                    G.add_edge(closest_prev, first_node)
     return G
 
 def plot_flowchart(G):
@@ -177,8 +191,9 @@ def plot_flowchart(G):
         parent = G.nodes[node].get('parent', 'N/A')
         called_by = G.nodes[node].get('called_by', 'N/A')
         description = G.nodes[node].get('description', 'No description')
+        timestamp = G.nodes[node].get('timestamp', 'N/A')
         label = G.nodes[node]['label']
-        hover_text = f"{label}<br>Thread: {thread}<br>Parent: {parent}<br>Called by: {called_by}<br>Description: {description}"
+        hover_text = f"{label}<br>Thread: {thread}<br>Parent: {parent}<br>Called by: {called_by}<br>Description: {description}<br>Timestamp: {timestamp}"
         node_text.append(hover_text)
         node_color.append(thread_to_color.get(thread, '#cccccc'))
     node_trace = go.Scatter(
