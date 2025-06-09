@@ -57,12 +57,60 @@ def parse_log_flowchart(logs):
 def plot_flowchart(G):
     if len(G.nodes) == 0:
         return None, None
-    # --- Simple top-down layout: nodes in order, one column ---
+    # --- Layout: columns for threads, y by global timestamp difference ---
     node_order = list(G.nodes)
     node_pos = {}
+    from datetime import datetime
+    # Gather thread info and timestamps
+    thread_first_ts = {}
+    node_thread = {}
+    timestamps = []
+    for node in node_order:
+        ts = G.nodes[node].get('timestamp', None)
+        thread = G.nodes[node].get('thread', 'default')
+        node_thread[node] = thread
+        # Parse timestamp
+        parsed = None
+        for fmt in ("%Y-%m-%d %H:%M:%S,%f", "%Y-%m-%d %H:%M:%S", "%H:%M:%S,%f", "%H:%M:%S"):
+            try:
+                parsed = datetime.strptime(ts, fmt)
+                break
+            except Exception:
+                continue
+        timestamps.append(parsed)
+        if thread not in thread_first_ts and parsed is not None:
+            thread_first_ts[thread] = parsed
+    # Order threads by first timestamp (main/earliest on left)
+    ordered_threads = sorted(thread_first_ts.items(), key=lambda x: x[1] if x[1] is not None else datetime.max)
+    thread_to_x = {t[0]: i for i, t in enumerate(ordered_threads)}
+    # For threads with no timestamp, put them at the end
+    for thread in set(node_thread.values()):
+        if thread not in thread_to_x:
+            thread_to_x[thread] = len(thread_to_x)
+    # Calculate global y positions: cumulative seconds from first node
+    # Find the earliest timestamp
+    valid_timestamps = [ts for ts in timestamps if ts is not None]
+    if valid_timestamps:
+        min_ts = min(valid_timestamps)
+    else:
+        min_ts = None
+    y_positions = []
+    last_y = 0
+    last_ts = min_ts
+    for ts in timestamps:
+        if ts is not None and min_ts is not None:
+            y = -(ts - min_ts).total_seconds()
+            y_positions.append(y)
+            last_y = y
+            last_ts = ts
+        else:
+            # If timestamp missing, just space by -1 from previous
+            y_positions.append(last_y - 1)
+            last_y = last_y - 1
+    # Assign node positions
     for idx, node in enumerate(node_order):
-        x = 0  # All nodes in one column
-        y = -idx  # Top to bottom
+        x = thread_to_x[node_thread[node]]
+        y = y_positions[idx]
         node_pos[node] = (x, y)
     pos = node_pos
     edge_x = []
@@ -78,7 +126,7 @@ def plot_flowchart(G):
         hoverinfo='none',
         mode='lines')
     node_x = []
-    node_y = []
+    node_y_list = []
     node_text = []
     node_color = []
     # Assign a color to each thread using a plotly color scale
@@ -90,12 +138,12 @@ def plot_flowchart(G):
     for node in G.nodes():
         x, y = pos[node]
         node_x.append(x)
-        node_y.append(y)
+        node_y_list.append(y)
         node_text.append(G.nodes[node]['label'])
         thread = G.nodes[node].get('thread', 'default')
         node_color.append(thread_to_color.get(thread, '#cccccc'))
     node_trace = go.Scatter(
-        x=node_x, y=node_y,
+        x=node_x, y=node_y_list,
         mode='markers+text',
         text=node_text,
         textposition='top center',
