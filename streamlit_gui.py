@@ -15,11 +15,13 @@ import networkx as nx
 import plotly.graph_objects as go
 from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
 
+port = '5555'
+
 # === Constants and Config ===
 FLASK_URL = "http://127.0.0.1:5000/llm_call"
 default_rag_mode = "LLM only"
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
-MODE_URL = "http://127.0.0.1:5000/set_mode"
+MODE_URL = f"http://127.0.0.1:{port}/set_mode"
 sample_questions = [
     "What are some cost modeling best practices?",
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
@@ -204,7 +206,7 @@ def set_mode_on_server(selected_mode):
         return f"Exception: {str(e)}"
 
 def poll_flask_status(max_retries=20, delay=0.5):
-    url = "http://127.0.0.1:5000/status"
+    url = f"http://127.0.0.1:{port}/status"
     for _ in range(max_retries):
         try:
             resp = requests.get(url, timeout=1)
@@ -223,7 +225,7 @@ def start_flask_and_wait():
 
 def get_cloudflare_model_status():
     try:
-        resp = requests.get("http://127.0.0.1:5000/status")
+        resp = requests.get(f"http://127.0.0.1:{port}/status")
         if resp.status_code == 200:
             data = resp.json()
             if data.get("mode") == "cloudflare":
