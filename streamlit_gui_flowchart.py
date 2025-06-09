@@ -30,36 +30,39 @@ def parse_log_flowchart(logs):
                 'description': description.strip(),
                 'raw': line.strip()
             })
-    # Build nodes and edges
-    for i, log in enumerate(log_dicts):
-        node_id = f"{log['id']}:{log['thread']}:{i}"
-        # node_label = f"{log['description']}\n({log['function']}, {log['thread']})"
-        node_label = f"{log['function']}"
-        G.add_node(node_id, label=node_label, thread=log['thread'], log_id=log['id'], function=log['function'], timestamp=log['timestamp'])
-        # Connect to previous node in the same thread
-        if log['thread'] in thread_last_node:
-            G.add_edge(thread_last_node[log['thread']], node_id)
-        else:
-            # If this is the first node in this thread, connect to last node in any other thread with same id
-            if log['id'] in id_last_node:
-                G.add_edge(id_last_node[log['id']], node_id)
-        thread_last_node[log['thread']] = node_id
-        id_last_node[log['id']] = node_id
+    # Sort log_dicts by timestamp (oldest to newest)
+    from datetime import datetime
+    def parse_ts(ts):
+        # Try to parse common timestamp formats, fallback to string
+        for fmt in ("%Y-%m-%d %H:%M:%S,%f", "%Y-%m-%d %H:%M:%S", "%H:%M:%S,%f", "%H:%M:%S"):
+            try:
+                return datetime.strptime(ts, fmt)
+            except Exception:
+                continue
+        return ts
+    log_dicts.sort(key=lambda d: parse_ts(d['timestamp']))
+
+    # Build the graph: each log line is a node, in order
+    prev_node = None
+    for idx, log in enumerate(log_dicts):
+        node_id = idx  # simple integer node id in order
+        label = log["function"]
+        G.add_node(node_id, label=label, **log)
+        if prev_node is not None:
+            G.add_edge(prev_node, node_id)
+        prev_node = node_id
+
     return G
 
 def plot_flowchart(G):
     if len(G.nodes) == 0:
         return None, None
-    # --- Top-down layout without graphviz ---
-    # Assign y by node order (top to bottom), x by thread (group nodes by thread)
-    threads = list({G.nodes[n]['thread'] for n in G.nodes})
-    thread_x = {thread: i for i, thread in enumerate(sorted(threads))}
+    # --- Simple top-down layout: nodes in order, one column ---
     node_order = list(G.nodes)
     node_pos = {}
     for idx, node in enumerate(node_order):
-        thread = G.nodes[node]['thread']
-        x = thread_x[thread]
-        y = -idx  # negative so top node is at top
+        x = 0  # All nodes in one column
+        y = -idx  # Top to bottom
         node_pos[node] = (x, y)
     pos = node_pos
     edge_x = []
@@ -77,17 +80,26 @@ def plot_flowchart(G):
     node_x = []
     node_y = []
     node_text = []
+    node_color = []
+    # Assign a color to each thread using a plotly color scale
+    threads = [G.nodes[node].get('thread', 'default') for node in G.nodes()]
+    unique_threads = list(sorted(set(threads)))
+    import plotly.colors
+    color_scale = plotly.colors.sample_colorscale('Plasma', [i/(max(1,len(unique_threads)-1)) for i in range(len(unique_threads))])
+    thread_to_color = {t: color_scale[i % len(color_scale)] for i, t in enumerate(unique_threads)}
     for node in G.nodes():
         x, y = pos[node]
         node_x.append(x)
         node_y.append(y)
         node_text.append(G.nodes[node]['label'])
+        thread = G.nodes[node].get('thread', 'default')
+        node_color.append(thread_to_color.get(thread, '#cccccc'))
     node_trace = go.Scatter(
         x=node_x, y=node_y,
         mode='markers+text',
         text=node_text,
         textposition='top center',
-        marker=dict(size=20, color='LightSkyBlue'),
+        marker=dict(size=20, color=node_color),
         hoverinfo='text')
     fig = go.Figure(data=[edge_trace, node_trace],
                     layout=go.Layout(
