@@ -20,11 +20,10 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
     attempt = 0
     caller = inspect.stack()[1].function
     thread_id = threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    # Use 'main' for thread_id if not in a parallel thread
-    thread_id_str = str(thread_id) if parent_thread_id else "main"
-    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [function=run_llm_query]"
-    log_prefix += f" [called_by={caller}]"
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    thread_id_str = str(thread_id)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=run_llm_query] [called_by={caller}]"
     # Truncate and format long/multiline strings for logging
     def format_log_string(label, value):
         if not isinstance(value, str):
@@ -108,9 +107,11 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
     )
 
     thread_id = threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    thread_id_str = str(thread_id) if parent_thread_id else "main"
-    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [function=classify_data_sources]"
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=classify_data_sources] [called_by={caller}]"
     logging.info(f"{log_prefix} [description=Classifying message: {message}]")
     response = config.client.chat.completions.create(
         model=config.completion_model,
@@ -138,9 +139,11 @@ def get_rsmeans_context(message: str, request_id: str = None, thread_id: int = N
     if request_id:
         set_request_id(request_id)
     thread_id_val = thread_id if thread_id is not None else threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_rsmeans_context] [description=message: {message}]")
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id_val)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_rsmeans_context] [called_by={caller}] [description=message: {message}]")
     from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
     rsmeans_context = get_rsmeans_context_from_prompt(message, request_id=request_id)
     return rsmeans_context
@@ -154,9 +157,11 @@ def get_ifc_context(message: str, request_id: str = None, thread_id: int = None)
     if request_id:
         set_request_id(request_id)
     thread_id_val = thread_id if thread_id is not None else threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_ifc_context] [description=message: {message}]")
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id_val)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_ifc_context] [called_by={caller}] [description=message: {message}]")
     return ifc_utils.get_ifc_context_from_query(message)
 
 def get_project_data_context(message: str, request_id: str = None, thread_id: int = None) -> str:
@@ -167,9 +172,11 @@ def get_project_data_context(message: str, request_id: str = None, thread_id: in
     if request_id:
         set_request_id(request_id)
     thread_id_val = thread_id if thread_id is not None else threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_project_data_context] [description=message: {message}]")
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id_val)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_project_data_context] [called_by={caller}] [description=message: {message}]")
     return bdg_utils.get_project_data_context_from_query(message)
 
 def get_knowledge_base_context(message: str, request_id: str = None, thread_id: int = None) -> str:
@@ -180,9 +187,11 @@ def get_knowledge_base_context(message: str, request_id: str = None, thread_id: 
     if request_id:
         set_request_id(request_id)
     thread_id_val = thread_id if thread_id is not None else threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_knowledge_base_context] [description=message: {message}]")
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id_val)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_knowledge_base_context] [called_by={caller}] [description=message: {message}]")
     return rag_utils.get_rag_context_from_query(message)
 
 def get_value_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
@@ -193,9 +202,11 @@ def get_value_model_context(message: str, request_id: str = None, thread_id: int
     if request_id:
         set_request_id(request_id)
     thread_id_val = thread_id if thread_id is not None else threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_value_model_context] [description=message: {message}]")
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id_val)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_value_model_context] [called_by={caller}] [description=message: {message}]")
     return "Value model is not implemented yet."  # Placeholder
 
 def get_cost_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
@@ -206,16 +217,21 @@ def get_cost_model_context(message: str, request_id: str = None, thread_id: int 
     if request_id:
         set_request_id(request_id)
     thread_id_val = thread_id if thread_id is not None else threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_cost_model_context] [description=message: {message}]")
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id_val)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_cost_model_context] [called_by={caller}] [description=message: {message}]")
     return "Cost model is not implemented yet."  # Placeholder
 
 def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500, request_id: str = None):
     thread_id = threading.get_ident()
-    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    thread_id_str = str(thread_id) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=route_query_to_function] [description=Routing message: {message}]")
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=route_query_to_function] [called_by={caller}]"
+    logging.info(f"{log_prefix} [description=Routing message: {message}]")
     data_sources = {
         "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
         "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.",
@@ -233,7 +249,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         data_sources_needed_dict["rsmeans"] = False
 
     # Debugging output
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=route_query_to_function] [description=Data sources needed: {data_sources_needed_dict}]")
+    logging.info(f"{log_prefix} [description=Data sources needed: {data_sources_needed_dict}]")
 
     # Create a data context dictionary based on the classification
     data_context = {}
@@ -286,5 +302,5 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
 
     # response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response # For debugging purposes, uncomment this line to see the data sources and context used in the response
 
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=route_query_to_function] [description=Finished routing and LLM call.]")
+    logging.info(f"{log_prefix} [description=Finished routing and LLM call.]")
     return data_context, response

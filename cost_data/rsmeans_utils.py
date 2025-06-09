@@ -82,9 +82,9 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
     Now uses parallel processing for per-chapter LLM calls and CSV loading.
     """
     from llm_calls import run_llm_query  # Import here to avoid circular dependency
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     import pandas as pd
     import re
-    from concurrent.futures import ThreadPoolExecutor, as_completed
     import threading
     import logging
 
@@ -118,8 +118,11 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
             set_request_id(request_id)
         thread_id = threading.get_ident()
         parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
-        thread_id_str = str(thread_id) if parent_thread_id else "main"
-        logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=process_chapter] [description=Processing chapter {chapter} from file {fname}]")
+        import inspect
+        caller = inspect.stack()[1].function
+        thread_id_str = str(thread_id)
+        parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+        logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=process_chapter] [called_by={caller}] [description=Processing chapter {chapter} from file {fname}]")
         if str(chapter) not in str(selected_chapters):
             return None, None
         print(f"Processing chapter {chapter} from file {fname}")
@@ -144,12 +147,11 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
             if match:
                 name = match.group(1).strip()
                 confidence = int(match.group(2)) / 100.0
-                codes = unique_sections[unique_sections['Section Name'] == name]['Masterformat Section Code'].tolist()
-                for code in codes:
-                    if code in local_code_confidence:
-                        local_code_confidence[code] = max(local_code_confidence[code], confidence)
-                    else:
-                        local_code_confidence[code] = confidence
+                # Find the section code for this section name
+                code_row = unique_sections[unique_sections['Section Name'] == name]
+                if not code_row.empty:
+                    code = code_row['Masterformat Section Code'].iloc[0]
+                    local_code_confidence[code] = confidence
         return df, local_code_confidence
 
     # Parallelize per-chapter processing with parent-child thread tracking
@@ -168,10 +170,7 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
                 dfs.append(df)
             if local_code_conf:
                 for code, conf in local_code_conf.items():
-                    if code in code_confidence:
-                        code_confidence[code] = max(code_confidence[code], conf)
-                    else:
-                        code_confidence[code] = conf
+                    code_confidence[code] = conf
 
     # Print the filtered section names and their confidence levels
     for code, conf in code_confidence.items():

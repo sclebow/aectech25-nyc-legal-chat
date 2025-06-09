@@ -37,8 +37,11 @@ def llm_call():
     set_request_id(request_id)  # Set thread-local request_id for all logs in this request
     thread_id = threading.get_ident()
     parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
-    thread_id_str = str(thread_id) if parent_thread_id else "main"
-    logger.info(f"[id={request_id}] [thread={thread_id_str}] [function=llm_call] [description=Received /llm_call request | input={input_string}]")
+    import inspect
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    logger.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=llm_call] [called_by={caller}] [description=Received /llm_call request | input={input_string}]")
 
     if stream:
         def generate():
