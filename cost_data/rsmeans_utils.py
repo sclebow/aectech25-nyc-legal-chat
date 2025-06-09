@@ -71,9 +71,15 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500, request_id=None):
     materials = run_llm_query(system_prompt, user_input, max_tokens=max_tokens, request_id=request_id)
     print(f"Extracted materials: {materials}")
     rsmeans_context = find_by_description(", ".join(materials), request_id=request_id)
+
+    # Convert the dataframe to a markdown table format
+    if rsmeans_context is not None and not rsmeans_context.empty:
+        rsmeans_context = rsmeans_context.reset_index(drop=True)
+        rsmeans_context = rsmeans_context.to_markdown(index=False, tablefmt="pipe")
+
     return rsmeans_context
 
-def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.6, request_id=None):
+def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.8, request_id=None):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
     For each relevant chapter, send a separate LLM call for section selection.
