@@ -182,18 +182,36 @@ def plot_flowchart(G):
     import plotly.colors
     color_scale = plotly.colors.sample_colorscale('Plasma', [i/(max(1,len(unique_threads)-1)) for i in range(len(unique_threads))])
     thread_to_color = {t: color_scale[i % len(color_scale)] for i, t in enumerate(unique_threads)}
-    for node in G.nodes():
+    # Calculate time elapsed from the very first node's timestamp
+    # Find the minimum (earliest) timestamp among all nodes
+    valid_timestamps = [ts for ts in timestamps if ts is not None]
+    if valid_timestamps:
+        min_timestamp = min(valid_timestamps)
+    else:
+        min_timestamp = None
+    for idx, node in enumerate(G.nodes()):
         x, y = pos[node]
         node_x.append(x)
         node_y_list.append(y)
-        # Updated hover text to show thread, parent, and called_by
+        # Updated hover text to show thread, parent, called_by, description, and elapsed time
         thread = G.nodes[node].get('thread', 'default')
         parent = G.nodes[node].get('parent', 'N/A')
         called_by = G.nodes[node].get('called_by', 'N/A')
         description = G.nodes[node].get('description', 'No description')
         timestamp = G.nodes[node].get('timestamp', 'N/A')
         label = G.nodes[node]['label']
-        hover_text = f"{label}<br>Thread: {thread}<br>Parent: {parent}<br>Called by: {called_by}<br>Description: {description}<br>Timestamp: {timestamp}"
+        # Calculate elapsed time from the first node
+        elapsed_str = 'N/A'
+        node_ts = timestamps[idx]
+        if min_timestamp is not None and node_ts is not None:
+            elapsed = node_ts - min_timestamp
+            # Format as H:MM:SS.sss
+            total_seconds = elapsed.total_seconds()
+            hours = int(total_seconds // 3600)
+            minutes = int((total_seconds % 3600) // 60)
+            seconds = total_seconds % 60
+            elapsed_str = f"{hours}:{minutes:02d}:{seconds:06.3f}"
+        hover_text = f"{label}<br>Thread: {thread}<br>Parent: {parent}<br>Called by: {called_by}<br>Description: {description}<br>Elapsed: {elapsed_str}"
         node_text.append(hover_text)
         node_color.append(thread_to_color.get(thread, '#cccccc'))
     node_trace = go.Scatter(
