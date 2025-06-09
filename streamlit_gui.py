@@ -106,12 +106,16 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                             before, tag, after = chunk.partition("[LOG]:")
                             if section == "logs" and before.strip():
                                 logs += before
-                                placeholder_logs.markdown(logs)
+                                # Show logs as bullet points
+                                log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
+                                placeholder_logs.markdown("\n".join(log_lines_display))
                             section = "logs"
                             # Support multiple log lines in a single chunk
                             log_lines = after.split("[LOG]:")
                             logs += log_lines[0].strip() + "\n"
-                            placeholder_logs.markdown(logs)
+                            # Show logs as bullet points
+                            log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
+                            placeholder_logs.markdown("\n".join(log_lines_display))
                             # --- Progressive flowchart update ---
                             from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
                             G = parse_log_flowchart(logs)
@@ -130,7 +134,9 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                                 placeholder_response.markdown(response_text)
                             elif section == "logs":
                                 logs += chunk
-                                placeholder_logs.markdown(logs)
+                                # Show logs as bullet points
+                                log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
+                                placeholder_logs.markdown("\n".join(log_lines_display))
                                 # --- Progressive flowchart update for log tail ---
                                 from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
                                 G = parse_log_flowchart(logs)
