@@ -382,16 +382,13 @@ if send_sample and sample:
             msg_placeholder = st.empty()
             msg_placeholder.markdown("_Processing..._")
             output = query_llm(sample, default_rag_mode, stream_mode, max_tokens)
-            # Replace the placeholder with the actual output
             msg_placeholder.empty()
+            # Only show the response here if it's an error, otherwise let the main chat loop handle display
             if isinstance(output, dict):
-                if "response" in output and output["response"].startswith("Error") or output["response"].startswith("Exception"):
+                if "response" in output and (output["response"].startswith("Error") or output["response"].startswith("Exception")):
                     st.error(output["response"])
-                else:
-                    st.markdown(output.get("response", ""))
-            else:
-                st.markdown(output)
-    st.session_state["messages"].append({"role": "assistant", "content": output})
+            elif isinstance(output, str) and (output.startswith("Error") or output.startswith("Exception")):
+                st.error(output)
 
 # Handle freeform chat input
 if user_input:
@@ -403,16 +400,13 @@ if user_input:
             msg_placeholder = st.empty()
             msg_placeholder.markdown("_Processing..._")
             output = query_llm(user_input, default_rag_mode, stream_mode, max_tokens)
-            # Replace the placeholder with the actual output
             msg_placeholder.empty()
+            # Only show the response here if it's an error, otherwise let the main chat loop handle display
             if isinstance(output, dict):
-                if "response" in output and output["response"].startswith("Error") or output["response"].startswith("Exception"):
+                if "response" in output and (output["response"].startswith("Error") or output["response"].startswith("Exception")):
                     st.error(output["response"])
-                else:
-                    st.markdown(output.get("response", ""))
-            else:
-                st.markdown(output)
-    st.session_state["messages"].append({"role": "assistant", "content": output})
+            elif isinstance(output, str) and (output.startswith("Error") or output.startswith("Exception")):
+                st.error(output)
 
 # --- IFC File Upload Section ---
 with st.expander("IFC File Management", expanded=False):
