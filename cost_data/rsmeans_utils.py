@@ -7,6 +7,9 @@ import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
 import difflib
+import threading
+import logging
+from logger_setup import set_request_id
 
 # For reference, the following are the columns in the RSMeans DataFrame:
 # ['Masterformat Section Code', 'Section Name', 'ID', 'Name', 'Crew', 'Daily Output', 'Labor-Hours','Unit', 'Material', 'Labor', 'Equipment', 'Total', 'Total Incl O&P']
@@ -50,7 +53,7 @@ def find_by_section_code(df, section_code):
     fuzzy_contains = df[code_series.str.contains(code_norm)]
     return fuzzy_contains
 
-def get_rsmeans_context_from_prompt(prompt, max_tokens=1500):
+def get_rsmeans_context_from_prompt(prompt, max_tokens=1500, request_id=None):
     """
     Use an LLM to extract relevant materials from a prompt.
     The materials will be used to extract data from the RSMeans CSV files.
@@ -65,12 +68,18 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500):
         "Example: 'concrete, steel, wood, insulation, drywall'. "
     )
     user_input = f"Description: {prompt}"
-    materials = run_llm_query(system_prompt, user_input, max_tokens=max_tokens)
+    materials = run_llm_query(system_prompt, user_input, max_tokens=max_tokens, request_id=request_id)
     print(f"Extracted materials: {materials}")
-    rsmeans_context = find_by_description(", ".join(materials))
+    rsmeans_context = find_by_description(", ".join(materials), request_id=request_id)
+
+    # Convert the dataframe to a markdown table format
+    if rsmeans_context is not None and not rsmeans_context.empty:
+        rsmeans_context = rsmeans_context.reset_index(drop=True)
+        rsmeans_context = rsmeans_context.to_markdown(index=False, tablefmt="pipe")
+
     return rsmeans_context
 
-def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.6):
+def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.8, request_id=None):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
     For each relevant chapter, send a separate LLM call for section selection.
@@ -79,9 +88,12 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
     Now uses parallel processing for per-chapter LLM calls and CSV loading.
     """
     from llm_calls import run_llm_query  # Import here to avoid circular dependency
+    from concurrent.futures import ThreadPoolExecutor, as_completed
     import pandas as pd
     import re
-    from concurrent.futures import ThreadPoolExecutor, as_completed
+    import threading
+    import logging
+    import inspect
 
     # 1. List all chapters
     chapter_csvs = list_chapter_csvs()
@@ -109,6 +121,15 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
     dfs = []
 
     def process_chapter(fname, chapter):
+        if request_id:
+            set_request_id(request_id)
+        thread_id = threading.get_ident()
+        parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+        import inspect
+        caller = inspect.stack()[1].function
+        thread_id_str = str(thread_id)
+        parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+        logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=process_chapter] [called_by={caller}] [description=Processing chapter {chapter} from file {fname}]")
         if str(chapter) not in str(selected_chapters):
             return None, None
         print(f"Processing chapter {chapter} from file {fname}")
@@ -133,27 +154,41 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
             if match:
                 name = match.group(1).strip()
                 confidence = int(match.group(2)) / 100.0
-                codes = unique_sections[unique_sections['Section Name'] == name]['Masterformat Section Code'].tolist()
-                for code in codes:
-                    if code in local_code_confidence:
-                        local_code_confidence[code] = max(local_code_confidence[code], confidence)
-                    else:
-                        local_code_confidence[code] = confidence
+                # Find the section code for this section name
+                code_row = unique_sections[unique_sections['Section Name'] == name]
+                if not code_row.empty:
+                    code = code_row['Masterformat Section Code'].iloc[0]
+                    local_code_confidence[code] = confidence
         return df, local_code_confidence
 
-    # Parallelize per-chapter processing
+    # Parallelize per-chapter processing with parent-child thread tracking
+    parent_id = threading.get_ident()
+    def submit_with_parent(executor, fn, *args, **kwargs):
+        def wrapper(*a, **kw):
+            threading.current_thread()._parent_ident = parent_id
+            return fn(*a, **kw)
+        return executor.submit(wrapper, *args, **kwargs)
+
+    # Only process chapters that are in selected_chapters
+    # Normalize chapter numbers for comparison (remove leading zeros)
+    def normalize_chapter(ch):
+        return str(int(str(ch).lstrip('0') or '0'))
+    norm_selected_chapters = set(normalize_chapter(ch) for ch in selected_chapters)
+    filtered_chapter_csvs = [
+        (fname, chapter)
+        for fname, chapter in chapter_csvs
+        if normalize_chapter(chapter) in norm_selected_chapters
+    ]
+    logging.info(f"[id={request_id}] [thread={threading.get_ident()}] [function=process_chapter] [parent={getattr(threading.current_thread(), '_parent_ident', None)}] [called_by={inspect.stack()[1].function}] [description=Selected chapters: {', '.join(selected_chapters)}, filtered {len(filtered_chapter_csvs)} chapters for processing]")
     with ThreadPoolExecutor() as executor:
-        futures = [executor.submit(process_chapter, fname, chapter) for fname, chapter in chapter_csvs]
+        futures = [submit_with_parent(executor, process_chapter, fname, chapter) for fname, chapter in filtered_chapter_csvs]
         for future in as_completed(futures):
             df, local_code_conf = future.result()
             if df is not None:
                 dfs.append(df)
             if local_code_conf:
                 for code, conf in local_code_conf.items():
-                    if code in code_confidence:
-                        code_confidence[code] = max(code_confidence[code], conf)
-                    else:
-                        code_confidence[code] = conf
+                    code_confidence[code] = conf
 
     # Print the filtered section names and their confidence levels
     for code, conf in code_confidence.items():
