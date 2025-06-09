@@ -121,6 +121,7 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                             G = parse_log_flowchart(logs)
                             fig, flowchart_key = plot_flowchart(G)
                             if fig is not None and G is not None and len(G.nodes) > 0:
+                                st.markdown("##### Backend Flowchart")
                                 flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                             # If more [LOG]: tags, process them in next loop
                             chunk = "[LOG]:".join(log_lines[1:]) if len(log_lines) > 1 else ""
@@ -142,6 +143,7 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                                 G = parse_log_flowchart(logs)
                                 fig, flowchart_key = plot_flowchart(G)
                                 if fig is not None and G is not None and len(G.nodes) > 0:
+                                    st.markdown("##### Backend Flowchart")
                                     flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                             chunk = ""
                     time.sleep(0.02)
@@ -329,6 +331,7 @@ with chat_message_container:
                 col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
                 with col_flowchart:
                     if fig is not None and G is not None and len(G.nodes) > 0:
+                        st.markdown("##### Backend Flowchart")
                         st.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                     else:
                         st.info("No flowchart data available for these logs.")

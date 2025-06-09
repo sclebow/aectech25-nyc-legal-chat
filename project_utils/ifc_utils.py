@@ -5,6 +5,9 @@ import ifcopenshell.util.shape
 import ifcopenshell.util.element
 import ifcopenshell.geom
 import multiprocessing
+import logging
+import threading
+import inspect
 
 # Lets get the total wall volume from the geometry itself
 
@@ -19,7 +22,7 @@ else:
 
 ifc = ifcopenshell.open(latest_file)
 
-def get_ifc_context_from_query(query):
+def get_ifc_context_from_query(query, request_id):
     """
     Use an LLM call to determine the IFC context from a query.
     """
@@ -46,7 +49,14 @@ def get_ifc_context_from_query(query):
         The response should be a single string containing the item names, separated by commas.
         If the user refers to multiple items, return all of them.
     """
-
+    
+    thread_id = threading.get_ident()
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_ifc_context_from_query] [called_by={caller}]"
+    logging.info(f"{log_prefix} [description=Determine relevant IFC shapes]")
     shapes_string = run_llm_query(system_prompt, query, max_tokens=1500)
     print("Shapes string from LLM:", shapes_string)
 

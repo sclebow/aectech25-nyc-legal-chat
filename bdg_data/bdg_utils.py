@@ -10,6 +10,9 @@ except ImportError:
     import sys
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     import cost_data.rsmeans_utils as rsmeans_utils
+import logging
+import threading
+import inspect
 
 material_export_csv_filename = "material_data_export.csv"
 material_export_csv_filepath = os.path.join("bdg_data", material_export_csv_filename)
@@ -110,7 +113,7 @@ def build_rsmeans_cost_data():
     rsmeans_df.to_csv(cost_data_from_rsmeans_csv_filepath, index=False)
     return rsmeans_df
 
-def get_project_data_context_from_query(message) -> str:
+def get_project_data_context_from_query(message, request_id=None):
     """
     Retrieves project data context by reading the material export CSV and BDG cost database,
     merging them on 'Source Qty', and returning a string representation of the DataFrame.
@@ -169,6 +172,16 @@ def get_project_data_context_from_query(message) -> str:
         f"Please filter the following descriptions based on the user's message: {message}. "
         "Return only the most relevant descriptions."
     )
+    import logging
+    import threading
+    import inspect
+    thread_id = threading.get_ident()
+    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
+    caller = inspect.stack()[1].function
+    thread_id_str = str(thread_id)
+    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
+    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_project_data_context_from_query] [called_by={caller}]"
+    logging.info(f"{log_prefix} [description=Calling run_llm_query to filter project data based on user message: {message}]")
     response = run_llm_query(system_prompt, user_prompt)
     confidence_threshold = 0.5  # Set a confidence threshold for filtering
     filtered_descriptions = []

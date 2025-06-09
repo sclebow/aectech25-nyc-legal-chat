@@ -158,7 +158,7 @@ def get_ifc_context(message: str, request_id: str = None, thread_id: int = None)
     thread_id_str = str(thread_id_val)
     parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
     logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_ifc_context] [called_by={caller}] [description=message: {message}]")
-    return ifc_utils.get_ifc_context_from_query(message)
+    return ifc_utils.get_ifc_context_from_query(message, request_id=request_id)
 
 def get_project_data_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
@@ -173,7 +173,7 @@ def get_project_data_context(message: str, request_id: str = None, thread_id: in
     thread_id_str = str(thread_id_val)
     parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
     logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_project_data_context] [called_by={caller}] [description=message: {message}]")
-    return bdg_utils.get_project_data_context_from_query(message)
+    return bdg_utils.get_project_data_context_from_query(message, request_id=request_id)
 
 def get_knowledge_base_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
