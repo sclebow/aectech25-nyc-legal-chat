@@ -137,67 +137,67 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
     classified_sources = classification.split(", ")
     return {key: (key in classified_sources) for key in data_sources.keys()}
 
-def get_rsmeans_context(message: str, request_id: str = None) -> str:
+def get_rsmeans_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
     Get the RSMeans context for the user message.
     Returns a string with the RSMeans data or a prompt to use RSMeans.
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [get_rsmeans_context] message: {message}")
+    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_rsmeans_context] message: {message}")
     from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
     rsmeans_context = get_rsmeans_context_from_prompt(message, request_id=request_id)
     return rsmeans_context
 
 
-def get_ifc_context(message: str, request_id: str = None) -> str:
+def get_ifc_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
     Get the IFC context for the user message.
     Returns a string with the IFC data or a prompt to use IFC.
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [get_ifc_context] message: {message}")
+    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_ifc_context] message: {message}")
     return ifc_utils.get_ifc_context_from_query(message)
 
-def get_project_data_context(message: str, request_id: str = None) -> str:
+def get_project_data_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
     Get the project data context for the user message.
     Returns a string with the project data or a prompt to use project data.
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [get_project_data_context] message: {message}")
+    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_project_data_context] message: {message}")
     return bdg_utils.get_project_data_context_from_query(message)
 
-def get_knowledge_base_context(message: str, request_id: str = None) -> str:
+def get_knowledge_base_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
     Get the knowledge base context for the user message.
     Returns a string with the knowledge base data or a prompt to use the knowledge base.
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [get_knowledge_base_context] message: {message}")
+    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_knowledge_base_context] message: {message}")
     return rag_utils.get_rag_context_from_query(message)
 
-def get_value_model_context(message: str, request_id: str = None) -> str:
+def get_value_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
     Get the value model context for the user message.
     Returns a string with the value model data or a prompt to use the value model.
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [get_value_model_context] message: {message}")
+    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_value_model_context] message: {message}")
     return "Value model is not implemented yet."  # Placeholder
 
-def get_cost_model_context(message: str, request_id: str = None) -> str:
+def get_cost_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
     Get the cost model context for the user message.
     Returns a string with the cost model data or a prompt to use the cost model.
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [get_cost_model_context] message: {message}")
+    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_cost_model_context] message: {message}")
     return "Cost model is not implemented yet."  # Placeholder
 
 def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500, request_id: str = None):
@@ -239,7 +239,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     with concurrent.futures.ThreadPoolExecutor() as executor:
         for key, needed in data_sources_needed_dict.items():
             if needed and key in context_functions:
-                futures[key] = executor.submit(context_functions[key], message, request_id)
+                futures[key] = executor.submit(context_functions[key], message, request_id, thread_id=threading.get_ident())
         # Collect results as they complete
         for key, future in futures.items():
             data_context[key] = future.result()

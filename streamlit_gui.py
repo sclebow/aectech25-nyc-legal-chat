@@ -11,6 +11,8 @@ import threading
 import datetime
 import server.config as config
 from logger_setup import setup_logger
+import networkx as nx
+import plotly.graph_objects as go
 
 # === Constants and Config ===
 FLASK_URL = "http://127.0.0.1:5000/llm_call"
@@ -158,7 +160,7 @@ def run_flask_server():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
-        stream_subprocess_output(flask_process)
+        stream_subprocess_output(flask_process) # Uncomment to stream output to console for debugging
         return "Flask server started."
     else:
         return "Flask server is already running."
@@ -232,7 +234,83 @@ def set_cloudflare_models(mode, gen_model, emb_model):
     except Exception as e:
         logger.error(f"Failed to set Cloudflare models: {e}")
 
-# === Streamlit UI ===
+# --- Streamlit Chat Interface with Sample Questions ---
+def parse_log_flowchart(logs):
+    """
+    Parse logs to extract flow steps and threads, and build a directed graph.
+    Handles log lines with [id=...] and optionally [thread=...] or [thread_id=...].
+    Each log line with [id=...] becomes a node, connected to the previous node in the same thread if possible.
+    If a new thread appears, connect its first node to the last node in any other thread with the same id.
+    Returns a networkx DiGraph.
+    """
+    import re
+    G = nx.DiGraph()
+    thread_last_node = {}  # thread_id -> last node_id
+    id_thread_first_node = {}  # (id, thread) -> first node_id
+    id_last_node = {}  # id -> last node_id (across all threads)
+    for line in logs.splitlines():
+        id_match = re.search(r"\[id=([^\]]+)\]", line)
+        # Support both [thread=...] and [thread_id=...]
+        thread_match = re.search(r"\[(thread|thread_id)=([^\]]+)\]", line)
+        desc_match = re.split(r"(\[[^\]]+\]\s*)+", line)
+        desc = desc_match[-1].strip() if len(desc_match) > 1 else line.strip()
+        if id_match:
+            node_id = id_match.group(1) + ":" + str(hash(line))  # make node unique per line
+            corr_id = id_match.group(1)
+            thread = thread_match.group(2) if thread_match else "UnknownThread"
+            node_label = f"{desc}\n({thread})"
+            G.add_node(node_id, label=node_label, thread=thread, corr_id=corr_id)
+            # Connect to previous node in the same thread
+            if thread in thread_last_node:
+                G.add_edge(thread_last_node[thread], node_id)
+            else:
+                # If this is the first node in this thread, connect to last node in any other thread with same id
+                if corr_id in id_last_node:
+                    G.add_edge(id_last_node[corr_id], node_id)
+            thread_last_node[thread] = node_id
+            id_last_node[corr_id] = node_id
+    return G
+
+def plot_flowchart(G):
+    if len(G.nodes) == 0:
+        return None
+    pos = nx.spring_layout(G, seed=42)
+    edge_x = []
+    edge_y = []
+    for edge in G.edges():
+        x0, y0 = pos[edge[0]]
+        x1, y1 = pos[edge[1]]
+        edge_x += [x0, x1, None]
+        edge_y += [y0, y1, None]
+    edge_trace = go.Scatter(
+        x=edge_x, y=edge_y,
+        line=dict(width=1, color='#888'),
+        hoverinfo='none',
+        mode='lines')
+    node_x = []
+    node_y = []
+    node_text = []
+    for node in G.nodes():
+        x, y = pos[node]
+        node_x.append(x)
+        node_y.append(y)
+        node_text.append(G.nodes[node]['label'])
+    node_trace = go.Scatter(
+        x=node_x, y=node_y,
+        mode='markers+text',
+        text=node_text,
+        textposition='top center',
+        marker=dict(size=20, color='LightSkyBlue'),
+        hoverinfo='text')
+    fig = go.Figure(data=[edge_trace, node_trace],
+                    layout=go.Layout(
+                        showlegend=False,
+                        hovermode='closest',
+                        margin=dict(b=20,l=5,r=5,t=40),
+                        xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
+                        yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)))
+    return fig
+
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
 st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
@@ -291,6 +369,18 @@ with chat_message_container:
                                 st.markdown(f"- {log_line}")
                     else:
                         st.markdown("No logs available.")
+                # --- Flowchart visualization ---
+                logs = msg["content"].get("logs", "")
+                G = None
+                fig = None
+                if logs and logs.strip():
+                    G = parse_log_flowchart(logs)
+                    fig = plot_flowchart(G)
+                with st.expander("Show Log Flowchart", expanded=False):
+                    if fig is not None and G is not None and len(G.nodes) > 0:
+                        st.plotly_chart(fig, use_container_width=True)
+                    else:
+                        st.info("No flowchart data available for these logs.")
                 st.markdown(msg["content"].get("response", ""))
             else:
                 st.markdown(msg["content"])
