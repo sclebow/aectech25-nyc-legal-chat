@@ -88,10 +88,10 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                             before, tag, after = chunk.partition("[DATA CONTEXT]:")
                             if section == "data_context" and before.strip():
                                 data_context += before
-                                placeholder_data_context.markdown(data_context)
+                                render_data_context_table(data_context, placeholder_data_context)
                             section = "data_context"
                             data_context = after.strip()
-                            placeholder_data_context.markdown(data_context)
+                            render_data_context_table(data_context, placeholder_data_context)
                             chunk = ""
                         elif "[RESPONSE]:" in chunk:
                             before, tag, after = chunk.partition("[RESPONSE]:")
@@ -128,7 +128,7 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                             # No tag found, append to current section
                             if section == "data_context":
                                 data_context += chunk
-                                placeholder_data_context.markdown(data_context)
+                                render_data_context_table(data_context, placeholder_data_context)
                             elif section == "response":
                                 response_text += chunk
                                 placeholder_response.markdown(response_text)
@@ -245,6 +245,20 @@ def set_cloudflare_models(mode, gen_model, emb_model):
     except Exception as e:
         logger.error(f"Failed to set Cloudflare models: {e}")
 
+def render_data_context_table(data_context, placeholder=None):
+    import pandas as pd
+    import re
+    headers = ["rsmeans", "ifc", "project data", "knowledge base", "value model", "cost model"]
+    # Build a regex pattern to match all headers and their values
+    pattern = r"'(" + "|".join(re.escape(h) for h in headers) + r")':(.*?)(?=(?:'(" + "|".join(re.escape(h) for h in headers) + r")':)|$)"
+    matches = re.findall(pattern, data_context, re.DOTALL)
+    data_dict = {header: value.strip() for header, value, _ in matches}
+    df = pd.DataFrame(list(data_dict.items()), columns=["Context Key", "Value"])
+    if placeholder:
+        placeholder.dataframe(df, use_container_width=True)
+    else:
+        st.dataframe(df, use_container_width=True)
+
 # --- Streamlit Chat Interface with Sample Questions ---
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
@@ -294,7 +308,8 @@ with chat_message_container:
             if isinstance(msg["content"], dict):
                 # Show data context in expander above the response
                 with st.expander("Show Data Context", expanded=False):
-                    st.markdown(msg["content"].get("data_context", "No data context returned."))
+                    data_context = msg["content"].get("data_context", "No data context returned.")
+                    render_data_context_table(data_context)
                 # Show logs in expander below the response
                 with st.expander("Show Logs", expanded=False):
                     logs = msg["content"].get("logs", "No logs available.")
