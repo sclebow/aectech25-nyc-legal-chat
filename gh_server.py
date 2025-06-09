@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, Response
+from flask import Flask, request, jsonify, Response, send_from_directory
 # import ghhops_server as hs
 import llm_calls
 from project_utils import rag_utils
@@ -8,6 +8,7 @@ import logging
 import time
 import threading
 import queue
+import os
 from logger_setup import setup_logger, set_request_id
 
 app = Flask(__name__)
@@ -112,6 +113,41 @@ def status():
         'cf_gen_model': getattr(config, 'completion_model', None),
         'cf_emb_model': getattr(config, 'embedding_model', None)
     }), 200
+
+IFC_DIR = os.path.join(os.getcwd(), 'ifc_files')
+
+@app.route('/upload_ifc', methods=['POST'])
+def upload_ifc():
+    if 'file' not in request.files:
+        return jsonify({'status': 'error', 'message': 'No file part in request'}), 400
+    file = request.files['file']
+    if file.filename == '':
+        return jsonify({'status': 'error', 'message': 'No selected file'}), 400
+    if not file.filename.lower().endswith('.ifc'):
+        return jsonify({'status': 'error', 'message': 'Only .ifc files allowed'}), 400
+    save_path = os.path.join(IFC_DIR, file.filename)
+    file.save(save_path)
+    return jsonify({'status': 'success', 'filename': file.filename}), 200
+
+@app.route('/download_ifc/<filename>', methods=['GET'])
+def download_ifc(filename):
+    if not filename.lower().endswith('.ifc'):
+        return jsonify({'status': 'error', 'message': 'Only .ifc files allowed'}), 400
+    try:
+        return send_from_directory(IFC_DIR, filename, as_attachment=True)
+    except FileNotFoundError:
+        return jsonify({'status': 'error', 'message': 'File not found'}), 404
+
+@app.route('/download_latest_ifc', methods=['GET'])
+def download_latest_ifc():
+    try:
+        files = [f for f in os.listdir(IFC_DIR) if f.lower().endswith('.ifc')]
+        if not files:
+            return jsonify({'status': 'error', 'message': 'No IFC files found'}), 404
+        latest_file = max(files, key=lambda f: os.path.getmtime(os.path.join(IFC_DIR, f)))
+        return send_from_directory(IFC_DIR, latest_file, as_attachment=True)
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=False, use_reloader=False)
