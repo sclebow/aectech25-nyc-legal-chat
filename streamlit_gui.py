@@ -53,19 +53,6 @@ flask_process = None
 flask_status_placeholder = None
 
 # === Utility Functions (adapted from gradio_gui.py) ===
-def query_llm(user_input):
-    try:
-        response = requests.post(FLASK_URL, json={"input": user_input})
-        if response.status_code == 200:
-            data = response.json()
-            data_context = data.get("data_context", "No data context returned.")
-            response_text = data.get("response", "No response from server.")
-            return {"data_context": data_context, "response": response_text}
-        else:
-            return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}"}
-    except Exception as e:
-        return {"data_context": "", "response": f"Exception: {str(e)}"}
-
 def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
     url = FLASK_URL
     try:
