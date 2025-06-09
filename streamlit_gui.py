@@ -39,6 +39,8 @@ cloudflare_models = [
     "@cf/qwen/qwen2.5-coder-32b-instruct",
     "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
     "@cf/deepseek-ai/deepseek-math-7b-instruct",
+    "@cf/qwen/qwq-32b",
+    "@cf/microsoft/phi-2",
 ]
 cloudflare_embedding_models = [
     "@cf/baai/bge-base-en-v1.5",
@@ -58,6 +60,8 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
     url = FLASK_URL
     try:
         if stream_mode == "Streaming":
+            import time as _time
+            start_time = _time.time()
             response = requests.post(url, json={"input": user_input, "stream": True, "max_tokens": int(max_tokens)}, stream=True)
             if response.status_code == 200:
                 streamed_text = ""
@@ -144,13 +148,13 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                                 G = parse_log_flowchart(logs)
                                 fig, flowchart_key = plot_flowchart(G)
                                 if fig is not None and G is not None and len(G.nodes) > 0:
-                                    # st.markdown("##### Backend Flowchart")
                                     flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                                 # --- Token Usage Report (streaming) ---
-                                placeholder_token_usage.empty()
-                                render_token_usage_report(logs)
-                            chunk = ""
-                    time.sleep(0.02)
+                                # Only show after all logs are received (i.e., after the streaming loop)
+                # After streaming loop ends, show the final token usage report
+                with col_response:
+                    elapsed_time = _time.time() - start_time
+                    render_token_usage_report(logs, elapsed_time=elapsed_time)
                 return {"data_context": data_context, "response": response_text, "logs": logs}
             else:
                 return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
@@ -265,15 +269,18 @@ def render_data_context_table(data_context, placeholder=None):
     else:
         st.dataframe(df, use_container_width=True)
 
-def render_token_usage_report(logs):
-    """Extracts and displays the total LLM token usage from logs."""
+def render_token_usage_report(logs, elapsed_time=None):
+    """Extracts and displays the total LLM token usage from logs, and optionally the elapsed time."""
     import re
+    report_lines = []
     if logs and logs.strip():
         token_usages = re.findall(r"\[usage=CompletionUsage\(.*?total_tokens=(\d+)", logs)
-        # Fix: use correct regex for literal brackets and group
-        token_usages = re.findall(r"\[usage=CompletionUsage\(.*?total_tokens=(\d+)", logs)
         total_tokens = sum(int(t) for t in token_usages)
-        st.info(f"**Total LLM tokens used in this response:** {total_tokens}")
+        report_lines.append(f"**Total LLM tokens used in this response:** {total_tokens}")
+    if elapsed_time is not None:
+        report_lines.append(f"**Elapsed time:** {elapsed_time:.2f} seconds")
+    if report_lines:
+        st.info("\n".join(report_lines))
 
 # --- Streamlit Chat Interface with Sample Questions ---
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
@@ -405,25 +412,26 @@ with st.form("ifc_upload_form", clear_on_submit=True):
                 st.error(f"Exception during upload: {e}")
 
 # --- IFC File Download Section ---
-st.markdown("## Download Latest IFC File")
-download_latest = st.button("Download Latest IFC File")
-if download_latest:
-    with st.spinner("Fetching latest IFC file..."):
-        try:
-            response = requests.get("http://127.0.0.1:5000/download_latest_ifc", stream=True)
-            if response.status_code == 200:
-                content_disp = response.headers.get('content-disposition', '')
-                filename = "latest.ifc"
-                if 'filename=' in content_disp:
-                    filename = content_disp.split('filename=')[1].strip('"')
-                file_bytes = response.content
-                st.download_button(
-                    label=f"Click to download {filename}",
-                    data=file_bytes,
-                    file_name=filename,
-                    mime="application/octet-stream"
-                )
-            else:
-                st.error(f"Download failed: {response.json().get('message', response.text)}")
-        except Exception as e:
-            st.error(f"Exception during download: {e}")
+with st.expander("IFC File Management", expanded=False):
+    st.markdown("## Download Latest IFC File")
+    download_latest = st.button("Download Latest IFC File")
+    if download_latest:
+        with st.spinner("Fetching latest IFC file..."):
+            try:
+                response = requests.get("http://127.0.0.1:5000/download_latest_ifc", stream=True)
+                if response.status_code == 200:
+                    content_disp = response.headers.get('content-disposition', '')
+                    filename = "latest.ifc"
+                    if 'filename=' in content_disp:
+                        filename = content_disp.split('filename=')[1].strip('"')
+                    file_bytes = response.content
+                    st.download_button(
+                        label=f"Click to download {filename}",
+                        data=file_bytes,
+                        file_name=filename,
+                        mime="application/octet-stream"
+                    )
+                else:
+                    st.error(f"Download failed: {response.json().get('message', response.text)}")
+            except Exception as e:
+                st.error(f"Exception during download: {e}")
