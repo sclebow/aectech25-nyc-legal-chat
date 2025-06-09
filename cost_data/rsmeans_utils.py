@@ -79,7 +79,7 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500, request_id=None):
 
     return rsmeans_context
 
-def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.8, max_output_rows=50, request_id=None):
+def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.8, max_output_rows=25, request_id=None):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
     For each relevant chapter, send a separate LLM call for section selection.
