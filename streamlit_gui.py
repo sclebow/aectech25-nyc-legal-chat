@@ -282,7 +282,18 @@ def parse_log_flowchart(logs):
 def plot_flowchart(G):
     if len(G.nodes) == 0:
         return None
-    pos = nx.spring_layout(G, seed=42)
+    # --- Top-down layout without graphviz ---
+    # Assign y by node order (top to bottom), x by thread (group nodes by thread)
+    threads = list({G.nodes[n]['thread'] for n in G.nodes})
+    thread_x = {thread: i for i, thread in enumerate(sorted(threads))}
+    node_order = list(G.nodes)
+    node_pos = {}
+    for idx, node in enumerate(node_order):
+        thread = G.nodes[node]['thread']
+        x = thread_x[thread]
+        y = -idx  # negative so top node is at top
+        node_pos[node] = (x, y)
+    pos = node_pos
     edge_x = []
     edge_y = []
     for edge in G.edges():
