@@ -118,7 +118,8 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
             set_request_id(request_id)
         thread_id = threading.get_ident()
         parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
-        logging.info(f"[rsmeans_utils] [process_chapter] [thread={thread_id}]" + (f" [parent_thread={parent_thread_id}]" if parent_thread_id else "") + f" Processing chapter {chapter} from file {fname}")
+        thread_id_str = str(thread_id) if parent_thread_id else "main"
+        logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=process_chapter] [description=Processing chapter {chapter} from file {fname}]")
         if str(chapter) not in str(selected_chapters):
             return None, None
         print(f"Processing chapter {chapter} from file {fname}")

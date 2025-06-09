@@ -21,10 +21,10 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
     caller = inspect.stack()[1].function
     thread_id = threading.get_ident()
     parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
-    log_prefix = f"[id={request_id}] [thread={thread_id}]"
-    if parent_thread_id:
-        log_prefix += f" [parent_thread={parent_thread_id}]"
-    log_prefix += f" [run_llm_query] [called_by={caller}]"
+    # Use 'main' for thread_id if not in a parallel thread
+    thread_id_str = str(thread_id) if parent_thread_id else "main"
+    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [function=run_llm_query]"
+    log_prefix += f" [called_by={caller}]"
     # Truncate and format long/multiline strings for logging
     def format_log_string(label, value):
         if not isinstance(value, str):
@@ -35,9 +35,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
 
     if request_id:
         set_request_id(request_id)
-    logging.info(f"{log_prefix} Starting LLM query | "
-                 f"{format_log_string('system_prompt', system_prompt)} | "
-                 f"{format_log_string('user_input', user_input)}")
+    logging.info(f"{log_prefix} [description=Starting LLM query | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)}]")
     while attempt < max_retries:
         try:
             if not stream:
@@ -50,9 +48,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                     temperature=0.0,
                     max_tokens=max_tokens,
                 )
-                logging.info(f"{log_prefix} LLM query successful on attempt {attempt+1} | "
-                             f"{format_log_string('system_prompt', system_prompt)} | "
-                             f"{format_log_string('user_input', user_input)}")
+                logging.info(f"{log_prefix} [description=LLM query successful on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)}]")
                 return str(response.choices[0].message.content).strip()
             else:
                 response = config.client.chat.completions.create(
@@ -75,27 +71,21 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                             yield delta.content
                         if hasattr(chunk, 'usage') and chunk.usage:
                             usage_data = chunk.usage
-                    logging.info(f"{log_prefix} LLM streaming query started on attempt {attempt+1} | "
-                                 f"{format_log_string('system_prompt', system_prompt)} | "
-                                 f"{format_log_string('user_input', user_input)}")
-                    logging.info(f"{log_prefix} LLM streaming query full message: {format_log_string('full_message', full_message)}")
+                    logging.info(f"{log_prefix} [description=LLM streaming query started on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)}]")
+                    logging.info(f"{log_prefix} [description=LLM streaming query full message: {format_log_string('full_message', full_message)}]")
                     if usage_data:
-                        logging.info(f"{log_prefix} LLM streaming usage data: {usage_data}")
+                        logging.info(f"{log_prefix} [description=LLM streaming usage data: {usage_data}]")
                 return generator()
         except Exception as e:
             if hasattr(e, "status_code") and e.status_code == 429 or "rate limit" in str(e).lower():
-                logging.warning(f"{log_prefix} Rate limit hit, retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})")
+                logging.warning(f"{log_prefix} [description=Rate limit hit, retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries})]")
             else:
-                logging.error(f"{log_prefix} Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries}) | "
-                              f"{format_log_string('system_prompt', system_prompt)} | "
-                              f"{format_log_string('user_input', user_input)}")
-                logging.error(f"{log_prefix} System prompt: {system_prompt}")
-                logging.error(f"{log_prefix} User input: {user_input}")
+                logging.error(f"{log_prefix} [description=Error in LLM call: {e}. Retrying in {retry_delay} seconds... (attempt {attempt+1}/{max_retries}) | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)}]")
+                logging.error(f"{log_prefix} [description=System prompt: {system_prompt}]")
+                logging.error(f"{log_prefix} [description=User input: {user_input}]")
             time.sleep(retry_delay)
             attempt += 1
-    logging.critical(f"{log_prefix} LLM call failed after {max_retries} attempts. | "
-                    f"{format_log_string('system_prompt', system_prompt)} | "
-                    f"{format_log_string('user_input', user_input)}")
+    logging.critical(f"{log_prefix} [description=LLM call failed after {max_retries} attempts. | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)}]")
     raise RuntimeError(f"LLM call failed after {max_retries} attempts due to repeated errors or rate limits.")
 
 def classify_data_sources(message: str, data_sources: dict, request_id: str = None) -> dict:
@@ -117,8 +107,11 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
         "Query: What is the total concrete cost for this project?\nOutput: project data\n"
     )
 
-    log_prefix = f"[id={request_id}] [classify_data_sources]"
-    logging.info(f"{log_prefix} Classifying message: {message}")
+    thread_id = threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    thread_id_str = str(thread_id) if parent_thread_id else "main"
+    log_prefix = f"[id={request_id}] [thread={thread_id_str}] [function=classify_data_sources]"
+    logging.info(f"{log_prefix} [description=Classifying message: {message}]")
     response = config.client.chat.completions.create(
         model=config.completion_model,
         messages=[
@@ -129,7 +122,7 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
     )
     
     classification = response.choices[0].message.content.strip()
-    logging.info(f"{log_prefix} Classification result: {classification}")
+    logging.info(f"{log_prefix} [description=Classification result: {classification}]")
     if classification.lower() == "none":
         return {key: False for key in data_sources.keys()}
     
@@ -144,7 +137,10 @@ def get_rsmeans_context(message: str, request_id: str = None, thread_id: int = N
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_rsmeans_context] message: {message}")
+    thread_id_val = thread_id if thread_id is not None else threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_rsmeans_context] [description=message: {message}]")
     from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
     rsmeans_context = get_rsmeans_context_from_prompt(message, request_id=request_id)
     return rsmeans_context
@@ -157,7 +153,10 @@ def get_ifc_context(message: str, request_id: str = None, thread_id: int = None)
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_ifc_context] message: {message}")
+    thread_id_val = thread_id if thread_id is not None else threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_ifc_context] [description=message: {message}]")
     return ifc_utils.get_ifc_context_from_query(message)
 
 def get_project_data_context(message: str, request_id: str = None, thread_id: int = None) -> str:
@@ -167,7 +166,10 @@ def get_project_data_context(message: str, request_id: str = None, thread_id: in
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_project_data_context] message: {message}")
+    thread_id_val = thread_id if thread_id is not None else threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_project_data_context] [description=message: {message}]")
     return bdg_utils.get_project_data_context_from_query(message)
 
 def get_knowledge_base_context(message: str, request_id: str = None, thread_id: int = None) -> str:
@@ -177,7 +179,10 @@ def get_knowledge_base_context(message: str, request_id: str = None, thread_id: 
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_knowledge_base_context] message: {message}")
+    thread_id_val = thread_id if thread_id is not None else threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_knowledge_base_context] [description=message: {message}]")
     return rag_utils.get_rag_context_from_query(message)
 
 def get_value_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
@@ -187,7 +192,10 @@ def get_value_model_context(message: str, request_id: str = None, thread_id: int
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_value_model_context] message: {message}")
+    thread_id_val = thread_id if thread_id is not None else threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_value_model_context] [description=message: {message}]")
     return "Value model is not implemented yet."  # Placeholder
 
 def get_cost_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
@@ -197,11 +205,17 @@ def get_cost_model_context(message: str, request_id: str = None, thread_id: int 
     """
     if request_id:
         set_request_id(request_id)
-    logging.info(f"[id={request_id}] [thread_id={thread_id}] [get_cost_model_context] message: {message}")
+    thread_id_val = thread_id if thread_id is not None else threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    thread_id_str = str(thread_id_val) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=get_cost_model_context] [description=message: {message}]")
     return "Cost model is not implemented yet."  # Placeholder
 
 def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500, request_id: str = None):
-    logging.info(f"[id={request_id}] [route_query_to_function] Routing message: {message}")
+    thread_id = threading.get_ident()
+    parent_thread_id = threading.current_thread()._parent_ident if hasattr(threading.current_thread(), '_parent_ident') else None
+    thread_id_str = str(thread_id) if parent_thread_id else "main"
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=route_query_to_function] [description=Routing message: {message}]")
     data_sources = {
         "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
         "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.",
@@ -219,7 +233,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         data_sources_needed_dict["rsmeans"] = False
 
     # Debugging output
-    logging.info(f"[id={request_id}] Data sources needed: {data_sources_needed_dict}")
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=route_query_to_function] [description=Data sources needed: {data_sources_needed_dict}]")
 
     # Create a data context dictionary based on the classification
     data_context = {}
@@ -272,5 +286,5 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
 
     # response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response # For debugging purposes, uncomment this line to see the data sources and context used in the response
 
-    logging.info(f"[id={request_id}] [route_query_to_function] Finished routing and LLM call.")
+    logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=route_query_to_function] [description=Finished routing and LLM call.]")
     return data_context, response
