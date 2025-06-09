@@ -87,17 +87,31 @@ def plot_flowchart(G):
     for thread in set(node_thread.values()):
         if thread not in thread_to_x:
             thread_to_x[thread] = len(thread_to_x)
-    # Calculate global y positions: evenly spaced by timestamp order
-    # Find the order of nodes by timestamp (oldest to newest)
+    # Calculate global y positions: evenly spaced by timestamp group
+    # Use a threshold to group nodes with similar timestamps
+    from datetime import timedelta
+    time_threshold = timedelta(seconds=0.0001)  # You can adjust this threshold
     node_ts_pairs = list(zip(node_order, timestamps))
     # Sort by timestamp, fallback to original order if missing
     node_ts_pairs_sorted = sorted(node_ts_pairs, key=lambda x: x[1] if x[1] is not None else datetime.max)
-    # Map node to its order in timestamp-sorted list
-    node_to_yidx = {node: i for i, (node, _) in enumerate(node_ts_pairs_sorted)}
+    y_group = 0
+    last_ts = None
+    node_to_ygroup = {}
+    for node, ts in node_ts_pairs_sorted:
+        if ts is None:
+            # If no timestamp, treat as new group
+            y_group += 1
+            node_to_ygroup[node] = y_group
+            last_ts = None
+        else:
+            if last_ts is None or (ts - last_ts) > time_threshold:
+                y_group += 1
+            node_to_ygroup[node] = y_group
+            last_ts = ts
     # Assign node positions
     for idx, node in enumerate(node_order):
         x = thread_to_x[node_thread[node]]
-        y = -node_to_yidx[node]  # Evenly spaced, ordered by timestamp
+        y = -node_to_ygroup[node]  # Evenly spaced by group
         node_pos[node] = (x, y)
     pos = node_pos
     edge_x = []
