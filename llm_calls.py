@@ -34,7 +34,6 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
 
     if request_id:
         set_request_id(request_id)
-    logging.info(f"{log_prefix} [description=Starting LLM query | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)}]")
     while attempt < max_retries:
         try:
             if not stream:
@@ -47,7 +46,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                     temperature=0.0,
                     max_tokens=max_tokens,
                 )
-                logging.info(f"{log_prefix} [description=LLM query successful on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)}]")
+                logging.info(f"{log_prefix} [description=LLM query successful on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)} | response={str(response.choices[0].message.content).strip()}]")
                 return str(response.choices[0].message.content).strip()
             else:
                 response = config.client.chat.completions.create(
@@ -70,10 +69,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                             yield delta.content
                         if hasattr(chunk, 'usage') and chunk.usage:
                             usage_data = chunk.usage
-                    logging.info(f"{log_prefix} [description=LLM streaming query started on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)}]")
-                    logging.info(f"{log_prefix} [description=LLM streaming query full message: {format_log_string('full_message', full_message)}]")
-                    if usage_data:
-                        logging.info(f"{log_prefix} [description=LLM streaming usage data: {usage_data}]")
+                    logging.info(f"{log_prefix} [description=LLM streaming query finished on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)} | full_message={full_message} | usage_data={usage_data}]")
                 return generator()
         except Exception as e:
             if hasattr(e, "status_code") and e.status_code == 429 or "rate limit" in str(e).lower():
