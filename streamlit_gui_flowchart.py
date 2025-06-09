@@ -87,30 +87,17 @@ def plot_flowchart(G):
     for thread in set(node_thread.values()):
         if thread not in thread_to_x:
             thread_to_x[thread] = len(thread_to_x)
-    # Calculate global y positions: cumulative seconds from first node
-    # Find the earliest timestamp
-    valid_timestamps = [ts for ts in timestamps if ts is not None]
-    if valid_timestamps:
-        min_ts = min(valid_timestamps)
-    else:
-        min_ts = None
-    y_positions = []
-    last_y = 0
-    last_ts = min_ts
-    for ts in timestamps:
-        if ts is not None and min_ts is not None:
-            y = -(ts - min_ts).total_seconds()
-            y_positions.append(y)
-            last_y = y
-            last_ts = ts
-        else:
-            # If timestamp missing, just space by -1 from previous
-            y_positions.append(last_y - 1)
-            last_y = last_y - 1
+    # Calculate global y positions: evenly spaced by timestamp order
+    # Find the order of nodes by timestamp (oldest to newest)
+    node_ts_pairs = list(zip(node_order, timestamps))
+    # Sort by timestamp, fallback to original order if missing
+    node_ts_pairs_sorted = sorted(node_ts_pairs, key=lambda x: x[1] if x[1] is not None else datetime.max)
+    # Map node to its order in timestamp-sorted list
+    node_to_yidx = {node: i for i, (node, _) in enumerate(node_ts_pairs_sorted)}
     # Assign node positions
     for idx, node in enumerate(node_order):
         x = thread_to_x[node_thread[node]]
-        y = y_positions[idx]
+        y = -node_to_yidx[node]  # Evenly spaced, ordered by timestamp
         node_pos[node] = (x, y)
     pos = node_pos
     edge_x = []
