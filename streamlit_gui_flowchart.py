@@ -117,7 +117,6 @@ def parse_log_flowchart(logs):
 def plot_flowchart(G):
     if len(G.nodes) == 0:
         return None, None
-    # --- Layout: columns for threads, y by global timestamp difference ---
     node_order = list(G.nodes)
     node_pos = {}
     from datetime import datetime
@@ -140,13 +139,41 @@ def plot_flowchart(G):
         timestamps.append(parsed)
         if thread not in thread_first_ts and parsed is not None:
             thread_first_ts[thread] = parsed
-    # Order threads by first timestamp (main/earliest on left)
-    ordered_threads = sorted(thread_first_ts.items(), key=lambda x: x[1] if x[1] is not None else datetime.max)
-    thread_to_x = {t[0]: i for i, t in enumerate(ordered_threads)}
+    # Build thread parent mapping
+    thread_parent = {}
+    for node in G.nodes:
+        thread = G.nodes[node].get('thread', 'default')
+        parent = G.nodes[node].get('parent', None)
+        if thread not in thread_parent and parent is not None:
+            thread_parent[thread] = parent
+    # Build parent -> children mapping
+    from collections import defaultdict
+    parent_to_children = defaultdict(list)
+    for thread, parent in thread_parent.items():
+        if parent is not None:
+            parent_to_children[parent].append(thread)
+    # Find root threads (no parent or parent not in thread_first_ts)
+    all_threads = set(node_thread.values())
+    root_threads = [t for t in all_threads if thread_parent.get(t, None) not in all_threads]
+    # Recursively order threads: for each parent, order children by first_ts DESC (latest first)
+    def order_threads(parent, x_list):
+        children = parent_to_children.get(parent, [])
+        # Sort children by first_ts DESC (latest first)
+        children_sorted = sorted(children, key=lambda t: thread_first_ts.get(t, datetime.max), reverse=True)
+        for child in children_sorted:
+            x_list.append(child)
+            order_threads(child, x_list)
+    # Start with root threads, order by first_ts ASC (earliest first)
+    root_threads_sorted = sorted(root_threads, key=lambda t: thread_first_ts.get(t, datetime.max))
+    ordered_threads = []
+    for root in root_threads_sorted:
+        ordered_threads.append(root)
+        order_threads(root, ordered_threads)
     # For threads with no timestamp, put them at the end
-    for thread in set(node_thread.values()):
-        if thread not in thread_to_x:
-            thread_to_x[thread] = len(thread_to_x)
+    for thread in all_threads:
+        if thread not in ordered_threads:
+            ordered_threads.append(thread)
+    thread_to_x = {t: i for i, t in enumerate(ordered_threads)}
     # Calculate global y positions: evenly spaced by timestamp order (no threshold)
     node_ts_pairs = list(zip(node_order, timestamps))
     # Sort by timestamp, fallback to original order if missing
