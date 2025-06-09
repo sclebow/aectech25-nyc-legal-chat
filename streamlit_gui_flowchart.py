@@ -3,6 +3,21 @@ import plotly.graph_objects as go
 import streamlit as st
 import re
 
+def parse_log_line(line):
+    # Example: 2025-06-08 22:04:14,439 [INFO] [id=...] [thread=...] [function=...] [called_by=...] [description=...]
+    parts = line.split('[')
+    timestamp = parts[0].strip()
+    fields = {}
+    for part in parts[1:]:
+        if '=' in part:
+            key, value = part.split('=', 1)
+            fields[key.strip('] ')] = value.strip('] ')
+    return {
+        'timestamp': timestamp,
+        **fields,
+        'raw': line.strip()
+    }
+
 def parse_log_flowchart(logs):
     """
     Parse logs to extract flow steps and threads, and build a directed graph.
@@ -13,27 +28,17 @@ def parse_log_flowchart(logs):
     Returns a networkx DiGraph.
     """
     G = nx.DiGraph()
-    thread_last_node = {}  # thread -> last node_id
-    id_last_node = {}      # id -> last node_id (across all threads)
     log_dicts = []
-    # Regex to parse the log line (fixed escaping)
-    log_re = re.compile(r"^(.*?) \[INFO\] \[id=([^\]]+)\] \[thread=([^\]]+)\] \[function=([^\]]+)\] \[description=([^\]]*)\]")
     for line in logs.splitlines():
-        m = log_re.match(line)
-        if m:
-            timestamp, log_id, thread, function, description = m.groups()
-            log_dicts.append({
-                'timestamp': timestamp.strip(),
-                'id': log_id.strip(),
-                'thread': thread.strip(),
-                'function': function.strip(),
-                'description': description.strip(),
-                'raw': line.strip()
-            })
+        if '[INFO]' not in line:
+            continue
+        log = parse_log_line(line)
+        # Only add if required fields are present
+        if all(k in log for k in ('id', 'thread', 'function', 'description')):
+            log_dicts.append(log)
     # Sort log_dicts by timestamp (oldest to newest)
     from datetime import datetime
     def parse_ts(ts):
-        # Try to parse common timestamp formats, fallback to string
         for fmt in ("%Y-%m-%d %H:%M:%S,%f", "%Y-%m-%d %H:%M:%S", "%H:%M:%S,%f", "%H:%M:%S"):
             try:
                 return datetime.strptime(ts, fmt)
@@ -41,17 +46,15 @@ def parse_log_flowchart(logs):
                 continue
         return ts
     log_dicts.sort(key=lambda d: parse_ts(d['timestamp']))
-
     # Build the graph: each log line is a node, in order
     prev_node = None
     for idx, log in enumerate(log_dicts):
-        node_id = idx  # simple integer node id in order
+        node_id = idx
         label = log["function"]
         G.add_node(node_id, label=label, **log)
         if prev_node is not None:
             G.add_edge(prev_node, node_id)
         prev_node = node_id
-
     return G
 
 def plot_flowchart(G):
