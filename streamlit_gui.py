@@ -71,7 +71,12 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                         placeholder_data_context = st.empty()
                     with st.expander("Show Logs", expanded=False):
                         placeholder_logs = st.empty()
-                    placeholder_response = st.empty()
+                    # Match the column setup as in the main chat display
+                    col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
+                    with col_flowchart:
+                        flowchart_placeholder = st.empty()
+                    with col_response:
+                        placeholder_response = st.empty()
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
                     if not chunk:
                         continue
@@ -107,6 +112,12 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                             log_lines = after.split("[LOG]:")
                             logs += log_lines[0].strip() + "\n"
                             placeholder_logs.markdown(logs)
+                            # --- Progressive flowchart update ---
+                            from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
+                            G = parse_log_flowchart(logs)
+                            fig, flowchart_key = plot_flowchart(G)
+                            if fig is not None and G is not None and len(G.nodes) > 0:
+                                flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                             # If more [LOG]: tags, process them in next loop
                             chunk = "[LOG]:".join(log_lines[1:]) if len(log_lines) > 1 else ""
                         else:
@@ -120,6 +131,12 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                             elif section == "logs":
                                 logs += chunk
                                 placeholder_logs.markdown(logs)
+                                # --- Progressive flowchart update for log tail ---
+                                from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
+                                G = parse_log_flowchart(logs)
+                                fig, flowchart_key = plot_flowchart(G)
+                                if fig is not None and G is not None and len(G.nodes) > 0:
+                                    flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                             chunk = ""
                     time.sleep(0.02)
                 return {"data_context": data_context, "response": response_text, "logs": logs}
