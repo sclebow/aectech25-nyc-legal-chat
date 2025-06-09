@@ -378,9 +378,19 @@ if send_sample and sample:
     with chat_message_container:
         with st.chat_message("user"):
             st.markdown(sample)
-        with st.chat_message("assistant"):
-            st.markdown("_Processing..._")
+        with st.chat_message("assistant") as assistant_placeholder:
+            msg_placeholder = st.empty()
+            msg_placeholder.markdown("_Processing..._")
             output = query_llm(sample, default_rag_mode, stream_mode, max_tokens)
+            # Replace the placeholder with the actual output
+            msg_placeholder.empty()
+            if isinstance(output, dict):
+                if "response" in output and output["response"].startswith("Error") or output["response"].startswith("Exception"):
+                    st.error(output["response"])
+                else:
+                    st.markdown(output.get("response", ""))
+            else:
+                st.markdown(output)
     st.session_state["messages"].append({"role": "assistant", "content": output})
 
 # Handle freeform chat input
@@ -389,9 +399,19 @@ if user_input:
     with chat_message_container:
         with st.chat_message("user"):
             st.markdown(user_input)
-        with st.chat_message("assistant"):
-            st.markdown("_Processing..._")
+        with st.chat_message("assistant") as assistant_placeholder:
+            msg_placeholder = st.empty()
+            msg_placeholder.markdown("_Processing..._")
             output = query_llm(user_input, default_rag_mode, stream_mode, max_tokens)
+            # Replace the placeholder with the actual output
+            msg_placeholder.empty()
+            if isinstance(output, dict):
+                if "response" in output and output["response"].startswith("Error") or output["response"].startswith("Exception"):
+                    st.error(output["response"])
+                else:
+                    st.markdown(output.get("response", ""))
+            else:
+                st.markdown(output)
     st.session_state["messages"].append({"role": "assistant", "content": output})
 
 # --- IFC File Upload Section ---
