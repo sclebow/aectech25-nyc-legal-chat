@@ -34,8 +34,8 @@ sample_questions = [
     "",
 ]
 cloudflare_models = [
-    "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
     "@cf/meta/llama-3.1-70b-instruct",
+    "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
     "@cf/qwen/qwen2.5-coder-32b-instruct",
     "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
     "@cf/deepseek-ai/deepseek-math-7b-instruct",
@@ -121,7 +121,7 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                             G = parse_log_flowchart(logs)
                             fig, flowchart_key = plot_flowchart(G)
                             if fig is not None and G is not None and len(G.nodes) > 0:
-                                st.markdown("##### Backend Flowchart")
+                                # st.markdown("##### Backend Flowchart")
                                 flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                             # If more [LOG]: tags, process them in next loop
                             chunk = "[LOG]:".join(log_lines[1:]) if len(log_lines) > 1 else ""
@@ -143,7 +143,7 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                                 G = parse_log_flowchart(logs)
                                 fig, flowchart_key = plot_flowchart(G)
                                 if fig is not None and G is not None and len(G.nodes) > 0:
-                                    st.markdown("##### Backend Flowchart")
+                                    # st.markdown("##### Backend Flowchart")
                                     flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                             chunk = ""
                     time.sleep(0.02)
