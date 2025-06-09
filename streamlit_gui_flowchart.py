@@ -22,9 +22,8 @@ def parse_log_flowchart(logs):
     """
     Parse logs to extract flow steps and threads, and build a directed graph.
     Handles log lines in the format:
-    timestamp [INFO] [id=...] [thread=...] [function=...] [description=...]
-    Each log line becomes a node, connected to the previous node in the same thread if possible.
-    If a new thread appears, connect its first node to the last node in any other thread with the same id.
+    timestamp [INFO] [id=...] [thread=...] [parent=...] [function=...] [called_by=...] [description=...]
+    Each log line becomes a node. Edges are formed based on parent thread relationships and intra-thread order.
     Returns a networkx DiGraph.
     """
     G = nx.DiGraph()
@@ -34,7 +33,7 @@ def parse_log_flowchart(logs):
             continue
         log = parse_log_line(line)
         # Only add if required fields are present
-        if all(k in log for k in ('id', 'thread', 'function', 'description')):
+        if all(k in log for k in ('id', 'thread', 'function', 'description', 'parent', 'called_by')):
             log_dicts.append(log)
     # Sort log_dicts by timestamp (oldest to newest)
     from datetime import datetime
@@ -47,14 +46,58 @@ def parse_log_flowchart(logs):
         return ts
     log_dicts.sort(key=lambda d: parse_ts(d['timestamp']))
     # Build the graph: each log line is a node, in order
-    prev_node = None
     for idx, log in enumerate(log_dicts):
         node_id = idx
         label = log["function"]
         G.add_node(node_id, label=label, **log)
-        if prev_node is not None:
-            G.add_edge(prev_node, node_id)
-        prev_node = node_id
+    # Build thread index: thread -> list of node indices (in order)
+    from collections import defaultdict
+    thread_nodes = defaultdict(list)
+    for idx, log in enumerate(log_dicts):
+        thread_nodes[log['thread']].append(idx)
+    # Build parent mapping: thread -> parent thread
+    thread_parent = {}
+    for log in log_dicts:
+        thread = log['thread']
+        parent = log['parent']
+        if thread not in thread_parent:
+            thread_parent[thread] = parent
+    # 1. Intra-thread edges (prev/next)
+    for thread, nodes in thread_nodes.items():
+        for i, node in enumerate(nodes):
+            if i > 0:
+                G.add_edge(nodes[i-1], node)  # prev -> curr
+            if i < len(nodes)-1:
+                G.add_edge(node, nodes[i+1])  # curr -> next
+    # 2. First node in thread: connect to closest previous node in parent thread
+    for thread, nodes in thread_nodes.items():
+        first_node = nodes[0]
+        parent_thread = thread_parent.get(thread, None)
+        if parent_thread and parent_thread in thread_nodes:
+            # Find the closest previous node in parent thread (by index)
+            parent_indices = [idx for idx in thread_nodes[parent_thread] if idx < first_node]
+            if parent_indices:
+                closest_prev = max(parent_indices)
+                G.add_edge(closest_prev, first_node)
+    # 3. Last node in thread: connect to next node in parent thread, or recursively up
+    def find_next_in_parent_chain(curr_idx, parent_thread):
+        # Find the next node in parent_thread after curr_idx
+        while parent_thread:
+            if parent_thread in thread_nodes:
+                parent_indices = [idx for idx in thread_nodes[parent_thread] if idx > curr_idx]
+                if parent_indices:
+                    return min(parent_indices)
+                # If not found, go up the parent chain
+                parent_thread = thread_parent.get(parent_thread, None)
+            else:
+                break
+        return None
+    for thread, nodes in thread_nodes.items():
+        last_node = nodes[-1]
+        parent_thread = thread_parent.get(thread, None)
+        next_in_parent = find_next_in_parent_chain(last_node, parent_thread)
+        if next_in_parent is not None:
+            G.add_edge(last_node, next_in_parent)
     return G
 
 def plot_flowchart(G):
@@ -101,45 +144,8 @@ def plot_flowchart(G):
         y = -node_to_ygroup[node]  # Evenly spaced by timestamp order
         node_pos[node] = (x, y)
     pos = node_pos
-    # Build edges: connect each node to the next in the same thread
-    # If a node is the last in its thread and not in the main thread, connect to the next node in the main thread
-    # Assume the main thread is the first in ordered_threads
-    main_thread = ordered_threads[0][0] if ordered_threads else None
-    thread_nodes = {}
-    for idx, node in enumerate(node_order):
-        thread = node_thread[node]
-        thread_nodes.setdefault(thread, []).append((idx, node))
-    edges = []
-    for thread, nodes in thread_nodes.items():
-        nodes_sorted = sorted(nodes, key=lambda x: x[0])
-        for i in range(len(nodes_sorted) - 1):
-            edges.append((nodes_sorted[i][1], nodes_sorted[i+1][1]))
-        # If not main thread, connect last node to next node in main thread (by y-group)
-        if thread != main_thread and main_thread in thread_nodes:
-            last_idx, last_node = nodes_sorted[-1]
-            # Find the next main thread node with a higher y-group
-            last_ygroup = node_to_ygroup[last_node]
-            main_nodes = thread_nodes[main_thread]
-            for main_idx, main_node in main_nodes:
-                if node_to_ygroup[main_node] > last_ygroup:
-                    edges.append((last_node, main_node))
-                    break
-    # Add: first node of a non-main thread connects to closest previous node of main thread
-    for thread, nodes in thread_nodes.items():
-        if thread != main_thread and main_thread in thread_nodes:
-            first_idx, first_node = sorted(nodes, key=lambda x: x[0])[0]
-            first_ygroup = node_to_ygroup[first_node]
-            main_nodes = thread_nodes[main_thread]
-            # Find the main thread node with the highest y-group less than or equal to first_ygroup
-            prev_main = None
-            prev_main_ygroup = -1
-            for main_idx, main_node in main_nodes:
-                main_ygroup = node_to_ygroup[main_node]
-                if main_ygroup <= first_ygroup and main_ygroup > prev_main_ygroup:
-                    prev_main = main_node
-                    prev_main_ygroup = main_ygroup
-            if prev_main is not None:
-                edges.append((prev_main, first_node))
+    # Extract edges from the graph
+    edges = list(G.edges())
     edge_x = []
     edge_y = []
     for src, dst in edges:
@@ -166,16 +172,24 @@ def plot_flowchart(G):
         x, y = pos[node]
         node_x.append(x)
         node_y_list.append(y)
-        node_text.append(G.nodes[node]['label'])
+        # Updated hover text to show thread, parent, and called_by
         thread = G.nodes[node].get('thread', 'default')
+        parent = G.nodes[node].get('parent', 'N/A')
+        called_by = G.nodes[node].get('called_by', 'N/A')
+        description = G.nodes[node].get('description', 'No description')
+        label = G.nodes[node]['label']
+        hover_text = f"{label}<br>Thread: {thread}<br>Parent: {parent}<br>Called by: {called_by}<br>Description: {description}"
+        node_text.append(hover_text)
         node_color.append(thread_to_color.get(thread, '#cccccc'))
     node_trace = go.Scatter(
         x=node_x, y=node_y_list,
         mode='markers+text',
-        text=node_text,
+        text=[G.nodes[node]['label'] for node in G.nodes()],
         textposition='top center',
         marker=dict(size=20, color=node_color),
-        hoverinfo='text')
+        hoverinfo='text',
+        hovertext=node_text
+    )
     fig = go.Figure(data=[edge_trace, node_trace],
                     layout=go.Layout(
                         showlegend=False,
