@@ -328,7 +328,11 @@ def plot_flowchart(G):
                         margin=dict(b=20,l=5,r=5,t=40),
                         xaxis=dict(showgrid=False, zeroline=False, showticklabels=False),
                         yaxis=dict(showgrid=False, zeroline=False, showticklabels=False)))
-    return fig
+    
+    st.session_state["flowchart_count"] = st.session_state.get("flowchart_count", 0) + 1
+    flowchart_key = f"flowchart_{st.session_state['flowchart_count']}"
+
+    return fig, flowchart_key
 
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
@@ -394,13 +398,15 @@ with chat_message_container:
                 fig = None
                 if logs and logs.strip():
                     G = parse_log_flowchart(logs)
-                    fig = plot_flowchart(G)
-                with st.expander("Show Log Flowchart", expanded=False):
+                    fig, flowchart_key = plot_flowchart(G)
+                col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
+                with col_flowchart:
                     if fig is not None and G is not None and len(G.nodes) > 0:
-                        st.plotly_chart(fig, use_container_width=True)
+                        st.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                     else:
                         st.info("No flowchart data available for these logs.")
-                st.markdown(msg["content"].get("response", ""))
+                with col_response:
+                    st.markdown(msg["content"].get("response", ""))
             else:
                 st.markdown(msg["content"])
 with st.container():
