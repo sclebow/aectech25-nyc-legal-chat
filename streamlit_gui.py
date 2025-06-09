@@ -238,37 +238,45 @@ def set_cloudflare_models(mode, gen_model, emb_model):
 def parse_log_flowchart(logs):
     """
     Parse logs to extract flow steps and threads, and build a directed graph.
-    Handles log lines with [id=...] and optionally [thread=...] or [thread_id=...].
-    Each log line with [id=...] becomes a node, connected to the previous node in the same thread if possible.
+    Handles log lines in the format:
+    timestamp [INFO] [id=...] [thread=...] [function=...] [description=...]
+    Each log line becomes a node, connected to the previous node in the same thread if possible.
     If a new thread appears, connect its first node to the last node in any other thread with the same id.
     Returns a networkx DiGraph.
     """
     import re
     G = nx.DiGraph()
-    thread_last_node = {}  # thread_id -> last node_id
-    id_thread_first_node = {}  # (id, thread) -> first node_id
-    id_last_node = {}  # id -> last node_id (across all threads)
+    thread_last_node = {}  # thread -> last node_id
+    id_last_node = {}      # id -> last node_id (across all threads)
+    log_dicts = []
+    # Regex to parse the log line
+    log_re = re.compile(r"^(.*?) \[INFO\] \[id=([^\]]+)\] \[thread=([^\]]+)\] \[function=([^\]]+)\] \[description=([^\]]*)\]")
     for line in logs.splitlines():
-        id_match = re.search(r"\[id=([^\]]+)\]", line)
-        # Support both [thread=...] and [thread_id=...]
-        thread_match = re.search(r"\[(thread|thread_id)=([^\]]+)\]", line)
-        desc_match = re.split(r"(\[[^\]]+\]\s*)+", line)
-        desc = desc_match[-1].strip() if len(desc_match) > 1 else line.strip()
-        if id_match:
-            node_id = id_match.group(1) + ":" + str(hash(line))  # make node unique per line
-            corr_id = id_match.group(1)
-            thread = thread_match.group(2) if thread_match else "UnknownThread"
-            node_label = f"{desc}\n({thread})"
-            G.add_node(node_id, label=node_label, thread=thread, corr_id=corr_id)
-            # Connect to previous node in the same thread
-            if thread in thread_last_node:
-                G.add_edge(thread_last_node[thread], node_id)
-            else:
-                # If this is the first node in this thread, connect to last node in any other thread with same id
-                if corr_id in id_last_node:
-                    G.add_edge(id_last_node[corr_id], node_id)
-            thread_last_node[thread] = node_id
-            id_last_node[corr_id] = node_id
+        m = log_re.match(line)
+        if m:
+            timestamp, log_id, thread, function, description = m.groups()
+            log_dicts.append({
+                'timestamp': timestamp.strip(),
+                'id': log_id.strip(),
+                'thread': thread.strip(),
+                'function': function.strip(),
+                'description': description.strip(),
+                'raw': line.strip()
+            })
+    # Build nodes and edges
+    for i, log in enumerate(log_dicts):
+        node_id = f"{log['id']}:{log['thread']}:{i}"
+        node_label = f"{log['description']}\n({log['function']}, {log['thread']})"
+        G.add_node(node_id, label=node_label, thread=log['thread'], log_id=log['id'], function=log['function'], timestamp=log['timestamp'])
+        # Connect to previous node in the same thread
+        if log['thread'] in thread_last_node:
+            G.add_edge(thread_last_node[log['thread']], node_id)
+        else:
+            # If this is the first node in this thread, connect to last node in any other thread with same id
+            if log['id'] in id_last_node:
+                G.add_edge(id_last_node[log['id']], node_id)
+        thread_last_node[log['thread']] = node_id
+        id_last_node[log['id']] = node_id
     return G
 
 def plot_flowchart(G):
