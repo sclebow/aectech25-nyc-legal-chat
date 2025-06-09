@@ -415,24 +415,24 @@ if user_input:
     st.session_state["messages"].append({"role": "assistant", "content": output})
 
 # --- IFC File Upload Section ---
-st.markdown("## Upload Your IFC File")
-with st.form("ifc_upload_form", clear_on_submit=True):
-    uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
-    upload_button = st.form_submit_button("Upload IFC File")
-    if upload_button and uploaded_ifc is not None:
-        with st.spinner("Uploading IFC file..."):
-            files = {"file": (uploaded_ifc.name, uploaded_ifc, "application/octet-stream")}
-            try:
-                response = requests.post("http://127.0.0.1:5000/upload_ifc", files=files)
-                if response.status_code == 200:
-                    st.success(f"File '{uploaded_ifc.name}' uploaded successfully.")
-                else:
-                    st.error(f"Upload failed: {response.json().get('message', response.text)}")
-            except Exception as e:
-                st.error(f"Exception during upload: {e}")
+with st.expander("IFC File Management", expanded=False):
+    st.markdown("## Upload Your IFC File")
+    with st.form("ifc_upload_form", clear_on_submit=True):
+        uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
+        upload_button = st.form_submit_button("Upload IFC File")
+        if upload_button and uploaded_ifc is not None:
+            with st.spinner("Uploading IFC file..."):
+                files = {"file": (uploaded_ifc.name, uploaded_ifc, "application/octet-stream")}
+                try:
+                    response = requests.post("http://127.0.0.1:5000/upload_ifc", files=files)
+                    if response.status_code == 200:
+                        st.success(f"File '{uploaded_ifc.name}' uploaded successfully.")
+                    else:
+                        st.error(f"Upload failed: {response.json().get('message', response.text)}")
+                except Exception as e:
+                    st.error(f"Exception during upload: {e}")
 
 # --- IFC File Download Section ---
-with st.expander("IFC File Management", expanded=False):
     st.markdown("## Download Latest IFC File")
     download_latest = st.button("Download Latest IFC File")
     if download_latest:
