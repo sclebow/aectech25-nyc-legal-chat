@@ -87,6 +87,7 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
     import re
     import threading
     import logging
+    import inspect
 
     # 1. List all chapters
     chapter_csvs = list_chapter_csvs()
@@ -162,8 +163,19 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
             return fn(*a, **kw)
         return executor.submit(wrapper, *args, **kwargs)
 
+    # Only process chapters that are in selected_chapters
+    # Normalize chapter numbers for comparison (remove leading zeros)
+    def normalize_chapter(ch):
+        return str(int(str(ch).lstrip('0') or '0'))
+    norm_selected_chapters = set(normalize_chapter(ch) for ch in selected_chapters)
+    filtered_chapter_csvs = [
+        (fname, chapter)
+        for fname, chapter in chapter_csvs
+        if normalize_chapter(chapter) in norm_selected_chapters
+    ]
+    logging.info(f"[id={request_id}] [thread={threading.get_ident()}] [function=process_chapter] [parent={getattr(threading.current_thread(), '_parent_ident', None)}] [called_by={inspect.stack()[1].function}] [description=Selected chapters: {', '.join(selected_chapters)}, filtered {len(filtered_chapter_csvs)} chapters for processing]")
     with ThreadPoolExecutor() as executor:
-        futures = [submit_with_parent(executor, process_chapter, fname, chapter) for fname, chapter in chapter_csvs]
+        futures = [submit_with_parent(executor, process_chapter, fname, chapter) for fname, chapter in filtered_chapter_csvs]
         for future in as_completed(futures):
             df, local_code_conf = future.result()
             if df is not None:
