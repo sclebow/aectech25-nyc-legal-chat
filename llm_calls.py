@@ -46,7 +46,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                     temperature=0.0,
                     max_tokens=max_tokens,
                 )
-                logging.info(f"{log_prefix} [description=LLM query successful on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)} | response={str(response.choices[0].message.content).strip()}]")
+                logging.info(f"{log_prefix} [description=LLM query successful on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)} | response={str(response.choices[0].message.content).strip()}] [usage={response.usage}]")
                 return str(response.choices[0].message.content).strip()
             else:
                 response = config.client.chat.completions.create(
@@ -69,7 +69,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                             yield delta.content
                         if hasattr(chunk, 'usage') and chunk.usage:
                             usage_data = chunk.usage
-                    logging.info(f"{log_prefix} [description=LLM streaming query finished on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)} | full_message={full_message} | usage_data={usage_data}]")
+                    logging.info(f"{log_prefix} [description=LLM streaming query finished on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)} | full_message={full_message}] [usage={usage_data}]")
                 return generator()
         except Exception as e:
             if hasattr(e, "status_code") and e.status_code == 429 or "rate limit" in str(e).lower():
@@ -108,7 +108,7 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
     thread_id_str = str(thread_id)
     parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
     log_prefix = f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=classify_data_sources] [called_by={caller}]"
-    logging.info(f"{log_prefix} [description=Classifying message: {message}]")
+    # logging.info(f"{log_prefix} [description=Classifying message: {message}]")
     response = config.client.chat.completions.create(
         model=config.completion_model,
         messages=[
@@ -119,7 +119,7 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
     )
     
     classification = response.choices[0].message.content.strip()
-    logging.info(f"{log_prefix} [description=Classification result: {classification}]")
+    logging.info(f"{log_prefix} [description=Classification result: {classification}] [usage={response.usage}]")
     if classification.lower() == "none":
         return {key: False for key in data_sources.keys()}
     

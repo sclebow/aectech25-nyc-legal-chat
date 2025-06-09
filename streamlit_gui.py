@@ -71,12 +71,13 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                         placeholder_data_context = st.empty()
                     with st.expander("Show Logs", expanded=False):
                         placeholder_logs = st.empty()
-                    # Match the column setup as in the main chat display
                     col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
                     with col_flowchart:
                         flowchart_placeholder = st.empty()
                     with col_response:
                         placeholder_response = st.empty()
+                        # Add a placeholder for token usage report
+                        placeholder_token_usage = st.empty()
                 for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
                     if not chunk:
                         continue
@@ -145,6 +146,9 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
                                 if fig is not None and G is not None and len(G.nodes) > 0:
                                     # st.markdown("##### Backend Flowchart")
                                     flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
+                                # --- Token Usage Report (streaming) ---
+                                placeholder_token_usage.empty()
+                                render_token_usage_report(logs)
                             chunk = ""
                     time.sleep(0.02)
                 return {"data_context": data_context, "response": response_text, "logs": logs}
@@ -261,6 +265,16 @@ def render_data_context_table(data_context, placeholder=None):
     else:
         st.dataframe(df, use_container_width=True)
 
+def render_token_usage_report(logs):
+    """Extracts and displays the total LLM token usage from logs."""
+    import re
+    if logs and logs.strip():
+        token_usages = re.findall(r"\[usage=CompletionUsage\(.*?total_tokens=(\d+)", logs)
+        # Fix: use correct regex for literal brackets and group
+        token_usages = re.findall(r"\[usage=CompletionUsage\(.*?total_tokens=(\d+)", logs)
+        total_tokens = sum(int(t) for t in token_usages)
+        st.info(f"**Total LLM tokens used in this response:** {total_tokens}")
+
 # --- Streamlit Chat Interface with Sample Questions ---
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
@@ -337,6 +351,9 @@ with chat_message_container:
                         st.info("No flowchart data available for these logs.")
                 with col_response:
                     st.markdown(msg["content"].get("response", ""))
+                    # --- Token Usage Report ---
+                    logs = msg["content"].get("logs", "")
+                    render_token_usage_report(logs)
             else:
                 st.markdown(msg["content"])
 with st.container():
