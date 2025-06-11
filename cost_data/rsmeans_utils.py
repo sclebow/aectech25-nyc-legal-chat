@@ -79,7 +79,7 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500, request_id=None):
 
     return rsmeans_context
 
-def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.8, request_id=None):
+def find_by_description(description, section_confidence_threshold=0.8, row_confidence_threshold=0.8, max_output_rows=25, request_id=None):
     """
     Use LLM to select the most appropriate Masterformat CHAPTERS first, then section codes from those chapters.
     For each relevant chapter, send a separate LLM call for section selection.
@@ -243,11 +243,13 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
             "Given a list of line items (with both Name and Section Name), select all that are most relevant for a user's description. "
             "Return your answer as a ||-separated list of the exact 'Name' values (not Section Name) with a confidence percentage (0-100) for each, in the format: Name1::confidence1||Name2::confidence2||... "
             "Return only the names and confidence percentages, no other text. "
+            f"Limit your response to {max_output_rows} items. "
         )
         user_input = (
             f"Line items list:\n{chr(10).join(combined_list)}\n"
             f"Description: {description}"
         )
+        logging.info(f"[id={request_id}] [thread={threading.get_ident()}] [function=find_by_description] [parent={getattr(threading.current_thread(), '_parent_ident', None)}] [called_by={inspect.stack()[1].function}] [description=Running LLM query for Name/Section filtering, max_output_rows={max_output_rows}]")
         selected_names_str = run_llm_query(system_prompt, user_input)
         print(f"Selected names from LLM: {selected_names_str}")
         # Parse names and confidences

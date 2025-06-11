@@ -14,14 +14,14 @@ from logger_setup import setup_logger
 import networkx as nx
 import plotly.graph_objects as go
 from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
-
-port = '5555'
+import pandas as pd
+import re
 
 # === Constants and Config ===
 FLASK_URL = "http://127.0.0.1:5000/llm_call"
 default_rag_mode = "LLM only"
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
-MODE_URL = f"http://127.0.0.1:{port}/set_mode"
+MODE_URL = "http://127.0.0.1:5000/set_mode"
 sample_questions = [
     "What are some cost modeling best practices?",
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
@@ -36,11 +36,13 @@ sample_questions = [
     "",
 ]
 cloudflare_models = [
-    "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
     "@cf/meta/llama-3.1-70b-instruct",
+    "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
     "@cf/qwen/qwen2.5-coder-32b-instruct",
     "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
     "@cf/deepseek-ai/deepseek-math-7b-instruct",
+    "@cf/qwen/qwq-32b",
+    "@cf/microsoft/phi-2",
 ]
 cloudflare_embedding_models = [
     "@cf/baai/bge-base-en-v1.5",
@@ -56,113 +58,145 @@ flask_process = None
 flask_status_placeholder = None
 
 # === Utility Functions (adapted from gradio_gui.py) ===
-def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
-    url = FLASK_URL
+def _llm_post_request(url, payload, stream=False):
+    """Send a POST request to the LLM server."""
     try:
-        if stream_mode == "Streaming":
-            response = requests.post(url, json={"input": user_input, "stream": True, "max_tokens": int(max_tokens)}, stream=True)
-            if response.status_code == 200:
-                streamed_text = ""
-                data_context = ""
-                logs = ""
-                response_text = ""
-                section = None
-                chat_container = st.container()
-                with chat_container:
-                    with st.expander("Show Data Context", expanded=False):
-                        placeholder_data_context = st.empty()
-                    with st.expander("Show Logs", expanded=False):
-                        placeholder_logs = st.empty()
-                    # Match the column setup as in the main chat display
-                    col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
-                    with col_flowchart:
-                        flowchart_placeholder = st.empty()
-                    with col_response:
-                        placeholder_response = st.empty()
-                for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
-                    if not chunk:
-                        continue
-                    streamed_text += chunk
-                    # Parse tags for new log format
-                    # Handle multiple tags in a single chunk
-                    while chunk:
-                        if "[DATA CONTEXT]:" in chunk:
-                            before, tag, after = chunk.partition("[DATA CONTEXT]:")
-                            if section == "data_context" and before.strip():
-                                data_context += before
-                                render_data_context_table(data_context, placeholder_data_context)
-                            section = "data_context"
-                            data_context = after.strip()
-                            render_data_context_table(data_context, placeholder_data_context)
-                            chunk = ""
-                        elif "[RESPONSE]:" in chunk:
-                            before, tag, after = chunk.partition("[RESPONSE]:")
-                            if section == "response" and before.strip():
-                                response_text += before
-                                placeholder_response.markdown(response_text)
-                            section = "response"
-                            response_text += after
-                            placeholder_response.markdown(response_text)
-                            chunk = ""
-                        elif "[LOG]:" in chunk:
-                            before, tag, after = chunk.partition("[LOG]:")
-                            if section == "logs" and before.strip():
-                                logs += before
-                                # Show logs as bullet points
-                                log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
-                                placeholder_logs.markdown("\n".join(log_lines_display))
-                            section = "logs"
-                            # Support multiple log lines in a single chunk
-                            log_lines = after.split("[LOG]:")
-                            logs += log_lines[0].strip() + "\n"
-                            # Show logs as bullet points
-                            log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
-                            placeholder_logs.markdown("\n".join(log_lines_display))
-                            # --- Progressive flowchart update ---
-                            from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
-                            G = parse_log_flowchart(logs)
-                            fig, flowchart_key = plot_flowchart(G)
-                            if fig is not None and G is not None and len(G.nodes) > 0:
-                                flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
-                            # If more [LOG]: tags, process them in next loop
-                            chunk = "[LOG]:".join(log_lines[1:]) if len(log_lines) > 1 else ""
-                        else:
-                            # No tag found, append to current section
-                            if section == "data_context":
-                                data_context += chunk
-                                render_data_context_table(data_context, placeholder_data_context)
-                            elif section == "response":
-                                response_text += chunk
-                                placeholder_response.markdown(response_text)
-                            elif section == "logs":
-                                logs += chunk
-                                # Show logs as bullet points
-                                log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
-                                placeholder_logs.markdown("\n".join(log_lines_display))
-                                # --- Progressive flowchart update for log tail ---
-                                from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
-                                G = parse_log_flowchart(logs)
-                                fig, flowchart_key = plot_flowchart(G)
-                                if fig is not None and G is not None and len(G.nodes) > 0:
-                                    flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
-                            chunk = ""
-                    time.sleep(0.02)
-                return {"data_context": data_context, "response": response_text, "logs": logs}
-            else:
-                return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
+        if stream:
+            return requests.post(url, json=payload, stream=True)
         else:
-            response = requests.post(url, json={"input": user_input, "max_tokens": int(max_tokens)})
-            if response.status_code == 200:
-                data = response.json()
-                data_context = data.get("data_context", "No data context returned.")
-                response_text = data.get('response', 'No response from server.')
-                logs = data.get('logs', '')
-                result = {"data_context": data_context, "response": response_text, "logs": logs}
-                return result
-            else:
-                return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
+            return requests.post(url, json=payload)
     except Exception as e:
-        return {"data_context": "", "response": f"Exception: {str(e)}", "logs": ""}
+        return e
+
+
+def _handle_streaming_response(response, st, render_data_context_table, render_token_usage_report):
+    """Handle streaming LLM response and update UI accordingly."""
+    import time as _time
+    start_time = _time.time()
+    streamed_text = ""
+    data_context = ""
+    logs = ""
+    response_text = ""
+    section = None
+    chat_container = st.container()
+    with chat_container:
+        with st.expander("Show Data Context", expanded=False):
+            placeholder_data_context = st.empty()
+        with st.expander("Show Logs", expanded=False):
+            placeholder_logs = st.empty()
+        col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
+        with col_flowchart:
+            flowchart_placeholder = st.empty()
+        with col_response:
+            placeholder_response = st.empty()
+            # Add a placeholder for token usage report
+            placeholder_token_usage = st.empty()
+    for chunk in response.iter_content(chunk_size=None, decode_unicode=True):
+        if not chunk:
+            continue
+        streamed_text += chunk
+        # Parse tags for new log format
+        # Handle multiple tags in a single chunk
+        while chunk:
+            if "[DATA CONTEXT]:" in chunk:
+                before, tag, after = chunk.partition("[DATA CONTEXT]:")
+                if section == "data_context" and before.strip():
+                    data_context += before
+                    render_data_context_table(data_context, placeholder_data_context)
+                section = "data_context"
+                data_context = after.strip()
+                render_data_context_table(data_context, placeholder_data_context)
+                chunk = ""
+            elif "[RESPONSE]:" in chunk:
+                before, tag, after = chunk.partition("[RESPONSE]:")
+                if section == "response" and before.strip():
+                    response_text += before
+                    placeholder_response.markdown(response_text)
+                section = "response"
+                response_text += after
+                placeholder_response.markdown(response_text)
+                chunk = ""
+            elif "[LOG]:" in chunk:
+                before, tag, after = chunk.partition("[LOG]:")
+                if section == "logs" and before.strip():
+                    logs += before
+                    # Show logs as bullet points
+                    log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
+                    placeholder_logs.markdown("\n".join(log_lines_display))
+                section = "logs"
+                # Support multiple log lines in a single chunk
+                log_lines = after.split("[LOG]:")
+                logs += log_lines[0].strip() + "\n"
+                # Show logs as bullet points
+                log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
+                placeholder_logs.markdown("\n".join(log_lines_display))
+                # --- Progressive flowchart update ---
+                from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
+                G = parse_log_flowchart(logs)
+                fig, flowchart_key = plot_flowchart(G)
+                if fig is not None and G is not None and len(G.nodes) > 0:
+                    # st.markdown("##### Backend Flowchart")
+                    flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
+                # If more [LOG]: tags, process them in next loop
+                chunk = "[LOG]:".join(log_lines[1:]) if len(log_lines) > 1 else ""
+            else:
+                # No tag found, append to current section
+                if section == "data_context":
+                    data_context += chunk
+                    render_data_context_table(data_context, placeholder_data_context)
+                elif section == "response":
+                    response_text += chunk
+                    placeholder_response.markdown(response_text)
+                elif section == "logs":
+                    logs += chunk
+                    # Show logs as bullet points
+                    log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
+                    placeholder_logs.markdown("\n".join(log_lines_display))
+                    # --- Progressive flowchart update for log tail ---
+                    from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
+                    G = parse_log_flowchart(logs)
+                    fig, flowchart_key = plot_flowchart(G)
+                    if fig is not None and G is not None and len(G.nodes) > 0:
+                        flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
+                    # --- Token Usage Report (streaming) ---
+                    # Only show after all logs are received (i.e., after the streaming loop)
+    # After streaming loop ends, show the final token usage report
+    with col_response:
+        elapsed_time = _time.time() - start_time
+        render_token_usage_report(logs, elapsed_time=elapsed_time)
+    return {"data_context": data_context, "response": response_text, "logs": logs}
+
+
+def _handle_standard_response(response):
+    """Handle standard (non-streaming) LLM response."""
+    if isinstance(response, Exception):
+        return {"data_context": "", "response": f"Exception: {str(response)}", "logs": ""}
+    if response.status_code == 200:
+        data = response.json()
+        data_context = data.get("data_context", "No data context returned.")
+        response_text = data.get('response', 'No response from server.')
+        logs = data.get('logs', '')
+        return {"data_context": data_context, "response": response_text, "logs": logs}
+    else:
+        return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
+
+
+def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
+    """Query the LLM server and handle the response, streaming or standard."""
+    url = FLASK_URL
+    payload = {"input": user_input, "max_tokens": int(max_tokens)}
+    if stream_mode == "Streaming":
+        payload["stream"] = True
+        response = _llm_post_request(url, payload, stream=True)
+        if isinstance(response, Exception):
+            return {"data_context": "", "response": f"Exception: {str(response)}", "logs": ""}
+        if response.status_code == 200:
+            return _handle_streaming_response(response, st, render_data_context_table, render_token_usage_report)
+        else:
+            return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
+    else:
+        response = _llm_post_request(url, payload)
+        return _handle_standard_response(response)
 
 def run_flask_server():
     global flask_process
@@ -206,7 +240,7 @@ def set_mode_on_server(selected_mode):
         return f"Exception: {str(e)}"
 
 def poll_flask_status(max_retries=20, delay=0.5):
-    url = f"http://127.0.0.1:{port}/status"
+    url = "http://127.0.0.1:5000/status"
     for _ in range(max_retries):
         try:
             resp = requests.get(url, timeout=1)
@@ -225,7 +259,7 @@ def start_flask_and_wait():
 
 def get_cloudflare_model_status():
     try:
-        resp = requests.get(f"http://127.0.0.1:{port}/status")
+        resp = requests.get("http://127.0.0.1:5000/status")
         if resp.status_code == 200:
             data = resp.json()
             if data.get("mode") == "cloudflare":
@@ -248,8 +282,6 @@ def set_cloudflare_models(mode, gen_model, emb_model):
         logger.error(f"Failed to set Cloudflare models: {e}")
 
 def render_data_context_table(data_context, placeholder=None):
-    import pandas as pd
-    import re
     headers = ["rsmeans", "ifc", "project data", "knowledge base", "value model", "cost model"]
     # Build a regex pattern to match all headers and their values
     pattern = r"'(" + "|".join(re.escape(h) for h in headers) + r")':(.*?)(?=(?:'(" + "|".join(re.escape(h) for h in headers) + r")':)|$)"
@@ -261,10 +293,79 @@ def render_data_context_table(data_context, placeholder=None):
     else:
         st.dataframe(df, use_container_width=True)
 
+def render_token_usage_report(logs, elapsed_time=None):
+    """Extracts and displays the total LLM token usage from logs, and optionally the elapsed time."""
+    import re
+    report_lines = []
+    if logs and logs.strip():
+        token_usages = re.findall(r"\[usage=CompletionUsage\(.*?total_tokens=(\d+)", logs)
+        total_tokens = sum(int(t) for t in token_usages)
+        report_lines.append(f"**Total LLM tokens used in this response:** {total_tokens}")
+    if elapsed_time is not None:
+        report_lines.append(f"**Elapsed time:** {elapsed_time:.2f} seconds")
+    if report_lines:
+        st.info("\n".join(report_lines))
+
+def handle_chat_interaction(message, chat_message_container, default_rag_mode, stream_mode, max_tokens):
+    """Handles sending a chat message (user or sample), querying the LLM, and displaying the result."""
+    st.session_state["messages"].append({"role": "user", "content": message})
+    with chat_message_container:
+        with st.chat_message("user"):
+            st.markdown(message)
+        with st.chat_message("assistant") as assistant_placeholder:
+            msg_placeholder = st.empty()
+            msg_placeholder.markdown("_Processing..._")
+            output = query_llm(message, default_rag_mode, stream_mode, max_tokens)
+            msg_placeholder.empty()
+            # Only show the response here if it's an error, otherwise let the main chat loop handle display
+            if isinstance(output, dict):
+                st.session_state["messages"].append({"role": "assistant", "content": output})
+                if "response" in output and (output["response"].startswith("Error") or output["response"].startswith("Exception")):
+                    st.error(output["response"])
+            elif isinstance(output, str) and (output.startswith("Error") or output.startswith("Exception")):
+                st.session_state["messages"].append({"role": "assistant", "content": output})
+                st.error(output)
+
+def ifc_file_upload(uploaded_ifc):
+    """Handles uploading an IFC file to the backend server."""
+    if uploaded_ifc is not None:
+        with st.spinner("Uploading IFC file..."):
+            files = {"file": (uploaded_ifc.name, uploaded_ifc, "application/octet-stream")}
+            try:
+                response = requests.post("http://127.0.0.1:5000/upload_ifc", files=files)
+                if response.status_code == 200:
+                    st.success(f"File '{uploaded_ifc.name}' uploaded successfully.")
+                else:
+                    st.error(f"Upload failed: {response.json().get('message', response.text)}")
+            except Exception as e:
+                st.error(f"Exception during upload: {e}")
+
+def ifc_file_download():
+    """Handles downloading the latest IFC file from the backend server."""
+    with st.spinner("Fetching latest IFC file..."):
+        try:
+            response = requests.get("http://127.0.0.1:5000/download_latest_ifc", stream=True)
+            if response.status_code == 200:
+                content_disp = response.headers.get('content-disposition', '')
+                filename = "latest.ifc"
+                if 'filename=' in content_disp:
+                    filename = content_disp.split('filename=')[1].strip('"')
+                file_bytes = response.content
+                st.download_button(
+                    label=f"Click to download {filename}",
+                    data=file_bytes,
+                    file_name=filename,
+                    mime="application/octet-stream"
+                )
+            else:
+                st.error(f"Download failed: {response.json().get('message', response.text)}")
+        except Exception as e:
+            st.error(f"Exception during download: {e}")
+
 # --- Streamlit Chat Interface with Sample Questions ---
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
-st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
+# st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
 
 start_message = st.warning("Starting Flask server...")
 if poll_flask_status() != "Flask server is running.":
@@ -278,24 +379,42 @@ while poll_flask_status() != "Flask server is running.":
 # Update the start message
 start_message.empty()
 
-with st.expander("LLM Configuration", expanded=False):
-    st.markdown("## LLM Mode Selection")
-    mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
-    mode_status = set_mode_on_server(mode)
-    st.text(mode_status)
+llm_col, ifc_col = st.columns([1, 1], vertical_alignment="top")
 
-    # Cloudflare model selectors
-    if mode == "cloudflare":
-        st.markdown("### Cloudflare Model Selection")
-        cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
-        cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
-        set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
-        cf_model_status = get_cloudflare_model_status()
-        st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
+with llm_col:
+    with st.expander("LLM Configuration", expanded=False):
+        st.markdown("## LLM Mode Selection")
+        mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
+        mode_status = set_mode_on_server(mode)
+        st.text(mode_status)
 
-    st.markdown("## LLM Call Type")
-    stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
-    max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
+        # Cloudflare model selectors
+        if mode == "cloudflare":
+            st.markdown("### Cloudflare Model Selection")
+            cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
+            cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
+            set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
+            cf_model_status = get_cloudflare_model_status()
+            st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
+
+        st.markdown("## LLM Call Type")
+        stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
+        max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
+
+with ifc_col:
+    # --- IFC File Upload Section ---
+    with st.expander("IFC File Management", expanded=False):
+        st.markdown("## Upload Your IFC File")
+        with st.form("ifc_upload_form", clear_on_submit=True):
+            uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
+            upload_button = st.form_submit_button("Upload IFC File")
+            if upload_button:
+                ifc_file_upload(uploaded_ifc)
+
+        st.markdown("## Download Latest IFC File")
+        download_latest = st.button("Download Latest IFC File")
+        if download_latest:
+            ifc_file_download()
 
 # --- Streamlit Chat Interface with Sample Questions ---
 if "messages" not in st.session_state:
@@ -303,7 +422,7 @@ if "messages" not in st.session_state:
 if "sample_input" not in st.session_state:
     st.session_state["sample_input"] = ""
 
-chat_message_container = st.container(border=True, height=400)
+chat_message_container = st.container(border=True, height=550)
 with chat_message_container:
     for msg in st.session_state["messages"]:
         with st.chat_message(msg["role"]):
@@ -331,11 +450,15 @@ with chat_message_container:
                 col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
                 with col_flowchart:
                     if fig is not None and G is not None and len(G.nodes) > 0:
+                        st.markdown("##### Backend Flowchart")
                         st.plotly_chart(fig, use_container_width=True, key=flowchart_key)
                     else:
                         st.info("No flowchart data available for these logs.")
                 with col_response:
                     st.markdown(msg["content"].get("response", ""))
+                    # --- Token Usage Report ---
+                    logs = msg["content"].get("logs", "")
+                    render_token_usage_report(logs)
             else:
                 st.markdown(msg["content"])
 with st.container():
@@ -349,22 +472,10 @@ with col2:
 
 # Handle sending a sample question
 if send_sample and sample:
-    st.session_state["messages"].append({"role": "user", "content": sample})
-    with chat_message_container:
-        with st.chat_message("user"):
-            st.markdown(sample)
-        with st.chat_message("assistant"):
-            st.markdown("_Processing..._")
-            output = query_llm(sample, default_rag_mode, stream_mode, max_tokens)
-    st.session_state["messages"].append({"role": "assistant", "content": output})
+    handle_chat_interaction(sample, chat_message_container, default_rag_mode, stream_mode, max_tokens)
 
 # Handle freeform chat input
 if user_input:
-    st.session_state["messages"].append({"role": "user", "content": user_input})
-    with chat_message_container:
-        with st.chat_message("user"):
-            st.markdown(user_input)
-        with st.chat_message("assistant"):
-            st.markdown("_Processing..._")
-            output = query_llm(user_input, default_rag_mode, stream_mode, max_tokens)
-    st.session_state["messages"].append({"role": "assistant", "content": output})
+    handle_chat_interaction(user_input, chat_message_container, default_rag_mode, stream_mode, max_tokens)
+
+        
