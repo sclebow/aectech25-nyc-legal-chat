@@ -164,7 +164,7 @@ def _handle_streaming_response(response, st, render_data_context_table, render_t
     with col_response:
         elapsed_time = _time.time() - start_time
         render_token_usage_report(logs, elapsed_time=elapsed_time)
-    return {"data_context": data_context, "response": response_text, "logs": logs}
+    return {"data_context": data_context, "response": response_text, "logs": logs, "elapsed_time": elapsed_time}
 
 
 def _handle_standard_response(response):
@@ -317,13 +317,15 @@ def handle_chat_interaction(message, chat_message_container, default_rag_mode, s
             msg_placeholder.markdown("_Processing..._")
             output = query_llm(message, default_rag_mode, stream_mode, max_tokens)
             msg_placeholder.empty()
-            # Only show the response here if it's an error, otherwise let the main chat loop handle display
+            elapsed_time = None
             if isinstance(output, dict):
-                st.session_state["messages"].append({"role": "assistant", "content": output})
+                # Try to get elapsed_time from output (added in _handle_streaming_response)
+                elapsed_time = output.get("elapsed_time")
+                st.session_state["messages"].append({"role": "assistant", "content": output, "elapsed_time": elapsed_time})
                 if "response" in output and (output["response"].startswith("Error") or output["response"].startswith("Exception")):
                     st.error(output["response"])
             elif isinstance(output, str) and (output.startswith("Error") or output.startswith("Exception")):
-                st.session_state["messages"].append({"role": "assistant", "content": output})
+                st.session_state["messages"].append({"role": "assistant", "content": output, "elapsed_time": elapsed_time})
                 st.error(output)
 
 def ifc_file_upload(uploaded_ifc):
@@ -458,7 +460,8 @@ with chat_message_container:
                     st.markdown(msg["content"].get("response", ""))
                     # --- Token Usage Report ---
                     logs = msg["content"].get("logs", "")
-                    render_token_usage_report(logs)
+                    elapsed_time = msg.get("elapsed_time")
+                    render_token_usage_report(logs, elapsed_time=elapsed_time)
             else:
                 st.markdown(msg["content"])
 with st.container():
@@ -478,4 +481,3 @@ if send_sample and sample:
 if user_input:
     handle_chat_interaction(user_input, chat_message_container, default_rag_mode, stream_mode, max_tokens)
 
-        
