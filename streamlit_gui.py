@@ -368,16 +368,25 @@ def ifc_file_upload(uploaded_ifc):
             except Exception as e:
                 st.error(f"Exception during upload: {e}")
 
+def get_latest_ifc_filename():
+    """Fetch the filename of the latest IFC file from the backend server."""
+    try:
+        resp = requests.get("http://127.0.0.1:5000/latest_ifc_filename")
+        if resp.status_code == 200:
+            data = resp.json()
+            return data.get("filename", None)
+        else:
+            return None
+    except Exception:
+        return None
+
 def ifc_file_download():
     """Handles downloading the latest IFC file from the backend server."""
     with st.spinner("Fetching latest IFC file..."):
         try:
-            response = requests.get("http://127.0.0.1:5000/download_latest_ifc", stream=True)
+            filename = get_latest_ifc_filename() or "latest.ifc"
+            response = requests.get(f"http://127.0.0.1:5000/download_latest_ifc", stream=True)
             if response.status_code == 200:
-                content_disp = response.headers.get('content-disposition', '')
-                filename = "latest.ifc"
-                if 'filename=' in content_disp:
-                    filename = content_disp.split('filename=')[1].strip('"')
                 file_bytes = response.content
                 st.download_button(
                     label=f"Click to download {filename}",
@@ -447,7 +456,11 @@ def visualize_ifc_summary(uploaded_ifc):
     """Parse IFC and show a summary table of element types and counts."""
     if uploaded_ifc is not None:
         with tempfile.NamedTemporaryFile(delete=False, suffix=".ifc") as tmp:
-            tmp.write(uploaded_ifc.getbuffer())
+            # Handle both bytes and UploadedFile
+            if hasattr(uploaded_ifc, 'getbuffer'):
+                tmp.write(uploaded_ifc.getbuffer())
+            else:
+                tmp.write(uploaded_ifc)  # Assume bytes
             tmp_path = tmp.name
         try:
             ifc = ifcopenshell.open(tmp_path)
@@ -457,8 +470,8 @@ def visualize_ifc_summary(uploaded_ifc):
                 t = el.is_a()
                 type_counts[t] = type_counts.get(t, 0) + 1
             import pandas as pd
+            st.write(f"Filename: {get_latest_ifc_filename()}")
             df = pd.DataFrame(list(type_counts.items()), columns=["IFC Type", "Count"])
-            st.markdown("#### IFC File Summary")
             st.dataframe(df, use_container_width=True)
             # Removed 3D visualization (plotly)
         except Exception as e:
@@ -466,6 +479,7 @@ def visualize_ifc_summary(uploaded_ifc):
 
 def show_ifcjs_viewer_vite(height=600):
     """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL."""
+    st.write(f"Filename: {get_latest_ifc_filename()}")
     vite_url = "http://localhost:5173/?ifcUrl=http://127.0.0.1:5000/download_latest_ifc"
     components.html(f"""
         <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
@@ -488,47 +502,54 @@ while poll_flask_status() != "Flask server is running.":
 # Update the start message
 start_message.empty()
 
-llm_col, ifc_col = st.columns([1, 1], vertical_alignment="top")
+with st.expander("LLM Configuration", expanded=False):
+    st.markdown("## LLM Mode Selection")
+    mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
+    mode_status = set_mode_on_server(mode)
+    st.text(mode_status)
 
-with llm_col:
-    with st.expander("LLM Configuration", expanded=False):
-        st.markdown("## LLM Mode Selection")
-        mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
-        mode_status = set_mode_on_server(mode)
-        st.text(mode_status)
+    # Cloudflare model selectors
+    if mode == "cloudflare":
+        st.markdown("### Cloudflare Model Selection")
+        cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
+        cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
+        set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
+        cf_model_status = get_cloudflare_model_status()
+        st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
 
-        # Cloudflare model selectors
-        if mode == "cloudflare":
-            st.markdown("### Cloudflare Model Selection")
-            cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
-            cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
-            set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
-            cf_model_status = get_cloudflare_model_status()
-            st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
+    st.markdown("## LLM Call Type")
+    stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
+    max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
 
-        st.markdown("## LLM Call Type")
-        stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
-        max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
-
-with ifc_col:
-    # --- IFC File Upload Section ---
-    with st.expander("IFC File Management", expanded=False):
-        st.markdown("## Upload Your IFC File")
-        with st.form("ifc_upload_form", clear_on_submit=True):
-            uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
-            upload_button = st.form_submit_button("Upload IFC File")
-            if upload_button:
-                ifc_file_upload(uploaded_ifc)
+# --- IFC File Upload Section ---
+with st.expander("IFC File Management", expanded=False):
+    st.markdown("## Upload Your IFC File")
+    with st.form("ifc_upload_form", clear_on_submit=True):
+        uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
+        upload_button = st.form_submit_button("Upload IFC File")
+        if upload_button:
+            ifc_file_upload(uploaded_ifc)
+    download_latest = st.button("Download Latest IFC File")
+    if download_latest:
+        ifc_file_download()
+    
+    summary_col, viewer_col = st.columns([1, 3], vertical_alignment="top")
+    with summary_col:
         # Always refresh summary and BIM viewer if a file is loaded
-        if uploaded_ifc is not None:
-            visualize_ifc_summary(uploaded_ifc)
-            st.markdown("#### Full BIM Viewer (Vite)")
-            show_ifcjs_viewer_vite()
-
-        st.markdown("## Download Latest IFC File")
-        download_latest = st.button("Download Latest IFC File")
-        if download_latest:
-            ifc_file_download()
+        # if uploaded_ifc is not None:
+            st.markdown("#### Current IFC Model Summary")
+            st.write("")
+            filename = get_latest_ifc_filename()
+            if filename:
+                current_ifc_url = f"http://127.0.0.1:5000/download_ifc/{filename}"
+                current_ifc = requests.get(current_ifc_url).content
+                st.caption(f"Showing summary for: {filename}")
+                visualize_ifc_summary(current_ifc)
+            else:
+                st.info("No IFC file found.")
+    with viewer_col:
+        st.markdown("#### Current IFC Model Viewer")
+        show_ifcjs_viewer_vite()
 
 # --- Streamlit Chat Interface with Sample Questions ---
 if "messages" not in st.session_state:

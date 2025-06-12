@@ -151,6 +151,17 @@ def download_latest_ifc():
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
+@app.route('/latest_ifc_filename', methods=['GET'])
+def latest_ifc_filename():
+    try:
+        files = [f for f in os.listdir(IFC_DIR) if f.lower().endswith('.ifc')]
+        if not files:
+            return jsonify({'status': 'error', 'message': 'No IFC files found'}), 404
+        latest_file = max(files, key=lambda f: os.path.getmtime(os.path.join(IFC_DIR, f)))
+        return jsonify({'status': 'success', 'filename': latest_file}), 200
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
 if __name__ == '__main__':
     app.run(debug=False, use_reloader=False)
 
