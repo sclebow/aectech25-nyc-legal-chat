@@ -1,0 +1,16 @@
+{
+  "name": "ifc-viewer-vite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "web-ifc-viewer": "^1.0.218"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}

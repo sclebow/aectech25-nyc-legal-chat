@@ -19,6 +19,7 @@ import re
 import ifcopenshell
 import tempfile
 import pyvista as pv
+import streamlit.components.v1 as components
 
 # === Constants and Config ===
 FLASK_URL = "http://127.0.0.1:5000/llm_call"
@@ -58,6 +59,7 @@ logger = setup_logger(log_file="streamlit_app.log")
 
 # === Global State ===
 flask_process = None
+vite_process = None  # Track Vite server process
 flask_status_placeholder = None
 
 # === Utility Functions (adapted from gradio_gui.py) ===
@@ -202,7 +204,8 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
         return _handle_standard_response(response)
 
 def run_flask_server():
-    global flask_process
+    global flask_process, vite_process
+    # Start Flask server
     if flask_process is None or flask_process.poll() is not None:
         flask_process = subprocess.Popen(
             ["python", "-u", "gh_server.py"],
@@ -210,10 +213,19 @@ def run_flask_server():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
-        stream_subprocess_output(flask_process) # Uncomment to stream output to console for debugging
-        return "Flask server started."
-    else:
-        return "Flask server is already running."
+        stream_subprocess_output(flask_process)
+    # Start Vite server (if not already running)
+    vite_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ifc_viewer_vite")
+    if vite_process is None or vite_process.poll() is not None:
+        # Use npm run dev for Vite
+        vite_process = subprocess.Popen(
+            ["npm", "run", "dev", "--", "--host"],
+            cwd=vite_dir,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+        )
+        stream_subprocess_output(vite_process)
+    return "Flask and Vite servers started."
 
 def stream_subprocess_output(process):
     def stream(pipe):
@@ -224,13 +236,14 @@ def stream_subprocess_output(process):
     threading.Thread(target=stream, args=(process.stderr,), daemon=True).start()
 
 def stop_flask_server():
-    global flask_process
+    global flask_process, vite_process
     if flask_process is not None and flask_process.poll() is None:
         flask_process.terminate()
         flask_process = None
-        return "Flask server stopped."
-    else:
-        return "Flask server is not running."
+    if vite_process is not None and vite_process.poll() is None:
+        vite_process.terminate()
+        vite_process = None
+    return "Flask and Vite servers stopped."
 
 def set_mode_on_server(selected_mode):
     try:
@@ -437,11 +450,16 @@ def visualize_ifc_summary(uploaded_ifc):
             df = pd.DataFrame(list(type_counts.items()), columns=["IFC Type", "Count"])
             st.markdown("#### IFC File Summary")
             st.dataframe(df, use_container_width=True)
-            # 3D visualization
-            st.markdown("#### IFC 3D Visualization (static)")
-            visualize_ifc_3d(uploaded_ifc)
+            # Removed 3D visualization (plotly)
         except Exception as e:
             st.error(f"Failed to parse IFC: {e}")
+
+def show_ifcjs_viewer_vite(height=600):
+    """Embed the local Vite IFC viewer in Streamlit via iframe."""
+    vite_url = "http://localhost:5173/"  # Default Vite dev server port
+    components.html(f"""
+        <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
+    """, height=height)
 
 # --- Streamlit Chat Interface with Sample Questions ---
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
@@ -492,6 +510,9 @@ with ifc_col:
             if upload_button:
                 ifc_file_upload(uploaded_ifc)
                 visualize_ifc_summary(uploaded_ifc)
+                # Show full BIM viewer (Vite)
+                st.markdown("#### Full BIM Viewer (Vite)")
+                show_ifcjs_viewer_vite()
 
         st.markdown("## Download Latest IFC File")
         download_latest = st.button("Download Latest IFC File")

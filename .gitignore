@@ -11,4 +11,5 @@ Rawlinsons Construction Cost Consultants and Quantity Surveyors, (editor) - Rawl
 chroma/
 ifc_files/
 csv_files/
-/chroma
+ifc_viewer_vite/node_modules/
+chroma/chroma.sqlite3
