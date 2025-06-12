@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, Response, send_from_directory
+from flask_cors import CORS
 # import ghhops_server as hs
 import llm_calls
 from project_utils import rag_utils
@@ -12,6 +13,7 @@ import os
 from logger_setup import setup_logger, set_request_id
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes (sufficient for local dev)
 
 # Set up logging
 logger = setup_logger(name="app_logger", log_dir="logs", log_file="app.log")

@@ -217,14 +217,24 @@ def run_flask_server():
     # Start Vite server (if not already running)
     vite_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ifc_viewer_vite")
     if vite_process is None or vite_process.poll() is not None:
-        # Use npm run dev for Vite
-        vite_process = subprocess.Popen(
-            ["npm", "run", "dev", "--", "--host"],
-            cwd=vite_dir,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-        )
-        stream_subprocess_output(vite_process)
+        if not os.path.isdir(vite_dir):
+            st.error(f"Vite directory not found: {vite_dir}. Please ensure 'ifc_viewer_vite' exists.")
+            return "Vite directory missing."
+        try:
+            vite_process = subprocess.Popen(
+                "npm run dev -- --host",
+                cwd=vite_dir,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                shell=True  # Use shell=True for Windows compatibility
+            )
+            stream_subprocess_output(vite_process)
+        except FileNotFoundError as e:
+            st.error(f"Failed to start Vite server: {e}\nIs npm installed and on your PATH?")
+            return f"Failed to start Vite: {e}"
+        except Exception as e:
+            st.error(f"Unexpected error starting Vite: {e}")
+            return f"Failed to start Vite: {e}"
     return "Flask and Vite servers started."
 
 def stream_subprocess_output(process):
@@ -455,8 +465,8 @@ def visualize_ifc_summary(uploaded_ifc):
             st.error(f"Failed to parse IFC: {e}")
 
 def show_ifcjs_viewer_vite(height=600):
-    """Embed the local Vite IFC viewer in Streamlit via iframe."""
-    vite_url = "http://localhost:5173/"  # Default Vite dev server port
+    """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL."""
+    vite_url = "http://localhost:5173/?ifcUrl=http://127.0.0.1:5000/download_latest_ifc"
     components.html(f"""
         <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
     """, height=height)
@@ -509,10 +519,11 @@ with ifc_col:
             upload_button = st.form_submit_button("Upload IFC File")
             if upload_button:
                 ifc_file_upload(uploaded_ifc)
-                visualize_ifc_summary(uploaded_ifc)
-                # Show full BIM viewer (Vite)
-                st.markdown("#### Full BIM Viewer (Vite)")
-                show_ifcjs_viewer_vite()
+        # Always refresh summary and BIM viewer if a file is loaded
+        if uploaded_ifc is not None:
+            visualize_ifc_summary(uploaded_ifc)
+            st.markdown("#### Full BIM Viewer (Vite)")
+            show_ifcjs_viewer_vite()
 
         st.markdown("## Download Latest IFC File")
         download_latest = st.button("Download Latest IFC File")
