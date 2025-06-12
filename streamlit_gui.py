@@ -16,6 +16,9 @@ import plotly.graph_objects as go
 from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
 import pandas as pd
 import re
+import ifcopenshell
+import tempfile
+import pyvista as pv
 
 # === Constants and Config ===
 FLASK_URL = "http://127.0.0.1:5000/llm_call"
@@ -364,6 +367,82 @@ def ifc_file_download():
         except Exception as e:
             st.error(f"Exception during download: {e}")
 
+def visualize_ifc_3d(uploaded_ifc):
+    """Visualize IFC geometry in 3D using ifcopenshell and plotly (interactive)."""
+    if uploaded_ifc is not None:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".ifc") as tmp:
+            tmp.write(uploaded_ifc.getbuffer())
+            tmp_path = tmp.name
+        try:
+            import ifcopenshell.geom
+            import numpy as np
+            import plotly.graph_objects as go
+            settings = ifcopenshell.geom.settings()
+            settings.set(settings.USE_WORLD_COORDS, True)
+            ifc = ifcopenshell.open(tmp_path)
+            all_verts = []
+            all_faces = []
+            vert_offset = 0
+            for product in ifc.by_type("IfcProduct"):
+                try:
+                    shape = ifcopenshell.geom.create_shape(settings, product)
+                    verts = np.array(shape.geometry.verts).reshape(-1, 3)
+                    faces = np.array(shape.geometry.faces, dtype=np.int32)
+                    # faces: [3, v0, v1, v2, 3, v0, v1, v2, ...]
+                    i = 0
+                    while i < len(faces):
+                        n = faces[i]
+                        if n == 3:
+                            all_faces.append([
+                                faces[i+1] + vert_offset,
+                                faces[i+2] + vert_offset,
+                                faces[i+3] + vert_offset
+                            ])
+                        # skip non-triangles
+                        i += n + 1
+                    all_verts.extend(verts)
+                    vert_offset += len(verts)
+                except Exception:
+                    continue
+            if not all_verts or not all_faces:
+                st.info("No geometry found in IFC file for 3D visualization.")
+                return
+            all_verts = np.array(all_verts)
+            x, y, z = all_verts[:,0], all_verts[:,1], all_verts[:,2]
+            i, j, k = zip(*all_faces)
+            fig = go.Figure(data=[go.Mesh3d(x=x, y=y, z=z, i=i, j=j, k=k, color='lightgrey', opacity=1.0)])
+            fig.update_layout(
+                scene=dict(aspectmode='data'),
+                margin=dict(l=0, r=0, b=0, t=0),
+                title="IFC 3D Interactive View"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        except Exception as e:
+            st.error(f"Failed to render 3D IFC: {e}")
+
+def visualize_ifc_summary(uploaded_ifc):
+    """Parse IFC and show a summary table of element types and counts."""
+    if uploaded_ifc is not None:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".ifc") as tmp:
+            tmp.write(uploaded_ifc.getbuffer())
+            tmp_path = tmp.name
+        try:
+            ifc = ifcopenshell.open(tmp_path)
+            products = ifc.by_type("IfcProduct")
+            type_counts = {}
+            for el in products:
+                t = el.is_a()
+                type_counts[t] = type_counts.get(t, 0) + 1
+            import pandas as pd
+            df = pd.DataFrame(list(type_counts.items()), columns=["IFC Type", "Count"])
+            st.markdown("#### IFC File Summary")
+            st.dataframe(df, use_container_width=True)
+            # 3D visualization
+            st.markdown("#### IFC 3D Visualization (static)")
+            visualize_ifc_3d(uploaded_ifc)
+        except Exception as e:
+            st.error(f"Failed to parse IFC: {e}")
+
 # --- Streamlit Chat Interface with Sample Questions ---
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
@@ -412,6 +491,7 @@ with ifc_col:
             upload_button = st.form_submit_button("Upload IFC File")
             if upload_button:
                 ifc_file_upload(uploaded_ifc)
+                visualize_ifc_summary(uploaded_ifc)
 
         st.markdown("## Download Latest IFC File")
         download_latest = st.button("Download Latest IFC File")
