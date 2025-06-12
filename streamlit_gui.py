@@ -20,12 +20,38 @@ import ifcopenshell
 import tempfile
 import pyvista as pv
 import streamlit.components.v1 as components
+import socket
+
+def find_open_port(preferred_port, max_tries=20):
+    """Find an open port, starting from preferred_port, up to max_tries."""
+    port = preferred_port
+    for _ in range(max_tries):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            try:
+                s.bind(("127.0.0.1", port))
+                return port
+            except OSError:
+                port += 1
+    raise RuntimeError(f"No open port found in range {preferred_port}-{port}")
 
 # === Constants and Config ===
-FLASK_URL = "http://127.0.0.1:5000/llm_call"
+# Try to find open ports if the defaults are not available
+try:
+    FLASK_PORT = find_open_port(5000)
+except RuntimeError:
+    FLASK_PORT = 5000  # fallback if all else fails
+try:
+    VITE_PORT = find_open_port(5173)
+except RuntimeError:
+    VITE_PORT = 5173
+
+print(f"Using Flask port: {FLASK_PORT}")
+print(f"Using Vite port: {VITE_PORT}")
+
+FLASK_URL = f"http://127.0.0.1:{FLASK_PORT}/llm_call"
 default_rag_mode = "LLM only"
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
-MODE_URL = "http://127.0.0.1:5000/set_mode"
+MODE_URL = f"http://127.0.0.1:{FLASK_PORT}/set_mode"
 sample_questions = [
     "What are some cost modeling best practices?",
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
@@ -266,7 +292,7 @@ def set_mode_on_server(selected_mode):
         return f"Exception: {str(e)}"
 
 def poll_flask_status(max_retries=20, delay=0.5):
-    url = "http://127.0.0.1:5000/status"
+    url = f"http://127.0.0.1:{FLASK_PORT}/status"
     for _ in range(max_retries):
         try:
             resp = requests.get(url, timeout=1)
@@ -285,7 +311,7 @@ def start_flask_and_wait():
 
 def get_cloudflare_model_status():
     try:
-        resp = requests.get("http://127.0.0.1:5000/status")
+        resp = requests.get(f"http://127.0.0.1:{FLASK_PORT}/status")
         if resp.status_code == 200:
             data = resp.json()
             if data.get("mode") == "cloudflare":
@@ -360,7 +386,7 @@ def ifc_file_upload(uploaded_ifc):
         with st.spinner("Uploading IFC file..."):
             files = {"file": (uploaded_ifc.name, uploaded_ifc, "application/octet-stream")}
             try:
-                response = requests.post("http://127.0.0.1:5000/upload_ifc", files=files)
+                response = requests.post(f"http://127.0.0.1:{FLASK_PORT}/upload_ifc", files=files)
                 if response.status_code == 200:
                     st.success(f"File '{uploaded_ifc.name}' uploaded successfully.")
                 else:
@@ -371,7 +397,7 @@ def ifc_file_upload(uploaded_ifc):
 def get_latest_ifc_filename():
     """Fetch the filename of the latest IFC file from the backend server."""
     try:
-        resp = requests.get("http://127.0.0.1:5000/latest_ifc_filename")
+        resp = requests.get(f"http://127.0.0.1:{FLASK_PORT}/latest_ifc_filename")
         if resp.status_code == 200:
             data = resp.json()
             return data.get("filename", None)
@@ -385,7 +411,7 @@ def ifc_file_download():
     with st.spinner("Fetching latest IFC file..."):
         try:
             filename = get_latest_ifc_filename() or "latest.ifc"
-            response = requests.get(f"http://127.0.0.1:5000/download_latest_ifc", stream=True)
+            response = requests.get(f"http://127.0.0.1:{FLASK_PORT}/download_latest_ifc", stream=True)
             if response.status_code == 200:
                 file_bytes = response.content
                 st.download_button(
@@ -480,7 +506,7 @@ def visualize_ifc_summary(uploaded_ifc):
 def show_ifcjs_viewer_vite(height=600):
     """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL."""
     st.write(f"Filename: {get_latest_ifc_filename()}")
-    vite_url = "http://localhost:5173/?ifcUrl=http://127.0.0.1:5000/download_latest_ifc"
+    vite_url = f"http://localhost:{VITE_PORT}/?ifcUrl=http://127.0.0.1:{FLASK_PORT}/download_latest_ifc"
     components.html(f"""
         <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
     """, height=height)
@@ -541,7 +567,7 @@ with st.expander("IFC File Management", expanded=False):
             st.write("")
             filename = get_latest_ifc_filename()
             if filename:
-                current_ifc_url = f"http://127.0.0.1:5000/download_ifc/{filename}"
+                current_ifc_url = f"http://127.0.0.1:{FLASK_PORT}/download_ifc/{filename}"
                 current_ifc = requests.get(current_ifc_url).content
                 st.caption(f"Showing summary for: {filename}")
                 visualize_ifc_summary(current_ifc)
