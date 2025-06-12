@@ -16,12 +16,42 @@ import plotly.graph_objects as go
 from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
 import pandas as pd
 import re
+import ifcopenshell
+import tempfile
+import pyvista as pv
+import streamlit.components.v1 as components
+import socket
+
+def find_open_port(preferred_port, max_tries=20):
+    """Find an open port, starting from preferred_port, up to max_tries."""
+    port = preferred_port
+    for _ in range(max_tries):
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+            try:
+                s.bind(("127.0.0.1", port))
+                return port
+            except OSError:
+                port += 1
+    raise RuntimeError(f"No open port found in range {preferred_port}-{port}")
 
 # === Constants and Config ===
-FLASK_URL = "http://127.0.0.1:5000/llm_call"
+# Try to find open ports if the defaults are not available
+try:
+    FLASK_PORT = find_open_port(5000)
+except RuntimeError:
+    FLASK_PORT = 5000  # fallback if all else fails
+try:
+    VITE_PORT = find_open_port(5173)
+except RuntimeError:
+    VITE_PORT = 5173
+
+print(f"Using Flask port: {FLASK_PORT}")
+print(f"Using Vite port: {VITE_PORT}")
+
+FLASK_URL = f"http://127.0.0.1:{FLASK_PORT}/llm_call"
 default_rag_mode = "LLM only"
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
-MODE_URL = "http://127.0.0.1:5000/set_mode"
+MODE_URL = f"http://127.0.0.1:{FLASK_PORT}/set_mode"
 sample_questions = [
     "What are some cost modeling best practices?",
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
@@ -55,6 +85,7 @@ logger = setup_logger(log_file="streamlit_app.log")
 
 # === Global State ===
 flask_process = None
+vite_process = None  # Track Vite server process
 flask_status_placeholder = None
 
 # === Utility Functions (adapted from gradio_gui.py) ===
@@ -164,7 +195,7 @@ def _handle_streaming_response(response, st, render_data_context_table, render_t
     with col_response:
         elapsed_time = _time.time() - start_time
         render_token_usage_report(logs, elapsed_time=elapsed_time)
-    return {"data_context": data_context, "response": response_text, "logs": logs}
+    return {"data_context": data_context, "response": response_text, "logs": logs, "elapsed_time": elapsed_time}
 
 
 def _handle_standard_response(response):
@@ -199,7 +230,8 @@ def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
         return _handle_standard_response(response)
 
 def run_flask_server():
-    global flask_process
+    global flask_process, vite_process
+    # Start Flask server
     if flask_process is None or flask_process.poll() is not None:
         flask_process = subprocess.Popen(
             ["python", "-u", "gh_server.py"],
@@ -207,10 +239,29 @@ def run_flask_server():
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
         )
-        stream_subprocess_output(flask_process) # Uncomment to stream output to console for debugging
-        return "Flask server started."
-    else:
-        return "Flask server is already running."
+        stream_subprocess_output(flask_process)
+    # Start Vite server (if not already running)
+    vite_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ifc_viewer_vite")
+    if vite_process is None or vite_process.poll() is not None:
+        if not os.path.isdir(vite_dir):
+            st.error(f"Vite directory not found: {vite_dir}. Please ensure 'ifc_viewer_vite' exists.")
+            return "Vite directory missing."
+        try:
+            vite_process = subprocess.Popen(
+                "npm run dev -- --host",
+                cwd=vite_dir,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                shell=True  # Use shell=True for Windows compatibility
+            )
+            stream_subprocess_output(vite_process)
+        except FileNotFoundError as e:
+            st.error(f"Failed to start Vite server: {e}\nIs npm installed and on your PATH?")
+            return f"Failed to start Vite: {e}"
+        except Exception as e:
+            st.error(f"Unexpected error starting Vite: {e}")
+            return f"Failed to start Vite: {e}"
+    return "Flask and Vite servers started."
 
 def stream_subprocess_output(process):
     def stream(pipe):
@@ -221,13 +272,14 @@ def stream_subprocess_output(process):
     threading.Thread(target=stream, args=(process.stderr,), daemon=True).start()
 
 def stop_flask_server():
-    global flask_process
+    global flask_process, vite_process
     if flask_process is not None and flask_process.poll() is None:
         flask_process.terminate()
         flask_process = None
-        return "Flask server stopped."
-    else:
-        return "Flask server is not running."
+    if vite_process is not None and vite_process.poll() is None:
+        vite_process.terminate()
+        vite_process = None
+    return "Flask and Vite servers stopped."
 
 def set_mode_on_server(selected_mode):
     try:
@@ -240,7 +292,7 @@ def set_mode_on_server(selected_mode):
         return f"Exception: {str(e)}"
 
 def poll_flask_status(max_retries=20, delay=0.5):
-    url = "http://127.0.0.1:5000/status"
+    url = f"http://127.0.0.1:{FLASK_PORT}/status"
     for _ in range(max_retries):
         try:
             resp = requests.get(url, timeout=1)
@@ -259,7 +311,7 @@ def start_flask_and_wait():
 
 def get_cloudflare_model_status():
     try:
-        resp = requests.get("http://127.0.0.1:5000/status")
+        resp = requests.get(f"http://127.0.0.1:{FLASK_PORT}/status")
         if resp.status_code == 200:
             data = resp.json()
             if data.get("mode") == "cloudflare":
@@ -317,13 +369,15 @@ def handle_chat_interaction(message, chat_message_container, default_rag_mode, s
             msg_placeholder.markdown("_Processing..._")
             output = query_llm(message, default_rag_mode, stream_mode, max_tokens)
             msg_placeholder.empty()
-            # Only show the response here if it's an error, otherwise let the main chat loop handle display
+            elapsed_time = None
             if isinstance(output, dict):
-                st.session_state["messages"].append({"role": "assistant", "content": output})
+                # Try to get elapsed_time from output (added in _handle_streaming_response)
+                elapsed_time = output.get("elapsed_time")
+                st.session_state["messages"].append({"role": "assistant", "content": output, "elapsed_time": elapsed_time})
                 if "response" in output and (output["response"].startswith("Error") or output["response"].startswith("Exception")):
                     st.error(output["response"])
             elif isinstance(output, str) and (output.startswith("Error") or output.startswith("Exception")):
-                st.session_state["messages"].append({"role": "assistant", "content": output})
+                st.session_state["messages"].append({"role": "assistant", "content": output, "elapsed_time": elapsed_time})
                 st.error(output)
 
 def ifc_file_upload(uploaded_ifc):
@@ -332,7 +386,7 @@ def ifc_file_upload(uploaded_ifc):
         with st.spinner("Uploading IFC file..."):
             files = {"file": (uploaded_ifc.name, uploaded_ifc, "application/octet-stream")}
             try:
-                response = requests.post("http://127.0.0.1:5000/upload_ifc", files=files)
+                response = requests.post(f"http://127.0.0.1:{FLASK_PORT}/upload_ifc", files=files)
                 if response.status_code == 200:
                     st.success(f"File '{uploaded_ifc.name}' uploaded successfully.")
                 else:
@@ -340,16 +394,25 @@ def ifc_file_upload(uploaded_ifc):
             except Exception as e:
                 st.error(f"Exception during upload: {e}")
 
+def get_latest_ifc_filename():
+    """Fetch the filename of the latest IFC file from the backend server."""
+    try:
+        resp = requests.get(f"http://127.0.0.1:{FLASK_PORT}/latest_ifc_filename")
+        if resp.status_code == 200:
+            data = resp.json()
+            return data.get("filename", None)
+        else:
+            return None
+    except Exception:
+        return None
+
 def ifc_file_download():
     """Handles downloading the latest IFC file from the backend server."""
     with st.spinner("Fetching latest IFC file..."):
         try:
-            response = requests.get("http://127.0.0.1:5000/download_latest_ifc", stream=True)
+            filename = get_latest_ifc_filename() or "latest.ifc"
+            response = requests.get(f"http://127.0.0.1:{FLASK_PORT}/download_latest_ifc", stream=True)
             if response.status_code == 200:
-                content_disp = response.headers.get('content-disposition', '')
-                filename = "latest.ifc"
-                if 'filename=' in content_disp:
-                    filename = content_disp.split('filename=')[1].strip('"')
                 file_bytes = response.content
                 st.download_button(
                     label=f"Click to download {filename}",
@@ -361,6 +424,92 @@ def ifc_file_download():
                 st.error(f"Download failed: {response.json().get('message', response.text)}")
         except Exception as e:
             st.error(f"Exception during download: {e}")
+
+def visualize_ifc_3d(uploaded_ifc):
+    """Visualize IFC geometry in 3D using ifcopenshell and plotly (interactive)."""
+    if uploaded_ifc is not None:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".ifc") as tmp:
+            tmp.write(uploaded_ifc.getbuffer())
+            tmp_path = tmp.name
+        try:
+            import ifcopenshell.geom
+            import numpy as np
+            import plotly.graph_objects as go
+            settings = ifcopenshell.geom.settings()
+            settings.set(settings.USE_WORLD_COORDS, True)
+            ifc = ifcopenshell.open(tmp_path)
+            all_verts = []
+            all_faces = []
+            vert_offset = 0
+            for product in ifc.by_type("IfcProduct"):
+                try:
+                    shape = ifcopenshell.geom.create_shape(settings, product)
+                    verts = np.array(shape.geometry.verts).reshape(-1, 3)
+                    faces = np.array(shape.geometry.faces, dtype=np.int32)
+                    # faces: [3, v0, v1, v2, 3, v0, v1, v2, ...]
+                    i = 0
+                    while i < len(faces):
+                        n = faces[i]
+                        if n == 3:
+                            all_faces.append([
+                                faces[i+1] + vert_offset,
+                                faces[i+2] + vert_offset,
+                                faces[i+3] + vert_offset
+                            ])
+                        # skip non-triangles
+                        i += n + 1
+                    all_verts.extend(verts)
+                    vert_offset += len(verts)
+                except Exception:
+                    continue
+            if not all_verts or not all_faces:
+                st.info("No geometry found in IFC file for 3D visualization.")
+                return
+            all_verts = np.array(all_verts)
+            x, y, z = all_verts[:,0], all_verts[:,1], all_verts[:,2]
+            i, j, k = zip(*all_faces)
+            fig = go.Figure(data=[go.Mesh3d(x=x, y=y, z=z, i=i, j=j, k=k, color='lightgrey', opacity=1.0)])
+            fig.update_layout(
+                scene=dict(aspectmode='data'),
+                margin=dict(l=0, r=0, b=0, t=0),
+                title="IFC 3D Interactive View"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        except Exception as e:
+            st.error(f"Failed to render 3D IFC: {e}")
+
+def visualize_ifc_summary(uploaded_ifc):
+    """Parse IFC and show a summary table of element types and counts."""
+    if uploaded_ifc is not None:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=".ifc") as tmp:
+            # Handle both bytes and UploadedFile
+            if hasattr(uploaded_ifc, 'getbuffer'):
+                tmp.write(uploaded_ifc.getbuffer())
+            else:
+                tmp.write(uploaded_ifc)  # Assume bytes
+            tmp_path = tmp.name
+        try:
+            ifc = ifcopenshell.open(tmp_path)
+            products = ifc.by_type("IfcProduct")
+            type_counts = {}
+            for el in products:
+                t = el.is_a()
+                type_counts[t] = type_counts.get(t, 0) + 1
+            import pandas as pd
+            st.write(f"Filename: {get_latest_ifc_filename()}")
+            df = pd.DataFrame(list(type_counts.items()), columns=["IFC Type", "Count"])
+            st.dataframe(df, use_container_width=True)
+            # Removed 3D visualization (plotly)
+        except Exception as e:
+            st.error(f"Failed to parse IFC: {e}")
+
+def show_ifcjs_viewer_vite(height=600):
+    """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL."""
+    st.write(f"Filename: {get_latest_ifc_filename()}")
+    vite_url = f"http://localhost:{VITE_PORT}/?ifcUrl=http://127.0.0.1:{FLASK_PORT}/download_latest_ifc"
+    components.html(f"""
+        <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
+    """, height=height)
 
 # --- Streamlit Chat Interface with Sample Questions ---
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
@@ -379,42 +528,54 @@ while poll_flask_status() != "Flask server is running.":
 # Update the start message
 start_message.empty()
 
-llm_col, ifc_col = st.columns([1, 1], vertical_alignment="top")
+with st.expander("LLM Configuration", expanded=False):
+    st.markdown("## LLM Mode Selection")
+    mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
+    mode_status = set_mode_on_server(mode)
+    st.text(mode_status)
 
-with llm_col:
-    with st.expander("LLM Configuration", expanded=False):
-        st.markdown("## LLM Mode Selection")
-        mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
-        mode_status = set_mode_on_server(mode)
-        st.text(mode_status)
+    # Cloudflare model selectors
+    if mode == "cloudflare":
+        st.markdown("### Cloudflare Model Selection")
+        cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
+        cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
+        set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
+        cf_model_status = get_cloudflare_model_status()
+        st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
 
-        # Cloudflare model selectors
-        if mode == "cloudflare":
-            st.markdown("### Cloudflare Model Selection")
-            cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
-            cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
-            set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
-            cf_model_status = get_cloudflare_model_status()
-            st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
+    st.markdown("## LLM Call Type")
+    stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
+    max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
 
-        st.markdown("## LLM Call Type")
-        stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
-        max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
-
-with ifc_col:
-    # --- IFC File Upload Section ---
-    with st.expander("IFC File Management", expanded=False):
-        st.markdown("## Upload Your IFC File")
-        with st.form("ifc_upload_form", clear_on_submit=True):
-            uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
-            upload_button = st.form_submit_button("Upload IFC File")
-            if upload_button:
-                ifc_file_upload(uploaded_ifc)
-
-        st.markdown("## Download Latest IFC File")
-        download_latest = st.button("Download Latest IFC File")
-        if download_latest:
-            ifc_file_download()
+# --- IFC File Upload Section ---
+with st.expander("IFC File Management", expanded=False):
+    st.markdown("## Upload Your IFC File")
+    with st.form("ifc_upload_form", clear_on_submit=True):
+        uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
+        upload_button = st.form_submit_button("Upload IFC File")
+        if upload_button:
+            ifc_file_upload(uploaded_ifc)
+    download_latest = st.button("Download Latest IFC File")
+    if download_latest:
+        ifc_file_download()
+    
+    summary_col, viewer_col = st.columns([1, 3], vertical_alignment="top")
+    with summary_col:
+        # Always refresh summary and BIM viewer if a file is loaded
+        # if uploaded_ifc is not None:
+            st.markdown("#### Current IFC Model Summary")
+            st.write("")
+            filename = get_latest_ifc_filename()
+            if filename:
+                current_ifc_url = f"http://127.0.0.1:{FLASK_PORT}/download_ifc/{filename}"
+                current_ifc = requests.get(current_ifc_url).content
+                st.caption(f"Showing summary for: {filename}")
+                visualize_ifc_summary(current_ifc)
+            else:
+                st.info("No IFC file found.")
+    with viewer_col:
+        st.markdown("#### Current IFC Model Viewer")
+        show_ifcjs_viewer_vite()
 
 # --- Streamlit Chat Interface with Sample Questions ---
 if "messages" not in st.session_state:
@@ -458,7 +619,8 @@ with chat_message_container:
                     st.markdown(msg["content"].get("response", ""))
                     # --- Token Usage Report ---
                     logs = msg["content"].get("logs", "")
-                    render_token_usage_report(logs)
+                    elapsed_time = msg.get("elapsed_time")
+                    render_token_usage_report(logs, elapsed_time=elapsed_time)
             else:
                 st.markdown(msg["content"])
 with st.container():
@@ -478,4 +640,3 @@ if send_sample and sample:
 if user_input:
     handle_chat_interaction(user_input, chat_message_container, default_rag_mode, stream_mode, max_tokens)
 
-        

@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, Response, send_from_directory
+from flask_cors import CORS
 # import ghhops_server as hs
 import llm_calls
 from project_utils import rag_utils
@@ -12,6 +13,7 @@ import os
 from logger_setup import setup_logger, set_request_id
 
 app = Flask(__name__)
+CORS(app)  # Enable CORS for all routes (sufficient for local dev)
 
 # Set up logging
 logger = setup_logger(name="app_logger", log_dir="logs", log_file="app.log")
@@ -146,6 +148,17 @@ def download_latest_ifc():
             return jsonify({'status': 'error', 'message': 'No IFC files found'}), 404
         latest_file = max(files, key=lambda f: os.path.getmtime(os.path.join(IFC_DIR, f)))
         return send_from_directory(IFC_DIR, latest_file, as_attachment=True)
+    except Exception as e:
+        return jsonify({'status': 'error', 'message': str(e)}), 500
+
+@app.route('/latest_ifc_filename', methods=['GET'])
+def latest_ifc_filename():
+    try:
+        files = [f for f in os.listdir(IFC_DIR) if f.lower().endswith('.ifc')]
+        if not files:
+            return jsonify({'status': 'error', 'message': 'No IFC files found'}), 404
+        latest_file = max(files, key=lambda f: os.path.getmtime(os.path.join(IFC_DIR, f)))
+        return jsonify({'status': 'success', 'filename': latest_file}), 200
     except Exception as e:
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
