@@ -35,23 +35,11 @@ def find_open_port(preferred_port, max_tries=20):
     raise RuntimeError(f"No open port found in range {preferred_port}-{port}")
 
 # === Constants and Config ===
-# Try to find open ports if the defaults are not available
-try:
-    FLASK_PORT = find_open_port(5000)
-except RuntimeError:
-    FLASK_PORT = 5000  # fallback if all else fails
-try:
-    VITE_PORT = find_open_port(5173)
-except RuntimeError:
-    VITE_PORT = 5173
+default_flask_port = 5000
+default_vite_port = 5173
 
-print(f"Using Flask port: {FLASK_PORT}")
-print(f"Using Vite port: {VITE_PORT}")
-
-FLASK_URL = f"http://127.0.0.1:{FLASK_PORT}/llm_call"
 default_rag_mode = "LLM only"
 MODE_OPTIONS = ["local", "openai", "cloudflare"]
-MODE_URL = f"http://127.0.0.1:{FLASK_PORT}/set_mode"
 sample_questions = [
     "What are some cost modeling best practices?",
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
@@ -214,7 +202,7 @@ def _handle_standard_response(response):
 
 def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
     """Query the LLM server and handle the response, streaming or standard."""
-    url = FLASK_URL
+    url = f"http://127.0.0.1:{FLASK_PORT}/llm_call"
     payload = {"input": user_input, "max_tokens": int(max_tokens)}
     if stream_mode == "Streaming":
         payload["stream"] = True
@@ -283,7 +271,7 @@ def stop_flask_server():
 
 def set_mode_on_server(selected_mode):
     try:
-        response = requests.post(MODE_URL, json={"mode": selected_mode})
+        response = requests.post(f"http://127.0.0.1:{FLASK_PORT}/set_mode", json={"mode": selected_mode})
         if response.status_code == 200:
             return f"Mode set to: {selected_mode}"
         else:
@@ -293,9 +281,11 @@ def set_mode_on_server(selected_mode):
 
 def poll_flask_status(max_retries=20, delay=0.5):
     url = f"http://127.0.0.1:{FLASK_PORT}/status"
+    print(f"Polling Flask status at {url}...")
     for _ in range(max_retries):
         try:
             resp = requests.get(url, timeout=1)
+            print(f"Flask status response: {resp.status_code}")
             if resp.status_code == 200:
                 return "Flask server is running."
         except Exception:
@@ -325,7 +315,7 @@ def get_cloudflare_model_status():
 
 def set_cloudflare_models(mode, gen_model, emb_model):
     try:
-        requests.post(MODE_URL, json={
+        requests.post(f"http://127.0.0.1:{FLASK_PORT}/set_mode", json={
             "mode": mode,
             "cf_gen_model": gen_model,
             "cf_emb_model": emb_model
@@ -511,142 +501,157 @@ def show_ifcjs_viewer_vite(height=600):
         <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
     """, height=height)
 
-def main():
-    # --- Streamlit Chat Interface with Sample Questions ---
-    st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
-    st.title("ROI LLM Assistant")
-    # st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
+# --- Streamlit Chat Interface with Sample Questions ---
+st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
+st.title("ROI LLM Assistant")
+# st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
 
-    start_message = st.warning("Starting Flask server...")
-    if poll_flask_status() != "Flask server is running.":
-        # Start the Flask server in a separate thread
-        start_flask_and_wait()
+start_message = st.warning("Starting Flask server...")
+if "FLASK_PORT" not in st.session_state:
+    st.session_state["FLASK_PORT"] = default_flask_port
+if "VITE_PORT" not in st.session_state:
+    st.session_state["VITE_PORT"] = default_vite_port
 
-    # Wait for the Flask server to be ready
-    while poll_flask_status() != "Flask server is running.":
-        time.sleep(0.5)
+FLASK_PORT = st.session_state["FLASK_PORT"]
+VITE_PORT = st.session_state["VITE_PORT"]
 
-    # Update the start message
-    start_message.empty()
+if poll_flask_status() != "Flask server is running.":
+    # Start the Flask server in a separate thread
+    print("Starting Flask server...")
+    # Try to find open ports if the defaults are not available
+    try:
+        FLASK_PORT = find_open_port(default_flask_port)
+    except RuntimeError:
+        FLASK_PORT = default_flask_port
+    try:
+        VITE_PORT = find_open_port(default_vite_port)
+    except RuntimeError:
+        VITE_PORT = default_vite_port
 
-    with st.expander("LLM Configuration", expanded=False):
-        st.markdown("## LLM Mode Selection")
-        mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
-        mode_status = set_mode_on_server(mode)
-        st.text(mode_status)
+    print(f"Using Flask port: {FLASK_PORT}")
+    print(f"Using Vite port: {VITE_PORT}")
 
-        # Cloudflare model selectors
-        if mode == "cloudflare":
-            st.markdown("### Cloudflare Model Selection")
-            cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
-            cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
-            set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
-            cf_model_status = get_cloudflare_model_status()
-            st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
+    st.session_state["FLASK_PORT"] = FLASK_PORT
+    st.session_state["VITE_PORT"] = VITE_PORT
 
-        st.markdown("## LLM Call Type")
-        stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
-        max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
+    start_flask_and_wait()
 
-    # --- IFC File Upload Section ---
-    with st.expander("IFC File Management", expanded=False):
-        st.markdown("## Upload Your IFC File")
-        with st.form("ifc_upload_form", clear_on_submit=True):
-            uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
-            upload_button = st.form_submit_button("Upload IFC File")
-            if upload_button:
-                ifc_file_upload(uploaded_ifc)
-        download_latest = st.button("Download Latest IFC File")
-        if download_latest:
-            ifc_file_download()
-        
-        summary_col, viewer_col = st.columns([1, 3], vertical_alignment="top")
-        with summary_col:
-            # Always refresh summary and BIM viewer if a file is loaded
-            # if uploaded_ifc is not None:
-                st.markdown("#### Current IFC Model Summary")
-                st.write("")
-                filename = get_latest_ifc_filename()
-                if filename:
-                    current_ifc_url = f"http://127.0.0.1:{FLASK_PORT}/download_ifc/{filename}"
-                    current_ifc = requests.get(current_ifc_url).content
-                    st.caption(f"Showing summary for: {filename}")
-                    visualize_ifc_summary(current_ifc)
-                else:
-                    st.info("No IFC file found.")
-        with viewer_col:
-            st.markdown("#### Current IFC Model Viewer")
-            show_ifcjs_viewer_vite()
+# Wait for the Flask server to be ready
+while poll_flask_status() != "Flask server is running.":
+    print("Waiting for Flask server to be ready...")
+    time.sleep(0.5)
 
-    # --- Streamlit Chat Interface with Sample Questions ---
-    if "messages" not in st.session_state:
-        st.session_state["messages"] = []
-    if "sample_input" not in st.session_state:
-        st.session_state["sample_input"] = ""
+# Update the start message
+start_message.empty()
 
-    chat_message_container = st.container(border=True, height=550)
-    with chat_message_container:
-        for msg in st.session_state["messages"]:
-            with st.chat_message(msg["role"]):
-                if isinstance(msg["content"], dict):
-                    # Show data context in expander above the response
-                    with st.expander("Show Data Context", expanded=False):
-                        data_context = msg["content"].get("data_context", "No data context returned.")
-                        render_data_context_table(data_context)
-                    # Show logs in expander below the response
-                    with st.expander("Show Logs", expanded=False):
-                        logs = msg["content"].get("logs", "No logs available.")
-                        if logs and logs.strip():
-                            for log_line in logs.splitlines():
-                                if "[id=" in log_line:
-                                    st.markdown(f"- {log_line}")
-                        else:
-                            st.markdown("No logs available.")
-                    # --- Flowchart visualization ---
-                    logs = msg["content"].get("logs", "")
-                    G = None
-                    fig = None
+with st.expander("LLM Configuration", expanded=False):
+    st.markdown("## LLM Mode Selection")
+    mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
+    mode_status = set_mode_on_server(mode)
+    st.text(mode_status)
+
+    # Cloudflare model selectors
+    if mode == "cloudflare":
+        st.markdown("### Cloudflare Model Selection")
+        cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
+        cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
+        set_cloudflare_models(mode, cf_gen_model, cf_emb_model)
+        cf_model_status = get_cloudflare_model_status()
+        st.text_area("Current Cloudflare Models (Backend Verified)", cf_model_status, height=68)
+
+    st.markdown("## LLM Call Type")
+    stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
+    max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
+
+# --- IFC File Upload Section ---
+with st.expander("IFC File Management", expanded=False):
+    st.markdown("## Upload Your IFC File")
+    with st.form("ifc_upload_form", clear_on_submit=True):
+        uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
+        upload_button = st.form_submit_button("Upload IFC File")
+        if upload_button:
+            ifc_file_upload(uploaded_ifc)
+    download_latest = st.button("Download Latest IFC File")
+    if download_latest:
+        ifc_file_download()
+    
+    summary_col, viewer_col = st.columns([1, 3], vertical_alignment="top")
+    with summary_col:
+        # Always refresh summary and BIM viewer if a file is loaded
+        # if uploaded_ifc is not None:
+            st.markdown("#### Current IFC Model Summary")
+            st.write("")
+            filename = get_latest_ifc_filename()
+            if filename:
+                current_ifc_url = f"http://127.0.0.1:{FLASK_PORT}/download_ifc/{filename}"
+                current_ifc = requests.get(current_ifc_url).content
+                st.caption(f"Showing summary for: {filename}")
+                visualize_ifc_summary(current_ifc)
+            else:
+                st.info("No IFC file found.")
+    with viewer_col:
+        st.markdown("#### Current IFC Model Viewer")
+        show_ifcjs_viewer_vite()
+
+# --- Streamlit Chat Interface with Sample Questions ---
+if "messages" not in st.session_state:
+    st.session_state["messages"] = []
+if "sample_input" not in st.session_state:
+    st.session_state["sample_input"] = ""
+
+chat_message_container = st.container(border=True, height=550)
+with chat_message_container:
+    for msg in st.session_state["messages"]:
+        with st.chat_message(msg["role"]):
+            if isinstance(msg["content"], dict):
+                # Show data context in expander above the response
+                with st.expander("Show Data Context", expanded=False):
+                    data_context = msg["content"].get("data_context", "No data context returned.")
+                    render_data_context_table(data_context)
+                # Show logs in expander below the response
+                with st.expander("Show Logs", expanded=False):
+                    logs = msg["content"].get("logs", "No logs available.")
                     if logs and logs.strip():
-                        G = parse_log_flowchart(logs)
-                        fig, flowchart_key = plot_flowchart(G)
-                    col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
-                    with col_flowchart:
-                        if fig is not None and G is not None and len(G.nodes) > 0:
-                            st.markdown("##### Backend Flowchart")
-                            st.plotly_chart(fig, use_container_width=True, key=flowchart_key)
-                        else:
-                            st.info("No flowchart data available for these logs.")
-                    with col_response:
-                        st.markdown(msg["content"].get("response", ""))
-                        # --- Token Usage Report ---
-                        logs = msg["content"].get("logs", "")
-                        elapsed_time = msg.get("elapsed_time")
-                        render_token_usage_report(logs, elapsed_time=elapsed_time)
-                else:
-                    st.markdown(msg["content"])
-    with st.container():
-        user_input = st.chat_input("Type your question or select a sample below...", key="chat_input")
+                        for log_line in logs.splitlines():
+                            if "[id=" in log_line:
+                                st.markdown(f"- {log_line}")
+                    else:
+                        st.markdown("No logs available.")
+                # --- Flowchart visualization ---
+                logs = msg["content"].get("logs", "")
+                G = None
+                fig = None
+                if logs and logs.strip():
+                    G = parse_log_flowchart(logs)
+                    fig, flowchart_key = plot_flowchart(G)
+                col_flowchart, col_response = st.columns([1, 3], vertical_alignment="bottom")
+                with col_flowchart:
+                    if fig is not None and G is not None and len(G.nodes) > 0:
+                        st.markdown("##### Backend Flowchart")
+                        st.plotly_chart(fig, use_container_width=True, key=flowchart_key)
+                    else:
+                        st.info("No flowchart data available for these logs.")
+                with col_response:
+                    st.markdown(msg["content"].get("response", ""))
+                    # --- Token Usage Report ---
+                    logs = msg["content"].get("logs", "")
+                    elapsed_time = msg.get("elapsed_time")
+                    render_token_usage_report(logs, elapsed_time=elapsed_time)
+            else:
+                st.markdown(msg["content"])
+with st.container():
+    user_input = st.chat_input("Type your question or select a sample below...", key="chat_input")
 
-    col1, col2 = st.columns([3, 1], vertical_alignment="bottom")
-    with col1:
-        sample = st.selectbox("Or select a sample question", sample_questions, key="sample_dropdown")
-    with col2:
-        send_sample = st.button("Send Sample Question")
+col1, col2 = st.columns([3, 1], vertical_alignment="bottom")
+with col1:
+    sample = st.selectbox("Or select a sample question", sample_questions, key="sample_dropdown")
+with col2:
+    send_sample = st.button("Send Sample Question")
 
-    # Handle sending a sample question
-    if send_sample and sample:
-        handle_chat_interaction(sample, chat_message_container, default_rag_mode, stream_mode, max_tokens)
+# Handle sending a sample question
+if send_sample and sample:
+    handle_chat_interaction(sample, chat_message_container, default_rag_mode, stream_mode, max_tokens)
 
-    # Handle freeform chat input
-    if user_input:
-        handle_chat_interaction(user_input, chat_message_container, default_rag_mode, stream_mode, max_tokens)
-
-if __name__ == "__main__":
-    # Start Flask server (and Vite if needed) before launching Streamlit
-    status = run_flask_server()
-    print(status)
-    # Optionally, wait for Flask to be ready
-    while poll_flask_status() != "Flask server is running.":
-        time.sleep(0.5)
-    # Now run the Streamlit app
-    main()
+# Handle freeform chat input
+if user_input:
+    handle_chat_interaction(user_input, chat_message_container, default_rag_mode, stream_mode, max_tokens)
