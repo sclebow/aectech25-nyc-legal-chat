@@ -6,11 +6,12 @@ from project_utils import rag_utils
 from server import config
 import uuid
 import logging
-import time
+# import time
 import threading
 import queue
 import os
 from logger_setup import setup_logger, set_request_id
+import sys
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes (sufficient for local dev)
@@ -163,5 +164,11 @@ def latest_ifc_filename():
         return jsonify({'status': 'error', 'message': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(debug=False, use_reloader=False)
+    port = 5555  # default
+    if len(sys.argv) > 1:
+        try:
+            port = int(sys.argv[1])
+        except Exception:
+            pass
+    app.run(debug=False, use_reloader=False, port=port)
 
