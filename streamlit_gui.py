@@ -425,6 +425,7 @@ def ifc_file_download():
         except Exception as e:
             st.error(f"Exception during download: {e}")
 
+@st.cache_data
 def visualize_ifc_3d(uploaded_ifc):
     """Visualize IFC geometry in 3D using ifcopenshell and plotly (interactive)."""
     if uploaded_ifc is not None:
@@ -478,6 +479,7 @@ def visualize_ifc_3d(uploaded_ifc):
         except Exception as e:
             st.error(f"Failed to render 3D IFC: {e}")
 
+@st.cache_data
 def visualize_ifc_summary(uploaded_ifc):
     """Parse IFC and show a summary table of element types and counts."""
     if uploaded_ifc is not None:
@@ -511,14 +513,14 @@ def show_ifcjs_viewer_vite(height=600):
         <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
     """, height=height)
 
-def main():
+def appy():
     # --- Streamlit Chat Interface with Sample Questions ---
     st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
     st.title("ROI LLM Assistant")
     # st.markdown("This is a Streamlit GUI for the ROI LLM Assistant.")
 
     start_message = st.warning("Starting Flask server...")
-    if poll_flask_status() != "Flask server is running.":
+    if poll_flask_status() != "Flask server is running."
         # Start the Flask server in a separate thread
         start_flask_and_wait()
 
@@ -563,7 +565,7 @@ def main():
         summary_col, viewer_col = st.columns([1, 3], vertical_alignment="top")
         with summary_col:
             # Always refresh summary and BIM viewer if a file is loaded
-            # if uploaded_ifc is not None:
+            if uploaded_ifc is not None:
                 st.markdown("#### Current IFC Model Summary")
                 st.write("")
                 filename = get_latest_ifc_filename()
@@ -649,4 +651,4 @@ if __name__ == "__main__":
     while poll_flask_status() != "Flask server is running.":
         time.sleep(0.5)
     # Now run the Streamlit app
-    main()
+    appy()
