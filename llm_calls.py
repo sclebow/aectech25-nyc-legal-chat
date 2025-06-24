@@ -1,5 +1,5 @@
 import server.config as config  
-from project_utils.rag_utils import rag_call_alt
+
 import time
 import concurrent.futures
 import logging
@@ -10,6 +10,13 @@ from logger_setup import get_request_id, set_request_id
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
 from bdg_data import bdg_utils
+from project_utils.rag_utils import rag_call_alt
+from valuation_estimate import predict_property_value
+
+import json
+
+with open('./valuation_model/freq_mappings.json') as f:
+    valuation_model_dict = json.load(f)
 
 def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2, request_id: str = None) -> str:
     """ Run a query against the LLM with a system prompt and user input.
@@ -100,6 +107,7 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
         "Query: What is the value of this building based on its size and type?\nOutput: value model\n"
         "Query: How can I reduce construction costs without changing the layout?\nOutput: knowledge base, cost model\n"
         "Query: What is the total concrete cost for this project?\nOutput: project data\n"
+        "Query: What is the estimated valuation of this 3 bedroom, 1 bathroom unit? \n Output: valuation model\n"
     )
 
     thread_id = threading.get_ident()
@@ -203,7 +211,25 @@ def get_value_model_context(message: str, request_id: str = None, thread_id: int
     thread_id_str = str(thread_id_val)
     parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
     logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_value_model_context] [called_by={caller}] [description=message: {message}]")
-    return "Value model is not implemented yet."  # Placeholder
+
+    prompt = """
+        You are a valuation agent that provides cost estimates for real estate, you have access to a model which will return a valuation estimate\
+        which requires the following fields: 
+            {
+            LIVING_AREA the living area in square feet,
+            GROSS_AREA: the total area of the building in square feet,
+            LAND_SF: the land area in square feet,
+            FULL_BTH: the number of full bathrooms,
+            CD_FLOOR: the floor number of the property,
+            BLDG_TYPE: the building type, options are {},
+            RES_FLOOR: the number of residential floors,
+            TT_RMS: the total number of rooms
+            },
+        provide a dict of with these keys and the values for each of them based on the users query or your best guess.
+        """.format(valuation_model_dict['BLDG_TYPE'].keys)
+    valuation_dict = run_llm_query(prompt, message)
+    print(valuation_dict)
+    return predict_property_value(valuation_dict) # Placeholder
 
 def get_cost_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
