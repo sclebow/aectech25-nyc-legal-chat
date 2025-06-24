@@ -242,12 +242,12 @@ def get_value_model_context(message: str, request_id: str = None, thread_id: int
     if match:
         feat_dict = ast.literal_eval(match.group())
         predicted_value = predict_property_value(feat_dict) 
-        print(f'the valuation model predicted value is ${predicted_value:.2f}')
+        print(f'the valuation model predicted value is ${predicted_value:.0f}')
     else:
         predicted_value = ""
         raise ValueError("No dict found in LLM output")
     
-    return f'the valuation model predicted value is ${predicted_value:.2f}'
+    return f'the valuation model predicted value is ${predicted_value:.0f}'
 
 def get_cost_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
@@ -300,7 +300,7 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         "ifc": get_ifc_context,
         "project data": get_project_data_context,
         "knowledge base": get_knowledge_base_context,
-        "value model prediction": get_value_model_context,
+        "value model": get_value_model_context,
         "cost model": get_cost_model_context,
     }
 
