@@ -501,6 +501,8 @@ def show_ifcjs_viewer_vite(height=600):
         <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
     """, height=height)
 
+
+
 # --- Streamlit Chat Interface with Sample Questions ---
 st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
 st.title("ROI LLM Assistant")
