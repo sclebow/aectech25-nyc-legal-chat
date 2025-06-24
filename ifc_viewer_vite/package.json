@@ -8,9 +8,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "web-ifc-viewer": "^1.0.218"
+    "@thatopen/components": "^2.0.0",
+    "@thatopen/ui": "^2.4.5",
+    "@thatopen/ui-obc": "^2.4.4",
+    "stats.js": "^0.17.0"
   },
   "devDependencies": {
+    "@types/stats.js": "^0.17.4",
     "vite": "^5.0.0"
   }
 }
