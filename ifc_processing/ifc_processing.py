@@ -10,6 +10,8 @@ import multiprocessing
 import numpy as np
 import pandas as pd
 
+from sklearn.cluster import DBSCAN
+
 def build_ifc_df(ifc_file):
     """
     Build a DataFrame from an IFC file containing element data.
@@ -47,6 +49,47 @@ def build_ifc_df(ifc_file):
     element_data_df = pd.DataFrame.from_dict(element_data_dict, orient='index')
     return element_data_df
 
+def assign_levels(element_data_df, threshold=0.1):
+    """
+    Assign levels to elements in the DataFrame based on their Z-coordinate using clustering.
+    Adds a 'level' column to the DataFrame.
+
+    :param element_data_df: DataFrame of all elements with a 'z' column.
+    :param threshold: Clustering threshold for DBSCAN (in Z units).
+    :return: DataFrame with a new 'level' column.
+    """
+    # Extract Z-coordinates from the DataFrame
+    z_coordinates = element_data_df['z'].values.reshape(-1, 1)
+    print(len(z_coordinates), "Z-coordinates extracted from elements.")
+    # Use DBSCAN to cluster elements based on their Z-coordinates
+    clustering = DBSCAN(eps=threshold, min_samples=2).fit(z_coordinates)
+    labels = clustering.labels_
+
+    # Reorder cluster labels so that level 1 is the lowest Z cluster
+    import collections
+    label_to_zs = collections.defaultdict(list)
+    for label, z in zip(labels, element_data_df['z'].values):
+        if label != -1:
+            label_to_zs[label].append(z)
+    # Compute mean Z for each cluster label
+    label_mean_z = {label: np.mean(zs) for label, zs in label_to_zs.items()}
+    # Sort labels by mean Z (ascending)
+    sorted_labels = sorted(label_mean_z, key=lambda l: label_mean_z[l])
+    # Map old labels to new levels (starting from 1)
+    label_to_level = {label: i+1 for i, label in enumerate(sorted_labels)}
+
+    # Assign new levels
+    levels = []
+    for label in labels:
+        if label == -1:
+            levels.append(-1)
+        else:
+            levels.append(label_to_level[label])
+    element_data_df = element_data_df.copy()
+    element_data_df['level'] = levels
+
+    return element_data_df
+
 def process_ifc_file(ifc_file):
     """
     Process an IFC file to extract relevant data.
@@ -60,6 +103,8 @@ def process_ifc_file(ifc_file):
     
     element_data_df = build_ifc_df(ifc_file)
 
+    # Assign levels to elements based on their Z-coordinate
+    element_data_df = assign_levels(element_data_df, threshold=0.4)
 
     # Add time data to the DataFrame
     # Replace 'Parent.Quantity' with None in 'Source Qty' column
@@ -69,7 +114,7 @@ def process_ifc_file(ifc_file):
         lambda x: x.split('/')[-1] if isinstance(x, str) else None
     )
 
-    wbs_df = wbs_df[['Source Qty', 'Unit', 'Input Unit', 'Consumption', 'RS $ cons.']]
+    wbs_df = wbs_df[['Source Qty', 'Unit', 'Input Unit', 'Consumption', 'RS $ cons.', 'Description']]
 
     # Clean up 'Source Qty' column
     unique_names = element_data_df['name'].unique().tolist()  # Get unique names from element_data_df
@@ -146,37 +191,91 @@ def process_ifc_file(ifc_file):
         total_cost = length_total + area_total + volume_total + quantity_total
         element_data_df.at[idx, 'total_cost'] = total_cost
 
-    # Drop na values in 'total_work_hours' and 'total_cost' columns in a new DataFrame
-    element_data_df_clean = element_data_df.dropna(subset=['total_work_hours', 'total_cost'])
-    # Print the cleaned DataFrame
-    print("Cleaned Element Data DataFrame:")
-    pprint(element_data_df_clean.head())
+    # # Add 'Description' column from WBS to element_data_df by matching 'name' with 'Source Qty'
+    # element_data_df['Description'] = element_data_df['name'].map(wbs_df.set_index('Source Qty')['Description'])
+    # # Fill NaN values in 'Description' with an empty string
+    # element_data_df['Description'] = element_data_df['Description'].fillna('')
 
-    # Create a total cost and work hours per element type dataframe
-    total_costs_per_type = element_data_df.groupby('type').agg(
+    # Replace zero work hours and costs with "Unknown"
+    element_data_df['total_work_hours'] = element_data_df['total_work_hours'].replace(0, "Unknown")
+    element_data_df['total_cost'] = element_data_df['total_cost'].replace(0, "Unknown")
+
+    # Create a total cost and work hours per element name dataframe, handle strings and NaNs just for this calculation
+    element_data_df_for_grouping = element_data_df.copy()
+    element_data_df_for_grouping['total_cost'] = pd.to_numeric(element_data_df_for_grouping['total_cost'], errors='coerce').fillna(0)
+    element_data_df_for_grouping['total_work_hours'] = pd.to_numeric(element_data_df_for_grouping['total_work_hours'], errors='coerce').fillna(0)
+    total_costs_per_name = element_data_df_for_grouping.groupby('name').agg(
         total_cost=('total_cost', 'sum'),
         total_work_hours=('total_work_hours', 'sum')
     ).reset_index()
+
+    # Drop zero total costs and work hours
+    total_costs_per_name = total_costs_per_name[total_costs_per_name['total_cost'] != 0]
+    total_costs_per_name = total_costs_per_name[total_costs_per_name['total_work_hours'] != 0]
+    # Drop empty names
+    total_costs_per_name = total_costs_per_name[total_costs_per_name['name'] != '']
+    # Reindex the DataFrame
+    total_costs_per_name = total_costs_per_name.reset_index(drop=True)
+
+    # Create a total cost and work hours per level dataframe, group by 'level' and 'name' and aggregate, handle strings and NaNs
+    total_costs_per_level = element_data_df_for_grouping.groupby(['level', 'name']).agg(
+        total_cost=('total_cost', 'sum'),
+        total_work_hours=('total_work_hours', 'sum')
+    ).reset_index()
+    # Drop zero total costs and work hours
+    total_costs_per_level = total_costs_per_level[total_costs_per_level['total_cost'] != 0]
+    total_costs_per_level = total_costs_per_level[total_costs_per_level['total_work_hours'] != 0]
+    # Drop empty names
+    total_costs_per_level = total_costs_per_level[total_costs_per_level['name'] != '']
+    # Reindex the DataFrame
+    total_costs_per_level = total_costs_per_level.reset_index(drop=True)
+    # Renumber the levels to start from 0 and step by 1
+    unique_names = total_costs_per_level['name'].unique()
+    level_mapping = {name: i for i, name in enumerate(unique_names)}
+    total_costs_per_level['level'] = total_costs_per_level['level'].map(level_mapping)
+
+    # # Add Description to total_costs_per_name
+    # total_costs_per_name = total_costs_per_name.merge(
+    #     element_data_df[['name', 'Description']].drop_duplicates(),
+    #     on='name', how='left'
+    # )
+    # # Reorder columns for clarity
+    # total_costs_per_name = total_costs_per_name[['name', 'Description', 'total_cost', 'total_work_hours']]
+    # # Drop 'name' column
+    # total_costs_per_name.drop(columns=['name'], inplace=True)
+
+    # # Add Description to total_costs_per_level
+    # total_costs_per_level = total_costs_per_level.merge(
+    #     element_data_df[['level', 'name', 'Description']].drop_duplicates(),
+    #     on=['level', 'name'], how='left'
+    # )
+    # total_costs_per_level = total_costs_per_level[['level', 'name', 'Description', 'total_cost', 'total_work_hours']]
+    # # Drop 'name' column
+    # total_costs_per_level.drop(columns=['name'], inplace=True)
 
     # Print the final DataFrame
     print("Final Element Data DataFrame:")
     pprint(element_data_df.head())
 
-    # Print the final Dataframe for total costs and work hours per element type
-    print("Final Total Costs and Work Hours per Element Type DataFrame:")
-    pprint(total_costs_per_type)
+    # Print the final Dataframe for total costs and work hours per element name
+    print("Final Total Costs and Work Hours per Element Name DataFrame:")
+    pprint(total_costs_per_name)
 
-    # Save the final DataFrame to a CSV file
-    output_file = os.path.join(os.path.dirname(__file__), 'element_data.csv')
-    element_data_df.to_csv(output_file, index=False)
-    print(f"Element data saved to {output_file}")
+    # Print the final Dataframe for total costs and work hours per level
+    print("Final Total Costs and Work Hours per Level DataFrame:")
+    pprint(total_costs_per_level)
 
-    # Save the final WBS DataFrame to a CSV file
-    wbs_output_file = os.path.join(os.path.dirname(__file__), 'wbs_data.csv')
-    wbs_df.to_csv(wbs_output_file, index=False)
-    print(f"WBS data saved to {wbs_output_file}")
+    # # Save the final DataFrame to a CSV file
+    # output_file = os.path.join(os.path.dirname(__file__), 'element_data.csv')
+    # element_data_df.to_csv(output_file, index=False)
+    # print(f"Element data saved to {output_file}")
 
-    return element_data_df
+    # # Save the final WBS DataFrame to a CSV file
+    # wbs_output_file = os.path.join(os.path.dirname(__file__), 'wbs_data.csv')
+    # wbs_df.to_csv(wbs_output_file, index=False)
+    # print(f"WBS data saved to {wbs_output_file}")
+
+    return element_data_df, total_costs_per_name, total_costs_per_level
 
 def get_wbs_from_directory(directory):
     """
