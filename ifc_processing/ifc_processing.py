@@ -191,11 +191,6 @@ def process_ifc_file(ifc_file):
         total_cost = length_total + area_total + volume_total + quantity_total
         element_data_df.at[idx, 'total_cost'] = total_cost
 
-    # # Add 'Description' column from WBS to element_data_df by matching 'name' with 'Source Qty'
-    # element_data_df['Description'] = element_data_df['name'].map(wbs_df.set_index('Source Qty')['Description'])
-    # # Fill NaN values in 'Description' with an empty string
-    # element_data_df['Description'] = element_data_df['Description'].fillna('')
-
     # Replace zero work hours and costs with "Unknown"
     element_data_df['total_work_hours'] = element_data_df['total_work_hours'].replace(0, "Unknown")
     element_data_df['total_cost'] = element_data_df['total_cost'].replace(0, "Unknown")
@@ -234,24 +229,9 @@ def process_ifc_file(ifc_file):
     level_mapping = {name: i for i, name in enumerate(unique_names)}
     total_costs_per_level['level'] = total_costs_per_level['level'].map(level_mapping)
 
-    # # Add Description to total_costs_per_name
-    # total_costs_per_name = total_costs_per_name.merge(
-    #     element_data_df[['name', 'Description']].drop_duplicates(),
-    #     on='name', how='left'
-    # )
-    # # Reorder columns for clarity
-    # total_costs_per_name = total_costs_per_name[['name', 'Description', 'total_cost', 'total_work_hours']]
-    # # Drop 'name' column
-    # total_costs_per_name.drop(columns=['name'], inplace=True)
-
-    # # Add Description to total_costs_per_level
-    # total_costs_per_level = total_costs_per_level.merge(
-    #     element_data_df[['level', 'name', 'Description']].drop_duplicates(),
-    #     on=['level', 'name'], how='left'
-    # )
-    # total_costs_per_level = total_costs_per_level[['level', 'name', 'Description', 'total_cost', 'total_work_hours']]
-    # # Drop 'name' column
-    # total_costs_per_level.drop(columns=['name'], inplace=True)
+    # Total costs and work hours sum
+    total_costs_sum = total_costs_per_name['total_cost'].sum()
+    total_work_hours_sum = total_costs_per_name['total_work_hours'].sum()
 
     # Print the final DataFrame
     print("Final Element Data DataFrame:")
@@ -275,7 +255,7 @@ def process_ifc_file(ifc_file):
     # wbs_df.to_csv(wbs_output_file, index=False)
     # print(f"WBS data saved to {wbs_output_file}")
 
-    return element_data_df, total_costs_per_name, total_costs_per_level
+    return element_data_df, total_costs_per_name, total_costs_per_level, total_costs_sum, total_work_hours_sum
 
 def get_wbs_from_directory(directory):
     """
@@ -341,13 +321,13 @@ def load_wbs(directory):
         print(f"Error loading WBS file: {e}")
         return None
 
-if __name__ == "__main__":
-    # Change path to root directory of the project which is one level up from this script
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    project_root = os.path.abspath(os.path.join(current_dir, os.pardir))
-    # Add the project root to the system path
-    if project_root not in os.sys.path:
-        os.sys.path.append(project_root)
-    from project_utils.ifc_utils import ifc
-    # Define the path to the IFC file
-    process_ifc_file(ifc)
+# if __name__ == "__main__":
+#     # Change path to root directory of the project which is one level up from this script
+#     current_dir = os.path.dirname(os.path.abspath(__file__))
+#     project_root = os.path.abspath(os.path.join(current_dir, os.pardir))
+#     # Add the project root to the system path
+#     if project_root not in os.sys.path:
+#         os.sys.path.append(project_root)
+#     from project_utils.ifc_utils import ifc
+#     # Define the path to the IFC file
+#     process_ifc_file(ifc)
