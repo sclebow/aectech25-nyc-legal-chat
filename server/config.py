@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID")
 CLOUDFLARE_API_KEY = os.getenv("CLOUDFLARE_API_KEY")
 
@@ -24,7 +24,7 @@ def set_mode(new_mode, cf_gen_model=None, cf_sml_model=None, cf_emb_model=None):
 
 # API
 local_client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
-openai_client = OpenAI(api_key=OPENAI_API_KEY)
+# openai_client = OpenAI(api_key=OPENAI_API_KEY)
 cloudflare_client = OpenAI(base_url = f"https://api.cloudflare.com/client/v4/accounts/{CLOUDFLARE_ACCOUNT_ID}/ai/v1", api_key = CLOUDFLARE_API_KEY)
 
 
@@ -34,13 +34,13 @@ cloudflare_embedding_model = "@cf/baai/bge-base-en-v1.5"
 openai_embedding_model = "text-embedding-3-small"
 
 # Notice how this model is not running locally. It uses an OpenAI key.
-gpt4o = [
-        {
-            "model": "gpt-4o",
-            "api_key": OPENAI_API_KEY,
-            "cache_seed": random.randint(0, 100000),
-        }
-]
+# gpt4o = [
+#         {
+#             "model": "gpt-4o",
+#             "api_key": OPENAI_API_KEY,
+#             "cache_seed": random.randint(0, 100000),
+#         }
+# ]
 
 # Notice how this model is running locally. Uses local server with LMStudio
 llama3 = [
@@ -84,13 +84,13 @@ def api_mode (mode, cf_gen_model=None, cf_sml_model=None, cf_emb_model=None):
         embedding_model = cf_emb_model if cf_emb_model else cloudflare_embedding_model
         return client, completion_model, completion_model_sml, embedding_model
     
-    elif mode == "openai":
-        client = openai_client
-        completion_model = gpt4o[0]['model']
-        completion_model_sml = gpt4o[0]['model']
-        embedding_model = openai_embedding_model
+    # elif mode == "openai":
+    #     client = openai_client
+    #     completion_model = gpt4o[0]['model']
+    #     completion_model_sml = gpt4o[0]['model']
+    #     embedding_model = openai_embedding_model
 
-        return client, completion_model, completion_model_sml, embedding_model
+        # return client, completion_model, completion_model_sml, embedding_model
     else:
         raise ValueError("Please specify if you want to run local or openai models")
 

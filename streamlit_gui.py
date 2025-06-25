@@ -39,7 +39,7 @@ default_flask_port = 5000
 default_vite_port = 5173
 
 default_rag_mode = "LLM only"
-MODE_OPTIONS = ["local", "openai", "cloudflare"]
+MODE_OPTIONS = ["local", "cloudflare"]
 sample_questions = [
     "What are some cost modeling best practices?",
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
@@ -556,7 +556,7 @@ start_message.empty()
 
 with st.expander("LLM Configuration", expanded=False):
     st.markdown("## LLM Mode Selection")
-    mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[2], key="mode_radio", selection_mode="single")
+    mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[1], key="mode_radio", selection_mode="single")
     mode_status = set_mode_on_server(mode)
     st.text(mode_status)
 
@@ -564,7 +564,7 @@ with st.expander("LLM Configuration", expanded=False):
     if mode == "cloudflare":
         st.markdown("### Cloudflare Model Selection")
         cf_gen_model = st.selectbox("Cloudflare Text Generation Model", cloudflare_models, key="cf_gen_model")
-        cf_sml_model = st.selectbox("Cloudflare Small Task Model", cloudflare_sml_models, key="cf_gen_model")
+        cf_sml_model = st.selectbox("Cloudflare Small Task Model", cloudflare_sml_models, key="cf_sml_model")
         cf_emb_model = st.selectbox("Cloudflare Embedding Model", cloudflare_embedding_models, key="cf_emb_model")
         set_cloudflare_models(mode, cf_gen_model, cf_sml_model, cf_emb_model)
         cf_model_status = get_cloudflare_model_status()
