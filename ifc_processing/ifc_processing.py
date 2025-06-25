@@ -71,15 +71,15 @@ def process_ifc_file(ifc_file):
 
     wbs_df = wbs_df[['Source Qty', 'Unit', 'Input Unit', 'Consumption', 'RS $ cons.']]
 
+    # Clean up 'Source Qty' column
+    unique_names = element_data_df['name'].unique().tolist()  # Get unique names from element_data_df
+    wbs_df['Source Qty'] = wbs_df['Source Qty'].astype(str).str.split('.').str[:-1].str.join('.')  # Remove the last part after the last dot
+    wbs_df = wbs_df[wbs_df['Source Qty'].apply(lambda x: any(name in str(x) for name in unique_names))]  # Filter rows where 'Source Qty' contains any of the names in element_data_df
     # Drop rows where 'Input Unit' is 'TON', '-', or None
     wbs_df = wbs_df[~wbs_df['Input Unit'].isin(['TON', '-', None])]
 
     # Replace input units in FT with LF
     wbs_df['Input Unit'] = wbs_df['Input Unit'].replace('FT', 'LF')
-
-    # Debug: Print all the unique input units in the WBS DataFrame
-    print("Unique Input Units in WBS DataFrame:")
-    pprint(wbs_df['Input Unit'].unique())
 
     # Calculate total work hours and total cost for each element in a single loop
     wbs_df['Consumption'] = pd.to_numeric(wbs_df['Consumption'], errors='coerce')
@@ -87,8 +87,8 @@ def process_ifc_file(ifc_file):
     total_work_hours = wbs_df.groupby(['Source Qty', 'Input Unit'])['Consumption'].sum().reset_index()
     total_costs = wbs_df.groupby(['Source Qty', 'Input Unit'])['RS $ cons.'].sum().reset_index()
 
-    element_data_df['total_work_hours'] = 0.0
-    element_data_df['total_cost'] = 0.0
+    element_data_df['total_work_hours'] = None
+    element_data_df['total_cost'] = None
     for idx, element in element_data_df.iterrows():
         name = element['name']
         # Work hours
@@ -145,6 +145,36 @@ def process_ifc_file(ifc_file):
         quantity_total = quantity_cost * 1
         total_cost = length_total + area_total + volume_total + quantity_total
         element_data_df.at[idx, 'total_cost'] = total_cost
+
+    # Drop na values in 'total_work_hours' and 'total_cost' columns in a new DataFrame
+    element_data_df_clean = element_data_df.dropna(subset=['total_work_hours', 'total_cost'])
+    # Print the cleaned DataFrame
+    print("Cleaned Element Data DataFrame:")
+    pprint(element_data_df_clean.head())
+
+    # Create a total cost and work hours per element type dataframe
+    total_costs_per_type = element_data_df.groupby('type').agg(
+        total_cost=('total_cost', 'sum'),
+        total_work_hours=('total_work_hours', 'sum')
+    ).reset_index()
+
+    # Print the final DataFrame
+    print("Final Element Data DataFrame:")
+    pprint(element_data_df.head())
+
+    # Print the final Dataframe for total costs and work hours per element type
+    print("Final Total Costs and Work Hours per Element Type DataFrame:")
+    pprint(total_costs_per_type)
+
+    # Save the final DataFrame to a CSV file
+    output_file = os.path.join(os.path.dirname(__file__), 'element_data.csv')
+    element_data_df.to_csv(output_file, index=False)
+    print(f"Element data saved to {output_file}")
+
+    # Save the final WBS DataFrame to a CSV file
+    wbs_output_file = os.path.join(os.path.dirname(__file__), 'wbs_data.csv')
+    wbs_df.to_csv(wbs_output_file, index=False)
+    print(f"WBS data saved to {wbs_output_file}")
 
     return element_data_df
 
