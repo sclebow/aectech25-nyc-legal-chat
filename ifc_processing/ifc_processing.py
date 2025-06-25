@@ -77,11 +77,74 @@ def process_ifc_file(ifc_file):
     # Replace input units in FT with LF
     wbs_df['Input Unit'] = wbs_df['Input Unit'].replace('FT', 'LF')
 
-
-
     # Debug: Print all the unique input units in the WBS DataFrame
     print("Unique Input Units in WBS DataFrame:")
-    pprint(wbs_df['Input Unit'].unique())    
+    pprint(wbs_df['Input Unit'].unique())
+
+    # Calculate total work hours and total cost for each element in a single loop
+    wbs_df['Consumption'] = pd.to_numeric(wbs_df['Consumption'], errors='coerce')
+    wbs_df['RS $ cons.'] = pd.to_numeric(wbs_df['RS $ cons.'], errors='coerce')
+    total_work_hours = wbs_df.groupby(['Source Qty', 'Input Unit'])['Consumption'].sum().reset_index()
+    total_costs = wbs_df.groupby(['Source Qty', 'Input Unit'])['RS $ cons.'].sum().reset_index()
+
+    element_data_df['total_work_hours'] = 0.0
+    element_data_df['total_cost'] = 0.0
+    for idx, element in element_data_df.iterrows():
+        name = element['name']
+        # Work hours
+        mask_length = (
+            (total_work_hours['Source Qty'] == name) &
+            (total_work_hours['Input Unit'] == 'LF')
+        )
+        length_consumption = total_work_hours.loc[mask_length, 'Consumption'].sum()
+        mask_area = (
+            (total_work_hours['Source Qty'] == name) &
+            (total_work_hours['Input Unit'] == 'SF')
+        )
+        area_consumption = total_work_hours.loc[mask_area, 'Consumption'].sum()
+        mask_volume = (
+            (total_work_hours['Source Qty'] == name) &
+            (total_work_hours['Input Unit'] == 'CY')
+        )
+        volume_consumption = total_work_hours.loc[mask_volume, 'Consumption'].sum()
+        quantity_mask = (
+            (total_work_hours['Source Qty'] == name) &
+            (total_work_hours['Input Unit'] == 'EA')
+        )
+        quantity_consumption = total_work_hours.loc[quantity_mask, 'Consumption'].sum()
+        length_hours = length_consumption * element.get('length', 0)
+        area_hours = area_consumption * element.get('area', 0)
+        volume_hours = volume_consumption * element.get('volume', 0)
+        quantity_hours = quantity_consumption * 1
+        total_hours = length_hours + area_hours + volume_hours + quantity_hours
+        element_data_df.at[idx, 'total_work_hours'] = total_hours
+        # Costs
+        mask_length_c = (
+            (total_costs['Source Qty'] == name) &
+            (total_costs['Input Unit'] == 'LF')
+        )
+        length_cost = total_costs.loc[mask_length_c, 'RS $ cons.'].sum()
+        mask_area_c = (
+            (total_costs['Source Qty'] == name) &
+            (total_costs['Input Unit'] == 'SF')
+        )
+        area_cost = total_costs.loc[mask_area_c, 'RS $ cons.'].sum()
+        mask_volume_c = (
+            (total_costs['Source Qty'] == name) &
+            (total_costs['Input Unit'] == 'CY')
+        )
+        volume_cost = total_costs.loc[mask_volume_c, 'RS $ cons.'].sum()
+        quantity_mask_c = (
+            (total_costs['Source Qty'] == name) &
+            (total_costs['Input Unit'] == 'EA')
+        )
+        quantity_cost = total_costs.loc[quantity_mask_c, 'RS $ cons.'].sum()
+        length_total = length_cost * element.get('length', 0)
+        area_total = area_cost * element.get('area', 0)
+        volume_total = volume_cost * element.get('volume', 0)
+        quantity_total = quantity_cost * 1
+        total_cost = length_total + area_total + volume_total + quantity_total
+        element_data_df.at[idx, 'total_cost'] = total_cost
 
     return element_data_df
 
