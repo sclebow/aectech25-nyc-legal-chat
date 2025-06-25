@@ -1,10 +1,10 @@
 import os
 import ifcopenshell
-import ifcopenshell.util
-import ifcopenshell.util.shape
-import ifcopenshell.util.element
-import ifcopenshell.geom
-import multiprocessing
+# import ifcopenshell.util
+# import ifcopenshell.util.shape
+# import ifcopenshell.util.element
+# import ifcopenshell.geom
+# import multiprocessing
 import logging
 import threading
 import inspect

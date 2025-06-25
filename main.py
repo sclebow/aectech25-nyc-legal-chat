@@ -1,6 +1,6 @@
 # import server.config as config
 import llm_calls
-from utils import rag_utils
+from project_utils import rag_utils
 import json
 import tkinter as tk
 from tkinter import simpledialog

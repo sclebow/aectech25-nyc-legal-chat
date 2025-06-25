@@ -8,11 +8,8 @@ import subprocess
 import os
 import time
 import threading
-import datetime
-import server.config as config
 from logger_setup import setup_logger
-import networkx as nx
-import plotly.graph_objects as go
+# import plotly.graph_objects as go
 from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
 import pandas as pd
 import re
