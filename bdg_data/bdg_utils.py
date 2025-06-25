@@ -182,7 +182,7 @@ def get_project_data_context_from_query(message, request_id=None):
     parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
     log_prefix = f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_project_data_context_from_query] [called_by={caller}]"
     logging.info(f"{log_prefix} [description=Calling run_llm_query to filter project data based on user message: {message}]")
-    response = run_llm_query(system_prompt, user_prompt)
+    response = run_llm_query(system_prompt, user_prompt, large_model=False)
     confidence_threshold = 0.5  # Set a confidence threshold for filtering
     filtered_descriptions = []
     for item in response.split('||'):
