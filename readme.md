@@ -4,6 +4,15 @@ Herein we present the AIA Studio Agent for Group 4, an LLM that helps designers 
 
 ___
 
+## environment setup
+we utilize *pipenv*, install pipenv using:
+> pip install pipenv
+you can then activate the pipenv shell using:
+> pipenv shell
+you can also select the pipenv shell in vs code (hit F1 in windows, command+P in macOS, and then 'select python interpreter')
+
+___
+
 Welcome to the AIA25-Studio-Agent template repository! This serves as a starting point for students in the AIA25-Studio class to create their design assistant copilots. The goal of the project is to orchestrate Large Language Models (LLMs) to assist in architectural design tasks. The assistant copilots can be connected to platforms such as Grasshopper in Rhino, Revit, or web apps, depending on your needs, but that is beyond the scope of this starting template.
 
 ## Project Structure
