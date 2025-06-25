@@ -9,8 +9,8 @@ import json
 
 # 14.5- Create comprehensive prediction function for deployment
 def predict_property_value(property_features_dict, 
-                           model_path= './valuation_model/final_roi_property_model.joblib', 
-                           features_path= './valuation_model/final_model_features.joblib'):
+                           model_path='./valuation_model/final_roi_property_model.joblib', 
+                           features_path='./valuation_model/final_model_features.joblib'):
     """
     Predict property value from features dictionary
 
