@@ -104,13 +104,11 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
         "Classify the user's query into one or more of the following data sources:\n"
         + "\n".join([f"{key}: {value}" for key, value in data_sources.items()]) + "\n"
         "Return a comma-separated list of the relevant data sources, or 'None' if none apply.\n\n"
-        "rsmeans and project data are mutually exclusive, so if project data is needed, do not include rsmeans.\n"
         "Examples:\n"
         "Query: What is the typical cost per sqft for concrete in NYC?\nOutput: rsmeans\n"
-        "Query: How many units does my current project support and what’s the total cost of concrete?\nOutput: project data\n"
         "Query: What is the value of this building based on its size and type?\nOutput: value model\n"
-        "Query: How can I reduce construction costs without changing the layout?\nOutput: knowledge base, cost model\n"
-        "Query: What is the total concrete cost for this project?\nOutput: project data\n"
+        "Query: How can I reduce construction costs without changing the layout?\nOutput: knowledge base\n"
+        "Query: What is the total concrete cost for this project?\nOutput: ifc\n"
         "Query: What is the estimated valuation of this 3 bedroom, 1 bathroom unit? \n Output: valuation model\n"
     )
 
@@ -171,21 +169,6 @@ def get_ifc_context(message: str, request_id: str = None, thread_id: int = None)
     parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
     logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_ifc_context] [called_by={caller}] [description=message: {message}]")
     return ifc_utils.get_ifc_context_from_query(message, request_id=request_id)
-
-def get_project_data_context(message: str, request_id: str = None, thread_id: int = None) -> str:
-    """
-    Get the project data context for the user message.
-    Returns a string with the project data or a prompt to use project data.
-    """
-    if request_id:
-        set_request_id(request_id)
-    thread_id_val = thread_id if thread_id is not None else threading.get_ident()
-    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
-    caller = inspect.stack()[1].function
-    thread_id_str = str(thread_id_val)
-    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_project_data_context] [called_by={caller}] [description=message: {message}]")
-    return bdg_utils.get_project_data_context_from_query(message, request_id=request_id)
 
 def get_knowledge_base_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
@@ -252,21 +235,6 @@ def get_value_model_context(message: str, request_id: str = None, thread_id: int
     
     return f'the valuation model predicted value is ${predicted_value:.0f}'
 
-def get_cost_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
-    """
-    Get the cost model context for the user message.
-    Returns a string with the cost model data or a prompt to use the cost model.
-    """
-    if request_id:
-        set_request_id(request_id)
-    thread_id_val = thread_id if thread_id is not None else threading.get_ident()
-    parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
-    caller = inspect.stack()[1].function
-    thread_id_str = str(thread_id_val)
-    parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
-    logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_cost_model_context] [called_by={caller}] [description=message: {message}]")
-    return "Cost model is not implemented yet."  # Placeholder
-
 def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500, request_id: str = None):
     thread_id = threading.get_ident()
     parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
@@ -277,11 +245,9 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     logging.info(f"{log_prefix} [description=Routing message: {message}]")
     data_sources = {
         "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
-        "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.",
-        "project data": "This is a database for this specific building's data, which includes quantities and costs of materials and labor.  If the user describes a project or asks a general cost question, this source will not be used. Only use this source if the user asks about the current project data.",
+        "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.  It also includes the dollar and hourly cost of different components.",
         "knowledge base": "This is a knowledge base for architecture and construction, which includes general information about design, materials, and construction practices.",
         "value model": "This is a machine learning model that predicts the value of a building based some of its features, such as size, and type.",
-        "cost model": "This is a machine learning model that predicts the cost of a building based on some of its features, such as size, and type.",
     }
 
     # Run the query through the classification function
@@ -301,10 +267,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
     context_functions = {
         "rsmeans": get_rsmeans_context,
         "ifc": get_ifc_context,
-        "project data": get_project_data_context,
         "knowledge base": get_knowledge_base_context,
         "value model": get_value_model_context,
-        "cost model": get_cost_model_context,
     }
 
     # Prepare futures for relevant data sources
