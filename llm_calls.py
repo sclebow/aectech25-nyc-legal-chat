@@ -19,7 +19,7 @@ import json
 
 
 
-def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2, request_id: str = None) -> str:
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2, request_id: str = None, large_model=True) -> str:
     """ Run a query against the LLM with a system prompt and user input.
     If stream is True, returns a generator for streaming output.
     If stream is False, returns the full response as a string.
@@ -39,14 +39,17 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
         # Replace newlines for log readability
         value = value.replace('\n', '\\n')
         return f"{label}={value}"
-
+    if large_model:
+        model = config.completion_model
+    else:
+        model = config.completion_model_sml
     if request_id:
         set_request_id(request_id)
     while attempt < max_retries:
         try:
             if not stream:
                 response = config.client.chat.completions.create(
-                    model=config.completion_model,
+                    model=model,
                     messages=[
                         {"role": "system", "content": system_prompt},
                         {"role": "user", "content": user_input}
@@ -237,7 +240,7 @@ def get_value_model_context(message: str, request_id: str = None, thread_id: int
         Output ONLY the dict, and nothing else.
         """
     
-    valuation_dict = run_llm_query(prompt, message)
+    valuation_dict = run_llm_query(prompt, message, large_model=False)
     match = re.search(r"\{.*\}", valuation_dict, re.DOTALL)
     if match:
         feat_dict = ast.literal_eval(match.group())
@@ -337,7 +340,8 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         user_input=message,
         stream=stream,
         max_tokens=max_tokens,
-        request_id=request_id
+        request_id=request_id,
+        large_model=False
     )
 
     # response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response # For debugging purposes, uncomment this line to see the data sources and context used in the response
