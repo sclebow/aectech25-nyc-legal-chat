@@ -32,6 +32,7 @@ else:
 ifc = ifcopenshell.open(latest_file)
 
 def get_ifc_context_from_query(query, request_id):
+    global element_data_df, total_costs_per_name, total_costs_per_level, total_costs_sum, total_work_hours_sum
     """
     Use an LLM call to determine the IFC context from a query.
     """
@@ -40,10 +41,9 @@ def get_ifc_context_from_query(query, request_id):
 
     if element_data_df is None or total_costs_per_name is None or total_costs_per_level is None or total_costs_sum is None or total_work_hours_sum is None:
         # If the data is not already loaded, load it from the IFC file
-        global element_data_df, total_costs_per_name, total_costs_per_level, total_costs_sum, total_work_hours_sum
         print("Loading IFC data...")
         # Load the data from the IFC file
-        element_data_df, total_costs_per_name, total_costs_per_level, total_costs_sum, total_work_hours_sum = ifc_processing.get_element_data_from_ifc(ifc)
+        element_data_df, total_costs_per_name, total_costs_per_level, total_costs_sum, total_work_hours_sum = ifc_processing.process_ifc_file(ifc)
 
     system_prompt = f"""
         Provide context from a preprocessed IFC file based on the following query.:
@@ -77,6 +77,8 @@ def get_ifc_context_from_query(query, request_id):
     logging.info(f"{log_prefix} [context_sources={context_sources}]")
 
     ifc_context_output_strings = []
+
+    filtered_df_string = ""  # Ensure this variable is always defined
 
     # If the element_data_df is requested, make another LLM call to get the names, types and columns to filter and return 
     if 'element_data_df' in context_sources:
@@ -162,15 +164,28 @@ def get_ifc_context_from_query(query, request_id):
 
     # If the total_costs_sum is requested, return it as a string
     if 'total_costs_sum' in context_sources:
+        unique_names = total_costs_per_name['name'].unique().tolist()
         total_costs_sum_string = "Total Cost for the entire IFC file: $" + str(total_costs_sum)
+        total_costs_sum_string += f" (Based on the names: {', '.join(unique_names)})"
         logging.info(f"{log_prefix} [total_costs_sum_string={total_costs_sum_string}]")
         ifc_context_output_strings.append(total_costs_sum_string)
 
     # If the total_work_hours_sum is requested, return it as a string
     if 'total_work_hours_sum' in context_sources:
+        unique_names = total_costs_per_name['name'].unique().tolist()
         total_work_hours_sum_string = "Total Construction Work Hours for the entire IFC file: " + str(total_work_hours_sum)
+        total_work_hours_sum_string += f" (Based on the names: {', '.join(unique_names)})"
         logging.info(f"{log_prefix} [total_work_hours_sum_string={total_work_hours_sum_string}]")
         ifc_context_output_strings.append(total_work_hours_sum_string)
+
+    # Add a final message explaining the costs
+    ifc_context_output_strings.append(
+        "The costs are based on the total costs per name and level, and the total costs and work hours for the entire IFC file. "
+        "The costs are calculated based on the geometry and properties of the elements in the IFC file. "
+        "Only the provided types and names are included in the costs and work hours calculations. "
+        "The costs are in US dollars and the work hours are in hours. "
+        "The costs include material, labor, profit and overhead for the names and types provided. "
+    )
 
     # Join all the context output strings into a single string with two newlines between each section
     ifc_context_output = "\n\n".join(ifc_context_output_strings)
