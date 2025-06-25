@@ -1,5 +1,5 @@
 import server.config as config  
-from project_utils.rag_utils import rag_call_alt
+
 import time
 import concurrent.futures
 import logging
@@ -7,9 +7,17 @@ import inspect
 import threading
 from logger_setup import get_request_id, set_request_id
 
+import ast, re
+
 # Routing Functions Below
 from project_utils import rag_utils, ifc_utils
 from bdg_data import bdg_utils
+from project_utils.rag_utils import rag_call_alt
+from valuation_estimate import predict_property_value
+
+import json
+
+
 
 def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2, request_id: str = None) -> str:
     """ Run a query against the LLM with a system prompt and user input.
@@ -100,6 +108,7 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
         "Query: What is the value of this building based on its size and type?\nOutput: value model\n"
         "Query: How can I reduce construction costs without changing the layout?\nOutput: knowledge base, cost model\n"
         "Query: What is the total concrete cost for this project?\nOutput: project data\n"
+        "Query: What is the estimated valuation of this 3 bedroom, 1 bathroom unit? \n Output: valuation model\n"
     )
 
     thread_id = threading.get_ident()
@@ -203,7 +212,42 @@ def get_value_model_context(message: str, request_id: str = None, thread_id: int
     thread_id_str = str(thread_id_val)
     parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
     logging.info(f"[id={request_id}] [thread={thread_id_str}] [parent={parent_thread_str}] [function=get_value_model_context] [called_by={caller}] [description=message: {message}]")
-    return "Value model is not implemented yet."  # Placeholder
+
+    with open('./valuation_model/freq_mappings.json') as f:
+        valuation_model_dict = json.load(f)
+    bldg_types = str(valuation_model_dict['BLDG_TYPE'].keys())
+
+    # prompt = str(f'You have access to a model which will return a valuation estimate when passed a python dict \n which requires the following fields: \n LIVING_AREA: the living area in square feet, \n GROSS_AREA: the total area of the building in square feet, \n LAND_SF: the land area in square feet, \n FULL_BTH: the number of full bathrooms, \n CD_FLOOR: the floor number of the property, \n BLDG_TYPE: the building type, options are {bldg_types}, \n RES_FLOOR: the number of residential floors, \n TT_RMS: the total number of rooms, \n Based on the users query, provide a Python dict with just the keys and values, no comments or explanations. Output ONLY the dict, for example:{"LIVING_AREA": 1200, "GROSS_AREA": 1500, "LAND_SF": 2000, "FULL_BTH": 2, "CD_FLOOR": 3, "BLDG_TYPE": "Condo", "RES_FLOOR": 5, "TT_RMS": 6}\n')
+    prompt = f"""You have access to a model which will return a valuation estimate when passed a Python dict with the following fields:
+        - LIVING_AREA: the living area in square feet
+        - GROSS_AREA: the total area of the building in square feet
+        - LAND_SF: the land area in square feet
+        - FULL_BTH: the number of full bathrooms
+        - CD_FLOOR: the floor number of the property
+        - BLDG_TYPE: the building type, options are: {bldg_types}
+        - RES_FLOOR: the number of residential floors
+        - TT_RMS: the total number of rooms
+
+        Example:
+        {{"LIVING_AREA": 1200, "GROSS_AREA": 1500, "LAND_SF": 2000, "FULL_BTH": 2, "CD_FLOOR": 3, "BLDG_TYPE": "CM - Condo Main", "RES_FLOOR": 5, "TT_RMS": 6}}
+
+        Based on the user's query, output ONLY the Python dict with just the keys and values. 
+        Fill in any missing data with your best estimate.
+        Do not include any explanations, comments, or extra text. 
+        Output ONLY the dict, and nothing else.
+        """
+    
+    valuation_dict = run_llm_query(prompt, message)
+    match = re.search(r"\{.*\}", valuation_dict, re.DOTALL)
+    if match:
+        feat_dict = ast.literal_eval(match.group())
+        predicted_value = predict_property_value(feat_dict) 
+        print(f'the valuation model predicted value is ${predicted_value:.0f}')
+    else:
+        predicted_value = ""
+        raise ValueError("No dict found in LLM output")
+    
+    return f'the valuation model predicted value is ${predicted_value:.0f}'
 
 def get_cost_model_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
