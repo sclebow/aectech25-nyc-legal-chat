@@ -503,6 +503,7 @@ def show_ifcjs_viewer_vite(height=600):
     """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL."""
     st.write(f"**Model Viewer**: {get_latest_ifc_filename()}")
     vite_url = f"http://localhost:{VITE_PORT}/?ifcUrl=http://127.0.0.1:{FLASK_PORT}/download_latest_ifc"
+    print(f"Vite URL: {vite_url}")
     components.html(f"""
         <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
     """, height=height)
