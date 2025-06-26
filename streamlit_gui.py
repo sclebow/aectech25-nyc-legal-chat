@@ -20,6 +20,7 @@ import streamlit.components.v1 as components
 import socket
 import numpy as np
 import plotly.graph_objects as go
+import base64
 
 def find_open_port(preferred_port, max_tries=20):
     """Find an open port, starting from preferred_port, up to max_tries."""
@@ -589,9 +590,31 @@ def create_roi_sensitivity_curve():
     )
     return fig
 
+def get_svg_data_uri(svg_path):
+    with open(svg_path, "r", encoding="utf-8") as f:
+        svg = f.read()
+    svg_bytes = svg.encode("utf-8")
+    b64 = base64.b64encode(svg_bytes).decode("utf-8")
+    return f"data:image/svg+xml;base64,{b64}"
+
 # --- Streamlit Chat Interface with Sample Questions ---
-st.set_page_config(page_title="ROI LLM Assistant", layout="wide")
-st.markdown('<div style="display:flex;align-items:center;gap:1em;"><h3 style="margin:0;">Yield Copilot</h3><span>Home • Cost • Value • Returns</span></div>', unsafe_allow_html=True)
+logo_file_path = "logo.svg"
+logo_data_uri = get_svg_data_uri(logo_file_path)
+st.set_page_config(
+    page_title="ROI LLM Assistant",
+    page_icon=logo_file_path,
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+st.markdown(f"""
+    <div style='display:flex; align-items:center;'>
+        <img src='{logo_data_uri}' alt='Logo' style='height:48px; margin-right:1em;' />
+        <div style='display:flex; flex-direction:column;'>
+            <h3 style='margin:0; display:inline;'>Yield Copilot</h3>
+            <span style='margin-left:0;'>Home • Cost • Value • Returns</span>
+        </div>
+    </div>
+""", unsafe_allow_html=True)
 
 # Add css to make st.expander text smaller
 st.markdown("""
@@ -646,7 +669,8 @@ if "messages" not in st.session_state:
 if "vite_url" not in st.session_state:
     st.session_state["vite_url"] = f"http://localhost:{VITE_PORT}/?ifcUrl=http://127.0.0.1:{FLASK_PORT}/download_latest_ifc"
 
-with st.expander("LLM Configuration", expanded=False):
+with st.sidebar:
+    st.markdown("# LLM Configuration")
     st.markdown("## LLM Mode Selection")
     mode = st.segmented_control("Select LLM Mode", MODE_OPTIONS, default=MODE_OPTIONS[1], key="mode_radio", selection_mode="single")
     mode_status = set_mode_on_server(mode)
