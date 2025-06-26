@@ -83,7 +83,7 @@ def get_ifc_context_from_query(query, request_id):
     # If the element_data_df is requested, make another LLM call to get the names, types and columns to filter and return 
     if 'element_data_df' in context_sources:
         unique_names = element_data_df['name'].unique().tolist()
-        unique_types = element_data_df['ifc_type'].unique().tolist()
+        unique_types = element_data_df['type'].unique().tolist()
         columns = element_data_df.columns.tolist()
         
         system_prompt = f"""
@@ -101,10 +101,11 @@ def get_ifc_context_from_query(query, request_id):
 
             Example response format:
             ```json
-            {                "names": ["Wall", "Door"],
+            {{                "names": ["Wall", "Door"],
                 "types": ["IfcWall", "IfcDoor"],
-                "columns": ["name", "ifc_type", "cost", "work_hours"]
-            }
+                "columns": ["name", "type", "cost", "work_hours"]
+            }}
+            ```
         """  
 
         # Run the LLM query to get the names, types, and columns to filter and return
@@ -134,11 +135,11 @@ def get_ifc_context_from_query(query, request_id):
             if names:
                 filtered_df = filtered_df[filtered_df['name'].isin(names)]
             if types:
-                filtered_df = filtered_df[filtered_df['ifc_type'].isin(types)]
+                filtered_df = filtered_df[filtered_df['type'].isin(types)]
             if columns:
                 filtered_df = filtered_df[columns]
             else:
-                filtered_df = filtered_df[['name', 'ifc_type', 'cost', 'work_hours']]
+                filtered_df = filtered_df[['name', 'type', 'cost', 'work_hours']]
             logging.info(f"{log_prefix} [filtered_df_shape={filtered_df.shape}]")
 
             # Convert the filtered DataFrame to a string representation
