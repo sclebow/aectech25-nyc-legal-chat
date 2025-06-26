@@ -97,7 +97,7 @@ def parse_log_flowchart(logs):
         parent_thread = thread_parent.get(thread, None)
         next_in_parent = find_next_in_parent_chain(last_node, parent_thread)
         if next_in_parent is not None:
-            G.add_edge(last_node, next_in_parent)
+            G.add_edge(last_node, next_in_parent, weight=3.)
     # Check for first node in each thread and connect to the most recent node in the parent thread, if that node is not already connected upstream
     for thread, nodes in thread_nodes.items():
         if not nodes:

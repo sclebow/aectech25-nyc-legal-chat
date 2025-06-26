@@ -19,6 +19,8 @@ import pyvista as pv
 import streamlit.components.v1 as components
 import socket
 
+from ifc_processing.ifc_processing import process_ifc_file
+
 def find_open_port(preferred_port, max_tries=20):
     """Find an open port, starting from preferred_port, up to max_tries."""
     port = preferred_port
@@ -436,6 +438,7 @@ def visualize_ifc_3d(uploaded_ifc):
             all_verts = []
             all_faces = []
             vert_offset = 0
+            type_counts = {}
             for product in ifc.by_type("IfcProduct"):
                 try:
                     shape = ifcopenshell.geom.create_shape(settings, product)
@@ -457,6 +460,10 @@ def visualize_ifc_3d(uploaded_ifc):
                     vert_offset += len(verts)
                 except Exception:
                     continue
+                t = product.is_a()
+                type_counts[t] = type_counts.get(t, 0) + 1
+            df = pd.DataFrame(list(type_counts.items()), columns=["IFC Type", "Count"])
+            st.dataframe(element_data_df, use_container_width=True)
             if not all_verts or not all_faces:
                 st.info("No geometry found in IFC file for 3D visualization.")
                 return
@@ -485,16 +492,19 @@ def visualize_ifc_summary(uploaded_ifc):
                 tmp.write(uploaded_ifc)  # Assume bytes
             tmp_path = tmp.name
         try:
+            
             ifc = ifcopenshell.open(tmp_path)
+            element_data_df, total_costs_per_name, total_costs_per_level, total_costs_sum, total_work_hours_sum = process_ifc_file(ifc)
+
             products = ifc.by_type("IfcProduct")
             type_counts = {}
             for el in products:
                 t = el.is_a()
                 type_counts[t] = type_counts.get(t, 0) + 1
-            import pandas as pd
             st.write(f"Filename: {get_latest_ifc_filename()}")
             df = pd.DataFrame(list(type_counts.items()), columns=["IFC Type", "Count"])
             st.dataframe(df, use_container_width=True)
+            # st.dataframe(element_data_df, use_container_width=True)
             # Removed 3D visualization (plotly)
         except Exception as e:
             st.error(f"Failed to parse IFC: {e}")

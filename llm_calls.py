@@ -136,10 +136,6 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
     logging.info(f"{log_prefix} [description=Classification result: {classification}] [usage={response.usage}]")
     if classification.lower() == "none":
         return {key: False for key in data_sources.keys()}
-    # else:
-    #     match = re.search(r"\{.*\}", response, re.DOTALL)
-    #     # if match:
-    #     classification = ast.literal_eval(match.group())
     
     # Split the classification into a list and create a dictionary with boolean values
     classified_sources = classification.split(", ")
