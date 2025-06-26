@@ -235,6 +235,89 @@ def get_value_model_context(message: str, request_id: str = None, thread_id: int
     
     return f'the valuation model predicted value is ${predicted_value:.0f}'
 
+def classify_and_get_context(message: str, request_id: str = None):
+    """
+    Classify the user message and retrieve the relevant context from all data sources.
+    Returns a dictionary with the classification result and the context from each data source.
+    """
+    data_sources = {
+        "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
+        "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.  It also includes the dollar and hourly cost of different components.",
+        "knowledge base": "This is a knowledge base for architecture and construction, which includes general information about design, materials, and construction practices.",
+        "value model": "This is a machine learning model that predicts the value of a building based some of its features, such as size, and type.",
+    }
+
+    # Classify the data sources needed for the query
+    data_sources_needed_dict = classify_data_sources(message, data_sources, request_id=request_id)
+
+    # If project data is needed, do not use rsmeans
+    if data_sources_needed_dict.get("project data"):
+        data_sources_needed_dict["rsmeans"] = False
+
+    # Prepare a dictionary to hold the context from each data source
+    data_context = {}
+
+    # For each data source that is needed, retrieve the relevant context
+    if data_sources_needed_dict.get("rsmeans"):
+        data_context["rsmeans"] = get_rsmeans_context(message, request_id=request_id)
+    if data_sources_needed_dict.get("ifc"):
+        data_context["ifc"] = get_ifc_context(message, request_id=request_id)
+    if data_sources_needed_dict.get("knowledge base"):
+        data_context["knowledge base"] = get_knowledge_base_context(message, request_id=request_id)
+    if data_sources_needed_dict.get("value model"):
+        data_context["value model"] = get_value_model_context(message, request_id=request_id)
+
+    return {
+        "classification": data_sources_needed_dict,
+        "context": data_context
+    }
+
+def get_ifc_viewer_url_params(response):
+    """
+    Given the LLM response and data_sources_needed_dict, return the IFC Viewer URL params string (or empty string).
+    """
+    ifc_settings_str = ""
+    system_prompt = (
+        "You are an assistant that helps configure a web-based IFC Viewer for BIM models. "
+        "Given a LLM's response to a user query, output a JSON object with urlParams to control the viewer. "
+        "The IFC Viewer accepts the following urlParams:\n"
+        "- visibleCategories: a comma-separated list of IFC element types to make visible (e.g., 'IFCWALL,IFCSLAB').\n"
+        "- categoryColors: a comma-separated list of 'IFCType:hexcolor' pairs (e.g., 'IFCWALL:ff0000,IFCSLAB:00ff00').\n"
+        "- categoryOpacity: a comma-separated list of 'IFCType:value' pairs, where value is between 0 and 1 (e.g., 'IFCWALL:0.8,IFCSLAB:0.5').\n"
+        "Only include keys that are relevant for the current response. "
+        "Respond ONLY with a JSON object, for example:\n"
+        "{\n"
+        '  "visibleCategories": "IFCWALL,IFCSLAB",\n'
+        '  "categoryColors": "IFCWALL:ff0000,IFCSLAB:00ff00",\n'
+        '  "categoryOpacity": "IFCWALL:0.8,IFCSLAB:0.5"\n'
+        "}\n"
+        "You must always suggest an adaptation of the IFC Viewer URL params based on the LLM response. "
+        # "If no adaptation is needed, respond with an empty JSON object: {}"
+    )
+    print(f"Received response for IFC Viewer URL params: {response}")
+    print("Generating IFC Viewer URL params from response...")
+    logging.info(f"[id={get_request_id()}] [function=get_ifc_viewer_url_params] [description=Generating IFC Viewer URL params from response] [response={response}]")
+    ifc_response = run_llm_query(
+        system_prompt=system_prompt,
+        user_input=response,
+    )
+    print(f"IFC Viewer URL params response: {ifc_response}")
+    import urllib.parse
+    try:
+        params = json.loads(ifc_response)
+        if params:
+            ifc_settings_str = "&" + "&".join(
+                f"{urllib.parse.quote_plus(str(k))}={urllib.parse.quote_plus(str(v))}"
+                for k, v in params.items() if v
+            )
+        else:
+            ifc_settings_str = ""
+    except Exception as e:
+        logging.info(f"[id={get_request_id()}] [function=get_ifc_viewer_url_params] [description=Error parsing IFC Viewer URL params: {e}]")
+        ifc_settings_str = ""
+    logging.info(f"[id={get_request_id()}] [function=get_ifc_viewer_url_params] [description=IFC Viewer URL params generated: {ifc_settings_str}]")
+    return ifc_settings_str
+
 def route_query_to_function(message: str, collection=None, ranker=None, use_rag: bool=False, stream: bool = False, max_tokens: int = 1500, request_id: str = None):
     thread_id = threading.get_ident()
     parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
@@ -308,7 +391,12 @@ def route_query_to_function(message: str, collection=None, ranker=None, use_rag:
         large_model=False
     )
 
-    # response = str(data_sources_needed_dict) + "\n" + str(data_context) + "\n" + response # For debugging purposes, uncomment this line to see the data sources and context used in the response
+    if not stream:
+        ifc_settings_str = get_ifc_viewer_url_params(response, data_sources_needed_dict)
+        # Optionally, you can return ifc_settings_str as part of the return value if needed
+    else:
+        pass # For streaming, the IFC Viewer URL params will be handled in the streaming generator
 
     logging.info(f"{log_prefix} [description=Finished routing and LLM call.]")
+
     return data_context, response
