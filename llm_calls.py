@@ -158,7 +158,6 @@ def get_rsmeans_context(message: str, request_id: str = None, thread_id: int = N
     rsmeans_context = get_rsmeans_context_from_prompt(message, request_id=request_id)
     return rsmeans_context
 
-
 def get_ifc_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """
     Get the IFC context for the user message.

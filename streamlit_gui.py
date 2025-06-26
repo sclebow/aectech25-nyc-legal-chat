@@ -455,10 +455,10 @@ def visualize_ifc_3d(uploaded_ifc):
                     vert_offset += len(verts)
                 except Exception:
                     continue
-                t = product.is_a()
-                type_counts[t] = type_counts.get(t, 0) + 1
-            df = pd.DataFrame(list(type_counts.items()), columns=["IFC Type", "Count"])
-            st.dataframe(element_data_df, use_container_width=True)
+            #     t = product.is_a()
+            #     type_counts[t] = type_counts.get(t, 0) + 1
+            # df = pd.DataFrame(list(type_counts.items()), columns=["IFC Type", "Count"])
+            # st.dataframe(df, use_container_width=True)
             if not all_verts or not all_faces:
                 st.info("No geometry found in IFC file for 3D visualization.")
                 return
@@ -503,6 +503,7 @@ def visualize_ifc_summary(uploaded_ifc):
             # Removed 3D visualization (plotly)
         except Exception as e:
             st.error(f"Failed to parse IFC: {e}")
+    return element_data_df
 
 def show_ifcjs_viewer_vite(height=600):
     """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL and any params."""
@@ -521,7 +522,7 @@ def get_mock_building_metrics():
     return {
         "estimated_cost": 4200000,
         "projected_value": 6100000,
-        "roi": 312,
+        "roi": 45.2,
         "floor_area_ratio": 3.8,
         "units": {"total": 48, "2br": 32, "1br": 16},
         "circulation_ratio": 18.2
@@ -728,7 +729,7 @@ with viewer_chat_tab:
                 current_ifc_url = f"http://127.0.0.1:{FLASK_PORT}/download_ifc/{filename}"
                 current_ifc = requests.get(current_ifc_url).content
                 st.caption(f"Showing summary for: {filename}")
-                visualize_ifc_summary(current_ifc)
+                df_elements = visualize_ifc_summary(current_ifc)
             else:
                 st.info("No IFC file found.")
 
@@ -797,6 +798,8 @@ with viewer_chat_tab:
     # Handle freeform chat input
     if user_input:
         handle_chat_interaction(user_input, chat_message_container, default_rag_mode, stream_mode, max_tokens)
+
+    # st.dataframe(df_elements[df_elements['type']=='IfcSpace'])
 
 with metrics_tab:
     # Mock key metrics display
