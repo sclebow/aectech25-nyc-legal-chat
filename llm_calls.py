@@ -103,13 +103,14 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
         "You are a data source classification agent for a building project assistant.\n"
         "Classify the user's query into one or more of the following data sources:\n"
         + "\n".join([f"{key}: {value}" for key, value in data_sources.items()]) + "\n"
-        "Return a comma-separated list of the relevant data sources, or 'None' if none apply.\n\n"
+        "Return ONLY a comma-separated list of the relevant data sources, or 'None' if none apply.\n\n"
         "Examples:\n"
         "Query: What is the typical cost per sqft for concrete in NYC?\nOutput: rsmeans\n"
         "Query: What is the value of this building based on its size and type?\nOutput: value model\n"
         "Query: How can I reduce construction costs without changing the layout?\nOutput: knowledge base\n"
         "Query: What is the total concrete cost for this project?\nOutput: ifc\n"
         "Query: What is the estimated valuation of this 3 bedroom, 1 bathroom unit? \n Output: valuation model\n"
+        "Remember, return ONLY the comma-separated list of the relevant data sources."
     )
 
     thread_id = threading.get_ident()
@@ -127,8 +128,11 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
         ],
         temperature=0.0,
     )
+
+    
     
     classification = response.choices[0].message.content.strip()
+    
     logging.info(f"{log_prefix} [description=Classification result: {classification}] [usage={response.usage}]")
     if classification.lower() == "none":
         return {key: False for key in data_sources.keys()}
@@ -153,7 +157,6 @@ def get_rsmeans_context(message: str, request_id: str = None, thread_id: int = N
     from cost_data.rsmeans_utils import get_rsmeans_context_from_prompt
     rsmeans_context = get_rsmeans_context_from_prompt(message, request_id=request_id)
     return rsmeans_context
-
 
 def get_ifc_context(message: str, request_id: str = None, thread_id: int = None) -> str:
     """

@@ -97,7 +97,7 @@ def parse_log_flowchart(logs):
         parent_thread = thread_parent.get(thread, None)
         next_in_parent = find_next_in_parent_chain(last_node, parent_thread)
         if next_in_parent is not None:
-            G.add_edge(last_node, next_in_parent)
+            G.add_edge(last_node, next_in_parent, weight=3.)
     # Check for first node in each thread and connect to the most recent node in the parent thread, if that node is not already connected upstream
     for thread, nodes in thread_nodes.items():
         if not nodes:
@@ -111,7 +111,7 @@ def parse_log_flowchart(logs):
                 closest_prev = max(parent_indices)
                 # Only connect if only connected to one node
                 if G.in_degree(closest_prev) == 1 and G.out_degree(first_node) == 0:
-                    G.add_edge(closest_prev, first_node)
+                    G.add_edge(closest_prev, first_node, weight=2.)
     return G
 
 def plot_flowchart(G):
@@ -207,7 +207,7 @@ def plot_flowchart(G):
     threads = [G.nodes[node].get('thread', 'default') for node in G.nodes()]
     unique_threads = list(sorted(set(threads)))
     import plotly.colors
-    color_scale = plotly.colors.sample_colorscale('Plasma', [i/(max(1,len(unique_threads)-1)) for i in range(len(unique_threads))])
+    color_scale = plotly.colors.sample_colorscale('jet', [i/(max(1,len(unique_threads)-1)) for i in range(len(unique_threads))])
     thread_to_color = {t: color_scale[i % len(color_scale)] for i, t in enumerate(unique_threads)}
     # Calculate time elapsed from the very first node's timestamp
     # Find the minimum (earliest) timestamp among all nodes

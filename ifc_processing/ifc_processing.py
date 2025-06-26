@@ -128,7 +128,7 @@ def process_ifc_file(ifc_file):
 
     # Clean up 'Source Qty' column
     unique_names = element_data_df['name'].unique().tolist()  # Get unique names from element_data_df
-    print(unique_names)
+
     wbs_df['Source Qty'] = wbs_df['Source Qty'].astype(str).str.split('.').str[:-1].str.join('.')  # Remove the last part after the last dot
     wbs_df = wbs_df[wbs_df['Source Qty'].apply(lambda x: any(name in str(x) for name in unique_names))]  # Filter rows where 'Source Qty' contains any of the names in element_data_df
     # Drop rows where 'Input Unit' is 'TON', '-', or None
@@ -332,36 +332,36 @@ def load_wbs(directory):
         # print(f"Error loading WBS file: {e}")
         return None
 
-def build_ifc_df_by_apartment(ifc_file):
-    """
-    Build a pandas Dataframe from an IFC file containing the information about the apartments in a building.
-    This is suitable for using with a valuation prediction model
-    """
-    # Initialize an empty dictionary to store element data
-    element_data_dict = {}
-    # Create geometry settings once
-    settings = ifcopenshell.geom.settings()
-    # unit_scale = ifcopenshell.util.unit.calculate_unit_scale(ifc_file)
-    # Get all types of elements in the model using ifcopenshell
-    apartments = ifc_file.by_type("IfcSpace")
+# def build_ifc_df_by_apartment(ifc_file):
+#     """
+#     Build a pandas Dataframe from an IFC file containing the information about the apartments in a building.
+#     This is suitable for using with a valuation prediction model
+#     """
+#     # Initialize an empty dictionary to store element data
+#     element_data_dict = {}
+#     # Create geometry settings once
+#     settings = ifcopenshell.geom.settings()
+#     # unit_scale = ifcopenshell.util.unit.calculate_unit_scale(ifc_file)
+#     # Get all types of elements in the model using ifcopenshell
+#     apartments = ifc_file.by_type("IfcSpace")
 
-    iterator = ifcopenshell.geom.iterator(settings, ifc_file, multiprocessing.cpu_count(), include=apartments)
+#     iterator = ifcopenshell.geom.iterator(settings, ifc_file, multiprocessing.cpu_count(), include=apartments)
 
-    for shape_geo in iterator:
-        geometry = shape_geo.geometry
-        (x, y, z) = ifcopenshell.util.shape.get_shape_bbox_centroid(shape_geo, geometry)
-        element_data_dict[shape_geo.id] = {
-            "type": shape_geo.type,
-            "name": shape_geo.name,
-            'length': ifcopenshell.util.shape.get_max_xyz(geometry)*3.28,  # Convert to feet
-            'area': ifcopenshell.util.shape.get_max_side_area(geometry)**2 * 3.28**2,  # Convert to square feet
-            'volume': ifcopenshell.util.shape.get_volume(geometry)**3 * 1.09**3,  # Convert to cubic yards
-            "x": x,
-            "y": y,
-            "z": z,
-        }
+#     for shape_geo in iterator:
+#         geometry = shape_geo.geometry
+#         (x, y, z) = ifcopenshell.util.shape.get_shape_bbox_centroid(shape_geo, geometry)
+#         element_data_dict[shape_geo.id] = {
+#             "type": shape_geo.type,
+#             "name": shape_geo.name,
+#             'length': ifcopenshell.util.shape.get_max_xyz(geometry)*3.28,  # Convert to feet
+#             'area': ifcopenshell.util.shape.get_max_side_area(geometry)**2 * 3.28**2,  # Convert to square feet
+#             'volume': ifcopenshell.util.shape.get_volume(geometry)**3 * 1.09**3,  # Convert to cubic yards
+#             "x": x,
+#             "y": y,
+#             "z": z,
+#         }
 
-    element_data_df = pd.DataFrame.from_dict(element_data_dict, orient='index')
+#     element_data_df = pd.DataFrame.from_dict(element_data_dict, orient='index')
 
     return element_data_df
 # if __name__ == "__main__":
