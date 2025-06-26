@@ -347,7 +347,7 @@ Now we will add some UI to control the visibility of items per category using si
 // Create the panel and section separately
 const panel = BUI.Component.create<BUI.Panel>(() => {
   return BUI.html`
-    <bim-panel active label="Categories" class="options-menu"></bim-panel>
+    <bim-panel active label="Category Visibility" class="options-menu"></bim-panel>
   `;
 });
 
@@ -357,6 +357,7 @@ const categorySection = BUI.Component.create<BUI.PanelSection>(() => {
   `;
 });
 
+categorySection.collapsed = true; // Start with the section collapsed
 panel.append(categorySection);
 document.body.append(panel);
 
