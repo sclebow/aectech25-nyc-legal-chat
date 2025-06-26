@@ -26,6 +26,9 @@ import * as THREE from "three";
 
 const urlParams = new URLSearchParams(window.location.search);
 const ifcUrl = urlParams.get('ifcUrl') || '';
+const visibleCategoriesParam = urlParams.get('visibleCategories');
+const categoryColorsParam = urlParams.get('categoryColors');
+const categoryOpacityParam = urlParams.get('categoryOpacity');
 
 // Define categoryNames and defaultColors at the top-level scope
 // Define a map of category names to colors and opacities for hardcoded categories
@@ -207,7 +210,6 @@ BUI.Manager.init();
   Now, let's create a simple object for categories only:
 */
 
-const visibleCategoriesParam = urlParams.get('visibleCategories');
 let visibleCategories: string[] | null = null;
 if (visibleCategoriesParam) {
   visibleCategories = visibleCategoriesParam.split(',').map(s => s.trim()).filter(Boolean);
@@ -227,7 +229,6 @@ for (const name of classNames) {
 }
 
 // Parse categoryColors URL param (format: Category1:ff0000,Category2:00ff00)
-const categoryColorsParam = urlParams.get('categoryColors');
 let categoryColorOverrides: Record<string, string> = {};
 if (categoryColorsParam) {
   categoryColorsParam.split(',').forEach(pair => {
@@ -241,7 +242,6 @@ if (categoryColorsParam) {
 console.log(categoryColorOverrides);
 
 // Parse categoryOpacity URL param (format: Category1:0.5,Category2:0.8)
-const categoryOpacityParam = urlParams.get('categoryOpacity');
 let categoryOpacityOverrides: Record<string, number> = {};
 if (categoryOpacityParam) {
   categoryOpacityParam.split(',').forEach(pair => {
