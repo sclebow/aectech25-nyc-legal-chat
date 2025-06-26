@@ -2,6 +2,7 @@ import ifcopenshell
 from ifcopenshell.util.element import get_pset
 import ifcopenshell.geom
 import ifcopenshell.util.shape
+import ifcopenshell.util.selector
 from pprint import pprint
 import os
 
@@ -32,12 +33,21 @@ def build_ifc_df(ifc_file):
 
     iterator = ifcopenshell.geom.iterator(settings, ifc_file, multiprocessing.cpu_count(), include=all_types_in_model)
 
-    for shape_geo in iterator:
+    for i, shape_geo in enumerate(iterator):
         geometry = shape_geo.geometry
         (x, y, z) = ifcopenshell.util.shape.get_shape_bbox_centroid(shape_geo, geometry)
+        # objInfo = all_types_in_model[i].get_info()
+        name = ifc_file.by_guid(shape_geo.guid).get_info()
+        if 'LongName' in name:
+            nameOut = name['LongName']
+        elif name['Name'] is None:
+            nameOut = "unknown"
+        else:
+            nameOut = name['Name']
         element_data_dict[shape_geo.id] = {
             "type": shape_geo.type,
-            "name": shape_geo.name,
+            # "name": shape_geo.name,
+            "name" : nameOut,
             'length': ifcopenshell.util.shape.get_max_xyz(geometry)*unit_scale*3.28,  # Convert to feet
             'area': ifcopenshell.util.shape.get_max_side_area(geometry)*unit_scale**2 * 3.28**2,  # Convert to square feet
             'volume': ifcopenshell.util.shape.get_volume(geometry)*unit_scale**3 * 1.09**3,  # Convert to cubic yards
@@ -60,7 +70,7 @@ def assign_levels(element_data_df, threshold=0.1):
     """
     # Extract Z-coordinates from the DataFrame
     z_coordinates = element_data_df['z'].values.reshape(-1, 1)
-    print(len(z_coordinates), "Z-coordinates extracted from elements.")
+    # print(len(z_coordinates), "Z-coordinates extracted from elements.")
     # Use DBSCAN to cluster elements based on their Z-coordinates
     clustering = DBSCAN(eps=threshold, min_samples=2).fit(z_coordinates)
     labels = clustering.labels_
@@ -118,6 +128,7 @@ def process_ifc_file(ifc_file):
 
     # Clean up 'Source Qty' column
     unique_names = element_data_df['name'].unique().tolist()  # Get unique names from element_data_df
+    print(unique_names)
     wbs_df['Source Qty'] = wbs_df['Source Qty'].astype(str).str.split('.').str[:-1].str.join('.')  # Remove the last part after the last dot
     wbs_df = wbs_df[wbs_df['Source Qty'].apply(lambda x: any(name in str(x) for name in unique_names))]  # Filter rows where 'Source Qty' contains any of the names in element_data_df
     # Drop rows where 'Input Unit' is 'TON', '-', or None
@@ -233,17 +244,17 @@ def process_ifc_file(ifc_file):
     total_costs_sum = total_costs_per_name['total_cost'].sum()
     total_work_hours_sum = total_costs_per_name['total_work_hours'].sum()
 
-    # Print the final DataFrame
-    print("Final Element Data DataFrame:")
-    pprint(element_data_df.head())
+    # # Print the final DataFrame
+    # print("Final Element Data DataFrame:")
+    # pprint(element_data_df.head())
 
-    # Print the final Dataframe for total costs and work hours per element name
-    print("Final Total Costs and Work Hours per Element Name DataFrame:")
-    pprint(total_costs_per_name)
+    # # Print the final Dataframe for total costs and work hours per element name
+    # print("Final Total Costs and Work Hours per Element Name DataFrame:")
+    # pprint(total_costs_per_name)
 
-    # Print the final Dataframe for total costs and work hours per level
-    print("Final Total Costs and Work Hours per Level DataFrame:")
-    pprint(total_costs_per_level)
+    # # Print the final Dataframe for total costs and work hours per level
+    # print("Final Total Costs and Work Hours per Level DataFrame:")
+    # pprint(total_costs_per_level)
 
     # # Save the final DataFrame to a CSV file
     # output_file = os.path.join(os.path.dirname(__file__), 'element_data.csv')
@@ -277,14 +288,14 @@ def get_wbs_from_directory(directory):
 
     # Get all CSV or excel files in the directory
     wbs_files = glob.glob(os.path.join(directory, '*.csv')) + glob.glob(os.path.join(directory, '*.xlsx'))
-    print(f"Found {len(wbs_files)} WBS files in the directory: {directory}")
+    # print(f"Found {len(wbs_files)} WBS files in the directory: {directory}")
 
     if not wbs_files:
         raise FileNotFoundError("No WBS files found in the specified directory.")
 
     # Sort files by modification time and return the latest one
     latest_file = max(wbs_files, key=os.path.getmtime)
-    print(f"Latest WBS file: {latest_file}")
+    # print(f"Latest WBS file: {latest_file}")
     return latest_file
 
 def load_wbs(directory):
@@ -299,7 +310,7 @@ def load_wbs(directory):
     """
     # Get the latest WBS file from the specified directory
     file_path = get_wbs_from_directory(directory)
-    print(f"Loading WBS from file: {file_path}")
+    # print(f"Loading WBS from file: {file_path}")
 
     try:
         if file_path.lower().endswith('.csv'):
@@ -310,7 +321,7 @@ def load_wbs(directory):
             raise ValueError("Unsupported file format for WBS. Only .csv and .xlsx are supported.")
 
         # Print some information about the loaded DataFrame
-        print(f"WBS loaded successfully with {len(wbs_df)} rows and {len(wbs_df.columns)} columns.")
+        # print(f"WBS loaded successfully with {len(wbs_df)} rows and {len(wbs_df.columns)} columns.")
         # print("Columns in WBS:", wbs_df.columns.tolist())
         # # Optionally, display the first few rows of the DataFrame
         # print("First few rows of WBS:")
@@ -318,9 +329,41 @@ def load_wbs(directory):
 
         return wbs_df
     except Exception as e:
-        print(f"Error loading WBS file: {e}")
+        # print(f"Error loading WBS file: {e}")
         return None
 
+def build_ifc_df_by_apartment(ifc_file):
+    """
+    Build a pandas Dataframe from an IFC file containing the information about the apartments in a building.
+    This is suitable for using with a valuation prediction model
+    """
+    # Initialize an empty dictionary to store element data
+    element_data_dict = {}
+    # Create geometry settings once
+    settings = ifcopenshell.geom.settings()
+    # unit_scale = ifcopenshell.util.unit.calculate_unit_scale(ifc_file)
+    # Get all types of elements in the model using ifcopenshell
+    apartments = ifc_file.by_type("IfcSpace")
+
+    iterator = ifcopenshell.geom.iterator(settings, ifc_file, multiprocessing.cpu_count(), include=apartments)
+
+    for shape_geo in iterator:
+        geometry = shape_geo.geometry
+        (x, y, z) = ifcopenshell.util.shape.get_shape_bbox_centroid(shape_geo, geometry)
+        element_data_dict[shape_geo.id] = {
+            "type": shape_geo.type,
+            "name": shape_geo.name,
+            'length': ifcopenshell.util.shape.get_max_xyz(geometry)*3.28,  # Convert to feet
+            'area': ifcopenshell.util.shape.get_max_side_area(geometry)**2 * 3.28**2,  # Convert to square feet
+            'volume': ifcopenshell.util.shape.get_volume(geometry)**3 * 1.09**3,  # Convert to cubic yards
+            "x": x,
+            "y": y,
+            "z": z,
+        }
+
+    element_data_df = pd.DataFrame.from_dict(element_data_dict, orient='index')
+
+    return element_data_df
 # if __name__ == "__main__":
 #     # Change path to root directory of the project which is one level up from this script
 #     current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -328,6 +371,12 @@ def load_wbs(directory):
 #     # Add the project root to the system path
 #     if project_root not in os.sys.path:
 #         os.sys.path.append(project_root)
-#     from project_utils.ifc_utils import ifc
+#     # from project_utils.ifc_utils import ifc
 #     # Define the path to the IFC file
-#     process_ifc_file(ifc)
+#     # process_ifc_file(ifc)
+#     ifc = ifcopenshell.open('./ifc_files/aia25_graphml_g4_ifc.ifc')
+#     # df = build_ifc_df_by_apartment(ifc)
+#     df, total_costs_per_name, total_costs_per_level, total_costs_sum, total_work_hours_sum = process_ifc_file(ifc)
+#     df = df[df['type']=='IfcSpace']
+#     # df = df.dropna(subset=['name'], inplace=True)
+#     df.to_csv('./testOutSpaces.csv')
