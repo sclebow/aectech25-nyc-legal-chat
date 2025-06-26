@@ -572,8 +572,8 @@ with st.expander("LLM Configuration", expanded=False):
     stream_mode = st.segmented_control("Response Mode", ["Standard", "Streaming"], default="Streaming", key="stream_radio", selection_mode="single")
     max_tokens = st.number_input("Max Tokens", min_value=100, max_value=4096, value=1500, step=1, key="max_tokens_input")
 
-core_window_height = 800
-ifc_col, chat_col, graph_col = st.columns([2, 3, 1], vertical_alignment="top")
+core_window_height = 750
+ifc_col, chat_col, graph_col = st.columns([2, 4, 1], vertical_alignment="top")
 with ifc_col:
     with st.container(height=core_window_height):
         # --- IFC File Upload Section ---
