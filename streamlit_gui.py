@@ -38,6 +38,7 @@ default_vite_port = 5173
 default_rag_mode = "LLM only"
 MODE_OPTIONS = ["local", "cloudflare"]
 sample_questions = [
+    "What is the cost of the columns in the IFC model?",
     "What are some cost modeling best practices?",
     "What is the cost benchmark of six concrete column footings for a 10,000 sq ft commercial building?",
     "What is the typical cost per sqft for structural steel options?  Let's assume a four-story apartment building.  Make assumptions on the loading.",
