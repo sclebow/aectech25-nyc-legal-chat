@@ -93,12 +93,12 @@ def _llm_post_request(url, payload, stream=False):
 
 def _handle_streaming_response(response, st, render_data_context_table, render_token_usage_report):
     """Handle streaming LLM response and update UI accordingly."""
-    import time as _time
-    start_time = _time.time()
+    start_time = time.time()
     streamed_text = ""
     data_context = ""
     logs = ""
     response_text = ""
+    ifc_viewer_params = ""
     section = None
     chat_container = st.container()
     with chat_container:
@@ -121,72 +121,60 @@ def _handle_streaming_response(response, st, render_data_context_table, render_t
         # Handle multiple tags in a single chunk
         while chunk:
             if "[DATA CONTEXT]:" in chunk:
-                before, tag, after = chunk.partition("[DATA CONTEXT]:")
-                if section == "data_context" and before.strip():
-                    data_context += before
-                    render_data_context_table(data_context, placeholder_data_context)
-                section = "data_context"
-                data_context = after.strip()
-                render_data_context_table(data_context, placeholder_data_context)
+                idx = chunk.index("[DATA CONTEXT]:")
+                rest = chunk[idx + len("[DATA CONTEXT]:"):]
+
+                data_context = rest.strip()
+                placeholder_data_context.markdown(data_context)
                 chunk = ""
             elif "[RESPONSE]:" in chunk:
-                before, tag, after = chunk.partition("[RESPONSE]:")
-                if section == "response" and before.strip():
-                    response_text += before
-                    placeholder_response.markdown(response_text)
-                section = "response"
-                response_text += after
+                idx = chunk.index("[RESPONSE]:")
+                rest = chunk[idx + len("[RESPONSE]:"):]
+
+                response_text += rest
                 placeholder_response.markdown(response_text)
                 chunk = ""
+            elif "[IFC_VIEWER_PARAMS]:" in chunk:
+                idx = chunk.index("[IFC_VIEWER_PARAMS]:")
+                rest = chunk[idx + len("[IFC_VIEWER_PARAMS]:"):].strip()
+                ifc_viewer_params = rest
+                # Save chat history and viewer params before rerun
+                st.session_state["vite_url"] = f"http://localhost:{VITE_PORT}/?ifcUrl=http://127.0.0.1:{FLASK_PORT}/download_latest_ifc" + (ifc_viewer_params if ifc_viewer_params else "")
+                print(f"Vite URL updated: {st.session_state['vite_url']}")
+                # Save chat messages if not already
+                if "messages" not in st.session_state:
+                    st.session_state["messages"] = []
+                # Save the current assistant message (if not already appended)
+                elapsed_time = time.time() - start_time
+                if (not st.session_state["messages"] or
+                    not (isinstance(st.session_state["messages"][-1]["content"], dict) and st.session_state["messages"][-1]["content"].get("response", "") == response_text)):
+                    st.session_state["messages"].append({
+                        "role": "assistant",
+                        "content": {
+                            "data_context": data_context,
+                            "response": response_text,
+                            "logs": logs,
+                            "elapsed_time": elapsed_time,
+                            "ifc_viewer_params": ifc_viewer_params
+                        },
+                        "elapsed_time": elapsed_time
+                    })
+                st.rerun()
+                chunk = ""
             elif "[LOG]:" in chunk:
-                before, tag, after = chunk.partition("[LOG]:")
-                if section == "logs" and before.strip():
-                    logs += before
-                    # Show logs as bullet points
-                    log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
-                    placeholder_logs.markdown("\n".join(log_lines_display))
-                section = "logs"
-                # Support multiple log lines in a single chunk
-                log_lines = after.split("[LOG]:")
-                logs += log_lines[0].strip() + "\n"
-                # Show logs as bullet points
-                log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
-                placeholder_logs.markdown("\n".join(log_lines_display))
-                # --- Progressive flowchart update ---
-                from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
-                G = parse_log_flowchart(logs)
-                fig, flowchart_key = plot_flowchart(G)
-                if fig is not None and G is not None and len(G.nodes) > 0:
-                    # st.markdown("##### Backend Flowchart")
-                    flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
-                # If more [LOG]: tags, process them in next loop
-                chunk = "[LOG]:".join(log_lines[1:]) if len(log_lines) > 1 else ""
+                idx = chunk.index("[LOG]:")
+                rest = chunk[idx + len("[LOG]:"):]
+
+                logs += rest + "\n"
+                placeholder_logs.markdown(logs)
+                chunk = ""
             else:
-                # No tag found, append to current section
-                if section == "data_context":
-                    data_context += chunk
-                    render_data_context_table(data_context, placeholder_data_context)
-                elif section == "response":
-                    response_text += chunk
-                    placeholder_response.markdown(response_text)
-                elif section == "logs":
-                    logs += chunk
-                    # Show logs as bullet points
-                    log_lines_display = [f"- {line}" for line in logs.splitlines() if line.strip()]
-                    placeholder_logs.markdown("\n".join(log_lines_display))
-                    # --- Progressive flowchart update for log tail ---
-                    from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
-                    G = parse_log_flowchart(logs)
-                    fig, flowchart_key = plot_flowchart(G)
-                    if fig is not None and G is not None and len(G.nodes) > 0:
-                        flowchart_placeholder.plotly_chart(fig, use_container_width=True, key=flowchart_key)
-                    # --- Token Usage Report (streaming) ---
-                    # Only show after all logs are received (i.e., after the streaming loop)
+                break
     # After streaming loop ends, show the final token usage report
     with col_response:
-        elapsed_time = _time.time() - start_time
+        elapsed_time = time.time() - start_time
         render_token_usage_report(logs, elapsed_time=elapsed_time)
-    return {"data_context": data_context, "response": response_text, "logs": logs, "elapsed_time": elapsed_time}
+    return {"data_context": data_context, "response": response_text, "logs": logs, "elapsed_time": elapsed_time, "ifc_viewer_params": ifc_viewer_params}
 
 
 def _handle_standard_response(response):
@@ -500,9 +488,11 @@ def visualize_ifc_summary(uploaded_ifc):
             st.error(f"Failed to parse IFC: {e}")
 
 def show_ifcjs_viewer_vite(height=600):
-    """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL."""
+    """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL and any params."""
     st.write(f"**Model Viewer**: {get_latest_ifc_filename()}")
-    vite_url = f"http://localhost:{VITE_PORT}/?ifcUrl=http://127.0.0.1:{FLASK_PORT}/download_latest_ifc"
+    vite_url = st.session_state.get("vite_url")
+    if not vite_url:
+        vite_url = f"http://localhost:{VITE_PORT}/?ifcUrl=http://127.0.0.1:{FLASK_PORT}/download_latest_ifc"
     print(f"Vite URL: {vite_url}")
     components.html(f"""
         <iframe src='{vite_url}' width='100%' height='{height}' style='border:none;'></iframe>
@@ -551,6 +541,12 @@ while poll_flask_status() != "Flask server is running.":
 
 # Update the start message
 start_message.empty()
+
+# In the main UI, before rendering chat history:
+if "messages" not in st.session_state:
+    st.session_state["messages"] = []
+if "vite_url" not in st.session_state:
+    st.session_state["vite_url"] = f"http://localhost:{VITE_PORT}/?ifcUrl=http://127.0.0.1:{FLASK_PORT}/download_latest_ifc"
 
 with st.expander("LLM Configuration", expanded=False):
     st.markdown("## LLM Mode Selection")

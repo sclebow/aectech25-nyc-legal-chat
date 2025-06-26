@@ -62,18 +62,27 @@ def llm_call():
                 data_context, response = llm_calls.route_query_to_function(input_string, stream=True, max_tokens=max_tokens, request_id=request_id)
                 yield f"[DATA CONTEXT]: {data_context}\n"
                 yield "[RESPONSE]:\n"
+                full_response = ""
                 if hasattr(response, '__iter__') and not isinstance(response, str):
                     for chunk in response:
-                        # Always prefix response chunks with [RESPONSE]:
                         if chunk.strip():
                             yield f"[RESPONSE]:{chunk}"
-                        # Drain log queue after each chunk
+                            full_response += chunk
                         while not log_q.empty():
                             log_line = log_q.get()
                             if log_line != "__END__":
                                 yield f"[LOG]: {log_line}\n"
                 else:
                     yield f"[RESPONSE]:{str(response)}"
+                    full_response = str(response)
+                # After streaming, run IFC adaptation if needed
+                if 'ifc' in data_context:
+                    ifc_settings_str = llm_calls.get_ifc_viewer_url_params(full_response)
+                else:
+                    ifc_settings_str = ''
+                logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=llm_call] [description=IFC settings generated: {ifc_settings_str}]")
+                # Always yield the IFC_VIEWER_PARAMS tag, even if empty
+                yield f"[IFC_VIEWER_PARAMS]:{ifc_settings_str}\n"
                 # Drain any remaining logs
                 log_q.put("__END__")
                 while not log_q.empty():
@@ -90,7 +99,12 @@ def llm_call():
             logs = '\n'.join(logger.memory_handler.get_logs(50, request_id=request_id))
         else:
             logs = '[No in-memory logs available]'
-        return jsonify({'data_context': data_context, 'response': response, 'request_id': request_id, 'logs': logs})
+        if 'ifc' in data_context:
+            ifc_settings_str = llm_calls.get_ifc_viewer_url_params(response)
+        else:
+            ifc_settings_str = ''
+        logging.info(f"[id={request_id}] [thread={thread_id_str}] [function=llm_call] [description=IFC settings generated: {ifc_settings_str}]")
+        return jsonify({'data_context': data_context, 'response': response, 'request_id': request_id, 'logs': logs, 'ifc_viewer_params': ifc_settings_str})
 
 @app.route('/set_mode', methods=['POST'])
 def set_mode():
