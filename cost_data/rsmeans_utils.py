@@ -2,7 +2,6 @@
 # It includes functions to read, filter, and process the data for use in cost estimation tasks.
 
 import pandas as pd
-import server.config as config
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import os
@@ -10,6 +9,11 @@ import difflib
 import threading
 import logging
 from logger_setup import set_request_id
+from concurrent.futures import ThreadPoolExecutor, as_completed
+
+import inspect
+
+from llm_query import run_llm_query
 
 # For reference, the following are the columns in the RSMeans DataFrame:
 # ['Masterformat Section Code', 'Section Name', 'ID', 'Name', 'Crew', 'Daily Output', 'Labor-Hours','Unit', 'Material', 'Labor', 'Equipment', 'Total', 'Total Incl O&P']
@@ -58,7 +62,6 @@ def get_rsmeans_context_from_prompt(prompt, max_tokens=1500, request_id=None):
     Use an LLM to extract relevant materials from a prompt.
     The materials will be used to extract data from the RSMeans CSV files.
     """
-    from llm_calls import run_llm_query  # Import here to avoid circular dependency
     system_prompt = (
         "You are an expert at extracting relevant materials from construction task descriptions. "
         "Given a user's description, extract the most relevant materials that can be used to look up costs in RSMeans data. "
@@ -87,13 +90,7 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
     Instead of sending Masterformat codes to the LLM, send only the section descriptions (Section Name).
     Now uses parallel processing for per-chapter LLM calls and CSV loading.
     """
-    from llm_calls import run_llm_query  # Import here to avoid circular dependency
-    from concurrent.futures import ThreadPoolExecutor, as_completed
-    import pandas as pd
-    import re
-    import threading
-    import logging
-    import inspect
+    
 
     # 1. List all chapters
     chapter_csvs = list_chapter_csvs()
@@ -125,7 +122,7 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
             set_request_id(request_id)
         thread_id = threading.get_ident()
         parent_thread_id = getattr(threading.current_thread(), '_parent_ident', None)
-        import inspect
+        
         caller = inspect.stack()[1].function
         thread_id_str = str(thread_id)
         parent_thread_str = str(parent_thread_id) if parent_thread_id else "main"
@@ -233,7 +230,6 @@ def find_by_description(description, section_confidence_threshold=0.8, row_confi
 
     # --- New LLM pass for further filtering by Name and Section Name ---
     if output_df is not None and not output_df.empty:
-        from llm_calls import run_llm_query
         # Prepare a list of combined Name and Section Name values
         combined_list = [
             f"Section: {row['Section Name']}, Name: {row['Name']}" for _, row in output_df.iterrows()
@@ -295,7 +291,6 @@ def get_cost_data(section_code_or_desc):
     """
     # Try to interpret as a section code (search all chapters)
     chapter_csvs = list_chapter_csvs()
-    import pandas as pd
     dfs = [pd.read_csv(os.path.join(RSMEANS_CSV_DIR, fname)) for fname, _ in chapter_csvs]
     df = pd.concat(dfs, ignore_index=True)
     match = find_by_section_code(df, section_code_or_desc)
@@ -308,8 +303,6 @@ def list_sections():
     """
     List all available Masterformat section codes and names from all chapter CSVs.
     """
-    import os
-    import pandas as pd
     RSMEANS_CSV_DIR = "cost_data/rsmeans/"
     csvs = [f for f in os.listdir(RSMEANS_CSV_DIR) if f.endswith(".csv")]
     dfs = [pd.read_csv(os.path.join(RSMEANS_CSV_DIR, f)) for f in csvs]

@@ -1,19 +1,12 @@
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
-from collections import Counter
-import re
-
 import chromadb
 from chromadb.config import Settings
 from server.config import *
 
 from flashrank import Ranker, RerankRequest
 
-# from keybert import KeyBERT
-
-# kw_model = KeyBERT()
-
 CHROMA_PATH = "chroma"
+
+
 
 def get_chroma_client(mode="local"):
     """Get ChromaDB client with embedding function based on mode (local, openai, cloudflare)"""
