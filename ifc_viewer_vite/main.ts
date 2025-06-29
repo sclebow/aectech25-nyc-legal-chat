@@ -95,6 +95,12 @@ const fragmentIfcLoader = components.get(OBC.IfcLoader);
 await fragmentIfcLoader.setup()
 
 let model: any; // <-- Add this line at the top level
+let rotationSpeed = 0.002;
+let cameraOrbitAngle = 0; // theta (horizontal)
+let cameraOrbitRadius = 10;
+let cameraOrbitCenter = new THREE.Vector3(0, 0, 0);
+let cameraOrbitPhi = Math.PI / 4; // vertical angle (phi), default 45deg
+let userIsInteracting = false; // Track if user is interacting with camera controls
 
 async function loadIfc() {
   const file = await fetch(
@@ -127,20 +133,37 @@ if (model) {
   const center = sphere.center;
   const radius = sphere.radius;
 
-  // Calculate camera position: place it back along Z and up along Y
-  // so the model is nicely visible (adjust factor as needed)
-  const cameraDistance = radius * 2.2; // 2.2 gives some margin
-  const cameraPos = new THREE.Vector3(
-    center.x + cameraDistance * 0.7,
-    center.y + cameraDistance * 0.5,
-    center.z + cameraDistance
-  );
+  // Save for camera orbit
+  cameraOrbitCenter.copy(center);
+  cameraOrbitRadius = radius * 2.2; // 2.2 gives some margin
 
-  // Set camera position and aim
+  // Set initial camera position
+  cameraOrbitAngle = 0;
+  const cameraPos = new THREE.Vector3(
+    center.x + cameraOrbitRadius * 0.7,
+    center.y + cameraOrbitRadius * 0.5,
+    center.z + cameraOrbitRadius
+  );
   world.camera.controls.setLookAt(
     cameraPos.x, cameraPos.y, cameraPos.z,
     center.x, center.y, center.z
   );
+
+  // Remove model rotation animation
+  // Instead, animate camera orbit
+  world.renderer.onBeforeUpdate.add(() => {
+    if (!userIsInteracting) {
+      cameraOrbitAngle += rotationSpeed;
+      // Spherical to Cartesian
+      const x = cameraOrbitCenter.x + cameraOrbitRadius * Math.sin(cameraOrbitPhi) * Math.cos(cameraOrbitAngle);
+      const y = cameraOrbitCenter.y + cameraOrbitRadius * Math.cos(cameraOrbitPhi);
+      const z = cameraOrbitCenter.z + cameraOrbitRadius * Math.sin(cameraOrbitPhi) * Math.sin(cameraOrbitAngle);
+      world.camera.controls.setLookAt(
+        x, y, z,
+        cameraOrbitCenter.x, cameraOrbitCenter.y, cameraOrbitCenter.z
+      );
+    }
+  });
 }
 
 fragments.onFragmentsLoaded.add((model) => {
@@ -399,6 +422,40 @@ header.appendChild(labelColor);
 header.appendChild(labelOpacity);
 categorySection.append(header);
 
+// --- Add the rotation speed slider to the panel ---
+const speedWrapper = document.createElement('div');
+speedWrapper.style.display = 'flex';
+speedWrapper.style.alignItems = 'center';
+speedWrapper.style.margin = '8px 0';
+
+const speedLabel = document.createElement('label');
+speedLabel.textContent = 'Rotation Speed: ';
+speedLabel.style.marginRight = '8px';
+speedLabel.style.textAlign = 'center';
+speedLabel.style.color = 'white';
+
+const speedSlider = document.createElement('input');
+speedSlider.type = 'range';
+speedSlider.min = '0';
+speedSlider.max = '0.05';
+speedSlider.step = '0.001';
+speedSlider.value = String(rotationSpeed);
+
+const speedValue = document.createElement('span');
+speedValue.textContent = rotationSpeed.toString();
+
+speedSlider.addEventListener('input', () => {
+  rotationSpeed = parseFloat(speedSlider.value);
+  speedValue.textContent = rotationSpeed.toString();
+});
+
+speedWrapper.appendChild(speedLabel);
+speedWrapper.appendChild(speedSlider);
+speedWrapper.appendChild(speedValue);
+
+// Append the slider to the categorySection (or panel)
+categorySection.append(speedWrapper);
+
 for (const name in classes) {
   const defaultColor = categoryDefaults[name]?.color || new THREE.Color('#ffffff');
   const defaultOpacity = categoryDefaults[name]?.opacity ?? 0.5;
@@ -519,6 +576,23 @@ for (const name of classNames) {
   hider.set(classes[name], found);
 }
 
+// After world.camera.controls is created and initialized:
+if (world && world.camera && world.camera.controls) {
+  world.camera.controls.addEventListener('controlstart', () => {
+    userIsInteracting = true;
+  });
+  world.camera.controls.addEventListener('controlend', () => {
+    userIsInteracting = false;
+    // Update orbit parameters from current camera position
+    const camPos = world.camera.controls.camera.position;
+    const offset = new THREE.Vector3().subVectors(camPos, cameraOrbitCenter);
+    cameraOrbitRadius = offset.length();
+    // Spherical coordinates
+    cameraOrbitAngle = Math.atan2(offset.z, offset.x); // theta
+    cameraOrbitPhi = Math.acos(offset.y / cameraOrbitRadius); // phi
+  });
+}
+
 /* MD
   And we will make some logic that adds a button to the screen when the user is visiting our app from their phone, allowing to show or hide the menu. Otherwise, the menu would make the app unusable.
 */
@@ -538,6 +612,7 @@ const button = BUI.Component.create<BUI.PanelSection>(() => {
 });
 
 document.body.append(button);
+
 
 /* MD
 ### 🎉 Wrap up
