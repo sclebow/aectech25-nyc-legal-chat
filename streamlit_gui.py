@@ -1,28 +1,22 @@
-# streamlit_gui.py
-# Streamlit GUI based on gradio_gui.py
-# requirements: streamlit, requests
-
 import streamlit as st
 import requests
 import subprocess
 import os
 import time
 import threading
-from logger_setup import setup_logger
-# import plotly.graph_objects as go
-from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
 import pandas as pd
 import re
 import ifcopenshell
 import tempfile
-import pyvista as pv
 import streamlit.components.v1 as components
 import socket
 import numpy as np
 import plotly.graph_objects as go
 import base64
 
-from ifc_processing.ifc_processing import process_ifc_file
+from project_utils.ifc_processing import process_ifc_file
+from logger_setup import setup_logger
+from streamlit_gui_flowchart import parse_log_flowchart, plot_flowchart
 
 def find_open_port(preferred_port, max_tries=20):
     """Find an open port, starting from preferred_port, up to max_tries."""
@@ -200,7 +194,7 @@ def _handle_standard_response(response):
         return {"data_context": "", "response": f"Error: {response.status_code} - {response.text}", "logs": ""}
 
 
-def query_llm(user_input, rag_mode, stream_mode, max_tokens=1500):
+def query_llm(user_input, stream_mode, max_tokens=1500):
     """Query the LLM server and handle the response, streaming or standard."""
     url = f"http://127.0.0.1:{FLASK_PORT}/llm_call"
     payload = {"input": user_input, "max_tokens": int(max_tokens)}
@@ -358,7 +352,7 @@ def handle_chat_interaction(message, chat_message_container, default_rag_mode, s
         with st.chat_message("assistant") as assistant_placeholder:
             msg_placeholder = st.empty()
             msg_placeholder.markdown("_Processing..._")
-            output = query_llm(message, default_rag_mode, stream_mode, max_tokens)
+            output = query_llm(message, stream_mode, max_tokens)
             msg_placeholder.empty()
             elapsed_time = None
             if isinstance(output, dict):
@@ -505,7 +499,7 @@ def visualize_ifc_summary(uploaded_ifc):
             st.error(f"Failed to parse IFC: {e}")
     return element_data_df
 
-def show_ifcjs_viewer_vite(height=600):
+def show_ifcjs_viewer_vite(height=800):
     """Embed the local Vite IFC viewer in Streamlit via iframe, passing the latest IFC file URL and any params."""
     st.write(f"**Model Viewer**: {get_latest_ifc_filename()}")
     vite_url = st.session_state.get("vite_url")
@@ -706,11 +700,11 @@ core_window_height = 650
 # Create two Tabs:
 viewer_chat_tab, metrics_tab = st.tabs(["Viewer and Chat", "Explanation and Metrics (Aspirational)"])
 with viewer_chat_tab:
-    ifc_col, chat_col = st.columns([2, 4], vertical_alignment="top")
+    ifc_col, chat_col = st.columns([3, 4], vertical_alignment="top")
     with ifc_col:
         with st.container(height=core_window_height):
             # --- IFC File Upload Section ---
-            show_ifcjs_viewer_vite(height=core_window_height - 200)
+            show_ifcjs_viewer_vite(height=core_window_height - 100)
 
             with st.form("ifc_upload_form", clear_on_submit=True):
                 uploaded_ifc = st.file_uploader("Choose an IFC file to upload", type=["ifc"], key="ifc_file_uploader")
