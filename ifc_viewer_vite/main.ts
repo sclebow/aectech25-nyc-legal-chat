@@ -101,6 +101,7 @@ let cameraOrbitRadius = 10;
 let cameraOrbitCenter = new THREE.Vector3(0, 0, 0);
 let cameraOrbitPhi = Math.PI / 4; // vertical angle (phi), default 45deg
 let userIsInteracting = false; // Track if user is interacting with camera controls
+let lastAutoCameraPos = new THREE.Vector3(); // Track last auto-rotation camera position
 
 async function loadIfc() {
   const file = await fetch(
@@ -152,16 +153,24 @@ if (model) {
   // Remove model rotation animation
   // Instead, animate camera orbit
   world.renderer.onBeforeUpdate.add(() => {
-    if (!userIsInteracting) {
-      cameraOrbitAngle += rotationSpeed;
-      // Spherical to Cartesian
-      const x = cameraOrbitCenter.x + cameraOrbitRadius * Math.sin(cameraOrbitPhi) * Math.cos(cameraOrbitAngle);
-      const y = cameraOrbitCenter.y + cameraOrbitRadius * Math.cos(cameraOrbitPhi);
-      const z = cameraOrbitCenter.z + cameraOrbitRadius * Math.sin(cameraOrbitPhi) * Math.sin(cameraOrbitAngle);
+    if (userIsInteracting) {
+      // Keep lastAutoCameraPos in sync with user camera position
+      lastAutoCameraPos.copy(world.camera.controls.camera.position);
+      return;
+    }
+    cameraOrbitAngle += rotationSpeed;
+    // Spherical to Cartesian
+    const x = cameraOrbitCenter.x + cameraOrbitRadius * Math.sin(cameraOrbitPhi) * Math.cos(cameraOrbitAngle);
+    const y = cameraOrbitCenter.y + cameraOrbitRadius * Math.cos(cameraOrbitPhi);
+    const z = cameraOrbitCenter.z + cameraOrbitRadius * Math.sin(cameraOrbitPhi) * Math.sin(cameraOrbitAngle);
+    // Only update camera if user hasn't moved it
+    const cam = world.camera.controls.camera;
+    if (cam.position.distanceTo(lastAutoCameraPos) < 1e-6) {
       world.camera.controls.setLookAt(
         x, y, z,
         cameraOrbitCenter.x, cameraOrbitCenter.y, cameraOrbitCenter.z
       );
+      lastAutoCameraPos.set(x, y, z);
     }
   });
 }
@@ -590,7 +599,10 @@ if (world && world.camera && world.camera.controls) {
     // Spherical coordinates
     cameraOrbitAngle = Math.atan2(offset.z, offset.x); // theta
     cameraOrbitPhi = Math.acos(offset.y / cameraOrbitRadius); // phi
+    lastAutoCameraPos.copy(camPos); // Update last auto camera position to current
   });
+  // Also update lastAutoCameraPos on init
+  lastAutoCameraPos.copy(world.camera.controls.camera.position);
 }
 
 /* MD
