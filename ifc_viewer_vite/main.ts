@@ -36,7 +36,7 @@ const categoryOpacityParam = urlParams.get('categoryOpacity');
 // IFCSLAB is neon orange,
 // IFCWALL is neon pink,
 const hardcodedCategories = {
-  IFCSPACE: { color: new THREE.Color(0xaaaaaa), opacity: 0.1 },
+  IFCSPACE: { color: new THREE.Color(0xffffff), opacity: 0.1 },
     IFCSLAB: { color: new THREE.Color(0xffa500), opacity: 0.2 },
     IFCWALL: { color: new THREE.Color(0xff69b4), opacity: 0.4 },
     IFCBUILDINGELEMENTPROXY: { color: new THREE.Color(0xaaaaaa), opacity: 0.0 },
@@ -379,13 +379,13 @@ Now we will add some UI to control the visibility of items per category using si
 // Create the panel and section separately
 const panel = BUI.Component.create<BUI.Panel>(() => {
   return BUI.html`
-    <bim-panel active label="Category Visibility" class="options-menu"></bim-panel>
+    <bim-panel active label="controls" class="options-menu"></bim-panel>
   `;
 });
 
 const categorySection = BUI.Component.create<BUI.PanelSection>(() => {
   return BUI.html`
-    <bim-panel-section name="Categories"></bim-panel-section>
+    <bim-panel-section name="categories"></bim-panel-section>
   `;
 });
 
@@ -401,35 +401,6 @@ categoryNames.forEach((name, i) => {
     opacity: defaultOpacities[i],
   };
 });
-
-// Add a header row for the controls
-const header = document.createElement('div');
-header.style.display = 'flex';
-header.style.alignItems = 'center';
-header.style.fontWeight = 'bold';
-header.style.marginBottom = '4px';
-
-const labelCheckbox = document.createElement('span');
-labelCheckbox.textContent = 'Category';
-labelCheckbox.style.display = 'inline-block';
-labelCheckbox.style.width = '120px';
-
-const labelColor = document.createElement('span');
-labelColor.textContent = 'Color';
-labelColor.style.display = 'inline-block';
-labelColor.style.width = '60px';
-labelColor.style.textAlign = 'center';
-
-const labelOpacity = document.createElement('span');
-labelOpacity.textContent = 'Opacity';
-labelOpacity.style.display = 'inline-block';
-labelOpacity.style.width = '100px';
-labelOpacity.style.textAlign = 'center';
-
-header.appendChild(labelCheckbox);
-header.appendChild(labelColor);
-header.appendChild(labelOpacity);
-categorySection.append(header);
 
 // --- Add the rotation speed slider to the panel ---
 const speedWrapper = document.createElement('div');
@@ -464,6 +435,38 @@ speedWrapper.appendChild(speedValue);
 
 // Append the slider to the categorySection (or panel)
 categorySection.append(speedWrapper);
+
+// Add a header row for the controls
+const header = document.createElement('div');
+header.style.display = 'flex';
+header.style.alignItems = 'center';
+header.style.fontWeight = 'bold';
+header.style.marginBottom = '4px';
+header.style.color = 'white';
+
+const labelCheckbox = document.createElement('span');
+labelCheckbox.textContent = 'Category';
+labelCheckbox.style.display = 'inline-block';
+labelCheckbox.style.width = '120px';
+
+const labelColor = document.createElement('span');
+labelColor.textContent = 'Color';
+labelColor.style.display = 'inline-block';
+labelColor.style.width = '60px';
+labelColor.style.textAlign = 'center';
+
+const labelOpacity = document.createElement('span');
+labelOpacity.textContent = 'Opacity';
+labelOpacity.style.display = 'inline-block';
+labelOpacity.style.width = '100px';
+labelOpacity.style.textAlign = 'center';
+
+header.appendChild(labelCheckbox);
+header.appendChild(labelColor);
+header.appendChild(labelOpacity);
+categorySection.append(header);
+
+
 
 for (const name in classes) {
   const defaultColor = categoryDefaults[name]?.color || new THREE.Color('#ffffff');
@@ -571,7 +574,7 @@ for (const name in classes) {
   const wrapper = document.createElement('div');
   wrapper.style.display = 'flex';
   wrapper.style.alignItems = 'center';
-  wrapper.style.marginBottom = '2px';
+  wrapper.style.marginBottom = '1px';
   wrapper.appendChild(checkbox);
   wrapper.appendChild(colorInput);
   wrapper.appendChild(opacityInput);
@@ -594,6 +597,10 @@ if (world && world.camera && world.camera.controls) {
     userIsInteracting = false;
     // Update orbit parameters from current camera position
     const camPos = world.camera.controls.camera.position;
+    // Update orbit center to current controls' target (focal point)
+    const currentTarget = new THREE.Vector3();
+    world.camera.controls.getTarget(currentTarget);
+    cameraOrbitCenter.copy(currentTarget);
     const offset = new THREE.Vector3().subVectors(camPos, cameraOrbitCenter);
     cameraOrbitRadius = offset.length();
     // Spherical coordinates
