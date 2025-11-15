@@ -5,7 +5,7 @@
 
 import pandas as pd
 import streamlit as st
-from llm_calls import classify_and_get_context, run_llm_query
+from llm_calls import classify_and_get_context, update_categories_list
 
 print("\n" * 5)
 print("Starting AEC Contract Assistant...")
@@ -101,9 +101,34 @@ DEFAULT_SCOPE_OF_WORK = {
     },
 }
 
+st.session_state["FULL_CATEGORIES_LIST"] = [
+            "Structural Framing",
+            "Structural Columns",
+            "Structural Foundations",
+            "Walls",
+            "Floors",
+            "Roofs",
+            "Ceilings",
+            "Doors",
+            "Windows",
+            "Stairs",
+            "Railings",
+            "Curtain Panels",
+            "Curtain Wall Mullions",
+            "Furniture",
+            "Mechanical Equipment",
+            "Plumbing Fixtures",
+            "Lighting Fixtures",
+            "Electrical Equipment",
+            "Ducts",
+            "Pipes",
+]
+
 st.session_state.setdefault("messages", [])
 st.session_state.setdefault("scope_of_work", DEFAULT_SCOPE_OF_WORK)
 st.session_state.setdefault("conversation_history", [])
+
+update_categories_list()
 
 with chat_column:
     st.title("AEC Contract Assistant 🤖")
@@ -136,11 +161,10 @@ with chat_column:
 # It shows a list of deliverables, each with associated scope items
 with scope_column:
     # Container with fixed height and its own scrolling
-    with st.container(height=600, border=False):
+    with st.container():
         st.subheader("Scope of Work")
         
-        # Use DEFAULT_SCOPE_OF_WORK for testing
-        scope_to_display = st.session_state.scope_of_work or DEFAULT_SCOPE_OF_WORK
+        scope_to_display = st.session_state.scope_of_work
         
         if scope_to_display:
             # Flatten the nested dictionary structure
@@ -156,7 +180,7 @@ with scope_column:
             
             if rows:
                 df = pd.DataFrame(rows)
-                st.data_editor(df, use_container_width=True, hide_index=True)
+                st.data_editor(df, width='content', hide_index=True, height=600)
             else:
                 st.write("No scope items yet")
         else:

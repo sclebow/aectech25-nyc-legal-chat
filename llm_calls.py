@@ -175,7 +175,7 @@ def ask_scope_of_work_change_prompt(message: str):
     return response
 
 def complete_contact_draft(message: str):
-    with open("templates/contract-template-short.md", "r") as f:
+    with open("./template/contact-template-short.md", "r") as f:
         contract_template = f.read()
 
     system_prompt = "The content below is a contract template for an Architect Owner Agreement. Use the template to generate a complete contract draft based on the user's requirements."
@@ -183,6 +183,44 @@ def complete_contact_draft(message: str):
 
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
     return response
+
+def update_categories_list():
+    """
+    Update the categories list in the sidebar based on the current scope of work, using an llm call
+    """
+    categories_list = st.session_state.get("CATEGORIES_LIST")
+    
+    current_scope_of_work = st.session_state.get("scope_of_work")
+
+    # Call LLM to update categories list
+    system_prompt = "\n".join(
+        [
+            "You are an AI assistant that creates a list of categories that should be expected in a BIM design model based on the scope of work for an architectural project.",
+            "Given the scope of work dictionary, generate a comprehensive list of categories that should be included by selecting from the provided categories list.",
+            f"Scope of Work:\n{current_scope_of_work}",
+            f"Available Categories:\n{categories_list}",
+            "Return ONLY a Python list of the selected categories that match the scope of work.",
+            "All categories must be selected from the provided list.",
+            "Response should start with '[' and end with ']'.",
+            ""
+        ]
+    )
+    print(f"System Prompt for Categories Update: {system_prompt}")
+    llm_response = run_llm_query(system_prompt=system_prompt, user_input="Generate the categories list.")
+    print(f"LLM Response for Categories Update: {llm_response}")
+    # Parse the LLM response to get the list
+    try:
+        updated_categories = ast.literal_eval(llm_response)
+        if isinstance(updated_categories, list):
+            # Update the session state with the new categories list
+            st.session_state["categories_list"] = updated_categories
+            print(f"Updated Categories List: {updated_categories}")
+        else:
+            print("LLM response is not a valid list.")
+            print(f"LLM Response for Categories Update: {llm_response}")
+    except (ValueError, SyntaxError) as e:
+        print(f"Error parsing LLM response: {e}")
+        print(f"LLM Response for Categories Update: {llm_response}")
 
 def classify_and_get_context(message: str):
     """
@@ -204,6 +242,8 @@ def classify_and_get_context(message: str):
 
     response = "I'm sorry, I can only assist with contract language and scope of work related queries at this time."
 
+    previous_scope_of_work = st.session_state.get("scope_of_work")
+
     if prompt_type == "contract_language":
         response = ask_contract_language_prompt(message)
     elif prompt_type == "scope_of_work_question":
@@ -212,6 +252,11 @@ def classify_and_get_context(message: str):
         response = ask_scope_of_work_change_prompt(message)
     elif prompt_type == "complete_contract_draft":
         response = complete_contact_draft(message)
+
+    # Check if the scope of work has changed and update the categories list
+    if previous_scope_of_work != st.session_state.get("scope_of_work"):
+        # Update categories list 
+        update_categories_list()
 
     # data_sources = {
     #     "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
