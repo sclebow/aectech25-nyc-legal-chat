@@ -3,6 +3,7 @@
 # list of deliverables,
 # along with associated scope items for each deliverable.
 
+import pandas as pd
 import streamlit as st
 from llm_calls import classify_and_get_context, run_llm_query
 
@@ -44,3 +45,16 @@ with chat_column:
         st.session_state.messages.append({"role": "assistant", "content": response})
         with st.chat_message("assistant"):
             st.markdown(response)
+            
+            
+# The scope window displays the current scope of work being developed
+# It shows a list of deliverables, each with associated scope items
+with scope_column:
+    st.subheader("Scope of Work")
+    if st.session_state.scope_of_work:
+        # For a simple dict:
+        df = pd.DataFrame(list(st.session_state.scope_of_work.items()), 
+                         columns=['Deliverable', 'Scope Items'])
+        st.dataframe(df)
+    else:
+        st.write("No scope items yet")
