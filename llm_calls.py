@@ -116,20 +116,62 @@ def ask_scope_of_work_prompt(message: str):
     Ask the LLM a scope of work related prompt.
     Returns the LLM response as a string.
     """
-    current_scope_of_work = st.session_state.get("scope_of_work", {})
+    current_scope_of_work = st.session_state.get("scope_of_work")
 
-    if current_scope_of_work == {}:
-        # Need to initialize the scope of work from the default prompt
-        current_scope_of_work = st.session_state["default_scope_of_work"]
+    current_scope_of_work = str(current_scope_of_work)
+    print(f"Current Scope of Work: {current_scope_of_work}")
 
     system_prompt = "\n".join(
         [
             "You are helping define a comprehensive scope of work for an Architect Owner Agreement.",
             "Here is a dictionary of deliverables and associated scope items defined so far:",
-            "{scope_of_work}",
+            f"{current_scope_of_work}",
         ]
     )
+    print(f"System Prompt: {system_prompt}")
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
+    return response
+
+def ask_scope_of_work_change_prompt(message: str):
+    """
+    Ask the LLM a scope of work change related prompt.
+    Returns the LLM response as a string.
+    """
+    current_scope_of_work = st.session_state.get("scope_of_work")
+
+    current_scope_of_work = str(current_scope_of_work)
+    print(f"Current Scope of Work: {current_scope_of_work}")
+
+    system_prompt = "\n".join(
+        [
+            "You are helping modify and expand a comprehensive scope of work for an Architect Owner Agreement.",
+            "Here is a dictionary of deliverables and associated scope items defined so far:",
+            f"{current_scope_of_work}",
+            "Respond only with an updated dictionary including the requested changes.",
+            "Focus on accuracy and completeness.",
+            "Do not include any explanations or additional text.",
+            ""
+        ]
+    )
+    print(f"System Prompt: {system_prompt}")
+    modified_dictionary = run_llm_query(system_prompt=system_prompt, user_input=message)
+
+    # Check if the response is a valid dictionary
+    try:
+        updated_scope_of_work = ast.literal_eval(modified_dictionary)
+        if isinstance(updated_scope_of_work, dict):
+            # Update the session state with the new scope of work
+            st.session_state["scope_of_work"] = updated_scope_of_work
+            print(f"Updated Scope of Work: {updated_scope_of_work}")
+            response = "Scope of work updated successfully."
+        else:
+            print("LLM response is not a valid dictionary.")
+            response = "I'm sorry, I could not process the changes to the scope of work. Please ensure your request is clear."
+
+    except (ValueError, SyntaxError) as e:
+        print(f"Error parsing LLM response: {e}")
+        response = "I'm sorry, I could not process the changes to the scope of work. Please ensure your request is clear."
+
     return response
 
 def complete_contact_draft(message: str):
@@ -150,7 +192,9 @@ def classify_and_get_context(message: str):
     prompt_types = {
         "contract_language": "This is a typical Architect Owner Agreement contract template, including scope of work, deliverables, payment terms, and legal clauses.",
         "scope_of_work": "This is a detailed scope for the project the architect is working on, including deliverables, tasks, and timelines.",
-        "complete_contract_draft": "This a request to generate a complete contract draft based on previous conservation and a template."
+        "complete_contract_draft": "This a request to generate a complete contract draft based on previous conservation and a template.",
+        "scope_of_work_question": "This is for questions about the scope of work for the current project.",
+        "scope_of_work_change": "The user wants to modify or expand the current scope of work for the project.",
     }
 
     # Classify the user prompt for routing
@@ -162,8 +206,10 @@ def classify_and_get_context(message: str):
 
     if prompt_type == "contract_language":
         response = ask_contract_language_prompt(message)
-    elif prompt_type == "scope_of_work":
+    elif prompt_type == "scope_of_work_question":
         response = ask_scope_of_work_prompt(message)
+    elif prompt_type == "scope_of_work_change":
+        response = ask_scope_of_work_change_prompt(message)
     elif prompt_type == "complete_contract_draft":
         response = complete_contact_draft(message)
 
