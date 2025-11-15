@@ -21,11 +21,7 @@ scope_column, chat_column = st.columns([1, 3])
 # The chat window allows the user to have a conversation with the AI assistant
 # This conversation would generate a dictionary of deliverables, and associated lists of scope items
 
-st.session_state.setdefault("messages", [])
-st.session_state.setdefault("scope_of_work", {})
-st.session_state.setdefault("conversation_history", [])
-
-st.session_state["default_scope_of_work"] = {
+DEFAULT_SCOPE_OF_WORK = {
     "Schematic Design": {
         "Architectural": [
             "Preliminary floor plans",
@@ -80,6 +76,10 @@ st.session_state["default_scope_of_work"] = {
         ],
     },
 }
+
+st.session_state.setdefault("messages", [])
+st.session_state.setdefault("scope_of_work", DEFAULT_SCOPE_OF_WORK)
+st.session_state.setdefault("conversation_history", [])
 
 with chat_column:
     st.title("AEC Contract Assistant 🤖")
