@@ -4,7 +4,7 @@
 # along with associated scope items for each deliverable.
 
 import streamlit as st
-from llm_calls import classify_and_get_context
+from llm_calls import classify_and_get_context, run_llm_query
 
 st.set_page_config(
     page_title="AEC Contract Assistant",
@@ -38,7 +38,8 @@ with chat_column:
 
         # Here you would call your LLM to get a response based on the conversation
         # For demonstration purposes, we'll use a placeholder response
-        response = "Thank you for the details. Based on your input, here are some initial deliverables and scope items..."
+        # response = "Thank you for the details. Based on your input, here are some initial deliverables and scope items..."
+        response = run_llm_query(system_prompt="", user_input=prompt)
 
         st.session_state.messages.append({"role": "assistant", "content": response})
         with st.chat_message("assistant"):
