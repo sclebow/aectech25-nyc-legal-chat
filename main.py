@@ -40,7 +40,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Build the chat interface
-scope_column, chat_column = st.columns([1, 3])
+scope_column, chat_column = st.columns([2, 3])
 
 # The chat window allows the user to have a conversation with the AI assistant
 # This conversation would generate a dictionary of deliverables, and associated lists of scope items
@@ -139,11 +139,26 @@ with scope_column:
     with st.container(height=600, border=False):
         st.subheader("Scope of Work")
         
-        if st.session_state.scope_of_work:
-            # For a simple dict:
-            df = pd.DataFrame(list(st.session_state.scope_of_work.items()), 
-                             columns=['Deliverable', 'Scope Items'])
-            st.dataframe(df, use_container_width=True)
+        # Use DEFAULT_SCOPE_OF_WORK for testing
+        scope_to_display = st.session_state.scope_of_work or DEFAULT_SCOPE_OF_WORK
+        
+        if scope_to_display:
+            # Flatten the nested dictionary structure
+            rows = []
+            for phase, disciplines in scope_to_display.items():
+                for discipline, items in disciplines.items():
+                    for item in items:
+                        rows.append({
+                            'Phase': phase,
+                            'Discipline': discipline,
+                            'Scope Item': item
+                        })
+            
+            if rows:
+                df = pd.DataFrame(rows)
+                st.dataframe(df, use_container_width=True)
+            else:
+                st.write("No scope items yet")
         else:
             st.write("No scope items yet")
             
