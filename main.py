@@ -6,6 +6,9 @@
 import streamlit as st
 from llm_calls import classify_and_get_context, run_llm_query
 
+print("\n" * 5)
+print("Starting AEC Contract Assistant...")
+
 st.set_page_config(
     page_title="AEC Contract Assistant",
     page_icon="🤖",
