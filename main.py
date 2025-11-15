@@ -7,6 +7,9 @@ import pandas as pd
 import streamlit as st
 from llm_calls import classify_and_get_context, run_llm_query
 
+print("\n" * 5)
+print("Starting AEC Contract Assistant...")
+
 st.set_page_config(
     page_title="AEC Contract Assistant",
     page_icon="🤖",
@@ -42,8 +45,65 @@ scope_column, chat_column = st.columns([1, 3])
 # The chat window allows the user to have a conversation with the AI assistant
 # This conversation would generate a dictionary of deliverables, and associated lists of scope items
 
+DEFAULT_SCOPE_OF_WORK = {
+    "Schematic Design": {
+        "Architectural": [
+            "Preliminary floor plans",
+            "Exterior elevations",
+            "Renderings",
+        ],
+        "Electrical": [
+            "Narrative description of electrical systems",
+        ],
+        "Mechanical": [
+            "Narrative description of mechanical systems",
+        ],
+    },
+    "Design Development": {
+        "Architectural": [
+            "Refined floor plans",
+            "Building sections",
+            "Preliminary material selections",
+        ],
+        "Structural": [
+            "Preliminary structural system design",
+        ],
+        "Electrical": [
+            "Preliminary electrical plans",
+        ],
+        "Mechanical": [
+            "Preliminary mechanical plans",
+        ],
+    },
+    "Construction Documents": {
+        "Architectural": [
+            "Detailed floor plans",
+            "Wall sections",
+            "Door and window schedules",
+            "Finish schedules",
+        ],
+        "Structural": [
+            "Final structural drawings and specifications",
+        ],
+        "Electrical": [
+            "Complete electrical plans and details",
+        ],
+        "Mechanical": [
+            "Complete mechanical plans and details",
+        ],
+    },
+    "Construction Administration": {
+        "Architectural": [
+            "Site visits",
+            "Review of shop drawings",
+            "Response to RFIs",
+        ],
+    },
+}
+
 st.session_state.setdefault("messages", [])
-st.session_state.setdefault("scope_of_work", {})
+st.session_state.setdefault("scope_of_work", DEFAULT_SCOPE_OF_WORK)
+st.session_state.setdefault("conversation_history", [])
 
 with chat_column:
     st.title("AEC Contract Assistant 🤖")
@@ -60,10 +120,12 @@ with chat_column:
         with st.chat_message("user"):
             st.markdown(prompt)
 
-        # Here you would call your LLM to get a response based on the conversation
-        # For demonstration purposes, we'll use a placeholder response
-        # response = "Thank you for the details. Based on your input, here are some initial deliverables and scope items..."
-        response = run_llm_query(system_prompt="", user_input=prompt)
+        # Call LLM with conversation history for context
+        response = classify_and_get_context(prompt)
+
+        # Update conversation history with user message and assistant response
+        st.session_state.conversation_history.append({"role": "user", "content": prompt})
+        st.session_state.conversation_history.append({"role": "assistant", "content": response})
 
         st.session_state.messages.append({"role": "assistant", "content": response})
         with st.chat_message("assistant"):

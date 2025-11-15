@@ -6,11 +6,17 @@ import inspect
 import threading
 from logger_setup import get_request_id, set_request_id
 
+import streamlit as st
+
 def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2, request_id: str = None, large_model=True) -> str:
     """ Run a query against the LLM with a system prompt and user input.
     If stream is True, returns a generator for streaming output.
     If stream is False, returns the full response as a string.
     If the LLM call fails, it will retry up to max_retries times with a delay of retry_delay seconds between retries.
+    
+    Args:
+        conversation_history: Optional list of previous messages in format [{"role": "user"/"assistant", "content": "..."}, ...]
+                            System prompt should NOT be included in conversation_history.
     """
     attempt = 0
     caller = inspect.stack()[1].function
@@ -32,15 +38,18 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
         model = config.completion_model_sml
     if request_id:
         set_request_id(request_id)
+    
+    # Build messages list with conversation history
+    messages = [{"role": "system", "content": system_prompt}]
+    messages.extend(st.session_state.conversation_history)
+    messages.append({"role": "user", "content": user_input})
+    
     while attempt < max_retries:
         try:
             if not stream:
                 response = config.client.chat.completions.create(
                     model=model,
-                    messages=[
-                        {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": user_input}
-                    ],
+                    messages=messages,
                     temperature=0.0,
                     max_tokens=max_tokens,
                 )
@@ -49,10 +58,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
             else:
                 response = config.client.chat.completions.create(
                     model=config.completion_model,
-                    messages=[
-                        {"role": "system", "content": system_prompt},
-                        {"role": "user", "content": user_input}
-                    ],
+                    messages=messages,
                     temperature=0.0,
                     max_tokens=max_tokens,
                     stream=True,
