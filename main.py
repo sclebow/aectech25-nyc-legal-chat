@@ -22,6 +22,21 @@ st.session_state.setdefault("messages", [])
 st.session_state.setdefault("scope_of_work", {})
 st.session_state.setdefault("conversation_history", [])
 
+# st.session_state["default_scope_of_work"] = {
+#     "Schematic Design": {
+#         "Architectural": [
+#             "Preliminary floor plans",
+#             "Exterior elevations",
+#             "Renderings",
+#         ],
+#         "Electrical": [
+#             "Narrative description of electrical systems",
+#         ],
+#         "Mechanical": [
+#             "Narrative description of mechanical systems",
+#         ],
+#     }
+
 with chat_column:
     st.title("AEC Contract Assistant 🤖")
     st.write(
@@ -38,11 +53,7 @@ with chat_column:
             st.markdown(prompt)
 
         # Call LLM with conversation history for context
-        response = run_llm_query(
-            system_prompt="You are an AI assistant helping architects develop comprehensive scopes of work for AEC contracts. Be helpful, professional, and detail-oriented.",
-            user_input=prompt,
-            conversation_history=st.session_state.conversation_history
-        )
+        response = classify_and_get_context(prompt)
 
         # Update conversation history with user message and assistant response
         st.session_state.conversation_history.append({"role": "user", "content": prompt})
