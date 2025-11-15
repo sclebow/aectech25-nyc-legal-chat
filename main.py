@@ -13,6 +13,28 @@ st.set_page_config(
     layout="wide",
 )
 
+# CSS to make the left column sticky
+st.markdown("""
+    <style>
+        /* Make the parent container use relative positioning */
+        .main .block-container {
+            max-width: 100%;
+        }
+            
+        /* Target the column wrapper and first column */
+        div[data-testid="stHorizontalBlock"] {
+            align-items: flex-start !important;
+        }
+        
+        div[data-testid="stHorizontalBlock"] > div:first-child {
+            position: sticky !important;
+            top: 3.5rem;
+            align-self: flex-start !important;
+            z-index: 100;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
 # Build the chat interface
 scope_column, chat_column = st.columns([1, 3])
 
@@ -50,11 +72,21 @@ with chat_column:
 # The scope window displays the current scope of work being developed
 # It shows a list of deliverables, each with associated scope items
 with scope_column:
-    st.subheader("Scope of Work")
-    if st.session_state.scope_of_work:
-        # For a simple dict:
-        df = pd.DataFrame(list(st.session_state.scope_of_work.items()), 
-                         columns=['Deliverable', 'Scope Items'])
-        st.dataframe(df)
-    else:
-        st.write("No scope items yet")
+    # Container with fixed height and its own scrolling
+    with st.container(height=700, border=True):
+        st.subheader("Scope of Work")
+        
+        if st.session_state.scope_of_work:
+            # For a simple dict:
+            df = pd.DataFrame(list(st.session_state.scope_of_work.items()), 
+                             columns=['Deliverable', 'Scope Items'])
+            st.dataframe(df, use_container_width=True)
+        else:
+            st.write("No scope items yet")
+            
+            # Example of adding more content to demonstrate scrolling
+            st.markdown("---")
+            st.write("**Instructions:**")
+            st.write("- Describe your project requirements")
+            st.write("- The AI will help build your scope")
+            st.write("- Items will appear here as you chat")
