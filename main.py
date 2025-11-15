@@ -156,7 +156,7 @@ with scope_column:
             
             if rows:
                 df = pd.DataFrame(rows)
-                st.dataframe(df, use_container_width=True)
+                st.data_editor(df, use_container_width=True, hide_index=True)
             else:
                 st.write("No scope items yet")
         else:
