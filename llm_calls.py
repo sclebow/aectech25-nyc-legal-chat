@@ -144,7 +144,7 @@ def ask_scope_of_work_change_prompt(message: str):
 
     system_prompt = "\n".join(
         [
-            "You are helping modify and expand a comprehensive scope of work for an Architect Owner Agreement.",
+            "You are helping modify a comprehensive scope of work for an Architect Owner Agreement.",
             "Here is a dictionary of deliverables and associated scope items defined so far:",
             f"{current_scope_of_work}",
             "Respond only with an updated dictionary including the requested changes.",
