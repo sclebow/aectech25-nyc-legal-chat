@@ -31,6 +31,7 @@ st.markdown("""
             top: 3.5rem;
             align-self: flex-start !important;
             z-index: 100;
+            margin-top: 10;
         }
     </style>
 """, unsafe_allow_html=True)
@@ -73,7 +74,7 @@ with chat_column:
 # It shows a list of deliverables, each with associated scope items
 with scope_column:
     # Container with fixed height and its own scrolling
-    with st.container(height=700, border=True):
+    with st.container(height=600, border=False):
         st.subheader("Scope of Work")
         
         if st.session_state.scope_of_work:
