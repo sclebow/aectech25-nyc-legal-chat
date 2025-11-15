@@ -27,7 +27,6 @@ local_client = OpenAI(base_url="http://localhost:1234/v1", api_key="lm-studio")
 # openai_client = OpenAI(api_key=OPENAI_API_KEY)
 cloudflare_client = OpenAI(base_url = f"https://api.cloudflare.com/client/v4/accounts/{CLOUDFLARE_ACCOUNT_ID}/ai/v1", api_key = CLOUDFLARE_API_KEY)
 
-
 # Embedding Models
 local_embedding_model = "nomic-ai/nomic-embed-text-v1.5-GGUF"
 cloudflare_embedding_model = "@cf/baai/bge-base-en-v1.5"
