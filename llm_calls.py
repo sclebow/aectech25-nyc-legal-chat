@@ -121,12 +121,14 @@ def ask_scope_of_work_prompt(message: str):
     if current_scope_of_work == {}:
         # Need to initialize the scope of work from the default prompt
         current_scope_of_work = st.session_state["default_scope_of_work"]
+    
+    current_scope_of_work = str(current_scope_of_work)
 
     system_prompt = "\n".join(
         [
             "You are helping define a comprehensive scope of work for an Architect Owner Agreement.",
             "Here is a dictionary of deliverables and associated scope items defined so far:",
-            "{scope_of_work}",
+            "{current_scope_of_work}",
         ]
     )
     response = run_llm_query(system_prompt=system_prompt, user_input=message)

@@ -22,20 +22,61 @@ st.session_state.setdefault("messages", [])
 st.session_state.setdefault("scope_of_work", {})
 st.session_state.setdefault("conversation_history", [])
 
-# st.session_state["default_scope_of_work"] = {
-#     "Schematic Design": {
-#         "Architectural": [
-#             "Preliminary floor plans",
-#             "Exterior elevations",
-#             "Renderings",
-#         ],
-#         "Electrical": [
-#             "Narrative description of electrical systems",
-#         ],
-#         "Mechanical": [
-#             "Narrative description of mechanical systems",
-#         ],
-#     }
+st.session_state["default_scope_of_work"] = {
+    "Schematic Design": {
+        "Architectural": [
+            "Preliminary floor plans",
+            "Exterior elevations",
+            "Renderings",
+        ],
+        "Electrical": [
+            "Narrative description of electrical systems",
+        ],
+        "Mechanical": [
+            "Narrative description of mechanical systems",
+        ],
+    },
+    "Design Development": {
+        "Architectural": [
+            "Refined floor plans",
+            "Building sections",
+            "Preliminary material selections",
+        ],
+        "Structural": [
+            "Preliminary structural system design",
+        ],
+        "Electrical": [
+            "Preliminary electrical plans",
+        ],
+        "Mechanical": [
+            "Preliminary mechanical plans",
+        ],
+    },
+    "Construction Documents": {
+        "Architectural": [
+            "Detailed floor plans",
+            "Wall sections",
+            "Door and window schedules",
+            "Finish schedules",
+        ],
+        "Structural": [
+            "Final structural drawings and specifications",
+        ],
+        "Electrical": [
+            "Complete electrical plans and details",
+        ],
+        "Mechanical": [
+            "Complete mechanical plans and details",
+        ],
+    },
+    "Construction Administration": {
+        "Architectural": [
+            "Site visits",
+            "Review of shop drawings",
+            "Response to RFIs",
+        ],
+    },
+}
 
 with chat_column:
     st.title("AEC Contract Assistant 🤖")
