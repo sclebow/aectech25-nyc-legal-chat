@@ -163,6 +163,7 @@ def ask_scope_of_work_change_prompt(message: str):
             # Update the session state with the new scope of work
             st.session_state["scope_of_work"] = updated_scope_of_work
             print(f"Updated Scope of Work: {updated_scope_of_work}")
+            response = "Scope of work updated successfully."
         else:
             print("LLM response is not a valid dictionary.")
             response = "I'm sorry, I could not process the changes to the scope of work. Please ensure your request is clear."
