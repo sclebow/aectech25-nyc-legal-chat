@@ -53,8 +53,8 @@ def classify_data_sources(message: str, data_sources: dict, request_id: str = No
         temperature=0.0,
     )
 
-    
-    
+
+
     classification = response.choices[0].message.content.strip()
     
     logging.info(f"{log_prefix} [description=Classification result: {classification}] [usage={response.usage}]")
@@ -117,7 +117,7 @@ def ask_scope_of_work_prompt(message: str):
     Returns the LLM response as a string.
     """
     current_scope_of_work = st.session_state.get("scope_of_work")
-    
+
     current_scope_of_work = str(current_scope_of_work)
     print(f"Current Scope of Work: {current_scope_of_work}")
 
@@ -174,6 +174,16 @@ def ask_scope_of_work_change_prompt(message: str):
 
     return response
 
+def complete_contact_draft(message: str):
+    with open("templates/contract-template-short.md", "r") as f:
+        contract_template = f.read()
+
+    system_prompt = "The content below is a contract template for an Architect Owner Agreement. Use the template to generate a complete contract draft based on the user's requirements."
+    system_prompt += f"\n\nContract Template:\n{contract_template}"
+
+    response = run_llm_query(system_prompt=system_prompt, user_input=message)
+    return response
+
 def classify_and_get_context(message: str):
     """
     Classify the user message and retrieve the relevant context from all data sources.
@@ -181,6 +191,8 @@ def classify_and_get_context(message: str):
     """
     prompt_types = {
         "contract_language": "This is a typical Architect Owner Agreement contract template, including scope of work, deliverables, payment terms, and legal clauses.",
+        "scope_of_work": "This is a detailed scope for the project the architect is working on, including deliverables, tasks, and timelines.",
+        "complete_contract_draft": "This a request to generate a complete contract draft based on previous conservation and a template.",
         "scope_of_work_question": "This is for questions about the scope of work for the current project.",
         "scope_of_work_change": "The user wants to modify or expand the current scope of work for the project.",
     }
@@ -198,6 +210,8 @@ def classify_and_get_context(message: str):
         response = ask_scope_of_work_prompt(message)
     elif prompt_type == "scope_of_work_change":
         response = ask_scope_of_work_change_prompt(message)
+    elif prompt_type == "complete_contract_draft":
+        response = complete_contact_draft(message)
 
     # data_sources = {
     #     "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
