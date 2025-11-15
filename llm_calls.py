@@ -16,6 +16,8 @@ import json
 
 from llm_query import run_llm_query
 
+import streamlit as st
+
 def classify_data_sources(message: str, data_sources: dict, request_id: str = None) -> dict:
     """
     Classify the user message into one of the five core data sources.
@@ -99,6 +101,36 @@ def classify_prompt_type(message: str, prompt_types: dict):
     
     logging.info(f"{log_prefix} [description=Prompt type classification result: {classification}] [usage={response.usage}]")
     return classification
+
+def ask_contract_language_prompt(message: str):
+    """
+    Ask the LLM a contract language related prompt.
+    Returns the LLM response as a string.
+    """
+    system_prompt = "You are an AI assistant helping architects with contract language for AEC contracts. Be helpful, professional, and detail-oriented."
+    response = run_llm_query(system_prompt=system_prompt, user_input=message)
+    return response
+
+def ask_scope_of_work_prompt(message: str):
+    """
+    Ask the LLM a scope of work related prompt.
+    Returns the LLM response as a string.
+    """
+    current_scope_of_work = st.session_state.get("scope_of_work", {})
+
+    if current_scope_of_work == {}:
+        # Need to initialize the scope of work from the default prompt
+        current_scope_of_work = st.session_state["default_scope_of_work"]
+
+    system_prompt = "\n".join(
+        [
+            "You are helping define a comprehensive scope of work for an Architect Owner Agreement.",
+            "Here is a dictionary of deliverables and associated scope items defined so far:",
+            "{scope_of_work}",
+        ]
+    )
+    response = run_llm_query(system_prompt=system_prompt, user_input=message)
+    return response
 
 def classify_and_get_context(message: str):
     """

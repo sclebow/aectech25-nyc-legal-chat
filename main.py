@@ -22,6 +22,21 @@ st.session_state.setdefault("messages", [])
 st.session_state.setdefault("scope_of_work", {})
 st.session_state.setdefault("conversation_history", [])
 
+# st.session_state["default_scope_of_work"] = {
+#     "Schematic Design": {
+#         "Architectural": [
+#             "Preliminary floor plans",
+#             "Exterior elevations",
+#             "Renderings",
+#         ],
+#         "Electrical": [
+#             "Narrative description of electrical systems",
+#         ],
+#         "Mechanical": [
+#             "Narrative description of mechanical systems",
+#         ],
+#     }
+
 with chat_column:
     st.title("AEC Contract Assistant 🤖")
     st.write(
