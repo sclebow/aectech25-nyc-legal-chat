@@ -6,7 +6,7 @@
 import pandas as pd
 import streamlit as st
 from llm_calls import classify_and_get_context, run_llm_query
-from scope_visualizer import display_scope_of_work
+from scope_visualizer import display_scope_of_work, display_scope_as_markdown
 from ui_styles import apply_custom_styles
 
 print("\n" * 5)
@@ -122,3 +122,5 @@ with scope_column:
         # Use DEFAULT_SCOPE_OF_WORK for testing
         scope_to_display = st.session_state.scope_of_work or DEFAULT_SCOPE_OF_WORK
         display_scope_of_work(scope_to_display)
+        st.divider()
+        display_scope_as_markdown(scope_to_display)
