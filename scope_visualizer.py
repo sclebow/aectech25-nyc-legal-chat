@@ -97,7 +97,7 @@ def display_scope_of_work(scope_of_work):
     Args:
         scope_of_work: Dictionary with structure {phase: {discipline: [items]}}
     """
-    st.subheader("Scope of Work")
+    st.markdown("##### Scope of Work")
     
     if not scope_of_work:
         st.write("No scope items yet")
@@ -136,4 +136,20 @@ def display_scope_of_work(scope_of_work):
         ]
     
     styled_df = df.style.apply(highlight_columns, axis=1)
-    st.dataframe(styled_df, width='content', hide_index=True, height=600)
+    edited_df = st.data_editor(styled_df, width='content', hide_index=True, height=450)
+
+    edited_dict = edited_df.to_dict(orient='records')
+    # Convert back to nested dictionary
+    new_scope_of_work = {}
+    for entry in edited_dict:
+        phase = entry['Phase']
+        discipline = entry['Discipline']
+        item = entry['Scope Item']
+        if phase not in new_scope_of_work:
+            new_scope_of_work[phase] = {}
+        if discipline not in new_scope_of_work[phase]:
+            new_scope_of_work[phase][discipline] = []
+        new_scope_of_work[phase][discipline].append(item)
+
+    # Update the original scope_of_work dictionary
+    st.session_state["scope_of_work"] = new_scope_of_work

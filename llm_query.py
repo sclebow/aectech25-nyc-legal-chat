@@ -8,7 +8,7 @@ from logger_setup import get_request_id, set_request_id
 
 import streamlit as st
 
-def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 1500, max_retries: int = 15, retry_delay: int = 2, request_id: str = None, large_model=True) -> str:
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 6000, max_retries: int = 15, retry_delay: int = 2, request_id: str = None, large_model=True) -> str:
     """ Run a query against the LLM with a system prompt and user input.
     If stream is True, returns a generator for streaming output.
     If stream is False, returns the full response as a string.

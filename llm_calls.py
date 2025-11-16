@@ -114,6 +114,8 @@ def ask_contract_language_prompt(message: str):
             "Pretend you are a legal expert in architecture contracts.",
             "Assume the user is a Senior Architect with 10+ years of experience.",
             "Make suggestions regarding contract language that is favorable to the architect.",
+            "The current project scope of work is as follows:",
+            f"{st.session_state.get('scope_of_work')}",
             ""
         ]
     )
@@ -187,7 +189,18 @@ def complete_contact_draft(message: str):
     with open("./template/contact-template-short.md", "r") as f:
         contract_template = f.read()
 
-    system_prompt = "The content below is a contract template for an Architect Owner Agreement. Use the template to generate a complete contract draft based on the user's requirements."
+    system_prompt = "\n".join(
+        [
+            "The content below is a contract template for an Architect Owner Agreement. ",
+            "Use the template to generate a complete contract draft based on the user's requirements and the project's scope of work.",
+            f"Contract Template:\n{contract_template}",
+            f"Project Scope of Work:\n{st.session_state.get('scope_of_work')}",
+            "Provide only the edited sections and add notations to indicate where changes were made.",
+            "Use markdown formatting, and show edited text in bold red.",
+            "Do not show unchanged sections of the contract, just indicate they are unchanged.",
+            ""
+        ]
+    )
     system_prompt += f"\n\nContract Template:\n{contract_template}"
 
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
