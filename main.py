@@ -187,3 +187,23 @@ with file_upload_column:
         st.markdown("**Uploaded Files:**")
         for uploaded_file in uploaded_files:
             st.markdown(f"- {uploaded_file.name}")
+
+str_list = []
+str_list.append("This information should not be considered legal advice. Consult a qualified attorney for legal matters.\n")
+str_list.append("Github Repository: https://github.com/sclebow/aectech25-nyc-legal-chat/")
+str_list.append("Contributers: ")
+contributers_list = ["Scott Lebow, https://www.linkedin.com/in/sclebow/",
+                     "Chu Ding, https://www.linkedin.com/in/chuding/",
+                     "Yufei Wang, https://www.linkedin.com/in/yufei-wang-faye/",
+                     "Douglas Kim, https://www.linkedin.com/in/dkim19/",
+                     "Janez Mikec, https://www.linkedin.com/in/janezmikec/"]
+
+# Randomize contributers order
+import random
+random.shuffle(contributers_list)
+
+for contributer in contributers_list:
+    str_list.append(f"- {contributer}")
+
+disclaimer_text = "\n".join(str_list)
+st.markdown(disclaimer_text)
