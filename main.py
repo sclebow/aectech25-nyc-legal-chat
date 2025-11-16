@@ -5,15 +5,15 @@
 
 import pandas as pd
 import streamlit as st
-from llm_calls import classify_and_get_context, run_llm_query
-from scope_visualizer import display_scope_of_work, display_scope_as_markdown
+from llm_calls import classify_and_get_context, update_categories_list
+from scope_visualizer import display_scope_of_work
 from ui_styles import apply_custom_styles
 
 print("\n" * 5)
 print("Starting AEC Contract Assistant...")
 
 st.set_page_config(
-    page_title="AEC Contract Assistant",
+    page_title="ContractCadence",
     page_icon="🤖",
     layout="wide",
 )
@@ -22,7 +22,7 @@ st.set_page_config(
 apply_custom_styles()
 
 # Build the chat interface
-scope_column, chat_column = st.columns([2, 3])
+file_upload_column, scope_column, chat_column = st.columns([1, 3, 3])
 
 # The chat window allows the user to have a conversation with the AI assistant
 # This conversation would generate a dictionary of deliverables, and associated lists of scope items
@@ -83,44 +83,127 @@ DEFAULT_SCOPE_OF_WORK = {
     },
 }
 
+st.session_state["FULL_CATEGORIES_LIST"] = [
+            "Structural Framing",
+            "Structural Columns",
+            "Structural Foundations",
+            "Walls",
+            "Floors",
+            "Roofs",
+            "Ceilings",
+            "Doors",
+            "Windows",
+            "Stairs",
+            "Railings",
+            "Curtain Panels",
+            "Curtain Wall Mullions",
+            "Furniture",
+            "Mechanical Equipment",
+            "Plumbing Fixtures",
+            "Lighting Fixtures",
+            "Electrical Equipment",
+            "Ducts",
+            "Pipes",
+]
+
 st.session_state.setdefault("messages", [])
 st.session_state.setdefault("scope_of_work", DEFAULT_SCOPE_OF_WORK)
 st.session_state.setdefault("conversation_history", [])
 
-with chat_column:
-    st.title("AEC Contract Assistant 🤖")
-    st.write(
-        "Welcome to the AEC Contract Assistant! This chatbot will help you develop a comprehensive scope of work for your architecture, engineering, and construction contracts. Start by describing your project and requirements."
-    )
+update_categories_list()
 
-    for message in st.session_state.messages:
-        with st.chat_message(message["role"]):
-            st.markdown(message["content"])
+with chat_column:
+    message_container = st.container(height=550, border=True)
+
+    if st.session_state.messages == []:
+        st.session_state.messages.append(
+            {
+                "role": "assistant",
+                "content": "Hello! I'm your AEC Contract Assistant. Describe your project and requirements, and I'll help you build a comprehensive scope of work."
+            }
+        )
+
+    with message_container:
+        for message in st.session_state.messages:
+            with st.chat_message(message["role"]):
+                st.markdown(message["content"])
 
     if prompt := st.chat_input("Describe your project and requirements..."):
         st.session_state.messages.append({"role": "user", "content": prompt})
-        with st.chat_message("user"):
-            st.markdown(prompt)
+        with message_container:
+            with st.chat_message("user"):
+                st.markdown(prompt)
 
-        # Call LLM with conversation history for context
-        response = classify_and_get_context(prompt)
+            # Call LLM with conversation history for context, with streaming enabled
+            response_generator = classify_and_get_context(prompt)
+
+            # Display streaming response
+            with st.chat_message("assistant"):
+                response_placeholder = st.empty()
+                full_response = ""
+                
+                # Stream the response
+                for chunk in response_generator:
+                    full_response += chunk
+                    response_placeholder.markdown(full_response + "▌")
+                
+                # Final update without cursor
+                response_placeholder.markdown(full_response)
 
         # Update conversation history with user message and assistant response
         st.session_state.conversation_history.append({"role": "user", "content": prompt})
-        st.session_state.conversation_history.append({"role": "assistant", "content": response})
+        st.session_state.conversation_history.append({"role": "assistant", "content": full_response})
 
-        st.session_state.messages.append({"role": "assistant", "content": response})
-        with st.chat_message("assistant"):
-            st.markdown(response)
+        st.session_state.messages.append({"role": "assistant", "content": full_response})
             
             
 # The scope window displays the current scope of work being developed
 # It shows a list of deliverables, each with associated scope items
 with scope_column:
-    # Container with fixed height and its own scrolling
-    with st.container(height=600, border=False):
-        # Use DEFAULT_SCOPE_OF_WORK for testing
-        scope_to_display = st.session_state.scope_of_work or DEFAULT_SCOPE_OF_WORK
-        display_scope_of_work(scope_to_display)
-        st.divider()
-        display_scope_as_markdown(scope_to_display)
+    st.subheader("ContractCadence 🤖")
+
+    # Use DEFAULT_SCOPE_OF_WORK for testing
+    scope_to_display = st.session_state.scope_of_work or DEFAULT_SCOPE_OF_WORK
+    display_scope_of_work(scope_to_display)
+
+    categories_list = st.session_state["categories_list"]
+    categories_list_csv = pd.Series(categories_list).to_csv(index=False, header=False)
+    # Add a download button for the categories list
+    download_button = st.download_button(
+        label="Download categories list as CSV",
+        data=categories_list_csv,
+        file_name="categories_list.csv",
+        mime="text/csv",
+    )
+
+with file_upload_column:
+    st.subheader("Upload Reference Documents 📄")
+    uploaded_files = st.file_uploader(
+        "Upload architectural plans, contracts, or other reference documents to assist the AI in understanding your project requirements.",
+        accept_multiple_files=True,
+        type=["pdf", "docx", "txt"],
+    )
+    if uploaded_files:
+        st.markdown("**Uploaded Files:**")
+        for uploaded_file in uploaded_files:
+            st.markdown(f"- {uploaded_file.name}")
+
+str_list = []
+str_list.append("This information should not be considered legal advice. Consult a qualified attorney for legal matters.\n")
+str_list.append("Github Repository: https://github.com/sclebow/aectech25-nyc-legal-chat/")
+str_list.append("Contributers: ")
+contributers_list = ["Scott Lebow, https://www.linkedin.com/in/sclebow/",
+                     "Chu Ding, https://www.linkedin.com/in/chuding/",
+                     "Yufei Wang, https://www.linkedin.com/in/yufei-wang-faye/",
+                     "Douglas Kim, https://www.linkedin.com/in/dkim19/",
+                     "Janez Mikec, https://www.linkedin.com/in/janezmikec/"]
+
+# Randomize contributers order
+import random
+random.shuffle(contributers_list)
+
+for contributer in contributers_list:
+    str_list.append(f"- {contributer}")
+
+disclaimer_text = "\n".join(str_list)
+st.markdown(disclaimer_text)

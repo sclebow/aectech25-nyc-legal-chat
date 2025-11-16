@@ -107,7 +107,18 @@ def ask_contract_language_prompt(message: str):
     Ask the LLM a contract language related prompt.
     Returns the LLM response as a string.
     """
-    system_prompt = "You are an AI assistant helping architects with contract language for AEC contracts. Be helpful, professional, and detail-oriented."
+    system_prompt = "\n".join(
+        [
+            "You are an AI assistant helping architects with contract language for AEC contracts. ",
+            "Be helpful, professional, and detail-oriented.",
+            "Pretend you are a legal expert in architecture contracts.",
+            "Assume the user is a Senior Architect with 10+ years of experience.",
+            "Make suggestions regarding contract language that is favorable to the architect.",
+            "The current project scope of work is as follows:",
+            f"{st.session_state.get('scope_of_work')}",
+            ""
+        ]
+    )
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
     return response
 
@@ -144,7 +155,7 @@ def ask_scope_of_work_change_prompt(message: str):
 
     system_prompt = "\n".join(
         [
-            "You are helping modify and expand a comprehensive scope of work for an Architect Owner Agreement.",
+            "You are helping modify a comprehensive scope of work for an Architect Owner Agreement.",
             "Here is a dictionary of deliverables and associated scope items defined so far:",
             f"{current_scope_of_work}",
             "Respond only with an updated dictionary including the requested changes.",
@@ -175,12 +186,77 @@ def ask_scope_of_work_change_prompt(message: str):
     return response
 
 def complete_contact_draft(message: str):
-    with open("templates/contract-template-short.md", "r") as f:
+    with open("./template/contact-template-short.md", "r") as f:
         contract_template = f.read()
 
-    system_prompt = "The content below is a contract template for an Architect Owner Agreement. Use the template to generate a complete contract draft based on the user's requirements."
+    system_prompt = "\n".join(
+        [
+            "The content below is a contract template for an Architect Owner Agreement. ",
+            "Use the template to generate a complete contract draft based on the user's requirements and the project's scope of work.",
+            f"Contract Template:\n{contract_template}",
+            f"Project Scope of Work:\n{st.session_state.get('scope_of_work')}",
+            "Provide only the edited sections and add notations to indicate where changes were made.",
+            "Use markdown formatting, and show edited text in bold red.",
+            "Do not show unchanged sections of the contract, just indicate they are unchanged.",
+            ""
+        ]
+    )
     system_prompt += f"\n\nContract Template:\n{contract_template}"
 
+    response = run_llm_query(system_prompt=system_prompt, user_input=message)
+    return response
+
+def update_categories_list():
+    """
+    Update the categories list in the sidebar based on the current scope of work, using an llm call
+    """
+    full_categories_list = st.session_state.get("FULL_CATEGORIES_LIST")
+
+    current_scope_of_work = st.session_state.get("scope_of_work")
+
+    # Call LLM to update categories list
+    system_prompt = "\n".join(
+        [
+            "You are an AI assistant that creates a list of categories that should be expected in a BIM design model based on the scope of work for an architectural project.",
+            "Given the scope of work dictionary, generate a comprehensive list of categories that should be included by selecting from the provided categories list.",
+            f"Scope of Work:\n{current_scope_of_work}",
+            f"Available Categories:\n{full_categories_list}",
+            "Return ONLY a Python list of the selected categories that match the scope of work.",
+            "All categories must be selected from the provided list.",
+            "Response should start with '[' and end with ']'.",
+            ""
+        ]
+    )
+    print(f"System Prompt for Categories Update: {system_prompt}")
+    llm_response = run_llm_query(system_prompt=system_prompt, user_input="Generate the categories list.")
+    print(f"LLM Response for Categories Update: {llm_response}")
+    # Parse the LLM response to get the list
+    try:
+        updated_categories = ast.literal_eval(llm_response)
+        if isinstance(updated_categories, list):
+            # Update the session state with the new categories list
+            st.session_state["categories_list"] = updated_categories
+            print(f"Updated Categories List: {updated_categories}")
+        else:
+            print("LLM response is not a valid list.")
+            print(f"LLM Response for Categories Update: {llm_response}")
+    except (ValueError, SyntaxError) as e:
+        print(f"Error parsing LLM response: {e}")
+        print(f"LLM Response for Categories Update: {llm_response}")
+
+def default_query(message: str):
+    """
+    Default LLM query when no specific classification is made.
+    Returns the LLM response as a string.
+    """
+    system_prompt = "\n".join(
+        [
+            "You are a helpful AI assistant for architects working on AEC contracts and scopes of work.",
+            "The question the user asked is not specifically about contract language or scope of work.",
+            "Prompt the user to clarify their request or provide more details so you can assist them better.",
+            "If possible, use thieir query to help improve the scope of work being developed.",
+        ]
+    )
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
     return response
 
@@ -202,7 +278,7 @@ def classify_and_get_context(message: str):
 
     print(f"Classified prompt type: {prompt_type}")
 
-    response = "I'm sorry, I can only assist with contract language and scope of work related queries at this time."
+    previous_scope_of_work = st.session_state.get("scope_of_work")
 
     if prompt_type == "contract_language":
         response = ask_contract_language_prompt(message)
@@ -212,6 +288,13 @@ def classify_and_get_context(message: str):
         response = ask_scope_of_work_change_prompt(message)
     elif prompt_type == "complete_contract_draft":
         response = complete_contact_draft(message)
+    else:
+        response = default_query(message)
+
+    # Check if the scope of work has changed and update the categories list
+    if previous_scope_of_work != st.session_state.get("scope_of_work"):
+        # Update categories list 
+        update_categories_list()
 
     # data_sources = {
     #     "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
