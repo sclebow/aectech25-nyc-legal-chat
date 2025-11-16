@@ -160,35 +160,43 @@ with chat_column:
 # The scope window displays the current scope of work being developed
 # It shows a list of deliverables, each with associated scope items
 with scope_column:
-    # Container with fixed height and its own scrolling
-    with st.container():
-        st.subheader("Scope of Work")
+    st.subheader("Scope of Work")
+    
+    scope_to_display = st.session_state.scope_of_work
+    
+    if scope_to_display:
+        # Flatten the nested dictionary structure
+        rows = []
+        for phase, disciplines in scope_to_display.items():
+            for discipline, items in disciplines.items():
+                for item in items:
+                    rows.append({
+                        'Phase': phase,
+                        'Discipline': discipline,
+                        'Scope Item': item
+                    })
         
-        scope_to_display = st.session_state.scope_of_work
-        
-        if scope_to_display:
-            # Flatten the nested dictionary structure
-            rows = []
-            for phase, disciplines in scope_to_display.items():
-                for discipline, items in disciplines.items():
-                    for item in items:
-                        rows.append({
-                            'Phase': phase,
-                            'Discipline': discipline,
-                            'Scope Item': item
-                        })
-            
-            if rows:
-                df = pd.DataFrame(rows)
-                st.data_editor(df, width='content', hide_index=True, height=600)
-            else:
-                st.write("No scope items yet")
+        if rows:
+            df = pd.DataFrame(rows)
+            st.data_editor(df, width='content', hide_index=True, height=600)
         else:
             st.write("No scope items yet")
-            
-            # Example of adding more content to demonstrate scrolling
-            st.markdown("---")
-            st.write("**Instructions:**")
-            st.write("- Describe your project requirements")
-            st.write("- The AI will help build your scope")
-            st.write("- Items will appear here as you chat")
+    else:
+        st.write("No scope items yet")
+        
+        # Example of adding more content to demonstrate scrolling
+        st.markdown("---")
+        st.write("**Instructions:**")
+        st.write("- Describe your project requirements")
+        st.write("- The AI will help build your scope")
+        st.write("- Items will appear here as you chat")
+
+    categories_list = st.session_state["categories_list"]
+    categories_list_csv = pd.Series(categories_list).to_csv(index=False, header=False)
+    # Add a download button for the categories list
+    download_button = st.download_button(
+        label="Download categories list as CSV",
+        data=categories_list_csv,
+        file_name="categories_list.csv",
+        mime="text/csv",
+    )

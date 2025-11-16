@@ -188,8 +188,8 @@ def update_categories_list():
     """
     Update the categories list in the sidebar based on the current scope of work, using an llm call
     """
-    categories_list = st.session_state.get("CATEGORIES_LIST")
-    
+    full_categories_list = st.session_state.get("FULL_CATEGORIES_LIST")
+
     current_scope_of_work = st.session_state.get("scope_of_work")
 
     # Call LLM to update categories list
@@ -198,7 +198,7 @@ def update_categories_list():
             "You are an AI assistant that creates a list of categories that should be expected in a BIM design model based on the scope of work for an architectural project.",
             "Given the scope of work dictionary, generate a comprehensive list of categories that should be included by selecting from the provided categories list.",
             f"Scope of Work:\n{current_scope_of_work}",
-            f"Available Categories:\n{categories_list}",
+            f"Available Categories:\n{full_categories_list}",
             "Return ONLY a Python list of the selected categories that match the scope of work.",
             "All categories must be selected from the provided list.",
             "Response should start with '[' and end with ']'.",
@@ -222,6 +222,22 @@ def update_categories_list():
         print(f"Error parsing LLM response: {e}")
         print(f"LLM Response for Categories Update: {llm_response}")
 
+def default_query(message: str):
+    """
+    Default LLM query when no specific classification is made.
+    Returns the LLM response as a string.
+    """
+    system_prompt = "\n".join(
+        [
+            "You are a helpful AI assistant for architects working on AEC contracts and scopes of work.",
+            "The question the user asked is not specifically about contract language or scope of work.",
+            "Prompt the user to clarify their request or provide more details so you can assist them better.",
+            "If possible, use thieir query to help improve the scope of work being developed.",
+        ]
+    )
+    response = run_llm_query(system_prompt=system_prompt, user_input=message)
+    return response
+
 def classify_and_get_context(message: str):
     """
     Classify the user message and retrieve the relevant context from all data sources.
@@ -240,8 +256,6 @@ def classify_and_get_context(message: str):
 
     print(f"Classified prompt type: {prompt_type}")
 
-    response = "I'm sorry, I can only assist with contract language and scope of work related queries at this time."
-
     previous_scope_of_work = st.session_state.get("scope_of_work")
 
     if prompt_type == "contract_language":
@@ -252,6 +266,8 @@ def classify_and_get_context(message: str):
         response = ask_scope_of_work_change_prompt(message)
     elif prompt_type == "complete_contract_draft":
         response = complete_contact_draft(message)
+    else:
+        response = default_query(message)
 
     # Check if the scope of work has changed and update the categories list
     if previous_scope_of_work != st.session_state.get("scope_of_work"):
