@@ -107,7 +107,16 @@ def ask_contract_language_prompt(message: str):
     Ask the LLM a contract language related prompt.
     Returns the LLM response as a string.
     """
-    system_prompt = "You are an AI assistant helping architects with contract language for AEC contracts. Be helpful, professional, and detail-oriented."
+    system_prompt = "\n".join(
+        [
+            "You are an AI assistant helping architects with contract language for AEC contracts. ",
+            "Be helpful, professional, and detail-oriented.",
+            "Pretend you are a legal expert in architecture contracts.",
+            "Assume the user is a Senior Architect with 10+ years of experience.",
+            "Make suggestions regarding contract language that is favorable to the architect.",
+            ""
+        ]
+    )
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
     return response
 

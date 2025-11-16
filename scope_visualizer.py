@@ -136,4 +136,4 @@ def display_scope_of_work(scope_of_work):
         ]
     
     styled_df = df.style.apply(highlight_columns, axis=1)
-    st.dataframe(styled_df, use_container_width=True, hide_index=True)
+    st.dataframe(styled_df, width='content', hide_index=True, height=600)
