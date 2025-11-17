@@ -190,7 +190,7 @@ with file_upload_column:
 
 str_list = []
 str_list.append("This information should not be considered legal advice. Consult a qualified attorney for legal matters.\n")
-str_list.append("Github Repository: https://github.com/sclebow/aectech25-nyc-legal-chat/")
+str_list.append("Github Repository: https://github.com/sclebow/aectech25-nyc-legal-chat/ \n")
 str_list.append("Contributers: ")
 contributers_list = ["Scott Lebow, https://www.linkedin.com/in/sclebow/",
                      "Chu Ding, https://www.linkedin.com/in/chuding/",
@@ -206,4 +206,5 @@ for contributer in contributers_list:
     str_list.append(f"- {contributer}")
 
 disclaimer_text = "\n".join(str_list)
-st.markdown(disclaimer_text)
+with st.expander("Disclaimer & Contributers"):
+    st.markdown(disclaimer_text)
