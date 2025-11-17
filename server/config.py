@@ -2,13 +2,11 @@ import random
 from openai import OpenAI
 # from server.keys import *
 import os
-from dotenv import load_dotenv
+import streamlit as st
 
-load_dotenv()
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-CLOUDFLARE_ACCOUNT_ID = os.getenv("CLOUDFLARE_ACCOUNT_ID")
-CLOUDFLARE_API_KEY = os.getenv("CLOUDFLARE_API_KEY")
+# OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+CLOUDFLARE_ACCOUNT_ID = st.secrets["CLOUDFLARE_ACCOUNT_ID"]
+CLOUDFLARE_API_KEY = st.secrets["CLOUDFLARE_API_KEY"]
 
 # Mode control using getter/setter
 _mode = "cloudflare"  # default

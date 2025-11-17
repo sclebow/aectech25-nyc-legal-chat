@@ -14,7 +14,7 @@ We suggest using a virtual environment to manage dependencies.
 
 ## Usage
 
-You will need to create a `.env` file in the root directory of the project to store your environment variables. At a minimum, you will need to set the following variables:
+You will need to create a `secrets.toml` file in the `.streamlit` directory of the project to store your environment variables. At a minimum, you will need to set the following variables:
 
 ```
 CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id
@@ -33,3 +33,7 @@ This will start a local web server, and you can access the assistant through you
 
 You can configure the assistant by modifying the `config.py` file.
 This file contains various settings that control the behavior of the assistant, such as the model to use, the prompt templates, and other parameters.
+
+## Deployment
+
+The ContractCadence demo is currently deployed on Streamlit Cloud at [contractcadence.streamlit.app](https://contractcadence.streamlit.app).

@@ -3,4 +3,4 @@ openai
 fastrank
 chromadb
 python-json-logger
-dotenv
+viktor
