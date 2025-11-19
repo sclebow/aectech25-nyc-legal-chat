@@ -4,3 +4,4 @@ fastrank
 # chromadb
 python-json-logger
 viktor
+python-docx

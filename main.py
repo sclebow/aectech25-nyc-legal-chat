@@ -8,8 +8,10 @@ import streamlit as st
 from llm_calls import classify_and_get_context, update_categories_list
 from scope_visualizer import display_scope_of_work
 from ui_styles import apply_custom_styles
+from docx import Document
+import io
 
-default_scope_of_work_dict_file = "default_scope_of_work.dict"
+default_scope_of_work_dict_file = "default_scope_of_work.txt"
 default_scope_of_work_string = open(default_scope_of_work_dict_file, "r").read()
 default_scope_of_work = eval(default_scope_of_work_string)
 
@@ -58,7 +60,7 @@ with st.sidebar:
 # The scope window displays the current scope of work being developed
 # It shows a list of deliverables, each with associated scope items
 with scope_column:
-    st.markdown("##### Scope of Work (Markdown View)")
+    st.markdown("##### Scope of Work 📋")
     with st.container(border=True):
         tabs = st.tabs(["Markdown View", "Table View (Manual Edit)"])
     
@@ -67,7 +69,25 @@ with scope_column:
         scope_to_display = st.session_state.scope_of_work
         table_height = display_scope_of_work(scope_to_display)
 
-    cols = st.columns(2)
+    with tabs[0]:
+        with st.container(height=table_height, border=False):
+            # Display the scope of work in markdown format
+            scope_of_work = st.session_state.scope_of_work
+
+            markdown_lines = []
+            for phase, disciplines in scope_of_work.items():
+                markdown_lines.append(f"##### {phase}")
+                for discipline, items in disciplines.items():
+                    markdown_lines.append(f"###### {discipline}")
+                    for item in items:
+                        markdown_lines.append(f"- {item}")
+            markdown_lines.append("\n")
+            markdown_lines.append("\* This scope of work was generated with the assistance of ContractCadence, an AI-powered AEC contract assistant.")
+
+            markdown_text = "\n".join(markdown_lines)
+            st.markdown(markdown_text)
+
+    cols = st.columns(3)
     with cols[0]:
         # Add a download button for the scope of work
         scope_of_work_df = pd.DataFrame(st.session_state.scope_of_work)
@@ -79,6 +99,27 @@ with scope_column:
             width="stretch",
         )
     with cols[1]:
+        # Add a button to download the markdown view of the scope of work as a .md file
+        doc = Document()
+        scope_of_work = st.session_state.scope_of_work
+        for phase, disciplines in scope_of_work.items():
+            doc.add_heading(phase, level=1)
+            for discipline, items in disciplines.items():
+                doc.add_heading(discipline, level=2)
+                for item in items:
+                    doc.add_paragraph(item, style='List Bullet')
+        docx_content = io.BytesIO()
+        doc.save(docx_content)
+        docx_content.seek(0)
+
+        download_button = st.download_button(
+            label="Download scope of work as DOCX",
+            data=docx_content,
+            file_name="scope_of_work.docx",
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+            width="stretch",
+        )
+    with cols[2]:
         download_button = st.button(
             label="Download categories list as CSV",
             width="stretch",
@@ -88,25 +129,6 @@ with scope_column:
             with st.spinner("Updating categories list, this may take a moment..."):
                 update_categories_list()
 
-    with tabs[0]:
-        with st.container(height=table_height, border=False):
-            # Display the scope of work in markdown format
-            scope_of_work = st.session_state.scope_of_work
-
-            markdown_lines = []
-            for phase, disciplines in scope_of_work.items():
-                markdown_lines.append(f"##### {phase}\n")
-                for discipline, items in disciplines.items():
-                    markdown_lines.append(f"###### {discipline}\n")
-                    for item in items:
-                        markdown_lines.append(f"- {item}\n")
-                    markdown_lines.append("\n")
-                markdown_lines.append("\n")
-            
-            markdown_lines.append("* This scope of work was generated with the assistance of ContractCadence, an AI-powered AEC contract assistant.*\n")
-
-            markdown_text = "\n".join(markdown_lines)
-            st.markdown(markdown_text)
 
 with chat_column:
     st.markdown("##### Chat with your AEC Contract Assistant 💬")
