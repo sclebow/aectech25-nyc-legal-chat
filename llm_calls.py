@@ -250,7 +250,6 @@ def update_categories_list():
             # Update the session state with the new categories list
             st.session_state["categories_list"] = updated_categories
             print(f"Updated Categories List: {updated_categories}")
-            categories_list_csv = pd.Series(updated_categories).to_csv(index=False, header=False)
             auto_download_csv(",".join(updated_categories), filename="categories_list.csv")
         else:
             print("LLM response is not a valid list.")
