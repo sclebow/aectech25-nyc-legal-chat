@@ -1,0 +1,16 @@
+{
+    "Electrical": [
+        "Existing electrical drawings will be provided prior to project start",
+        "One site visit to assess existing conditions, facility engineer will be available to answer questions during site visit",
+        "Electrical plans will only show empty boxes and conduit for low-voltage and fire alarm systems unless otherwise noted",
+        "Fire Protection drawings will be provided by a licensed fire protection engineer under separate contract. Performance specifications will be provided for coordination with fire protection engineer",
+    ],
+    "Mechanical": [
+        "Existing mechanical drawings will be provided prior to project start",
+        "One site visit to assess existing conditions, facility engineer will be available to answer questions during site visit",
+    ],
+    "Plumbing": [
+        "Existing plumbing drawings will be provided prior to project start",
+        "One site visit to assess existing conditions, facility engineer will be available to answer questions during site visit",
+    ],
+}

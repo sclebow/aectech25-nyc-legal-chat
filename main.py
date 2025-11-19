@@ -19,8 +19,15 @@ default_categories_list_file = "default_categories_list.txt"
 default_categories_list_string = open(default_categories_list_file, "r").read()
 st.session_state["FULL_CATEGORIES_LIST"] = eval(default_categories_list_string)
 
+default_assumptions_and_exclusions_file = "default_assumptions_and_exclusions.txt"
+default_assumptions_and_exclusions_string = open(default_assumptions_and_exclusions_file, "r").read()
+default_assumptions_and_exclusions = eval(default_assumptions_and_exclusions_string)
+st.session_state.setdefault("ASSUMPTIONS_AND_EXCLUSIONS", default_assumptions_and_exclusions)
+
 print("\n" * 5)
 print("Starting AEC Contract Assistant...")
+
+print(f"Assumptions and Exclusions: {st.session_state['ASSUMPTIONS_AND_EXCLUSIONS']}")
 
 st.set_page_config(
     page_title="ContractCadence",
@@ -34,7 +41,7 @@ st.set_page_config(
 
 # Build the chat interface
 st.title("ContractCadence 🤖")
-scope_column, chat_column = st.columns([3, 3])
+doc_column, chat_column = st.columns([3, 3])
 
 # The chat window allows the user to have a conversation with the AI assistant
 # This conversation would generate a dictionary of deliverables, and associated lists of scope items
@@ -59,76 +66,123 @@ with st.sidebar:
             
 # The scope window displays the current scope of work being developed
 # It shows a list of deliverables, each with associated scope items
-with scope_column:
-    st.markdown("##### Scope of Work 📋")
-    with st.container(border=True):
-        tabs = st.tabs(["Markdown View", "Table View (Manual Edit)"])
-    
-    with tabs[1]:
-        # Use DEFAULT_SCOPE_OF_WORK for testing
-        scope_to_display = st.session_state.scope_of_work
-        table_height = display_scope_of_work(scope_to_display)
+with doc_column:
+    scope_tab, exclusions_tab = st.tabs(["Scope of Work 📋", "Exclusions ❌"])
 
-    with tabs[0]:
-        with st.container(height=table_height, border=False):
-            # Display the scope of work in markdown format
+    with scope_tab:
+        with st.container(border=True):
+            tabs = st.tabs(["Markdown View", "Table View (Manual Edit)"])
+        
+        with tabs[1]:
+            # Use DEFAULT_SCOPE_OF_WORK for testing
+            scope_to_display = st.session_state.scope_of_work
+            table_height = display_scope_of_work(scope_to_display)
+
+        with tabs[0]:
+            with st.container(height=table_height, border=False):
+                # Display the scope of work in markdown format
+                scope_of_work = st.session_state.scope_of_work
+
+                markdown_lines = []
+                for phase, disciplines in scope_of_work.items():
+                    markdown_lines.append(f"##### {phase}")
+                    for discipline, items in disciplines.items():
+                        markdown_lines.append(f"###### {discipline}")
+                        for item in items:
+                            markdown_lines.append(f"- {item}")
+                markdown_lines.append("\n")
+                markdown_lines.append("\* This scope of work was generated with the assistance of ContractCadence, an AI-powered AEC contract assistant.")
+
+                markdown_text = "\n".join(markdown_lines)
+                st.markdown(markdown_text)
+
+        cols = st.columns(3)
+        with cols[0]:
+            # Add a download button for the scope of work
+            scope_of_work_df = pd.DataFrame(st.session_state.scope_of_work)
+            download_button = st.download_button(
+                label="Download scope of work as CSV",
+                data=scope_of_work_df.to_csv(index=False),
+                file_name="scope_of_work.csv",
+                mime="text/csv",
+                width="stretch",
+            )
+        with cols[1]:
+            # Add a button to download the markdown view of the scope of work as a .md file
+            doc = Document()
             scope_of_work = st.session_state.scope_of_work
-
-            markdown_lines = []
             for phase, disciplines in scope_of_work.items():
-                markdown_lines.append(f"##### {phase}")
+                doc.add_heading(phase, level=1)
                 for discipline, items in disciplines.items():
-                    markdown_lines.append(f"###### {discipline}")
+                    doc.add_heading(discipline, level=2)
                     for item in items:
-                        markdown_lines.append(f"- {item}")
-            markdown_lines.append("\n")
-            markdown_lines.append("\* This scope of work was generated with the assistance of ContractCadence, an AI-powered AEC contract assistant.")
+                        doc.add_paragraph(item, style='List Bullet')
+            docx_content = io.BytesIO()
+            doc.save(docx_content)
+            docx_content.seek(0)
 
-            markdown_text = "\n".join(markdown_lines)
-            st.markdown(markdown_text)
+            download_button = st.download_button(
+                label="Download scope of work as DOCX",
+                data=docx_content,
+                file_name="scope_of_work.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                width="stretch",
+            )
+        with cols[2]:
+            download_button = st.button(
+                label="Download categories list as CSV",
+                width="stretch",
+            )
 
-    cols = st.columns(3)
-    with cols[0]:
-        # Add a download button for the scope of work
-        scope_of_work_df = pd.DataFrame(st.session_state.scope_of_work)
-        download_button = st.download_button(
-            label="Download scope of work as CSV",
-            data=scope_of_work_df.to_csv(index=False),
-            file_name="scope_of_work.csv",
-            mime="text/csv",
-            width="stretch",
-        )
-    with cols[1]:
-        # Add a button to download the markdown view of the scope of work as a .md file
-        doc = Document()
-        scope_of_work = st.session_state.scope_of_work
-        for phase, disciplines in scope_of_work.items():
-            doc.add_heading(phase, level=1)
-            for discipline, items in disciplines.items():
-                doc.add_heading(discipline, level=2)
+            if download_button:
+                with st.spinner("Updating categories list, this may take a moment..."):
+                    update_categories_list()
+
+    with exclusions_tab:
+        st.markdown("##### Assumptions & Exclusions ❌")
+        
+        tabs = st.tabs(["Markdown View", "Table View (Manual Edit)"])
+        with tabs[1]:
+            # Display the assumptions and exclusions in a table view for manual editing
+            assumptions_and_exclusions = st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"]
+            
+            disciplines = assumptions_and_exclusions.keys()
+            discipline_col_rows = []
+            assumptions_and_exclusions_col_rows = []
+            for discipline in disciplines:
+                items = assumptions_and_exclusions[discipline]
                 for item in items:
-                    doc.add_paragraph(item, style='List Bullet')
-        docx_content = io.BytesIO()
-        doc.save(docx_content)
-        docx_content.seek(0)
+                    discipline_col_rows.append(discipline)
+                    assumptions_and_exclusions_col_rows.append(item)
 
-        download_button = st.download_button(
-            label="Download scope of work as DOCX",
-            data=docx_content,
-            file_name="scope_of_work.docx",
-            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-            width="stretch",
-        )
-    with cols[2]:
-        download_button = st.button(
-            label="Download categories list as CSV",
-            width="stretch",
-        )
+            df_ae = pd.DataFrame({
+                "Discipline": discipline_col_rows,
+                "Assumptions & Exclusions": assumptions_and_exclusions_col_rows
+            })
 
-        if download_button:
-            with st.spinner("Updating categories list, this may take a moment..."):
-                update_categories_list()
+            num_rows_ae = len(df_ae)
+            table_height_ae = min(500, 35 * num_rows_ae + 40)  # Dynamic height based on number of rows
 
+            edited_df_ae = st.data_editor(df_ae, height=table_height_ae, use_container_width=True)
+            edited_dict_ae = edited_df_ae.to_dict(orient='records')
+            # Convert back to nested dictionary
+            st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"] = {}
+            for row in edited_dict_ae:
+                discipline = row["Discipline"]
+                item = row["Assumptions & Exclusions"]
+                if discipline not in st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"]:
+                    st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"][discipline] = []
+                st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"][discipline].append(item)
+
+        with tabs[0]:
+            # Display the assumptions and exclusions in a markdown view
+            markdown_lines_ae = []
+            for discipline, items in st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"].items():
+                markdown_lines_ae.append(f"##### {discipline}")
+                for item in items:
+                    markdown_lines_ae.append(f"- {item}")
+            markdown_text_ae = "\n".join(markdown_lines_ae)
+            st.markdown(markdown_text_ae)
 
 with chat_column:
     st.markdown("##### Chat with your AEC Contract Assistant 💬")
