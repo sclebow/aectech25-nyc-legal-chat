@@ -1,6 +1,6 @@
 streamlit
 openai
 fastrank
-chromadb
+# chromadb
 python-json-logger
 viktor
