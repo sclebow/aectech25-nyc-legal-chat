@@ -136,7 +136,9 @@ def display_scope_of_work(scope_of_work):
         ]
     
     styled_df = df.style.apply(highlight_columns, axis=1)
-    edited_df = st.data_editor(styled_df, width='content', hide_index=True, height=450)
+    num_rows = len(df)
+    height = min(550, 35 * num_rows + 40)  # Dynamic height based on number of rows
+    edited_df = st.data_editor(styled_df, width='stretch', hide_index=True, height=height)
 
     edited_dict = edited_df.to_dict(orient='records')
     # Convert back to nested dictionary
@@ -153,3 +155,5 @@ def display_scope_of_work(scope_of_work):
 
     # Update the original scope_of_work dictionary
     st.session_state["scope_of_work"] = new_scope_of_work
+
+    return height

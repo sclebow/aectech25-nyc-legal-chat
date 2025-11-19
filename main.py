@@ -9,79 +9,9 @@ from llm_calls import classify_and_get_context, update_categories_list
 from scope_visualizer import display_scope_of_work
 from ui_styles import apply_custom_styles
 
-print("\n" * 5)
-print("Starting AEC Contract Assistant...")
-
-st.set_page_config(
-    page_title="ContractCadence",
-    page_icon="🤖",
-    layout="wide",
-)
-
-# Apply custom CSS styling
-apply_custom_styles()
-
-# Build the chat interface
-file_upload_column, scope_column, chat_column = st.columns([1, 3, 3])
-
-# The chat window allows the user to have a conversation with the AI assistant
-# This conversation would generate a dictionary of deliverables, and associated lists of scope items
-
-DEFAULT_SCOPE_OF_WORK = {
-    "Schematic Design": {
-        "Architectural": [
-            "Preliminary floor plans",
-            "Exterior elevations",
-            "Renderings",
-        ],
-        "Electrical": [
-            "Narrative description of electrical systems",
-        ],
-        "Mechanical": [
-            "Narrative description of mechanical systems",
-        ],
-    },
-    "Design Development": {
-        "Architectural": [
-            "Refined floor plans",
-            "Building sections",
-            "Preliminary material selections",
-        ],
-        "Structural": [
-            "Preliminary structural system design",
-        ],
-        "Electrical": [
-            "Preliminary electrical plans",
-        ],
-        "Mechanical": [
-            "Preliminary mechanical plans",
-        ],
-    },
-    "Construction Documents": {
-        "Architectural": [
-            "Detailed floor plans",
-            "Wall sections",
-            "Door and window schedules",
-            "Finish schedules",
-        ],
-        "Structural": [
-            "Final structural drawings and specifications",
-        ],
-        "Electrical": [
-            "Complete electrical plans and details",
-        ],
-        "Mechanical": [
-            "Complete mechanical plans and details",
-        ],
-    },
-    "Construction Administration": {
-        "Architectural": [
-            "Site visits",
-            "Review of shop drawings",
-            "Response to RFIs",
-        ],
-    },
-}
+default_scope_of_work_dict_file = "default_scope_of_work.dict"
+default_scope_of_work_string = open(default_scope_of_work_dict_file, "r").read()
+default_scope_of_work = eval(default_scope_of_work_string)
 
 st.session_state["FULL_CATEGORIES_LIST"] = [
             "Structural Framing",
@@ -106,14 +36,84 @@ st.session_state["FULL_CATEGORIES_LIST"] = [
             "Pipes",
 ]
 
+print("\n" * 5)
+print("Starting AEC Contract Assistant...")
+
+st.set_page_config(
+    page_title="ContractCadence",
+    page_icon="🤖",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
+# Apply custom CSS styling
+# apply_custom_styles()
+
+# Build the chat interface
+st.title("ContractCadence 🤖")
+scope_column, chat_column = st.columns([3, 3])
+
+# The chat window allows the user to have a conversation with the AI assistant
+# This conversation would generate a dictionary of deliverables, and associated lists of scope items
+
 st.session_state.setdefault("messages", [])
-st.session_state.setdefault("scope_of_work", DEFAULT_SCOPE_OF_WORK)
+st.session_state.setdefault("scope_of_work", default_scope_of_work)
 st.session_state.setdefault("conversation_history", [])
 
-update_categories_list()
+st.session_state.setdefault("first_run", True)
+
+if st.session_state.first_run:
+    print("First run - updating categories list")
+    update_categories_list()
+    st.session_state.first_run = False
+
+with st.sidebar:
+    st.markdown("##### Upload Reference Documents 📄")
+    uploaded_files = st.file_uploader(
+        "Upload architectural plans, contracts, or other reference documents to assist the AI in understanding your project requirements. Note: This feature is currently disabled.",
+        accept_multiple_files=True,
+        type=["pdf", "docx", "txt"],
+    )
+    if uploaded_files:
+        st.markdown("**Uploaded Files:**")
+        for uploaded_file in uploaded_files:
+            st.markdown(f"- {uploaded_file.name}")
+            
+# The scope window displays the current scope of work being developed
+# It shows a list of deliverables, each with associated scope items
+with scope_column:
+
+    # Use DEFAULT_SCOPE_OF_WORK for testing
+    scope_to_display = st.session_state.scope_of_work
+    table_height = display_scope_of_work(scope_to_display)
+
+    categories_list = st.session_state["categories_list"]
+    categories_list_csv = pd.Series(categories_list).to_csv(index=False, header=False)
+
+    cols = st.columns(2)
+    with cols[0]:
+        # Add a download button for the scope of work
+        scope_of_work_df = pd.DataFrame(st.session_state.scope_of_work)
+        download_button = st.download_button(
+            label="Download scope of work as CSV",
+            data=scope_of_work_df.to_csv(index=False),
+            file_name="scope_of_work.csv",
+            mime="text/csv",
+            width="stretch",
+        )
+    with cols[1]:
+        # Add a download button for the categories list
+        download_button = st.download_button(
+            label="Download categories list as CSV",
+            data=categories_list_csv,
+            file_name="categories_list.csv",
+            mime="text/csv",
+            width="stretch",
+        )
 
 with chat_column:
-    message_container = st.container(height=550, border=True)
+    st.markdown("##### Chat with your AEC Contract Assistant 💬")
+    message_container = st.container(height=table_height, border=True)
 
     if st.session_state.messages == []:
         st.session_state.messages.append(
@@ -156,38 +156,6 @@ with chat_column:
 
         st.session_state.messages.append({"role": "assistant", "content": full_response})
             
-            
-# The scope window displays the current scope of work being developed
-# It shows a list of deliverables, each with associated scope items
-with scope_column:
-    st.subheader("ContractCadence 🤖")
-
-    # Use DEFAULT_SCOPE_OF_WORK for testing
-    scope_to_display = st.session_state.scope_of_work or DEFAULT_SCOPE_OF_WORK
-    display_scope_of_work(scope_to_display)
-
-    categories_list = st.session_state["categories_list"]
-    categories_list_csv = pd.Series(categories_list).to_csv(index=False, header=False)
-    # Add a download button for the categories list
-    download_button = st.download_button(
-        label="Download categories list as CSV",
-        data=categories_list_csv,
-        file_name="categories_list.csv",
-        mime="text/csv",
-    )
-
-with file_upload_column:
-    st.subheader("Upload Reference Documents 📄")
-    uploaded_files = st.file_uploader(
-        "Upload architectural plans, contracts, or other reference documents to assist the AI in understanding your project requirements.",
-        accept_multiple_files=True,
-        type=["pdf", "docx", "txt"],
-    )
-    if uploaded_files:
-        st.markdown("**Uploaded Files:**")
-        for uploaded_file in uploaded_files:
-            st.markdown(f"- {uploaded_file.name}")
-
 str_list = []
 str_list.append("This information should not be considered legal advice. Consult a qualified attorney for legal matters.\n")
 str_list.append("Github Repository: https://github.com/sclebow/aectech25-nyc-legal-chat/ \n")
