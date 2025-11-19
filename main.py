@@ -27,8 +27,6 @@ st.session_state.setdefault("ASSUMPTIONS_AND_EXCLUSIONS", default_assumptions_an
 print("\n" * 5)
 print("Starting AEC Contract Assistant...")
 
-print(f"Assumptions and Exclusions: {st.session_state['ASSUMPTIONS_AND_EXCLUSIONS']}")
-
 st.set_page_config(
     page_title="ContractCadence",
     page_icon="🤖",
@@ -67,11 +65,10 @@ with st.sidebar:
 # The scope window displays the current scope of work being developed
 # It shows a list of deliverables, each with associated scope items
 with doc_column:
-    scope_tab, exclusions_tab = st.tabs(["Scope of Work 📋", "Exclusions ❌"])
+    scope_tab, exclusions_tab = st.tabs(["Scope of Work 📋", "Assumptions and Exclusions ❌"])
 
     with scope_tab:
-        with st.container(border=True):
-            tabs = st.tabs(["Markdown View", "Table View (Manual Edit)"])
+        tabs = st.tabs(["Markdown View", "Table View (Manual Edit)"])
         
         with tabs[1]:
             # Use DEFAULT_SCOPE_OF_WORK for testing
@@ -79,7 +76,7 @@ with doc_column:
             table_height = display_scope_of_work(scope_to_display)
 
         with tabs[0]:
-            with st.container(height=table_height, border=False):
+            with st.container(height=table_height, border=True):
                 # Display the scope of work in markdown format
                 scope_of_work = st.session_state.scope_of_work
 
@@ -138,9 +135,7 @@ with doc_column:
                 with st.spinner("Updating categories list, this may take a moment..."):
                     update_categories_list()
 
-    with exclusions_tab:
-        st.markdown("##### Assumptions & Exclusions ❌")
-        
+    with exclusions_tab:        
         tabs = st.tabs(["Markdown View", "Table View (Manual Edit)"])
         with tabs[1]:
             # Display the assumptions and exclusions in a table view for manual editing
@@ -163,7 +158,7 @@ with doc_column:
             num_rows_ae = len(df_ae)
             table_height_ae = min(500, 35 * num_rows_ae + 40)  # Dynamic height based on number of rows
 
-            edited_df_ae = st.data_editor(df_ae, height=table_height_ae, use_container_width=True)
+            edited_df_ae = st.data_editor(df_ae, height=table_height_ae, use_container_width=True, hide_index=True)
             edited_dict_ae = edited_df_ae.to_dict(orient='records')
             # Convert back to nested dictionary
             st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"] = {}
@@ -175,14 +170,58 @@ with doc_column:
                 st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"][discipline].append(item)
 
         with tabs[0]:
-            # Display the assumptions and exclusions in a markdown view
-            markdown_lines_ae = []
+            with st.container(height=table_height_ae, border=True):
+                # Display the assumptions and exclusions in a markdown view
+                markdown_lines_ae = []
+                for discipline, items in st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"].items():
+                    markdown_lines_ae.append(f"##### {discipline}")
+                    for item in items:
+                        markdown_lines_ae.append(f"- {item}")
+                markdown_text_ae = "\n".join(markdown_lines_ae)
+                st.markdown(markdown_text_ae)
+        
+        cols = st.columns(2)
+        with cols[0]:
+            # Add a download button for the assumptions and exclusions as CSV
+            ae_discipline_col_rows = []
+            ae_item_col_rows = []
             for discipline, items in st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"].items():
-                markdown_lines_ae.append(f"##### {discipline}")
                 for item in items:
-                    markdown_lines_ae.append(f"- {item}")
-            markdown_text_ae = "\n".join(markdown_lines_ae)
-            st.markdown(markdown_text_ae)
+                    ae_discipline_col_rows.append(discipline)
+                    ae_item_col_rows.append(item)
+
+            ae_df = pd.DataFrame({
+                "Discipline": ae_discipline_col_rows,
+                "Assumptions & Exclusions": ae_item_col_rows
+            })
+
+            download_button_ae = st.download_button(
+                label="Download assumptions and exclusions as CSV",
+                data=ae_df.to_csv(index=False),
+                file_name="assumptions_and_exclusions.csv",
+                mime="text/csv",
+                width="stretch",
+            )
+        with cols[1]:
+            # Add a button to download the assumptions and exclusions as a DOCX file
+            doc_ae = Document()
+            doc_ae.add_heading("Assumptions and Exclusions", level=0)
+            for discipline, items in st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"].items():
+                doc_ae.add_heading(discipline, level=1)
+                for item in items:
+                    doc_ae.add_paragraph(item, style='List Bullet')
+            docx_content_ae = io.BytesIO()
+            doc_ae.save(docx_content_ae)
+            docx_content_ae.seek(0)
+
+            download_button_ae = st.download_button(
+                label="Download assumptions and exclusions as DOCX",
+                data=docx_content_ae,
+                file_name="assumptions_and_exclusions.docx",
+                mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                width="stretch",
+            )
+
 
 with chat_column:
     st.markdown("##### Chat with your AEC Contract Assistant 💬")

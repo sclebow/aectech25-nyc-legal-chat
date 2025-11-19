@@ -18,6 +18,13 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
         conversation_history: Optional list of previous messages in format [{"role": "user"/"assistant", "content": "..."}, ...]
                             System prompt should NOT be included in conversation_history.
     """
+
+    print("\n")
+    print("Running LLM query...")
+    print(f"System prompt: {system_prompt}")
+    print(f"User input: {user_input}")
+    print("\n")
+
     attempt = 0
     caller = inspect.stack()[1].function
     thread_id = threading.get_ident()

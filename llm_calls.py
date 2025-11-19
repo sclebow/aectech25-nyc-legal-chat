@@ -143,20 +143,20 @@ def ask_scope_of_work_prompt(message: str):
     current_scope_of_work = st.session_state.get("scope_of_work")
 
     current_scope_of_work = str(current_scope_of_work)
-    print(f"Current Scope of Work: {current_scope_of_work}")
-
+    
     system_prompt = "\n".join(
         [
             "You are helping define a comprehensive scope of work for an Architect Owner Agreement.",
             "Here is a dictionary of deliverables and associated scope items defined so far:",
             f"{current_scope_of_work}",
+            "Here is the corresponding assumptions and exclusions for the project:",
+            f"{st.session_state.get('ASSUMPTIONS_AND_EXCLUSIONS')}",
         ]
     )
-    print(f"System Prompt: {system_prompt}")
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
     return response
 
-def ask_scope_of_work_change_prompt(message: str):
+def ask_scope_of_work_change_prompt(message: str, update_assumptions: bool = True):
     """
     Ask the LLM a scope of work change related prompt.
     Returns the LLM response as a string.
@@ -188,6 +188,13 @@ def ask_scope_of_work_change_prompt(message: str):
             st.session_state["scope_of_work"] = updated_scope_of_work
             print(f"Updated Scope of Work: {updated_scope_of_work}")
             response = "Scope of work updated successfully."
+
+            if update_assumptions:
+                # Also update the assumptions and exclusions 
+                message = f"Update the assumptions and exclusions to be consistent with the following scope of work: {updated_scope_of_work}. Here is the current assumptions and exclusions: {st.session_state.get('ASSUMPTIONS_AND_EXCLUSIONS')}. Respond only with the updated assumptions and exclusions dictionary."
+                ask_assumptions_and_exclusions_change_prompt(message, update_scope=False)
+            st.rerun()
+            
         else:
             print("LLM response is not a valid dictionary.")
             response = "I'm sorry, I could not process the changes to the scope of work. Please ensure your request is clear."
@@ -274,6 +281,55 @@ def default_query(message: str):
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
     return response
 
+def ask_assumptions_and_exclusions_change_prompt(message: str, update_scope: bool = True):
+    """
+    Ask the LLM an assumptions and exclusions change related prompt.
+    Returns the LLM response as a string.
+    """
+    current_assumptions_and_exclusions = st.session_state.get("ASSUMPTIONS_AND_EXCLUSIONS")
+    current_assumptions_and_exclusions = str(current_assumptions_and_exclusions)
+
+    system_prompt = "\n".join(
+        [
+            "You are helping modify a comprehensive assumptions and exclusions list for an Architect Owner Agreement.",
+            "Here is a dictionary of disciplines and associated assumptions and exclusions defined so far:",
+            f"{current_assumptions_and_exclusions}",
+            "Here is the corresponding scope of work for the project:",
+            f"{st.session_state.get('scope_of_work')}",
+            "Respond only with an updated dictionary including the requested changes to the assumptions and exclusions.",
+            "Focus on accuracy and completeness.",
+            "Do not include any explanations or additional text.",
+            ""
+        ]
+    )
+    print(f"System Prompt: {system_prompt}")
+    modified_dictionary = run_llm_query(system_prompt=system_prompt, user_input=message)
+
+    response = "I'm sorry, I could not process the changes to the assumptions and exclusions. Please ensure your request is clear."
+
+    # Check if the response is a valid dictionary
+    try:
+        updated_assumptions_and_exclusions = ast.literal_eval(modified_dictionary)
+        if isinstance(updated_assumptions_and_exclusions, dict):
+            # Update the session state with the new assumptions and exclusions
+            st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"] = updated_assumptions_and_exclusions
+            response = "Assumptions and exclusions updated successfully."
+
+            if update_scope:
+                # Also update the scope of work 
+                message = f"Update the scope of work to be consistent with the following assumptions and exclusions: {updated_assumptions_and_exclusions}. Here is the current scope of work: {st.session_state.get('scope_of_work')}. Respond only with the updated scope of work dictionary."
+                ask_scope_of_work_change_prompt(message, update_assumptions=False)
+            st.rerun()
+
+        else:
+            print("LLM response is not a valid dictionary.")
+            print(f"LLM Response for Assumptions and Exclusions Update: {modified_dictionary}")
+    except (ValueError, SyntaxError) as e:
+        print(f"Error parsing LLM response: {e}")
+        print(f"LLM Response for Assumptions and Exclusions Update: {modified_dictionary}")
+
+    return response
+
 def classify_and_get_context(message: str):
     """
     Classify the user message and retrieve the relevant context from all data sources.
@@ -281,10 +337,11 @@ def classify_and_get_context(message: str):
     """
     prompt_types = {
         "contract_language": "This is a typical Architect Owner Agreement contract template, including scope of work, deliverables, payment terms, and legal clauses.",
-        "scope_of_work": "This is a detailed scope for the project the architect is working on, including deliverables, tasks, and timelines.",
+        # "scope_of_work": "This is a detailed scope with assumptions and exclusions for the project the architect is working on, including deliverables, tasks, and timelines.",
         "complete_contract_draft": "This a request to generate a complete contract draft based on previous conservation and a template.",
-        "scope_of_work_question": "This is for questions about the scope of work for the current project.",
+        "scope_of_work_question": "This is for questions about the scope of work or assumptions and exclusions for the current project.",
         "scope_of_work_change": "The user wants to modify or expand the current scope of work for the project.",
+        "assumptions_and_exclusions_change": "The user wants to modify or expand the current assumptions and exclusions for the project.",
     }
 
     # Classify the user prompt for routing
@@ -302,6 +359,8 @@ def classify_and_get_context(message: str):
         response = ask_scope_of_work_change_prompt(message)
     elif prompt_type == "complete_contract_draft":
         response = complete_contact_draft(message)
+    elif prompt_type == "assumptions_and_exclusions_change":
+        response = ask_assumptions_and_exclusions_change_prompt(message)
     else:
         response = default_query(message)
 
