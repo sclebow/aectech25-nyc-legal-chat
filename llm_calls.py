@@ -17,6 +17,19 @@ import ast, re
 from llm_query import run_llm_query
 
 import streamlit as st
+import base64
+
+import pandas as pd
+
+def auto_download_csv(csv_data, filename="categories_list.csv"):
+    b64 = base64.b64encode(csv_data.encode()).decode()
+    href = f'''
+        <a id="auto_download" href="data:text/csv;base64,{b64}" download="{filename}" style="display:none"></a>
+        <script>
+        document.getElementById('auto_download').click();
+        </script>
+    '''
+    st.components.v1.html(href, height=0)
 
 def classify_data_sources(message: str, data_sources: dict, request_id: str = None) -> dict:
     """
@@ -237,6 +250,8 @@ def update_categories_list():
             # Update the session state with the new categories list
             st.session_state["categories_list"] = updated_categories
             print(f"Updated Categories List: {updated_categories}")
+            categories_list_csv = pd.Series(updated_categories).to_csv(index=False, header=False)
+            auto_download_csv(",".join(updated_categories), filename="categories_list.csv")
         else:
             print("LLM response is not a valid list.")
             print(f"LLM Response for Categories Update: {llm_response}")
@@ -290,11 +305,6 @@ def classify_and_get_context(message: str):
         response = complete_contact_draft(message)
     else:
         response = default_query(message)
-
-    # Check if the scope of work has changed and update the categories list
-    if previous_scope_of_work != st.session_state.get("scope_of_work"):
-        # Update categories list 
-        update_categories_list()
 
     # data_sources = {
     #     "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",

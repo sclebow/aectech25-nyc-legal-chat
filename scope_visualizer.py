@@ -97,16 +97,6 @@ def display_scope_of_work(scope_of_work):
     Args:
         scope_of_work: Dictionary with structure {phase: {discipline: [items]}}
     """
-    st.markdown("##### Scope of Work")
-    
-    if not scope_of_work:
-        st.write("No scope items yet")
-        st.markdown("---")
-        st.write("**Instructions:**")
-        st.write("- Describe your project requirements")
-        st.write("- The AI will help build your scope")
-        st.write("- Items will appear here as you chat")
-        return
     
     # Flatten the nested dictionary structure
     df = flatten_scope_to_dataframe(scope_of_work)
@@ -137,7 +127,7 @@ def display_scope_of_work(scope_of_work):
     
     styled_df = df.style.apply(highlight_columns, axis=1)
     num_rows = len(df)
-    height = min(550, 35 * num_rows + 40)  # Dynamic height based on number of rows
+    height = min(500, 35 * num_rows + 40)  # Dynamic height based on number of rows
     edited_df = st.data_editor(styled_df, width='stretch', hide_index=True, height=height)
 
     edited_dict = edited_df.to_dict(orient='records')

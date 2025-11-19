@@ -13,28 +13,9 @@ default_scope_of_work_dict_file = "default_scope_of_work.dict"
 default_scope_of_work_string = open(default_scope_of_work_dict_file, "r").read()
 default_scope_of_work = eval(default_scope_of_work_string)
 
-st.session_state["FULL_CATEGORIES_LIST"] = [
-            "Structural Framing",
-            "Structural Columns",
-            "Structural Foundations",
-            "Walls",
-            "Floors",
-            "Roofs",
-            "Ceilings",
-            "Doors",
-            "Windows",
-            "Stairs",
-            "Railings",
-            "Curtain Panels",
-            "Curtain Wall Mullions",
-            "Furniture",
-            "Mechanical Equipment",
-            "Plumbing Fixtures",
-            "Lighting Fixtures",
-            "Electrical Equipment",
-            "Ducts",
-            "Pipes",
-]
+default_categories_list_file = "default_categories_list.txt"
+default_categories_list_string = open(default_categories_list_file, "r").read()
+st.session_state["FULL_CATEGORIES_LIST"] = eval(default_categories_list_string)
 
 print("\n" * 5)
 print("Starting AEC Contract Assistant...")
@@ -62,11 +43,6 @@ st.session_state.setdefault("conversation_history", [])
 
 st.session_state.setdefault("first_run", True)
 
-if st.session_state.first_run:
-    print("First run - updating categories list")
-    update_categories_list()
-    st.session_state.first_run = False
-
 with st.sidebar:
     st.markdown("##### Upload Reference Documents 📄")
     uploaded_files = st.file_uploader(
@@ -82,13 +58,14 @@ with st.sidebar:
 # The scope window displays the current scope of work being developed
 # It shows a list of deliverables, each with associated scope items
 with scope_column:
-
-    # Use DEFAULT_SCOPE_OF_WORK for testing
-    scope_to_display = st.session_state.scope_of_work
-    table_height = display_scope_of_work(scope_to_display)
-
-    categories_list = st.session_state["categories_list"]
-    categories_list_csv = pd.Series(categories_list).to_csv(index=False, header=False)
+    st.markdown("##### Scope of Work (Markdown View)")
+    with st.container(border=True):
+        tabs = st.tabs(["Markdown View", "Table View (Manual Edit)"])
+    
+    with tabs[1]:
+        # Use DEFAULT_SCOPE_OF_WORK for testing
+        scope_to_display = st.session_state.scope_of_work
+        table_height = display_scope_of_work(scope_to_display)
 
     cols = st.columns(2)
     with cols[0]:
@@ -102,18 +79,38 @@ with scope_column:
             width="stretch",
         )
     with cols[1]:
-        # Add a download button for the categories list
-        download_button = st.download_button(
+        download_button = st.button(
             label="Download categories list as CSV",
-            data=categories_list_csv,
-            file_name="categories_list.csv",
-            mime="text/csv",
             width="stretch",
         )
 
+        if download_button:
+            with st.spinner("Updating categories list, this may take a moment..."):
+                update_categories_list()
+
+    with tabs[0]:
+        with st.container(height=table_height, border=False):
+            # Display the scope of work in markdown format
+            scope_of_work = st.session_state.scope_of_work
+
+            markdown_lines = []
+            for phase, disciplines in scope_of_work.items():
+                markdown_lines.append(f"##### {phase}\n")
+                for discipline, items in disciplines.items():
+                    markdown_lines.append(f"###### {discipline}\n")
+                    for item in items:
+                        markdown_lines.append(f"- {item}\n")
+                    markdown_lines.append("\n")
+                markdown_lines.append("\n")
+            
+            markdown_lines.append("* This scope of work was generated with the assistance of ContractCadence, an AI-powered AEC contract assistant.*\n")
+
+            markdown_text = "\n".join(markdown_lines)
+            st.markdown(markdown_text)
+
 with chat_column:
     st.markdown("##### Chat with your AEC Contract Assistant 💬")
-    message_container = st.container(height=table_height, border=True)
+    message_container = st.container(height=table_height + 90, border=True)
 
     if st.session_state.messages == []:
         st.session_state.messages.append(
