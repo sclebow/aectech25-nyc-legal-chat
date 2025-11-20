@@ -8,7 +8,7 @@ from logger_setup import get_request_id, set_request_id
 
 import streamlit as st
 
-def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 6000, max_retries: int = 15, retry_delay: int = 2, request_id: str = None, large_model=True) -> str:
+def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max_tokens: int = 6000, max_retries: int = 15, retry_delay: int = 2, request_id: str = None, large_model=True, temp=0.0) -> str:
     """ Run a query against the LLM with a system prompt and user input.
     If stream is True, returns a generator for streaming output.
     If stream is False, returns the full response as a string.
@@ -57,7 +57,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                 response = config.client.chat.completions.create(
                     model=model,
                     messages=messages,
-                    temperature=0.0,
+                    temperature=temp,
                     max_tokens=max_tokens,
                 )
                 logging.info(f"{log_prefix} [description=LLM query successful on attempt {attempt+1} | {format_log_string('system_prompt', system_prompt)} | {format_log_string('user_input', user_input)} | response={str(response.choices[0].message.content).strip()}] [usage={response.usage}]")
@@ -66,7 +66,7 @@ def run_llm_query(system_prompt: str, user_input: str, stream: bool = False, max
                 response = config.client.chat.completions.create(
                     model=config.completion_model,
                     messages=messages,
-                    temperature=0.0,
+                    temperature=temp,
                     max_tokens=max_tokens,
                     stream=True,
                 )

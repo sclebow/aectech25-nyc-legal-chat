@@ -171,6 +171,9 @@ def ask_scope_of_work_change_prompt(message: str, update_assumptions: bool = Tru
             "You are helping modify a comprehensive scope of work for an Architect Owner Agreement.",
             "Here is a dictionary of deliverables and associated scope items defined so far:",
             f"{current_scope_of_work}",
+            "The dictionary is structured as {phase: {discipline: [items]}}.",
+            "The structure must be preserved in your response, but the content can be modified as needed.",
+            "You may need to add new phases or disciplines based on the user's request.",
             "Respond only with an updated dictionary including the requested changes.",
             "Focus on accuracy and completeness.",
             "Do not include any explanations or additional text.",
@@ -178,11 +181,23 @@ def ask_scope_of_work_change_prompt(message: str, update_assumptions: bool = Tru
         ]
     )
     print(f"System Prompt: {system_prompt}")
-    modified_dictionary = run_llm_query(system_prompt=system_prompt, user_input=message)
+    modified_dictionary = run_llm_query(system_prompt=system_prompt, user_input=message, temp=0.2)
 
     # Check if the response is a valid dictionary
     try:
         updated_scope_of_work = ast.literal_eval(modified_dictionary)
+
+        # Clean the string representation of the dictionary
+        updated_scope_of_work = str(updated_scope_of_work).replace("\n", " ").replace("\r", " ").strip()
+
+        # Check that the string starts with '{' and add if missing
+        if not updated_scope_of_work.startswith("{"):
+            updated_scope_of_work = "{" + updated_scope_of_work
+
+        # Check that the string ends with '}' and add if missing
+        if not updated_scope_of_work.endswith("}"):
+            updated_scope_of_work = updated_scope_of_work + "}"
+
         if isinstance(updated_scope_of_work, dict):
             # Update the session state with the new scope of work
             st.session_state["scope_of_work"] = updated_scope_of_work
@@ -193,16 +208,24 @@ def ask_scope_of_work_change_prompt(message: str, update_assumptions: bool = Tru
                 # Also update the assumptions and exclusions 
                 message = f"Update the assumptions and exclusions to be consistent with the following scope of work: {updated_scope_of_work}. Here is the current assumptions and exclusions: {st.session_state.get('ASSUMPTIONS_AND_EXCLUSIONS')}. Respond only with the updated assumptions and exclusions dictionary."
                 ask_assumptions_and_exclusions_change_prompt(message, update_scope=False)
-            st.rerun()
             
         else:
             print("LLM response is not a valid dictionary.")
+            print(f"LLM Response for Scope of Work Update: {modified_dictionary}")
             response = "I'm sorry, I could not process the changes to the scope of work. Please ensure your request is clear."
 
     except (ValueError, SyntaxError) as e:
         print(f"Error parsing LLM response: {e}")
+        print(f"LLM Response for Scope of Work Update: {modified_dictionary}")
         response = "I'm sorry, I could not process the changes to the scope of work. Please ensure your request is clear."
 
+    print("Adding scope of work assistant message to session state.")
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": response
+    })
+    # print("Rerunning Streamlit app to reflect updated scope of work.")
+    # st.rerun()
     return response
 
 def complete_contact_draft(message: str):
@@ -275,7 +298,7 @@ def default_query(message: str):
             "You are a helpful AI assistant for architects working on AEC contracts and scopes of work.",
             "The question the user asked is not specifically about contract language or scope of work.",
             "Prompt the user to clarify their request or provide more details so you can assist them better.",
-            "If possible, use thieir query to help improve the scope of work being developed.",
+            "If possible, use their query to help improve the scope of work being developed.",
         ]
     )
     response = run_llm_query(system_prompt=system_prompt, user_input=message)
@@ -292,8 +315,11 @@ def ask_assumptions_and_exclusions_change_prompt(message: str, update_scope: boo
     system_prompt = "\n".join(
         [
             "You are helping modify a comprehensive assumptions and exclusions list for an Architect Owner Agreement.",
+            "These assumptions and exclusions should not conflict with the current scope of work, and in fact should protect the designer from liability.",
             "Here is a dictionary of disciplines and associated assumptions and exclusions defined so far:",
             f"{current_assumptions_and_exclusions}",
+            "The dictionary is structured as {discipline: [items]}.",
+            "The structure must be preserved in your response, but the content can be modified as needed.",
             "Here is the corresponding scope of work for the project:",
             f"{st.session_state.get('scope_of_work')}",
             "Respond only with an updated dictionary including the requested changes to the assumptions and exclusions.",
@@ -314,12 +340,10 @@ def ask_assumptions_and_exclusions_change_prompt(message: str, update_scope: boo
             # Update the session state with the new assumptions and exclusions
             st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"] = updated_assumptions_and_exclusions
             response = "Assumptions and exclusions updated successfully."
-
             if update_scope:
                 # Also update the scope of work 
                 message = f"Update the scope of work to be consistent with the following assumptions and exclusions: {updated_assumptions_and_exclusions}. Here is the current scope of work: {st.session_state.get('scope_of_work')}. Respond only with the updated scope of work dictionary."
                 ask_scope_of_work_change_prompt(message, update_assumptions=False)
-            st.rerun()
 
         else:
             print("LLM response is not a valid dictionary.")
@@ -328,6 +352,13 @@ def ask_assumptions_and_exclusions_change_prompt(message: str, update_scope: boo
         print(f"Error parsing LLM response: {e}")
         print(f"LLM Response for Assumptions and Exclusions Update: {modified_dictionary}")
 
+    print("Adding assumptions and exclusions assistant message to session state.")
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": response
+    })
+    # print("Rerunning Streamlit app to reflect updated assumptions and exclusions.")
+    # st.rerun()
     return response
 
 def classify_and_get_context(message: str):
@@ -348,43 +379,21 @@ def classify_and_get_context(message: str):
     prompt_type = classify_prompt_type(message, prompt_types)
 
     print(f"Classified prompt type: {prompt_type}")
-
-    previous_scope_of_work = st.session_state.get("scope_of_work")
-
-    if prompt_type == "contract_language":
+    st.session_state.messages.append({
+        "role": "assistant",
+        "content": f"I think your request is related to {prompt_type}. Let me process that for you."
+    })
+    if "contract_language" in prompt_type:
         response = ask_contract_language_prompt(message)
-    elif prompt_type == "scope_of_work_question":
+    elif "scope_of_work_question" in prompt_type:
         response = ask_scope_of_work_prompt(message)
-    elif prompt_type == "scope_of_work_change":
+    elif "scope_of_work_change" in prompt_type:
         response = ask_scope_of_work_change_prompt(message)
-    elif prompt_type == "complete_contract_draft":
+    elif "complete_contract_draft" in prompt_type:
         response = complete_contact_draft(message)
-    elif prompt_type == "assumptions_and_exclusions_change":
+    elif "assumptions_and_exclusions_change" in prompt_type:
         response = ask_assumptions_and_exclusions_change_prompt(message)
     else:
         response = default_query(message)
-
-    # data_sources = {
-    #     "rsmeans": "This is a database for construction cost data, including unit costs for various materials and labor.  It is used to answer cost benchmark questions, such as the cost per square foot of concrete. If the user asks about a specific material cost, this source will be used.",
-    #     "ifc": "This is a database for the user's building model in IFC format, which includes detailed information about the building's components and quantities.  It also includes the dollar and hourly cost of different components.",
-    #     "knowledge base": "This is a knowledge base for architecture and construction, which includes general information about design, materials, and construction practices.",
-    #     "value model": "This is a machine learning model that predicts the value of a building based some of its features, such as size, and type.",
-    # }
-
-    # # Classify the data sources needed for the query
-    # data_sources_needed_dict = classify_data_sources(message, data_sources, request_id=request_id)
-
-    # # Prepare a dictionary to hold the context from each data source
-    # data_context = {}
-
-    # # For each data source that is needed, retrieve the relevant context
-    # if data_sources_needed_dict.get("rsmeans"):
-    #     data_context["rsmeans"] = get_rsmeans_context(message, request_id=request_id)
-    # if data_sources_needed_dict.get("ifc"):
-    #     data_context["ifc"] = get_ifc_context(message, request_id=request_id)
-    # if data_sources_needed_dict.get("knowledge base"):
-    #     data_context["knowledge base"] = get_knowledge_base_context(message, request_id=request_id)
-    # if data_sources_needed_dict.get("value model"):
-    #     data_context["value model"] = get_value_model_context(message, request_id=request_id)
 
     return response

@@ -17,3 +17,4 @@ ifc_viewer_vite/node_modules/
 chroma/chroma.sqlite3
 .venv/
 .streamlit/secrets.toml
+.streamlit/_secrets.toml

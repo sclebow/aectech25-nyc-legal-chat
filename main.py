@@ -11,6 +11,8 @@ from ui_styles import apply_custom_styles
 from docx import Document
 import io
 
+HEIGHT = 500
+
 default_scope_of_work_dict_file = "default_scope_of_work.txt"
 default_scope_of_work_string = open(default_scope_of_work_dict_file, "r").read()
 default_scope_of_work = eval(default_scope_of_work_string)
@@ -50,6 +52,10 @@ st.session_state.setdefault("conversation_history", [])
 
 st.session_state.setdefault("first_run", True)
 
+print("Streamlit session state initialized.")
+print(f"Scope of work: {st.session_state.scope_of_work}")
+print(f"Assumptions and Exclusions: {st.session_state['ASSUMPTIONS_AND_EXCLUSIONS']}")
+
 with st.sidebar:
     st.markdown("##### Upload Reference Documents 📄")
     uploaded_files = st.file_uploader(
@@ -73,20 +79,26 @@ with doc_column:
         with tabs[1]:
             # Use DEFAULT_SCOPE_OF_WORK for testing
             scope_to_display = st.session_state.scope_of_work
-            table_height = display_scope_of_work(scope_to_display)
+            display_scope_of_work(scope_to_display, height=HEIGHT)
 
         with tabs[0]:
-            with st.container(height=table_height, border=True):
+            with st.container(height=HEIGHT, border=True):
                 # Display the scope of work in markdown format
                 scope_of_work = st.session_state.scope_of_work
 
                 markdown_lines = []
-                for phase, disciplines in scope_of_work.items():
-                    markdown_lines.append(f"##### {phase}")
-                    for discipline, items in disciplines.items():
-                        markdown_lines.append(f"###### {discipline}")
-                        for item in items:
-                            markdown_lines.append(f"- {item}")
+                try:
+                    for phase, disciplines in scope_of_work.items():
+                        markdown_lines.append(f"##### {phase}")
+                        try:
+                            for discipline, items in disciplines.items():
+                                markdown_lines.append(f"###### {discipline}")
+                                for item in items:
+                                    markdown_lines.append(f"- {item}")
+                        except Exception as e:
+                            continue
+                except Exception as e:
+                    markdown_lines.append("No scope items yet.")
                 markdown_lines.append("\n")
                 markdown_lines.append("\* This scope of work was generated with the assistance of ContractCadence, an AI-powered AEC contract assistant.")
 
@@ -108,12 +120,18 @@ with doc_column:
             # Add a button to download the markdown view of the scope of work as a .md file
             doc = Document()
             scope_of_work = st.session_state.scope_of_work
-            for phase, disciplines in scope_of_work.items():
-                doc.add_heading(phase, level=1)
-                for discipline, items in disciplines.items():
-                    doc.add_heading(discipline, level=2)
-                    for item in items:
-                        doc.add_paragraph(item, style='List Bullet')
+            try:
+                for phase, disciplines in scope_of_work.items():
+                    doc.add_heading(phase, level=1)
+                    try:
+                        for discipline, items in disciplines.items():
+                            doc.add_heading(discipline, level=2)
+                            for item in items:
+                                doc.add_paragraph(item, style='List Bullet')
+                    except Exception as e:
+                        continue
+            except Exception as e:
+                pass
             docx_content = io.BytesIO()
             doc.save(docx_content)
             docx_content.seek(0)
@@ -155,10 +173,7 @@ with doc_column:
                 "Assumptions & Exclusions": assumptions_and_exclusions_col_rows
             })
 
-            num_rows_ae = len(df_ae)
-            table_height_ae = min(500, 35 * num_rows_ae + 40)  # Dynamic height based on number of rows
-
-            edited_df_ae = st.data_editor(df_ae, height=table_height_ae, use_container_width=True, hide_index=True)
+            edited_df_ae = st.data_editor(df_ae, height=HEIGHT, width="stretch", hide_index=True, num_rows="dynamic")
             edited_dict_ae = edited_df_ae.to_dict(orient='records')
             # Convert back to nested dictionary
             st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"] = {}
@@ -170,7 +185,7 @@ with doc_column:
                 st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"][discipline].append(item)
 
         with tabs[0]:
-            with st.container(height=table_height_ae, border=True):
+            with st.container(height=HEIGHT, border=True):
                 # Display the assumptions and exclusions in a markdown view
                 markdown_lines_ae = []
                 for discipline, items in st.session_state["ASSUMPTIONS_AND_EXCLUSIONS"].items():
@@ -225,7 +240,7 @@ with doc_column:
 
 with chat_column:
     st.markdown("##### Chat with your AEC Contract Assistant 💬")
-    message_container = st.container(height=table_height + 90, border=True)
+    message_container = st.container(height=HEIGHT + 90, border=True)
 
     if st.session_state.messages == []:
         st.session_state.messages.append(
@@ -267,6 +282,9 @@ with chat_column:
         st.session_state.conversation_history.append({"role": "assistant", "content": full_response})
 
         st.session_state.messages.append({"role": "assistant", "content": full_response})
+
+        print("Rerunning Streamlit app.")
+        st.rerun()
             
 str_list = []
 str_list.append("This information should not be considered legal advice. Consult a qualified attorney for legal matters.\n")

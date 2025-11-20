@@ -76,21 +76,27 @@ def flatten_scope_to_dataframe(scope_of_work):
         pandas DataFrame with columns: Phase, Discipline, Scope Item
     """
     rows = []
-    for phase, disciplines in scope_of_work.items():
-        for discipline, items in disciplines.items():
-            for item in items:
-                rows.append({
-                    'Phase': phase,
-                    'Discipline': discipline,
-                    'Scope Item': item
-                })
+    try:
+        for phase, disciplines in scope_of_work.items():
+            try:
+                for discipline, items in disciplines.items():
+                    for item in items:
+                        rows.append({
+                            'Phase': phase,
+                            'Discipline': discipline,
+                            'Scope Item': item
+                        })
+            except Exception as e:
+                continue
+    except Exception as e:
+        return None
     
     if rows:
         return pd.DataFrame(rows)
     return None
 
 
-def display_scope_of_work(scope_of_work):
+def display_scope_of_work(scope_of_work, height=500):
     """
     Display the scope of work as a styled dataframe with color-coded phases and disciplines.
     
@@ -127,8 +133,7 @@ def display_scope_of_work(scope_of_work):
     
     styled_df = df.style.apply(highlight_columns, axis=1)
     num_rows = len(df)
-    height = min(500, 35 * num_rows + 40)  # Dynamic height based on number of rows
-    edited_df = st.data_editor(styled_df, width='stretch', hide_index=True, height=height)
+    edited_df = st.data_editor(styled_df, width='stretch', hide_index=True, height=height, num_rows="dynamic")
 
     edited_dict = edited_df.to_dict(orient='records')
     # Convert back to nested dictionary

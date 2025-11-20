@@ -64,6 +64,8 @@ devstral = [
 
 # This is a cloudflare model
 cloudflare_model = "@cf/meta/llama-3.1-70b-instruct"
+# cloudflare_model = "@cf/meta/llama-4-scout-17b-16e-instruct"
+# cloudflare_model = "@cf/qwen/qwen3-30b-a3b-fp8"
 
 # Define what models to use according to chosen "mode"
 def api_mode (mode, cf_gen_model=None, cf_sml_model=None, cf_emb_model=None):
